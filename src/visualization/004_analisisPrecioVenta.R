@@ -15,6 +15,7 @@ require(plotly)
 require(tidyverse); theme_set(theme_bw())
 require(lubridate)
 require(ggrepel)
+require(patchwork)
 # require(ggsflabel)
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
 
@@ -58,7 +59,7 @@ df_total %>%
     colour = 'black',
     size = 0.1
   ) +
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'right',
         axis.text = element_blank()) + 
   labs(title = 'Existencias de recetarios en el FRE') +
@@ -97,7 +98,7 @@ df_total %>%
     size = 0.1
   ) +
   scale_fill_continuous(type = 'gradient') + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Circulación mensual de existencias de recetarios') +
@@ -117,7 +118,7 @@ df_total %>%
     size = 0.1
   ) +
   scale_fill_continuous(type = 'viridis') + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Duración de existencias de recetarios (semanas)') +
@@ -150,12 +151,14 @@ gCostoRecetario <- df_total %>%
   ) +
   scale_fill_continuous(label = scales::dollar, type = 'viridis') + 
   # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Costo de Adquisición de Recetario') +
   guides(
     fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+
+gCostoRecetario
 
 gPVTARecetario <- df_total %>% 
   ggplot() +
@@ -167,7 +170,7 @@ gPVTARecetario <- df_total %>%
   ) +
   scale_fill_continuous(label = scales::dollar, type = 'viridis') + 
   # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Precio de venta del Recetario') +
@@ -229,7 +232,7 @@ df_total %>%
   ) +
   scale_fill_continuous(label = scales::dollar, type = 'viridis') + 
   # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Precio de venta de recetarios por prescripción') +
@@ -263,7 +266,7 @@ df_total %>%
   ) +
   scale_fill_continuous(type = 'viridis') + 
   # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Tiempo de demora para adquisición de recetarios') +

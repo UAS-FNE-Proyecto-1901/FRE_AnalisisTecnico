@@ -24,7 +24,6 @@ source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
 # 
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'))
 
-
 df <- df %>% 
   mutate(Profesion = ifelse(`Profesión del funcionario a cargo del FRE` != 'Otro', 
                             `Profesión del funcionario a cargo del FRE`, 
@@ -78,7 +77,7 @@ df_Total <- df %>%
 df_Total %>% 
   ggplot() + 
   geom_sf(aes(geometry = geometry, fill = Profesion)) + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   labs(title = 'Profesión del encargado en el FRE') + 
   theme(axis.text = element_blank())
 
@@ -98,9 +97,8 @@ df$Profesiones %>%
 # 3. ¿Cuantas personas trabajan en el FRE?------------------
 #'-------------------------------------------------------------------------------
 
-df$NoPersonas <- df$Profesiones %>% 
+df_Total$NoPersonas <- df_Total$Profesiones %>% 
   map_dbl(function(x){sum(!is.na(x))})
-
 
 df_Total %>% 
   select(NoPersonas) %>% table() %>% as_tibble() %>% 
@@ -113,7 +111,7 @@ df_Total %>%
 df_Total %>% 
   ggplot() + 
   geom_sf(aes(geometry = geometry, fill = NoPersonas)) + 
-  coord_sf(crs = st_crs(32618)) + 
+  # coord_sf(crs = st_crs(32618)) + 
   scale_fill_continuous(type = 'viridis') + 
   labs(title = 'No personas en el FRE') + 
   theme(axis.text = element_blank())  
@@ -121,11 +119,11 @@ df_Total %>%
 #'-------------------------------------------------------------------------------
 # 4. ¿modalidad de contratación de personal?------------------
 #'-------------------------------------------------------------------------------
-df_total <- df_total %>% rowwise() %>% 
+df_Total <- df_Total %>% rowwise() %>% 
   mutate(ModalidadContratacion = list(c_across(matches('Tipo de vinculación'))))
 
 # Todo el personal de todos los departamentos
-df_total$ModalidadContratacion %>%  unlist() %>% 
+df_Total$ModalidadContratacion %>%  unlist() %>% 
   str_replace(., 'De [P|p]lanta|No aplica', NA_character_) %>% 
   table() %>% as_tibble() %>% 
   ggplot(aes(x="", y=., fill=n)) +

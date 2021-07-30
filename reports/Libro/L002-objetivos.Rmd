@@ -1,0 +1,21 @@
+# Objetivos
+
+## Objetivo general
+
+Identificar fuentes de información asociada a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial. Así mismo,  con el fin de iniciar la primera fase de desarrollo del proyecto de inversión 1901. Así mismo, recopilar las características de las herramientas tecnológicas para la consolidación de la información y el seguimiento al consumo de estos medicamentos en el territorio.
+
+## Objetivos específicos
+
+- Caracterizar el proceso de prescripción, dispensación y uso de MME, identificando la información relacionada con el tipo de prescriptores y requisitos normativos.
+
+- Consolidar la información obtenida a partir de los recetarios oficiales con el fin de que esta sea fuente de información permanente para la parametrización del Recetario Oficial Electrónico (ROE).
+
+- Estandarizar el proceso de proyección de compra de MME por parte de los FRE.
+
+- Caracterizar las condiciones de recepción técnica, almacenamiento, distribución y consumo de los MME en todo el territorio nacional.
+
+- Recopilar la información asociada con la consolidación de la información y seguimiento al consumo de estos medicamentos en cada una de las IPS en el departamento.
+
+- Definir e identificar el proceso mediante el cual se hace el manejo de almacenamiento e inventarios de MME por parte de cada FRE.
+
+- Recopilar las características de las herramientas tecnológicas con las cuales cuentan los FRE para hacer seguimiento a inventarios de MME y para la proyección de necesidades de MME en el departamento.

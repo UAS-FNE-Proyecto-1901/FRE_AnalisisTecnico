@@ -1,0 +1,8 @@
+book_filename: "InformeFinal"
+output_dir: docs
+css: "www/style.css"
+delete_merged_file: true
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '

@@ -17,7 +17,7 @@ require(lubridate)
 require(ggrepel)
 # require(ggsflabel)
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
-
+source(file.path('src', 'visualization', '900_funcionExtraccionDummies.R'), encoding = 'UTF-8')
 
 #'-------------------------------------------------------------------------------
 # 1. Que herramienta utiliza el FRE para el control de inventarios------------------
@@ -44,7 +44,6 @@ df$HerramientaInvetarios %>%
   xlab('Frecuencia') + 
   labs(title = 'Herramientas de manejo inventarios') + 
   theme(axis.title.y = element_blank())
-
 
 #'-------------------------------------------------------------------------------
 # 1. ------------------

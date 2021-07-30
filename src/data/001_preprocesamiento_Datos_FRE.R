@@ -16,6 +16,7 @@ require(tidyverse)
 require(readxl)
 require(lubridate)
 require(reticulate)
+require(fuzzywuzzyR)
 
 #'-------------------------------------------------------------------------------
 # 1. Lectura de datos base ------------------
@@ -41,11 +42,15 @@ data$`Fecha creación FRE` %>% sapply(function(x) as_date(x))
 # 3. Cambios de carácter ------------------
 #'-------------------------------------------------------------------------------
 # Obtener valores cercanos
-data$Departamento_1 <- data$Departamento %>% 
-  map_chr(~str_to_upper(.x) %>% 
-        fuzzywuzzyR::GetCloseMatches(., df_DIVIPOLA$NombreDepartamento, 
-                                     cutoff = 0.85) %>% 
-        `[`(1))
+data$Departamento_1 <- data$Departamento %>%
+  map_chr(~ str_to_upper(.x) %>%
+            {
+              fuzzywuzzyR::GetCloseMatches(., df_DIVIPOLA$NombreDepartamento,
+                                           cutoff = 0.85)
+            } %>%
+            {
+              `[`(1)
+            })
 # Unir códigos de departamento
 data <- data %>% 
   left_join(df_DIVIPOLA, by = c('Departamento_1' = 'NombreDepartamento'))
