@@ -1,0 +1,24 @@
+---
+title: "Informe Final de Visitas Técnicas Territoriales"
+author: "MisionPRI-1901"
+date: "08 de julio de 2021"
+site: bookdown::bookdown_site
+csl: infectio.csl
+encoding: 'UTF-8'
+always_allow_html: true
+documentclass: book
+toc-title: "Tabla de Contenidos"
+link-citations: yes
+institution: Fondo Nacional de Estupefacientes
+description: "Este es el informe final de visitas de asistencias técnicas realizadas por los FRE"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Prefacio {-}
+
+Aquí va un prefacio emotivo
+
+

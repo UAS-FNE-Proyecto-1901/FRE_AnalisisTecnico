@@ -1,0 +1,6 @@
+bookdown::gitbook:
+  config:
+    toc:
+      before: |
+        <img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align=center" width="90%">
+        <li><a href="#" target="_blank"><strong>Misión PRI 1901</strong></a></li>

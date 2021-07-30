@@ -1,0 +1,76 @@
+# Justificación
+
+Uno de los ejes centrales para garantizar la disponibilidad de los MME en el territorio nacional, recae en el cálculo adecuado de la demanda por estos medicamentos, la cual es determinada por cada ente territorial con base en la demanda de las entidades que tienen inscritas.
+
+Para atender la necesidad de estos medicamentos el Grupo interno de trabajo de medicamentos del Estado, creado mediante la Resolución 735 de 2016, tiene entre sus funciones:
+
+- Coordinar las acciones necesarias para garantizar la disponibilidad y accesibilidad a los medicamentos monopolio del Estado en el territorio colombiano juntamente con los Fondos Rotatorios de Estupefacientes (FRE).
+
+- Preparar y presentar el reporte de los informes de consumo de medicamentos monopolio del Estado desagregado por departamentos y consolidado nacional.
+
+- Mantener el control de las existencias de las materias primas y de los medicamentos monopolio del Estado a nivel nacional, garantizando su disponibilidad permanente.
+
+- Planear y efectuar las acciones de asistencia técnica a los FRE, que permita garantizar la disponibilidad y accesibilidad de los medicamentos monopolio del Estado a nivel nacional.
+
+Sin embargo, la planeación de las cantidades de medicamentos monopolio del Estado para satisfacer la demanda se ve afectada por:
+
+- La variabilidad en el incremento o disminución de la distribución y necesidad de medicamentos monopolio del Estado.
+
+- La participación en las guías de tratamiento farmacológico de cada uno de estos medicamentos y que se ve afectada por las diferentes recomendaciones internacionales.
+
+-  La calidad de la información de disponibilidad remitida por los FRE.
+
+- Las diferentes barreras administrativas de índole territorial que impactan en el acceso de estos medicamentos por parte de los pacientes.
+
+Por lo cual, con el fin de fortalecer los procesos de operativos, administrativos y técnicos encaminados a garantizar la disponibilidad y a fortalecer el acceso a los medicamentos monopolio del Estado en todo el territorio, se formuló el proyecto de inversión *incremento de la disponibilidad de medicamentos monopolio del Estado para los pacientes en Colombia*.
+
+Este proyecto se diseñó con la finalidad de cumplir con dos objetivos en específico, el primer objetivo busca establecer un mecanismo estandarizado y sistematizado para determinar la demanda de materias primas y MME a partir de información completa y suficiente, que además permita aumentar la efectividad en el seguimiento, evaluación, control y consolidación de la información de gestión presentada por los FRE. Para lo cual es necesario mejorar la articulación con las entidades territoriales y con los demás actores que intervienen en el proceso.
+
+El segundo objetivo busca fortalecer los canales de comunicación entre el FNE y las asociaciones médicas, gremios del sector farmacéutico, médicos prescriptores, dispensadores y demás actores que participen en el proceso de prescripción, mediante acciones de socialización, participación en congresos, capacitación a los profesionales de la salud, apoyo a la sociedad de las especialidades y demás actividades encaminadas a fortalecer el uso racional de los medicamentos monopolio del Estado y visibilizar su importancia en la práctica clínica.
+
+El desarrollo de este proyecto se enmarca en una estrategia integral con el fin de contribuir a mejorar la calidad de la atención de los pacientes, garantizando el acceso y disponibilidad a medicamentos de control especial y de Monopolio del Estado, evitando el desvío de estos.
+
+El proyecto comprende el Programa 1901, denominado **salud pública y prestación de servicios** el cual está orientado a las acciones de formulación, adopción, coordinación, ejecución, seguimiento y evaluación de políticas, planes, programas y proyectos del Gobierno Nacional de interés en salud pública y considera, entre otros, los siguientes elementos:
+
+1. Promoción y Prevención de enfermedades: incluye vacunación y la política de atención Integral en Salud.
+
+2. Gestión de promoción social: incluye el acceso a servicios de asistencia y promoción social a poblaciones vulnerables.
+
+3. Gestión de epidemiología y demografía.
+
+4. Gestión de la prestación de servicios: incluye las redes de salud, política nacional de calidad en la infraestructura en salud.
+
+5. Gestión de medicamentos y tecnologías en salud.
+
+El desarrollo de las actividades de este proyecto propende por el fortalecimiento de la articulación con los otros actores relacionados con la cadena de distribución del medicamento, tanto a nivel territorial como a nivel asistencial de tal manera que haya un impacto positivo en:
+
+- Pacientes y usuarios de los servicios de salud.
+
+- Ciudadanos colombianos, los cuales podrán contar con servicios más oportunos y más acceso a las tecnologías en salud.
+
+- Funcionarios del Fondo, por cuanto contarán con capacidades y herramientas que les permitan cumplir sus objetivos y atender con mayor facilidad los posibles inconvenientes que dificulten su cumplimiento.
+
+Por tanto, con el fin de iniciar la primera fase de desarrollo de este proyecto de inversión en el marco del primer objetivo, encaminados a ejecutar la primera actividad Identificar fuentes de información asociada a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial, apoyados por el equipo de Regionalización, que se encuentra orientado al aseguramiento de la disponibilidad, accesibilidad y uso racional de los medicamentos, se hace necesario realizar el acercamiento con el ente territorial de tal manera que se pueda:
+
+- Caracterizar el proceso de prescripción, dispensación y uso de MME, identificando la información relacionada con el tipo de prescriptores, requisitos normativos etc.
+
+- Analizar la información de los recetarios oficiales que reposan en los FRE.
+
+- Recopilar la información asociada a los recetarios oficiales a partir de los recetarios físicos en los FRE.
+
+- Definir e identificar la información asociada con los recetarios oficiales, lo cual será insumo en la parametrización del Recetario Oficial Electrónico (ROE).
+
+- Consolidar la información obtenida a partir de los recetarios oficiales con el fin de que esta sea fuente de información permanente.
+
+Por otro lado, para fortalecer el proceso de estimación de la necesidad de medicamentos monopolio del Estado se hace necesario realizar un acercamiento con el ente territorial de tal manera que se pueda:
+
+- Estandarizar el proceso de proyección de compra de MME por parte de los FRE.
+
+- Caracterizar las condiciones de recepción técnica, almacenamiento, distribución y consumo de los MME en todo el territorio nacional.
+
+- Recopilar la información asociada con la consolidación de la información y seguimiento al consumo de estos medicamentos en cada una de las IPS en el departamento.
+
+- Definir e identificar el proceso mediante el cual se hace el manejo de inventarios de MME por parte del FRE.
+
+- Recopilar las características de las herramientas tecnológicas con las cuales cuentan los FRE para hacer seguimiento a inventarios de MME y para la proyección de necesidades de MME en el departamento.
+
