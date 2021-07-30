@@ -1,12 +1,12 @@
-################################################################################-
 #' --- 
-#' title: 'Nombre' 
+#' title: 'Análisis de profesiones en encuestas a FRE' 
 #' author: 'Daniel S. Parra G.' 
-#' date: '01-01-2021' 
+#' date: '30-07-2021' 
 #' --- 
-## Propósito del Script: 
-## 
-## 
+################################################################################-
+## Propósito del Script: se muestran los resultados de un análisis de profesionales 
+## en las encuestas realizadas a los FRE. 
+##
 ## Copyright (c) Fondo Nacional de Estupefacientes, 2021 
 ## 
 ## Email: dsparra@minsalud.gov.co 
@@ -17,6 +17,8 @@ require(lubridate)
 require(patchwork)
 
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
+source(file.path('src', 'visualization', '901_funcionesBarras.R'), encoding = 'UTF-8')
+source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encoding = 'UTF-8')
 
 #'-------------------------------------------------------------------------------
 # 1. Lectura de datos base ------------------
@@ -59,39 +61,45 @@ df <- df %>% rowwise() %>%
 #'-------------------------------------------------------------------------------
 
 
-df$Profesion %>% 
+perfilProfesional1 <- df$Profesion %>% 
   table() %>% as_tibble() %>% 
   rename(Profesion = '.') %>% 
-  ggplot(aes(y = fct_reorder(Profesion, n), x = n)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_text(aes(label = n, x = n + 1)) + 
-  xlab('Frecuencia') + 
-  labs(title = 'Perfil profesional encargado del FRE') + 
-  theme(axis.title.y = element_blank())
+  barrasGraficoRev(Profesion, n,
+                'Perfil profesional encargado del FRE', 
+                'Frecuencia') +
+  theme(panel.grid = element_blank())
+
+perfilProfesional1
+
+guardarGGplot(perfilProfesional1, '020_perfilProfesionalEncargado', 6, 4)
 
 # No todo los FRE tienen un encargado con profesión de Químico Farmacéutico
 
 df_Total <- df %>% 
   right_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO'))
 
-df_Total %>% 
+mapaProfesional1 <- df_Total %>% 
   ggplot() + 
   geom_sf(aes(geometry = geometry, fill = Profesion)) + 
   # coord_sf(crs = st_crs(32618)) + 
   labs(title = 'Profesión del encargado en el FRE') + 
-  theme(axis.text = element_blank())
+  theme(axis.text = element_blank(), panel.grid = element_blank())
+
+mapaProfesional1
+
+guardarGGplot(mapaProfesional1, '021_mapaProfesional', 8, 6)
 
 # Con apoyos
-df$Profesiones %>% 
-  unlist() %>% 
-  table() %>% 
-  as_tibble() %>% 
-  ggplot(aes(y = fct_reorder(., n), x = n)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_text(aes(label = n, x = n + 1)) + 
-  xlab('Frecuencia') + 
-  labs(title = 'Perfiles profesionales en FRE (encargados y apoyo)') + 
-  theme(axis.title.y = element_blank())
+perfilProfesional2 <- df$Profesiones %>% unlist() %>% 
+  table() %>% as_tibble() %>% 
+  rename(Profesiones = '.') %>% 
+  barrasGraficoRev(Profesiones, n, 'Perfiles profesionales en FRE (encargados y apoyos)',
+                xlab = 'Frecuencia') +
+  theme(panel.grid = element_blank())
+
+perfilProfesional2
+
+guardarGGplot(perfilProfesional2, '022_perfilProfesional2', 8, 6)
 
 #'-------------------------------------------------------------------------------
 # 3. ¿Cuantas personas trabajan en el FRE?------------------
@@ -100,21 +108,35 @@ df$Profesiones %>%
 df_Total$NoPersonas <- df_Total$Profesiones %>% 
   map_dbl(function(x){sum(!is.na(x))})
 
-df_Total %>% 
+perfilProfesional3 <- df_Total %>% 
   select(NoPersonas) %>% table() %>% as_tibble() %>% 
   ggplot(aes(x = ., y = n)) + 
   geom_text(aes(label = n, y = n + 1)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   ylab('Frecuencia') + xlab('No personas en el FRE') +
-  labs(title = 'Conteo de personas que trabajan por FRE')
+  theme_bw() +
+  labs(title = 'Conteo de personas que trabajan por FRE')+
+  theme(panel.grid = element_blank())
 
-df_Total %>% 
+perfilProfesional3
+
+guardarGGplot(perfilProfesional3, '023_perfilProfesional3', 6, 4)
+
+# N. personas en el FRE
+
+mapaProfesional2 <- df_Total %>% 
   ggplot() + 
   geom_sf(aes(geometry = geometry, fill = NoPersonas)) + 
+  coord_sf(datum = NA) + 
   # coord_sf(crs = st_crs(32618)) + 
   scale_fill_continuous(type = 'viridis') + 
-  labs(title = 'No personas en el FRE') + 
-  theme(axis.text = element_blank())  
+  labs(title = 'N.° personas en el FRE') + 
+  theme(axis.text = element_blank()) +
+  theme(panel.grid = element_blank())
+
+mapaProfesional2
+
+guardarGGplot(mapaProfesional2, '024_mapaProfesional2', 8, 6)
   
 #'-------------------------------------------------------------------------------
 # 4. ¿modalidad de contratación de personal?------------------
@@ -123,19 +145,35 @@ df_Total <- df_Total %>% rowwise() %>%
   mutate(ModalidadContratacion = list(c_across(matches('Tipo de vinculación'))))
 
 # Todo el personal de todos los departamentos
-df_Total$ModalidadContratacion %>%  unlist() %>% 
+dfContratacion <- df_Total$ModalidadContratacion %>%  unlist() %>% 
   str_replace(., 'De [P|p]lanta|No aplica', NA_character_) %>% 
-  table() %>% as_tibble() %>% 
-  ggplot(aes(x="", y=., fill=n)) +
+  table() %>% as_tibble() 
+
+pieProfesional1 <- dfContratacion %>%
+  mutate(prop = n / sum(n),
+         ncumsum = cumsum(prop) - 0.5 * prop) %>%
+  ggplot(aes(x = "", y = prop,  fill = .)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + 
-  # theme_void() + 
-  theme(legend.position="none") +
-  # geom_text(aes(y = n, label = .), color = "white", size=6) +
-  scale_fill_continuous()
+  theme_void() +
+  theme(legend.position="bottom") +
+  geom_text(aes(y = ncumsum, label = .), color = "white", size=4) +
+  scale_fill_discrete()
+
+pieProfesional1
+
+guardarGGplot(pieProfesional1, '025_pieProfesional1', 5, 5)
 
 
+pieProfesional2 <- dfContratacion %>% 
+  plot_ly(labels = ~., values = ~n, type = 'pie', 
+          textinfo = 'label+percent',
+          marker = list(line = list(color = '#FFFFFF', width=1)), 
+          showlegend = FALSE) 
 
+pieProfesional2
+
+guardarPlotly(pieProfesional2, '026_pieProfesional2', libdir = 'plotly')
 
 
 
