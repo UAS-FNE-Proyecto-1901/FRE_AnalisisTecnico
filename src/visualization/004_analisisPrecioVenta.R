@@ -52,7 +52,7 @@ df_total <- df_total %>%
     `3.01 Existencias actuales de recetarios en el FRE` >= 5000 ~ '> 5000 u'
   ))
 
-df_total %>%
+gRecetarios1 <- df_total %>%
   ggplot() +
   geom_sf(
     aes(fill = ExistenciasRecetarios, geometry = geometry),
@@ -63,8 +63,13 @@ df_total %>%
   theme(legend.position = 'right',
         axis.text = element_blank()) + 
   labs(title = 'Existencias de recetarios en el FRE') +
+  scale_fill_discrete(name = 'Existencia \nRecetarios') +
   guides(
     fill = guide_legend(title.position = 'top'))
+
+gRecetarios1
+
+guardarGGplot(gRecetarios1, '027_existenciaRecetarios_1', 8, 6)
 
 #'-------------------------------------------------------------------------------
 # 3. Existencias en circulación en el departamento------------------
@@ -90,26 +95,30 @@ df_total <- df_total %>%
     )
   )
 
-df_total %>%
+gRecetarios2 <- df_total %>%
   ggplot() +
   geom_sf(
     aes(fill = ExistenciasCirculacion, geometry = geometry),
     colour = 'black',
     size = 0.1
   ) +
-  scale_fill_continuous(type = 'gradient') + 
+  scale_fill_continuous(type = 'gradient', name = 'Existencia circulación') + 
   # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
-  labs(title = 'Circulación mensual de existencias de recetarios') +
+  labs(title = 'Circulación mensual de \nexistencias de recetarios') +
   guides(
     fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+
+gRecetarios2
+
+guardarGGplot(gRecetarios2, '028_existenciaRecetarios_2', 7, 5)
 
 #'-------------------------------------------------------------------------------
 # 4. Duración estimada de las existencias ------------------
 #'-------------------------------------------------------------------------------
 
-df_total %>% 
+gRecetarios3 <- df_total %>% 
   ggplot() +
   geom_sf(
     aes(fill = `3.03 Tiempo de duración proyectada de las actuales existencias de recetarios (semanas).`, 
@@ -117,27 +126,33 @@ df_total %>%
     colour = 'black',
     size = 0.1
   ) +
-  scale_fill_continuous(type = 'viridis') + 
+  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios') + 
   # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
-  labs(title = 'Duración de existencias de recetarios (semanas)') +
+  labs(title = 'Duración de existencias de recetarios \n(semanas)') +
   guides(
     fill = guide_colourbar(barwidth = 20, title.position = 'top'))
 
+gRecetarios3
+guardarGGplot(gRecetarios3, '029_existenciaRecetarios_3', 7, 5)
 
 #'-------------------------------------------------------------------------------
 # 5. Número de prescripciones por recetario ------------------
 #'-------------------------------------------------------------------------------
-df_total %>% 
+gRecetarios4 <- df_total %>% 
   pull(`3.05 N.º de prescripciones por recetario`) %>% 
   table() %>% as_tibble() %>% 
   ggplot(aes(x = ., y = n)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_label(aes(label = n), position = position_stack(1.1)) + 
-  ylab('Frecuencia') + xlab('No personas en el FRE') +
-  labs(title = 'Número de prescripciones por recetario')
+  ylab('Frecuencia') + xlab('N.° prescripciones por recetario') +
+  labs(title = 'Número de prescripciones por recetario') + 
+  theme(panel.grid = element_blank())
   
+gRecetarios4
+guardarGGplot(gRecetarios4, '030_existenciaRecetarios_4', 6, 4)
+
 #'-------------------------------------------------------------------------------
 # 6. Costo de adquisición por recetarios------------------
 #'-------------------------------------------------------------------------------
@@ -149,16 +164,17 @@ gCostoRecetario <- df_total %>%
     colour = 'black',
     size = 0.1
   ) +
-  scale_fill_continuous(label = scales::dollar, type = 'viridis') + 
+  scale_fill_continuous(label = scales::dollar, type = 'viridis', ) + 
   # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
   # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
-  labs(title = 'Costo de Adquisición de Recetario') +
+  labs(title = 'Costo de adquisición') +
   guides(
-    fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+    fill = guide_colourbar(barwidth = 10, title.position = 'top', title = ''))
 
 gCostoRecetario
+
 
 gPVTARecetario <- df_total %>% 
   ggplot() +
@@ -173,11 +189,12 @@ gPVTARecetario <- df_total %>%
   # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
-  labs(title = 'Precio de venta del Recetario') +
+  labs(title = 'Precio de venta') +
   guides(
-    fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+    fill = guide_colourbar(barwidth = 10, title.position = 'top', title = ''))
 
-gCostoRecetario + gPVTARecetario
+(gCostoRecetario + gPVTARecetario) %>% 
+guardarGGplot(., '031_costoRecetario', 6, 4)
 
 df_total <- df_total %>% 
   mutate(MargenGanancia = map2_dbl(`3.06 Costo de adquisición del recetario (COP)`,
@@ -185,7 +202,14 @@ df_total <- df_total %>%
 
 meanMargenGanancia <- df_total$MargenGanancia %>% mean(na.rm= TRUE)
 
-df_total %>% 
+posicion1Lineas <- data.frame(
+  label = c('200%', '300%', '400%', '500%'),
+  xpos = rep(32000, 4),
+  ypos = c(5e4, 9.2e4, 1.3e5, 1.6e5)
+)
+
+gComparativo1 <- df_total %>% 
+  mutate(Departamento_1 = str_to_sentence(Departamento_1)) %>% 
   ggplot(aes(x = `3.06 Costo de adquisición del recetario (COP)`, 
              y = `3.07 Precio de venta del recetario (COP)`)) + 
   geom_point() + 
@@ -194,9 +218,17 @@ df_total %>%
   stat_function(fun = function(x) 4*x, geom = 'line', linetype = 'dashed', col = 'blue') +
   stat_function(fun = function(x) 5*x, geom = 'line', linetype = 'dashed', col = 'blue') +
   stat_function(fun = function(x) meanMargenGanancia*x, geom = 'line', linetype = 'dotted', col = 'red') +
-  geom_label_repel(aes(label = Departamento_1)) +
+  geom_text(data = posicion1Lineas, aes(x = xpos, y = ypos, label = label), hjust = 0, col = 'blue') + 
+  geom_label_repel(aes(label = Departamento_1), size = 3) +
+  coord_cartesian(xlim = c(0, 35000)) +
   scale_x_continuous(labels = scales::dollar) + 
-  scale_y_continuous(labels = scales::dollar)
+  scale_y_continuous(labels = scales::dollar) + 
+  xlab('Costo de adquisición (COP)') + 
+  ylab('Precio de venta (COP)')
+
+gComparativo1
+
+guardarGGplot(gComparativo1, '032_comparativoDepartamentos', 8, 6)
 
 # ¿El margen de ganancia de recetarios se corresponde con el número de personas en el FRE?
 df_total <- df_total %>% rowwise() %>% 
@@ -205,24 +237,29 @@ df_total <- df_total %>% rowwise() %>%
 df_total$NoPersonas <- df_total$Profesiones %>% 
   map_dbl(function(x){sum(!is.na(x))})
 
-df_total %>% 
+gComparativo2 <- df_total %>% 
+  mutate(Departamento_1 = str_to_sentence(Departamento_1)) %>% 
   ggplot(aes(x = NoPersonas, y = MargenGanancia)) + 
   geom_point()+ 
   geom_label_repel(aes(label = Departamento_1)) +
   scale_y_continuous(labels = scales::percent) + 
-  ylab('Margen de ganancia por recetarios (%)')
+  ylab('Margen de ganancia por recetarios (%)') +
+  xlab('N.° de personas')
 
-df_total %>% 
+gComparativo3 <- df_total %>% 
   ggplot(aes(x = factor(NoPersonas), y = MargenGanancia)) +
   geom_boxplot(fill = '#6699ff') + 
   xlab('Numero de personas') + 
   ylab('Margen de ganancia \n por recetarios (%)')
 
 
+(gComparativo2 + gComparativo3) %>% 
+  guardarGGplot('033_comparativoDepartamentos1', 9, 5)
+
 #'-------------------------------------------------------------------------------
 # 7. Precio de venta por prescripción------------------
 #'-------------------------------------------------------------------------------
-df_total %>% 
+gPVTARecetario7 <- df_total %>% 
   ggplot() + 
   geom_sf(
     aes(fill = `3.08 Precio de venta por prescripción (COP)`, 
@@ -230,33 +267,44 @@ df_total %>%
     colour = 'black',
     size = 0.1
   ) +
-  scale_fill_continuous(label = scales::dollar, type = 'viridis') + 
+  scale_fill_continuous(label = scales::dollar, type = 'viridis', name = NULL) + 
   # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
   # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Precio de venta de recetarios por prescripción') +
   guides(
-    fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+    fill = guide_colourbar(barwidth = 15, title.position = 'top'))
+
+gPVTARecetario7
+
+guardarGGplot(gPVTARecetario7, '034_PVTA_recetarios_prescripcion', 7, 4)
 
 #'-------------------------------------------------------------------------------
 # 8. Modalidades de contratación para adquisición de Recetarios------------------
 #'-------------------------------------------------------------------------------
-df_total %>% 
+gModalidadAdquisicion <- df_total %>% 
   pull(`3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?`) %>% 
   table() %>% as_tibble() %>% 
   ggplot(aes(y = ., x = n)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_text(aes(label = n, x = n + 0.1)) + 
+  geom_text(aes(label = n), position = position_dodge(width = 1), 
+            hjust = -1) + 
   xlab('Frecuencia') + 
+  coord_cartesian(xlim = c(0, 7)) +
   labs(title = 'Modalidad de Selección Contratación Recetarios') + 
-  theme(axis.title.y = element_blank())
+  theme(axis.title.y = element_blank(),
+        panel.grid = element_blank()) 
+  
+gModalidadAdquisicion
+
+guardarGGplot(gModalidadAdquisicion, '035_modalidadAdquisicion', 7, 4)
 
 #'-------------------------------------------------------------------------------
 # 9. Tiempo de demora para adquisición de recetarios ------------------
 #'-------------------------------------------------------------------------------
 
-df_total %>% 
+gDemoraRecetario <- df_total %>% 
   ggplot() + 
   geom_sf(
     aes(fill = `3.16. ¿Cuánto tiempo toma la adquisición de recetarios? (días)`, 
@@ -271,8 +319,12 @@ df_total %>%
         axis.text = element_blank()) + 
   labs(title = 'Tiempo de demora para adquisición de recetarios') +
   guides(
-    fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+    fill = guide_colourbar(barwidth = 20, title.position = 'top', title = 'Demora (días)'))
 
+
+gDemoraRecetario
+
+guardarGGplot(gDemoraRecetario, '036_demoraRecetario', 7, 5)
 
 #'-------------------------------------------------------------------------------
 # 10. ------------------

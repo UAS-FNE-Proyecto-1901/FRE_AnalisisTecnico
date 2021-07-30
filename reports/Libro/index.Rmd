@@ -9,6 +9,7 @@ always_allow_html: true
 documentclass: book
 toc-title: "Tabla de Contenidos"
 link-citations: yes
+css: "./www/style.css"
 institution: Fondo Nacional de Estupefacientes
 description: "Este es el informe final de visitas de asistencias técnicas realizadas por los FRE"
 ---

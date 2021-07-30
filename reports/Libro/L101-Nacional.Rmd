@@ -1,10 +1,104 @@
 # Análisis a nivel nacional
 
+```{r configuracion1, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+## Estructura del FRE
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE'}
+readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
+  config(modeBarButtonsToRemove = barButtons)
+```
+
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds'))
+```
+
+```{r perfilProfesionalDepartamentos1, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE por departamento', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '021_mapaProfesional.rds'))
+```
+
+```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de los FRE (encargado y apoyos)', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '022_perfilProfesional2.rds'))
+```
+
+```{r perfilProfesional3, echo=FALSE, fig.cap='Número de personas que trabajan en el FRE', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '023_perfilProfesional3.rds')) + 
+  labs(title = NULL)
+```
+
+```{r mapaProfesional2, echo=FALSE, fig.cap='Número de personas que trabajan en el FRE por departamento', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + 
+  labs(title = NULL)
+```
+
+
+```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=5, fig.height=5}
+readRDS(file.path(fig_path, '026_pieProfesional2.rds'))
+```
+
 ## Recetarios oficiales
 
+```{r existenciasRecetarios, echo=FALSE, fig.cap='N.° de existencias de recetarios en el FRE', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '027_existenciaRecetarios_1.rds')) + 
+  labs(title = NULL)
+```
+
+```{r existenciasRecetarios2, echo=FALSE, fig.cap='N.° de recetarios circulantes en el departamento', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) + 
+  labs(title = NULL)
+```
+
+```{r existenciaRecetarios_3, echo=FALSE, fig.cap='Duración de existencia de recetarios en el FRE', fig.width=6, fig.height=4}
+readRDS(file.path(fig_path, '029_existenciaRecetarios_3.rds')) + 
+  labs(title = NULL)
+```
+
+```{r existenciaRecetarios_4, echo=FALSE, fig.cap='N.° de prescripciones por recetario', fig.width=5, fig.height=4}
+readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + 
+  labs(title = NULL)
+```
 
 ## Ruta tecnológica
 
+```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento', fig.width=8, fig.height=4}
+readRDS(file.path(fig_path, '031_costoRecetario.rds')) + 
+  labs(title = NULL)
+```
+
+```{r comparativoDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio', fig.width=8, fig.height=4}
+readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + 
+  labs(title = NULL)
+```
+
+```{r comparativoDepartamentos2, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio (2)', fig.width=8, fig.height=4}
+readRDS(file.path(fig_path, '033_comparativoDepartamentos1.rds')) + 
+  labs(title = NULL)
+```
+
+```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción', fig.width=8, fig.height=4}
+readRDS(file.path(fig_path, '034_PVTA_recetarios_prescripcion.rds')) + 
+  labs(title = NULL)
+```
+
+```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios', fig.width=8, fig.height=4}
+readRDS(file.path(fig_path, '035_modalidadAdquisicion.rds')) + 
+  labs(title = NULL)
+```
+
+```{r tiempoDemoraAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora para adquisición de recetarios', fig.width=8, fig.height=4}
+readRDS(file.path(fig_path, '036_demoraRecetario.rds')) + 
+  labs(title = NULL)
+```
 
 
 ## Reporte de informes
