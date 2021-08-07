@@ -58,12 +58,12 @@ readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) +
   labs(title = NULL)
 ```
 
-```{r existenciaRecetarios_3, echo=FALSE, fig.cap='Duración de existencia de recetarios en el FRE', fig.width=6, fig.height=4}
+```{r existenciaRecetarios3, echo=FALSE, fig.cap='Duración de existencia de recetarios en el FRE', fig.width=6, fig.height=4}
 readRDS(file.path(fig_path, '029_existenciaRecetarios_3.rds')) + 
   labs(title = NULL)
 ```
 
-```{r existenciaRecetarios_4, echo=FALSE, fig.cap='N.° de prescripciones por recetario', fig.width=5, fig.height=4}
+```{r existenciaRecetarios4, echo=FALSE, fig.cap='N.° de prescripciones por recetario', fig.width=5, fig.height=4}
 readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + 
   labs(title = NULL)
 ```

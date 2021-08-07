@@ -29,7 +29,6 @@ source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'),
 #' Introducción
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'))
 
-
 #' Definición de escala de tiempo
 year_df <- tibble(start = seq(1960, 2015, 5),
                   end = seq(1965, 2020, 5)) %>%

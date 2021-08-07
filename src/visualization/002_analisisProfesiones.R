@@ -31,30 +31,33 @@ df <- df %>%
                             `Profesión del funcionario a cargo del FRE`, 
                             `Si la respuesta a la pregunta anterior fue "otro", indique cual:...17`)) 
 
-df$`Profesión del personal de apoyo (1)` <- 
-  map2_chr(df$`Profesión del personal de apoyo (1)`,
-     df$`Si la respuesta a la pregunta anterior fue "otro", indique cual:...22`,
-     function(x, y) {ifelse(x != 'Otro', x, y)})
-df$`Profesión del personal de apoyo (2)` <- 
-  map2_chr(df$`Profesión del personal de apoyo (2)`,
-           df$`Si la respuesta a la pregunta anterior fue "otro", indique cual:...27`,
-           function(x, y) {ifelse(x != 'Otro', x, y)})
-df$`Profesión del personal de apoyo (3)` <- 
-  map2_chr(df$`Profesión del personal de apoyo (3)`,
-           df$`Si la respuesta a la pregunta anterior fue "otro", indique cual:...32`,
-           function(x, y) {ifelse(x != 'Otro', x, y)})
-df$`Profesión del personal de apoyo (4)` <- 
-  map2_chr(df$`Profesión del personal de apoyo (4)`,
-           df$`Si la respuesta a la pregunta anterior fue "otro", indique cual:...37`,
-           function(x, y) {ifelse(x != 'Otro', x, y)})
-df$`Profesión del personal de apoyo (5)` <- 
-  map2_chr(df$`Profesión del personal de apoyo (5)`,
-           df$`Si la respuesta a la pregunta anterior fue "otro", indique cual:...42`,
-           function(x, y) {ifelse(x != 'Otro', x, y)})
+for (i in 1:5) {
+  
+  # Nombre de columna con personal de Apoyo
+  columna1 <- glue::glue('Profesión del personal de apoyo ({i})')
+  
+  # Creación nuevo nombre
+  columna_fix <- str_replace_all(columna1, '\\s', '_') %>% 
+    str_replace_all('\\(|\\)', '')
+  columna_fix_q <- rlang::sym(columna_fix)
+  
+  # Localización de columna con personal de Apoyo
+  loc <- which(colnames(df) == columna1)
+  # Nombre de columna con otros
+  columna2 <- df[,loc+1] %>% names()
+  
+  # Esta función toma la columna en la posición siguiente, si encuentra en la primera 
+  # columna la palabra otro, lo reemplaza con el contenido en la segunda columna.
+  vec_columna1 <- map2_chr(pull(df, columna1), 
+                       pull(df, columna2), 
+                       function(x, y) {ifelse(x != 'Otro', x, y)})
+  
+  df <- df %>% mutate(!!columna_fix_q := vec_columna1)
+}
 
 
 df <- df %>% rowwise() %>% 
-  mutate(Profesiones = list(c_across(matches('Profesión\\sdel\\s(personal|funcionario)'))))
+  mutate(Profesiones = list(c_across(matches('Profesión\\_del\\_(personal|funcionario)'))))
 
 #'-------------------------------------------------------------------------------
 # 2. Perfiles profesionales en el FRE ------------------

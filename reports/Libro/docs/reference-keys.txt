@@ -63,3 +63,5 @@ fig:modalidadAdquisicion
 fig:tiempoDemoraAdquisicion
 estructura-del-fre
 grupo-desarrollador
+fig:existenciaRecetarios3
+fig:existenciaRecetarios4

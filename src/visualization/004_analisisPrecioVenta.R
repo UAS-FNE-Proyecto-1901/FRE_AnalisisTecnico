@@ -17,7 +17,9 @@ require(lubridate)
 require(ggrepel)
 require(patchwork)
 # require(ggsflabel)
+
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
+source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encoding = 'UTF-8')
 
 #'-------------------------------------------------------------------------------
 # 1. Lectura de datos base ------------------
@@ -43,16 +45,20 @@ df_total
 #'-------------------------------------------------------------------------------
 # 2. Número de existencias actuales en el FRE------------------
 #'-------------------------------------------------------------------------------
+labExistencias <- c('Sin existencias', '< 1000 u', '1000-5000 u', '> 5000 u')
+
 df_total <- df_total %>% 
   mutate(ExistenciasRecetarios = case_when(
-    `3.01 Existencias actuales de recetarios en el FRE` == 0 ~ 'Sin existencias',
-    `3.01 Existencias actuales de recetarios en el FRE` < 1000 ~ '< 1000 u',
+    `3.01 Existencias actuales de recetarios en el FRE` == 0 ~ labExistencias[1],
+    `3.01 Existencias actuales de recetarios en el FRE` < 1000 ~ labExistencias[2],
     (`3.01 Existencias actuales de recetarios en el FRE` >= 1000) & 
-      (`3.01 Existencias actuales de recetarios en el FRE` < 5000) ~ '1000-5000 u',
-    `3.01 Existencias actuales de recetarios en el FRE` >= 5000 ~ '> 5000 u'
+      (`3.01 Existencias actuales de recetarios en el FRE` < 5000) ~ labExistencias[3],
+    `3.01 Existencias actuales de recetarios en el FRE` >= 5000 ~ labExistencias[4]
   ))
 
 gRecetarios1 <- df_total %>%
+  mutate(ExistenciasRecetarios = factor(ExistenciasRecetarios, 
+                                        levels = labExistencias)) %>% 
   ggplot() +
   geom_sf(
     aes(fill = ExistenciasRecetarios, geometry = geometry),
@@ -63,7 +69,9 @@ gRecetarios1 <- df_total %>%
   theme(legend.position = 'right',
         axis.text = element_blank()) + 
   labs(title = 'Existencias de recetarios en el FRE') +
-  scale_fill_discrete(name = 'Existencia \nRecetarios') +
+  scale_fill_manual(name = 'Existencia \nRecetarios',
+                    values = c('red', 'orange', 'yellow', 'green') %>% 
+                      setNames(., labExistencias)) +
   guides(
     fill = guide_legend(title.position = 'top'))
 
@@ -143,7 +151,7 @@ guardarGGplot(gRecetarios3, '029_existenciaRecetarios_3', 7, 5)
 gRecetarios4 <- df_total %>% 
   pull(`3.05 N.º de prescripciones por recetario`) %>% 
   table() %>% as_tibble() %>% 
-  ggplot(aes(x = ., y = n)) + 
+  ggplot(aes(x = as.integer(.), y = n)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_label(aes(label = n), position = position_stack(1.1)) + 
   ylab('Frecuencia') + xlab('N.° prescripciones por recetario') +
@@ -219,7 +227,7 @@ gComparativo1 <- df_total %>%
   stat_function(fun = function(x) 5*x, geom = 'line', linetype = 'dashed', col = 'blue') +
   stat_function(fun = function(x) meanMargenGanancia*x, geom = 'line', linetype = 'dotted', col = 'red') +
   geom_text(data = posicion1Lineas, aes(x = xpos, y = ypos, label = label), hjust = 0, col = 'blue') + 
-  geom_label_repel(aes(label = Departamento_1), size = 3) +
+  geom_label_repel(aes(label = Departamento_1), size = 2, max.overlaps = Inf) +
   coord_cartesian(xlim = c(0, 35000)) +
   scale_x_continuous(labels = scales::dollar) + 
   scale_y_continuous(labels = scales::dollar) + 

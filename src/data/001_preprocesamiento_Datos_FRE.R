@@ -28,6 +28,7 @@ data <- read_excel(file.path('data', 'intermediate',
 
 df_DIVIPOLA <-
   read_csv(file.path('data', 'processed', '798_DANE_DEPARTAMENTO.csv'))
+
 df_MUNICIPIO <-
   read_csv(file.path('data', 'processed', '799_DANE_DIVIPOLA.csv'), 
            locale = locale(encoding = 'latin1'))
@@ -42,27 +43,41 @@ data$`Fecha creación FRE` %>% sapply(function(x) as_date(x))
 # 3. Cambios de carácter ------------------
 #'-------------------------------------------------------------------------------
 # Obtener valores cercanos
+fwzy <- import('fuzzywuzzy')
+
+
+# obtenerCercanos('Fra Bagg', c('Frodo Baggins', 'Tom Sawyer'), best=T)->x
+obtenerCercanos <- function(string, listaPosibilidades, cutoff = 0.85, best = F) {
+  str1 <- str_to_upper(string)
+  
+  if (best) {
+    bests <- fwzy$process$extractOne(str1, listaPosibilidades, 
+                                       score_cutoff = cutoff) 
+  } else {
+    bests <- fwzy$process$extractBests(str1, listaPosibilidades, 
+                              score_cutoff = cutoff)
+  }
+  
+  return(bests)
+  
+  # fuzzywuzzyR::GetCloseMatches(string = str_to_upper(string), 
+  #                              sequence_strings = listaPosibilidades, 
+  #                              cutoff = cutoff)
+}
+
+
 data$Departamento_1 <- data$Departamento %>%
-  map_chr(~ str_to_upper(.x) %>%
-            {
-              fuzzywuzzyR::GetCloseMatches(., df_DIVIPOLA$NombreDepartamento,
-                                           cutoff = 0.85)
-            } %>%
-            {
-              `[`(1)
-            })
+  map_chr(~ obtenerCercanos(.x, df_DIVIPOLA$NombreDepartamento, best = T) %>% 
+            {`[[`(., 1)})
+
 # Unir códigos de departamento
 data <- data %>% 
   left_join(df_DIVIPOLA, by = c('Departamento_1' = 'NombreDepartamento'))
 
 # Unir códigos de municipio
 data$Ciudad1 <- data$Ciudad %>%
-  map_chr(
-    ~ str_to_upper(.x) %>%
-      fuzzywuzzyR::GetCloseMatches(., df_MUNICIPIO$NOMBRE_MUNICIPIO,
-                                   cutoff = 0.6) %>%
-      `[`(1)
-  )
+  map_chr(~ obtenerCercanos(.x, df_MUNICIPIO$NOMBRE_MUNICIPIO, 
+                        cutoff = 0.6, best = T)[[1]])
 
 # Cambio en formato de costo de adquisición del Recetario
 data$`3.06 Costo de adquisición del recetario (COP)` <- 
@@ -75,10 +90,8 @@ data %>%
 
 data <- data %>% 
   mutate(across(matches('Precio de'), 
-                ~.x %>% 
-                  str_replace_all(., '(\\$)', '') %>% 
-                  str_replace_all(., '(Por definir|No saben)', '')))
-
+                ~str_replace_all(.x, '(\\$)', '') %>% 
+                  {str_replace_all(., '(Por definir|No saben)', '')}))
 
 
 #'-------------------------------------------------------------------------------
@@ -86,7 +99,8 @@ data <- data %>%
 #'-------------------------------------------------------------------------------
 
 data <- data %>% 
-  mutate(across(CodigoDepartamento, ~formatC(.x, width = 2, flag = '0')))
+  mutate(across(matches('CodigoDepartamento'), 
+                ~formatC(.x, width = 2, flag = '0')))
 
 data1 <- data %>% 
   mutate(across(matches('Nombre del'), ~str_to_title(.x)))
