@@ -1,22 +1,30 @@
-################################################################################-
 #' --- 
-#' title: 'Nombre' 
-#' author: 'Daniel S. Parra G.' 
-#' date: '01-01-2021' 
+#' title: 'Análisis de preguntas relacionadas con recetarios oficiales' 
+#' subtitle: 'Misión PRI 1901' 
+#' date: '30-07-2021' 
+#' author: 
+#'        - name: Daniel S. Parra G. 
+#'          email: dsparrag@minsalud.gov.co 
+#'          institute: FNE 
+#' institute: 
+#'        - FNE: Misión PRI 1901 - Fondo Nacional de Estupefacientes 
+#' abstract: |
+#'        Análisis de preguntas relacionadas con recetarios oficiales. 
+#'        Se realiza una revisión de la segunda parte de la herramienta de 
+#'        recolección a Fondos Rotatorio de Medicamentos.
+#'         
+#' output:  
+#'      - html_document: default 
+#'      - pdf_document: default 
+#' always_allow_html: true 
 #' --- 
-## Propósito del Script: 
-## 
-## 
-## Copyright (c) Fondo Nacional de Estupefacientes, 2021 
-## 
-## Email: dsparra@minsalud.gov.co 
-################################################################################-
+
+#+ setup1, warning=FALSE, message=FALSE
 require(plotly)
 require(tidyverse); theme_set(theme_bw())
 require(lubridate)
 require(ggrepel)
 require(patchwork)
-# require(ggsflabel)
 
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
 source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encoding = 'UTF-8')
@@ -110,7 +118,7 @@ gRecetarios2 <- df_total %>%
     colour = 'black',
     size = 0.1
   ) +
-  scale_fill_continuous(type = 'gradient', name = 'Existencia circulación') + 
+  paletteer::scale_fill_paletteer_c("viridis::plasma", name = 'Existencia circulación') +
   # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
@@ -149,16 +157,19 @@ guardarGGplot(gRecetarios3, '029_existenciaRecetarios_3', 7, 5)
 # 5. Número de prescripciones por recetario ------------------
 #'-------------------------------------------------------------------------------
 gRecetarios4 <- df_total %>% 
-  pull(`3.05 N.º de prescripciones por recetario`) %>% 
-  table() %>% as_tibble() %>% 
-  ggplot(aes(x = as.integer(.), y = n)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_label(aes(label = n), position = position_stack(1.1)) + 
+  select(col1 = `3.05 N.º de prescripciones por recetario`) %>% 
+  ungroup() %>% 
+  drop_na() %>% 
+  ggplot(aes(x = factor(col1))) + 
+  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_label(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
+  coord_cartesian(ylim = c(0, 13)) +
   ylab('Frecuencia') + xlab('N.° prescripciones por recetario') +
   labs(title = 'Número de prescripciones por recetario') + 
   theme(panel.grid = element_blank())
   
 gRecetarios4
+
 guardarGGplot(gRecetarios4, '030_existenciaRecetarios_4', 6, 4)
 
 #'-------------------------------------------------------------------------------
@@ -234,6 +245,7 @@ gComparativo1 <- df_total %>%
   xlab('Costo de adquisición (COP)') + 
   ylab('Precio de venta (COP)')
 
+#+ comparativoMargen, fig.width = 8, fig.height=6, out.width="90%"
 gComparativo1
 
 guardarGGplot(gComparativo1, '032_comparativoDepartamentos', 8, 6)
@@ -260,6 +272,9 @@ gComparativo3 <- df_total %>%
   xlab('Numero de personas') + 
   ylab('Margen de ganancia \n por recetarios (%)')
 
+#+ figuraCompuesta1, fig.width = 9, fig.height=5, out.width="90%"
+
+(gComparativo2 + gComparativo3)
 
 (gComparativo2 + gComparativo3) %>% 
   guardarGGplot('033_comparativoDepartamentos1', 9, 5)
@@ -299,7 +314,7 @@ gModalidadAdquisicion <- df_total %>%
   geom_text(aes(label = n), position = position_dodge(width = 1), 
             hjust = -1) + 
   xlab('Frecuencia') + 
-  coord_cartesian(xlim = c(0, 7)) +
+  coord_cartesian(xlim = c(0, 10)) +
   labs(title = 'Modalidad de Selección Contratación Recetarios') + 
   theme(axis.title.y = element_blank(),
         panel.grid = element_blank()) 
@@ -333,7 +348,3 @@ gDemoraRecetario <- df_total %>%
 gDemoraRecetario
 
 guardarGGplot(gDemoraRecetario, '036_demoraRecetario', 7, 5)
-
-#'-------------------------------------------------------------------------------
-# 10. ------------------
-#'-------------------------------------------------------------------------------

@@ -23,3 +23,29 @@ barrasGraficoRev <- function(data, fct1, fct1_rev, title = NULL, xlab=NULL, ylab
     labs(title = title) + 
     theme(axis.title.y = element_blank())  
 }
+
+
+#'-------------------------------------------------------------------------------
+#' Gráfico de torta
+#'
+#' @param data_frame 
+#' @param nvar 
+#' @param textvar 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' 
+pieChart <- function(data_frame, nvar, textvar){
+  data_frame %>% 
+    arrange(desc({{textvar}})) %>% 
+    mutate(prop = {{nvar}} / sum({{nvar}}),
+           ncumsum = cumsum(prop) - 0.5 * prop) %>%
+    ggplot(aes(x = "", y = prop,  fill = {{textvar}})) +
+    geom_bar(stat="identity", width=1) +
+    coord_polar("y", start=0) + 
+    theme_void() +
+    theme(legend.position="bottom") +
+    geom_text(aes(y = ncumsum, label = {{textvar}}), color = "white", size=4)
+}
