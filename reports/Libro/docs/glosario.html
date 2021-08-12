@@ -30,10 +30,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="análisis-a-nivel-regional.html"/>
+<link rel="prev" href="lineamientos-y-recomendaciones-generales.html"/>
 <link rel="next" href="créditos.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,6 +52,16 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/setprototypeof-0.1/setprototypeof.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -69,55 +79,71 @@
       <nav role="navigation">
 
 <ul class="summary">
-<img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align=center" width="90%" class="center">
+<img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align:center; padding:5%" width="90%" class="center">
 <li><a href="#" target="_blank"><strong>Misión PRI 1901</strong></a></li>
+
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefacio</a></li>
 <li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> Objetivos</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="objetivos.html"><a href="objetivos.html#objetivo-general"><i class="fa fa-check"></i><b>2.1</b> Objetivo general</a></li>
-<li class="chapter" data-level="2.2" data-path="objetivos.html"><a href="objetivos.html#objetivos-específicos"><i class="fa fa-check"></i><b>2.2</b> Objetivos específicos</a></li>
-</ul></li>
+<li class="chapter" data-level="2" data-path="objetivos.html"><a href="objetivos.html"><i class="fa fa-check"></i><b>2</b> Objetivos</a></li>
 <li class="chapter" data-level="3" data-path="justificación.html"><a href="justificación.html"><i class="fa fa-check"></i><b>3</b> Justificación</a></li>
 <li class="chapter" data-level="4" data-path="análisis-a-nivel-nacional.html"><a href="análisis-a-nivel-nacional.html"><i class="fa fa-check"></i><b>4</b> Análisis a nivel nacional</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="análisis-a-nivel-nacional.html"><a href="análisis-a-nivel-nacional.html#estructura-del-fre"><i class="fa fa-check"></i><b>4.1</b> Estructura del FRE</a></li>
-<li class="chapter" data-level="4.2" data-path="análisis-a-nivel-nacional.html"><a href="análisis-a-nivel-nacional.html#recetarios-oficiales"><i class="fa fa-check"></i><b>4.2</b> Recetarios oficiales</a></li>
-<li class="chapter" data-level="4.3" data-path="análisis-a-nivel-nacional.html"><a href="análisis-a-nivel-nacional.html#ruta-tecnológica"><i class="fa fa-check"></i><b>4.3</b> Ruta tecnológica</a></li>
-<li class="chapter" data-level="4.4" data-path="análisis-a-nivel-nacional.html"><a href="análisis-a-nivel-nacional.html#reporte-de-informes"><i class="fa fa-check"></i><b>4.4</b> Reporte de informes</a></li>
+<li class="chapter" data-level="4.1" data-path="estructura-del-fre.html"><a href="estructura-del-fre.html"><i class="fa fa-check"></i><b>4.1</b> Estructura del FRE</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="estructura-del-fre.html"><a href="estructura-del-fre.html#fecha-de-constitución-de-fre"><i class="fa fa-check"></i><b>4.1.1</b> Fecha de constitución de FRE</a></li>
+<li class="chapter" data-level="4.1.2" data-path="estructura-del-fre.html"><a href="estructura-del-fre.html#estructura-organizacional"><i class="fa fa-check"></i><b>4.1.2</b> Estructura organizacional</a></li>
+<li class="chapter" data-level="4.1.3" data-path="estructura-del-fre.html"><a href="estructura-del-fre.html#instituciones-inscritas-en-el-fre"><i class="fa fa-check"></i><b>4.1.3</b> Instituciones inscritas en el FRE</a></li>
+<li class="chapter" data-level="4.1.4" data-path="estructura-del-fre.html"><a href="estructura-del-fre.html#caracterización-de-las-fuentes-de-ingresos-de-los-fre"><i class="fa fa-check"></i><b>4.1.4</b> Caracterización de las fuentes de ingresos de los FRE</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="recetarios-oficiales.html"><a href="recetarios-oficiales.html"><i class="fa fa-check"></i><b>4.2</b> Recetarios oficiales</a></li>
+<li class="chapter" data-level="4.3" data-path="ruta-tecnológica.html"><a href="ruta-tecnológica.html"><i class="fa fa-check"></i><b>4.3</b> Ruta tecnológica</a></li>
+<li class="chapter" data-level="4.4" data-path="adquisición-de-mme-y-manejo-de-inventarios.html"><a href="adquisición-de-mme-y-manejo-de-inventarios.html"><i class="fa fa-check"></i><b>4.4</b> Adquisición de MME y manejo de inventarios</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="adquisición-de-mme-y-manejo-de-inventarios.html"><a href="adquisición-de-mme-y-manejo-de-inventarios.html#adquisición-de-mme-por-parte-del-fre"><i class="fa fa-check"></i><b>4.4.1</b> Adquisición de MME por parte del FRE</a></li>
+<li class="chapter" data-level="4.4.2" data-path="adquisición-de-mme-y-manejo-de-inventarios.html"><a href="adquisición-de-mme-y-manejo-de-inventarios.html#recepción-de-medicamentos"><i class="fa fa-check"></i><b>4.4.2</b> Recepción de medicamentos</a></li>
+<li class="chapter" data-level="4.4.3" data-path="adquisición-de-mme-y-manejo-de-inventarios.html"><a href="adquisición-de-mme-y-manejo-de-inventarios.html#vencimiento-de-medicamentos"><i class="fa fa-check"></i><b>4.4.3</b> Vencimiento de medicamentos</a></li>
+<li class="chapter" data-level="4.4.4" data-path="adquisición-de-mme-y-manejo-de-inventarios.html"><a href="adquisición-de-mme-y-manejo-de-inventarios.html#almacenamiento"><i class="fa fa-check"></i><b>4.4.4</b> Almacenamiento</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="reporte-de-informes.html"><a href="reporte-de-informes.html"><i class="fa fa-check"></i><b>4.5</b> Reporte de informes</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="reporte-de-informes.html"><a href="reporte-de-informes.html#seguridad-de-la-información"><i class="fa fa-check"></i><b>4.5.1</b> Seguridad de la información</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html"><i class="fa fa-check"></i><b>5</b> Análisis a Nivel Regional</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#región-andina-norte"><i class="fa fa-check"></i><b>5.1</b> Región Andina Norte</a>
+<li class="chapter" data-level="5.1" data-path="región-andina-norte.html"><a href="región-andina-norte.html"><i class="fa fa-check"></i><b>5.1</b> Región Andina Norte</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#adquisición-venta-y-distribución-de-ro"><i class="fa fa-check"></i><b>5.1.1</b> Adquisición, Venta y Distribución de RO</a></li>
-<li class="chapter" data-level="5.1.2" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#seguimiento-y-control-de-ro"><i class="fa fa-check"></i><b>5.1.2</b> Seguimiento y Control de RO</a></li>
-<li class="chapter" data-level="5.1.3" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#recepción-consolidación-e-inventario-de-ro"><i class="fa fa-check"></i><b>5.1.3</b> Recepción Consolidación e Inventario de RO</a></li>
-<li class="chapter" data-level="5.1.4" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#ruta-tecnológica."><i class="fa fa-check"></i><b>5.1.4</b> Ruta tecnológica.</a></li>
-<li class="chapter" data-level="5.1.5" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#proyección-de-compra-mme"><i class="fa fa-check"></i><b>5.1.5</b> Proyección de Compra MME</a></li>
-<li class="chapter" data-level="5.1.6" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#recepción-técnica."><i class="fa fa-check"></i><b>5.1.6</b> Recepción técnica.</a></li>
-<li class="chapter" data-level="5.1.7" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#almacenamiento-e-inventario-de-mme"><i class="fa fa-check"></i><b>5.1.7</b> Almacenamiento e inventario de MME</a></li>
-<li class="chapter" data-level="5.1.8" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#proceso-de-distribución-a-instituciones-y-pacientes"><i class="fa fa-check"></i><b>5.1.8</b> Proceso de distribución a instituciones y pacientes</a></li>
+<li class="chapter" data-level="5.1.1" data-path="región-andina-norte.html"><a href="región-andina-norte.html#adquisición-venta-y-distribución-de-ro"><i class="fa fa-check"></i><b>5.1.1</b> Adquisición, Venta y Distribución de RO</a></li>
+<li class="chapter" data-level="5.1.2" data-path="región-andina-norte.html"><a href="región-andina-norte.html#seguimiento-y-control-de-ro"><i class="fa fa-check"></i><b>5.1.2</b> Seguimiento y Control de RO</a></li>
+<li class="chapter" data-level="5.1.3" data-path="región-andina-norte.html"><a href="región-andina-norte.html#recepción-consolidación-e-inventario-de-ro"><i class="fa fa-check"></i><b>5.1.3</b> Recepción Consolidación e Inventario de RO</a></li>
+<li class="chapter" data-level="5.1.4" data-path="región-andina-norte.html"><a href="región-andina-norte.html#ruta-tecnológica."><i class="fa fa-check"></i><b>5.1.4</b> Ruta tecnológica.</a></li>
+<li class="chapter" data-level="5.1.5" data-path="región-andina-norte.html"><a href="región-andina-norte.html#proyección-de-compra-mme"><i class="fa fa-check"></i><b>5.1.5</b> Proyección de Compra MME</a></li>
+<li class="chapter" data-level="5.1.6" data-path="región-andina-norte.html"><a href="región-andina-norte.html#recepción-técnica."><i class="fa fa-check"></i><b>5.1.6</b> Recepción técnica.</a></li>
+<li class="chapter" data-level="5.1.7" data-path="región-andina-norte.html"><a href="región-andina-norte.html#almacenamiento-e-inventario-de-mme"><i class="fa fa-check"></i><b>5.1.7</b> Almacenamiento e inventario de MME</a></li>
+<li class="chapter" data-level="5.1.8" data-path="región-andina-norte.html"><a href="región-andina-norte.html#proceso-de-distribución-a-instituciones-y-pacientes"><i class="fa fa-check"></i><b>5.1.8</b> Proceso de distribución a instituciones y pacientes</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#región-andina-sur"><i class="fa fa-check"></i><b>5.2</b> Región Andina Sur</a>
+<li class="chapter" data-level="5.2" data-path="región-andina-sur.html"><a href="región-andina-sur.html"><i class="fa fa-check"></i><b>5.2</b> Región Andina Sur</a>
 <ul>
-<li class="chapter" data-level="5.2.1" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#adquisición-venta-y-distribución-de-ro-1"><i class="fa fa-check"></i><b>5.2.1</b> Adquisición, Venta y Distribución de RO</a></li>
-<li class="chapter" data-level="5.2.2" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#seguimiento-y-control-de-ro-1"><i class="fa fa-check"></i><b>5.2.2</b> Seguimiento y Control de RO</a></li>
-<li class="chapter" data-level="5.2.3" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#recepción-consolidación-e-inventario-de-ro-1"><i class="fa fa-check"></i><b>5.2.3</b> Recepción Consolidación e Inventario de RO</a></li>
-<li class="chapter" data-level="5.2.4" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#ruta-tecnológica.-1"><i class="fa fa-check"></i><b>5.2.4</b> Ruta tecnológica.</a></li>
-<li class="chapter" data-level="5.2.5" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#proyección-de-compra-mme-1"><i class="fa fa-check"></i><b>5.2.5</b> Proyección de Compra MME</a></li>
-<li class="chapter" data-level="5.2.6" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#recepción-técnica.-1"><i class="fa fa-check"></i><b>5.2.6</b> Recepción técnica.</a></li>
-<li class="chapter" data-level="5.2.7" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#almacenamiento-e-inventario-de-mme-1"><i class="fa fa-check"></i><b>5.2.7</b> Almacenamiento e inventario de MME</a></li>
-<li class="chapter" data-level="5.2.8" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#proceso-de-distribución-a-instituciones-y-pacientes-1"><i class="fa fa-check"></i><b>5.2.8</b> Proceso de distribución a instituciones y pacientes</a></li>
+<li class="chapter" data-level="5.2.1" data-path="región-andina-sur.html"><a href="región-andina-sur.html#adquisición-venta-y-distribución-de-ro-1"><i class="fa fa-check"></i><b>5.2.1</b> Adquisición, Venta y Distribución de RO</a></li>
+<li class="chapter" data-level="5.2.2" data-path="región-andina-sur.html"><a href="región-andina-sur.html#seguimiento-y-control-de-ro-1"><i class="fa fa-check"></i><b>5.2.2</b> Seguimiento y Control de RO</a></li>
+<li class="chapter" data-level="5.2.3" data-path="región-andina-sur.html"><a href="región-andina-sur.html#recepción-consolidación-e-inventario-de-ro-1"><i class="fa fa-check"></i><b>5.2.3</b> Recepción Consolidación e Inventario de RO</a></li>
+<li class="chapter" data-level="5.2.4" data-path="región-andina-sur.html"><a href="región-andina-sur.html#ruta-tecnológica.-1"><i class="fa fa-check"></i><b>5.2.4</b> Ruta tecnológica.</a></li>
+<li class="chapter" data-level="5.2.5" data-path="región-andina-sur.html"><a href="región-andina-sur.html#proyección-de-compra-mme-1"><i class="fa fa-check"></i><b>5.2.5</b> Proyección de Compra MME</a></li>
+<li class="chapter" data-level="5.2.6" data-path="región-andina-sur.html"><a href="región-andina-sur.html#recepción-técnica.-1"><i class="fa fa-check"></i><b>5.2.6</b> Recepción técnica.</a></li>
+<li class="chapter" data-level="5.2.7" data-path="región-andina-sur.html"><a href="región-andina-sur.html#almacenamiento-e-inventario-de-mme-1"><i class="fa fa-check"></i><b>5.2.7</b> Almacenamiento e inventario de MME</a></li>
+<li class="chapter" data-level="5.2.8" data-path="región-andina-sur.html"><a href="región-andina-sur.html#proceso-de-distribución-a-instituciones-y-pacientes-1"><i class="fa fa-check"></i><b>5.2.8</b> Proceso de distribución a instituciones y pacientes</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#región-caribe"><i class="fa fa-check"></i><b>5.3</b> Región Caribe</a></li>
-<li class="chapter" data-level="5.4" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#región-orinoquía"><i class="fa fa-check"></i><b>5.4</b> Región Orinoquía</a></li>
-<li class="chapter" data-level="5.5" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#región-pacífica"><i class="fa fa-check"></i><b>5.5</b> Región Pacífica</a></li>
-<li class="chapter" data-level="5.6" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html#lineamientos-y-recomendaciones-generales"><i class="fa fa-check"></i><b>5.6</b> Lineamientos y Recomendaciones Generales</a></li>
+<li class="chapter" data-level="5.3" data-path="región-caribe.html"><a href="región-caribe.html"><i class="fa fa-check"></i><b>5.3</b> Región Caribe</a></li>
+<li class="chapter" data-level="5.4" data-path="región-orinoquía.html"><a href="región-orinoquía.html"><i class="fa fa-check"></i><b>5.4</b> Región Orinoquía</a></li>
+<li class="chapter" data-level="5.5" data-path="región-pacífica.html"><a href="región-pacífica.html"><i class="fa fa-check"></i><b>5.5</b> Región Pacífica</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="lineamientos-y-recomendaciones-generales.html"><a href="lineamientos-y-recomendaciones-generales.html"><i class="fa fa-check"></i><b>6</b> Lineamientos y Recomendaciones Generales</a></li>
 <li class="chapter" data-level="" data-path="glosario.html"><a href="glosario.html"><i class="fa fa-check"></i>Glosario</a></li>
-<li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html"><i class="fa fa-check"></i>Créditos</a></li>
+<li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html"><i class="fa fa-check"></i>Créditos</a>
+<ul>
+<li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html#grupo-desarrollador"><i class="fa fa-check"></i>Grupo Desarrollador</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -138,25 +164,25 @@
 <div id="glosario" class="section level1 unnumbered">
 <h1>Glosario</h1>
 <ul>
-<li><p>ALERTA SANITARIA: Toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces.</p></li>
-<li><p>COMPRA DIRECTA: compra de medicamentos monopolio del Estado por parte de entidades administradoras de planes de beneficios, prestadores de servicios de salud o establecimientos farmacéuticos, cuando el respectivo Fondo Rotatorio de Estupefacientes no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.</p></li>
-<li><p>DESABASTECIMIENTO: Se entiende como la nula disponibilidad de un medicamento en todo el territorio nacional.</p></li>
-<li><p>DISPONIBILIDAD: Condición en la cual se cuentan con existencias del medicamento en el territorio nacional.</p></li>
-<li><p>FARMACOVIGILANCIA: Ciencia y actividades relacionadas con la detección, evaluación, comprensión y prevención de eventos adversos o de cualquier otro problema relacionado con medicamentos.</p></li>
-<li><p>FONDO NACIONAL DE ESTUPEFACIENTES: Creado por la Ley 36 de 1939 con asignaciones dadas por el Decreto-Ley 257 de 1969, según el Decreto 205 de 2003 funciona como una Unidad Administrativa Especial adjunta de la Dirección de Medicamentos y Tecnologías en Salud. El FNE (Fondo Nacional de Estupefacientes) tiene como objetivo la vigilancia y control sobre la importación, la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional.</p></li>
-<li><p>FONDO ROTATORIO DE ESTUPEFACIENTES (FRE): Es la oficina encargada dentro de la Secretaría, Instituto o Dirección de Salud a nivel departamental, que ejerce la vigilancia, seguimiento y control a las entidades públicas, privadas y personas naturales que procesen, manipulen, sinteticen, fabriquen, distribuyan, vendan, consuman, dispensen sustancias sometidas a fiscalización y medicamentos que las contengan; así como garantizar la disponibilidad de medicamentos monopolio del Estado a través de la dispensación y distribución en su jurisdicción y las demás funciones que le sean asignadas por el Ministerio de la Protección Social, o la institución competente.</p></li>
-<li><p>MATERIA PRIMA DE CONTROL ESPECIAL O SUSTANCIA SOMETIDA A FISCALIZACIÓN: Es toda sustancia cualquiera que sea su origen, que produce efectos mediatos e inmediatos de dependencia psíquica o física en el ser humano; aquella que por su posibilidad de abuso, pueda tener algún grado de peligrosidad en su uso, o aquella que haya sido catalogada como tal, en los convenios internacionales, por el Ministerio de la Protección Social, o la Comisión Revisora del Invima. Dentro de estas se incluyen los estándares de referencia, patrones y reactivos.</p></li>
-<li><p>MEDICAMENTO DE CONTROL ESPECIAL (MCE): Producto farmacéutico obtenido a partir de sustancias que tienen alto potencial de dependencia y abuso, que actúan sobre el sistema nervioso central produciendo efectos neuro-psicofisiológicos y aquellas consideradas por el gobierno nacional.</p></li>
-<li><p>MEDICAMENTO MONOPOLIO DEL ESTADO: Producto farmacéutico de adquisición, distribución y venta exclusiva del Fondo Nacional de Estupefacientes y los Fondos Rotatorios de Estupefacientes o los establecimientos facultados por el FNE para estas actividades.</p></li>
-<li><p>MEDICAMENTO SOMETIDO A FISCALIZACIÓN DE USO HUMANO O VETERINARIO: Es el preparado farmacéutico obtenido a partir de uno o más principios activos de control especial, catalogados como tal en las convenciones de estupefacientes (1961), precursores (1988) y psicotrópicos (1971), o por el Gobierno Nacional, con o sin sustancias auxiliares presentado bajo forma farmacéutica definida, que se utiliza para la prevención, diagnóstico, tratamiento, curación o rehabilitación de las enfermedades de los seres vivos.</p></li>
-<li><p>MONOPOLIO DEL ESTADO: Derecho poseído de exclusividad por el Estado.</p></li>
-<li><p>PRINCIPIO ACTIVO: Compuesto o mezcla de compuestos que tienen acción farmacológica.</p></li>
-<li><p>RECETARIO OFICIAL (RO): Documento oficial autorizado por la entidad competente, de carácter personal e intransferible que utilizan los prescriptores de salud para la formulación de los medicamentos de control especial y de Monopolio del Estado.</p></li>
-<li><p>RECETARIO OFICIAL ELECTRÓNICO (ROE): Documento electrónico que se pretende parametrizar en todos los FRE, con el fin de fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional.</p></li>
-<li><p>SERVICIO FARMACÉUTICO: Es el servicio de atención en salud responsable de las actividades, procedimientos e intervenciones de carácter técnico, científico y administrativo, relacionado con los medicamentos y los dispositivos médicos utilizados en la promoción de la salud y la prevención, diagnóstico, tratamiento y rehabilitación de la enfermedad, con el fin de contribuir en forma armónica e integral al mejoramiento de la calidad de vida individual y colectiva.</p></li>
-<li><p>SUSTANCIA MONOPOLIO DEL ESTADO: Sustancia química cuya adquisición, manejo y destrucción es exclusiva del Fondo Nacional de Estupefacientes y es destinada para la fabricación de medicamentos monopolio del Estado.</p></li>
-<li><p>TRASLADO INTERDEPARTAMENTAL: Es la actividad en la cual se autoriza por parte del FNE, de manera excepcional, el traslado interdepartamental de medicamentos monopolio del Estado por parte de diferentes filiales de la misma entidad, si el Fondo Rotatorio no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.</p></li>
-<li><p>PRÉSTAMO ENTRE LOS FRE: Es la modalidad en la cual se autoriza a los FRE a prestarse entre ellos medicamentos monopolio del Estado sin la necesidad de la autorización del FNE, con el fin de suplir los riesgos de desabastecimiento que hubiere a lugar y dar rotación a medicamentos que estén próximos a vencerse.</p></li>
+<li><p><strong>Alerta Sanitaria</strong>: Toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces.</p></li>
+<li><p><strong>Compra Directa</strong>: compra de medicamentos monopolio del Estado por parte de entidades administradoras de planes de beneficios, prestadores de servicios de salud o establecimientos farmacéuticos, cuando el respectivo Fondo Rotatorio de Estupefacientes no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.</p></li>
+<li><p><strong>Desabastecimiento</strong>: Se entiende como la nula disponibilidad de un medicamento en todo el territorio nacional.</p></li>
+<li><p><strong>Disponibilidad</strong>: Condición en la cual se cuentan con existencias del medicamento en el territorio nacional.</p></li>
+<li><p><strong>Farmacovigilancia</strong>: Ciencia y actividades relacionadas con la detección, evaluación, comprensión y prevención de eventos adversos o de cualquier otro problema relacionado con medicamentos.</p></li>
+<li><p><strong>Fondo Nacional de Estupefacientes</strong>: Creado por la Ley 36 de 1939 con asignaciones dadas por el Decreto-Ley 257 de 1969, según el Decreto 205 de 2003 funciona como una Unidad Administrativa Especial adjunta de la Dirección de Medicamentos y Tecnologías en Salud. El FNE (Fondo Nacional de Estupefacientes) tiene como objetivo la vigilancia y control sobre la importación, la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional.</p></li>
+<li><p><strong>Fondo Rotatorio de Estupefacientes (FRE)</strong>: Es la oficina encargada dentro de la Secretaría, Instituto o Dirección de Salud a nivel departamental, que ejerce la vigilancia, seguimiento y control a las entidades públicas, privadas y personas naturales que procesen, manipulen, sinteticen, fabriquen, distribuyan, vendan, consuman, dispensen sustancias sometidas a fiscalización y medicamentos que las contengan; así como garantizar la disponibilidad de medicamentos monopolio del Estado a través de la dispensación y distribución en su jurisdicción y las demás funciones que le sean asignadas por el Ministerio de la Protección Social, o la institución competente.</p></li>
+<li><p><strong>Materia Prima de Control Especial o Sustancia Sometida a Fiscalización</strong>: Es toda sustancia cualquiera que sea su origen, que produce efectos mediatos e inmediatos de dependencia psíquica o física en el ser humano; aquella que por su posibilidad de abuso, pueda tener algún grado de peligrosidad en su uso, o aquella que haya sido catalogada como tal, en los convenios internacionales, por el Ministerio de la Protección Social, o la Comisión Revisora del Invima. Dentro de estas se incluyen los estándares de referencia, patrones y reactivos.</p></li>
+<li><p><strong>Medicamento de Control Especial (MCE)</strong>: Producto farmacéutico obtenido a partir de sustancias que tienen alto potencial de dependencia y abuso, que actúan sobre el sistema nervioso central produciendo efectos neuro-psicofisiológicos y aquellas consideradas por el gobierno nacional.</p></li>
+<li><p><strong>Medicamento Monopolio del Estado</strong>: Producto farmacéutico de adquisición, distribución y venta exclusiva del Fondo Nacional de Estupefacientes y los Fondos Rotatorios de Estupefacientes o los establecimientos facultados por el FNE para estas actividades.</p></li>
+<li><p><strong>Medicamento Sometido a Fiscalización de Uso Humano o Veterinario</strong>: Es el preparado farmacéutico obtenido a partir de uno o más principios activos de control especial, catalogados como tal en las convenciones de estupefacientes (1961), precursores (1988) y psicotrópicos (1971), o por el Gobierno Nacional, con o sin sustancias auxiliares presentado bajo forma farmacéutica definida, que se utiliza para la prevención, diagnóstico, tratamiento, curación o rehabilitación de las enfermedades de los seres vivos.</p></li>
+<li><p><strong>Monopolio del Estado</strong>: Derecho poseído de exclusividad por el Estado.</p></li>
+<li><p><strong>Principio Activo</strong>: Compuesto o mezcla de compuestos que tienen acción farmacológica.</p></li>
+<li><p><strong>Recetario Oficial (RO)</strong>: Documento oficial autorizado por la entidad competente, de carácter personal e intransferible que utilizan los prescriptores de salud para la formulación de los medicamentos de control especial y de Monopolio del Estado.</p></li>
+<li><p><strong>Recetario Oficial Electrónico (ROE)</strong>: Documento electrónico que se pretende parametrizar en todos los FRE, con el fin de fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional.</p></li>
+<li><p><strong>Servicio Farmacéutico</strong>: Es el servicio de atención en salud responsable de las actividades, procedimientos e intervenciones de carácter técnico, científico y administrativo, relacionado con los medicamentos y los dispositivos médicos utilizados en la promoción de la salud y la prevención, diagnóstico, tratamiento y rehabilitación de la enfermedad, con el fin de contribuir en forma armónica e integral al mejoramiento de la calidad de vida individual y colectiva.</p></li>
+<li><p><strong>Sustancia Monopolio del Estado</strong>: Sustancia química cuya adquisición, manejo y destrucción es exclusiva del Fondo Nacional de Estupefacientes y es destinada para la fabricación de medicamentos monopolio del Estado.</p></li>
+<li><p><strong>Traslado Interdepartamental</strong>: Es la actividad en la cual se autoriza por parte del FNE, de manera excepcional, el traslado interdepartamental de medicamentos monopolio del Estado por parte de diferentes filiales de la misma entidad, si el Fondo Rotatorio no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.</p></li>
+<li><p><strong>Préstamo entre los FRE</strong>: Es la modalidad en la cual se autoriza a los FRE a prestarse entre ellos medicamentos monopolio del Estado sin la necesidad de la autorización del FNE, con el fin de suplir los riesgos de desabastecimiento que hubiere a lugar y dar rotación a medicamentos que estén próximos a vencerse.</p></li>
 </ul>
 
 </div>
@@ -165,7 +191,7 @@
           </div>
         </div>
       </div>
-<a href="análisis-a-nivel-regional.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lineamientos-y-recomendaciones-generales.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="créditos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -209,7 +235,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["InformeFinal.pdf"],
 "toc": {
 "collapse": "subsection"
 }

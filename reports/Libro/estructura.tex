@@ -1,0 +1,120 @@
+% Márgenes de páginas
+\usepackage[
+top=2.54cm, 			% Top margin
+bottom=2.54cm, 			% Bottom margin
+left=3.6cm, 			% Left margin
+right=2.54cm,    		% Right margin
+headheight=17pt, 		% as per the warning by fancyhdr
+includehead,includefoot,
+heightrounded, 			% to avoid spurious underfull messages
+%showframe, 			% Uncomment to show how the type block is set on the page
+]{geometry} 
+
+% Requerido para incluir figuras
+\usepackage{graphicx} 
+
+\usepackage{tikz} 
+\usetikzlibrary{plotmarks} % Paquete de plotmarks
+\usetikzlibrary{shapes,arrows.meta} % Paquete para flechas
+
+% Lenguaje Español, uso de punto en vez e coma para decimales, uso de tabla
+\usepackage[spanish,es-nodecimaldot, es-tabla]{babel} 
+
+% Personalizar listas
+\usepackage{enumitem} 
+\setlist{nolistsep} % Reducir espacio entre viñetas y listas numeradas
+
+% Requerido para líneas horizontales en tablas
+\usepackage{booktabs} 
+%
+\usepackage{multirow}
+\usepackage{balance}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{ltablex}
+\usepackage{tabularx}
+\usepackage{afterpage}
+
+% Tablas y Subtablas
+\usepackage[labelfont=bf]{caption}
+\usepackage[labelformat=simple, labelsep=period]{subcaption}
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
+
+% Fuentes
+\usepackage{avant}
+
+%----------------------------------------------------------------------------------------
+%	Colores definidos por usuario
+%----------------------------------------------------------------------------------------
+\usepackage{xcolor} % Required for specifying colors by name
+% Definición de Color
+\definecolor{ocre}{RGB}{243,102,25} 
+\definecolor{cyan}{RGB}{0,137,186}
+\definecolor{darkergreen}{RGB}{9,147,189}
+
+% Se cambia por el color Pantone del año 2020 Azul Clásico
+\definecolor{specialgreen}{RGB}{15,76,129} % Azul Clásico Pantone 19-4052
+\definecolor{babyblue}{RGB}{181,199,211} % Baby Blue Pantone 13-4308 TCX
+\definecolor{cornhusk}{RGB}{243,213,173} % Cornhusk Pantone 12-0714 TCX
+\definecolor{Peach-Quartz}{RGB}{245,184,149} % Peach Quartz Pantone 13-1125 TCX
+
+% Colores de Portada
+\definecolor{bgBlue}{RGB}{42,43,53}
+\definecolor{txBlue}{RGB}{80,179,209} 
+\usepackage{mathptmx} 
+
+%----------------------------------------------------------------------------------------
+%	Bibliografía e índices
+%----------------------------------------------------------------------------------------
+%\usepackage{csquotes}	\usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,
+%autolang=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber,defernumbers=true]{biblatex}
+%\addbibresource{bibliography.bib} % BibTeX bibliography file
+%\defbibheading{bibempty}{}
+
+% Paquete de Referenciación Natbib
+\usepackage[numbers, round, sort, sectionbib]{natbib}
+\renewcommand{\bibsection}{} % Para quitar la palabra bibliografía como título de esta sección o colocar otra. 
+\setcitestyle{square}
+\bibliographystyle{vancouver}
+
+% Para un cálculo simple: se utiliza para espaciar correctamente los encabezados de las 
+% letras índice
+\usepackage{calc} 
+% Requerido para hacer un índice
+\usepackage{makeidx} 
+% que Crear los archivos necesarios para la indexación en Latex
+\makeindex 
+
+%----------------------------------------------------------------------------------------
+%	Encabezado de página
+%----------------------------------------------------------------------------------------
+% Requerido para la configuración de encabezado y pie de página
+\usepackage{fancyhdr} 
+
+\pagestyle{fancy}
+% Configuración de fuente de texto de capítulo
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries\chaptername\ \thechapter.\ #1}{}} 
+% Configuración de fuente de texto de sección
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} 
+% Configuración de fuente para el número de página en el encabezado
+\fancyhf{} \fancyhead[LE,RO]{\sffamily\normalsize\thepage} 
+\fancyhead[LO]{\rightmark} % Imprima el nombre de la sección más cercana en el lado izquierdo de las páginas impares
+\fancyhead[RE]{\leftmark} % Imprima el nombre del capítulo actual en el lado derecho de las páginas pares
+\renewcommand{\headrulewidth}{0.5pt} % De ancho de la regla debajo del encabezado
+\addtolength{\headheight}{2.5pt} % Aumente ligeramente el espacio alrededor del encabezado
+\renewcommand{\footrulewidth}{0pt} % Elimina la regla en el pie de página
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Estilo para cuando se especifica un estilo de página simple
+
+%% Elimina el encabezado de páginas vacías impares al final de los capítulos
+%\makeatletter
+%\renewcommand{\cleardoublepage}{
+%	\clearpage\ifodd\c@page\else
+%	\hbox{}
+%	\vspace*{\fill}
+%	\thispagestyle{empty}
+%	\newpage
+%	\fi}
+
+
+%% Esto se usa para prevenir el error de flotas sobrepasados en ciclos
+\usepackage[maxfloats=256]{morefloats}

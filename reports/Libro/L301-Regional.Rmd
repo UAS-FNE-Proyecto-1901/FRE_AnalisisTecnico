@@ -1,3 +1,10 @@
+```{r Setup301, include=FALSE}
+require(knitr)
+require(rmarkdown)
+require(tidyverse)
+require(readxl)
+```
+
 
 # Análisis a Nivel Regional
 
@@ -20,19 +27,27 @@ Estas consideraciones se hacen con el fin de tratar de agregar un insumo al aná
 
 En cuanto al proceso de adquisición de recetarios oficiales, se puede observar que los departamentos de Boyacá y Norte de Santander no son muy cercanos al proceso de adquisición y solo están encargados de los estudios previos para entregar a los departamentos encargados de las respectivas licitaciones en Secretaría de Salud y Gobernaciones, entendiendo de manera muy superficial todo el proceso y tiempo que lleva a cabo cada operación cómo la oferta, el pliego de requisitos, etc. Sin embargo sí tienen opiniones sobre las particularidades en cada punto hasta el despacho de los recetarios. 
 
-![Imágen 1](figures/Imagen1.jpg)
+```{r NumeroRecRegAndinaNorte, fig.cap="N.° de recetarios en la Región Andina Norte", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen1.jpg")
+```
 
-En cuanto a las existencias actuales, en la figura (X) se observan las cantidades descritas durante la visita de inmersión territorial, el departamento de Boyacá es el que más existencias tiene, debido a que su proceso de adquisición es lento (5 meses aprox.) y decidieron tener existencias aproximadas para 3-4 años, siendo un dato atípico en la región que hace este proceso anual. Ninguno de los departamentos presenta anomalías o desabastecimiento de recetarios oficiales.
+En cuanto a las existencias actuales, en la Figura \@ref(fig:NumeroRecRegAndinaNorte) se observan las cantidades descritas durante la visita de inmersión territorial, el departamento de Boyacá es el que más existencias tiene, debido a que su proceso de adquisición es lento (5 meses aprox.) y decidieron tener existencias aproximadas para 3-4 años, siendo un dato atípico en la región que hace este proceso anual. Ninguno de los departamentos presenta anomalías o desabastecimiento de recetarios oficiales.
 
-![Imágen 2](figures/Imagen2.png)
+```{r TiemposAdqRecRegAndinaNorte, fig.cap="Tiempos de adquisición de recetarios en la Región Andina Norte", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen2.png")
+```
 
-Sobre todo el proceso de venta y ganancias netas que deja la venta de recetarios oficiales en la región se puede observar que Boyacá y Norte de Santander. se puede observar que Boyacá es el que más margen de ganancia tiene sobre la venta de recetarios con 158% Figura (X) , si se cruza esta información con el 40% que aporta la venta de los recetarios al total de los ingresos del FRE cómo se ve en la figura (X), esta también podría ser una posible explicación de la prioridad de Stock que tiene este departamento, por otro lado, Norte de Santander maneja un Stock equilibrado también a sus necesidades que corresponde con proceso de adquisición mucho más rápido y eficiente en cuanto al despacho de los recetarios oficiales.
+Sobre todo el proceso de venta y ganancias netas que deja la venta de recetarios oficiales en la región se puede observar que Boyacá y Norte de Santander. se puede observar que Boyacá es el que más margen de ganancia tiene sobre la venta de recetarios con 158% Figura \@ref(fig:PorcIngresosProvenientesRO), si se cruza esta información con el 40% que aporta la venta de los recetarios al total de los ingresos del FRE cómo se ve en la Figura \@ref(fig:PorcIngresosProvenientesRO), esta también podría ser una posible explicación de la prioridad de Stock que tiene este departamento, por otro lado, Norte de Santander maneja un Stock equilibrado también a sus necesidades que corresponde con proceso de adquisición mucho más rápido y eficiente en cuanto al despacho de los recetarios oficiales.
 
-![Imágen 3](figures/Imagen3.png)
+```{r PorcIngresosProvenientesRO, fig.cap="Porcentaje de ingresos provenientes del RO y conformidad respeto a la implementación del ROE", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen3.png")
+```
 
-Un proceso crítico dentro del manejo de los recetarios oficiales, es la ordenanza o acto administrativo que fija sus precios, pues es la manera de controlar los precios de estos medicamentos y evitar que puedan existir barreras de acceso o procesos irregulares relacionados con la venta de los mismos. En la figura (X) se puede observar que  de los departamentos analizados, solo Norte de Santander no tiene ordenanza o un acto administrativo que fije los precios de los recetarios oficiales. Esto sucede porque por normativa departamental, este acto administrativo debe ser evaluado por la Asamblea de Norte de Santander, siendo un proceso largo que tiene un carácter mucho más político.
+Un proceso crítico dentro del manejo de los recetarios oficiales, es la ordenanza o acto administrativo que fija sus precios, pues es la manera de controlar los precios de estos medicamentos y evitar que puedan existir barreras de acceso o procesos irregulares relacionados con la venta de los mismos. En la Figura \@ref(fig:PorcGananciasDepto) se puede observar qué en los departamentos analizados, sólo Norte de Santander no tiene ordenanza o un acto administrativo que fije los precios de los recetarios oficiales. Esto sucede porque por normativa departamental, este acto administrativo debe ser evaluado por la Asamblea de Norte de Santander, siendo un proceso largo que tiene un carácter mucho más político.
 
-![Imágen 4](figures/Imagen4.png)
+```{r PorcGananciasDepto, fig.cap="Porcentaje de ganancias en los departamentos", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen4.png")
+```
 
 ### Seguimiento y Control de RO
 
@@ -45,9 +60,25 @@ Referente a la Seguridad de los recetarios, ambos departamentos tienen una gran 
 En ninguno de los departamentos evaluados se hace una recepción y consolidación de recetarios oficiales, pues manifiestan que tienen diferentes métodos para asegurarse que las cantidades solicitadas sean las indicadas y los pacientes de las instituciones existan, por ejemplo Norte de Santander recibe las cajas de inventarios solo para hacer contrarreferencia de las copias de los recetarios por los códigos y luego procede a destruir las cajas, no almacenan, mientras Boyacá recibe las cajas de la misma manera pero solo las acumula. Para el inventario de los recetarios oficiales que entran, solo se toma cómo almacenamiento muerto, pues no existe algún control real de recepción y consolidación en el caso de los departamentos que no hacen destrucción automática. en cuanto a las existencias nuevas de recetarios disponibles para venta, se realizan inventarios en conjunto con los medicamentos, hay un control de salidas y entradas de cantidades que se revisan semanalmente para verificar que no existan pérdidas, hasta el momento no existe alguna discrepancia o desvío reportado de recetarios.
 
 ### Ruta tecnológica.
-En general la región Andina se caracteriza por tener una conectividad de internet muy buena, rutas de fácil acceso y tecnología suficiente en sus instalaciones, hasta el momento ninguno de los FRE evaluados ha tenido problemas de conectividad a internet u obsolescencia en equipos de cómputo (Figura X), incluso departamentos cómo Norte de Santander manejan el funcionamiento del FRE con programas propios de la Gobernación. en el caso de Boyacá se ha evidenciado que si bien muchos de los procesos los maneja de manera manual, esto se hace más por decisión propia que por alguna falla tecnológica en la región, (Figura X)
+En general la región Andina se caracteriza por tener una conectividad de internet muy buena, rutas de fácil acceso y tecnología suficiente en sus instalaciones, hasta el momento ninguno de los FRE evaluados ha tenido problemas de conectividad a internet u obsolescencia en equipos de cómputo (Figura \@ref(fig:ConexionInternetRecRegAndinaNorte)), incluso departamentos cómo Norte de Santander manejan el funcionamiento del FRE con programas propios de la Gobernación. en el caso de Boyacá se ha evidenciado que si bien muchos de los procesos los maneja de manera manual, esto se hace más por decisión propia que por alguna falla tecnológica en la región (Figura \@ref(fig:CuentasOrdenanza1)).
 
-![Imágen 5](figures/Imagen5.png)
+```{r CuentasOrdenanza1, fig.cap="Cuenta con ordenanza", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen5.png")
+```
+
+```{r ConexionInternetRecRegAndinaNorte, fig.cap="Evaluación de la conexión de internet", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen6.png")
+```
+
+
+```{r softwareTecnologia, echo=FALSE, warning=FALSE, message=FALSE, tab.caption = "Presencia de software para el manejo tecnológico"}
+tibble::tribble(
+        ~Departamento, ~Anexos, ~Inventarios, 
+              "Boyacá",     "No",          "No", 
+  "Norte de Santander",     "Si",          "Si"
+  ) %>% kable(longtable = TRUE, booktabs = TRUE,
+  caption = 'Presencia de software para el manejo tecnológico')
+```
 
 ### Proyección de Compra MME
 
@@ -61,32 +92,60 @@ La recepción técnica suele ser un tema que está estandarizado en los diferent
 
 ### Proceso de distribución a instituciones y pacientes
 
-![Imágen 6](figures/Imagen6.png)
+```{r ColombiaCompraEficienteRecRegAndinaNorte, fig.cap="Percepción de Colombia Compra Eficiente", fig.topcaption=TRUE, out.width="85%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen7.png")
+```
 
+```{r warning=FALSE, echo=FALSE, message=FALSE, tab.cap="Tabla de Región Andina Norte 1", out.width="100%"}
+read_excel("figures/TablaRegionAndinaNorte.xlsx", sheet = "Parte1") %>% 
+  mutate(across(matches('\\d'), ~str_wrap(.x, 35))) %>% 
+  kable(longtable = TRUE, booktabs = TRUE, escape = T,
+  caption = 'Tabla de Región Andina Norte 1') %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = c("hold_position", "repeat_header"))
+```
 
-![Imágen 7](figures/Imagen7.png)
+```{r warning=FALSE, echo=FALSE, message=FALSE, tab.cap="Tabla de Región Andina Norte 2", out.width="100%"}
+read_excel("figures/TablaRegionAndinaNorte.xlsx", sheet = "Parte2") %>% 
+  rename(Departamento = '...1') %>% 
+  mutate(across(matches('\\d'), ~str_wrap(.x, 35))) %>% 
+  kable(format = "latex", longtable = TRUE, booktabs = TRUE, escape = T,
+  caption = 'Tabla de Región Andina Norte 2') %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = c("hold_position", "repeat_header"))
+```
 
 ## Región Andina Sur
 
 ### Adquisición, Venta y Distribución de RO
 
-La región Andina sur, comprendida por los departamentos de Antioquia, Quindío, Huila, Tolima, Risaralda y Caldas, exhibe de manera general un adecuado manejo de los recetarios oficiales en su adquisición, venta y distribución. No obstante, se observa un territorio atípico el cual no cuenta actualmente con existencias de recetarios oficiales, correspondiendo al departamento del Huila. Sobresale que en este territorio la proyección de necesidad de recetarios oficiales requerida para cubrir las necesidades del departamento, es realizada a partir de un simple cálculo, contemplando únicamente la información asociada con la última compra de recetarios oficiales. Además, el FRE Huila no contempla ningún tipo de base de datos o herramienta para la proyección de la necesidad de estos recetarios oficiales, lo que da muestra de un proceso distinto en comparación a los territorios de Antioquia y Quindio. Así las cosas, se observa la gran importancia que cumple la proyección de necesidad de compra de recetarios oficiales, contemplando múltiples variables de cada territorio, para evitar escenarios como en el territorio del Huila.  A continuación se presenta el diagrama XX, para ilustrar la disponibilidad de recetarios oficiales en la región Andina sur.
+La región Andina sur, comprendida por los departamentos de Antioquia, Quindío, Huila, Tolima, Risaralda y Caldas, exhibe de manera general un adecuado manejo de los recetarios oficiales en su adquisición, venta y distribución. No obstante, se observa un territorio atípico el cual no cuenta actualmente con existencias de recetarios oficiales, correspondiendo al departamento del Huila. Sobresale que en este territorio la proyección de necesidad de recetarios oficiales requerida para cubrir las necesidades del departamento, es realizada a partir de un simple cálculo, contemplando únicamente la información asociada con la última compra de recetarios oficiales. Además, el FRE Huila no contempla ningún tipo de base de datos o herramienta para la proyección de la necesidad de estos recetarios oficiales, lo que da muestra de un proceso distinto en comparación a los territorios de Antioquia y Quindio. Así las cosas, se observa la gran importancia que cumple la proyección de necesidad de compra de recetarios oficiales, contemplando múltiples variables de cada territorio, para evitar escenarios como en el territorio del Huila.  A continuación, se presenta la Figura \@ref(fig:DisponibRecetarioRegionAndinaSur), para ilustrar la disponibilidad de recetarios oficiales en la región Andina sur.
 
- 
-DIAGRAMA XX. Disponibilidad de recetarios oficiales en la región Andina sur.
+```{r DisponibRecetarioRegionAndinaSur, fig.cap="Disponibilidad de recetarios oficiales en la región Andina sur", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen10.jpg")
+```
 
-Por otra parte, el tiempo de adquisición de los recetarios oficiales en la región Andina sur oscila entre 75 días y 90 días, a diferencia del FRE Quindío, considerándose un dato atípico entre la región, cuyo tiempo de adquisición puede ser menor a los 20 días. A grandes rasgos, se evidencia un tiempo relativamente largo para adquirir estos recetarios oficiales, lo que implicaría una adecuada planeación en los procesos de adquisición por parte de cada FRE, para evitar un déficit de recetarios oficiales en el territorio. El siguiente diagrama XX, muestra los tiempos de cada territorio en la adquisición de los recetarios oficiales.
+Por otra parte, el tiempo de adquisición de los recetarios oficiales en la región Andina sur oscila entre 75 días y 90 días, a diferencia del FRE Quindío, considerándose un dato atípico entre la región, cuyo tiempo de adquisición puede ser menor a los 20 días. A grandes rasgos, se evidencia un tiempo relativamente largo para adquirir estos recetarios oficiales, lo que implicaría una adecuada planeación en los procesos de adquisición por parte de cada FRE, para evitar un déficit de recetarios oficiales en el territorio. La siguiente Figura \@ref(fig:TiempoAdquisicionRegionAndinaSur), muestra los tiempos de cada territorio en la adquisición de los recetarios oficiales.
  
-DIAGRAMA XX. Tiempos en la adquisición de los recetarios oficiales para cada FRE.
-En relación al porcentaje de ganancias que tiene cada ente territorial a partir de la venta de los recetarios oficiales, se observa que este margen de ganancia puede estar comprendido entre el 250% y 440% respecto al valor de adquisición del mismo. Para cada FRE, esta es una cantidad importante de ganancia que respalda en gran medida su autosostenimiento y contribuye a los recursos indispensables para el correcto funcionamiento del ente territorial. El departamento que más ganancias obtiene a partir del recetario oficial es Quindio con un 440%, a diferencia de Antioquia que es considerado el departamento que menos ganancias obtiene, siendo el 250%. A continuación, se presenta el diagrama XX, en relación a este margen de ganancias en cada FRE.
- 
-DIAGRAMA XX. Porcentaje de ganancias que tiene cada FRE a partir de la venta de los recetarios oficiales.
+```{r TiempoAdquisicionRegionAndinaSur, fig.cap="Tiempos en la adquisición de los recetarios oficiales para cada FRE", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE}
+include_graphics("figures/Imagen11.png")
+```
 
-Continuando con el análisis de las ganancias obtenidas a partir de los recetarios oficiales, en cada FRE, se contempla el porcentaje de ingresos provenientes de los recetarios oficiales respecto a todos los ingresos que recibe el ente territorial. Se observa que Antioquia es el departamento que menos porcentaje de ingresos recibe, el 3%, considerando la totalidad de los ingresos que tiene. Caso diferente en el territorio del Tolima, cuyo ente territorial recibe el 70% de sus ingresos, a partir de la venta de los recetarios oficiales. Esta situación puede estar relacionada directamente con la percepción que cada ente territorial tiene respecto a la implementación del Recetario oficial electrónico (ROE). De acuerdo al análisis, los FRE pueden verse perjudicados con esta implementación, ya que dejarían de percibir los ingresos generados con las ventas de los recetarios oficiales y su sensación al respecto puede incidir en el autosostenimiento del ente territorial. No obstante, departamentos como Antioquia y Huila consideran que la implementación del ROE es favorable, partiendo de la idea que este brindaría mayor oportunidad de seguimiento, trazabilidad y seguridad. A continuación se presenta el diagrama XX, donde se ilustra el porcentaje de ingresos provenientes del Recetario oficial y la conformidad de cada FRE, respecto a la implementación del Recetario oficial electrónico (ROE).
+En relación al porcentaje de ganancias que tiene cada ente territorial a partir de la venta de los recetarios oficiales, se observa que este margen de ganancia puede estar comprendido entre el 250% y 440% respecto al valor de adquisición del mismo. Para cada FRE, esta es una cantidad importante de ganancia que respalda en gran medida su autosostenimiento y contribuye a los recursos indispensables para el correcto funcionamiento del ente territorial. El departamento que más ganancias obtiene a partir del recetario oficial es Quindío con un 440%, a diferencia de Antioquia que es considerado el departamento que menos ganancias obtiene, siendo el 250%. A continuación, se presenta la Figura \@ref(fig:PorcAdquisicionRegionAndinaSur), en relación a este margen de ganancias en cada FRE.
  
-DIAGRAMA XX. Porcentaje de ingresos provenientes del Recetario oficial y conformidad respecto a la implementación del Recetario oficial electrónico (ROE).
+```{r PorcAdquisicionRegionAndinaSur, fig.cap="Porcentaje de ganancias que tiene cada FRE a partir de la venta de los recetarios oficiales", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen12.png")
+```
 
-Por otro lado, es importante resaltar el porcentaje de los entes territoriales en la región Andina sur, que cuentan con acto administrativo, resolución u ordenanza donde esté definido el costo de los recetarios oficiales. Únicamente el 25% de los departamentos que conforman la región Andina sur, cuentan con este tipo de acto administrativo. Antioquia es el departamento que ha definido e implementado este acto administrativo, los demás entes territoriales no han definido aún esta ordenanza y algunos FRE manifiestan que están en proceso de implementación. El diagrama XX exhibe el porcentaje de los territorios que cuentan con ordenanza para definir el costo de los recetarios oficiales.
+Continuando con el análisis de las ganancias obtenidas a partir de los recetarios oficiales, en cada FRE, se contempla el porcentaje de ingresos provenientes de los recetarios oficiales respecto a todos los ingresos que recibe el ente territorial. Se observa que Antioquia es el departamento que menos porcentaje de ingresos recibe, el 3%, considerando la totalidad de los ingresos que tiene. Caso diferente en el territorio del Tolima, cuyo ente territorial recibe el 70% de sus ingresos, a partir de la venta de los recetarios oficiales. Esta situación puede estar relacionada directamente con la percepción que cada ente territorial tiene respecto a la implementación del Recetario oficial electrónico (ROE). De acuerdo al análisis, los FRE pueden verse perjudicados con esta implementación, ya que dejarían de percibir los ingresos generados con las ventas de los recetarios oficiales y su sensación al respecto puede incidir en el autosostenimiento del ente territorial. No obstante, departamentos como Antioquia y Huila consideran que la implementación del ROE es favorable, partiendo de la idea que este brindaría mayor oportunidad de seguimiento, trazabilidad y seguridad. A continuación se presenta la Figura \@ref(fig:PorcIngresosProcRegionAndinaSur), donde se ilustra el porcentaje de ingresos provenientes del Recetario oficial y la conformidad de cada FRE, respecto a la implementación del Recetario oficial electrónico (ROE).
+ 
+```{r PorcIngresosProcRegionAndinaSur, fig.cap="Porcentaje de ingresos provenientes del Recetario oficial y conformidad respecto a la implementación del Recetario oficial electrónico (ROE)", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen13.png")
+```
+
+```{r OrdenanzasRegionAndinaSur, fig.cap="Porcentaje de los FRE que cuentan con ordenanza para definir el costo de los recetarios oficiales", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen14.png")
+```
+
+Por otro lado, es importante resaltar el porcentaje de los entes territoriales en la región Andina sur, que cuentan con acto administrativo, resolución u ordenanza donde esté definido el costo de los recetarios oficiales. Únicamente el 25% de los departamentos que conforman la región Andina sur, cuentan con este tipo de acto administrativo. Antioquia es el departamento que ha definido e implementado este acto administrativo, los demás entes territoriales no han definido aún esta ordenanza y algunos FRE manifiestan que están en proceso de implementación. La Figura \@ref(fig:OrdenanzasRegionAndinaSur) exhibe el porcentaje de los territorios que cuentan con ordenanza para definir el costo de los recetarios oficiales.
 
 ### Seguimiento y Control de RO
 
@@ -102,44 +161,51 @@ En este sentido, podría afirmarse que ningún departamento de la región Andina
 
 ### Ruta tecnológica.
 
-En términos generales la región Andina Sur, cuenta con las herramientas necesarias para el correcto desarrollo de las actividades por parte de los FRE, dispuestas en las Resoluciones 1478 y 1479 de 2006. Como se observa en la Tabla XX, únicamente el FRE del departamento de Tolima no cuenta con herramientas tecnológicas como un software adquirido o implementado. Sin embargo, posee un paquete ofimático para el manejo y consolidación de los inventarios y anexos establecidos en las regulaciones nacionales que deben ser presentados ante el FNE.
+En términos generales la región Andina Sur, cuenta con las herramientas necesarias para el correcto desarrollo de las actividades por parte de los FRE, dispuestas en las Resoluciones 1478 y 1479 de 2006. Como se observa en la Tabla \@ref(tab:softwareTecnologiaRegAndinaSur), únicamente el FRE del departamento de Tolima no cuenta con herramientas tecnológicas como un software adquirido o implementado. Sin embargo, posee un paquete ofimático para el manejo y consolidación de los inventarios y anexos establecidos en las regulaciones nacionales que deben ser presentados ante el FNE.
 
-Tabla XX. Entes territoriales que cuentan con software para el manejo de anexos e inventarios en la región Andina Sur.
-DEPARTAMENTO	Software para manejo de
-	Anexos	Inventarios
-Tolima	No	No
-Antioquia	Si	Si
-Huila	Si	Si
-Quindío	Si	Si
+```{r softwareTecnologiaRegAndinaSur, echo=FALSE, warning=FALSE, message=FALSE, tab.caption = "Entes territoriales que cuentan con software para el manejo de anexos e inventarios en la región Andina Sur"}
+tibble::tribble(
+          ~Departamento, ~Anexos, ~Inventarios, 
+     "Tolima", "No", "No", 
+  "Antioquia", "Si", "Si", 
+      "Huila", "Si", "Si", 
+    "Quindío", "Si", "Si"
+  ) %>% kable(longtable = TRUE, booktabs = TRUE, 
+  caption = 'Presencia de software para el manejo tecnológico')
+```
 
 Cabe resaltar que cuentan con tan solo dos equipos de cómputo que deben ser cambiados por obsolescencia para el desenvolvimiento de las tareas del FRE. Este es un factor determinante para la entrada de nuevas tecnologías digitales como lo es el ROE, ya que la capacidad tecnológica de los territorios determinará la aptitud del FRE en cuanto a la posibilidad de implementar las plataformas tecnológicas.
-Ligado a el hardware y software con los que cuentan los entes territoriales, es para este proyecto fundamental conocer el estado actual de la conexión a internet con la que cuentan las entidades regionales, es por ello que en el Diagrama XX, se describe la percepción por parte de los funcionarios de los FRE de la región Andina Sur ante la capacidad de conexión en sus oficinas y que tan oportuno es ante el correcto desarrollo de sus funciones. Se puede observar la tendencia favorable de la conexión en esta región, por lo que por lo menos en lo concerniente a capacidad tecnológica en la región, se puede concluir que es apta para la entrada de nuevas tecnologías e implementación de plataformas como el ROE y demás herramientas que requieran una considerable capacidad tecnológica para la mejora en la trazabilidad y seguimiento de procesos como lo son la prescripción de MME y la consolidación de anexos de las resoluciones 1478 y 1479 de 2006.
+Ligado a el hardware y software con los que cuentan los entes territoriales, es para este proyecto fundamental conocer el estado actual de la conexión a internet con la que cuentan las entidades regionales, es por ello que en el Diagrama \@ref(fig:ConexionInternetRegionAndinaSur), se describe la percepción por parte de los funcionarios de los FRE de la región Andina Sur ante la capacidad de conexión en sus oficinas y que tan oportuno es ante el correcto desarrollo de sus funciones. Se puede observar la tendencia favorable de la conexión en esta región, por lo que por lo menos en lo concerniente a capacidad tecnológica en la región, se puede concluir que es apta para la entrada de nuevas tecnologías e implementación de plataformas como el ROE y demás herramientas que requieran una considerable capacidad tecnológica para la mejora en la trazabilidad y seguimiento de procesos como lo son la prescripción de MME y la consolidación de anexos de las resoluciones 1478 y 1479 de 2006.
 
-
- 
-Diagrama XX. Estado actual de la conexión a internet de los FRE de la región Andina Sur. 
+```{r ConexionInternetRegionAndinaSur, fig.cap="Estado actual de la conexión a internet de los FRE de la región Andina Sur.", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen20.png")
+```
 
 ### Proyección de Compra MME
 
 Pese a que en algunos FRE la estimación de compra no se realice de manera estandarizada, en lo general la región Andina Sur, la estimación de compra se efectúa a través de aplicativos y plataformas digitales que poseen los entes territoriales para el manejo e inventario de MME, el cual da el dato de consumo histórico del departamento, permitiendo un pedido dirigido al FNE fidedigno con la utilización de los pacientes en el departamento.
-Con la implementación de Colombia compra eficiente para la adquisición de MME, se han encontrado posturas que tienden a una opinión favorable por parte de los FRE de la región Andina Sur. Es así como lo expone el Diagrama XX, en donde el 50% de los FRE no cuenta con una postura definida ante la plataforma, pero el otro 50% de la población de estudio tiene una percepción algo conforme y muy conforme de la herramienta digital.
- 
-Diagrama XX. Percepción de los FRE de la región Andina Sur respecto a Colombia compra eficiente.
+Con la implementación de Colombia compra eficiente para la adquisición de MME, se han encontrado posturas que tienden a una opinión favorable por parte de los FRE de la región Andina Sur. Es así como lo expone el Diagrama \@ref(fig:PercepcionCompraEfRegionAndinaSur), en donde el 50% de los FRE no cuenta con una postura definida ante la plataforma, pero el otro 50% de la población de estudio tiene una percepción algo conforme y muy conforme de la herramienta digital.
 
+```{r PercepcionCompraEfRegionAndinaSur, fig.cap="Percepción de los FRE de la región Andina Sur respecto a Colombia compra eficiente", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen21.png")
+```
 
 Este indicador nos habla de la adecuada captación de parte de los FRE de está region hacia las capacitaciones en torno al manejo de la plataforma Colombia compra eficiente, que a nivel nacional es un aspecto necesario y útil para los FRE con poca experiencia.
 
 ### Recepción técnica.
-En cuanto al proceso de recepción técnica entre los FRE de la región Andina Sur, se observa un patrón general en la recepción administrativa del producto en primera instancia, en donde donde se verifican las unidades solicitadas con la orden de compra. Posteriormente se lleva a cabo la recepcion tecnica, en la cual se hace revision de condiciones fisicas del producto, averias o producto no conforme. Este proceso se lleva a cabo generalmente por un regente en farmacia el cual hace la recepción en compañía de un apoyo que puede ser el encargado del FRE. Dependiendo del tamaño del departamento y el consumo de MME puede tardar entre uno y 5 días laborales. Como se observa en el Diagrama XX, el FRE que más tarda en hacer la revisión técnica del producto es Antioquia, ya que es el departamento de más alto consumo a nivel nacional. Por otra parte, los FRE como Huila o Quindio con menor rotación de medicamentos y menor población bajo su jurisdicción pueden realizar el proceso de recepción en un día de trabajo.
+En cuanto al proceso de recepción técnica entre los FRE de la región Andina Sur, se observa un patrón general en la recepción administrativa del producto en primera instancia, en donde donde se verifican las unidades solicitadas con la orden de compra. Posteriormente se lleva a cabo la recepcion tecnica, en la cual se hace revision de condiciones fisicas del producto, averias o producto no conforme. Este proceso se lleva a cabo generalmente por un regente en farmacia el cual hace la recepción en compañía de un apoyo que puede ser el encargado del FRE. Dependiendo del tamaño del departamento y el consumo de MME puede tardar entre uno y 5 días laborales. Como se observa en el Diagrama \@ref(fig:TiempoRecepcionTecnicaRegionAndinaSur), el FRE que más tarda en hacer la revisión técnica del producto es Antioquia, ya que es el departamento de más alto consumo a nivel nacional. Por otra parte, los FRE como Huila o Quindio con menor rotación de medicamentos y menor población bajo su jurisdicción pueden realizar el proceso de recepción en un día de trabajo.
 
-
- 
-Diagrama XX. Tiempo de recepción técnica y almacenamiento de los FRE en la región Andina Sur.
+```{r TiempoRecepcionTecnicaRegionAndinaSur, fig.cap="Tiempo de recepción técnica y almacenamiento de los FRE en la región Andina Sur", fig.topcaption=TRUE, out.width="80%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen22.png")
+```
 
 Culminado el proceso de recepción de medicamentos y de asegurarse que la orden de compra está completa y conforme, se procede a realizar un acta de recepción, seguido del almacenamiento de los productos en el área dispuesta para ello.
 
 ### Almacenamiento e inventario de MME
 
+```{r EtapasProcesoRegionAndinaSur, fig.cap="Ponderación de procesos de adquisición en región Andina Sur", fig.topcaption=TRUE, out.width="100%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen23.png")
+```
 
 Respecto al proceso de almacenamiento se observa que de los departamentos hasta el momento acompañados, solamente Antioquia dispone de herramientas de control suficientes en cuanto acceso al área, en departamentos como Huila, Tolima y Quindío se tienen oportunidades de mejora en cuanto a fortalecer los sistemas de seguridad. De hecho, para el Departamento del Huila son conocidas las denuncias de robos de MME en años anteriores. Adicionalmente el Departamento de Quindío, comparte espacio con medicamentos de programas como Enfermedades de Transmisión por Vectores (ETV) y tuberculosis (TBC), por cuanto esto no es lo ideal de acuerdo a la Resolución 1978 de 2006. Sumado a lo anterior el Departamento del Quindío como agravante de riesgo tiene que aún con medicamentos diferentes a MME, no consideran necesario establecer estrategias de almacenamiento tipo MAR y LASA.
 
@@ -151,7 +217,7 @@ Por otro lado, si bien se evidencia un alto conocimiento de los procesos de alma
 
 Respecto al inventario de los MME, se evidencia que los 4 departamentos poseen un buen manejo de existencias de los mismos, debido a que en ningún momento se ha visto un riesgo de desabastecimiento. Sin embargo, se observa que los Departamentos con excepción del Huila, no poseen técnicas de semaforización impidiendo el control de la rotación de los MME. Dentro del acompañamiento, se encontró que el Departamento de Antioquia no tenía conocimiento de esta estrategia. A pesar de esto, todos los departamentos manejan las técnicas FIFO y FEFO para evitar el vencimiento de medicamentos puesto que a veces se distribuyen desde FNE con fechas de vencimiento próximas.
 
-Adicionalmente se detectó que sólo Antioquia tiene niveles mínimos de existencias de inventario para productos definidos antes de confirmar la necesidad de compra de MME, siendo una preocupación en los demás departamentos puesto que no se entiende cómo realizan la proyección. Como por ejemplo, el departamento de Huila, el cual ha tenido demandas insatisfechas por parte de algunas Instituciones. 
+Adicionalmente, se detectó que sólo Antioquia tiene niveles mínimos de existencias de inventario para productos definidos antes de confirmar la necesidad de compra de MME, siendo una preocupación en los demás departamentos puesto que no se entiende cómo realizan la proyección. Como por ejemplo, el departamento de Huila, el cual ha tenido demandas insatisfechas por parte de algunas Instituciones. 
 
 Por último, se comprende como oportunidad de mejora y seguimiento para el departamento del Huila la necesidad de revisar a detalle las existencias y manejo de productos considerados para el departamento de baja rotación los cuales se identifica un alto riesgo de vencimiento. 
 
@@ -161,6 +227,14 @@ Para el punto de la venta directa a pacientes, el departamento del Tolima realiz
 Por otro lado, tenemos a los departamentos como Antioquia y Quindío, donde tienen filiales de droguerías que realizan la venta directa a pacientes, descentralizando esta función al FRE. Los  mismos, se encargan de capacitar y hacer seguimiento a los establecimientos para evitar el desvìo de MME. Sin embargo, el departamento de Huila, el cual realiza la venta directa a pacientes, se encontró que los controles realizados para la venta directa a pacientes no se cumplen en la totalidad de las ventas, efecto que podría generar un aumento en las posibilidades de encontrar escenarios de fraude o desvíos.
 
 ## Región Caribe 
+
+```{r porcentajeGananciasRegionCaribe, fig.cap="Porcentaje de ganancias en el departamento para la region Caribe", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen24.png")
+```
+
+```{r tiemposAdquisicionRegionCaribe, fig.cap="Tiempos de adquisición de recetarios en el departamento para la region Caribe", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen25.png")
+```
 
 - ATLÁNTICO
 - BOLÍVAR
@@ -173,6 +247,14 @@ Por otro lado, tenemos a los departamentos como Antioquia y Quindío, donde tien
 
 ## Región Orinoquía
 
+```{r porcentajeGananciasRegionOrinoquia, fig.cap="Porcentaje de ganancias en el departamento para la region Orinoquía", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen30.png")
+```
+
+```{r tiemposAdquisicionRegionOrinoquia, fig.cap="Tiempos de adquisición de recetarios en el departamento para la region Orinoquía", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen31.png")
+```
+
 - CASANARE
 - META
 - ARAUCA
@@ -180,11 +262,19 @@ Por otro lado, tenemos a los departamentos como Antioquia y Quindío, donde tien
 
 ## Región Pacífica
  
+```{r porcentajeGananciasRegionPacifica, fig.cap="Porcentaje de ganancias en el departamento para la region Pacífica", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen40.png")
+```
+
+```{r tiemposAdquisicionRegionPacifica, fig.cap="Tiempos de adquisición de recetarios en el departamento para la region Pacífica", fig.topcaption=TRUE, out.width="50%", message=FALSE, warning=FALSE, echo=FALSE, fig.align='center'}
+include_graphics("figures/Imagen41.png")
+```
+ 
 - CAUCA
 - CHOCÓ 
 - NARIÑO 
 - VALLE DEL CAUCA
 
-## Lineamientos y Recomendaciones Generales
+# Lineamientos y Recomendaciones Generales
 
-  
+ 

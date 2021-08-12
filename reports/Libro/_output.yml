@@ -2,5 +2,8 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align=center" width="90%" class="center">
+        <img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align:center; padding:5%" width="90%" class="center">
         <li><a href="#" target="_blank"><strong>Misión PRI 1901</strong></a></li>
+  split_by: section
+bookdown::pdf_book:
+    keep_tex: true

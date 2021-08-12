@@ -153,15 +153,13 @@ dfContratacion <- df_Total$ModalidadContratacion %>%  unlist() %>%
   table() %>% as_tibble() 
 
 pieProfesional1 <- dfContratacion %>%
-  mutate(prop = n / sum(n),
-         ncumsum = cumsum(prop) - 0.5 * prop) %>%
-  ggplot(aes(x = "", y = prop,  fill = .)) +
-  geom_bar(stat="identity", width=1) +
-  coord_polar("y", start=0) + 
-  theme_void() +
-  theme(legend.position="bottom") +
-  geom_text(aes(y = ncumsum, label = .), color = "white", size=4) +
-  scale_fill_discrete()
+  rename("Tipo" = ".") %>% 
+  mutate(
+    prop = round(n/sum(n), 3) * 100,
+    label1 = paste0(Tipo, '\n', prop, "%")) %>% 
+  pieChart(n, label1) +
+  scale_fill_brewer(palette = "Set1") + 
+  theme(legend.position = 'none')
 
 pieProfesional1
 

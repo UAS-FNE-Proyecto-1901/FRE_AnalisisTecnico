@@ -290,7 +290,7 @@ ggPVTARec1 <- ggplot(data = df,
 
 #+ warning = FALSE
 ggPVTARec2 <- ggplot(data = df, aes(x = Nmedidas, 
-                      y = df$`3.07 Precio de venta del recetario (COP)`)) +
+                      y = `3.07 Precio de venta del recetario (COP)`)) +
   stat_smooth(method = 'lm', se = F, lty = 'dashed') + 
   geom_point()+ 
   geom_label_repel(aes(label = str_to_sentence(Departamento_1) %>% str_wrap(10)), 
@@ -321,15 +321,12 @@ ggReciboRecetarios <- pull(df, col1) %>%
     ncumsum = cumsum(prop) - 0.5 * prop,
     label1 = paste(., scales::percent(prop, accuracy = 3), sep = '\n')
   ) %>%
-  ggplot(aes(x = "", y = prop,  fill = .)) +
-  geom_bar(stat="identity", width=1) +
-  coord_polar("y", start=0) + 
-  theme_void() +
-  geom_text(aes(y = ncumsum, label = label1), color = "white", size=4) +
-  theme(legend.position="bottom") +
-  labs(title = 'Existe recibo de recetarios oficiales de instituciones inscritas') +
-  scale_fill_brewer(palette="Set2")
-
+  pieChart(prop, label1) + 
+  scale_fill_brewer(palette = 'Set1', name = 'Recibo recetarios') +
+  theme(legend.position="bottom") + 
+  labs(title = 'Existe recibo de recetarios oficiales de instituciones inscritas')
+  
+  
 #+ pieChart1, fig.width=8, fig.height=5, out.width="90%", warning=FALSE, 
 #+ message=FALSE
 ggReciboRecetarios

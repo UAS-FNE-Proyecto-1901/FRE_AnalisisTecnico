@@ -1,10 +1,10 @@
 # Objetivos
 
-## Objetivo general
+**Objetivo general**
 
 Identificar fuentes de información asociada a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial. Así mismo,  con el fin de iniciar la primera fase de desarrollo del proyecto de inversión 1901. Así mismo, recopilar las características de las herramientas tecnológicas para la consolidación de la información y el seguimiento al consumo de estos medicamentos en el territorio.
 
-## Objetivos específicos
+**Objetivos específicos**
 
 - Caracterizar el proceso de prescripción, dispensación y uso de MME, identificando la información relacionada con el tipo de prescriptores y requisitos normativos.
 
