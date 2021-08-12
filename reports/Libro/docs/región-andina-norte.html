@@ -33,7 +33,7 @@
 <link rel="prev" href="análisis-a-nivel-regional.html"/>
 <link rel="next" href="región-andina-sur.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,6 +52,14 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/setprototypeof-0.1/setprototypeof.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
@@ -290,13 +298,35 @@ Departamento
 Antioquia
 </td>
 <td style="text-align:left;">
-Solo una vez se quedaron sin contrato para recetarios, entre 15 días y un mes sin recetarios. Como antes se manejaba recetario institucional (antes de que manejara recetario oficial), que debía dar cumplimiento al anexo 8 de la 1478. En ese momento se autorizó a las institucionales a usar recetarios institucionales. Este hecho ocurrió hace 6 años. la percepción de cara al ROE es favorable ya que según la opinión de la directora de FRE Antiquia, brindaría mayor oportunidad de seguimiento, trazabilidad y seguridad. Sin embargo, manifiesta que la transición al ROE debe ser progresiva hasta el agotamiento de los recetarios oficiales físicos con los que cuentan los FRE en este momento.
+Solo una vez se quedaron sin
+contrato para recetarios, entre
+15 días y un mes sin recetarios.
+Como antes se manejaba recetario
+institucional (antes de que
+manejara recetario oficial), que
+debía dar cumplimiento al anexo
+8 de la 1478. En ese momento se
+autorizó a las institucionales a
+usar recetarios institucionales.
+Este hecho ocurrió hace 6 años.
+la percepción de cara al ROE es
+favorable ya que según la opinión
+de la directora de FRE Antiquia,
+brindaría mayor oportunidad
+de seguimiento, trazabilidad y
+seguridad. Sin embargo, manifiesta
+que la transición al ROE debe ser
+progresiva hasta el agotamiento de
+los recetarios oficiales físicos
+con los que cuentan los FRE en este
+momento.
 </td>
 <td style="text-align:left;">
 ——
 </td>
 <td style="text-align:left;">
-no se hace recepción de recetarios ni consolidación de su información
+no se hace recepción de recetarios
+ni consolidación de su información
 </td>
 <td style="text-align:left;">
 ——–
@@ -307,13 +337,44 @@ no se hace recepción de recetarios ni consolidación de su información
 Quindío
 </td>
 <td style="text-align:left;">
-No cuenta con acto administrativo para fijar los precios de venta de RO. Tampoco tiene conocimiento del % de ingresos provenientes de los RO. Respecto a la implementación del Recetario Oficial Electrónico (ROE), el FRE Quindío expresa que, si la implementación del ROE permite seguir superando los gastos de personal y los gastos de las actividades requeridas para el funcionamiento del FRE, la implementación de los ROE es viable. Sin embargo, se resalta como punto de manejo a tratar la preocupación sobre la población del Departamento que no tiene acceso a internet.
+No cuenta con acto administrativo
+para fijar los precios de venta de
+RO. Tampoco tiene conocimiento del
+% de ingresos provenientes de los
+RO. Respecto a la implementación
+del Recetario Oficial Electrónico
+(ROE), el FRE Quindío expresa
+que, si la implementación del
+ROE permite seguir superando los
+gastos de personal y los gastos
+de las actividades requeridas
+para el funcionamiento del FRE,
+la implementación de los ROE es
+viable. Sin embargo, se resalta
+como punto de manejo a tratar la
+preocupación sobre la población del
+Departamento que no tiene acceso a
+internet.
 </td>
 <td style="text-align:left;">
-No se tiene en mente la posibilidad de un desabastecimiento de RO, sin embargo, en caso de que se presentara dicha situación se convocaría una reunión extraordinaria con la Secretaría de Salud, el FRE y todos los colaboradores con el fin de que sea multidisciplinaria para establecer un plan de contingencia y resolución.
+No se tiene en mente la posibilidad
+de un desabastecimiento de RO,
+sin embargo, en caso de que
+se presentara dicha situación
+se convocaría una reunión
+extraordinaria con la Secretaría
+de Salud, el FRE y todos los
+colaboradores con el fin de
+que sea multidisciplinaria para
+establecer un plan de contingencia
+y resolución.
 </td>
 <td style="text-align:left;">
-Los ROs diligenciados allegados al FRE son destruidos una semana después de haber llegado, así mismo no se tiene base de datos donde se diligencia dicha información.
+Los ROs diligenciados allegados
+al FRE son destruidos una semana
+después de haber llegado, así mismo
+no se tiene base de datos donde se
+diligencia dicha información.
 </td>
 <td style="text-align:left;">
 —-
@@ -324,7 +385,21 @@ Los ROs diligenciados allegados al FRE son destruidos una semana después de hab
 Huila
 </td>
 <td style="text-align:left;">
-La proyección de necesidad de RO requerida para cubrir las necesidades del departamento es realizada a partir de un simple cálculo, se contempla: La información asociada con la última compra de RO y el comportamiento histórico que han tenido los recetarios en el territorio. NO llevan algún tipo de base de datos o herramienta para la proyección de la necesidad de los RO. La adquisición de recetarios oficiales es dirigida por la Secretaria de Salud de la Gobernación del Huila.
+La proyección de necesidad de
+RO requerida para cubrir las
+necesidades del departamento
+es realizada a partir de un
+simple cálculo, se contempla: La
+información asociada con la última
+compra de RO y el comportamiento
+histórico que han tenido los
+recetarios en el territorio. NO
+llevan algún tipo de base de datos
+o herramienta para la proyección
+de la necesidad de los RO. La
+adquisición de recetarios oficiales
+es dirigida por la Secretaria de
+Salud de la Gobernación del Huila.
 </td>
 <td style="text-align:left;">
 —-
@@ -333,7 +408,17 @@ La proyección de necesidad de RO requerida para cubrir las necesidades del depa
 —-
 </td>
 <td style="text-align:left;">
-Paquete ofimático y softwarellamado “EXTRANET” plataforma oficial de la Gobernación del Huila, para el manejo y la consolidación de inventariosy anexos que deben presentarse ante la UAE - FNE. Únicamente dos (2) equipos de cómputo y deben ser reemplazados por obsolescencia. La conexión de internet es “Buena” según percepción del personal.
+Paquete ofimático y softwarellamado
+“EXTRANET” plataforma oficial de
+la Gobernación del Huila, para
+el manejo y la consolidación de
+inventariosy anexos que deben
+presentarse ante la UAE - FNE.
+Únicamente dos (2) equipos de
+cómputo y deben ser reemplazados
+por obsolescencia. La conexión
+de internet es “Buena” según
+percepción del personal.
 </td>
 </tr>
 <tr>
@@ -341,7 +426,29 @@ Paquete ofimático y softwarellamado “EXTRANET” plataforma oficial de la Gob
 Tolima
 </td>
 <td style="text-align:left;">
-El FRE Tolima no lleva algún tipo de base de datos o herramienta para la proyección de la necesidad de los recetarios oficiales en el departamento. Se hace por medio de las copias de las facturas. Además, se evidenció desconocimiento sólido relacionado al proceso de contratación para la adquisición de los RO. NO cuenta con acto administrativo. Plan de contingencia ante la nula disponibilidad de recetarios oficiales, el FRE Tolima deberá informar la situación a las diferentes IPS y servicios farmacéuticos, vía correo electrónico. En la correspondencia, el ente territorial manifiesta recibir formulas institucionales en estos casos, siempre y cuando cumpla con los requisitos del recetario oficial.
+El FRE Tolima no lleva algún tipo
+de base de datos o herramienta
+para la proyección de la necesidad
+de los recetarios oficiales
+en el departamento. Se hace
+por medio de las copias de las
+facturas. Además, se evidenció
+desconocimiento sólido relacionado
+al proceso de contratación para
+la adquisición de los RO. NO
+cuenta con acto administrativo.
+Plan de contingencia ante la
+nula disponibilidad de recetarios
+oficiales, el FRE Tolima deberá
+informar la situación a las
+diferentes IPS y servicios
+farmacéuticos, vía correo
+electrónico. En la correspondencia,
+el ente territorial manifiesta
+recibir formulas institucionales
+en estos casos, siempre y cuando
+cumpla con los requisitos del
+recetario oficial.
 </td>
 <td style="text-align:left;">
 —-
@@ -350,101 +457,16 @@ El FRE Tolima no lleva algún tipo de base de datos o herramienta para la proyec
 —-
 </td>
 <td style="text-align:left;">
-Paquete ofimático para el manejo y la consolidación de inventarios y los anexos que debe presentar ante la UAE FNE. Dos (2) equipos de cómputo que deben ser cambiados por obsolescencia, sin embargo, se ajusta a todo el personal vinculado al ente territorial. La conexión de internet es “Buena” según percepción del personal.
-</td>
-</tr>
-</tbody>
-</table>
-<table class="table" style="font-size: 8px; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-2">Tabla 5.3: </span>Tabla de Región Andina Norte 2
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-…1
-</th>
-<th style="text-align:left;">
-5
-</th>
-<th style="text-align:left;">
-6
-</th>
-<th style="text-align:left;">
-7
-</th>
-<th style="text-align:left;">
-8
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Antioquia
-</td>
-<td style="text-align:left;">
-ni conforme, ni inconforme con Colombia Compra eficiente. La directora del FRE de Antioquia manifiesta que en la plataforma no está en problema central de la adquisición de MME, sino que los inconvenientes centrales radican en la baja disponibilidad de productos y los largos tiempos de espera en el proceso de compra de medicamentos.
-</td>
-<td style="text-align:left;">
-—–
-</td>
-<td style="text-align:left;">
-Cuenta con controles para limitar el acceso como gabinete con llave simple, acceso de seguridad restringido a cierto personal, sistema de alarma, inventario físico diario, disponibilidad de personal de seguridad privada. el control de condiciones ambientales se realiza diariamente. cuenta con termohigrómetro, no se calibra porque cada cierto tiempo se compra uno nuevo, el ultimo comprado fue hace 2 años. los medicamentos LASA y de alto riesgo se tienen diferenciados y separados físicamente en estantes, puesto que el almacén es compartido con la secretaria de salud, lo cuales almacenan vacunas y medicamentos contra enfermedades endémicas. el inventario de medicamentos se realiza diariamente y el control del FRE pasa existencias y fechas de vencimiento es el siguiente: Todos los días se hace inventario a las 7:30 am, revisando fechas de vencimiento y cada mes, los 10 primeros días de cada mes se envía informe al FNE para recambio de importados. Para los no importados se hace esa inspección desde la compra. Si la fecha de vencimiento está muy próxima se compra para un periodo menor. semaforización: no, FIFO: si, niveles de seguridad: no, reglas de decisión de compra: no. almacenamiento más para 6 meses (6000-7200), sin coste por almacenamiento y sin casos de medicamentos vencidos los últimos 4 años.
-</td>
-<td style="text-align:left;">
-No vende directa a paciente, pero tiene contratada dos cadenas de farmacias con presencia en todo el departamento llamadas botica junin y pasterur, las cuales cuentan con 24 droguerías presentes en las 9 subregiones del departamento de Antioquia.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Quindío
-</td>
-<td style="text-align:left;">
-Respecto a la plataforma Colombia compra eficiente, están algo de acuerdo debido a la transparencia que ofrece la plataforma y porque se ha tornado mucho más fácil la compra de medicamentos, además es rápido. Las demoras vienen son en los procesos administrativos que están ligadas a esta actividad.
-</td>
-<td style="text-align:left;">
-Cuando se encuentra producto no conforme se envía un correo al FNE, pero no se da respuesta por lo que el FRE toma la decisión de realizar las respectivas destrucciones.
-</td>
-<td style="text-align:left;">
-NA
-</td>
-<td style="text-align:left;">
-NA
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Huila
-</td>
-<td style="text-align:left;">
-Proceso muy simple y considerado “casero” por el mismo personal vinculado al FRE, se basa en el libro físico de control de MME, con el fin de observar el movimiento de los MME un año atrás. Muestra de lo anterior es la ausencia de bases de datos o herramientas para la estimación de compra de MME. Además, los procesos siguen siendo muy lentos debido a lapoca voluntad de los funcionarios de la Secretaría de salud y la Gobernación del Huila.Las primeras experiencias con la plataforma “Colombia compra eficiente” fueron dificultosas, a causa de su implementación forzada y la corta capacitación brindada en el momento a los entes territoriales.
-</td>
-<td style="text-align:left;">
-Recepción administrativa y recepción técnica. Al mismo tiempo, las existencias de MME se ingresan a la plataforma tecnológica interna de la Gobernación del Huila “Extranet”. Todos los MME deben estar cargados en la plataforma para hacer las ventas con los establecimientos autorizados.
-</td>
-<td style="text-align:left;">
-Control de existencias de MME en la plataforma tecnológica interna de la Gobernación del Huila, “Extranet” (se lleva un control y seguimiento de la entrada y salidas de estos MME). El FRE Huila maneja técnicas de semaforización tanto en su inventario físico, como en el inventario llevado en la plataforma tecnológica “Extranet”.
-</td>
-<td style="text-align:left;">
-Proceso muy simple y gestionado a través del correo electrónico. Las respuestas a las instituciones son de manera inmediata. No obstante, el FRE Huila ha recibido quejas por demanda insatisfecha de diferentes establecimientos, y por el contrario han tenido casos de producto con baja rotación, destinados a vencerse en la bodega del FRE. En virtud de lo anterior, se percibe una mala o corta planeación de consumo de MME en el territorio del Huila. Los controles realizados para la venta directa a pacientes no se cumplen en la totalidad de las ventas, efecto que podría generar un aumento en las posibilidades de encontrar escenarios de fraude o desvíos.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Tolima
-</td>
-<td style="text-align:left;">
-Este procedimiento se ejecuta, tomando como base los informes mensuales enviados por las instituciones y el stock actual de la bodega. (no maneja ninguna base de datos exclusiva para la estimación de compra de MME). El ente territorial no tiene pleno conocimiento del proceso de las etapas contractuales para la compra de MME. La experiencia con “Colombia compra eficiente” del año pasado (2020) dejó muchas críticas a la plataforma, catalogándola como herramienta poca eficiente y percibiendo un atraso en los procesos de abastecimiento de MME por parte de la UAE - FNE. (desabastecimiento de MME por 1 año y medio)
-</td>
-<td style="text-align:left;">
-Revisión de condiciones técnicas y físicas del producto, es desarrollada en dos etapas principales en el FRE Tolima. La primera es la recepción administrativa, donde se verifican las unidades solicitadas con la factura de compra. Posteriormente, se hace la recepción técnica, donde se efectúa la revisión de la orden de compra y se comparan las cantidades de medicamentos recibidos. Muestreo casi del 100%, abriendo las cajas y verificando que no haya algún tipo de avería o daño en el producto.
-</td>
-<td style="text-align:left;">
-El espacio de la bodega es un factor importante a tener en cuenta, debido a que se encuentra en el margen límite. NO se maneja técnicas de semaforización, tampoco tiene niveles de seguridad definidos en el inventario o reglas de decisión que indiquen la necesidad inminente de compra de los MME.
-</td>
-<td style="text-align:left;">
-Proceso simple y gestionado a través del correo electrónico del FRE. La relación que tiene el ente territorial con las diferentes instituciones es buena y no se han recibido quejas por demanda insatisfecha. El proceso de venta directa a pacientes es exclusivo para aquellos pacientes que son atendidos por médicos independientes y para los casos específicos donde el servicio farmacéutico no tenga disponibilidad del medicamento. FRE hace llamada al servicio farmacéutico, para confirmar la no disponibilidad del medicamento, de ser así continúa la venta directa a pacientes. Se corrobora información del paciente y se examina el estado actual de abastecimiento del MME en el territorio.
+Paquete ofimático para el manejo
+y la consolidación de inventarios
+y los anexos que debe presentar
+ante la UAE FNE. Dos (2) equipos
+de cómputo que deben ser cambiados
+por obsolescencia, sin embargo, se
+ajusta a todo el personal vinculado
+al ente territorial. La conexión
+de internet es “Buena” según
+percepción del personal.
 </td>
 </tr>
 </tbody>
