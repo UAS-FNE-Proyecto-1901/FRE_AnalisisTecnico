@@ -1,15 +1,21 @@
-separarDummies <- function(vector) {
+separarDummies <- function(vector, descartar = F) {
   # Separar los factores únicos
   dimFactor <- lapply(vector, function(x) str_split(x, '\\,')) %>% 
     unlist() %>% 
     sapply(., function(x){str_trim(x)}) %>% 
     unique()
   
+  # print(dimFactor)
+  if (descartar) {
+    dimFactor <- discard(dimFactor, is.na)
+  }
+  
   # Lista vacía
   ls_factorEscogencia <- list()
   
   # Llenar las listas vacías con verdadero o falso si tiene la palabra
   for (i in 1:length(dimFactor)) {
+    
     ls_factorEscogencia[[i]] <- vector %>% 
       sapply(., function(x){str_detect(x, dimFactor[i])})
   }

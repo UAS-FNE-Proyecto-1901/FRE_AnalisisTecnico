@@ -37,8 +37,8 @@ barrasGraficoRev <- function(data, fct1, fct1_rev, title = NULL, xlab=NULL, ylab
 #'
 #' @examples
 #' 
-pieChart <- function(data_frame, nvar, textvar){
-  data_frame %>% 
+pieChart <- function(data_frame, nvar, textvar, repel = FALSE){
+  gPie <- data_frame %>% 
     arrange(desc({{textvar}})) %>% 
     mutate(prop = {{nvar}} / sum({{nvar}}),
            ncumsum = cumsum(prop) - 0.5 * prop) %>%
@@ -46,6 +46,14 @@ pieChart <- function(data_frame, nvar, textvar){
     geom_bar(stat="identity", width=1) +
     coord_polar("y", start=0) + 
     theme_void() +
-    theme(legend.position="bottom") +
-    geom_text(aes(y = ncumsum, label = {{textvar}}), color = "white", size=4)
+    theme(legend.position="bottom")
+  
+  if (repel) {
+    gPie1 <- gPie +
+      ggrepel::geom_text_repel(aes(y = ncumsum, label = {{textvar}}), color = "white", size=4)
+  } else {
+    gPie1 <- gPie +
+      geom_text(aes(y = ncumsum, label = {{textvar}}), color = "white", size=4)
+  }
+  return(gPie1)
 }

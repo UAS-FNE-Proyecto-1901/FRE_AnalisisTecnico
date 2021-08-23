@@ -43,7 +43,7 @@ df_MUNICIPIO <-
            locale = locale(encoding = 'latin1'))
 
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'), 
-               na = c('N/A', 'No aplica', 'NA'))
+               na = c('N/A', 'No aplica', 'NA', '<NA>', 'N.R'))
 
 df
 
@@ -55,7 +55,7 @@ col1 <- '4.01. ¿Con cuales herramientas cuenta el FRE para el manejo de inventa
 col2 <- 'Si seleccionó paquete ofimático o software, especifique cuál...94'
 
 ggHerramientas1 <- pull(df, col1) %>% 
-  separarDummies(.) %>% 
+  separarDummies(., descartar = T) %>% 
   pivot_longer(cols = everything()) %>% 
   group_by(name) %>% 
   summarise(
@@ -78,7 +78,7 @@ guardarGGplot(ggHerramientas1, '071_Herramienta', 7, 5)
 
 ggHerramientas2 <- pull(df, col2) %>% 
   {ifelse(is.na(.), pull(df, col1), pull(df, col2))} %>% 
-  separarDummies() %>% 
+  separarDummies(T) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(name = str_replace(name, 'Paquete ofimático', 'Excel')) %>% 
   group_by(name) %>% 
@@ -242,7 +242,7 @@ guardarGGplot(ggCorrelacionEquipos, '077_CorrEquiposComputo', 6, 4)
 #'-------------------------------------------------------------------------------
 col1 <- '4.06. Los equipos de cómputo disponibles son:'
 
-ggOpinionEquipos <- pull(df, col1) %>% 
+ttOpinionEquipos <- pull(df, col1) %>% 
   separarDummies() %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(name = str_replace(name, 'Paquete ofimático', 'Excel')) %>% 
@@ -252,13 +252,15 @@ ggOpinionEquipos <- pull(df, col1) %>%
     propor = conteo/dim(df)[1],
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
-  mutate(name = str_to_sentence(name) %>% str_wrap(30)) %>% 
+  mutate(name = str_to_sentence(name) %>% str_wrap(30))
+
+ggOpinionEquipos <- ttOpinionEquipos %>% 
   ggplot(aes(y = fct_reorder(name, conteo), x = conteo)) +
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
-  geom_text(aes(label = label1), hjust = -0.8, size = 4) + 
+  geom_text(aes(label = label1), hjust = -0.4, size = 4) + 
   xlab('Proporción (%)') + 
   labs(title = 'Opinión sobre los equipos de cómputo') + 
-  coord_cartesian(xlim = c(0, 10)) +
+  coord_cartesian(xlim = c(0, max(ttOpinionEquipos$conteo) * 1.5)) +
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 #+ ggOpinionEquipos, fig.width=6, fig.height=4, out.width="90%"
@@ -269,15 +271,29 @@ guardarGGplot(ggOpinionEquipos, '078_OpinionEquipos', 6, 4)
 
 col1 <- "4.12. ¿Qué herramienta utiliza el FRE para realizar la estimación de compra de MME?"
 
-
 ggHerramientasCompras <- pull(df, col1) %>%
-  table() %>% as_tibble() %>%
-  rename(label = '.') %>%
-  mutate(prop = n / sum(n),
-         label1 = paste0(label, '\n', n, ' - ', round(prop, 3)*100, '%')) %>%
-  pieChart(n, label1) +
+  separarDummies(T) %>%
+  pivot_longer(cols = everything()) %>% 
+  mutate(name = str_replace(name, 'Paquete ofimático', 'Excel')) %>% 
+  group_by(name) %>% 
+  summarise(
+    conteo = sum(value, na.rm = TRUE),
+    propor = conteo/dim(df)[1],
+    label1 = paste(conteo, '/', dim(df)[1])
+  ) %>% 
+  mutate(name = str_to_sentence(name) %>% str_wrap(20)) %>%
+  pieChart(conteo, name, T) +
   scale_fill_brewer(palette = 'Set1') +
   theme(legend.position = 'none')
+
+# ggHerramientasCompras <- pull(df, col1) %>%
+#   table() %>% as_tibble() %>%
+#   rename(label = '.') %>%
+#   mutate(prop = n / sum(n),
+#          label1 = paste0(label, '\n', n, ' - ', round(prop, 3)*100, '%')) %>%
+#   pieChart(n, label1) +
+#   scale_fill_brewer(palette = 'Set1') +
+#   theme(legend.position = 'none')
 
 ggHerramientasCompras
 guardarGGplot(ggHerramientasCompras, '079_HerramientasCompras', 6, 4)

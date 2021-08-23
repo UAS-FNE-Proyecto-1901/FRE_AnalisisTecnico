@@ -116,9 +116,10 @@ col1 <- "3.27. ¿Qué tan de acuerdo está el FRE con la implementación del Rec
 escLikert <- c('Muy en desacuerdo', 'Algo en desacuerdo', 'Ni de acuerdo ni en\ndesacuerdo', 
                'Algo de acuerdo', 'Muy de acuerdo')
 
-ggAcuerdoImplROE <- pull(df, col1) %>% 
-  table() %>% as_tibble() %>% 
-  rename('Tipo' = '.') %>% 
+ttAcuerdoImplROE <- pull(df, col1) %>% 
+  {as_tibble(table(., dnn = 'Tipo'))}
+
+ggAcuerdoImplROE <- ttAcuerdoImplROE %>%
   mutate(prop = round(n/sum(n), 2),
          label = paste0(n, ' (', prop, ')')) %>% 
   mutate(Tipo = str_wrap(Tipo, 20),
@@ -126,7 +127,7 @@ ggAcuerdoImplROE <- pull(df, col1) %>%
   ggplot(aes(y = Tipo, x = n)) + 
   geom_bar(stat = 'identity', fill = '#527ACC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = label), hjust = -0.3, size = 3.5) + 
-  coord_cartesian(xlim = c(0, 8)) +
+  coord_cartesian(xlim = c(0, max(ttAcuerdoImplROE$n)*1.25)) +
   xlab("Frecuencia (%)") + 
   labs(title = '¿Qué tan de acuerdo está con la implementación del ROE?') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
@@ -165,10 +166,9 @@ df[,'ActividadesFRE'] <- pull(df, col1) %>%
   str_detect('Otro') %>%
   ifelse(paste(pull(df, col1), pull(df, col2), sep = ','),
          pull(df, col1))
-  
 
 ggActividadesSeguimROE <- df$ActividadesFRE %>% 
-  separarDummies(.) %>% 
+  separarDummies(., descartar = T) %>% 
   select(!Otro) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(
@@ -177,8 +177,8 @@ ggActividadesSeguimROE <- df$ActividadesFRE %>%
     name = str_replace(name, 'institciones', 'instituciones')) %>% 
   group_by(name) %>% 
   summarise(
-    conteo = sum(value),
-    propor = sum(value)/dim(df)[1],
+    conteo = sum(value, na.rm = T),
+    propor = conteo/dim(df)[1],
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
@@ -337,19 +337,23 @@ guardarGGplot(ggReciboRecetarios, '047_ReciboRecetarios', 6, 5)
 #'-------------------------------------------------------------------------------
 col1 <- '3.42.¿Con qué frecuencia se reciben los recetarios oficiales de las IPS? Si aplica 3.41.'
 col2 <- 'Si la respuesta anterior fue otro, indique cual...81'
+col3 <- '3.43. ¿En qué fechas se reciben los recetarios oficiales de la IPS? Si aplica 3.4.1'
 
 
 map2_chr(pull(df, col1), pull(df, col2), ~ ifelse(.x != 'Otro', .x, .y)) %>%
   table() %>% as_tibble()
 
-ggFrecRecetOficialesIPS <- df$`3.43. ¿En qué fechas se reciben los recetarios oficiales de la IPS? Si aplica 3.4.1` %>% 
-  table() %>% as_tibble() %>% 
+tFrecRecetOficialesIPS <- pull(df, col3) %>% 
+  table(dnn = 'F_recibo') %>% as_tibble() %>% 
+  mutate(F_recibo = str_wrap(F_recibo, 30L))
+
+ggFrecRecetOficialesIPS <- tFrecRecetOficialesIPS %>% 
   mutate(label1 = n) %>% 
-  ggplot(aes(y = fct_reorder(., n), x = n)) +
+  ggplot(aes(y = fct_reorder(F_recibo, n), x = n)) +
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
   geom_text(aes(label = label1), hjust = -0.8) + 
   xlab('Frecuencia') + 
-  coord_cartesian(xlim = c(0,7)) +
+  coord_cartesian(xlim = c(0, max(tFrecRecetOficialesIPS$n)*1.2)) +
   labs(title = 'Tiempo de recepción recetarios oficiales desde IPS') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
@@ -367,13 +371,16 @@ col1 <- "3.61. ¿Cuánto tiempo se archivan en el FRE los recetarios oficiales?"
 
 lvlDuracion <- c("0 a 6 meses", "1 a 2 años", "2 a 5 años", "> 5 años", "NA")
 
+ttDuracionFRE <- pull(df, col1) %>% 
+  {as_tibble(table(., dnn = 'Tiempo'))} 
+
 ggDuracionFRE <- select(df, Duracion = col1) %>% 
   drop_na() %>%
   mutate(Duracion = factor(Duracion, rev(lvlDuracion))) %>%
   ggplot(aes(y = Duracion)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
-  coord_cartesian(xlim = c(0, 5)) + 
+  coord_cartesian(xlim = c(0, max(ttDuracionFRE$n)*1.2)) + 
   xlab('Frecuencia') +
   labs(title = 'Tiempo de archivo de los recetarios oficiales en los FRE') +
   theme(axis.title.y = element_blank())

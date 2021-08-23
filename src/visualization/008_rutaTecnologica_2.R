@@ -168,18 +168,23 @@ nivelesTiempo <- c(
 ) %>% 
   str_wrap(25)
 
-ggArchivoInformes <- select(df, col1 = col1) %>% 
+ttArchivoInformes <- select(df, col1 = col1) %>% 
   drop_na() %>% 
   mutate(
     col1 = str_wrap(col1, 25),
-    col1 = factor(col1, levels = rev(nivelesTiempo))) %>%
+    col1 = factor(col1, levels = rev(nivelesTiempo)))
+
+ttArchivoInformes_max <- ttArchivoInformes %>% table(dnn = 'Conteo') %>% as_tibble() %>% 
+  pull(n) %>% max()
+
+ggArchivoInformes <- ttArchivoInformes %>%
   ggplot(aes(y = col1)) +
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   xlab('Frecuencia') + 
   scale_y_discrete(drop = F) +
   labs(title = "Tiempo de archivo de informes A13 de R.1478/2006") + 
-  coord_cartesian(xlim = c(0, 10)) + 
+  coord_cartesian(xlim = c(0, ttArchivoInformes_max*1.2)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 #+ ggArchivoInformes, fig.width = 8, fig.height = 6, out.width = "60%"
@@ -438,7 +443,7 @@ ggTiempoVentaRec <- df %>%
   )) %>% 
   ggplot(aes(fill = col1)) + 
   geom_sf(aes(geometry = geometry))+ 
-  geom_sf_label_repel(aes(label = label1), size = 3) +
+  geom_sf_label_repel(aes(label = label1), size = 2, fill='white') +
   labs(title = 'Tiempo para la venta de recetarios a clientes') +
   scale_fill_gradientn(colours = colorspace::heat_hcl(7), name = 'Tiempo') +
   theme(
@@ -549,7 +554,7 @@ ggPropIngresoDepartamentos1 <- df3 %>%
   geom_sf(aes(geometry = geometry)) + 
   geom_scatterpie(aes(x=LONGITUD, y=LATITUD, group=NOMBRE_DEPARTAMENTO),
                   data = df3,
-                  cols=colnames(df3)[1:6], pie_scale = 5) +
+                  cols=colnames(df3)[1:6], pie_scale = 3) +
   theme(axis.title = element_blank(),
         axis.text = element_blank()) +
   scale_fill_brewer(palette = 'Set1', name = NULL)

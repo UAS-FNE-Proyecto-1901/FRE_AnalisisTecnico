@@ -156,14 +156,19 @@ guardarGGplot(gRecetarios3, '029_existenciaRecetarios_3', 7, 5)
 #'-------------------------------------------------------------------------------
 # 5. Número de prescripciones por recetario ------------------
 #'-------------------------------------------------------------------------------
+col1 <- '3.05 N.º de prescripciones por recetario'
+
+dftot1 <- df_total %>%
+  select(col1 = col1) %>% table(dnn = 'conteo') %>% as_tibble
+
 gRecetarios4 <- df_total %>% 
-  select(col1 = `3.05 N.º de prescripciones por recetario`) %>% 
+  select(col1 = col1) %>% 
   ungroup() %>% 
   drop_na() %>% 
   ggplot(aes(x = factor(col1))) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_label(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
-  coord_cartesian(ylim = c(0, 13)) +
+  coord_cartesian(ylim = c(0, max(dftot1$n)*1.2)) +
   ylab('Frecuencia') + xlab('N.° prescripciones por recetario') +
   labs(title = 'Número de prescripciones por recetario') + 
   theme(panel.grid = element_blank())
@@ -306,15 +311,18 @@ guardarGGplot(gPVTARecetario7, '034_PVTA_recetarios_prescripcion', 7, 4)
 #'-------------------------------------------------------------------------------
 # 8. Modalidades de contratación para adquisición de Recetarios------------------
 #'-------------------------------------------------------------------------------
-gModalidadAdquisicion <- df_total %>% 
-  pull(`3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?`) %>% 
-  table() %>% as_tibble() %>% 
+col1 <- '3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?'
+
+tModalidadAdquisicion <- pull(df_total, col1) %>% 
+  {as_tibble(table(.))}
+
+gModalidadAdquisicion <- tModalidadAdquisicion %>% 
   ggplot(aes(y = ., x = n)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = n), position = position_dodge(width = 1), 
             hjust = -1) + 
   xlab('Frecuencia') + 
-  coord_cartesian(xlim = c(0, 10)) +
+  coord_cartesian(xlim = c(0, max(tModalidadAdquisicion$n)*1.2)) +
   labs(title = 'Modalidad de Selección Contratación Recetarios') + 
   theme(axis.title.y = element_blank(),
         panel.grid = element_blank()) 
