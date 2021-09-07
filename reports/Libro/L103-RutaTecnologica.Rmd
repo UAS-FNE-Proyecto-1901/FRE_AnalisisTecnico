@@ -1,0 +1,188 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Ruta Tecnológica
+
+```{r configuracion1-L103, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+```{r MediosComunicacion, echo=FALSE, warning=FALSE, fig.cap='Canales de comunicación FRE con clientes', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "074_MediosComunicacion.rds")) + 
+  labs(title = NULL)
+```
+
+```{r ConexionInternet, echo=FALSE, warning=FALSE, fig.cap='Velocidad de conexión de internet', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "075_ConexionInternet.rds")) + 
+  labs(title = NULL)
+```
+
+```{r EquiposComputo, echo=FALSE, warning=FALSE, fig.cap='N.° de equipos en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "076_EquiposComputo.rds")) + 
+  labs(title = NULL)
+```
+
+```{r RelacionEquiposPersonal, echo=FALSE, warning=FALSE, fig.cap='Relación entre el requerimiento de equipos y el número de personas en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, message=FALSE, out.width="85%"}
+readRDS(file.path(fig_path, "077_CorrEquiposComputo.rds")) + 
+  labs(title = NULL)
+```
+
+```{r OpinionEquiposComputo, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre los equipos de cómputo del FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "078_OpinionEquipos.rds")) + 
+  labs(title = NULL)
+```
+
+## Adquisición de MME por parte del FRE
+```{r HerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "071_Herramienta.rds")) + 
+  labs(title = NULL)
+```
+
+```{r HerramientasManejoInventarios1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios (detallado)', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "072_Herramienta.rds")) + 
+  labs(title = NULL)
+```
+
+```{r PropHerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de Herramientas en el manejo de inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "079_HerramientasCompras.rds")) + 
+  labs(title = NULL)
+```
+
+```{r EtapasProcesoAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento', fig.width=12, fig.height=7, fig.topcaption=TRUE, out.width="100%"}
+if (knitr::is_html_output()) {
+  readRDS(file.path(fig_path, "081_ProcesosAdquisición.rds"))
+} else {
+  readRDS(file.path(fig_path, "080_ProcesosAdquisición.rds")) + 
+    labs(title = NULL)
+}
+```
+
+```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento (detallado)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "082_ProcesosAdquisición.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.cap='Caracterización en demoras de traslados interdepartamentales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiemposTransladosMapa, echo=FALSE, warning=FALSE, fig.cap='Mapa con demoras de traslados interdepartamentales', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + 
+  labs(title = NULL)
+```
+
+```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "085_ConformidadColombiaCompra.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecComprasFNR, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de compras de medicamentos por año al FNE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "130_FrecComprasFNR.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + 
+  labs(title = NULL)
+```
+
+## Recepción de medicamentos
+
+```{r TiemposRecepcionAlmacenamiento, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "086_RecepcionMedicamento.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiemposRecepcionAlmacenamientoMapa, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME (mapa)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "087_RecepcionMedicamento.rds")) + 
+  labs(title = NULL)
+```
+
+```{r UsoNivelesSeguridad, echo=FALSE, warning=FALSE, fig.cap='Uso de niveles de seguridad del inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) + 
+  labs(title = NULL)
+```
+
+## Vencimiento de medicamentos
+
+```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Presentación de casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + 
+  labs(title = NULL)
+```
+
+```{r CasosVencimiento2, echo=FALSE, warning=FALSE, fig.cap='Medicamentos implicados en casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + 
+  labs(title = NULL)
+```
+
+## Almacenamiento
+
+```{r MedidasSeguridadAlmacenamientoMME, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en el almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "088_SeguridadMedicamentos.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecRevCondiciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de revisión de condiciones ambientales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "089_FrecuenciaRevisionCondiciones.rds")) + 
+  labs(title = NULL)
+```
+
+```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='Tecnologías de control y seguimiento de condiciones ambientales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "090_MetodoSeguimControlAmb.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecSeguimientoCalibracion, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "091_FrecSeguimientoCalibracion.rds")) + 
+  labs(title = NULL)
+```
+
+```{r ProductosCompartidos1, echo=FALSE, warning=FALSE, fig.cap='Productos compartidos en el almacén de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "092_ProductosCompartidos.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecControlExistenciasMapa, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME (mapa)', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds")) + 
+  labs(title = NULL)
+```
+
+```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + 
+  labs(title = NULL)
+```
+
+```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "134_PropOcupacionAlmacen.rds")) + 
+  labs(title = NULL)
+```

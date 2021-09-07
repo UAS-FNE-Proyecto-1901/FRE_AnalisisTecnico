@@ -1,6 +1,24 @@
-separarDummies <- function(vector, descartar = F) {
+#' Función de separación de dummies
+#' 
+#' Esta función se puede utilizar para la separación y conteo de respuestas en 
+#' preguntas de múltiples atributos.
+#'
+#' @param vector vector de caracteres, con un delimitador (por defecto es '\\,') 
+#' @param descartar booleano, descartar valores NAN
+#' @param delimitador carácter, delimitador para elementos de campo
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' vect_ejemplo <- c('Manzana, Pera, Oso, Perro', 'Manzana, Jaguar, Perro', 
+#' 'Naranja, Orca, Pera', 'Leon, Cerdo', 'Manzana, Perro')
+#' 
+#' separarDummies(vect_ejemplo)
+#' 
+separarDummies <- function(vector, descartar = F, delimitador = '\\,') {
   # Separar los factores únicos
-  dimFactor <- lapply(vector, function(x) str_split(x, '\\,')) %>% 
+  dimFactor <- lapply(vector, function(x) str_split(x, delimitador)) %>% 
     unlist() %>% 
     sapply(., function(x){str_trim(x)}) %>% 
     unique()

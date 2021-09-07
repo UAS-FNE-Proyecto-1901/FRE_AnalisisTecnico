@@ -1,0 +1,96 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Estructura del FRE
+
+```{r configuracion1-L101, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+## Fecha de constitución de FRE
+
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%"}
+if (knitr::is_html_output()) {
+  readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
+    config(modeBarButtonsToRemove = barButtons)
+} else {
+  readRDS(file.path(fig_path, "002_serieTiempoCreación.rds"))
+}
+```
+
+## Estructura organizacional
+
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + 
+  labs(title = NULL)
+```
+
+```{r perfilProfesionalDepartamentos1, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE por departamento', fig.width=8, fig.height=6,fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '021_mapaProfesional.rds')) + 
+  labs(title = NULL)
+```
+
+```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de los FRE (encargado y apoyos)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + 
+  labs(title = NULL)
+```
+
+```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '023_perfilProfesional3.rds')) + 
+  labs(title = NULL)
+```
+
+```{r mapaProfesional2, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE por departamento', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + 
+  labs(title = NULL)
+```
+
+```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=5, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+
+if (knitr::is_html_output()) {
+  readRDS(file.path(fig_path, '026_pieProfesional2.rds'))
+} else {
+  readRDS(file.path(fig_path, '025_pieProfesional1.rds'))
+}
+```
+
+## Instituciones inscritas en el FRE
+
+```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%"}
+readRDS(file.path(fig_path, "099_NEntidadesCompradoras.rds")) + 
+  labs(title = NULL)
+```
+
+```{r institucionesInscritasRelacion, echo=FALSE, fig.cap='Relación entre N° de instituciones inscritas y personal del FRE', fig.width=6, fig.height=4, out.width="85%", fig.topcaption=TRUE, message=FALSE, warning=FALSE}
+readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + 
+  labs(title = NULL)
+```
+
+## Caracterización de las fuentes de ingresos de los FRE
+```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
+readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + 
+  labs(title = NULL)
+```
+```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
+readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) + 
+  labs(title = NULL)
+```
