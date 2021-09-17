@@ -1,0 +1,13 @@
+book_filename: "InformeFinal"
+output_dir: docs
+css: "./www/style.css"
+toc: yes
+language:
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+word_document:
+  keep_tex: true
+  number_sections: false
+  toc: yes
+  fig_caption: true

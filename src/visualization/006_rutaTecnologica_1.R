@@ -57,7 +57,7 @@ gHerramientaInventario <- df$HerramientaInvetarios %>%
   geom_text(aes(label = n), hjust = -0.3) + 
   xlab('Frecuencia') + 
   labs(title = 'Herramientas de manejo inventarios') + 
-  coord_cartesian(xlim = c(0, 6)) + 
+  coord_cartesian(xlim = c(0, NA)) + 
   theme(
     axis.title.y = element_blank(), 
     panel.grid = element_blank())

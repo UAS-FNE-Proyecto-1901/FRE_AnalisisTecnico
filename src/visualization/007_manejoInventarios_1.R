@@ -198,7 +198,8 @@ ggEquiposComputo <- pull(df, col1) %>%
   geom_text(aes(label = n), vjust = -0.9) +
   xlab('N.° de equipos') + 
   ylab('Frecuencia') + 
-  coord_cartesian(ylim = c(0, 7)) +
+  coord_cartesian(ylim = c(0, NA)) +
+  scale_y_continuous(expand = c(0, 0.0, .2, 0)) + 
   labs(title = 'N.° de equipos de computo en el FRE') +
   theme(panel.grid = element_blank())
 
@@ -454,7 +455,8 @@ ggCompraEficiente <- select(df, Escala = col1) %>%
   ggplot(aes(y = Escala)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) + 
-  coord_cartesian(xlim = c(0, 8)) +
+  scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
+  coord_cartesian(xlim = c(0, NA)) +
   xlab('Frecuencia') + 
   theme(axis.title.y = element_blank(), 
         legend.position = 'bottom') + 
@@ -588,8 +590,9 @@ ggFrecCondiciones <- pull(df, col1) %>%
   ggplot(aes(y = Frec, x =  n)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   labs(title = 'Frec. de revisión de condiciones ambientales') + 
-  geom_text(aes(label = n), hjust = -0.6, size = 4) + 
-  coord_cartesian(xlim = c(0, 10)) + 
+  geom_text(aes(label = n), hjust = -0.6, size = 4) +
+  scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
+  coord_cartesian(xlim = c(0, NA)) + 
   xlab("Frecuencia") +
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
@@ -649,7 +652,8 @@ ggCalibMant <- select(df, col1 = col1) %>%
   geom_text(aes(label = ..count..), stat='count', hjust = -0.8, size = 4) + 
   xlab('Frecuencia') + 
   scale_y_discrete(drop = FALSE) +
-  coord_cartesian(xlim = c(0, 13)) +
+  scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) + 
+  coord_cartesian(xlim = c(0, NA)) +
   labs(title = "Frecuencia de calibración/mantenimiento equipos") + 
   theme(axis.title.y = element_blank())
 
@@ -709,7 +713,8 @@ ggTransporte <- select(df, likert = col1) %>%
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) +
   xlab('Frecuencia') + 
-  coord_cartesian(xlim = c(0, 7)) + 
+  coord_cartesian(xlim = c(0, NA)) + 
+  scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
   labs(title = 'Conformidad con el servicio de transporte desde el FNE') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
@@ -751,7 +756,8 @@ ggFrecControlExistencias <-
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) +
   xlab('Frecuencia') + 
   scale_y_discrete(drop = FALSE) +
-  coord_cartesian(xlim = c(0, 7)) + 
+  coord_cartesian(xlim = c(0, NA)) + 
+  scale_x_continuous(expand = c(0.05, 0.05, 0.10, 0.05)) + 
   labs(title = 'Frec. de control de existencia de medicamentos MME') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
@@ -892,6 +898,7 @@ ggEntidadesCompradoras <- df %>% select(Departamento_1, col1 = col1) %>%
   ggplot(aes(y = Depto1, yend = Depto1)) + 
   geom_segment(aes(x = 0, xend = col1), col = "#1a41bd") + 
   geom_label(aes(x = col1, label = col1), size = 3, fill = "#92abfc") + 
+  scale_x_continuous(expand = c(0.05, 0.05, 0.10, 0.05)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank()) + 
   xlab('N.° de inscritos en el departamento')
 

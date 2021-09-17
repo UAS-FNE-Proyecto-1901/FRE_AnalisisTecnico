@@ -4,6 +4,27 @@ bookdown::gitbook:
       before: |
         <img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align:center; padding:5%" width="90%" class="center">
         <li><a href="#" target="_blank"><strong>Misión PRI 1901</strong></a></li>
+    sharing:
+      whatsapp: false
+      facebook: false
+      github: false
+      twitter: false
+      linkedin: false
+      weibo: false
+      instapaper: false
+      vk: false
+      all: ["facebook", "twitter", "linkedin", "whatsapp", ""]
+    fontsettings:
+      size: 2
   split_by: section
+  delete_merged_file: true
+  favicon: "www/icon_1.png"
+  cover-image: "www/duckimage.jpg"
 bookdown::pdf_book:
-    keep_tex: true
+  keep_tex: true
+bookdown::word_document2:
+  keep_tex: true
+  number_sections: false
+  fig_caption: true
+  toc: yes
+  delete_merged_file: true

@@ -1,7 +1,7 @@
 ---
 title: "Informe Final de Visitas Técnicas Territoriales"
-author: "MisionPRI-1901"
-date: "08 de julio de 2021"
+author: "Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes"
+date: "24 de septiembre de 2021"
 site: bookdown::bookdown_site
 csl: infectio.csl
 encoding: 'UTF-8'
@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Prefacio {-}
 
-Aquí va un prefacio emotivo
+El FNE (*Fondo Nacional de Estupefacientes*) tiene como objetivo la vigilancia y control sobre la importación, la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional. 
 
+Aquí va un prefacio emotivo....
 
