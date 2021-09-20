@@ -1,5 +1,5 @@
 ECHO OFF
 
-RScript -e "bookdown::render_book(c('index.Rmd', 'L001-introduccion.Rmd', 'L002-objetivos.Rmd', 'L003-justificacion.Rmd', 'L101-EstructuraFRE.Rmd', 'L102-RecetariosOficiales.Rmd', 'L103-RutaTecnologica.Rmd', 'L104-GestionInformes.Rmd', 'L301-Regional.Rmd', 'L500-Glosario.Rmd', 'L502-Creditos_2.Rmd'))"
+RScript -e "bookdown::render_book(c('index.Rmd', 'L001_Introduccion.Rmd', 'L002_Objetivos.Rmd', 'L003_Justificacion.Rmd', 'L101_EstructuraFRE.Rmd', 'L102_RecetariosOficiales.Rmd', 'L103_Medicamentos.Rmd', 'L104_GestionInformes.Rmd', 'L301_Regional.Rmd', 'L500_Glosario.Rmd', 'L502_Creditos_2.Rmd'))"
 
 PAUSE

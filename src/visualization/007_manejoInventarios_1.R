@@ -43,9 +43,10 @@ df_MUNICIPIO <-
            locale = locale(encoding = 'latin1'))
 
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'), 
-               na = c('N/A', 'No aplica', 'NA', '<NA>', 'N.R'))
-
-df
+               na = c('N/A', 'No aplica', 'NA', '<NA>', 'N.R', '-')) %>% 
+  mutate(
+    Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
+    Departamento_1 = str_replace(Departamento_1, 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
 
 #'-------------------------------------------------------------------------------
 # 4.01. ¿Con cuales herramientas cuenta el FRE para el manejo de inventarios?-------
@@ -177,8 +178,8 @@ ggConexionInternet <- pull(df, col1) %>%
   ggplot(aes(y = Fct, x = n)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
   geom_text(aes(label = n), hjust = -0.5, size = 4) + 
-  coord_cartesian(xlim = c(0, 12)) +
-  # scale_x_continuous(labels = scales::percent_format()) +
+  coord_cartesian(xlim = c(0, NA)) +
+  scale_x_continuous(expand = c(0,0,0,1.2)) +
   xlab('Frecuencia') + 
   labs(title = 'Velocidad de conexión de Internet') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
@@ -194,12 +195,12 @@ ggEquiposComputo <- pull(df, col1) %>%
   mutate(Equipos = as.double(.)) %>% 
   ggplot(aes(x = Equipos, y = n)) +
   geom_line() + 
-  geom_point(size = 2) + 
-  geom_text(aes(label = n), vjust = -0.9) +
+  geom_point(size = 4) + 
+  geom_label(aes(label = n), vjust = -0.9, label.padding = unit(0.5, "lines")) +
   xlab('N.° de equipos') + 
   ylab('Frecuencia') + 
   coord_cartesian(ylim = c(0, NA)) +
-  scale_y_continuous(expand = c(0, 0.0, .2, 0)) + 
+  scale_y_continuous(expand = c(0, 0.0, 0.50, 0)) + 
   labs(title = 'N.° de equipos de computo en el FRE') +
   theme(panel.grid = element_blank())
 
@@ -396,7 +397,7 @@ guardarGGplot(ggProcesosAdquisicion1, '082_ProcesosAdquisición', 8, 6)
 #'-------------------------------------------------------------------------------
 
 ggTiemposTraslados <- df %>%
-  select(Tiempo = col6, Departamento_1) %>% 
+  select(Tiempo = all_of(col6), Departamento_1) %>% 
   drop_na() %>% 
   mutate(Departamento_1 = str_to_title(Departamento_1)) %>% 
   ggplot(aes(x = Tiempo, y = fct_reorder(Departamento_1, Tiempo))) + 
@@ -468,8 +469,8 @@ guardarGGplot(ggCompraEficiente, '085_ConformidadColombiaCompra', 8, 6)
 
 df %>%
   select(Deptmn = Departamento_1,
-         Escala = col1,
-         Justif = col2) %>% 
+         Escala = all_of(col1),
+         Justif = all_of(col2)) %>% 
   mutate(
     Escala = factor(Escala, levels = escala1),
     Deptmn = str_to_title(Deptmn)) %>% 
@@ -539,8 +540,8 @@ xDF <- pull(df, col2) %>%
 # Existe una columna que quedó separa pese a que proviene del mismo factor
 
 ggSeguridadMedicamentos <- xDF %>% 
-  select(!colnames(xDF)[9:11]) %>% 
-  mutate({{textoLargo}} := apply(xDF[,colnames(xDF)[9:11]], 1, sum) %>% as.logical()) %>% 
+  select(!colnames(xDF)[10:12]) %>% 
+  mutate({{textoLargo}} := apply(xDF[,colnames(xDF)[10:12]], 1, sum) %>% as.logical()) %>% 
   # select(!Otro) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(
@@ -565,6 +566,15 @@ ggSeguridadMedicamentos <- xDF %>%
 #+ ggSeguridadMedicamentos, fig.width = 8, fig.height = 6, out.width = "60%"
 ggSeguridadMedicamentos
 guardarGGplot(ggSeguridadMedicamentos, '088_SeguridadMedicamentos', 8, 6)
+
+#' Entre los FRE con mayor cantidad de medidas de seguridad para los medicamentos se tiene
+#'  
+
+data.frame(Depto = df$Departamento, Suma = apply(xDF, 1, sum), Camaras=xDF$Cámaras, 
+           Disponib = xDF$`Disponibilidad de personal de seguridad privada`) %>% 
+  arrange(desc(Suma))
+
+
 
 #'-------------------------------------------------------------------------------
 # 4.32. ¿Con que frecuencia se revisan las condiciones ambientales ------------- 
@@ -926,3 +936,4 @@ ggRecursosFRE <- df_total1 %>%
 #+ ggRecursosFRE, fig.width = 6, fig.height = 4, out.width = "60%"
 ggRecursosFRE
 guardarGGplot(ggRecursosFRE, '100_RelacionRecursosFRE', 6, 4)
+

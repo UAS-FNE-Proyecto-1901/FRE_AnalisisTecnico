@@ -33,7 +33,10 @@ source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encod
 # 1. Lectura de datos base ------------------
 #'-------------------------------------------------------------------------------
 # 
-df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'))
+df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv')) %>% 
+  mutate(
+    Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
+    Departamento_1 = str_replace(Departamento_1, 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
 
 df_DIVIPOLA <-
   read_csv(file.path('data', 'processed', '798_DANE_DEPARTAMENTO.csv'))

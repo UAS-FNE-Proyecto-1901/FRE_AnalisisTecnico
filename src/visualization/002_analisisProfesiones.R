@@ -29,7 +29,11 @@ df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'))
 df <- df %>% 
   mutate(Profesion = ifelse(`Profesión del funcionario a cargo del FRE` != 'Otro', 
                             `Profesión del funcionario a cargo del FRE`, 
-                            `Si la respuesta a la pregunta anterior fue "otro", indique cual:...17`)) 
+                            `Si la respuesta a la pregunta anterior fue "otro", indique cual:...17`)) %>% 
+  mutate(
+    Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
+    Departamento_1 = str_replace(Departamento_1, 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
+
 
 for (i in 1:5) {
   

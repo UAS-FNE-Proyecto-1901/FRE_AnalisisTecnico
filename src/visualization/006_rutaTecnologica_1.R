@@ -36,7 +36,10 @@ source(file.path('src', 'visualization', '901_funcionesBarras.R'), encoding = 'U
 # 1. Que herramienta utiliza el FRE para el control de inventarios------------------
 #'-------------------------------------------------------------------------------
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'), 
-               na = c('N/A', 'No aplica', 'NA'))
+               na = c('N/A', 'No aplica', 'NA')) %>% 
+  mutate(
+    Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
+    Departamento_1 = str_replace(Departamento_1, 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
 
 separarOtros <- function(string) {
   str_split(string, '\\,')

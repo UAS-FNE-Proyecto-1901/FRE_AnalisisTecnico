@@ -106,7 +106,7 @@ estructura-organizacional
 instituciones-inscritas-en-el-fre
 caracterización-de-las-fuentes-de-ingresos-de-los-fre
 recetarios-oficiales
-ruta-tecnológica
+manejo-de-medicamentos
 adquisición-de-mme-por-parte-del-fre
 recepción-de-medicamentos
 vencimiento-de-medicamentos
@@ -136,3 +136,8 @@ región-caribe
 región-orinoquía
 región-pacífica
 lineamientos-y-recomendaciones-generales
+existencia-de-recetarios
+costos-de-recetarios
+tiempos-de-adquisición-de-recetarios
+tiempos-de-despacho-de-recetarios
+recetario-oficial-electrónico

@@ -47,7 +47,10 @@ df_MUNICIPIO <-
            locale = locale(encoding = 'latin1'))
 
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'), 
-               na = c('N/A', 'No aplica', 'NA'))
+               na = c('N/A', 'No aplica', 'NA')) %>% 
+  mutate(
+    Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
+    Departamento_1 = str_replace(Departamento_1, 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
 
 df
 
