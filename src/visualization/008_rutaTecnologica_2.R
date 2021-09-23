@@ -314,7 +314,7 @@ ggGarantiasSeguridadInformacion <- pull(df, col1) %>%
   {ifelse(str_detect(., 'Otro'), 
           paste(pull(df, col1), pull(df, col2), sep = ', '), 
           pull(df, col1))} %>% 
-  separarDummies() %>%
+  separarDummies(descartar = T) %>%
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 20),
@@ -338,7 +338,6 @@ ggGarantiasSeguridadInformacion <- pull(df, col1) %>%
 #+ ggGarantiasSeguridadInformacion, fig.width = 8, fig.height = 6, out.width = "60%"
 ggGarantiasSeguridadInformacion
 guardarGGplot(ggGarantiasSeguridadInformacion, '127_GarantiaInformacion', 6, 4)
-
 
 #'-------------------------------------------------------------------------------
 # 4.10.5. ¿El FRE cuenta con alguna base de datos donde exista ------------------
@@ -500,9 +499,10 @@ ggPropMedicamento <- select(df, col1 = col1) %>%
   mutate(col1 = factor(col1, rev(ocupacion_vec))) %>% 
   ggplot(aes(y = col1)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  scale_y_discrete(drop = F) +
   xlab('Frecuencia') + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) +
+  scale_y_discrete(drop = F) +
+  scale_x_continuous(expand = c(0,0,0.5,0)) + 
   coord_cartesian(xlim = c(0, 10)) +
   labs(title = 'Proporción que ocupan los MME dentro del almacén') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
@@ -557,7 +557,7 @@ ggPropIngresoDepartamentos1 <- df3 %>%
   geom_sf(aes(geometry = geometry)) + 
   geom_scatterpie(aes(x=LONGITUD, y=LATITUD, group=NOMBRE_DEPARTAMENTO),
                   data = df3,
-                  cols=colnames(df3)[1:6], pie_scale = 3) +
+                  cols=colnames(df3)[1:6], pie_scale = 1.5) +
   theme(axis.title = element_blank(),
         axis.text = element_blank()) +
   scale_fill_brewer(palette = 'Set1', name = NULL)

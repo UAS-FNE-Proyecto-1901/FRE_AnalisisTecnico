@@ -32,10 +32,12 @@ separarDummies <- function(vector, descartar = F, delimitador = '\\,') {
   ls_factorEscogencia <- list()
   
   # Llenar las listas vacías con verdadero o falso si tiene la palabra
-  for (i in 1:length(dimFactor)) {
+  for (i in seq_along(dimFactor)) {
     
-    ls_factorEscogencia[[i]] <- vector %>% 
-      sapply(., function(x){str_detect(x, dimFactor[i])})
+    ls_factorEscogencia[[i]] <-
+      sapply(vector, function(x) {
+        str_detect(paste0('\\A', x, '\\Z'), dimFactor[i])
+      })
   }
   
   # Convertir lista a dataframe

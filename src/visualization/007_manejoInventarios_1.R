@@ -583,7 +583,7 @@ data.frame(Depto = df$Departamento, Suma = apply(xDF, 1, sum), Camaras=xDF$Cáma
 col1 <- "4.32. ¿Con que frecuencia se revisan las condiciones ambientales en el lugar de almacenamiento de los medicamentos?"
 
 
-etiquetasFrecuencia <- c('Diaria', 'Dos veces al día', 'Dos veces a la semana',
+etiquetasFrecuencia <- c('Dos veces al día', 'Diaria', 'Dos veces a la semana',
                          'Tres veces a la semana', 'Una vez a la semana',
                          'Cada mes',
                          'No se revisan condiciones\nambientales') 
@@ -868,7 +868,7 @@ col2 <- "Si la respuesta anterior fue Si, indique cuales...136"
 
 ggMedicVencidos <- pull(df, col2) %>%  
   na.omit() %>% 
-  separarDummies() %>%
+  {separarDummies(.)} %>%
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),
