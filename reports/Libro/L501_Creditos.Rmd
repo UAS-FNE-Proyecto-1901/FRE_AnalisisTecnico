@@ -2,26 +2,203 @@
 
 ### Grupo Desarrollador {-}
 
+```{r include=FALSE}
+bloqueContactos <-
+    function(Nombre = 'Nombre',
+             Cargo = 'Cargo',
+             ruta = "./credit_figures/person_icon.jpg",
+             altura = 15, # rem
+             ancho = '50%',
+             img_alt = "person_icon_logo") {
+      #
+      tags <- htmltools::tags
+      principal <- glue::glue("width: {ancho}; 
+                              flex-direction: row; 
+                              display: flex; 
+                              height: {altura}rem;")
+      
+      tags$div(
+        tags$div(tags$img(src = ruta, alt = img_alt, 
+                          style = 'border-radius: 50%', height='80%'),
+                 style = "display: flex; width: 30%;"),
+        tags$div(
+          tags$div(tags$strong(Nombre, display='block'),
+                   style = "display:flex; justify-content:center; align-items:center; height: 45%; padding: 4rem;"),
+          tags$div(tags$i(Cargo, display='block'),
+                   style = "display:flex; justify-content:center; align-items:center; height: 45%; padding: 4rem;"),
+          style = paste('display: flex', 
+                        'flex-direction: column', 
+                        'justify-content: space-around',
+                        'align-content: space-around',
+                        ' width: 70%',
+                        sep = ';')
+        ),
+        style = principal
+      )
+    }
+credits_fig <- file.path('.', 'credit_figures')
+
+
+crearListaLatex <- function(lista) {
+  cat("\\begin{itemize}")
+  for (j in seq_along(lista)) {
+    cat('\\item ', lista[j])
+  }
+  cat("\\end{itemize}")
+}
+```
+
+
+<hr>
 **Coordinación**
+<br>
+```{r creditos1, echo=FALSE, warning=FALSE, results="asis"}
+tag1 <- htmltools::tags
 
-- Hillary Andrea Gómez
+box1 <- tag1$div(
+  bloqueContactos('Diego Alejandro Socha Cuitiva', 'Dirección',
+                  './credit_figures/diego.jpg'),
+  bloqueContactos('Hillary Andrea Gómez Guerra', 'Coordinación de proyecto',
+                  './credit_figures/hillary.jfif'),
+  style = paste('width: 100%',
+                'display: flex',
+                'align-items: flex-start',
+                'flex-wrap: wrap',
+                'justify-content: space-around',
+                sep = ';')
+)
+# 
+box2 <- 
+crearListaLatex(c('Diego Alejandro Socha Cuitiva (Dirección de proyecto)', 
+                  'Hillary Andrea Gómez Guerra (Coordinación de proyecto)'))
+# 
+if(knitr::is_html_output()){
+  box1
+} else {
+  invisible(box2)
+}
+```
 
+<hr>
 **Apoyo**
+<br>
+```{r, echo=FALSE, warning=FALSE, results="asis"}
+box1 <- tag1$div(
+  bloqueContactos('Carlos Andres Acosta Pinto', 'Profesional de Apoyo Operativo',
+                  './credit_figures/carlos.jfif'),
+  bloqueContactos('Daniela del Pilar Carvajal Latorre', 'Profesional de Apoyo Operativo',
+                  './credit_figures/daniela.jfif'),
+  style = paste('width: 100%',
+                'display: flex',
+                'align-items: flex-start',
+                'flex-wrap: wrap',
+                'justify-content: space-around',
+                sep = ';')
+)
+# 
+box2 <- 
+crearListaLatex(c('Carlos Andres Acosta Pinto (Profesional de Apoyo Operativo)', 
+                  'Daniela del Pilar Carvajal Latorre (Profesional de Apoyo Operativo)'))
+# 
+if(knitr::is_html_output()){
+  box1
+} else {
+  invisible(box2)
+}
+```
 
-- Carlos Andres Acosta Pinto
-
-- Daniela del Pilar Carvajal Latorre
-
+<hr>
 **Realización de encuestas**
+<br>
+```{r, Realización de encuestas, echo=FALSE, warning=FALSE, results="asis"}
+box1 <- tag1$div(
+  bloqueContactos('Jhonathan Felipe Venegas Parra', 'Profesional de equipo técnico territorial',
+                  './credit_figures/jonathan.jfif', altura = 15),
+  bloqueContactos('Nicolás Alexander Cadena Ayala', 'Profesional de equipo técnico territorial',
+                  './credit_figures/nicolas.jfif', altura = 15),
+  bloqueContactos('Carlos Guillermo Leal Jimenez', 'Profesional de equipo técnico territorial',
+                  altura = 15),
+  bloqueContactos('Wilder Estiben Meneses Garavito', 'Profesional de equipo técnico territorial',
+                  './credit_figures/estiben.jfif', altura = 15),
+  style = paste('width: 100%',
+                'height: 35 rem',
+                'display: flex',
+                'align-items: flex-start',
+                'flex-wrap: wrap',
+                'justify-content: space-around',
+                'align-content: space-around',
+                sep = ';')
+)
+# box2 <- tag1$ul(
+#   tag1$li('Jhonathan Felipe Venegas Parra (Profesional de equipo técnico territorial)'),
+#   tag1$li('Nicolás Alexander Cadena Ayala (Profesional de equipo técnico territorial)'),
+#   tag1$li('Carlos Guillermo Leal Jimenez (Profesional de equipo técnico territorial)'),
+#   tag1$li('Wilder Estiben Meneses Garavito (Profesional de equipo técnico territorial)')
+# )
+# 
+box2 <- crearListaLatex(
+  c(
+    'Jhonathan Felipe Venegas Parra (Profesional de equipo técnico territorial)',
+    'Nicolás Alexander Cadena Ayala (Profesional de equipo técnico territorial)',
+    'Carlos Guillermo Leal Jimenez (Profesional de equipo técnico territorial)',
+    'Wilder Estiben Meneses Garavito (Profesional de equipo técnico territorial)'
+  )
+)
 
-- Jhonathan Felipe Venegas Parra
+if(knitr::is_html_output()){
+  box1
+} else {
+  invisible(box2)
+}
+```
 
-- Nicolas Alexander Cadena Ayala
-
-- Carlos Guillermo Leal Jimenez
-
-- Wilder Estiben Meneses Garavito
-
+<hr>
 **Estadística**
+<br>
+```{r, Estadistica, echo=FALSE, warning=FALSE, results="asis"}
+box1 <- tag1$div(
+  bloqueContactos('Daniel Sebastián Parra González', 'Estadístico', 
+                  './credit_figures/daniel.png'),
+  style = paste('width: 100%',
+                'display: flex',
+                'align-items: flex-start',
+                'flex-wrap: wrap',
+                'justify-content: space-around',
+                sep = ';')
+)
+# 
+box2 <- crearListaLatex(c('Daniel Sebastián Parra González (Estadístico)'))
 
-- Daniel Sebastián Parra González
+if(knitr::is_html_output()){
+  box1
+} else {
+  invisible(box2)
+}
+```
+
+<hr>
+**Diagramación**
+<br>
+```{r, Diagramacion, echo=FALSE, warning=FALSE, results="asis"}
+box1 <- tag1$div(
+  bloqueContactos('Julieth Fernanda Contreras Garcia', 'Jefe de Equipo de Comunicación'),
+  bloqueContactos('Fabian Oswaldo Millán Ibarra', 'Profesional de Equipo de Comunicación'),
+  style = paste('width: 100%',
+                'display: flex',
+                'align-items: flex-start',
+                'flex-wrap: wrap',
+                'justify-content: space-around',
+                sep = ';')
+)
+# 
+box2 <- crearListaLatex(c(
+  'Julieth Fernanda Contreras Garcia (Jefe de Equipo de Comunicación)',
+  'Fabian Oswaldo Millán Ibarra (Profesional de Equipo de Comunicación)'
+))
+
+if(knitr::is_html_output()){
+  box1
+} else {
+  invisible(box2)
+}
+```

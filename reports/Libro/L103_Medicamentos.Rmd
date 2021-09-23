@@ -1,9 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
-
 # Manejo de Medicamentos
 
 ```{r configuracion1-L103, include=FALSE}
@@ -137,59 +131,130 @@ readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) +
 
 ## Almacenamiento
 
+### Medidas de seguridad para el almacenamiento
+
 En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes. 
 
 ```{r MedidasSeguridadAlmacenamientoMME, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en el almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, "088_SeguridadMedicamentos.rds")) + 
   labs(title = NULL)
 ```
-  
+
 El departamento que reporta la mayor cantidad de medidas de seguridad es César con 7 medidas como: (i) acceso de seguridad restringido a cierto personal, (ii) procedimientos para el manejo de personal huésped, (iii) visitantes, (iv) mantenimiento o no empleados del FRE, (v) almacenamiento en oficina privada, (vi) inventario físico diario, y (vii) Disponibilidad local de protección policial. Entre los FRE con mayor número de medidas de seguridad reportadas se tiene Casanare (con 6 medidas reportadas), y Córdoba, Antioquia, Norte de Santander, Valle del Cauca, Guaviare y Risaralda con 5 medidas reportadas. Los FRE de Atlántico, Magdalena, Huila, Quindío, y Amazonas sólo reportan una medida de seguridad. 
 
 Sólo los FRE de Valle del Cauca y Córdoba reportan la existencia de un sistema de monitoreo por cámaras para los medicamentos. Sólo los FRE de Córdoba y Vichada reportan la presencia de seguridad privada como medida de seguridad para los FRE. Se recomienda la adopción de una o varias medidas de seguridad por parte de los FRE frente a posibles robos con intenciones de desvío o tráfico de medicamentos MME. 
 
+### Revisión de condiciones ambientales
+
+En la Figura \@ref(fig:FrecRevCondiciones) se muestra la frecuencia de revisión de condiciones ambientales en el almacenamiento de MME. Se tienen que la práctica más frecuente en los FRE es la realización de verificación de condiciones ambientales por lo menos dos veces al día. Sólo algunos FRE afirman que no hacen revisión de condiciones ambientales como Bolívar, Sucre, Chocó, Norte de Santander, Amazonas y Vichada.  
 
 ```{r FrecRevCondiciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de revisión de condiciones ambientales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "089_FrecuenciaRevisionCondiciones.rds")) + 
   labs(title = NULL)
 ```
 
-```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='Tecnologías de control y seguimiento de condiciones ambientales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "090_MetodoSeguimControlAmb.rds")) + 
-  labs(title = NULL)
-```
+En el panel izquierdo de la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se presentan los métodos o tecnologías utilizadas en la monitorización de los medicamentos. En la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se observa que al menos 25 de 30 fondos rotatorios cuentan con un termohigrómetro para la evaluación de condiciones ambientales. La práctica de diligenciar registros cuenta con una menor adopción por parte de los fondos rotatorios, se tiene que 7 y 4 de los fondos rotatorios realiza el diligenciamiento de estos formatos de manera manual y electrónica de manera respectiva. 
 
-```{r FrecSeguimientoCalibracion, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "091_FrecSeguimientoCalibracion.rds")) + 
+```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='(A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%", fig.pos='t'}
+g1 <- readRDS(file.path(fig_path, "090_MetodoSeguimControlAmb.rds")) + 
   labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, "091_FrecSeguimientoCalibracion.rds")) + 
+  labs(title = NULL)
+
+(g1 + g2) + plot_annotation(tag_levels = 'A')
 ```
+En sólo dos FRE (Chocó y Norte de Santander) se reporta el uso de aire acondicionado como una medida para el seguimiento de condiciones ambientales. En el panel derecho de la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se tiene que la práctica más común es realizar la calibración de los equipos de monitoreo por lo menos una vez al año, y hasta en 11 se tiene que no hay un procedimiento de calibración de los equipos. La mayoría de departamentos que no realizan el proceso de calibración se encuentran en la región central. 
+
+### Espacio de almacenamiento
+
+En la Figura \@ref(fig:ProductosCompartidos1) se muestra la frecuencia de varias categorías de productos con los cuales se comparten los MME en el almacén de los FRE. Se tiene que en casi la mitad de los FRE se comparten los MME con medicamentos de salud pública, en 7 de 30 casos se reporta la utilización del espacio en conjunto con papelería (7/30) o recetarios oficiales (3/30). Algunos FRE tienen otros items como vacunas, medicamentos de carros de paro y medicamentos incautados. En 9 de 30 casos se tiene que el FRE tiene un espacio dedicado únicamente a MME.
 
 ```{r ProductosCompartidos1, echo=FALSE, warning=FALSE, fig.cap='Productos compartidos en el almacén de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "092_ProductosCompartidos.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "092_ProductosCompartidos.rds")) + labs(title = NULL)
+```
+En la Figura \@ref(fig:PropOcupacionAlmacen) se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se tiene que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se da en 12 FREs. 
+
+```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "134_PropOcupacionAlmacen.rds")) + labs(title = NULL)
+```
+
+Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos [@Silver2017]. 
+En la Figura \@ref(fig:FrecControlExistencias) se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario. 
+
+```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%"}
+g1 <- readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds")) + labs(title = NULL)
+
+(g1 + g2) + patchwork::plot_annotation(tag_levels = 'A')
+```
+
+Los FRE que realizan monitoreo cada mes parecen encontrarse en las regiones más periféricas del territorio. Entre los FRE que afirman realizar el monitoreo de niveles de inventarios.
+  
+```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + labs(title = NULL)
 ```
 
 ```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 ```
 
-```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + 
-  labs(title = NULL)
+## Precio de medicamentos
+
+En la gestión de operaciones de distribución de MME por parte del FNE, se consideran dos canales de distribución principales los cuales son: (i) canal de distribución a FRE y (ii) canal de distribución mediante compra directa. Se considera que el canal de compra directa constituye una excepción, en los casos en donde no existe un Fondo Rotatorio que realice la distribución en un departamento determinado. Debido a esto, se debe considerar un precio de venta mayor en la utilización del canal de compra directa, y en el caso de MME se realiza la estimación del precio de venta a FRE y se adiciona un margen del 12\% para las operaciones en canal de compra directa.
+
+En la Figura \@ref(fig:precioVentasDepartamentos) se observa una comparación de los precios de ventas reportados como oficiales por los FRE en sus respectivos departamentos para la vigencia 2021. El precio se muestra para cada medicamento en una escala de color diferente en pesos colombianos. En la figura se puede observar que los medicamentos más costosos corresponden a Metilfenidato 36 mg (entre $\$300.000$ y $\$900.000$) y Metilfenidato 36 mg (entre $\$200.000$ y $\$600.000$ pesos).
+
+```{r precioVentasDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de medicamentos en los FRE', fig.width=20, fig.height=15, fig.topcaption=TRUE, out.width="100%", fig.pos='t!'}
+readRDS(file.path(fig_path, '010_precios', "090_precioVentasDepartamentos.rds"))
 ```
 
-```{r FrecControlExistenciasMapa, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME (mapa)', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds")) + 
+En la línea de anticonvulsivantes se tiene que el medicamento más costoso es Fenobarbital 200 mg/mL con precios entre $\$75,000$ a $\$150,000$, mientras que en la línea de narcóticos se tiene al producto importado de Metadona tabletas 40mg como el más costoso (con precios que rondan $\$100,000$ y $\$200,000$). Se tiene algunos departamentos con un color gris, lo que indicaría que el medicamento no hace parte del portafolio de MME que es distribuido en el departamento. Por otra parte, se tienen departamentos con un color de relleno blanco lo que indicaría casos en los que no se presenta un reporte activo de los precios de ventas en esos departamentos, se tienen como casos a Bolívar, Risaralda, Meta, Vichada, y Guainía. 
+
+<!-- ```{r precioVentasDeptosVariacion, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia de medicamentos en los FRE', fig.width=20, fig.height=15, fig.topcaption=TRUE, out.width="100%", fig.pos='t!'} -->
+<!-- readRDS(file.path(fig_path, '010_precios', "091_precioVentasDeptosVariacion.rds")) -->
+<!-- ``` -->
+
+Se realizó una comparación de márgenes de precios de venta frente a los precio de compra de MME por parte de los FRE, se tiene como referencia a los precios indicados en la plataforma de compra eficiente. 
+
+$$\mathrm{M\acute{a}rgen} = \frac{\text{Precio de venta}}{\text{Precio de compra}}$$
+
+En el panel A de la Figura \@ref(fig:boxplotComparativoPVTA) se tiene una comparación de los márgenes de precio de venta frente a precio de compra de los MME. En verde, se tienen los medicamentos con una mediana de precios de ventas en departamentos menor al margen de venta mediante el canal de compra directa correspondiente a (112\%), en estos medicamentos se tiene a Morfina solución oral 3\%, Morfina HCl 50mg/mL, Metilfenidato tableta x 36mg, y Meperidina 100mg/2mL (estos medicamentos no tendrían sobrecostos respecto al canal de compra directa).
+
+```{r boxplotComparativoPVTA, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgenes de precio de venta en el departamento por medicamentos y departamentos', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.pos='t'}
+g1 <- readRDS(file.path(fig_path, '010_precios', "092_boxplotMEDICAMENTO.rds")) + 
   labs(title = NULL)
+
+g2 <- readRDS(file.path(fig_path, '010_precios', "093_boxplotDEPTO.rds")) + 
+  labs(title = NULL)
+
+(g1 + g2) + plot_annotation(tag_levels = 'A') 
 ```
 
-```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + 
+En azul se tienen los departamentos con un margen de precios entre 112\% y 120\%, en este casos se constituirían sobrecostos respecto al canal de compra directa para 11 medicamentos. Por último, en rojo se tienen medicamentos con margenes de precios de ventas mayores al 20\% del precio de compra, se tienen los casos de Morfina hcl 10mg/mL, Hidrato de cloral 10% solución oral y Fenobarbital tabletas x 50mg.  
+
+En el panel B de la Figura \@ref(fig:boxplotComparativoPVTA) se tienen los márgenes de precio de venta sobre precio de compra de acuerdo a los departamentos, se tienen en verde departamentos con una mediana de márgenes de precio menores al 112\%, en estos departamentos se tiene Atlántico, Córdoba, Boyacá, Tolima, Cauca, Valle del Cauca, Amazonas y Guaviare. En el otro extremo se tienen departamentos que tienen margenes de más del 20\% sobre el precio de compra como Casanare, Sucre, Cesar, La Guajira, Putumayo, Norte de Santander, Chocó, Caquetá, y Arauca.  
+
+Por último, se realizó una comparación entre los márgenes de precio de venta en los departamentos y sus distancia física relativa a Bogotá (ver Figura \@ref(fig:relacionMargenesCosto)) mediante regresión lineal. Parece existir una relación entre las dos variables, sin embargo la presencia de casos anómalos que se muestran como etiquetas en la figura evitan que haya la relación tenga significancia estadística ($p = .513$).
+
+También se evaluaron otros factores cómo el número de instituciones que realizaron compras en la vigencia anterior ($p = .667$) y la proporción de ingresos constituida por venta de medicamentos ($p = .429$) pero no se encontró una relación significativa entre las variables.
+
+```{r relacionMargenesCosto, echo=FALSE, warning=FALSE, message=FALSE, fig.cap='Relación de márgen de ganancia y otras variables', fig.width=10, fig.height=5.5, fig.topcaption=TRUE, out.width="95%", fig.align='center'}
+
+g1 <- readRDS(file.path(fig_path, '010_precios', "094_relacionMargenesCosto.rds")) + 
   labs(title = NULL)
+
+g2 <- readRDS(file.path(fig_path, '010_precios', "095_relacionPVTA_multireg_1.rds")) + 
+  labs(title = NULL)
+g3 <- readRDS(file.path(fig_path, '010_precios', "095_relacionPVTA_multireg_2.rds")) + 
+  labs(title = NULL)
+
+gg <- g1 + (g2 / g3) + plot_annotation(tag_levels = 'A')
+gg
 ```
 
-```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "134_PropOcupacionAlmacen.rds")) + 
-  labs(title = NULL)
-```
+### Recomendaciones finales
+
+- Se recomienda realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa. 
+
+- Se deben establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
+

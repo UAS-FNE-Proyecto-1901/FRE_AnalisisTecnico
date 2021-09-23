@@ -33,7 +33,7 @@
 <link rel="prev" href="recetarios-oficiales.html"/>
 <link rel="next" href="costos-de-recetarios.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,9 +52,40 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="./www/style.css" type="text/css" />
 </head>
@@ -97,7 +128,16 @@
 <li class="chapter" data-level="6.1" data-path="adquisición-de-mme-por-parte-del-fre.html"><a href="adquisición-de-mme-por-parte-del-fre.html"><i class="fa fa-check"></i><b>6.1</b> Adquisición de MME por parte del FRE</a></li>
 <li class="chapter" data-level="6.2" data-path="recepción-de-medicamentos.html"><a href="recepción-de-medicamentos.html"><i class="fa fa-check"></i><b>6.2</b> Recepción de medicamentos</a></li>
 <li class="chapter" data-level="6.3" data-path="vencimiento-de-medicamentos.html"><a href="vencimiento-de-medicamentos.html"><i class="fa fa-check"></i><b>6.3</b> Vencimiento de medicamentos</a></li>
-<li class="chapter" data-level="6.4" data-path="almacenamiento.html"><a href="almacenamiento.html"><i class="fa fa-check"></i><b>6.4</b> Almacenamiento</a></li>
+<li class="chapter" data-level="6.4" data-path="almacenamiento.html"><a href="almacenamiento.html"><i class="fa fa-check"></i><b>6.4</b> Almacenamiento</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="almacenamiento.html"><a href="almacenamiento.html#medidas-de-seguridad-para-el-almacenamiento"><i class="fa fa-check"></i><b>6.4.1</b> Medidas de seguridad para el almacenamiento</a></li>
+<li class="chapter" data-level="6.4.2" data-path="almacenamiento.html"><a href="almacenamiento.html#revisión-de-condiciones-ambientales"><i class="fa fa-check"></i><b>6.4.2</b> Revisión de condiciones ambientales</a></li>
+<li class="chapter" data-level="6.4.3" data-path="almacenamiento.html"><a href="almacenamiento.html#espacio-de-almacenamiento"><i class="fa fa-check"></i><b>6.4.3</b> Espacio de almacenamiento</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="precio-de-medicamentos.html"><a href="precio-de-medicamentos.html"><i class="fa fa-check"></i><b>6.5</b> Precio de medicamentos</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="precio-de-medicamentos.html"><a href="precio-de-medicamentos.html#recomendaciones-finales"><i class="fa fa-check"></i><b>6.5.1</b> Recomendaciones finales</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="reporte-de-informes.html"><a href="reporte-de-informes.html"><i class="fa fa-check"></i><b>7</b> Reporte de informes</a>
 <ul>
@@ -131,15 +171,13 @@
 <li class="chapter" data-level="8.4" data-path="región-orinoquía.html"><a href="región-orinoquía.html"><i class="fa fa-check"></i><b>8.4</b> Región Orinoquía</a></li>
 <li class="chapter" data-level="8.5" data-path="región-pacífica.html"><a href="región-pacífica.html"><i class="fa fa-check"></i><b>8.5</b> Región Pacífica</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="lineamientos-y-recomendaciones-generales.html"><a href="lineamientos-y-recomendaciones-generales.html"><i class="fa fa-check"></i><b>9</b> Lineamientos y Recomendaciones Generales</a></li>
 <li class="chapter" data-level="" data-path="glosario.html"><a href="glosario.html"><i class="fa fa-check"></i>Glosario</a></li>
 <li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html"><i class="fa fa-check"></i>Créditos</a>
 <ul>
 <li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html#grupo-desarrollador"><i class="fa fa-check"></i>Grupo Desarrollador</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="créditos-1.html"><a href="créditos-1.html"><i class="fa fa-check"></i>Créditos</a>
-<ul>
-<li class="chapter" data-level="" data-path="créditos-1.html"><a href="créditos-1.html#grupo-desarrollador-1"><i class="fa fa-check"></i>Grupo Desarrollador</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 </ul>
 
       </nav>
@@ -241,6 +279,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

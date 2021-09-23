@@ -1,9 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
-
 # Estructura del FRE
 
 ```{r configuracion1-L101, include=FALSE}

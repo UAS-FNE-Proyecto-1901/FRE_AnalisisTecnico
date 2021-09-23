@@ -68,6 +68,29 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 % Márgenes de páginas
 \usepackage[
 top=2.54cm, 			% Top margin
@@ -215,7 +238,7 @@ heightrounded, 			% to avoid spurious underfull messages
 
 \renewcommand*\contentsname{Tabla de Contenidos}
 {
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \tableofcontents
 }
 \hypertarget{prefacio}{%
@@ -426,6 +449,9 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 
 \maxdeadcycles=1000
 
+\hypertarget{existencia-de-recetarios}{%
+\section{Existencia de recetarios}\label{existencia-de-recetarios}}
+
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/existenciasRecetarios-1} \caption{N.° de existencias de recetarios en el FRE}\label{fig:existenciasRecetarios}
 \end{figure}
@@ -441,6 +467,9 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/existenciaRecetarios4-1} \caption{N.° de prescripciones por recetario}\label{fig:existenciaRecetarios4}
 \end{figure}
+
+\hypertarget{costos-de-recetarios}{%
+\section{Costos de recetarios}\label{costos-de-recetarios}}
 
 \begin{figure}
 \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/costoRecetario-1} \caption{Comparativo de costo vs precio de recetarios por departamento}\label{fig:costoRecetario}
@@ -460,6 +489,9 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/PVTA-Recetarios-1} \caption{Precio de venta de recetario por prescripción}\label{fig:PVTA-Recetarios}
 \end{figure}
 
+\hypertarget{tiempos-de-adquisiciuxf3n-de-recetarios}{%
+\section{Tiempos de adquisición de recetarios}\label{tiempos-de-adquisiciuxf3n-de-recetarios}}
+
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/modalidadAdquisicion-1} \caption{Modalidad de selección para contratos de adquisición de recetarios}\label{fig:modalidadAdquisicion}
 \end{figure}
@@ -476,9 +508,8 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1} \caption{Actividades realizadas por el FRE para el seguimiento del uso de recetarios}\label{fig:SeguimientoUsoRecetarios}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecExistenciaRecetarios-1} \caption{Frecuencia de revisión de existencia de recetarios}\label{fig:FrecExistenciaRecetarios}
-\end{figure}
+\hypertarget{tiempos-de-despacho-de-recetarios}{%
+\section{Tiempos de despacho de recetarios}\label{tiempos-de-despacho-de-recetarios}}
 
 \begin{figure}
 \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/MedidasSeguridadRec-1} \caption{Medidas de seguridad en los recetarios}\label{fig:MedidasSeguridadRec}
@@ -508,6 +539,9 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/InformacionHerramiento-VentasRecetarios-1} \caption{Proporción de FRE que diligencian en campo de ventas de recetarios}\label{fig:InformacionHerramiento-VentasRecetarios}
 \end{figure}
 
+\hypertarget{recetario-oficial-electruxf3nico}{%
+\section{Recetario Oficial Electrónico}\label{recetario-oficial-electruxf3nico}}
+
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FREImplementacionROE-1} \caption{Opinión sobre la implementación del Recetario Oficial Electrónico (ROE)}\label{fig:FREImplementacionROE}
 \end{figure}
@@ -516,8 +550,8 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/TiempoVentaInstituciones-1} \caption{Tiempo de demora en la venta de recetarios oficiales a clientes}\label{fig:TiempoVentaInstituciones}
 \end{figure}
 
-\hypertarget{ruta-tecnoluxf3gica}{%
-\chapter{Ruta Tecnológica}\label{ruta-tecnoluxf3gica}}
+\hypertarget{manejo-de-medicamentos}{%
+\chapter{Manejo de Medicamentos}\label{manejo-de-medicamentos}}
 
 \maxdeadcycles=1000
 
@@ -613,7 +647,10 @@ Por otro lado, para fortalecer el proceso de estimación de la necesidad de medi
 \hypertarget{almacenamiento}{%
 \section{Almacenamiento}\label{almacenamiento}}
 
-En la Figura \ref{MedidasSeguridadAlmacenamientoMME} se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes.
+\hypertarget{medidas-de-seguridad-para-el-almacenamiento}{%
+\subsection{Medidas de seguridad para el almacenamiento}\label{medidas-de-seguridad-para-el-almacenamiento}}
+
+En la Figura \ref{fig:MedidasSeguridadAlmacenamientoMME} se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes.
 
 \begin{figure}
 \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1} \caption{Medidas de seguridad en el almacenamiento de MME}\label{fig:MedidasSeguridadAlmacenamientoMME}
@@ -623,41 +660,104 @@ El departamento que reporta la mayor cantidad de medidas de seguridad es César 
 
 Sólo los FRE de Valle del Cauca y Córdoba reportan la existencia de un sistema de monitoreo por cámaras para los medicamentos. Sólo los FRE de Córdoba y Vichada reportan la presencia de seguridad privada como medida de seguridad para los FRE. Se recomienda la adopción de una o varias medidas de seguridad por parte de los FRE frente a posibles robos con intenciones de desvío o tráfico de medicamentos MME.
 
+\hypertarget{revisiuxf3n-de-condiciones-ambientales}{%
+\subsection{Revisión de condiciones ambientales}\label{revisiuxf3n-de-condiciones-ambientales}}
+
+En la Figura \ref{fig:FrecRevCondiciones} se muestra la frecuencia de revisión de condiciones ambientales en el almacenamiento de MME. Se tienen que la práctica más frecuente en los FRE es la realización de verificación de condiciones ambientales por lo menos dos veces al día. Sólo algunos FRE afirman que no hacen revisión de condiciones ambientales como Bolívar, Sucre, Chocó, Norte de Santander, Amazonas y Vichada.
+
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecRevCondiciones-1} \caption{Frecuencia de revisión de condiciones ambientales}\label{fig:FrecRevCondiciones}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1} \caption{Tecnologías de control y seguimiento de condiciones ambientales}\label{fig:MetodosSeguimientoControlAmbiental}
+En el panel izquierdo de la Figura \ref{fig:MetodosSeguimientoControlAmbiental} se presentan los métodos o tecnologías utilizadas en la monitorización de los medicamentos. En la Figura \ref{fig:MetodosSeguimientoControlAmbiental} se observa que al menos 25 de 30 fondos rotatorios cuentan con un termohigrómetro para la evaluación de condiciones ambientales. La práctica de diligenciar registros cuenta con una menor adopción por parte de los fondos rotatorios, se tiene que 7 y 4 de los fondos rotatorios realiza el diligenciamiento de estos formatos de manera manual y electrónica de manera respectiva.
+
+\begin{figure}[t]
+\includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1} \caption{(A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental}\label{fig:MetodosSeguimientoControlAmbiental}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecSeguimientoCalibracion-1} \caption{Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental}\label{fig:FrecSeguimientoCalibracion}
-\end{figure}
+En sólo dos FRE (Chocó y Norte de Santander) se reporta el uso de aire acondicionado como una medida para el seguimiento de condiciones ambientales. En el panel derecho de la Figura \ref{fig:MetodosSeguimientoControlAmbiental} se tiene que la práctica más común es realizar la calibración de los equipos de monitoreo por lo menos una vez al año, y hasta en 11 se tiene que no hay un procedimiento de calibración de los equipos. La mayoría de departamentos que no realizan el proceso de calibración se encuentran en la región central.
+
+\hypertarget{espacio-de-almacenamiento}{%
+\subsection{Espacio de almacenamiento}\label{espacio-de-almacenamiento}}
+
+En la Figura \ref{fig:ProductosCompartidos1} se muestra la frecuencia de varias categorías de productos con los cuales se comparten los MME en el almacén de los FRE. Se tiene que en casi la mitad de los FRE se comparten los MME con medicamentos de salud pública, en 7 de 30 casos se reporta la utilización del espacio en conjunto con papelería (7/30) o recetarios oficiales (3/30). Algunos FRE tienen otros items como vacunas, medicamentos de carros de paro y medicamentos incautados. En 9 de 30 casos se tiene que el FRE tiene un espacio dedicado únicamente a MME.
 
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/ProductosCompartidos1-1} \caption{Productos compartidos en el almacén de MME}\label{fig:ProductosCompartidos1}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/TransporteProductos-1} \caption{Opinión del servicio de la distribución de los medicamentos MME}\label{fig:TransporteProductos}
-\end{figure}
+En la Figura \ref{fig:PropOcupacionAlmacen} se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se tiene que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se da en 12 FREs.
 
 \begin{figure}
-\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecControlExistencias-1} \caption{Frecuencia del control de existencias de medicamentos MME}\label{fig:FrecControlExistencias}
+\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/PropOcupacionAlmacen-1} \caption{Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE}\label{fig:PropOcupacionAlmacen}
 \end{figure}
 
+Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos\textsuperscript{\protect\hyperlink{ref-Silver2017}{1}}.
+En la Figura \ref{fig:FrecControlExistencias} se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario.
+
 \begin{figure}
-\includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/FrecControlExistenciasMapa-1} \caption{Frecuencia del control de existencias de medicamentos MME (mapa)}\label{fig:FrecControlExistenciasMapa}
+\includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/FrecControlExistencias-1} \caption{Frecuencia del control de existencias de medicamentos MME}\label{fig:FrecControlExistencias}
 \end{figure}
+
+Los FRE que realizan monitoreo cada mes parecen encontrarse en las regiones más periféricas del territorio. Entre los FRE que afirman realizar el monitoreo de niveles de inventarios.
 
 \begin{figure}
 \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/Semaforizacion-1} \caption{Utilización de técnicas de semaforización en el manejo del inventario}\label{fig:Semaforizacion}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/PropOcupacionAlmacen-1} \caption{Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE}\label{fig:PropOcupacionAlmacen}
+\includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/TransporteProductos-1} \caption{Opinión del servicio de la distribución de los medicamentos MME}\label{fig:TransporteProductos}
 \end{figure}
+
+\hypertarget{precio-de-medicamentos}{%
+\section{Precio de medicamentos}\label{precio-de-medicamentos}}
+
+En la gestión de operaciones de distribución de MME por parte del FNE, se consideran dos canales de distribución principales los cuales son: (i) canal de distribución a FRE y (ii) canal de distribución mediante compra directa. Se considera que el canal de compra directa constituye una excepción, en los casos en donde no existe un Fondo Rotatorio que realice la distribución en un departamento determinado. Debido a esto, se debe considerar un precio de venta mayor en la utilización del canal de compra directa, y en el caso de MME se realiza la estimación del precio de venta a FRE y se adiciona un margen del 12\% para las operaciones en canal de compra directa.
+
+En la Figura \ref{fig:precioVentasDepartamentos} se observa una comparación de los precios de ventas reportados como oficiales por los FRE en sus respectivos departamentos para la vigencia 2021. El precio se muestra para cada medicamento en una escala de color diferente en pesos colombianos. En la figura se puede observar que los medicamentos más costosos corresponden a Metilfenidato 36 mg (entre \(\$300.000\) y \(\$900.000\)) y Metilfenidato 36 mg (entre \(\$200.000\) y \(\$600.000\) pesos).
+
+\begin{figure}[t!]
+\includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/precioVentasDepartamentos-1} \caption{Precio de venta de medicamentos en los FRE}\label{fig:precioVentasDepartamentos}
+\end{figure}
+
+En la línea de anticonvulsivantes se tiene que el medicamento más costoso es Fenobarbital 200 mg/mL con precios entre \(\$75,000\) a \(\$150,000\), mientras que en la línea de narcóticos se tiene al producto importado de Metadona tabletas 40mg como el más costoso (con precios que rondan \(\$100,000\) y \(\$200,000\)). Se tiene algunos departamentos con un color gris, lo que indicaría que el medicamento no hace parte del portafolio de MME que es distribuido en el departamento. Por otra parte, se tienen departamentos con un color de relleno blanco lo que indicaría casos en los que no se presenta un reporte activo de los precios de ventas en esos departamentos, se tienen como casos a Bolívar, Risaralda, Meta, Vichada, y Guainía.
+
+Se realizó una comparación de márgenes de precios de venta frente a los precio de compra de MME por parte de los FRE, se tiene como referencia a los precios indicados en la plataforma de compra eficiente.
+
+\[\mathrm{M\acute{a}rgen} = \frac{\text{Precio de venta}}{\text{Precio de compra}}\]
+
+En el panel A de la Figura \ref{fig:boxplotComparativoPVTA} se tiene una comparación de los márgenes de precio de venta frente a precio de compra de los MME. En verde, se tienen los medicamentos con una mediana de precios de ventas en departamentos menor al margen de venta mediante el canal de compra directa correspondiente a (112\%), en estos medicamentos se tiene a Morfina solución oral 3\%, Morfina HCl 50mg/mL, Metilfenidato tableta x 36mg, y Meperidina 100mg/2mL (estos medicamentos no tendrían sobrecostos respecto al canal de compra directa).
+
+\begin{figure}[t]
+\includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/boxplotComparativoPVTA-1} \caption{Comparativo de márgenes de precio de venta en el departamento por medicamentos y departamentos}\label{fig:boxplotComparativoPVTA}
+\end{figure}
+
+En azul se tienen los departamentos con un margen de precios entre 112\% y 120\%, en este casos se constituirían sobrecostos respecto al canal de compra directa para 11 medicamentos. Por último, en rojo se tienen medicamentos con margenes de precios de ventas mayores al 20\% del precio de compra, se tienen los casos de Morfina hcl 10mg/mL, Hidrato de cloral 10\% solución oral y Fenobarbital tabletas x 50mg.
+
+En el panel B de la Figura \ref{fig:boxplotComparativoPVTA} se tienen los márgenes de precio de venta sobre precio de compra de acuerdo a los departamentos, se tienen en verde departamentos con una mediana de márgenes de precio menores al 112\%, en estos departamentos se tiene Atlántico, Córdoba, Boyacá, Tolima, Cauca, Valle del Cauca, Amazonas y Guaviare. En el otro extremo se tienen departamentos que tienen margenes de más del 20\% sobre el precio de compra como Casanare, Sucre, Cesar, La Guajira, Putumayo, Norte de Santander, Chocó, Caquetá, y Arauca.
+
+Por último, se realizó una comparación entre los márgenes de precio de venta en los departamentos y sus distancia física relativa a Bogotá (ver Figura \ref{fig:relacionMargenesCosto}) mediante regresión lineal. Parece existir una relación entre las dos variables, sin embargo la presencia de casos anómalos que se muestran como etiquetas en la figura evitan que haya la relación tenga significancia estadística (\(p = .513\)).
+
+También se evaluaron otros factores cómo el número de instituciones que realizaron compras en la vigencia anterior (\(p = .667\)) y la proporción de ingresos constituida por venta de medicamentos (\(p = .429\)) pero no se encontró una relación significativa entre las variables.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.95\linewidth]{InformeFinal_files/figure-latex/relacionMargenesCosto-1} 
+
+}
+
+\caption{Relación de márgen de ganancia y otras variables}\label{fig:relacionMargenesCosto}
+\end{figure}
+
+\hypertarget{recomendaciones-finales}{%
+\subsection{Recomendaciones finales}\label{recomendaciones-finales}}
+
+\begin{itemize}
+\item
+  Se recomienda realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa.
+\item
+  Se deben establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
+\end{itemize}
 
 \hypertarget{reporte-de-informes}{%
 \chapter{Reporte de informes}\label{reporte-de-informes}}
@@ -1481,58 +1581,34 @@ Por otro lado, tenemos a los departamentos como Antioquia y Quindío, donde tien
 
 \textbf{Coordinación}
 
-\begin{itemize}
-\tightlist
-\item
-  Hillary Andrea Gómez
-\end{itemize}
+\begin{itemize}\item  Diego Alejandro Socha Cuitiva (Dirección de proyecto)\item  Hillary Andrea Gómez Guerra (Coordinación de proyecto)\end{itemize}
 
 \textbf{Apoyo}
 
-\begin{itemize}
-\item
-  Carlos Andres Acosta Pinto
-\item
-  Daniela del Pilar Carvajal Latorre
-\end{itemize}
+\begin{itemize}\item  Carlos Andres Acosta Pinto (Profesional de Apoyo Operativo)\item  Daniela del Pilar Carvajal Latorre (Profesional de Apoyo Operativo)\end{itemize}
 
 \textbf{Realización de encuestas}
 
-\begin{itemize}
-\item
-  Jhonathan Felipe Venegas Parra
-\item
-  Nicolas Alexander Cadena Ayala
-\item
-  Carlos Guillermo Leal Jimenez
-\item
-  Wilder Estiben Meneses Garavito
-\end{itemize}
+\begin{itemize}\item  Jhonathan Felipe Venegas Parra (Profesional de equipo técnico territorial)\item  Nicolás Alexander Cadena Ayala (Profesional de equipo técnico territorial)\item  Carlos Guillermo Leal Jimenez (Profesional de equipo técnico territorial)\item  Wilder Estiben Meneses Garavito (Profesional de equipo técnico territorial)\end{itemize}
 
 \textbf{Estadística}
 
-\begin{itemize}
-\tightlist
-\item
-  Daniel Sebastián Parra González
-\end{itemize}
-
-\hypertarget{cruxe9ditos-1}{%
-\chapter*{Créditos}\label{cruxe9ditos-1}}
-\addcontentsline{toc}{chapter}{Créditos}
-
-\hypertarget{grupo-desarrollador-1}{%
-\subsection*{Grupo Desarrollador}\label{grupo-desarrollador-1}}
-\addcontentsline{toc}{subsection}{Grupo Desarrollador}
-
-\textbf{Coordinación}
-
-\textbf{Apoyo}
-
-\textbf{Realización de encuestas}
-
-\textbf{Estadística}
+\begin{itemize}\item  Daniel Sebastián Parra González (Estadístico)\end{itemize}
 
 \textbf{Diagramación}
+
+\begin{itemize}\item  Julieth Fernanda Contreras Garcia (Jefe de Equipo de Comunicación)\item  Fabian Oswaldo Millán Ibarra (Profesional de Equipo de Comunicación)\end{itemize}
+
+\hypertarget{referencias}{%
+\chapter*{Referencias}\label{referencias}}
+\addcontentsline{toc}{chapter}{Referencias}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Silver2017}{}}%
+\CSLLeftMargin{1. }
+\CSLRightInline{Silver EA., Pyke DF., Thomas DA. {Inventory and Production Management in Supply Chains}. 4ed edición. Boca Raton, FL, USA: CRC Press; 2017.}
+
+\end{CSLReferences}
 
 \end{document}

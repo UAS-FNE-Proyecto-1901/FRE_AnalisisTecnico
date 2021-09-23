@@ -3,11 +3,12 @@ title: "Informe Final de Visitas Técnicas Territoriales"
 author: "Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes"
 date: "24 de septiembre de 2021"
 site: bookdown::bookdown_site
-csl: infectio.csl
 encoding: 'UTF-8'
 always_allow_html: true
 documentclass: book
 toc-title: "Tabla de Contenidos"
+bibliography: referencias.bib
+csl: infectio.csl
 link-citations: yes
 css: "./www/style.css"
 institution: Fondo Nacional de Estupefacientes
