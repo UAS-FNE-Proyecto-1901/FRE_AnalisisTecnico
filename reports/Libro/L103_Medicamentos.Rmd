@@ -189,7 +189,14 @@ g2 <- readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds")) + labs(
 ```
 
 Los FRE que realizan monitoreo cada mes parecen encontrarse en las regiones más periféricas del territorio. Entre los FRE que afirman realizar el monitoreo de niveles de inventarios.
-  
+
+
+De acuerdo a la Resolución 1403 de 2007 del MSPS [@MinisteriodeSaludyProteccionSocial2007], el control de fechas de vencimiento es un procedimiento importante enmarcado en el proceso de Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos dentro del Modelo de Gestión del Servicio Farmacéutico. Los servicios farmacéuticos deben contar con criterios procedimientos y recursos que le permitan verificar y recursos que permitan verificar continuamente la fecha de vencimiento de los medicamentos [@MinisteriodeSaludyProteccionSocial2007].  
+
+Entre estos recursos se encuentra la *semaforización*, que es una herramienta que permite identificar y determinar en el momento oportuno que medicamentos están próximos a vencer. De forma común, esta herramienta se aplica mediante la rotulación de las unidades con colores de los medicamentos de acuerdo al tiempo esperado hasta la fecha de vencimiento [@HernandezVera2017]. 
+
+La adopción de esta práctica sólo se ha realizado en 40\% de los FRE
+
 ```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + labs(title = NULL)
 ```
