@@ -22,7 +22,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 ## Fecha de constitución de FRE
 
-```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%"}
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%"}
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
     config(modeBarButtonsToRemove = barButtons)

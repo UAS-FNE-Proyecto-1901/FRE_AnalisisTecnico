@@ -864,7 +864,7 @@ ggVencimientoMed
 guardarGGplot(ggVencimientoMed, '097_CasosVencimiento', 6, 4)
 
 
-col2 <- "Si la respuesta anterior fue Si, indique cuales...136"
+col2 <- "Si la respuesta anterior fue Si, indique cuales...137"
 
 ggMedicVencidos <- pull(df, col2) %>%  
   na.omit() %>% 

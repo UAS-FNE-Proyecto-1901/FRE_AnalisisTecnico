@@ -117,18 +117,6 @@ readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) +
   labs(title = NULL)
 ```
 
-## Vencimiento de medicamentos
-
-```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Presentación de casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + 
-  labs(title = NULL)
-```
-
-```{r CasosVencimiento2, echo=FALSE, warning=FALSE, fig.cap='Medicamentos implicados en casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + 
-  labs(title = NULL)
-```
-
 ## Almacenamiento
 
 ### Medidas de seguridad para el almacenamiento
@@ -188,8 +176,9 @@ g2 <- readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds")) + labs(
 (g1 + g2) + patchwork::plot_annotation(tag_levels = 'A')
 ```
 
-Los FRE que realizan monitoreo cada mes parecen encontrarse en las regiones más periféricas del territorio. Entre los FRE que afirman realizar el monitoreo de niveles de inventarios.
+Entre los FRE que afirman realizar el monitoreo de niveles de inventarios de forma diaria se encuentran Antioquia, Córdoba, Bolívar, San Andrés, Casanare, Meta y Caldas. El FRE de Cesar afirma realizar el control de existencias varias veces al día. Los FRE que realizan monitoreo cada mes parecen encontrarse en las regiones más periféricas del territorio, y esto se podría deber a la presencia de niveles de inventario promedio bajos. 
 
+### Control de fechas de vencimiento
 
 De acuerdo a la Resolución 1403 de 2007 del MSPS [@MinisteriodeSaludyProteccionSocial2007], el control de fechas de vencimiento es un procedimiento importante enmarcado en el proceso de Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos dentro del Modelo de Gestión del Servicio Farmacéutico. Los servicios farmacéuticos deben contar con criterios procedimientos y recursos que le permitan verificar y recursos que permitan verificar continuamente la fecha de vencimiento de los medicamentos [@MinisteriodeSaludyProteccionSocial2007].  
 
@@ -197,10 +186,21 @@ Entre estos recursos se encuentra la *semaforización*, que es una herramienta q
 
 La adopción de esta práctica sólo se ha realizado en 40\% de los FRE
 
-```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + labs(title = NULL)
+<!-- ```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"} -->
+<!-- readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + labs(title = NULL) -->
+<!-- ``` -->
+
+```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Presentación de casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + 
+  labs(title = NULL)
 ```
 
+```{r CasosVencimiento2, echo=FALSE, warning=FALSE, fig.cap='Medicamentos implicados en casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + 
+  labs(title = NULL)
+```
+
+### Transporte 
 ```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 ```

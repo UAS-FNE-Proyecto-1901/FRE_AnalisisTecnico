@@ -27,7 +27,9 @@ source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'),
 #'-------------------------------------------------------------------------------
 
 #' Introducción
-df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'))
+df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv')) %>% 
+  mutate(Departamento_1 = 
+           ifelse(str_detect(Departamento_1, 'ANDRÉS'), 'SAN ANDRÉS', Departamento_1))
 
 #' Definición de escala de tiempo
 year_df <- tibble(start = seq(1960, 2015, 5),
@@ -112,13 +114,29 @@ dfPersonalizado2 <- dfPersonalizado1 %>%
   add_row(group = c('NF')) %>% 
   add_row(group = c('NI'), .before = 1L)
 
-gp <- dfPersonalizado2 %>% 
-  gg_vistime(col.event = 'start',
-             col.start = 'start_date',
-             col.end = 'end_date', optimize_y = T, show_labels = T) + 
-  theme(axis.text.y = element_blank(), axis.text.x = element_blank(), 
-        panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank())
+gp <- dfPersonalizado2 %>%
+  gg_vistime(
+    col.event = 'start',
+    col.start = 'start_date',
+    col.end = 'end_date',
+    optimize_y = TRUE,
+    show_labels = T
+  ) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.text.x = element_blank(),
+    text = element_text(size = 1),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank()
+  )
+
+gp
+gp$layers[[3]]$aes_params$shape <- 21
+gp$layers[[3]]$aes_params$size <- 3.5
+gp$layers[[5]]$geom_params$arrow <- arrow(length = unit(0.01, 'npc'), color = 'gray90')
+gp$layers[[5]]$aes_params$segment.alpha <- 0.5
+gp$layers[[5]]$geom_params$segment.colour <- rgb(0.9, 1, 1)
+gp$layers[[5]]$geom_params$max.overlaps <- Inf
 
 gp
 
