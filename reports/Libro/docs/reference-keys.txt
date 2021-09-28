@@ -63,6 +63,8 @@ fig:relacionMargenesCosto
 fig:HerramientasDiligA1
 fig:ControlesVentasFRE
 fig:TiemposConsolidacionA1
+fig:TiemposConsolidacionA1-1
+fig:TiemposConsolidacionA2
 fig:RecepcionA13
 fig:ArchivoInformesFRE
 fig:SeguimientoEnvioInformes
@@ -146,5 +148,3 @@ región-caribe
 región-orinoquía
 región-pacífica
 lineamientos-y-recomendaciones-generales
-fig:TiemposConsolidacionA1-1
-fig:TiemposConsolidacionA2

@@ -33,7 +33,7 @@
 <link rel="prev" href="precio-de-medicamentos.html"/>
 <link rel="next" href="seguridad-de-la-información.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,6 +52,15 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -163,6 +172,7 @@ div.csl-indent {
 <li class="chapter" data-level="8.4" data-path="región-orinoquía.html"><a href="región-orinoquía.html"><i class="fa fa-check"></i><b>8.4</b> Región Orinoquía</a></li>
 <li class="chapter" data-level="8.5" data-path="región-pacífica.html"><a href="región-pacífica.html"><i class="fa fa-check"></i><b>8.5</b> Región Pacífica</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="lineamientos-y-recomendaciones-generales.html"><a href="lineamientos-y-recomendaciones-generales.html"><i class="fa fa-check"></i><b>9</b> Lineamientos y Recomendaciones Generales</a></li>
 <li class="chapter" data-level="" data-path="glosario.html"><a href="glosario.html"><i class="fa fa-check"></i>Glosario</a></li>
 <li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html"><i class="fa fa-check"></i>Créditos</a>
 <ul>
@@ -188,7 +198,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="reporte-de-informes" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> Reporte de informes</h1>
-<p>La Resolución 1479 de 2006 del Ministerio de Salud y la Protección Social<span class="citation"><sup><a href="#ref-MSPS1479-2006" role="doc-biblioref">1</a></sup></span> por la cual se expiden normas para la creación y funcionamiento de los fondos rotatorios de estupefacientes en su artículo 5 expone que los FRE deben rendir informes al FNE. Entre estos informes se tienen<span class="citation"><sup><a href="#ref-MSPS1479-2006" role="doc-biblioref">1</a></sup></span>:</p>
+<p>La Resolución 1479 de 2006 del Ministerio de Salud y la Protección Social<span class="citation"><sup><a href="#ref-MSPS1479-2006" role="doc-biblioref">4</a></sup></span> por la cual se expiden normas para la creación y funcionamiento de los fondos rotatorios de estupefacientes en su artículo 5 expone que los FRE deben rendir informes al FNE. Entre estos informes se tienen<span class="citation"><sup><a href="#ref-MSPS1479-2006" role="doc-biblioref">4</a></sup></span>:</p>
 <ul>
 <li><p>Informe mensual sobre la distribución de medicamentos monopolio del Estado, dentro de los diez (10) primeros días calendario de cada mes según el formato prescrito en el Anexo número 1 de la presente resolución.</p></li>
 <li><p>Informe mensual sobre consumo de medicamentos monopolio del Estado, dentro de los diez (10) primeros días calendario de cada mes según el formato prescrito en el Anexo número 2 de la presente resolución.</p></li>
@@ -261,7 +271,7 @@ Figura 7.9: Medidas por incumplimiento de envío de informes
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-MSPS1479-2006" class="csl-entry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Ministerio de la Protección Social. <span>Resoluci<span>ó</span>n 1479 de 2006 de Ministerio de Protecci<span>ó</span>n Social: Por la cual se expiden normas para la creaci<span>ó</span>n y funcionamiento de los fondos rotatorios de estupefacientes, de las secretar<span>í</span>as, institutos o direcciones departamentales de salud y dem<span>á</span>s disposic</span>. 2006.</div>
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Ministerio de la Protección Social. <span>Resoluci<span>ó</span>n 1479 de 2006 de Ministerio de Protecci<span>ó</span>n Social: Por la cual se expiden normas para la creaci<span>ó</span>n y funcionamiento de los fondos rotatorios de estupefacientes, de las secretar<span>í</span>as, institutos o direcciones departamentales de salud y dem<span>á</span>s disposic</span>. 2006.</div>
 </div>
 </div>
             </section>
@@ -321,6 +331,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
