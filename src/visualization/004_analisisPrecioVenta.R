@@ -28,6 +28,7 @@ require(patchwork)
 
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
 source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encoding = 'UTF-8')
+source(file.path('src', 'visualization', '900_funcionExtraccionDummies.R'), encoding = 'UTF-8')
 
 #'-------------------------------------------------------------------------------
 # 1. Lectura de datos base ------------------
@@ -317,15 +318,18 @@ guardarGGplot(gPVTARecetario7, '034_PVTA_recetarios_prescripcion', 7, 4)
 col1 <- '3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?'
 
 tModalidadAdquisicion <- pull(df_total, col1) %>% 
-  {as_tibble(table(.))}
+  separarDummies(descartar = T) %>% 
+  apply(., 2, sum) %>% 
+  data.frame(Tipo=names(.), Frec=., row.names=NULL)
 
 gModalidadAdquisicion <- tModalidadAdquisicion %>% 
-  ggplot(aes(y = ., x = n)) + 
+  ggplot(aes(y = Tipo, x = Frec)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_text(aes(label = n), position = position_dodge(width = 1), 
+  geom_text(aes(label = Frec), position = position_dodge(width = 1), 
             hjust = -1) + 
   xlab('Frecuencia') + 
-  coord_cartesian(xlim = c(0, max(tModalidadAdquisicion$n)*1.2)) +
+  scale_x_continuous(expand = c(0, 0, 0.2, 0)) + 
+  coord_cartesian(xlim = c(0, NA)) +
   labs(title = 'Modalidad de Selección Contratación Recetarios') + 
   theme(axis.title.y = element_blank(),
         panel.grid = element_blank()) 

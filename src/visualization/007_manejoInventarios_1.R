@@ -110,8 +110,10 @@ col2 <- 'Si seleccionó paquete ofimático o software, especifique cuál...96'
   
 #### REVISION
 
-ggHerrConsolidacion <- pull(df, col2) %>% 
-  {ifelse(is.na(.), pull(df, col1), pull(df, col2))} %>% 
+ggHerrConsolidacion <- 
+  # pull(df, col2) %>% 
+  # {ifelse(is.na(.), pull(df, col1), pull(df, col2))} %>% 
+  pull(df, col1) %>%
   separarDummies() %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(name = str_replace(name, 'Paquete ofimático', 'Excel')) %>% 
@@ -170,7 +172,7 @@ guardarGGplot(ggMediosComunicacion, '074_MediosComunicacion', 7, 5)
 
 col1 <- "4.04. ¿Cómo puntuaría la velocidad de conexión de su internet?"
 
-escala1 <- c('Excelente', 'Buena', 'Mala', 'Muy mala')
+escala1 <- c('Excelente', 'Buena', 'Aceptable', 'Mala', 'Muy mala')
 
 ggConexionInternet <- pull(df, col1) %>% 
   table() %>% as_tibble() %>%
@@ -194,19 +196,20 @@ ggEquiposComputo <- pull(df, col1) %>%
   table() %>% as_tibble() %>%
   mutate(Equipos = as.double(.)) %>% 
   ggplot(aes(x = Equipos, y = n)) +
-  geom_line() + 
-  geom_point(size = 4) + 
-  geom_label(aes(label = n), vjust = -0.9, label.padding = unit(0.5, "lines")) +
+  geom_segment(aes(xend = Equipos, y = 0, yend = n), color="grey30") + 
+  geom_point(size = 4, color="orange") + 
+  geom_label(aes(label = n), vjust = -0.9, label.padding = unit(0.4, "lines")) +
   xlab('N.° de equipos') + 
   ylab('Frecuencia') + 
   coord_cartesian(ylim = c(0, NA)) +
+  scale_x_continuous(breaks = 0:6) +
   scale_y_continuous(expand = c(0, 0.0, 0.50, 0)) + 
   labs(title = 'N.° de equipos de computo en el FRE') +
   theme(panel.grid = element_blank())
 
 #+ ggEquiposComputo, fig.width=6, fig.height=4, out.width="90%"
 ggEquiposComputo
-
+# 
 guardarGGplot(ggEquiposComputo, '076_EquiposComputo', 6, 4)
 
 #' Relación entre el número de personas (disponibilidad de recurso humano) y
@@ -713,7 +716,7 @@ guardarGGplot(ggOtrosProductos, '092_ProductosCompartidos', 8, 6)
 col1 <- "4.38. ¿Qué tan conforme se encuentra el FRE el transporte de los MME desde el FNE?"
 col2 <- "4.39. Justifique la respuesta a la pregunta 4.38."
 
-escalaLikert <- c("Muy incoforme", "Algo inconforme",
+escalaLikert <- c("Muy inconforme", "Algo inconforme",
                   "Ni conforme ni inconforme",
                   "Algo conforme", "Muy conforme")
 

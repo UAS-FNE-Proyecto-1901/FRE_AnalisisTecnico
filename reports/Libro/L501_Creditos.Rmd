@@ -56,7 +56,7 @@ crearListaLatex <- function(lista) {
 tag1 <- htmltools::tags
 
 box1 <- tag1$div(
-  bloqueContactos('Diego Alejandro Socha Cuitiva', 'Dirección',
+  bloqueContactos('Diego Alejandro Socha Cuitiva', 'Dirección de proyecto',
                   './credit_figures/diego.jpg'),
   bloqueContactos('Hillary Andrea Gómez Guerra', 'Coordinación de proyecto',
                   './credit_figures/hillary.jfif'),
@@ -112,12 +112,12 @@ if(knitr::is_html_output()){
 <br>
 ```{r, Realización de encuestas, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
+  bloqueContactos('Carlos Guillermo Leal Jimenez', 'Profesional de equipo técnico territorial',
+                  './credit_figures/guillermo.jfif', altura = 15),
   bloqueContactos('Jhonathan Felipe Venegas Parra', 'Profesional de equipo técnico territorial',
                   './credit_figures/jonathan.jfif', altura = 15),
   bloqueContactos('Nicolás Alexander Cadena Ayala', 'Profesional de equipo técnico territorial',
                   './credit_figures/nicolas.jfif', altura = 15),
-  bloqueContactos('Carlos Guillermo Leal Jimenez', 'Profesional de equipo técnico territorial',
-                  altura = 15),
   bloqueContactos('Wilder Estiben Meneses Garavito', 'Profesional de equipo técnico territorial',
                   './credit_figures/estiben.jfif', altura = 15),
   style = paste('width: 100%',
@@ -138,9 +138,9 @@ box1 <- tag1$div(
 # 
 box2 <- crearListaLatex(
   c(
+    'Carlos Guillermo Leal Jimenez (Profesional de equipo técnico territorial)',
     'Jhonathan Felipe Venegas Parra (Profesional de equipo técnico territorial)',
     'Nicolás Alexander Cadena Ayala (Profesional de equipo técnico territorial)',
-    'Carlos Guillermo Leal Jimenez (Profesional de equipo técnico territorial)',
     'Wilder Estiben Meneses Garavito (Profesional de equipo técnico territorial)'
   )
 )

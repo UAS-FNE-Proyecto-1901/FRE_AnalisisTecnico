@@ -22,7 +22,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 ## Fecha de constitución de FRE
 
-```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%"}
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%", out.height="20%"}
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
     config(modeBarButtonsToRemove = barButtons)
@@ -43,7 +43,7 @@ readRDS(file.path(fig_path, '021_mapaProfesional.rds')) +
   labs(title = NULL)
 ```
 
-```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de los FRE (encargado y apoyos)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + 
   labs(title = NULL)
 ```

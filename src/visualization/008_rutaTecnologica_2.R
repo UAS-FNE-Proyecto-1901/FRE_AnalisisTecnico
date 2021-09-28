@@ -97,7 +97,7 @@ guardarGGplot(ggControlesVentasFRE, '120_ControlesVentasFRE', 8, 6)
 #'-------------------------------------------------------------------------------
 
 nivelesConsolidacion <- c("Menos de una hora",
-  "De una a 2 horas",
+  "De una a dos horas",
   "De 2 a 4 horas",
   "De 4 a 6 horas",
   "De 6 a 24 horas",
@@ -114,14 +114,34 @@ ggConsolidacionA1 <- select(df, col1 = col1) %>%
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   xlab('Frecuencia') + 
+  scale_x_continuous(expand = c(0,0,0.2,0)) +
   scale_y_discrete(drop = F) +
   labs(title = "Tiempo en consolidación de A1 de la R1479/2006") + 
-  coord_cartesian(xlim = c(0, 10)) + 
+  coord_cartesian(xlim = c(0, NA)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 #+ ggConsolidacionA1, fig.width = 8, fig.height = 6, out.width = "60%"
 ggConsolidacionA1
 guardarGGplot(ggConsolidacionA1, '121_TiemposConsolidacionA1', 8, 6)
+
+col2 <- '4.53. Brinde una estimación del número de entidades que han realizado compras al FRE en el último año.'
+
+ggConsolidacionA1_2 <-
+  select(df, all_of(c('Departamento_1', col2, col1 = col1))) %>% 
+  drop_na() %>% 
+  mutate(
+    col1 = factor(col1, rev(nivelesConsolidacion)),
+    col2 = ifelse(str_detect(!!ensym(col2), '\\D'), NA_real_, as.numeric(!!ensym(col2)))
+    ) %>% 
+  ggplot(aes(x = col2, y = col1)) +
+  geom_boxplot() + 
+  xlab('N.° de instituciones que han \n realizado compras el último año') + 
+  ylab('Tiempo de diligenciamiento de Anexo 1') +
+  theme(axis.title.y = element_blank(), panel.grid = element_blank())
+
+#+ ggConsolidacionA2, fig.width = 8, fig.height = 6, out.width = "60%"
+ggConsolidacionA1_2
+guardarGGplot(ggConsolidacionA1_2, '121_TiemposConsolidacionA1_2', 8, 6)
 
 #'-------------------------------------------------------------------------------
 # 4.81. ¿Cómo se recibe el FRE el anexo 13 de la Resolución ------------------ 
@@ -193,6 +213,51 @@ ggArchivoInformes <- ttArchivoInformes %>%
 #+ ggArchivoInformes, fig.width = 8, fig.height = 6, out.width = "60%"
 ggArchivoInformes
 guardarGGplot(ggArchivoInformes, '123_ArchivoInformesFRE', 6, 4)
+
+
+#'-------------------------------------------------------------------------------
+# 4.92. Tiempos de diligenciamiento del Anexo 2 de la resolución------------------
+#'-------------------------------------------------------------------------------
+
+ggAnexo2dilig_1 <- df %>% 
+  mutate(Variable = str_extract(`4.92_1`, '(.)(?=\\|)')) %>% 
+  ggplot(aes(x = Variable)) + 
+  geom_bar(color = 'blue', fill = 'blue', alpha = 0.4) + 
+  geom_text(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
+  scale_y_continuous(expand = c(0.1,0,0.1,0)) + 
+  xlab('Número de días') + 
+  ylab('Conteo') 
+
+#+ ggAnexo2dilig_1, fig.width = 8, fig.height = 6, out.width = "60%"
+ggAnexo2dilig_1
+guardarGGplot(ggAnexo2dilig_1, '137_evaluacionAnexo1', 6, 4)
+
+col1 <- '4.53. Brinde una estimación del número de entidades que han realizado compras al FRE en el último año.'
+
+
+df2 <- df %>%
+  mutate(
+    col0 = str_extract(`4.92_1`, '(?<=\\|)(.+)') %>%
+      as.numeric(),
+    col2 = ifelse(str_detect(!!ensym(col1), '\\D'), NA_real_, as.numeric(!!ensym(col1)))
+  )
+
+depto1 <- c('PUTUMAYO', 'CASANARE', 'QUINDÍO', 'META', 'CAQUETÁ', 
+            'BOLÍVAR', 'VALLE DEL CAUCA', 'ANTIOQUIA')
+
+ggAnexo2dilig_2 <- df2 %>%
+  ggplot(aes(x = col2, y = col0/8)) +
+  geom_point() + 
+  stat_smooth(method = 'lm', formula = 'y ~ x') + 
+  geom_text_repel(data = filter(df2, Departamento_1 %in% depto1), 
+            aes(label = str_to_title(Departamento_1))) +
+  xlab('N.° de instituciones que han \n realizado compras el último año') + 
+  ylab('N.° de días para \n diligenciamiento de Anexo 2') 
+
+
+#+ ggAnexo2dilig_2, fig.width = 8, fig.height = 6, out.width = "60%"
+ggAnexo2dilig_2
+guardarGGplot(ggAnexo2dilig_2, '137_evaluacionAnexo2', 6, 4)
 
 #'-------------------------------------------------------------------------------
 # 4.93. ¿Cuánto tiempo se archivan en el FRE los informes ------------------

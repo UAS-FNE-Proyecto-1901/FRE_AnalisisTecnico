@@ -182,13 +182,20 @@ Entre los FRE que afirman realizar el monitoreo de niveles de inventarios de for
 
 De acuerdo a la Resolución 1403 de 2007 del MSPS [@MinisteriodeSaludyProteccionSocial2007], el control de fechas de vencimiento es un procedimiento importante enmarcado en el proceso de Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos dentro del Modelo de Gestión del Servicio Farmacéutico. Los servicios farmacéuticos deben contar con criterios procedimientos y recursos que le permitan verificar y recursos que permitan verificar continuamente la fecha de vencimiento de los medicamentos [@MinisteriodeSaludyProteccionSocial2007].  
 
-Entre estos recursos se encuentra la *semaforización*, que es una herramienta que permite identificar y determinar en el momento oportuno que medicamentos están próximos a vencer. De forma común, esta herramienta se aplica mediante la rotulación de las unidades con colores de los medicamentos de acuerdo al tiempo esperado hasta la fecha de vencimiento [@HernandezVera2017]. 
-
-La adopción de esta práctica sólo se ha realizado en 40\% de los FRE
+Entre estos recursos se encuentra la *semaforización*, que es una herramienta que permite identificar y determinar en el momento oportuno que medicamentos están próximos a vencer. De forma común, esta herramienta se aplica mediante la rotulación de las unidades con colores de los medicamentos de acuerdo al tiempo esperado hasta la fecha de vencimiento [@HernandezVera2017]. La semaforización también se podría aplicar mediante sistemas de alertas electrónica.
 
 <!-- ```{r Semaforizacion, echo=FALSE, warning=FALSE, fig.cap='Utilización de técnicas de semaforización en el manejo del inventario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"} -->
 <!-- readRDS(file.path(fig_path, "095_UsoTecnicasSemaforizacion.rds")) + labs(title = NULL) -->
 <!-- ``` -->
+
+La adopción de esta práctica sólo se ha realizado en 40\% de los FRE. Esta práctica se lleva a cabo teniendo en cuenta tres colores:
+
+- Rojo: medicamento que se encuentra próximo a vencer.
+- Amarillo: medicamento que se encuentra en riesgo moderado de vencimiento.
+- Verde: medicamento que no tiene riesgo de vencimiento. En ocasiones, no se genera ningún tipo de alerta cuando el producto está en esta condición.
+
+Los umbrales adoptados por la mayoría de las entidades ha sido `6|12` que indica colocar una etiqueta roja sí el medicamento se encuentra a 6 meses de vencerse, y una etiqueta amarilla sí el medicamento se encuentra a 12 meses de vencerse. Algunos FRE también tienen umbrales de `3|6` meses para el proceso de semaforización.
+
 
 ```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Presentación de casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + 
@@ -200,10 +207,28 @@ readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) +
   labs(title = NULL)
 ```
 
+
 ### Transporte 
+
+El transporte de medicamentos por parte del FNE, es un proceso importante dentro de la cadena de suministro de MME. Los costos de transporte de medicamentos por parte del FNE están cubiertos dentro del precio de los MME. El FNE contrata a una empresa especializada en distribución logística de mercancías y bienes para la entrega del producto a nivel nacional.
+
+En la Figura \@ref(fig:TransporteProductos) se tiene una descripción de la opinión del servicio de distribución por parte del FNE. Se tiene que las opiniones se encuentran divididas con algunas respuestas positivas (66.6\%) y otras negativas (33.3\%).
+
 ```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 ```
+
+En cuanto a las opiniones negativas se tiene como principal queja a las averías en los productos causadas por el transporte. Se tienen también quejas relacionadas con (i) problemas en el enrutamiento de los envíos, (ii) demoras, (iii) disposición de los medicamentos en la entrada de las secretarías sin entregarlos de forma directa a los encargados, (iv) falta de cobertura en todo el territorio y (v) condiciones de almacenamiento inadecuadas. 
+
+> "Problemas de embalaje y muchos problemas de averías"
+
+Los problemas en el transporte de medicamentos han generado inconvenientes relacionados a sobrecostos en este mismo rubro, de manera que algunos FRE han tenido que recurrir a otros convenios, por ejemplo como aquellos utilizados por medicamentos de salud pública. 
+
+En cuanto a las respuestas positivas se tiene que la mayoría de los FRE que responden de esta manera no han tenido inconvenientes con la entrega de los productos. Algunos de estos FRE manifiestan que la empresa hace llegar el producto dentro de 5 días después del despacho, así mismo que los medicamentos llegan en buenas condiciones y que no se han tenido problemas. Sólo algunos de los FRE no tienen registros de inconvenientes con el transportador previamente. Un ejemplo de respuesta positiva ha sido:
+
+> No han tenido inconvenientes con el transporte de MME. Cuando surge un caso de producto no conforme, el personal afirma que el FNE siempre responde y efectúa la devolución de estos productos con averías.
+
+Se tiene que pese a que más del 50\% de los respondientes de la encuesta tienen una opinión positiva del transporte de los medicamentos, casi 1 de cada 3 FRE no están satisfechos con el servicio. El alto grado de insatisfacción y las causas que justifican la opinión se deben tener en cuenta como aspectos para el mejoramiento del proceso.
 
 ## Precio de medicamentos
 
