@@ -114,6 +114,9 @@ readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) +
 ```{r ComparativoCostosRec, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="90%"}
 readRDS(file.path(fig_path, "046_ComparativoCostosRecetarios.rds")) + labs(title = NULL)
 ```
+```{r ComparativoCostosRec1, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="90%"}
+readRDS(file.path(fig_path, "046b_ComparativoCostosRecetarios1.rds")) + labs(title = NULL)
+```
 
 ```{r ReciboRecetariosInstituciones, echo=FALSE, warning=FALSE, fig.cap='Recibo de recetarios de instituciones inscritas', fig.width=6, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "047_ReciboRecetarios.rds")) + labs(title = NULL)
