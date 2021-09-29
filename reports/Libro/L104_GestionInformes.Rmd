@@ -73,8 +73,7 @@ g1 + g2
 ```
 
 ```{r RecepcionA13, echo=FALSE, warning=FALSE, fig.cap='Medio para consolidación de Anexo 13 de la Resolución 1478 de 2006', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "122_RecepcionA13.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "122_RecepcionA13.rds")) + labs(title = NULL)
 ```
 ```{r ArchivoInformesFRE, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de Anexo 13 de la Resolución 1478 de 2006', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "123_ArchivoInformesFRE.rds")) + 

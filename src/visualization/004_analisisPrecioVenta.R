@@ -24,6 +24,7 @@ require(plotly)
 require(tidyverse); theme_set(theme_bw())
 require(lubridate)
 require(ggrepel)
+require(ggsflabel)
 require(patchwork)
 
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
@@ -256,8 +257,53 @@ gComparativo1 <- df_total %>%
 
 #+ comparativoMargen, fig.width = 8, fig.height=6, out.width="90%"
 gComparativo1
-
 guardarGGplot(gComparativo1, '032_comparativoDepartamentos', 8, 6)
+
+#'-------------------------------------------------------------------------------
+col1 <- '3.06 Costo de adquisición del recetario (COP)'
+col2 <- '3.07 Precio de venta del recetario (COP)'
+
+df_total <- df_total %>% 
+  mutate(
+    margen0 = .data[[col2]]*100/.data[[col1]],
+    margen1 = cut(margen0, breaks = c(0, 100,200,300,400,500,600,1000))
+  )
+
+# df_total %>% 
+#   select(Departamento_1, margen1) %>% View()
+
+ggComparativo2 <- df_total %>%
+  drop_na(any_of(c('margen1'))) %>% 
+  ggplot(aes(x = margen1)) + 
+  geom_bar(stat = 'count', 
+           fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_label(stat = 'count', aes(label = ..count..), vjust=-0.4) +
+  scale_y_continuous(expand = c(0, 0, 0.2, 0)) + 
+  xlab('Márgen de ganancia para recetarios oficiales') + 
+  ylab('Frecuencia')
+
+#+ comparativoMargen2, fig.width = 8, fig.height=6, out.width="90%"
+ggComparativo2
+guardarGGplot(ggComparativo2, '032b_comparativoDepartamentos', 6, 4)
+
+gmComparativo3 <- df_total %>% 
+  drop_na(any_of(c('margen1'))) %>% 
+  creacionCloroPletCol(geometry, margen1)
+
+gmComparativo3[[1]] <- gmComparativo3[[1]] + 
+  geom_sf_label_repel(aes(label = paste0(formatC(margen0, 0, format = "d"), ' %'), 
+                          geometry = geometry), size = 2, 
+                      max.overlaps = Inf) + 
+  # scale_fill_discrete(name = 'Márgen (%)') + 
+  theme(legend.position = 'bottom',
+        legend.title = element_blank(),
+        axis.text = element_blank(), 
+        axis.title = element_blank()) + 
+  labs(title = 'Márgenes de venta de recetarios') 
+
+#+ mapaMargen3, fig.width = 8, fig.height=6, out.width="90%"
+gmComparativo3
+guardarGGplot(gmComparativo3, '032c_comparativoDepartamentos', 8, 6)
 
 # ¿El margen de ganancia de recetarios se corresponde con el número de personas en el FRE?
 df_total <- df_total %>% rowwise() %>% 
@@ -266,13 +312,19 @@ df_total <- df_total %>% rowwise() %>%
 df_total$NoPersonas <- df_total$Profesiones %>% 
   map_dbl(function(x){sum(!is.na(x))})
 
+df_total['NoPersonas1'] <- df_total$No.PersonasVinculadasDirectamente + 
+  df_total$No.PersonasVinculadasAfiliacion
+
 gComparativo2 <- df_total %>% 
   mutate(Departamento_1 = str_to_sentence(Departamento_1)) %>% 
-  ggplot(aes(x = NoPersonas, y = MargenGanancia)) + 
-  geom_point()+ 
-  geom_label_repel(aes(label = Departamento_1)) +
+  ggplot(aes(x = NoPersonas1, y = MargenGanancia)) + 
+  geom_point() +
+  stat_smooth(method = 'lm', formula = 'y ~ x') + 
+  geom_label_repel(
+    filter(df_total, str_detect(Departamento_1, 'LA\\s|NARIÑO')),
+    mapping = aes(label = str_to_title(Departamento_1))) +
   scale_y_continuous(labels = scales::percent) + 
-  ylab('Margen de ganancia por recetarios (%)') +
+  ylab('Margen de ganancia por \n recetarios (%)') +
   xlab('N.° de personas')
 
 gComparativo3 <- df_total %>% 

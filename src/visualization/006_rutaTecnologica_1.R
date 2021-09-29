@@ -74,7 +74,7 @@ guardarGGplot(gHerramientaInventario, '040_herramInventario', 7, 4)
 #'-------------------------------------------------------------------------------
 
 gCDilBDRecet <- df$`3.25. ¿Qué información (campos) se consigna en el instrumento aplicado en 3.24.?` %>% 
-  separarDummies(.) %>% 
+  separarDummies(., descartar = T) %>% 
   pivot_longer(cols = everything()) %>% 
   group_by(name) %>% 
   summarise(
@@ -218,8 +218,8 @@ ggFrecControlExistRecetario <- df %>%
   ggplot(aes(y = Frec, x = n)) +
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
   geom_text(aes(label = n), hjust = -0.6) +
-  # coord_cartesian(xlim = c(0, 1)) +
-  # scale_x_continuous(labels = scales::percent_format()) +
+  coord_cartesian(xlim = c(0, NA)) +
+  scale_x_continuous(expand = c(0,0,0.1,0)) +
   xlab('Proporción (%)') + 
   labs(title = 'Frecuencia de revisión existencias de recetarios') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
@@ -239,7 +239,7 @@ col2 <- 'Si la respuesta anterior fue otro, indique cual...78'
 ggMedidasSeguridadRec <- pull(df, col1) %>% str_detect('Otro') %>%
   ifelse(paste(pull(df, col1), pull(df, col2), sep = ','),
          pull(df, col1)) %>% 
-  separarDummies(.) %>% 
+  separarDummies(., descartar = T) %>% 
   pivot_longer(cols = everything()) %>% 
   group_by(name) %>% 
   summarise(
@@ -270,7 +270,7 @@ guardarGGplot(ggMedidasSeguridadRec, '045_MedidasSeguridadRec', 7, 5)
 Nmedidas <- pull(df, col1) %>% str_detect('Otro') %>%
   ifelse(paste(pull(df, col1), pull(df, col2), sep = ','),
          pull(df, col1)) %>% 
-  separarDummies() %>% 
+  separarDummies(., descartar = T) %>% 
   select(!Otro) %>% 
   rowwise() %>% 
   mutate(N_medidas = sum(c_across(everything()))) %>% 
@@ -279,17 +279,27 @@ Nmedidas <- pull(df, col1) %>% str_detect('Otro') %>%
 df[, 'Nmedidas'] <- Nmedidas
 
 #+ warning = FALSE
+
+
+col1 <- '3.06 Costo de adquisición del recetario (COP)'
+
+dfFiltered <- df %>% 
+  filter((.data[[col1]] > 17000) | (.data[[col1]] < 7000))
+
 ggPVTARec1 <- ggplot(data = df,
        aes(x = Nmedidas,
-           y = `3.06 Costo de adquisición del recetario (COP)`)) +
-  stat_smooth(method = 'lm', se = F, lty = 'dashed') + 
+           y = .data[[col1]])) +
+  stat_smooth(method = 'lm', formula = 'y~x', lty = 'dashed') + 
   geom_point() +
-  geom_label_repel(aes(label = str_to_sentence(Departamento_1) %>% str_wrap(10)), 
-                   size = 3) + 
+  geom_label_repel(
+    data = dfFiltered, 
+    mapping = aes(label = str_wrap(str_to_sentence(Departamento_1), 10)), size = 3) + 
   scale_x_continuous(breaks = seq(0,10,2)) +
   scale_y_continuous(labels = scales::dollar_format()) + 
   ylab('Costo adquisición (COP)') + 
   xlab('N.° de características de seguridad')
+
+# ggPVTARec1
 
 #+ warning = FALSE
 ggPVTARec2 <- ggplot(data = df, aes(x = Nmedidas, 
@@ -309,6 +319,108 @@ ggPVTARecTotal <- ggPVTARec1 + ggPVTARec2
 ggPVTARecTotal
 
 guardarGGplot(ggPVTARecTotal, '046_ComparativoCostosRecetarios', 10, 5)
+
+#'-------------------------------------------------------------------------------
+#'
+#' Correción de gráficos
+#' 
+
+gComparativoT <- readRDS(file.path('figures', '033_comparativoDepartamentos1.rds'))
+
+ggPVTARecTotal1 <- gComparativoT[[1]] + ggPVTARec1
+guardarGGplot(ggPVTARecTotal1, '046b_ComparativoCostosRecetarios1', 10, 5)
+
+
+
+col1 <- '3.06 Costo de adquisición del recetario (COP)'
+col2 <- '3.05 N.º de prescripciones por recetario'
+col3 <- '3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?'
+
+#'-------------------------------------------------------------------------------
+# Regresión ------------------
+#'-------------------------------------------------------------------------------
+
+X_matriz <- df %>% 
+  rename(
+    Costo = .data[[col1]],
+    NoPrescripciones = .data[[col2]],
+    Modalidades = .data[[col3]]
+  ) %>% 
+  select(Costo, NoPrescripciones, Nmedidas) 
+
+X_matriz <- rename(df, Modalidades = .data[[col3]]) %>% 
+  pull(Modalidades) %>% 
+  separarDummies(descartar = T) %>% 
+  {cbind(X_matriz, .)}
+
+
+colnames(X_matriz) <- colnames(X_matriz) %>% 
+  str_replace('\\s', '\\_')
+
+lm1 <- lm(Costo ~ NoPrescripciones + Nmedidas + 
+       Licitación_pública + Mínima_Cuantía + Selección_abreviada + Contratación_directa, 
+     data = X_matriz)
+
+lm1 %>% summary()
+
+require(pdp)
+
+vec_modalidad <- c(
+  'Licitación_pública',
+  'Mínima_Cuantía',
+  'Selección_abreviada',
+  'Contratación_directa'
+)
+
+parContrataDir <- vector('list', 4L)
+parContrataDir
+
+for (i in seq_along(vec_modalidad)) {
+  parContrataDir[[i]] <-
+    pdp::partial(lm1,  pred.var = vec_modalidad[[i]],
+                 chull = TRUE, ice= TRUE)  
+}
+
+funcionBoxplots <- function(data, variable) {
+  xlab1 <- rlang::quo_name(rlang::enquo(variable)) %>% 
+    str_replace('\\_', ' ')
+  
+  as_tibble(data) %>% 
+    ggplot(aes(x = {{variable}}, y = yhat)) + 
+    geom_boxplot() + 
+    scale_x_discrete(breaks = c(FALSE, TRUE),
+                     labels = c('No', 'Sí')) +
+    scale_y_continuous(labels = scales::dollar_format()) + 
+    xlab(xlab1) + 
+    ylab(bquote(hat(C)[recetario]))
+}
+
+ggdepend1 <- pdp::partial(lm1, pred.var = 'NoPrescripciones', 
+             chull = TRUE, ice = TRUE) %>% 
+  autoplot() + 
+  scale_y_continuous(labels = scales::dollar_format()) + 
+  xlab('N.° de prescripciones') +
+  ylab(bquote(hat(C)[recetario]))
+
+ggdepend2 <- pdp::partial(lm1, pred.var = 'Nmedidas', 
+             chull = TRUE, ice = TRUE) %>% 
+  autoplot() + 
+  scale_y_continuous(labels = scales::dollar_format()) + 
+  xlab('N.° de medidas de seguridad') +
+  ylab(bquote(hat(C)[recetario]))
+
+
+ggdepend3 <- funcionBoxplots(parContrataDir[[1]], Licitación_pública)
+ggdepend4 <- funcionBoxplots(parContrataDir[[2]], Mínima_Cuantía)
+ggdepend5 <- funcionBoxplots(parContrataDir[[3]], Selección_abreviada)
+ggdepend6 <- funcionBoxplots(parContrataDir[[4]], Contratación_directa)
+
+ggdependT <- ggdepend1 + ggdepend2 + ggdepend3 + ggdepend4 + 
+  ggdepend5 + ggdepend6 + 
+  plot_annotation(title = 'Gráficos de dependencia parcial')
+
+ggdependT
+guardarGGplot(ggdependT, '046c_GraficasDependenParcial', 10, 6)
 
 #'-------------------------------------------------------------------------------
 # 3.41. ¿Se reciben los recetarios oficiales de las instituciones ---------------
@@ -333,15 +445,12 @@ ggReciboRecetarios <- pull(df, col1) %>%
 #+ pieChart1, fig.width=8, fig.height=5, out.width="90%", warning=FALSE, 
 #+ message=FALSE
 ggReciboRecetarios
-
 guardarGGplot(ggReciboRecetarios, '047_ReciboRecetarios', 6, 5)
-
 
 #'-------------------------------------------------------------------------------
 col1 <- '3.42.¿Con qué frecuencia se reciben los recetarios oficiales de las IPS? Si aplica 3.41.'
 col2 <- 'Si la respuesta anterior fue otro, indique cual...81'
 col3 <- '3.43. ¿En qué fechas se reciben los recetarios oficiales de la IPS? Si aplica 3.4.1'
-
 
 map2_chr(pull(df, col1), pull(df, col2), ~ ifelse(.x != 'Otro', .x, .y)) %>%
   table() %>% as_tibble()
@@ -363,7 +472,6 @@ ggFrecRecetOficialesIPS <- tFrecRecetOficialesIPS %>%
 #+ ggFrecRecetariosOficialesIPS, fig.width=7, fig.height=5, out.width="90%", warning=FALSE, 
 #+ message=FALSE
 ggFrecRecetOficialesIPS
-
 guardarGGplot(ggFrecRecetOficialesIPS, '048_ReciboRecetariosIPS', 7, 5)
 
 #'-------------------------------------------------------------------------------
@@ -392,9 +500,7 @@ ggDuracionFRE <- select(df, Duracion = col1) %>%
 #+ ggDuracionFRE, fig.width=7, fig.height=5, out.width="90%", warning=FALSE, 
 #+ message=FALSE
 ggDuracionFRE
-
 guardarGGplot(ggDuracionFRE, '049_DuracionRecetFRE', 7, 5)
-
 
 #'-------------------------------------------------------------------------------
 # 3.62. ¿Con cuales medidas de seguridad se cuentan para el ------------------ 
@@ -459,7 +565,6 @@ ggInformacionHerramienta <- pull(df, col1) %>%
 #+ ggInformacionHerramienta, fig.width=7, fig.height=5, out.width="90%", warning=FALSE, 
 #+ message=FALSE
 ggInformacionHerramienta
-
 guardarGGplot(ggInformacionHerramienta, '051_InformacionHerramienta', 7, 5)
 
 

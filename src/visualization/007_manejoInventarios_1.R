@@ -114,7 +114,7 @@ ggHerrConsolidacion <-
   # pull(df, col2) %>% 
   # {ifelse(is.na(.), pull(df, col1), pull(df, col2))} %>% 
   pull(df, col1) %>%
-  separarDummies() %>% 
+  separarDummies(descartar = T) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(name = str_replace(name, 'Paquete ofimático', 'Excel')) %>% 
   group_by(name) %>% 
@@ -145,7 +145,7 @@ guardarGGplot(ggHerrConsolidacion, '073_HerramientaConsol', 7, 5)
 col1 <- "4.03. ¿Qué medios utiliza de manera frecuente para la comunicación con sus clientes?"
 
 ggMediosComunicacion <- pull(df, col1) %>% 
-  separarDummies(.) %>% 
+  separarDummies(., descartar = T) %>% 
   pivot_longer(cols = everything()) %>% 
   group_by(name) %>% 
   summarise(
@@ -248,7 +248,7 @@ guardarGGplot(ggCorrelacionEquipos, '077_CorrEquiposComputo', 6, 4)
 col1 <- '4.06. Los equipos de cómputo disponibles son:'
 
 ttOpinionEquipos <- pull(df, col1) %>% 
-  separarDummies() %>% 
+  separarDummies(descartar = TRUE) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(name = str_replace(name, 'Paquete ofimático', 'Excel')) %>% 
   group_by(name) %>% 
@@ -538,7 +538,7 @@ xDF <- pull(df, col2) %>%
   is.na() %>%
   ifelse(pull(df, col1),
          paste(pull(df, col1), pull(df, col2), sep = ',')) %>% 
-  separarDummies(.)
+  separarDummies(., descartar = T)
 
 # Existe una columna que quedó separa pese a que proviene del mismo factor
 
@@ -621,7 +621,7 @@ guardarGGplot(ggFrecCondiciones, '089_FrecuenciaRevisionCondiciones', 6, 4)
 col1 <- "4.33. ¿Qué equipo o tecnología se utiliza para el control y seguimiento de condiciones ambientales?"
 
 ggMetodosControlAmb <- pull(df, col1) %>% 
-  separarDummies(.) %>% 
+  separarDummies(., descartar = T) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),
@@ -682,7 +682,7 @@ guardarGGplot(ggCalibMant, '091_FrecSeguimientoCalibracion', 6, 4)
 col1 <- "4.36. ¿Con que otros medicamentos o productos se comparten los MME en el almacén?"
 
 ggOtrosProductos <- pull(df, col1) %>% 
-  separarDummies() %>% 
+  separarDummies(descartar = T) %>% 
   select(-2) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(
@@ -871,7 +871,7 @@ col2 <- "Si la respuesta anterior fue Si, indique cuales...137"
 
 ggMedicVencidos <- pull(df, col2) %>%  
   na.omit() %>% 
-  {separarDummies(.)} %>%
+  {separarDummies(., descartar = T)} %>%
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),

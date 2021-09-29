@@ -67,7 +67,6 @@ df <- df %>% rowwise() %>%
 # 2. Perfiles profesionales en el FRE ------------------
 #'-------------------------------------------------------------------------------
 
-
 perfilProfesional1 <- df$Profesion %>% 
   table() %>% as_tibble() %>% 
   rename(Profesion = '.') %>% 
@@ -83,14 +82,14 @@ guardarGGplot(perfilProfesional1, '020_perfilProfesionalEncargado', 6, 4)
 # No todo los FRE tienen un encargado con profesión de Químico Farmacéutico
 
 df_Total <- df %>% 
-  right_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO'))
+  left_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO'))
 
 mapaProfesional1 <- df_Total %>% 
-  ggplot() + 
-  geom_sf(aes(geometry = geometry, fill = Profesion)) + 
-  # coord_sf(crs = st_crs(32618)) + 
-  labs(title = 'Profesión del encargado en el FRE') + 
-  theme(axis.text = element_blank(), panel.grid = element_blank())
+  creacionCloroPletCol(geometry, Profesion) + 
+  plot_annotation(title = 'Profesión del encargado en el FRE') &
+  theme(axis.text = element_blank(), 
+        panel.grid = element_blank(),
+        legend.title = element_blank()) 
 
 mapaProfesional1
 
@@ -126,20 +125,38 @@ perfilProfesional3 <- df_Total %>%
   theme(panel.grid = element_blank())
 
 perfilProfesional3
-
 guardarGGplot(perfilProfesional3, '023_perfilProfesional3', 6, 4)
 
-# N. personas en el FRE
+#'-------------------------------------------------------------------------------
+#'
+df_Total['NoPersonas1'] <- df_Total$No.PersonasVinculadasDirectamente + 
+  df_Total$No.PersonasVinculadasAfiliacion
+
+perfilProfesional3b <- df_Total %>% 
+  ggplot(aes(x = NoPersonas1)) + 
+  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_label(stat = 'count', aes(y = ..count.., label = ..count..), 
+             vjust = -0.5) + 
+  scale_x_continuous(breaks = seq(0, 12, 1)) + 
+  scale_y_continuous(expand = c(0.05, 0, 0.3, 0)) +
+  ylab('Frecuencia absoluta') + xlab('No personas en el FRE') +
+  theme_bw() +
+  labs(title = 'Conteo de personas que trabajan por FRE')+
+  theme(panel.grid = element_blank())
+
+perfilProfesional3b
+guardarGGplot(perfilProfesional3b, '023_perfilProfesional3b', 6, 4)
+
+#'-------------------------------------------------------------------------------
+#' N. personas en el FRE
+#' 
 
 mapaProfesional2 <- df_Total %>% 
-  ggplot() + 
-  geom_sf(aes(geometry = geometry, fill = NoPersonas)) + 
-  coord_sf(datum = NA) + 
-  # coord_sf(crs = st_crs(32618)) + 
-  scale_fill_continuous(type = 'viridis') + 
-  labs(title = 'N.° personas en el FRE') + 
-  theme(axis.text = element_blank()) +
-  theme(panel.grid = element_blank())
+  creacionCloroPletCol(geometry, NoPersonas1) +
+  plot_annotation(title = 'N.° personas en el FRE') &
+  scale_fill_continuous(type = 'viridis') & 
+  theme(axis.text = element_blank(),
+        panel.grid = element_blank())
 
 mapaProfesional2
 
@@ -181,16 +198,107 @@ pieProfesional2
 guardarPlotly(pieProfesional2, '026_pieProfesional2', libdir = 'plotly')
 
 
+col1 <- "Tipo_Contratacion_PersonasVinculadasDirectamente"
+col2 <- "Tipo_Contratacion_PersonasVinculadasAfiliacion"
+
+df <- df %>%
+  mutate(
+    col1_nom = as.numeric(str_extract(!!ensym(col1), "(?<=N)(\\d)")),
+    col1_con = as.numeric(str_extract(!!ensym(col1), "(?<=C)(\\d)")),
+    col2_nom = as.numeric(str_extract(!!ensym(col2), "(?<=N)(\\d)")),
+    col2_con = as.numeric(str_extract(!!ensym(col2), "(?<=C)(\\d)"))
+  )
+
+df2 <- select(df, matches("^col")) %>%
+  apply(2, sum) %>%
+  {data.frame(nombre = names(.), frec = ., row.names = NULL)} %>%
+  separate(nombre, c('columna', 'tipo'), '\\_') %>%
+  mutate(
+    tipo    = ifelse(tipo == 'nom', 'Nombramiento', 'Contrato'),
+    columna = ifelse(columna == 'col1', 'Directamente', 'Afiliacion')
+  )
+
+prop <- df2 %>% group_by(tipo) %>% 
+  summarise(frec = sum(frec)) %>% 
+  add_column(columna = 'Total') %>% 
+  add_row(df2) %>% 
+  group_by(columna) %>% 
+  mutate(frec_rel = frec / sum(frec),
+         label1 = paste0(tipo, '\n', round(frec_rel, 3) * 100, "%"))
+
+
+prop %>%
+  filter(columna == 'Total') %>% 
+  pieChart(frec_rel, label1) +
+  scale_fill_brewer(palette = "Set1") + 
+  theme(legend.position = 'none')
+
+#'-------------------------------------------------------------------------------
 
 
 
+pieProfesional1a <- prop %>%
+  filter(columna == 'Directamente') %>% 
+  pieChart(frec_rel, label1) +
+  scale_fill_brewer(palette = "Set1") + 
+  theme(legend.position = 'none') + 
+  labs(title = 'Personal directo')
+
+pieProfesional1b <- prop %>%
+  filter(columna == 'Afiliacion') %>% 
+  pieChart(frec_rel, label1) +
+  scale_fill_brewer(palette = "Set1") + 
+  theme(legend.position = 'none') + 
+  labs(title = 'Personal vinculado')
 
 
+pieProfesional1C <- (pieProfesional1a + pieProfesional1b) + 
+  plot_annotation(tag_levels = 'A')
 
 
+guardarGGplot(pieProfesional1C, '026_pieProfesional1b', 9, 5)
 
 
+#'-------------------------------------------------------------------------------
+#'
+#'
+
+pieProfesional2a <- filter(prop, columna == 'Directamente') %>% 
+  plot_ly() %>% 
+  add_pie(labels = ~tipo, values = ~frec, type = 'pie', 
+          textinfo = 'label+percent',
+          marker = list(line = list(color = '#FFFFFF', width=1)), 
+          showlegend = FALSE, hole = 0.6,
+          name = 'Vinculación directa',
+          domain = list(x = c(0, 0.4), y = c(0.0, 1))) %>% 
+  add_pie(data = filter(prop, columna == 'Afiliacion'),
+          labels = ~tipo, values = ~frec, type = 'pie', 
+          textinfo = 'label+percent',
+          marker = list(line = list(color = '#FFFFFF', width=1)), 
+          name = 'Vinculación por afiliación',
+          showlegend = FALSE, hole = 0.4,
+          domain = list(x = c(0.6, 1), y = c(0.0, 1)))
 
 
+pieProfesional2a
+guardarPlotly(pieProfesional2a, '026_pieProfesional2b', libdir = 'plotly')
 
+
+#'-------------------------------------------------------------------------------
+
+df_clas_reg <- read_csv(file.path('data', 'external', 'clasificacionRegiones.csv'), 
+         locale = locale(encoding = 'latin1')) 
+
+df %>% 
+  left_join(df_clas_reg, by = c('Departamento_1' = 'Departamento_1')) %>% 
+  group_by(Region_1) %>% 
+  summarise(across(matches('^col'), sum)) %>% 
+  pivot_longer(cols = matches('^col')) %>%
+  separate(name, c('n1', 'n2'), '_') %>%
+  pivot_wider(names_from = n1) %>% 
+  mutate(value = col1 + col2) %>% 
+  select(-col1, -col2) %>% 
+  group_by(Region_1) %>% 
+  mutate(prop = value/sum(value)) %>% 
+  pivot_wider(names_from = n2, values_from = c(value, prop))
 

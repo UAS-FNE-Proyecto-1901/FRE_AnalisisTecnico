@@ -133,7 +133,7 @@ gp <- dfPersonalizado2 %>%
 gp
 gp$layers[[3]]$aes_params$shape <- 21
 gp$layers[[3]]$aes_params$size <- 3.5
-gp$layers[[5]]$geom_params$arrow <- arrow(length = unit(0.01, 'npc'), color = 'gray90')
+gp$layers[[5]]$geom_params$arrow <- arrow(length = unit(0.01, 'npc'))
 gp$layers[[5]]$aes_params$segment.alpha <- 0.5
 gp$layers[[5]]$geom_params$segment.colour <- rgb(0.9, 1, 1)
 gp$layers[[5]]$geom_params$max.overlaps <- Inf

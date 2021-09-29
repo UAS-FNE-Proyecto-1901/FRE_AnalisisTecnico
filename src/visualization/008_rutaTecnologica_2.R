@@ -66,7 +66,7 @@ ggControlesVentasFRE <- pull(df, col2) %>%
   is.na() %>%
   ifelse(pull(df, col1),
          paste(pull(df, col1), pull(df, col2), sep = ',')) %>% 
-  separarDummies() %>%
+  separarDummies(descartar = T) %>%
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),
@@ -150,7 +150,7 @@ guardarGGplot(ggConsolidacionA1_2, '121_TiemposConsolidacionA1_2', 8, 6)
 col1 <- "4.81. ¿Cómo se recibe el FRE el anexo 13 de la Resolución 1478 de 2006"
 
 ggRecepcionA13 <- pull(df, col1) %>% 
-  separarDummies() %>%
+  separarDummies(descartar = T) %>%
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),
@@ -303,7 +303,7 @@ nivelsRecuerdo <- c("Llamada",
 
 
 ggRecuerdoEnvioInforme <- pull(df, col1) %>% 
-  separarDummies() %>%
+  separarDummies(descartar = T) %>%
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),
@@ -342,7 +342,7 @@ incumplimientoEnvioInformes <- c("Llamado de atención",
   "Denuncia")
 
 ggIncumplimientoEnvio <- pull(df, col1) %>% 
-  separarDummies() %>%
+  separarDummies(descartar = T) %>%
   select(-1) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(
@@ -580,7 +580,11 @@ guardarGGplot(ggPropMedicamento, '134_PropOcupacionAlmacen', 6,4)
 # Ingresos de los FRE ------------------
 #'-------------------------------------------------------------------------------
 df2 <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'), 
-                na = c('N/A', 'No aplica', 'NA', 'NR'))
+                na = c('N/A', 'No aplica', 'NA', 'NR')) %>% 
+  mutate(
+    Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
+    Departamento_1 = str_replace(Departamento_1, 
+                                 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
 
 df2_total <- select(df2, matches("^3\\.12"), Departamento_1, CodigoDepartamento) %>% 
   select(-1) %>% 
@@ -592,7 +596,12 @@ df2_total <- select(df2, matches("^3\\.12"), Departamento_1, CodigoDepartamento)
   
 
 ggPropIngresoDepartamentos <- df2_total %>% 
-  mutate(name = str_replace(name, "\\:", "") %>% str_wrap(30)) %>% 
+  mutate(
+    name = str_replace(name, "\\:", "") %>% str_wrap(30),
+    Departamento_1 = str_replace(Departamento_1, 
+                                 'Archipiélago De San Andrés, Providencia Y Santa Catalina', 
+                                 'SAN ANDRÉS')
+  ) %>% 
   ggplot(aes(x = value, y = Departamento_1, fill = name)) + 
   geom_bar(stat = 'identity', position = 'stack') + 
   scale_fill_brewer(palette = 'Set1', name = NULL) + 

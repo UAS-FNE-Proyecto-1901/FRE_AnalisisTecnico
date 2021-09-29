@@ -34,36 +34,31 @@ if (knitr::is_html_output()) {
 ## Estructura organizacional
 
 ```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = NULL)
 ```
 
 ```{r perfilProfesionalDepartamentos1, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE por departamento', fig.width=8, fig.height=6,fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '021_mapaProfesional.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '021_mapaProfesional.rds')) + labs(title = NULL)
 ```
 
 ```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + labs(title = NULL)
 ```
 
 ```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '023_perfilProfesional3.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = NULL)
 ```
 
 ```{r mapaProfesional2, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE por departamento', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + labs(title = NULL)
 ```
 
 ```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=5, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
 
 if (knitr::is_html_output()) {
-  readRDS(file.path(fig_path, '026_pieProfesional2.rds'))
+  readRDS(file.path(fig_path, '026_pieProfesional2b.rds'))
 } else {
-  readRDS(file.path(fig_path, '025_pieProfesional1.rds'))
+  readRDS(file.path(fig_path, '026_pieProfesional1b.rds'))
 }
 ```
 
@@ -81,10 +76,25 @@ readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) +
 
 ## Caracterización de las fuentes de ingresos de los FRE
 ```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
-readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + 
-  labs(title = NULL)
+  readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + labs(title = NULL)
 ```
 ```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
-readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
 ```
+
+
+```{r CaracterizacionIngreso1, echo=FALSE, warning=FALSE, tab.cap='Proporción de personas contratadas por región'}
+data.frame(
+  stringsAsFactors = FALSE,
+            Región = c("Amazonía","Caribe","Central",
+                       "Eje Cafetero","Orinoquía","Pacífico"),
+      Nombramiento = c("21.43%","42.86%","41.38%",
+                       "58.33%","45.45%","19.23%"),
+      Contratación = c("78.57%","57.14%","58.62%",
+                       "41.67%","54.55%","80.77%")
+) -> dfSF
+
+dfSF %>% 
+  knitr::kable(booktabs = TRUE, caption = 'Proporción de personas contratadas por región')
+```
+

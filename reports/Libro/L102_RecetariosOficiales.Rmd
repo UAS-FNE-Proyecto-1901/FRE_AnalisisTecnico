@@ -56,9 +56,17 @@ readRDS(file.path(fig_path, '031_costoRecetario.rds')) +
   labs(title = NULL)
 ```
 
-```{r comparativoDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + 
-  labs(title = NULL)
+
+<!-- ```{r comparativoDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"} -->
+<!-- readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + labs(title = NULL) -->
+<!-- ``` -->
+
+```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '032b_comparativoDepartamentos.rds')) + labs(title = NULL)
+```
+```{r comparativoDepartamentos1, echo=FALSE, warning=FALSE, fig.cap='Mapa de márgenes de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+g1 <- readRDS(file.path(fig_path, '032c_comparativoDepartamentos.rds'))
+g1[[1]] + labs(title = NULL)
 ```
 
 ```{r comparativoDepartamentos2, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio (2)', fig.width=8, fig.height=4, fig.topcaption=TRUE}
@@ -69,6 +77,10 @@ readRDS(file.path(fig_path, '033_comparativoDepartamentos1.rds')) +
 ```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, '034_PVTA_recetarios_prescripcion.rds')) + 
   labs(title = NULL)
+```
+
+```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcia - Modelo de Costos', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds')) + plot_annotation(title = NULL)
 ```
 
 ## Tiempos de adquisición de recetarios
@@ -100,18 +112,15 @@ readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) +
 ```
 
 ```{r ComparativoCostosRec, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="90%"}
-readRDS(file.path(fig_path, "046_ComparativoCostosRecetarios.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "046_ComparativoCostosRecetarios.rds")) + labs(title = NULL)
 ```
 
 ```{r ReciboRecetariosInstituciones, echo=FALSE, warning=FALSE, fig.cap='Recibo de recetarios de instituciones inscritas', fig.width=6, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "047_ReciboRecetarios.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "047_ReciboRecetarios.rds")) + labs(title = NULL)
 ```
 
 ```{r TiempoRecepcionRecOficiales, echo=FALSE, warning=FALSE, fig.cap='Tiempo de recepción de recetarios oficiales desde IPS', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "048_ReciboRecetariosIPS.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "048_ReciboRecetariosIPS.rds")) + labs(title = NULL)
 ```
 
 ```{r TiempoArchivoRecetariosOficiales, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de los recetarios oficiales en los FRE', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
