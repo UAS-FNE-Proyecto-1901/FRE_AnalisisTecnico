@@ -536,15 +536,16 @@ frec_vec <- c("Diaria",
               "Cada mes",
               "Rara vez")
 
-ggFrecVentaInstitu <- select(df, col1 = col1) %>% 
+ggFrecVentaInstitu <- select(df, all_of(c(col1 = col1))) %>% 
   drop_na() %>% 
   mutate(col1 = factor(col1, rev(frec_vec))) %>% 
   ggplot(aes(y = col1)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  scale_x_continuous(expand = c(0,0,0.2,0)) + 
   scale_y_discrete(drop = F) +
   xlab('Frecuencia') + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) +
-  coord_cartesian(xlim = c(0, 8)) +
+  coord_cartesian(xlim = c(0, NA)) +
   labs(title = 'Frecuencia de ventas del FRE a instituciones') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
