@@ -135,11 +135,11 @@ df_Total['NoPersonas1'] <- df_Total$No.PersonasVinculadasDirectamente +
 perfilProfesional3b <- df_Total %>% 
   ggplot(aes(x = NoPersonas1)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_label(stat = 'count', aes(y = ..count.., label = ..count..), 
+  geom_text(stat = 'count', aes(y = ..count.., label = ..count..), 
              vjust = -0.5) + 
-  scale_x_continuous(breaks = seq(0, 12, 1)) + 
-  scale_y_continuous(expand = c(0.05, 0, 0.3, 0)) +
-  ylab('Frecuencia absoluta') + xlab('No personas en el FRE') +
+  scale_x_continuous(breaks = seq(1, 25, 2)) + 
+  scale_y_continuous(expand = c(0.05, 0, 0.20, 0)) +
+  ylab('Frecuencia absoluta') + xlab('N.° personas en el FRE') +
   theme_bw() +
   labs(title = 'Conteo de personas que trabajan por FRE')+
   theme(panel.grid = element_blank())
@@ -157,6 +157,9 @@ mapaProfesional2 <- df_Total %>%
   scale_fill_continuous(type = 'viridis') & 
   theme(axis.text = element_blank(),
         panel.grid = element_blank())
+
+mapaProfesional2[[1]] <- mapaProfesional2[[1]] + 
+  scale_fill_continuous(type='viridis', name = 'N.° personas')
 
 mapaProfesional2
 
@@ -255,6 +258,7 @@ pieProfesional1b <- prop %>%
 pieProfesional1C <- (pieProfesional1a + pieProfesional1b) + 
   plot_annotation(tag_levels = 'A')
 
+pieProfesional1C
 
 guardarGGplot(pieProfesional1C, '026_pieProfesional1b', 9, 5)
 
@@ -269,13 +273,13 @@ pieProfesional2a <- filter(prop, columna == 'Directamente') %>%
           textinfo = 'label+percent',
           marker = list(line = list(color = '#FFFFFF', width=1)), 
           showlegend = FALSE, hole = 0.6,
-          name = 'Vinculación directa',
+          name = 'Directa',
           domain = list(x = c(0, 0.4), y = c(0.0, 1))) %>% 
   add_pie(data = filter(prop, columna == 'Afiliacion'),
           labels = ~tipo, values = ~frec, type = 'pie', 
           textinfo = 'label+percent',
           marker = list(line = list(color = '#FFFFFF', width=1)), 
-          name = 'Vinculación por afiliación',
+          name = 'Afiliación',
           showlegend = FALSE, hole = 0.4,
           domain = list(x = c(0.6, 1), y = c(0.0, 1)))
 

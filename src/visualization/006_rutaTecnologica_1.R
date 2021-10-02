@@ -66,7 +66,6 @@ gHerramientaInventario <- df$HerramientaInvetarios %>%
     panel.grid = element_blank())
 
 gHerramientaInventario
-
 guardarGGplot(gHerramientaInventario, '040_herramInventario', 7, 4)
 
 #'-------------------------------------------------------------------------------
@@ -254,13 +253,14 @@ ggMedidasSeguridadRec <- pull(df, col1) %>% str_detect('Otro') %>%
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
-  scale_x_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(breaks = seq(0,1,0.2),
+                     labels = scales::percent_format(), 
+                     expand = c(0,0,0.2,0)) +
   xlab('Proporción') + 
   labs(title = 'Medidas de seguridad de recetarios') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 ggMedidasSeguridadRec
-
 guardarGGplot(ggMedidasSeguridadRec, '045_MedidasSeguridadRec', 7, 5)
 
 #'-------------------------------------------------------------------------------

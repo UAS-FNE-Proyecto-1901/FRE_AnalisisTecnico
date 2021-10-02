@@ -404,9 +404,13 @@ ggTiemposTraslados <- df %>%
   drop_na() %>% 
   mutate(Departamento_1 = str_to_title(Departamento_1)) %>% 
   ggplot(aes(x = Tiempo, y = fct_reorder(Departamento_1, Tiempo))) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_segment(
+    aes(x = 0, xend = Tiempo, yend = fct_reorder(Departamento_1, Tiempo)),
+    color = '#6699ff') +
+  geom_point(aes(x = Tiempo), color = 'blue4') + 
   geom_text(aes(label = Tiempo), hjust = -0.5) + 
-  coord_cartesian(xlim = c(0, 8)) +
+  coord_cartesian(xlim = c(0, NA)) +
+  scale_x_continuous(expand = c(0,0,0.2,0)) +
   xlab('Tiempo (días)') +
   labs(title = 'Tiempos en translados interdepartamentales') +
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
@@ -414,7 +418,6 @@ ggTiemposTraslados <- df %>%
 
 #+ ggTiemposTraslados, fig.width = 6, fig.height = 4, out.width = "60%"
 ggTiemposTraslados
-
 guardarGGplot(ggTiemposTraslados, '083_TiemposTranslados', 6, 4)
 
 
@@ -433,7 +436,8 @@ ggTiemposTraslados1 <- df %>%
   geom_sf(aes(geometry = geometry, fill = Tiempo)) +
   geom_sf_label_repel(aes(label = label1), size = 3) +
   labs(title = 'Tiempos para traslados interdepartamentales') +
-  scale_fill_gradientn(colours = colorspace::heat_hcl(7)) +
+  scale_fill_viridis_c() + 
+  # scale_fill_gradientn(colours = colorspace::heat_hcl(7)) +
   theme(
     axis.text = element_blank(),
     axis.title = element_blank(),
@@ -442,7 +446,6 @@ ggTiemposTraslados1 <- df %>%
 
 #+ ggTiemposTraslados1, fig.width = 8, fig.height = 6, out.width = "60%"
 ggTiemposTraslados1
-
 guardarGGplot(ggTiemposTraslados1, '084_TiemposTranslados', 8,6)
 
 rm(list = ls(pattern = '^col'))
@@ -495,10 +498,15 @@ ggRecepcion <- df %>%
   mutate(Departamento_1 = str_to_title(Departamento_1)) %>% 
   ggplot(aes(x = tiempoRecepcion, 
              y = fct_reorder(Departamento_1, tiempoRecepcion))) +
-  geom_bar(stat = 'identity',fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_point(color = 'blue4') + 
+  geom_segment(aes(x = 0, 
+                   xend = tiempoRecepcion, 
+                   yend = fct_reorder(Departamento_1, tiempoRecepcion))) + 
+  # geom_bar(stat = 'identity',fill = '#6699ff', color = 'black', alpha = 0.6) +
   geom_text(aes(label = tiempoRecepcion), hjust = -0.8) +
   xlab('Tiempo de recepción (días)') + 
-  coord_cartesian(xlim = c(0, 9)) +
+  coord_cartesian(xlim = c(0, NA)) +
+  scale_x_continuous(expand = c(0,0,0.5,0)) + 
   theme(axis.title.y = element_blank(),
         panel.grid = element_blank(),
         legend.position = 'bottom') + 
@@ -508,13 +516,33 @@ ggRecepcion <- df %>%
 ggRecepcion
 guardarGGplot(ggRecepcion, '086_RecepcionMedicamento', 8, 6)
 
+
+ggRecepcionb <- df %>%
+  rename(tiempoRecepcion = col1) %>%
+  drop_na(tiempoRecepcion) %>%
+  mutate(Departamento_1 = str_to_title(Departamento_1)) %>% 
+  ggplot(aes(x = tiempoRecepcion)) +
+  geom_bar(fill = alpha('blue4', 0.4), col ='black') + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.3) +
+  xlab('Tiempo de recepción (días)') +
+  ylab('Frecuencia') +
+  scale_y_continuous(expand = c(0,0,0.2,0)) +
+  theme(panel.grid = element_blank(),
+        legend.position = 'bottom') + 
+  labs(title = 'Tiempos en recepción y almacenamiento de medicamentos')
+
+ggRecepcionb
+guardarGGplot(ggRecepcionb, '086b_RecepcionMedicamento', 8, 6)
+
+
 ggTiempoRecepcionMedicamentos <- df %>% 
   right_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO')) %>% 
   rename(tiempoRecepcion = col1) %>%
   # drop_na(tiempoRecepcion) %>%
   ggplot() +
   geom_sf(aes(fill = tiempoRecepcion, geometry = geometry)) +
-  scale_fill_gradientn(colours = colorspace::heat_hcl(7)) +
+  scale_fill_viridis_c() + 
+  # scale_fill_gradientn(colours = 'viridis') +
   theme(axis.title.y = element_blank(), 
         legend.position = 'bottom',
         axis.text = element_blank()) + 
@@ -909,31 +937,34 @@ ggEntidadesCompradoras <- df %>% select(Departamento_1, col1 = col1) %>%
          col1 = as.numeric(col1),
          Depto1 = fct_reorder(Depto1, col1)) %>% 
   ggplot(aes(y = Depto1, yend = Depto1)) + 
-  geom_segment(aes(x = 0, xend = col1), col = "#1a41bd") + 
-  geom_label(aes(x = col1, label = col1), size = 3, fill = "#92abfc") + 
+  geom_segment(aes(x = 0, xend = col1), col = "#1a41bd") +
+  geom_point(aes(x = col1), col = '#3d1ab0') + 
+  geom_text(aes(x = col1, label = col1), size = 3, hjust = -0.6) + 
   scale_x_continuous(expand = c(0.05, 0.05, 0.10, 0.05)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank()) + 
   xlab('N.° de inscritos en el departamento')
+
 
 #+ ggEntidadesCompradoras, fig.width = 6, fig.height = 4, out.width = "60%"
 ggEntidadesCompradoras
 guardarGGplot(ggEntidadesCompradoras, '099_NEntidadesCompradoras', 6, 4)
 
-col2 <- "NoPersonas"
+df_total1['NoPersonas1'] <-
+  df_total1$No.PersonasVinculadasDirectamente + df_total1$No.PersonasVinculadasAfiliacion
 
 ggRecursosFRE <- df_total1 %>%
   filter(str_detect(col1, '\\d')) %>%
-  select(Departamento_1, col1 = col1, NoPersonas = col2) %>%
+  select(Departamento_1, col1 = col1, NoPersonas = NoPersonas1) %>%
   ungroup() %>% 
   mutate(Departamento_1 = str_to_title(Departamento_1),
          col1 = as.numeric(col1)) %>%
   ggplot(aes(x = col1, y = NoPersonas)) +
-  stat_smooth(method = 'lm', lty = 'dashed', 
+  stat_smooth(method = 'lm', lty = 'dashed',
               fill = 'blue1', alpha = 0.1) +
   geom_point() + 
   geom_text_repel(aes(label = Departamento_1), size = 3) + 
-  xlab('N.° de instituciones inscritas en el departamento') + 
-  ylab('N.° de personas por FRE') + 
+  xlab('N.° de instituciones inscritas en el departamento \n con compras el último año') + 
+  ylab('N.° de personas que prestan servicios \n al FRE (directamente o por afiliación)') + 
   theme(panel.grid = element_blank())
 
 #+ ggRecursosFRE, fig.width = 6, fig.height = 4, out.width = "60%"

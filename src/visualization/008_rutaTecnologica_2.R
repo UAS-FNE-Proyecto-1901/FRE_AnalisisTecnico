@@ -207,13 +207,13 @@ ggArchivoInformes <- ttArchivoInformes %>%
   xlab('Frecuencia') + 
   scale_y_discrete(drop = F) +
   labs(title = "Tiempo de archivo de informes A13 de R.1478/2006") + 
-  coord_cartesian(xlim = c(0, ttArchivoInformes_max*1.2)) + 
+  coord_cartesian(xlim = c(0, NA)) + 
+  scale_x_continuous(expand = c(0,0,0.2,0)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 #+ ggArchivoInformes, fig.width = 8, fig.height = 6, out.width = "60%"
 ggArchivoInformes
 guardarGGplot(ggArchivoInformes, '123_ArchivoInformesFRE', 6, 4)
-
 
 #'-------------------------------------------------------------------------------
 # 4.92. Tiempos de diligenciamiento del Anexo 2 de la resolución------------------
@@ -270,17 +270,20 @@ nivelesTiempo <- c("0 a 6 meses",
                    "1 a 2 años",
                    "2 a 5 años",
                    "> 5 años",
-                   "Los informes no se archivan")
+                   "Los informes del FRE no\nse archivan")
 
 ggArchivoInformes1 <- select(df, col1 = col1) %>% 
   drop_na() %>% 
-  mutate(col1 = factor(col1, levels = rev(nivelesTiempo))) %>%
+  mutate(
+    col1 = str_wrap(col1, 25),
+    col1 = factor(col1, levels = rev(nivelesTiempo))) %>%
   ggplot(aes(y = col1)) +
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   xlab('Frecuencia') + 
   labs(title = "Tiempo de archivo de informes A13 de R.1478/2006") + 
-  coord_cartesian(xlim = c(0, 10)) + 
+  scale_x_continuous(expand = c(0,0,0.2,0)) + 
+  coord_cartesian(xlim = c(0, NA)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 #+ ggArchivoInformes1, fig.width = 8, fig.height = 6, out.width = "60%"
@@ -462,14 +465,32 @@ ggFrecVentasFNE <- rename(df, col1 = col1) %>%
   ggplot(aes(x = col1, 
              y = Departamento_1)) +
   geom_segment(aes(yend = Departamento_1, xend = 0), col = "#1a41bd") +
-  geom_label(aes(x = col1, label = col1), size = 3, fill = "#92abfc") + 
+  geom_point(aes(x = col1), col = "#1a41bd") +
+  geom_text(aes(x = col1, label = col1), size = 3, hjust=-0.5) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank()) + 
-  xlab('Frecuencia de compra de medicamentos al FNE')
+  xlab('Cantidad de pedidos de medicamentos \nal FNE por año')
 
 #+ ggFrecVentasFNE, fig.width = 6, fig.height = 4, out.width = "60%"
 ggFrecVentasFNE
 guardarGGplot(ggFrecVentasFNE, '130_FrecComprasFNR', 6, 4)
 
+ggFrecVentasFNE1 <- rename(df, col1 = col1) %>%
+  drop_na(col1) %>% 
+  mutate(
+    Departamento_1 = str_to_title(Departamento_1),
+    Departamento_1 = fct_reorder(Departamento_1, col1),
+    No_pedidos = 12/col1
+    ) %>% 
+  ggplot(aes(x = No_pedidos)) + 
+  geom_bar(fill = alpha('#1a41bd', 0.5), color = 'black') + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +
+  xlab('N.° de pedidos por año') + 
+  ylab('Frecuencia') + 
+  scale_x_continuous(breaks = 1:12) + 
+  scale_y_continuous(expand = c(0,0,0.2,0)) 
+
+ggFrecVentasFNE1
+guardarGGplot(ggFrecVentasFNE1, '130b_FrecComprasFNR', 6, 4)
 
 #'-------------------------------------------------------------------------------
 # 4.66¿En el Departamento existe algún establecimiento - diferente------------------
@@ -595,17 +616,22 @@ df2_total <- select(df2, matches("^3\\.12"), Departamento_1, CodigoDepartamento)
     Departamento_1 = str_to_title(Departamento_1)) %>% 
   left_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO'))
   
-
-ggPropIngresoDepartamentos <- df2_total %>% 
+df2_total <- df2_total %>% 
   mutate(
-    name = str_replace(name, "\\:", "") %>% str_wrap(30),
+    name = str_replace(name, "\\:", "") %>% str_wrap(35),
     Departamento_1 = str_replace(Departamento_1, 
                                  'Archipiélago De San Andrés, Providencia Y Santa Catalina', 
                                  'SAN ANDRÉS')
-  ) %>% 
+  )
+
+
+escala_color <- c('red', 'green', 'orange', 'yellow', 'purple', 'blue')
+names(escala_color) <- df2_total$name %>% unique()
+
+ggPropIngresoDepartamentos <- df2_total %>% 
   ggplot(aes(x = value, y = Departamento_1, fill = name)) + 
   geom_bar(stat = 'identity', position = 'stack') + 
-  scale_fill_brewer(palette = 'Set1', name = NULL) + 
+  scale_fill_manual(values = escala_color, name = NULL) + 
   xlab('Proporción') + 
   theme(axis.title.y = element_blank())
 
@@ -635,7 +661,7 @@ ggPropIngresoDepartamentos1 <- df3 %>%
                   cols=colnames(df3)[1:6], pie_scale = 1.5) +
   theme(axis.title = element_blank(),
         axis.text = element_blank()) +
-  scale_fill_brewer(palette = 'Set1', name = NULL)
+  scale_fill_manual(values = escala_color, name = NULL)
 
 #+ ggPropIngresoDepartamentos1, fig.width = 8, fig.height = 6, out.width = "60%"
 ggPropIngresoDepartamentos1

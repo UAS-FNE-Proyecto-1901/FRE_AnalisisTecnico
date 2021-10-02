@@ -69,24 +69,26 @@ df_total <- df_total %>%
     `3.01 Existencias actuales de recetarios en el FRE` >= 5000 ~ labExistencias[4]
   ))
 
-gRecetarios1 <- df_total %>%
-  mutate(ExistenciasRecetarios = factor(ExistenciasRecetarios, 
-                                        levels = labExistencias)) %>% 
-  ggplot() +
-  geom_sf(
-    aes(fill = ExistenciasRecetarios, geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
-  # coord_sf(crs = st_crs(32618)) + 
+escl_col <- c('red', 'orange', 'yellow', 'green')
+names(escl_col) <- c(labExistencias)
+
+gRecetarios1 <- df_total %>% 
+  mutate(ExistenciasRecetarios = 
+           factor(ExistenciasRecetarios, levels = labExistencias)) %>% 
+  creacionCloroPletCol(geometry, ExistenciasRecetarios)
+
+gRecetarios1[[1]] <- gRecetarios1[[1]] + 
+  scale_fill_manual(name = 'Existencia \nRecetarios', values =escl_col) + 
   theme(legend.position = 'right',
         axis.text = element_blank()) + 
-  labs(title = 'Existencias de recetarios en el FRE') +
-  scale_fill_manual(name = 'Existencia \nRecetarios',
-                    values = c('red', 'orange', 'yellow', 'green') %>% 
-                      setNames(., labExistencias)) +
+  labs(title = 'Existencias de recetarios en el FRE') + 
   guides(
     fill = guide_legend(title.position = 'top'))
+
+gRecetarios1[[2]] <- gRecetarios1[[2]] + 
+  scale_fill_manual(name = 'Existencia \nRecetarios', values =escl_col)
+gRecetarios1[[3]] <- gRecetarios1[[3]] + 
+  scale_fill_manual(name = 'Existencia \nRecetarios', values =escl_col)
 
 gRecetarios1
 
@@ -116,44 +118,50 @@ df_total <- df_total %>%
     )
   )
 
-gRecetarios2 <- df_total %>%
-  ggplot() +
-  geom_sf(
-    aes(fill = ExistenciasCirculacion, geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
-  paletteer::scale_fill_paletteer_c("viridis::plasma", name = 'Existencia circulación') +
-  # coord_sf(crs = st_crs(32618)) + 
+
+gRecetarios2 <- df_total %>% 
+  creacionCloroPletCol(geometry, ExistenciasCirculacion)
+
+gRecetarios2[[1]] <- gRecetarios2[[1]] + 
+  paletteer::scale_fill_paletteer_c("viridis::viridis", 
+                                    name = 'Existencias en circulación') +  
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Circulación mensual de \nexistencias de recetarios') +
   guides(
     fill = guide_colourbar(barwidth = 20, title.position = 'top'))
 
+gRecetarios2[[2]] <- gRecetarios2[[2]] + 
+  paletteer::scale_fill_paletteer_c("viridis::viridis", 
+                                    name = 'Existencias en circulación')
+gRecetarios2[[3]] <- gRecetarios2[[3]] + 
+  paletteer::scale_fill_paletteer_c("viridis::viridis", 
+                                    name = 'Existencias en circulación')
 gRecetarios2
-
 guardarGGplot(gRecetarios2, '028_existenciaRecetarios_2', 7, 5)
 
 #'-------------------------------------------------------------------------------
 # 4. Duración estimada de las existencias ------------------
 #'-------------------------------------------------------------------------------
 
+col1 <- '3.03 Tiempo de duración proyectada de las actuales existencias de recetarios (semanas).'
+
 gRecetarios3 <- df_total %>% 
-  ggplot() +
-  geom_sf(
-    aes(fill = `3.03 Tiempo de duración proyectada de las actuales existencias de recetarios (semanas).`, 
-        geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
-  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios') + 
-  # coord_sf(crs = st_crs(32618)) + 
+  creacionCloroPletCol(geometry, !!sym(col1))
+
+gRecetarios3[[1]] <- gRecetarios3[[1]] + 
+    scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (días)') + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Duración de existencias de recetarios \n(semanas)') +
   guides(
     fill = guide_colourbar(barwidth = 20, title.position = 'top'))
+
+
+gRecetarios3[[2]] <- gRecetarios3[[2]] + 
+  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (días)') 
+gRecetarios3[[3]] <- gRecetarios3[[3]] + 
+  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (días)') 
 
 gRecetarios3
 guardarGGplot(gRecetarios3, '029_existenciaRecetarios_3', 7, 5)
@@ -172,7 +180,7 @@ gRecetarios4 <- df_total %>%
   drop_na() %>% 
   ggplot(aes(x = factor(col1))) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  geom_label(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
+  geom_text(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
   coord_cartesian(ylim = c(0, max(dftot1$n)*1.2)) +
   ylab('Frecuencia') + xlab('N.° prescripciones por recetario') +
   labs(title = 'Número de prescripciones por recetario') + 
@@ -185,45 +193,55 @@ guardarGGplot(gRecetarios4, '030_existenciaRecetarios_4', 6, 4)
 #'-------------------------------------------------------------------------------
 # 6. Costo de adquisición por recetarios------------------
 #'-------------------------------------------------------------------------------
+
+col1 <- '3.06 Costo de adquisición del recetario (COP)'
+col2 <- '3.07 Precio de venta del recetario (COP)'
+
 gCostoRecetario <- df_total %>% 
-  ggplot() +
-  geom_sf(
-    aes(fill = `3.06 Costo de adquisición del recetario (COP)`, 
-        geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
+  creacionCloroPletCol(geometry, !!sym(col1))
+
+gCostoRecetario[[1]] <- gCostoRecetario[[1]] +
   scale_fill_continuous(label = scales::dollar, type = 'viridis', ) + 
-  # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
-  labs(title = 'Costo de adquisición') +
+  labs(title = 'A') +
   guides(
-    fill = guide_colourbar(barwidth = 10, title.position = 'top', title = ''))
+    fill = guide_colourbar(barwidth = 15, title.position = 'top', title = ''))
+
+gCostoRecetario[[2]] <- gCostoRecetario[[2]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis')
+gCostoRecetario[[3]] <- gCostoRecetario[[3]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis')
 
 gCostoRecetario
 
 
+
 gPVTARecetario <- df_total %>% 
-  ggplot() +
-  geom_sf(
-    aes(fill = `3.07 Precio de venta del recetario (COP)`, 
-        geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
-  scale_fill_continuous(label = scales::dollar, type = 'viridis') + 
-  # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  # coord_sf(crs = st_crs(32618)) + 
+  creacionCloroPletCol(geometry, !!sym(col2))
+
+gPVTARecetario[[1]] <- gPVTARecetario[[1]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis', ) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
-  labs(title = 'Precio de venta') +
+  labs(title = 'B') +
   guides(
-    fill = guide_colourbar(barwidth = 10, title.position = 'top', title = ''))
+    fill = guide_colourbar(barwidth = 15, title.position = 'top', title = ''))
 
-(gCostoRecetario + gPVTARecetario) %>% 
-guardarGGplot(., '031_costoRecetario', 6, 4)
+gPVTARecetario[[2]] <- gPVTARecetario[[2]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis')
+gPVTARecetario[[3]] <- gPVTARecetario[[3]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis')
+
+gPVTARecetario
+
+gTotal <- wrap_plots(gCostoRecetario, gPVTARecetario)  + 
+  plot_layout(ncol = 2, nrow=1, widths = c(0.5,0.5), tag_level = 'new') + 
+  plot_annotation(tag_levels = 'A')
+
+gTotal
+
+guardarGGplot(gTotal, '031_costoRecetario', 10, 4)
 
 df_total <- df_total %>% 
   mutate(MargenGanancia = map2_dbl(`3.06 Costo de adquisición del recetario (COP)`,
@@ -292,7 +310,7 @@ gmComparativo3 <- df_total %>%
 
 gmComparativo3[[1]] <- gmComparativo3[[1]] + 
   geom_sf_label_repel(aes(label = paste0(formatC(margen0, 0, format = "d"), ' %'), 
-                          geometry = geometry), size = 2, 
+                          geometry = geometry), size = 3, 
                       max.overlaps = Inf) + 
   # scale_fill_discrete(name = 'Márgen (%)') + 
   theme(legend.position = 'bottom',
@@ -343,25 +361,26 @@ gComparativo3 <- df_total %>%
 #'-------------------------------------------------------------------------------
 # 7. Precio de venta por prescripción------------------
 #'-------------------------------------------------------------------------------
+
+col1 <- '3.08 Precio de venta por prescripción (COP)'
+
 gPVTARecetario7 <- df_total %>% 
-  ggplot() + 
-  geom_sf(
-    aes(fill = `3.08 Precio de venta por prescripción (COP)`, 
-        geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
+  creacionCloroPletCol(geometry, !!sym(col1))
+
+gPVTARecetario7[[1]] <- gPVTARecetario7[[1]] +
   scale_fill_continuous(label = scales::dollar, type = 'viridis', name = NULL) + 
-  # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  # coord_sf(crs = st_crs(32618)) + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Precio de venta de recetarios por prescripción') +
   guides(
     fill = guide_colourbar(barwidth = 15, title.position = 'top'))
 
-gPVTARecetario7
+gPVTARecetario7[[2]] <- gPVTARecetario7[[2]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis', name = NULL) 
+gPVTARecetario7[[3]] <- gPVTARecetario7[[3]] +
+  scale_fill_continuous(label = scales::dollar, type = 'viridis', name = NULL) 
 
+gPVTARecetario7
 guardarGGplot(gPVTARecetario7, '034_PVTA_recetarios_prescripcion', 7, 4)
 
 #'-------------------------------------------------------------------------------
@@ -394,24 +413,24 @@ guardarGGplot(gModalidadAdquisicion, '035_modalidadAdquisicion', 7, 4)
 # 9. Tiempo de demora para adquisición de recetarios ------------------
 #'-------------------------------------------------------------------------------
 
+col1 <- '3.16. ¿Cuánto tiempo toma la adquisición de recetarios? (días)'
+
 gDemoraRecetario <- df_total %>% 
-  ggplot() + 
-  geom_sf(
-    aes(fill = `3.16. ¿Cuánto tiempo toma la adquisición de recetarios? (días)`, 
-        geometry = geometry),
-    colour = 'black',
-    size = 0.1
-  ) +
-  scale_fill_continuous(type = 'viridis') + 
-  # geom_sf_label_repel(aes(label = `3.06 Costo de adquisición del recetario (COP)`)) + 
-  # coord_sf(crs = st_crs(32618)) + 
+  creacionCloroPletCol(geometry, !!sym(col1))
+
+gDemoraRecetario[[1]] <- gDemoraRecetario[[1]]  +
+  scale_fill_continuous(type = 'viridis') +
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Tiempo de demora para adquisición de recetarios') +
   guides(
-    fill = guide_colourbar(barwidth = 20, title.position = 'top', title = 'Demora (días)'))
+    fill = guide_colourbar(barwidth = 20, title.position = 'top', 
+                           title = 'Demora para adquisición (días)'))
 
+gDemoraRecetario[[2]] <- gDemoraRecetario[[2]]  +
+  scale_fill_continuous(type = 'viridis')
+gDemoraRecetario[[3]] <- gDemoraRecetario[[3]]  +
+  scale_fill_continuous(type = 'viridis')
 
 gDemoraRecetario
-
 guardarGGplot(gDemoraRecetario, '036_demoraRecetario', 7, 5)
