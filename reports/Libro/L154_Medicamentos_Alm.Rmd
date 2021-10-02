@@ -1,6 +1,8 @@
-# Manejo de Medicamentos
+## Almacenamiento
 
-```{r configuracion1-L103, include=FALSE}
+### Medidas de seguridad para el almacenamiento
+
+```{r configuracion1-L154, include=FALSE}
 require(tidyverse); theme_set(theme_bw())
 require(plotly)
 require(sf)
@@ -20,106 +22,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
-```{r MediosComunicacion, echo=FALSE, warning=FALSE, fig.cap='Canales de comunicación FRE con clientes', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "074_MediosComunicacion.rds")) + 
-  labs(title = NULL)
-```
 
-```{r ConexionInternet, echo=FALSE, warning=FALSE, fig.cap='Velocidad de conexión de internet', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "075_ConexionInternet.rds")) + 
-  labs(title = NULL)
-```
-
-```{r EquiposComputo, echo=FALSE, warning=FALSE, fig.cap='N.° de equipos en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "076_EquiposComputo.rds")) + 
-  labs(title = NULL)
-```
-
-```{r RelacionEquiposPersonal, echo=FALSE, warning=FALSE, fig.cap='Relación entre el requerimiento de equipos y el número de personas en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, message=FALSE, out.width="85%"}
-readRDS(file.path(fig_path, "077_CorrEquiposComputo.rds")) + 
-  labs(title = NULL)
-```
-
-```{r OpinionEquiposComputo, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre los equipos de cómputo del FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "078_OpinionEquipos.rds")) + 
-  labs(title = NULL)
-```
-
-## Adquisición de MME por parte del FRE
-```{r HerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "071_Herramienta.rds")) + 
-  labs(title = NULL)
-```
-
-```{r HerramientasManejoInventarios1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios (detallado)', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "072_Herramienta.rds")) + 
-  labs(title = NULL)
-```
-
-```{r PropHerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de Herramientas en el manejo de inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "079_HerramientasCompras.rds")) + 
-  labs(title = NULL)
-```
-
-```{r EtapasProcesoAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento', fig.width=12, fig.height=7, fig.topcaption=TRUE, out.width="100%"}
-if (knitr::is_html_output()) {
-  readRDS(file.path(fig_path, "081_ProcesosAdquisición.rds"))
-} else {
-  readRDS(file.path(fig_path, "080_ProcesosAdquisición.rds")) + 
-    labs(title = NULL)
-}
-```
-
-```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento (detallado)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "082_ProcesosAdquisición.rds")) + 
-  labs(title = NULL)
-```
-
-```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.cap='Caracterización en demoras de traslados interdepartamentales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + 
-  labs(title = NULL)
-```
-
-```{r TiemposTransladosMapa, echo=FALSE, warning=FALSE, fig.cap='Mapa con demoras de traslados interdepartamentales', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + 
-  labs(title = NULL)
-```
-
-```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "085_ConformidadColombiaCompra.rds")) + 
-  labs(title = NULL)
-```
-
-```{r FrecComprasFNR, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de compras de medicamentos por año al FNE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, "130_FrecComprasFNR.rds")) + 
-  labs(title = NULL)
-```
-
-```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + 
-  labs(title = NULL)
-```
-
-## Recepción de medicamentos
-
-```{r TiemposRecepcionAlmacenamiento, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "086_RecepcionMedicamento.rds")) + 
-  labs(title = NULL)
-```
-
-```{r TiemposRecepcionAlmacenamientoMapa, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME (mapa)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "087_RecepcionMedicamento.rds")) + 
-  labs(title = NULL)
-```
-
-```{r UsoNivelesSeguridad, echo=FALSE, warning=FALSE, fig.cap='Uso de niveles de seguridad del inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) + 
-  labs(title = NULL)
-```
-
-## Almacenamiento
-
-### Medidas de seguridad para el almacenamiento
 
 En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes. 
 
@@ -220,73 +123,12 @@ readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 
 En cuanto a las opiniones negativas se tiene como principal queja a las averías en los productos causadas por el transporte. Se tienen también quejas relacionadas con (i) problemas en el enrutamiento de los envíos, (ii) demoras, (iii) disposición de los medicamentos en la entrada de las secretarías sin entregarlos de forma directa a los encargados, (iv) falta de cobertura en todo el territorio y (v) condiciones de almacenamiento inadecuadas. 
 
-> "Problemas de embalaje y muchos problemas de averías"
+> *"Problemas de embalaje y muchos problemas de averías"*
 
 Los problemas en el transporte de medicamentos han generado inconvenientes relacionados a sobrecostos en este mismo rubro, de manera que algunos FRE han tenido que recurrir a otros convenios, por ejemplo como aquellos utilizados por medicamentos de salud pública. 
 
 En cuanto a las respuestas positivas se tiene que la mayoría de los FRE que responden de esta manera no han tenido inconvenientes con la entrega de los productos. Algunos de estos FRE manifiestan que la empresa hace llegar el producto dentro de 5 días después del despacho, así mismo que los medicamentos llegan en buenas condiciones y que no se han tenido problemas. Sólo algunos de los FRE no tienen registros de inconvenientes con el transportador previamente. Un ejemplo de respuesta positiva ha sido:
 
-> No han tenido inconvenientes con el transporte de MME. Cuando surge un caso de producto no conforme, el personal afirma que el FNE siempre responde y efectúa la devolución de estos productos con averías.
+> *"No hemos tenido inconvenientes con el transporte de MME. Cuando surge un caso de producto no conforme, el FNE siempre responde y efectúa la devolución de estos productos con averías."*
 
 Se tiene que pese a que más del 50\% de los respondientes de la encuesta tienen una opinión positiva del transporte de los medicamentos, casi 1 de cada 3 FRE no están satisfechos con el servicio. El alto grado de insatisfacción y las causas que justifican la opinión se deben tener en cuenta como aspectos para el mejoramiento del proceso.
-
-## Precio de medicamentos
-
-En la gestión de operaciones de distribución de MME por parte del FNE, se consideran dos canales de distribución principales los cuales son: (i) canal de distribución a FRE y (ii) canal de distribución mediante compra directa. Se considera que el canal de compra directa constituye una excepción, en los casos en donde no existe un Fondo Rotatorio que realice la distribución en un departamento determinado. Debido a esto, se debe considerar un precio de venta mayor en la utilización del canal de compra directa, y en el caso de MME se realiza la estimación del precio de venta a FRE y se adiciona un margen del 12\% para las operaciones en canal de compra directa.
-
-En la Figura \@ref(fig:precioVentasDepartamentos) se observa una comparación de los precios de ventas reportados como oficiales por los FRE en sus respectivos departamentos para la vigencia 2021. El precio se muestra para cada medicamento en una escala de color diferente en pesos colombianos. En la figura se puede observar que los medicamentos más costosos corresponden a Metilfenidato 36 mg (entre $\$300.000$ y $\$900.000$) y Metilfenidato 36 mg (entre $\$200.000$ y $\$600.000$ pesos).
-
-```{r precioVentasDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de medicamentos en los FRE', fig.width=20, fig.height=15, fig.topcaption=TRUE, out.width="100%", fig.pos='t!'}
-readRDS(file.path(fig_path, '010_precios', "090_precioVentasDepartamentos.rds"))
-```
-
-En la línea de anticonvulsivantes se tiene que el medicamento más costoso es Fenobarbital 200 mg/mL con precios entre $\$75,000$ a $\$150,000$, mientras que en la línea de narcóticos se tiene al producto importado de Metadona tabletas 40mg como el más costoso (con precios que rondan $\$100,000$ y $\$200,000$). Se tiene algunos departamentos con un color gris, lo que indicaría que el medicamento no hace parte del portafolio de MME que es distribuido en el departamento. Por otra parte, se tienen departamentos con un color de relleno blanco lo que indicaría casos en los que no se presenta un reporte activo de los precios de ventas en esos departamentos, se tienen como casos a Bolívar, Risaralda, Meta, Vichada, y Guainía. 
-
-<!-- ```{r precioVentasDeptosVariacion, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia de medicamentos en los FRE', fig.width=20, fig.height=15, fig.topcaption=TRUE, out.width="100%", fig.pos='t!'} -->
-<!-- readRDS(file.path(fig_path, '010_precios', "091_precioVentasDeptosVariacion.rds")) -->
-<!-- ``` -->
-
-Se realizó una comparación de márgenes de precios de venta frente a los precio de compra de MME por parte de los FRE, se tiene como referencia a los precios indicados en la plataforma de compra eficiente. 
-
-$$\mathrm{M\acute{a}rgen} = \frac{\text{Precio de venta}}{\text{Precio de compra}}$$
-
-En el panel A de la Figura \@ref(fig:boxplotComparativoPVTA) se tiene una comparación de los márgenes de precio de venta frente a precio de compra de los MME. En verde, se tienen los medicamentos con una mediana de precios de ventas en departamentos menor al margen de venta mediante el canal de compra directa correspondiente a (112\%), en estos medicamentos se tiene a Morfina solución oral 3\%, Morfina HCl 50mg/mL, Metilfenidato tableta x 36mg, y Meperidina 100mg/2mL (estos medicamentos no tendrían sobrecostos respecto al canal de compra directa).
-
-```{r boxplotComparativoPVTA, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgenes de precio de venta en el departamento por medicamentos y departamentos', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.pos='t'}
-g1 <- readRDS(file.path(fig_path, '010_precios', "092_boxplotMEDICAMENTO.rds")) + 
-  labs(title = NULL)
-
-g2 <- readRDS(file.path(fig_path, '010_precios', "093_boxplotDEPTO.rds")) + 
-  labs(title = NULL)
-
-(g1 + g2) + plot_annotation(tag_levels = 'A') 
-```
-
-En azul se tienen los departamentos con un margen de precios entre 112\% y 120\%, en este casos se constituirían sobrecostos respecto al canal de compra directa para 11 medicamentos. Por último, en rojo se tienen medicamentos con margenes de precios de ventas mayores al 20\% del precio de compra, se tienen los casos de Morfina hcl 10mg/mL, Hidrato de cloral 10% solución oral y Fenobarbital tabletas x 50mg.  
-
-En el panel B de la Figura \@ref(fig:boxplotComparativoPVTA) se tienen los márgenes de precio de venta sobre precio de compra de acuerdo a los departamentos, se tienen en verde departamentos con una mediana de márgenes de precio menores al 112\%, en estos departamentos se tiene Atlántico, Córdoba, Boyacá, Tolima, Cauca, Valle del Cauca, Amazonas y Guaviare. En el otro extremo se tienen departamentos que tienen margenes de más del 20\% sobre el precio de compra como Casanare, Sucre, Cesar, La Guajira, Putumayo, Norte de Santander, Chocó, Caquetá, y Arauca.  
-
-Por último, se realizó una comparación entre los márgenes de precio de venta en los departamentos y sus distancia física relativa a Bogotá (ver Figura \@ref(fig:relacionMargenesCosto)) mediante regresión lineal. Parece existir una relación entre las dos variables, sin embargo la presencia de casos anómalos que se muestran como etiquetas en la figura evitan que haya la relación tenga significancia estadística ($p = .513$).
-
-También se evaluaron otros factores cómo el número de instituciones que realizaron compras en la vigencia anterior ($p = .667$) y la proporción de ingresos constituida por venta de medicamentos ($p = .429$) pero no se encontró una relación significativa entre las variables.
-
-```{r relacionMargenesCosto, echo=FALSE, warning=FALSE, message=FALSE, fig.cap='Relación de márgen de ganancia y otras variables', fig.width=10, fig.height=5.5, fig.topcaption=TRUE, out.width="95%", fig.align='center'}
-
-g1 <- readRDS(file.path(fig_path, '010_precios', "094_relacionMargenesCosto.rds")) + 
-  labs(title = NULL)
-
-g2 <- readRDS(file.path(fig_path, '010_precios', "095_relacionPVTA_multireg_1.rds")) + 
-  labs(title = NULL)
-g3 <- readRDS(file.path(fig_path, '010_precios', "095_relacionPVTA_multireg_2.rds")) + 
-  labs(title = NULL)
-
-gg <- g1 + (g2 / g3) + plot_annotation(tag_levels = 'A')
-gg
-```
-
-### Recomendaciones finales
-
-- Se recomienda realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa. 
-
-- Se deben establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
-

@@ -1,0 +1,46 @@
+# Manejo de Medicamentos
+
+```{r configuracion1-L151, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+```{r MediosComunicacion, echo=FALSE, warning=FALSE, fig.cap='Canales de comunicación FRE con clientes', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "074_MediosComunicacion.rds")) + 
+  labs(title = NULL)
+```
+
+```{r ConexionInternet, echo=FALSE, warning=FALSE, fig.cap='Velocidad de conexión de internet', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "075_ConexionInternet.rds")) + 
+  labs(title = NULL)
+```
+
+```{r EquiposComputo, echo=FALSE, warning=FALSE, fig.cap='N.° de equipos en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "076_EquiposComputo.rds")) + 
+  labs(title = NULL)
+```
+
+```{r RelacionEquiposPersonal, echo=FALSE, warning=FALSE, fig.cap='Relación entre el requerimiento de equipos y el número de personas en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, message=FALSE, out.width="85%"}
+readRDS(file.path(fig_path, "077_CorrEquiposComputo.rds")) + 
+  labs(title = NULL)
+```
+
+```{r OpinionEquiposComputo, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre los equipos de cómputo del FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "078_OpinionEquipos.rds")) + 
+  labs(title = NULL)
+```

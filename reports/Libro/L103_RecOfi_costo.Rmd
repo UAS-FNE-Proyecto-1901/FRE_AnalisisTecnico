@@ -1,0 +1,55 @@
+## Costos de recetarios
+
+```{r configuracion1-L103, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+
+```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '031_costoRecetario.rds')) + 
+  labs(title = NULL)
+```
+
+
+<!-- ```{r comparativoDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"} -->
+<!-- readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + labs(title = NULL) -->
+<!-- ``` -->
+
+```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '032b_comparativoDepartamentos.rds')) + labs(title = NULL)
+```
+```{r comparativoDepartamentos1, echo=FALSE, warning=FALSE, fig.cap='Mapa de márgenes de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+g1 <- readRDS(file.path(fig_path, '032c_comparativoDepartamentos.rds'))
+g1[[1]] + labs(title = NULL)
+```
+
+```{r comparativoDepartamentos2, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio (2)', fig.width=8, fig.height=4, fig.topcaption=TRUE}
+readRDS(file.path(fig_path, '033_comparativoDepartamentos1.rds')) + 
+  labs(title = NULL)
+```
+
+```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '034_PVTA_recetarios_prescripcion.rds')) + 
+  labs(title = NULL)
+```
+
+```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcia - Modelo de Costos', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds')) + plot_annotation(title = NULL)
+```
+

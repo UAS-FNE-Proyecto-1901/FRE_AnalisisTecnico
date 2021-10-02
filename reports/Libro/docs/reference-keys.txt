@@ -114,7 +114,7 @@ recetarios-oficiales
 existencia-de-recetarios
 costos-de-recetarios
 tiempos-de-adquisición-de-recetarios
-tiempos-de-despacho-de-recetarios
+características-de-los-recetarios
 recetario-oficial-electrónico
 manejo-de-medicamentos
 adquisición-de-mme-por-parte-del-fre

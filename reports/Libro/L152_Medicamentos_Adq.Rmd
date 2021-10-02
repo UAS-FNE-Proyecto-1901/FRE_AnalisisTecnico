@@ -1,0 +1,75 @@
+## Adquisición de MME por parte del FRE
+
+```{r configuracion1-L152, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+```{r HerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "071_Herramienta.rds")) + 
+  labs(title = NULL)
+```
+Eliminar o cambiar reformar !!
+```{r HerramientasManejoInventarios1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios (detallado)', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "072_Herramienta.rds")) + 
+  labs(title = NULL)
+```
+
+```{r PropHerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de Herramientas en el manejo de inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "079_HerramientasCompras.rds")) + 
+  labs(title = NULL)
+```
+
+```{r EtapasProcesoAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento', fig.width=12, fig.height=7, fig.topcaption=TRUE, out.width="100%"}
+if (knitr::is_html_output()) {
+  readRDS(file.path(fig_path, "081_ProcesosAdquisición.rds"))
+} else {
+  readRDS(file.path(fig_path, "080_ProcesosAdquisición.rds")) + 
+    labs(title = NULL)
+}
+```
+
+```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento (detallado)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "082_ProcesosAdquisición.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.cap='Caracterización en demoras de traslados interdepartamentales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiemposTransladosMapa, echo=FALSE, warning=FALSE, fig.cap='Mapa con demoras de traslados interdepartamentales', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + 
+  labs(title = NULL)
+```
+
+```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "085_ConformidadColombiaCompra.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecComprasFNR, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de compras de medicamentos por año al FNE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "130_FrecComprasFNR.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + 
+  labs(title = NULL)
+```

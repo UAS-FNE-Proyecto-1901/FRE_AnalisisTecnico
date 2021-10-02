@@ -1,0 +1,43 @@
+## Tiempos de adquisición de recetarios
+
+```{r configuracion4-L104, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+
+
+```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '035_modalidadAdquisicion.rds')) + 
+  labs(title = NULL)
+```
+
+```{r tiempoDemoraAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora para adquisición de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '036_demoraRecetario.rds')) + 
+  labs(title = NULL)
+```
+
+```{r BD-diligBDRecet, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que diligencian campos en BD de venta de recetarios', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "041_BD_diligBDRecet.rds")) + 
+  labs(title = NULL)
+```
+
+```{r SeguimientoUsoRecetarios, echo=FALSE, warning=FALSE, fig.cap='Actividades realizadas por el FRE para el seguimiento del uso de recetarios', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "043_SeguimientoUsoRecetarios.rds")) + 
+  labs(title = NULL)
+```

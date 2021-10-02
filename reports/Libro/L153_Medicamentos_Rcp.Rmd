@@ -1,0 +1,38 @@
+## Recepción de medicamentos
+
+```{r configuracion1-L153, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+
+```{r TiemposRecepcionAlmacenamiento, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "086_RecepcionMedicamento.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiemposRecepcionAlmacenamientoMapa, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME (mapa)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "087_RecepcionMedicamento.rds")) + 
+  labs(title = NULL)
+```
+
+```{r UsoNivelesSeguridad, echo=FALSE, warning=FALSE, fig.cap='Uso de niveles de seguridad del inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) + 
+  labs(title = NULL)
+```
+

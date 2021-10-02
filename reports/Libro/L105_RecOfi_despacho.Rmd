@@ -1,0 +1,68 @@
+## Características de los recetarios
+
+```{r configuracion1-L105, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+```{r MedidasSeguridadRec, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en los recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) + 
+  labs(title = NULL)
+```
+
+```{r ComparativoCostosRec, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="90%"}
+readRDS(file.path(fig_path, "046_ComparativoCostosRecetarios.rds")) + labs(title = NULL)
+```
+```{r ComparativoCostosRec1, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="90%"}
+readRDS(file.path(fig_path, "046b_ComparativoCostosRecetarios1.rds")) + labs(title = NULL)
+```
+
+```{r ReciboRecetariosInstituciones, echo=FALSE, warning=FALSE, fig.cap='Recibo de recetarios de instituciones inscritas', fig.width=6, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "047_ReciboRecetarios.rds")) + labs(title = NULL)
+```
+
+```{r TiempoRecepcionRecOficiales, echo=FALSE, warning=FALSE, fig.cap='Tiempo de recepción de recetarios oficiales desde IPS', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "048_ReciboRecetariosIPS.rds")) + labs(title = NULL)
+```
+
+```{r TiempoArchivoRecetariosOficiales, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de los recetarios oficiales en los FRE', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "049_DuracionRecetFRE.rds")) + 
+  labs(title = NULL)
+```
+
+```{r MedidasSeguridad-Almacenamiento, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en almacenamiento de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "050_MedidasSeguridadAlmac.rds")) + 
+  labs(title = NULL)
+```
+
+```{r InformacionHerramiento-VentasRecetarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que diligencian en campo de ventas de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "051_InformacionHerramienta.rds")) + 
+  labs(title = NULL)
+```
+
+## Recetario Oficial Electrónico
+
+```{r FREImplementacionROE, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la implementación del Recetario Oficial Electrónico (ROE)', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "042_FRE_implementacionROE.rds")) + 
+  labs(title = NULL)
+```
+
+```{r TiempoVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora en la venta de recetarios oficiales a clientes', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "132_TiempoVentaInstituciones.rds")) + 
+  labs(title = NULL)
+```

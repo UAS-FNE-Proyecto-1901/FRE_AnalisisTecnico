@@ -1,0 +1,51 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Recetarios oficiales
+
+```{r configuracion1-L102, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+## Existencia de recetarios
+
+
+```{r existenciasRecetarios, echo=FALSE, fig.cap='N.° de existencias de recetarios en el FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '027_existenciaRecetarios_1.rds')) + 
+  labs(title = NULL)
+```
+
+```{r existenciasRecetarios2, echo=FALSE, fig.cap='N.° de recetarios circulantes en el departamento', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) + 
+  labs(title = NULL)
+```
+
+```{r existenciaRecetarios3, echo=FALSE, fig.cap='Duración de existencia de recetarios en el FRE', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '029_existenciaRecetarios_3.rds')) + 
+  labs(title = NULL)
+```
+
+```{r existenciaRecetarios4, echo=FALSE, fig.cap='N.° de prescripciones por recetario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + 
+  labs(title = NULL)
+```
+
