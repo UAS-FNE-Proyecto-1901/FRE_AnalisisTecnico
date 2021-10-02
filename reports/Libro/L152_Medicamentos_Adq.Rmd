@@ -25,6 +25,7 @@ readRDS(file.path(fig_path, "071_Herramienta.rds")) +
   labs(title = NULL)
 ```
 Eliminar o cambiar reformar !!
+
 ```{r HerramientasManejoInventarios1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios (detallado)', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "072_Herramienta.rds")) + 
   labs(title = NULL)
@@ -66,6 +67,11 @@ readRDS(file.path(fig_path, "085_ConformidadColombiaCompra.rds")) +
 
 ```{r FrecComprasFNR, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de compras de medicamentos por año al FNE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, "130_FrecComprasFNR.rds")) + 
+  labs(title = NULL)
+```
+
+```{r FrecComprasFNRb, echo=FALSE, warning=FALSE, fig.cap='N.° de pedidos de medicamentos por año al FNE', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) + 
   labs(title = NULL)
 ```
 

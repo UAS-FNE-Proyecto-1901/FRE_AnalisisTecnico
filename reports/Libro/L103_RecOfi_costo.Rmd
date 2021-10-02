@@ -20,36 +20,54 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
+Dentro del estudio de costos realizado se realizó el comparativo entre el costo de compra del recetario contra su precio de venta. Así pues, se determinó que dentro del territorio el costo de los recetarios ronda entre los 10.000 COP y los 20.000 COP, con territorios como Valle del Cauca y Casanare, en donde dicho costo se aproxima a 30.000 COP. Algunos departamentos quedan fuera de la escala de medición (Figura \@ref(fig:costoRecetario)), dada sus particularidades en la contratación, puesto que se encargan del proceso de licitación y contratación de recetarios, únicamente realizan estudios de necesidad que son enviados al ente encargado de concretar la contratación, en mucho casos, la gobernación departamental.
 
-```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, '031_costoRecetario.rds')) + 
-  labs(title = NULL)
+```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+readRDS(file.path(fig_path, '031_costoRecetario.rds'))
 ```
+
+Por otro lado el precio de venta de los recetarios tiende a rondar los 30.000 COP, ya que en algunos FRE por acto administrativo se ha establecido la tarifa del recetario con base en el salario mínimo diario legal vigente. Así mismo, se observa correlación entre los departamentos con costo de recetario más alto y precio de venta mayor, como se da en Valle del Cauca, Bolívar y Casanare. 
+
+Ahora bien, el margen de ganancias que deja la venta de recetarios, se observa en la Figura \@ref(fig:comparativoDepartamentos0), en donde se puede establecer que con mayor frecuencia los entes territoriales obtienen entre 100 y 200% de ganancia. Por otro lado los FRE de La Guajira y Nariño, poseen ganancias entre 800 y 900% en la venta de sus recetarios oficiales.
 
 
 <!-- ```{r comparativoDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"} -->
 <!-- readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + labs(title = NULL) -->
 <!-- ``` -->
 
-```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, '032b_comparativoDepartamentos.rds')) + labs(title = NULL)
-```
-```{r comparativoDepartamentos1, echo=FALSE, warning=FALSE, fig.cap='Mapa de márgenes de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
-g1 <- readRDS(file.path(fig_path, '032c_comparativoDepartamentos.rds'))
-g1[[1]] + labs(title = NULL)
+```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario', fig.width=12, fig.height=6, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
+g1 <- readRDS(file.path(fig_path, '032b_comparativoDepartamentos.rds')) + labs(title = 'A')
+
+g2 <- readRDS(file.path(fig_path, '032c_comparativoDepartamentos.rds'))
+g2 <- g2[[1]] + labs(title = 'B')
+ 
+wrap_plots(g1, g2) + plot_layout(ncol = 2, nrow=1, widths = c(0.4,0.6), tag_level = 'new')
 ```
 
-```{r comparativoDepartamentos2, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio (2)', fig.width=8, fig.height=4, fig.topcaption=TRUE}
-readRDS(file.path(fig_path, '033_comparativoDepartamentos1.rds')) + 
-  labs(title = NULL)
-```
+<!-- ```{r comparativoDepartamentos1, echo=FALSE, warning=FALSE, fig.cap='Mapa de márgenes de ganancia por recetario', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"} -->
 
-```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, '034_PVTA_recetarios_prescripcion.rds')) + 
-  labs(title = NULL)
-```
+<!-- ``` -->
+
+Los amplios márgenes de ganancia y las proporciones distintas entre unos FRE y otros, se podrían relacionar con la cantidad de medidas de seguridad del recetario, la facilidad de acceso del departamento, el número de prescripciones, el tipo de licitación o la cantidad de empresas oferentes en los concursos de licitación de recetarios. En la Figura \@ref(fig:DependParcial1) se ilustra algunas de las variantes mencionadas en donde se logran establecer tendencias como que el número de prescripciones en general, elevan el costo de los recetarios. Pese a ello y contrario a lo que se podría suponer, la disposición estadística indica que a mayor número de medidas de seguridad en el recetario, es menor su precio. Esto podría deberse a la forma en que se adjudican los contratos y a la facilidad de elaboración en departamentos con capacidad tecnológica adecuada y diferentes oferentes en el concurso de contratación.
 
 ```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcia - Modelo de Costos', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds')) + plot_annotation(title = NULL)
 ```
 
+De igual forma, el tipo de contratación que se concreta con las empresas fabricante de los recetarios es una variable que influye en el costo de los recetarios, así pues, las modalidades de contratacion por licitacion publica, minima cuantia y selección abreviada tienden a disminuir el costo del recetario, sin embargo, los FRE que concretaron órdenes de compra de recetarios por mínima cuantía, tienden a presentar precios mayores de adquisición, con costo alrededor de los 10.000 COP y 15.000 COP. Por otro lado, se evidencia que los entes territoriales que optaron por la modalidad de contratación directa, tienden a ser los recetarios más costosos en relación con las demás, con costos superiores a los 15.000 COP por recetario en promedio, factor esperado ya que al no haber competencia entre empresas oferentes, quien posee el monopolio de fabricación es libre de disponer los precios de venta a las entidades territoriales. 
+
+Finalmente se pude concluir el precio por prescripción de los recetarios oficiales circulantes a nivel nacional como variante ponderadora el precio de venta y la cantidad de prescripciones por recetario, en donde se puede evidenciar la tendencia de los FRE hacia 250 COP a 500 COP por prescripción (Figura \@ref(fig:PVTA-Recetarios)).
+
+```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+g1 <- readRDS(file.path(fig_path, '034_PVTA_recetarios_prescripcion.rds'))
+
+g1[[1]] <- g1[[1]] + labs(title = NULL)
+g1
+```
+
+El valor por prescripción más alto a nivel nacional se presenta en el departamento de Casanare; pese a que el recetario cuenta con 50 prescripciones como la mayoría de los FRE, su precio de venta es de 76.500 COP, el más alto del país, y del que no se tiene un acto administrativo donde se establezca su valor. Además de ello, cuenta con 3 medidas de seguridad, lo que consolida la hipótesis que se observa a nivel nacional que indica que a menor número de medidas de seguridad, mayor es el costo del recetario.
+
+<!-- ```{r comparativoDepartamentos2, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio (2)', fig.width=8, fig.height=4, fig.topcaption=TRUE} -->
+<!-- readRDS(file.path(fig_path, '033_comparativoDepartamentos1.rds')) +  -->
+<!--   labs(title = NULL) -->
+<!-- ``` -->

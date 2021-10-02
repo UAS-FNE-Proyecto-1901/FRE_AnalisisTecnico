@@ -28,24 +28,33 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 ## Existencia de recetarios
 
+En el marco de las Jornadas de inmersión territoriales con los FRE del país se pudo determinar la cantidad de recetarios oficiales con los que cuentan en la actualidad. Así pues, como se observa en la Figura \@ref(fig:existenciasRecetarios), se observa la tendencia de los departamentos más distantes de la capital de la nación, son los que cuentan con menor cantidad de recetarios actualmente.
 
 ```{r existenciasRecetarios, echo=FALSE, fig.cap='N.° de existencias de recetarios en el FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, '027_existenciaRecetarios_1.rds')) + 
   labs(title = NULL)
 ```
 
+En los extremos norte y sur, es decir, la región caribe y amazónica se tiene la mayor proporción de inexistencias de recetarios, en comparación con el resto de regiones. El motivo de esto puede ser la dificultad para encontrar empresas de fabricación adecuada de documentos con características particulares como lo son los recetarios oficiales, por los cuales, en algunos departamentos limítrofes se contratan empresas de departamentos del interior, dado que en sus regiones no existe la capacidad para elaborarlos. Por otro lado, los FRE más antiguos y consolidados son los que en el presente disponen de mayor cantidad de recetarios, lo que puede estar influenciado, igualmente por la cercanía y facilidad de contratación con empresas de la región. 
+
+Así mismo, ligado a las existencias actuales de recetarios oficiales en la nación, como se observa en la Figura \@ref(fig:existenciasRecetarios2), los departamentos en donde se presenta menor circulación de recetarios precisamente son los departamentos distantes del interior. Este fenómeno puede ser ocasionado por la baja densidad poblacional de dichos territorios, es decir, la rotación de recetarios oficiales en Antioquia es la más alta ya que su población actual supera a la de los demás departamentos que cuentan con recetarios oficiales.
+
 ```{r existenciasRecetarios2, echo=FALSE, fig.cap='N.° de recetarios circulantes en el departamento', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) + labs(title = NULL)
 ```
+
+Ahora bien, dentro del censo realizado en los diferentes departamentos del país, se observa en la Figura \@ref(fig:existenciaRecetarios3) predisposición entre los distintos FRE a presentar en estos momentos una duración de existencias de recetarios oficiales a 25 semanas. El motivo de esto es que en gran parte de los entes territoriales se concretan órdenes de compra de recetarios por un año, de modo que en la época en la cual se realizó el censo, aproximadamente mitad de año, aún quedan alrededor de 20 a 30 semanas más para la finalización del año calendario. Además de ello, en ocasiones se estima un periodo de 2 a 3 meses más, es decir, disponibilidad de recetarios hasta febrero o marzo, ya que por motivos de contratación de personal a inicio del año calendario se dificulta llevar a cabo el proceso de licitación de recetarios hasta que se hayan contratado nuevamente a los funcionarios del FRE, cuestión que se da por el tipo de contrato laboral con el que están vinculados la mayoría de funcionarios en el país (Figura \@ref(fig:pieProfesional2)).
 
 ```{r existenciaRecetarios3, echo=FALSE, fig.cap='Duración de existencia de recetarios en el FRE', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, '029_existenciaRecetarios_3.rds')) + 
   labs(title = NULL)
 ```
 
+Boyacá y Nariño son los departamentos que en la actualidad cuentan con mayor proyección de disponibilidad de recetarios oficiales ya que son regiones en donde el FRE hace compras para 2 a 3 años, procesos que fueron llevados a cabo recientemente, a inicio del año 2021. 
+
+Respecto a las características de los recetarios oficiales que se manejan actualmente en el país, se evidencia la tendencia en los FRE del país es de 50 prescripciones por recetario en 22 FRE, tal cual se observó en las jornadas de acompañamiento técnico realizadas. Seguido de 4 FRE en donde se elaboran los recetarios con 25 prescripciones. También se evidenciaron 3 FRE en donde los recetarios se elaboran con 30, 80 y 100 prescripciones, como lo muestra la Figura \@ref(fig:existenciaRecetarios4). Cabe aclarar que según las normas de regulación de MME y recetarios oficiales, como los son las Resoluciones 1478 y 1479 de 2006 [@MSPS1478-2006, @MSPS1479-2006], no se tiene establecido un número de prescripciones por recetario, por lo que los FRE de cada departamento tienen disponibilidad de decidir dicha cuestión.
+
 ```{r existenciaRecetarios4, echo=FALSE, fig.cap='N.° de prescripciones por recetario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + labs(title = NULL)
 ```
 

@@ -57,6 +57,8 @@ En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como 
 readRDS(file.path(fig_path, "120_ControlesVentasFRE.rds")) + labs(title = NULL)
 ```
 
+Sobre la consolidación de informes las tendencias ya son mucho más uniformes debido  que el grupo Interno de regionalización se encarga de la consolidación y verificación de estos informes, por esta misma razón hay una uniformidad en cuanto a la forma de diligenciar los anexos, cómo al control sobre las cantidades de consumo y distribución que presentan los departamentos, esta es la razón por la cuál se observa en las gráficas X y Z que la consolidación de los informes se entrega de manera electrónica al FNE, pero también hay un leve contraste sobre la forma en la que algunos FRE reciben estos anexos por parte de los inscritos, dado que si estos son allegados de forma presencial, se necesita una transcripción, que podría traducirse en un proceso engorroso que toma mucho más tiempo y puede ser causa del retraso en el envío de informes hacia el FNE. Este comportamiento es posible observar en la figura W dónde se resalta que la confección de estos informes puede demorarse más de una semana. Esto puede ser mucho más problemático para regiones con una elevada cantidad de inscritos en relación a la cantidad de  personal encargado específicamente en esta tarea.
+
 ```{r TiemposConsolidacionA1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "121_TiemposConsolidacionA1.rds")) + 
   labs(title = NULL)
@@ -88,7 +90,12 @@ readRDS(file.path(fig_path, "126_IncumplimientoEnvioInformes.rds")) +
   labs(title = NULL)
 ```
 
+Analizando algunas otras circunstancias por las cuáles los FRE no realizan los informes a tiempo, podría también estar relacionada con un retraso en la entrega de los informes por parte de las instituciones al FRE, en la gráfica AB, es claro que 23 de los 30 FRE solo se quedan en un llamado de atención en caso de incuplimiento en las fechas de entrega de informes de consumo, esto ya está mucho más relacionado con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos, pues si el seguimiento que se hace por parte del FRE es débil, esto puede repercutir en el comportamiento de las instituciones hacía el FRE, pero este es un asunto gobernanza e institucionalidad que es potestad de cada ente territorial tratar.
+
 ## Seguridad de la información
+
+Cabe resaltar que en la Figura \@ref(fig:GarantiaInformacion) cuándo se habla de restricción de acceso, se refiere al restringido acceso que se tiene a estos informes, aunque particularmente algunos FRE cómo Guajira, si tienen una restricción de acceso a los informes presentados, por medio de contraseñas y bloqueo de columnas. En general una gran parte de los FRE maneja bases de datos combinadas (Bitácoras manuales y hojas de cálculo) para el manejo de Recetarios Oficiales y MME, esto permite una trazabilidad fragmentada en la información completa de un FRE y cómo se ha mencionado anteriormente, la transcripción es más presta a que se cometan errores humanos en la digitación.
+
 ```{r GarantiaInformacion, echo=FALSE, warning=FALSE, fig.cap='Medidas para garantizar la seguridad de la información', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "127_GarantiaInformacion.rds")) + 
   labs(title = NULL)
@@ -102,7 +109,7 @@ readRDS(file.path(fig_path, "129_InformPacientes.rds")) +
   labs(title = NULL)
 ```
 
-La pregunta a la cual se refiere la Figura \@ref(fig:InstitucionesAdicionales) se trata de las instituciones que realizan ventas de MME a pacientes, no la entiendo muy bien!!!!.
+<!-- La pregunta a la cual se refiere la Figura \@ref(fig:InstitucionesAdicionales) se trata de las instituciones que realizan ventas de MME a pacientes, no la entiendo muy bien!!!!. -->
 
 
 ```{r InstitucionesAdicionales, echo=FALSE, warning=FALSE, fig.cap='Existencia de otras instituciones que realizan ventas a instituciones a MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}

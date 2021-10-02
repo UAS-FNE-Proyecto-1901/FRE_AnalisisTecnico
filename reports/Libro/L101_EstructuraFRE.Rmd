@@ -20,14 +20,14 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
-Un Fondo Rotatorio de Estupefacientes (FRE) es una dependencia de secretaría, institutos o direcciones departamentales de salud encargadas del manejo de los medicamentos sometidos a fiscalización y aquellos que son el monopolio del Estado [@MSPS-Res1479-2006]. 
+Un Fondo Rotatorio de Estupefacientes (FRE) es una dependencia de secretaría, institutos o direcciones departamentales de salud encargadas del manejo de los medicamentos sometidos a fiscalización y aquellos que son el monopolio del Estado [@MSPS1479-2006]. 
 
 ## Fecha de constitución de FRE
 
 La Figura \@ref(fig:serieTiempoCreacion) muestra la creación de cada FRE en una línea del tiempo, demostrando que los primeros FRE fueron creados luego de la ratificación en Colombia de la Convención Única de Estupefacientes mediante la Ley 13 de 1974 [@CongresodelaRepublica1974]. La creación de estos FRE departamentales logró evidenciar que ya algunos territorios a nivel nacional, tenían un panorama claro del impacto de la implementación de esta convención en el país (ARREGLAR REDACCIÓN). Posteriormente con la entrada en rigor de la Ley 30 de 1986 que adopta el Estatuto Nacional de Estupefacientes y dicta otras disposiciones, ordenó a los departamentos controlar y fiscalizar las sustancias incluidas en las listas de estupefacientes de la convención única. Cabe resaltar que los entes territoriales creados hasta finales de los años 90, posiblemente contaron con suficientes capacidades internas para la pronta creación de sus respectivos Fondos Rotatorios Departamentales, diferente a los demás FRE creados posteriormente, cuyas capacidades son inferiores.
 
 
-```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%", out.height="50%"}
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%", out.height="50%", fig.align='center'}
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
     config(modeBarButtonsToRemove = barButtons)
@@ -63,13 +63,13 @@ Cómo se puede ver en el panel izquierdo de la Figura \@ref(fig:perfilProfesiona
 g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + labs(title = NULL)
 
-(g1 + g2) + plot_annotation(tag_levels = 'A')
+wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A')
 ```
 
 A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una gran tendencia que tienen los FRE a nivel nacional, referente al tipo de vinculación por medio de contrato por prestación de servicios. La gran mayoría, precisamente, el 98%, del personal de apoyo de los FRE está relacionada con este tipo de contrato mencionado. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado por nombramiento, como servidor público. En muchos territorios nombran como servidor público a la persona encargada del FRE, mientras que los demás guardan una predisposición para ser relacionados como contratistas.
 
 
-```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=5, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=8, fig.height=4.5, fig.topcaption=TRUE, out.width="85%"}
 
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '026_pieProfesional2b.rds'))
@@ -110,7 +110,7 @@ Existe una relación demográfica en los departamentos sobre la cantidad de inst
 readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
 ```
 
-También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la gráfica 4.9 también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas  por parte de los coordinadores de los FRE en su territorio.
+También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \@ref(fig:institucionesInscritasRelacion) también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas  por parte de los coordinadores de los FRE en su territorio.
 
 ## Caracterización de las fuentes de ingresos de los FRE
 ```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}

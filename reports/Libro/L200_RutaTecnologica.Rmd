@@ -1,0 +1,58 @@
+# Ruta Tecnológica
+
+```{r configuracion-L200, include=FALSE}
+require(tidyverse); theme_set(theme_bw())
+require(plotly)
+require(sf)
+require(ggrepel)
+require(ggsflabel)
+require(patchwork)
+require(scatterpie)
+require(vistime)
+
+fig_path <- file.path('..', '..', 'figures')
+
+barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
+                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
+                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
+                                    "resetScale2d")
+```
+
+\maxdeadcycles=1000
+
+De acuerdo a la Figura \@ref(fig:MediosComunicacion) se evidencia que los canales más frecuentes que manejan los FRE para comunicarse con los usuarios corresponden al teléfono y el correo electrónico. Incluso estos medios de comunicación toman mayor relevancia en estos tiempos actuales de distanciamiento por la pandemia reciente referente a la COVID-19. En ese orden de ideas, menos de la mitad de los FRE mantienen la atención presencial en el FRE y la correspondencia ya fue reemplazada por la digitalización y el correo electrónico. Esto podría demostrar cierta aceptabilidad, por parte del personal del FRE y los usuarios inscritos, por los medios digitales que han surgido en la actualidad.
+
+```{r MediosComunicacion, echo=FALSE, warning=FALSE, fig.cap='Canales de comunicación FRE con clientes', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "074_MediosComunicacion.rds")) + 
+  labs(title = NULL)
+```
+
+Por otro lado, la \@ref(fig:ConexionInternet) exhibe la velocidad de conexión a internet en cada zona donde se encuentra ubicado el FRE departamental de cada territorio. Cerca de la mitad de los FRE cuentan con una concepción “Buena o excelente” del internet en su territorio. No obstante, la otra porción equivalente a la mitad de los FRE, afirma una “Aceptable, mala o muy mala” señal del internet en su sitio de trabajo. Esto podría representar varios inconvenientes en la conectividad a la red y el desarrollo adecuado de los procesos digitales en muchos FRE. La apuesta a futuro de la modernización en los procesos de manejo de recetarios oficiales y MME, por ejemplo, la implementación del ROE, mostraría cierta deficiencia en el acceso a internet para un sector grande en la población colombiana. Esta transformación digital debe considerar, ante todo, aquellos territorios que muestran falencias en la conectividad a internet, con el fin de evitar barreras al acceso de medicamentos en estas zonas.
+
+```{r ConexionInternet, echo=FALSE, warning=FALSE, fig.cap='Velocidad de conexión de internet', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "075_ConexionInternet.rds")) + 
+  labs(title = NULL)
+```
+
+Según la Figura \@ref(fig:EquiposComputo), más de la mitad de los FRE poseen hasta dos (2) computadores para el desarrollo de sus funciones como ente territorial. En dos casos particularmente, FRE Guaviare y FRE San Andres, no cuentan con equipo de cómputo actualmente y esto influye desfavorablemente en el cumplimiento de sus obligaciones como FRE. En esa misma línea, podemos encontrar nueve FRE que poseen solo un (1) equipo de cómputo, perjudicando igualmente el avance de sus actividades laborales y funciones principales como ente territorial, responsable del control de MME en el departamento. Incluso, según las experiencias y observaciones del personal vinculado a los FRE, disponer de dos (2) computadores sigue siendo condicionado el desarrollo laboral y en casi todas las ocasiones, los equipos son insuficientes para el personal del FRE.
+
+```{r EquiposComputo, echo=FALSE, warning=FALSE, fig.cap='N.° de equipos en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "076_EquiposComputo.rds")) + 
+  labs(title = NULL)
+```
+
+Únicamente 6 FRE departamentales cuentan con cuatro (4) o más computadores en su área de trabajo, cuya índole permite mejores condiciones laborales al equipo de apoyo del FRE. Por consiguiente, estos 6 entes territoriales, se encuentran en excelentes condiciones de infraestructura tecnológica para atender y proyectar una gestión apropiada en los MME y los recetarios oficiales.
+
+```{r RelacionEquiposPersonal, echo=FALSE, warning=FALSE, fig.cap='Relación entre el requerimiento de equipos y el número de personas en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, message=FALSE, out.width="85%"}
+readRDS(file.path(fig_path, "077_CorrEquiposComputo.rds")) + 
+  labs(title = NULL)
+```
+
+De acuerdo a la Figura \@ref(fig:OpinionEquiposComputo) se puede evidenciar que aproximadamente la mitad de los FRE manifiestan que los equipos de cómputo del FRE son adecuados para las actividades del FRE. No obstante, una gran porción de los entes territoriales, mantienen opiniones negativas respecto a su infraestructura tecnológica, cuyo elemento es asociado, en algunos casos, con una negligencia en las actividades internas del FRE por falta de estas herramientas tecnológicas. actuales Como se mencionó anteriormente, la modernización en los procesos referentes al manejo de recetarios oficiales y MME, tendrá que considerar, ante todo, aquellos territorios que muestran obstáculos en su disponibilidad tecnológica, representada principalmente por el estado actual de los equipos de cómputo a lo largo del territorio nacional.
+
+```{r OpinionEquiposComputo, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre los equipos de cómputo del FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "078_OpinionEquipos.rds")) + 
+  labs(title = NULL)
+```
+
+Si los inconvenientes relacionados a la infraestructura tecnológica, se presentan actualmente en las zonas más alejadas del país, el escenario de la implementación del ROE no podría aspirar a grandes cambios en cada territorio. Lo anterior, se originaria barrera al acceso de medicamentos desde cada Secretaria de Salud o Dirección en salud departamental. **JUSTIFICAR CON OBSERVACIONES** hasta mejorar esta condición tecnológica.
