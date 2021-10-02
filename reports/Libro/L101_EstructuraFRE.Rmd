@@ -20,9 +20,14 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
+Un Fondo Rotatorio de Estupefacientes (FRE) es una dependencia de secretaría, institutos o direcciones departamentales de salud encargadas del manejo de los medicamentos sometidos a fiscalización y aquellos que son el monopolio del Estado [@MSPS-Res1479-2006]. 
+
 ## Fecha de constitución de FRE
 
-```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%", out.height="20%"}
+La Figura \@ref(fig:serieTiempoCreacion) muestra la creación de cada FRE en una línea del tiempo, demostrando que los primeros FRE fueron creados luego de la ratificación en Colombia de la Convención Única de Estupefacientes mediante la Ley 13 de 1974 [@CongresodelaRepublica1974]. La creación de estos FRE departamentales logró evidenciar que ya algunos territorios a nivel nacional, tenían un panorama claro del impacto de la implementación de esta convención en el país (ARREGLAR REDACCIÓN). Posteriormente con la entrada en rigor de la Ley 30 de 1986 que adopta el Estatuto Nacional de Estupefacientes y dicta otras disposiciones, ordenó a los departamentos controlar y fiscalizar las sustancias incluidas en las listas de estupefacientes de la convención única. Cabe resaltar que los entes territoriales creados hasta finales de los años 90, posiblemente contaron con suficientes capacidades internas para la pronta creación de sus respectivos Fondos Rotatorios Departamentales, diferente a los demás FRE creados posteriormente, cuyas capacidades son inferiores.
+
+
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE,message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%", out.height="50%"}
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
     config(modeBarButtonsToRemove = barButtons)
@@ -31,27 +36,38 @@ if (knitr::is_html_output()) {
 }
 ```
 
+La creación de la Federación Nacional de Departamentos permitió que los departamentos con niveles de gobernanza muchas más simples, la creación de los FRE dentro del organigrama de las respectivas entidades del nivel departamental con funciones en salud. La autonomía administrativa, financiera y presupuestal de las entidades territoriales; el respeto a la pluralidad ideológica, la promoción del desarrollo integral y el respeto a la Constitución Política y a las leyes, son los principios de la Federación Nacional de Departamentos. Nuestra tarea es realizada a través de asesorías en las áreas jurídica, económica, financiera y administrativa; en la representación ante órganos consultivos y decisorios del Gobierno Nacional, y en cooperación institucional.
+
+Particularmente en algunos territorios no cuentan con un FRE propiamente constituido, por lo que el control que tienen sobre los medicamentos denominados **Monopolio del Estado**, lo ejercen a partir de su propia interpretación de la Resolución 1478 del 2006 y Resolución 1479 del 2006.
+
 ## Estructura organizacional
 
-```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = NULL)
-```
+En el panel izquierdo de la \@ref(fig:perfilProfesionalEncargado) se observa la distribución de los perfiles profesionales de los encargados de cada FRE. Se puede evidenciar una mayoría de profesionales Químicos Farmacéuticos como responsables encargados de los entes territoriales a nivel nacional.De manera similar, se observan Técnicos en Regencia en Farmacia ocupando este cargo a nivel territorial, permaneciendo en la misma línea profesional de trabajo, referente al conocimiento y habilidades en la gestión de los medicamentos. Lo anterior, es beneficioso para los procesos internos del FRE, ya que permite un adecuado desarrollo de las funciones principales del ente territorial.
 
-```{r perfilProfesionalDepartamentos1, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE por departamento', fig.width=8, fig.height=6,fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '021_mapaProfesional.rds')) + labs(title = NULL)
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%"}
+g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds')) + labs(title = NULL)
+
+(g1 + g2) + plot_annotation(tag_levels = 'A')
 ```
+Por otro lado, se mantiene un grupo de profesionales diferentes a los anteriores, pero denominados como profesionales de la salud, cuyas competencias pueden relacionarse de alguna manera con la adecuada administración y gestión de los medicamentos. Por el contrario, se deben resaltar algunos profesionales (4), encargados de algunos FRE, que no poseen este tipo de habilidades idóneas y apropiadas, desde su formación profesional, resultando algunos casos en dificultades técnicas para el desarrollo interno de las entidades territoriales.
+
 
 ```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + labs(title = NULL)
 ```
 
-```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = NULL)
+Cómo se puede ver en el panel izquierdo de la Figura \@ref(fig:perfilProfesional3), una 10 de los 31 FRE, trabajan con un equipo de 2 personas, que corresponderían al encargado del FRE y algún contratista que sirve de apoyo en las labores relacionadas con el funcionamiento del FRE. Dependiendo de la cantidad de instituciones inscritas, si bien no existe ninguna gráfica o pregunta en la encuesta que induzca a pensar que los tipos de contratación afectan o no directamente a los FRE.
+
+```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%"}
+g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + labs(title = NULL)
+
+(g1 + g2) + plot_annotation(tag_levels = 'A')
 ```
 
-```{r mapaProfesional2, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE por departamento', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + labs(title = NULL)
-```
+A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una gran tendencia que tienen los FRE a nivel nacional, referente al tipo de vinculación por medio de contrato por prestación de servicios. La gran mayoría, precisamente, el 98%, del personal de apoyo de los FRE está relacionada con este tipo de contrato mencionado. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado por nombramiento, como servidor público. En muchos territorios nombran como servidor público a la persona encargada del FRE, mientras que los demás guardan una predisposición para ser relacionados como contratistas.
+
 
 ```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=5, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
 
@@ -61,27 +77,9 @@ if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '026_pieProfesional1b.rds'))
 }
 ```
+Lo anterior puede generar inconvenientes en la continuidad del correcto desarrollo del FRE, afectando la funcionalidad y abandonando algunas actividades críticas para cumplir sus objetivos de creación. Particularmente, los primeros meses del año, este tipo de personas vinculadas por contrato de prestación de servicios, dejan de laborar porque finalizó su contrato el año pasado, y por barreras administrativas no son contratadas hasta el segundo bimestre. El personal nombrado en muchos casos es la persona encargada del FRE, cuyos temas operativos no son fáciles y por tal motivo se dejan de hacer en el territorio, como es el caso de la consolidación de los informes que deben ser enviados mensualmente al FNE, según la normativa vigente. 
 
-## Instituciones inscritas en el FRE
-
-```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%"}
-readRDS(file.path(fig_path, "099_NEntidadesCompradoras.rds")) + 
-  labs(title = NULL)
-```
-
-```{r institucionesInscritasRelacion, echo=FALSE, fig.cap='Relación entre N° de instituciones inscritas y personal del FRE', fig.width=6, fig.height=4, out.width="85%", fig.topcaption=TRUE, message=FALSE, warning=FALSE}
-readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + 
-  labs(title = NULL)
-```
-
-## Caracterización de las fuentes de ingresos de los FRE
-```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
-  readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + labs(title = NULL)
-```
-```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
-readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
-```
-
+En la Tabla \@ref(tab:CaracterizacionIngreso1) se observa la proporción del personal del FRE contratado de acuerdo a la región del país.
 
 ```{r CaracterizacionIngreso1, echo=FALSE, warning=FALSE, tab.cap='Proporción de personas contratadas por región'}
 data.frame(
@@ -97,4 +95,29 @@ data.frame(
 dfSF %>% 
   knitr::kable(booktabs = TRUE, caption = 'Proporción de personas contratadas por región')
 ```
+
+## Instituciones inscritas en el FRE
+
+Según la Figura \@ref(fig:institucionesInscritas) se puede determinar que los FRE con más inscritos a nivel territorial, corresponden a los FRE Santander y Atlántico, con 336 y 330 instituciones habilitadas para el manejo de este tipo de medicamentos, respectivamente. Seguido de los FRE departamentales Boyacá, Caldas, Nariño y Magdalena, con un rango que se encuentra entre 208 y 245 inscritos territorialmente. Por otro lado, los FRE con menor número de inscritos en el territorio son los FRE departamentales Guainía, Vichada, San Andrés, Amazonas, Vaupés, Arauca y Guaviare, considerándose los departamentos de Colombia con menor población en el país, según estadísticas del DANE [@DANE2021]. Por tanto, este grupo de entes territoriales, guardan relación entre los factores demográficos y el número de instituciones inscritas en cada FRE. Entre menos población habite el departamento, menos instituciones se encuentran en el territorio y así mismo son pocas las responsables de la gestión de este tipo de MME.
+
+```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%"}
+readRDS(file.path(fig_path, "099_NEntidadesCompradoras.rds")) + 
+  labs(title = NULL)
+```
+Existe una relación demográfica en los departamentos sobre la cantidad de instituciones inscritas y los departamentos con más densidad de población entendiendo que los FRE que se encuentran en estos departamentos, deberían estar mucho más desarrollados para atender la necesidad de MME de su población local, pero por cómo se evidenció en el análisis del recurso humano de los FRE, esto no siempre ocurre, y hay una tendencia a observar que la cantidad de personas encargadas en estos departamentos  no dan abasto con todas las tareas requeridas para un funcionamiento integral, esto se puede ver si comparamos esta misma gráfica con el desempeño en la entrega de informes al FNE, sin embargo, existen contraejemplos a esta tendencia cómo lo es el FRE Caldas que pese a tener una cantidad de colaboradores por encima de la media, tiene un rezago importante en la entrega de informes de consumo de medicamentos al FNE.
+
+```{r institucionesInscritasRelacion, echo=FALSE, fig.cap='Relación entre N° de instituciones inscritas y personal del FRE', fig.width=6, fig.height=4, out.width="85%", fig.topcaption=TRUE, message=FALSE, warning=FALSE}
+readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
+```
+
+También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la gráfica 4.9 también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas  por parte de los coordinadores de los FRE en su territorio.
+
+## Caracterización de las fuentes de ingresos de los FRE
+```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
+  readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + labs(title = NULL)
+```
+```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
+readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
+```
+
 
