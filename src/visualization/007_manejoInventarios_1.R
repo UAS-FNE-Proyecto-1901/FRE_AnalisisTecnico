@@ -224,15 +224,23 @@ df_total$NoPersonas <- df_total$Profesiones %>%
 # Se realiza una copia de reserva
 df_total1 <- df_total
 
-ggCorrelacionEquipos <- df_total %>%
+df_total_2 <- df_total %>%
   rename(NoEquipos = col1) %>%
   mutate(Departamento_1 = str_to_title(Departamento_1)) %>% 
-  drop_na(NoEquipos) %>% 
-  ggplot(aes(y = NoEquipos, x = NoPersonas)) + 
-  stat_smooth(se = F, method = 'lm', lty = 'dashed', col = 'black') +
-  geom_point(col = 'blue') +
-  geom_label_repel(aes(label = Departamento_1), size=2) + 
-  xlab('N.° de personas') +
+  drop_na(NoEquipos)
+
+df_total_2['NoPersonas1'] <- df$No.PersonasVinculadasDirectamente
+
+reg1 <- lm(NoEquipos ~ NoPersonas1, df_total_2)
+
+ggCorrelacionEquipos <-  df_total_2 %>% 
+  ggplot(aes(y = NoEquipos, x = NoPersonas1)) + 
+  stat_smooth(se = T, method = 'lm', lty = 'dashed', col = 'black') +
+  geom_point() +
+  geom_label_repel(
+    data = df_total_2[abs(reg1$residuals) > 0.8, ],
+    mapping = aes(label = Departamento_1), size=3) +
+  xlab('N.° de personas vinculadas \n directamente al FRE') +
   ylab('N.° de equipos') + 
   labs(title = 'Correlación entre personas y equipos') +
   theme(panel.grid = element_blank())  

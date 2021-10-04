@@ -25,7 +25,6 @@ fig:ComparativoCostosRec1
 fig:ReciboRecetariosInstituciones
 fig:TiempoRecepcionRecOficiales
 fig:TiempoArchivoRecetariosOficiales
-fig:MedidasSeguridad-Almacenamiento
 fig:FREImplementacionROE
 fig:TiempoVentaInstituciones
 fig:HerramientasManejoInventarios

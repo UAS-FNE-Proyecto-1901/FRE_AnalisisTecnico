@@ -58,9 +58,9 @@ readRDS(file.path(fig_path, "049_DuracionRecetFRE.rds")) +
 Complementando la información reportada en la Figura \@ref(fig:ReciboRecetariosInstituciones), y \@ref(fig:TiempoArchivoRecetariosOficiales), se relacionó el tiempo de archivo que los FRE que si reciben los recetarios oficiales los almacenan, obteniendo que 10 FRE los almacenan por un periodo mayor a 5 años. Durante las jornadas de inmersión territorial se puedo observar que este tiempo de almacenamiento, en la mayoría de los casos, es por desinformación en los FRE, puesto que no se tiene presente el tiempo que se deben guardar estas copias, y al considerarlas parte de la historia clínica de un paciente estiman guardarlas por hasta 10 años, superando en muchos casos la capacidad de archivo de los FRE. En otros casos, la intención de archivo se acoge a las medidas establecidas por las gobernaciones, en las cuales se pide un archivo de 20 años para documentación critica, según las tablas de retención documental gubernamental. Otros FRE en cambio establecieron protocolo de archivo y una vez cumplido el periodo de almacenamiento, por supuesto, posterior revisión, los recetarios oficiales son destruidos.
 
 
-```{r MedidasSeguridad-Almacenamiento, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en almacenamiento de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "050_MedidasSeguridadAlmac.rds")) + 
-  labs(title = NULL)
+```{r MedidasSeguridad-Almacenamiento, echo=FALSE, warning=FALSE, fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+#| fig.cap: "Proporción de FRE con medidas de seguridad implementada en almacenamiento de recetarios"
+readRDS(file.path(fig_path, "050_MedidasSeguridadAlmac.rds")) + labs(title = NULL)
 ```
 
 Como se mencionó previamente durante el acompañamiento se compartió la Circular 009 de 2015, la cual en su Artículo Primero expresa lo siguiente: 

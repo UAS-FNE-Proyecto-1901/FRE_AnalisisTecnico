@@ -629,7 +629,7 @@ escala_color <- c('red', 'green', 'orange', 'yellow', 'purple', 'blue')
 names(escala_color) <- df2_total$name %>% unique()
 
 ggPropIngresoDepartamentos <- df2_total %>% 
-  ggplot(aes(x = value, y = Departamento_1, fill = name)) + 
+  ggplot(aes(x = value, y = reorder(Departamento_1, desc(Departamento_1)), fill = name)) + 
   geom_bar(stat = 'identity', position = 'stack') + 
   scale_fill_manual(values = escala_color, name = NULL) + 
   xlab('Proporción') + 

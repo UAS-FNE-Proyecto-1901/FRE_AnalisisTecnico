@@ -47,9 +47,6 @@ df_MUNICIPIO <-
   read_csv(file.path('data', 'processed', '799_DANE_DIVIPOLA.csv'), 
            locale = locale(encoding = 'latin1'))
 
-df$`3.08 Precio de venta por prescripción (COP)`
-df$CodigoDepartamento
-
 df_total <- df %>% 
   right_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO'))
 
@@ -305,14 +302,19 @@ ggComparativo2
 guardarGGplot(ggComparativo2, '032b_comparativoDepartamentos', 6, 4)
 
 gmComparativo3 <- df_total %>% 
-  drop_na(any_of(c('margen1'))) %>% 
+  # drop_na(any_of(c('margen1'))) %>% 
   creacionCloroPletCol(geometry, margen1)
 
 gmComparativo3[[1]] <- gmComparativo3[[1]] + 
-  geom_sf_label_repel(aes(label = paste0(formatC(margen0, 0, format = "d"), ' %'), 
-                          geometry = geometry), size = 3, 
-                      max.overlaps = Inf) + 
-  # scale_fill_discrete(name = 'Márgen (%)') + 
+  geom_sf_label_repel(
+    data = drop_na(df_total, any_of(c('margen1'))),
+    aes(label = paste0(formatC(margen0, 0, format = "d"), ' %'),
+        geometry = geometry), size = 3,
+    max.overlaps = Inf) + 
+  scale_fill_manual(name = 'Márgen (%)', 
+                    values = c('purple', 'blue', 'green4', 'green1', 
+                               'yellow', 'orange', 'red'),
+                    breaks = levels(df_total$margen1)) +
   theme(legend.position = 'bottom',
         legend.title = element_blank(),
         axis.text = element_blank(), 

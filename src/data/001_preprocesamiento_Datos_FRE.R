@@ -24,7 +24,8 @@ require(fuzzywuzzyR)
 # 
 data <- read_excel(file.path('data', 'intermediate', 
                              '001_Herramienta_Limpieza_Manual.xlsx'), 
-                   na = c('', 'NA', 'N.A', 'No aplica'))
+                   na = c('', 'NA', 'N.A', 'No aplica'), 
+                   sheet = 'Respuestas de formulario 1')
 
 df_DIVIPOLA <-
   read_csv(file.path('data', 'processed', '798_DANE_DEPARTAMENTO.csv'))

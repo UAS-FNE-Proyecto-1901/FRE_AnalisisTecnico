@@ -45,10 +45,10 @@ Particularmente en algunos territorios no cuentan con un FRE propiamente constit
 En el panel izquierdo de la \@ref(fig:perfilProfesionalEncargado) se observa la distribución de los perfiles profesionales de los encargados de cada FRE. Se puede evidenciar una mayoría de profesionales Químicos Farmacéuticos como responsables encargados de los entes territoriales a nivel nacional.De manera similar, se observan Técnicos en Regencia en Farmacia ocupando este cargo a nivel territorial, permaneciendo en la misma línea profesional de trabajo, referente al conocimiento y habilidades en la gestión de los medicamentos. Lo anterior, es beneficioso para los procesos internos del FRE, ya que permite un adecuado desarrollo de las funciones principales del ente territorial.
 
 ```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%"}
-g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = NULL)
-g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds')) + labs(title = NULL)
-
-(g1 + g2) + plot_annotation(tag_levels = 'A')
+g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = 'A')
+g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds'))
+g2[[1]] <- g2[[1]] + labs(title = 'B')
+(g1 + g2) + plot_annotation()
 ```
 Por otro lado, se mantiene un grupo de profesionales diferentes a los anteriores, pero denominados como profesionales de la salud, cuyas competencias pueden relacionarse de alguna manera con la adecuada administración y gestión de los medicamentos. Por el contrario, se deben resaltar algunos profesionales (4), encargados de algunos FRE, que no poseen este tipo de habilidades idóneas y apropiadas, desde su formación profesional, resultando algunos casos en dificultades técnicas para el desarrollo interno de las entidades territoriales.
 
@@ -60,10 +60,11 @@ readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + labs(title = NULL)
 Cómo se puede ver en el panel izquierdo de la Figura \@ref(fig:perfilProfesional3), una 10 de los 31 FRE, trabajan con un equipo de 2 personas, que corresponderían al encargado del FRE y algún contratista que sirve de apoyo en las labores relacionadas con el funcionamiento del FRE. Dependiendo de la cantidad de instituciones inscritas, si bien no existe ninguna gráfica o pregunta en la encuesta que induzca a pensar que los tipos de contratación afectan o no directamente a los FRE.
 
 ```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%"}
-g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = NULL)
-g2 <- readRDS(file.path(fig_path, '024_mapaProfesional2.rds')) + labs(title = NULL)
+g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = 'A')
+g2 <- readRDS(file.path(fig_path, '024_mapaProfesional2.rds'))
+g2[[1]] <- g2[[1]] + labs(title = 'B')
 
-wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A')
+wrap_plots(g1, g2) + plot_annotation()
 ```
 
 A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una gran tendencia que tienen los FRE a nivel nacional, referente al tipo de vinculación por medio de contrato por prestación de servicios. La gran mayoría, precisamente, el 98%, del personal de apoyo de los FRE está relacionada con este tipo de contrato mencionado. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado por nombramiento, como servidor público. En muchos territorios nombran como servidor público a la persona encargada del FRE, mientras que los demás guardan una predisposición para ser relacionados como contratistas.
