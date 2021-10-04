@@ -107,4 +107,62 @@ data1 <- data %>%
   mutate(across(matches('Nombre del'), ~str_to_title(.x)))
 
 
+#'-------------------------------------------------------------------------------
+# 3. Acoplamiento de datos del DANE ------------------
+#'-------------------------------------------------------------------------------
+dataDANE2020 <- read_excel(
+  file.path('data', 'external', '795_DANE_Censo_2018_2060.xlsx'),
+  skip = 11,
+  sheet = 'Departamental'
+) %>%
+  filter((AÑO == 2020) & `ÁREA GEOGRÁFICA` == 'Total') %>% 
+  rename(poblac_total = Total) %>% 
+  mutate(
+    DPNOM = str_to_upper(DPNOM),
+    DPNOM = str_replace(DPNOM, 'QUINDIO', 'QUINDÍO'),
+    DPNOM = str_replace(DPNOM, 
+                        'ARCHIPIÉLAGO DE SAN ANDRÉS', 
+                        'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA')
+    )  
+
+# Se unen los datos poblacionales de cada departamento
+data1 <- data1 %>% 
+  left_join(select(dataDANE2020, all_of(c('DPNOM', 'poblac_total'))), 
+            by = c('Departamento_1' = 'DPNOM'))
+
+
+#'-------------------------------------------------------------------------------
+# 4. Acoplamiento de datos de REPS ------------------
+#'-------------------------------------------------------------------------------
+camasNombres <- c(
+    "camas_adultos",
+    "camas_intermedio_adulto",
+    "camas_intensivo_adulto",
+    "camas_agudo_mental",
+    "camas_intermedio_mental",
+    "camas_farmacodependencia",
+    "camas_salud_mental",
+    "ambulancias_medicada"
+  )
+
+# Lectura de datos de REPS
+
+dataREPS <-
+  read_csv(
+    file.path('data', 'external', '793_MSPS_CONTEO_REPS.csv'),
+    locale = locale(encoding = 'latin1')
+  ) %>%
+  mutate(depa_codigo = formatC(depa_codigo, width = 2, flag = '0'))  %>%
+  select(depa_codigo, all_of(camasNombres))
+
+# Se unen los datos de REPS de cada departamento
+
+data1 <- data1 %>%
+  left_join(dataREPS, by = c('CodigoDepartamento' = 'depa_codigo'))
+
+#'-------------------------------------------------------------------------------
+# 5. Escritura de archivo CSV ------------------
+#'-------------------------------------------------------------------------------
 write_csv(data1, file.path('data', 'processed', '001_Herramienta_Procesada.csv'))
+
+

@@ -148,3 +148,4 @@ región-caribe
 región-orinoquía
 región-pacífica
 lineamientos-y-recomendaciones-generales
+fig:institucionesInscritasVARdemo

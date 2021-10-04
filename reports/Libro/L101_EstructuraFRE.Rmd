@@ -113,6 +113,14 @@ readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
 
 También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \@ref(fig:institucionesInscritasRelacion) también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas  por parte de los coordinadores de los FRE en su territorio.
 
+```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación entre N° de instituciones inscritas y tamaño poblacional del departamento y número de camas de acuerdo a REP', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE}
+g1 <- readRDS(file.path(fig_path, "100a_RelacionRecursosFRE.rds")) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, "100b_RelacionRecursosFRE.rds")) + labs(title = NULL)
+
+wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A')
+```
+
+
 ## Caracterización de las fuentes de ingresos de los FRE
 ```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE}
   readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + labs(title = NULL)
