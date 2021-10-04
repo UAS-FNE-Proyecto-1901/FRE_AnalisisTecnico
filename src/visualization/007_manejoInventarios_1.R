@@ -960,12 +960,27 @@ guardarGGplot(ggEntidadesCompradoras, '099_NEntidadesCompradoras', 6, 4)
 df_total1['NoPersonas1'] <-
   df_total1$No.PersonasVinculadasDirectamente + df_total1$No.PersonasVinculadasAfiliacion
 
-ggRecursosFRE <- df_total1 %>%
+# Sumar todas los tipos de camas desde el REPS
+
+df_total1['camasREPS'] <- df_total1['camas_adultos'] +
+  df_total1['camas_intensivo_adulto'] + df_total1['camas_intermedio_adulto'] + 
+  df_total1['camas_intermedio_mental'] + df_total1['camas_agudo_mental'] + 
+  df_total1['camas_farmacodependencia'] + 
+  df_total1['camas_salud_mental'] + 
+  df_total1['ambulancias_medicada']
+
+
+df_total_2 <- df_total1 %>%
   filter(str_detect(col1, '\\d')) %>%
-  select(Departamento_1, col1 = col1, NoPersonas = NoPersonas1) %>%
+  select(Departamento_1, col1 = col1, 
+         NoPersonas = NoPersonas1, 
+         PoblTotal = poblac_total,
+         camasREPS) %>%
   ungroup() %>% 
   mutate(Departamento_1 = str_to_title(Departamento_1),
-         col1 = as.numeric(col1)) %>%
+         col1 = as.numeric(col1))
+
+ggRecursosFRE <- df_total_2 %>%
   ggplot(aes(x = col1, y = NoPersonas)) +
   stat_smooth(method = 'lm', lty = 'dashed',
               fill = 'blue1', alpha = 0.1) +
@@ -978,4 +993,53 @@ ggRecursosFRE <- df_total1 %>%
 #+ ggRecursosFRE, fig.width = 6, fig.height = 4, out.width = "60%"
 ggRecursosFRE
 guardarGGplot(ggRecursosFRE, '100_RelacionRecursosFRE', 6, 4)
+
+
+lm1 <- lm(col1 ~ PoblTotal, df_total_2)
+
+ggRecursosFRE2a <- df_total_2 %>%
+  ggplot(aes(x = PoblTotal, y = col1)) +
+  stat_smooth(method = 'lm', lty = 'dashed',
+              fill = 'blue1', alpha = 0.1) +
+  geom_point() + 
+  geom_text_repel(
+    data = df_total_2[cooks.distance(lm1) > 0.05, ],
+    mapping = aes(label = Departamento_1), size = 3) +
+  ylab('N.° de instituciones inscritas en el departamento \n con compras el último año') +
+  xlab('Población departamental') +
+  theme(panel.grid = element_blank())
+
+#+ ggRecursosFRE2a, fig.width = 6, fig.height = 4, out.width = "60%"
+ggRecursosFRE2a
+guardarGGplot(ggRecursosFRE2a, '100a_RelacionRecursosFRE', 6, 4)
+
+
+lm2 <- lm(col1 ~ camasREPS, df_total_2)
+
+ggRecursosFRE2b <- df_total_2 %>%
+  ggplot(aes(x = camasREPS, y = col1)) +
+  stat_smooth(method = 'lm', lty = 'dashed',
+              fill = 'blue1', alpha = 0.1) +
+  geom_point() + 
+  geom_text_repel(
+    data = df_total_2[cooks.distance(lm2) > 0.01, ], 
+    mapping = aes(label = Departamento_1), size = 3) +
+  xlab('N.° de camas en REPS (tipos seleccionados)') +
+  ylab('N.° de instituciones inscritas en \n el departamento con compras el último año') +
+  theme(panel.grid = element_blank())
+
+
+#+ ggRecursosFRE2b, fig.width = 6, fig.height = 4, out.width = "60%"
+ggRecursosFRE2b
+guardarGGplot(ggRecursosFRE2b, '100b_RelacionRecursosFRE', 6, 4)
+
+
+
+
+
+
+
+
+
+
 
