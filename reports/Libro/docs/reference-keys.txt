@@ -6,6 +6,7 @@ fig:pieProfesional2
 tab:CaracterizacionIngreso1
 fig:institucionesInscritas
 fig:institucionesInscritasRelacion
+fig:institucionesInscritasVARdemo
 fig:IngresosFRE1
 fig:IngresosFRE2
 fig:existenciasRecetarios
@@ -148,4 +149,3 @@ región-caribe
 región-orinoquía
 región-pacífica
 lineamientos-y-recomendaciones-generales
-fig:institucionesInscritasVARdemo

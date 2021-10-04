@@ -50,7 +50,7 @@ wrap_plots(g1, g2) + plot_layout(ncol = 2, nrow=1, widths = c(0.4,0.6), tag_leve
 
 Los amplios márgenes de ganancia y las proporciones distintas entre unos FRE y otros, se podrían relacionar con la cantidad de medidas de seguridad del recetario, la facilidad de acceso del departamento, el número de prescripciones, el tipo de licitación o la cantidad de empresas oferentes en los concursos de licitación de recetarios. En la Figura \@ref(fig:DependParcial1) se ilustra algunas de las variantes mencionadas en donde se logran establecer tendencias como que el número de prescripciones en general, elevan el costo de los recetarios. Pese a ello y contrario a lo que se podría suponer, la disposición estadística indica que a mayor número de medidas de seguridad en el recetario, es menor su precio. Esto podría deberse a la forma en que se adjudican los contratos y a la facilidad de elaboración en departamentos con capacidad tecnológica adecuada y diferentes oferentes en el concurso de contratación.
 
-```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcia - Modelo de Costos', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de Costos', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds')) + plot_annotation(title = NULL)
 ```
 

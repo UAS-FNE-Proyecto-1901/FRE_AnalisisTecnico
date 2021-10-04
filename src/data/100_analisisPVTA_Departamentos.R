@@ -66,6 +66,28 @@ data_1 <- data_1 %>%
     add_column(datos_ref, DEPTO = 'CUNDINAMARCA', COD_DEPTO = 25)  
   )
 
+# Adicionar datos de Vaupés
+medic_vaupes <- c(
+  'FENOBARBITAL 100 mg Tabletas',
+  'MORFINA HCL 10 mg/Ml',
+  'FENOBARBITAL SÓDICO 40 mg/mL',
+  'MEPERIDINA HCL 100 mg/2 mL',
+  'FENOBARBITAL SÓDICO 200 mg/mL',
+  'FENOBARBITAL 0,4% Sln Oral'
+)
+
+medic_vaupes <- data_1 %>% 
+  filter(DEPTO == 'CUNDINAMARCA') %>% 
+  filter(MEDICAMENTO %in% medic_vaupes) %>% 
+  mutate(
+    VALOR = VALOR * 1.05,
+    DEPTO = 'VAUPES', 
+    COD_DEPTO = 97)
+
+data_1 <- data_1 %>% 
+  add_row(
+    medic_vaupes
+  )
 
 # Localización GEO
 geoCOL <- read_sf(file.path('data', 'external', 'colombia_geo.json'))
