@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.8.2)  4 OCT 2021 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.8.2)  6 OCT 2021 14:12
 entering extended mode
 **./InformeFinal.tex
 (InformeFinal.tex
@@ -1262,7 +1262,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf, id=199, 722.7pt x 5
+<InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf, id=209, 722.7pt x 5
 78.16pt>
 File: InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf Graphic file (t
 ype pdf)
@@ -1274,7 +1274,7 @@ pdf  used on input line 417.
 LaTeX Info: Redefining \. on input line 425.
 LaTeX Info: Redefining \% on input line 425.
 [16 <./InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf>]
-<InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf, id=225, 939.
+<InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf, id=235, 939.
 51pt x 361.35pt>
 File: InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf Graphic 
 file (type pdf)
@@ -1285,7 +1285,7 @@ gado-1.pdf  used on input line 449.
 LaTeX Info: Redefining \. on input line 453.
 LaTeX Info: Redefining \% on input line 453.
 [17]
-<InformeFinal_files/figure-latex/perfilProfesional2-1.pdf, id=237, 578.16pt x 4
+<InformeFinal_files/figure-latex/perfilProfesional2-1.pdf, id=247, 578.16pt x 4
 33.62pt>
 File: InformeFinal_files/figure-latex/perfilProfesional2-1.pdf Graphic file (ty
 pe pdf)
@@ -1293,7 +1293,7 @@ pe pdf)
 Package pdftex.def Info: InformeFinal_files/figure-latex/perfilProfesional2-1.p
 df  used on input line 455.
 (pdftex.def)             Requested size: 395.6314pt x 296.72356pt.
-<InformeFinal_files/figure-latex/perfilProfesional3-1.pdf, id=242, 939.51pt x 3
+<InformeFinal_files/figure-latex/perfilProfesional3-1.pdf, id=252, 939.51pt x 3
 61.35pt>
 File: InformeFinal_files/figure-latex/perfilProfesional3-1.pdf Graphic file (ty
 pe pdf)
@@ -1308,7 +1308,7 @@ LaTeX Info: Redefining \. on input line 471.
 LaTeX Info: Redefining \% on input line 471.
 [19 <./InformeFinal_files/figure-latex/perfilProfesional2-1.pdf> <./InformeFina
 l_files/figure-latex/perfilProfesional3-1.pdf>]
-<InformeFinal_files/figure-latex/pieProfesional2-1.pdf, id=282, 578.16pt x 325.
+<InformeFinal_files/figure-latex/pieProfesional2-1.pdf, id=292, 578.16pt x 325.
 215pt>
 File: InformeFinal_files/figure-latex/pieProfesional2-1.pdf Graphic file (type 
 pdf)
@@ -1319,7 +1319,7 @@ Package pdftex.def Info: InformeFinal_files/figure-latex/pieProfesional2-1.pdf
 LaTeX Info: Redefining \. on input line 503.
 LaTeX Info: Redefining \% on input line 503.
 [20 <./InformeFinal_files/figure-latex/pieProfesional2-1.pdf>]
-<InformeFinal_files/figure-latex/institucionesInscritas-1.pdf, id=298, 433.62pt
+<InformeFinal_files/figure-latex/institucionesInscritas-1.pdf, id=308, 433.62pt
  x 289.08pt>
 File: InformeFinal_files/figure-latex/institucionesInscritas-1.pdf Graphic file
  (type pdf)
@@ -1330,7 +1330,7 @@ Package pdftex.def Info: InformeFinal_files/figure-latex/institucionesInscritas
 LaTeX Info: Redefining \. on input line 509.
 LaTeX Info: Redefining \% on input line 509.
 [21 <./InformeFinal_files/figure-latex/institucionesInscritas-1.pdf>]
-<InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf, id=311, 
+<InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf, id=321, 
 433.62pt x 289.08pt>
 File: InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf Grap
 hic file (type pdf)
@@ -1338,7 +1338,7 @@ hic file (type pdf)
 Package pdftex.def Info: InformeFinal_files/figure-latex/institucionesInscritas
 Relacion-1.pdf  used on input line 519.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf, id=312, 7
+<InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf, id=322, 7
 22.7pt x 289.08pt>
 File: InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf Graph
 ic file (type pdf)
@@ -1353,7 +1353,7 @@ LaTeX Info: Redefining \. on input line 538.
 LaTeX Info: Redefining \% on input line 538.
 [23 <./InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf> <.
 /InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf>]
-<InformeFinal_files/figure-latex/IngresosFRE1-1.pdf, id=342, 578.16pt x 433.62p
+<InformeFinal_files/figure-latex/IngresosFRE1-1.pdf, id=352, 578.16pt x 433.62p
 t>
 File: InformeFinal_files/figure-latex/IngresosFRE1-1.pdf Graphic file (type pdf
 )
@@ -1364,7 +1364,7 @@ ed on input line 548.
 LaTeX Info: Redefining \. on input line 566.
 LaTeX Info: Redefining \% on input line 566.
 [24 <./InformeFinal_files/figure-latex/IngresosFRE1-1.pdf>]
-<InformeFinal_files/figure-latex/IngresosFRE2-1.pdf, id=356, 578.16pt x 433.62p
+<InformeFinal_files/figure-latex/IngresosFRE2-1.pdf, id=366, 578.16pt x 433.62p
 t>
 File: InformeFinal_files/figure-latex/IngresosFRE2-1.pdf Graphic file (type pdf
 )
@@ -1381,7 +1381,7 @@ LaTeX Info: Redefining \% on input line 577.
 
 ]
 Cap\'{\i }tulo 5.
-<InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf, id=374, 578.16pt 
+<InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf, id=384, 578.16pt 
 x 433.62pt>
 File: InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf Graphic file 
 (type pdf)
@@ -1390,7 +1390,7 @@ Package pdftex.def Info: InformeFinal_files/figure-latex/existenciasRecetarios-
 1.pdf  used on input line 587.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
 [27 <./InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf>]
-<InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf, id=387, 505.89pt
+<InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf, id=397, 505.89pt
  x 361.35pt>
 File: InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf Graphic file
  (type pdf)
@@ -1398,7 +1398,7 @@ File: InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf Graphic file
 Package pdftex.def Info: InformeFinal_files/figure-latex/existenciasRecetarios2
 -1.pdf  used on input line 595.
 (pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-<InformeFinal_files/figure-latex/existenciaRecetarios3-1.pdf, id=390, 505.89pt 
+<InformeFinal_files/figure-latex/existenciaRecetarios3-1.pdf, id=400, 505.89pt 
 x 361.35pt>
 File: InformeFinal_files/figure-latex/existenciaRecetarios3-1.pdf Graphic file 
 (type pdf)
@@ -1409,7 +1409,7 @@ Package pdftex.def Info: InformeFinal_files/figure-latex/existenciaRecetarios3-
 LaTeX Info: Redefining \. on input line 605.
 LaTeX Info: Redefining \% on input line 605.
 [28 <./InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf>]
-<InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf, id=405, 433.62pt 
+<InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf, id=415, 433.62pt 
 x 289.08pt>
 File: InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf Graphic file 
 (type pdf)
@@ -1417,7 +1417,7 @@ File: InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf Graphic file
 Package pdftex.def Info: InformeFinal_files/figure-latex/existenciaRecetarios4-
 1.pdf  used on input line 609.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/costoRecetario-1.pdf, id=407, 578.16pt x 361.3
+<InformeFinal_files/figure-latex/costoRecetario-1.pdf, id=417, 578.16pt x 361.3
 5pt>
 File: InformeFinal_files/figure-latex/costoRecetario-1.pdf Graphic file (type p
 df)
@@ -1432,7 +1432,7 @@ LaTeX Info: Redefining \. on input line 624.
 LaTeX Info: Redefining \% on input line 624.
 [30 <./InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf> <./InformeF
 inal_files/figure-latex/costoRecetario-1.pdf>]
-<InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf, id=441, 867.2
+<InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf, id=451, 867.2
 4pt x 433.62pt>
 File: InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf Graphic f
 ile (type pdf)
@@ -1440,7 +1440,7 @@ ile (type pdf)
 Package pdftex.def Info: InformeFinal_files/figure-latex/comparativoDepartament
 os0-1.pdf  used on input line 629.
 (pdftex.def)             Requested size: 439.60027pt x 219.80013pt.
-<InformeFinal_files/figure-latex/DependParcial1-1.pdf, id=443, 650.43pt x 361.3
+<InformeFinal_files/figure-latex/DependParcial1-1.pdf, id=453, 650.43pt x 361.3
 5pt>
 File: InformeFinal_files/figure-latex/DependParcial1-1.pdf Graphic file (type p
 df)
@@ -1451,7 +1451,7 @@ used on input line 639.
 LaTeX Info: Redefining \. on input line 645.
 LaTeX Info: Redefining \% on input line 645.
 [31 <./InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf>]
-<InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf, id=460, 650.43pt x 361.
+<InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf, id=470, 650.43pt x 361.
 35pt>
 File: InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf Graphic file (type 
 pdf)
@@ -1459,7 +1459,7 @@ pdf)
 Package pdftex.def Info: InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf 
  used on input line 647.
 (pdftex.def)             Requested size: 395.64021pt x 219.80013pt.
-<InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf, id=463, 505.89pt x
+<InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf, id=473, 505.89pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf Graphic file (
 type pdf)
@@ -1478,7 +1478,7 @@ LaTeX Info: Redefining \. on input line 668.
 LaTeX Info: Redefining \% on input line 668.
 [33 <./InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf> <./InformeFinal_f
 iles/figure-latex/modalidadAdquisicion-1.pdf>]
-<InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf, id=494, 505.89p
+<InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf, id=504, 505.89p
 t x 361.35pt>
 File: InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf Graphic fil
 e (type pdf)
@@ -1489,7 +1489,7 @@ n-1.pdf  used on input line 676.
 LaTeX Info: Redefining \. on input line 683.
 LaTeX Info: Redefining \% on input line 683.
 [34 <./InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf>]
-<InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf, id=508, 505.89pt x 289.
+<InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf, id=518, 505.89pt x 289.
 08pt>
 File: InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf Graphic file (type 
 pdf)
@@ -1500,7 +1500,7 @@ Package pdftex.def Info: InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf
 LaTeX Info: Redefining \. on input line 714.
 LaTeX Info: Redefining \% on input line 714.
 [35 <./InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf>]
-<InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf, id=524, 578.16
+<InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf, id=534, 578.16
 pt x 361.35pt>
 File: InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf Graphic fi
 le (type pdf)
@@ -1514,7 +1514,7 @@ Underfull \vbox (badness 2582) has occurred while \output is active []
 LaTeX Info: Redefining \. on input line 741.
 LaTeX Info: Redefining \% on input line 741.
 [36]
-<InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf, id=533, 505.89pt x 
+<InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf, id=543, 505.89pt x 
 361.35pt>
 File: InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf Graphic file (t
 ype pdf)
@@ -1528,7 +1528,7 @@ LaTeX Info: Redefining \% on input line 747.
 LaTeX Info: Redefining \. on input line 747.
 LaTeX Info: Redefining \% on input line 747.
 [38 <./InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf>]
-<InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf, id=561, 722.7pt x
+<InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf, id=571, 722.7pt x
  361.35pt>
 File: InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf Graphic file 
 (type pdf)
@@ -1536,7 +1536,7 @@ File: InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf Graphic file
 Package pdftex.def Info: InformeFinal_files/figure-latex/ComparativoCostosRec1-
 1.pdf  used on input line 749.
 (pdftex.def)             Requested size: 395.6336pt x 197.8168pt.
-<InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf, id=564, 4
+<InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf, id=574, 4
 33.62pt x 361.35pt>
 File: InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf Graph
 ic file (type pdf)
@@ -1544,7 +1544,7 @@ ic file (type pdf)
 Package pdftex.def Info: InformeFinal_files/figure-latex/ReciboRecetariosInstit
 uciones-1.pdf  used on input line 757.
 (pdftex.def)             Requested size: 373.68007pt x 311.40005pt.
-<InformeFinal_files/figure-latex/TiempoRecepcionRecOficiales-1.pdf, id=568, 505
+<InformeFinal_files/figure-latex/TiempoRecepcionRecOficiales-1.pdf, id=578, 505
 .89pt x 361.35pt>
 File: InformeFinal_files/figure-latex/TiempoRecepcionRecOficiales-1.pdf Graphic
  file (type pdf)
@@ -1558,7 +1558,7 @@ LaTeX Info: Redefining \% on input line 767.
 LaTeX Info: Redefining \. on input line 767.
 LaTeX Info: Redefining \% on input line 767.
 [40 <./InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf>]
-<InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf, id=595
+<InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf, id=605
 , 505.89pt x 361.35pt>
 File: InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf Gr
 aphic file (type pdf)
@@ -1566,7 +1566,7 @@ aphic file (type pdf)
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiempoArchivoRecetario
 sOficiales-1.pdf  used on input line 769.
 (pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-<InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf, id=598,
+<InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf, id=608,
  505.89pt x 361.35pt>
 File: InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf Gra
 phic file (type pdf)
@@ -1590,7 +1590,7 @@ LaTeX Info: Redefining \% on input line 777.
 LaTeX Warning: Reference `fig:MedidasSeguridad-Almacenamiento' on page 43 undef
 ined on input line 784.
 
-<InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf, id=633, 433.62pt x
+<InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf, id=643, 433.62pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf Graphic file (
 type pdf)
@@ -1601,7 +1601,7 @@ Package pdftex.def Info: InformeFinal_files/figure-latex/FREImplementacionROE-1
 LaTeX Info: Redefining \. on input line 802.
 LaTeX Info: Redefining \% on input line 802.
 [43]
-<InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf, id=642, 578.16
+<InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf, id=652, 578.16
 pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf Graphic fi
 le (type pdf)
@@ -1621,819 +1621,826 @@ LaTeX Info: Redefining \% on input line 808.
 
 ]
 Cap\'{\i }tulo 6.
-<InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf, id=671, 5
+<InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf, id=682, 5
 05.89pt x 361.35pt>
 File: InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf Graph
 ic file (type pdf)
 <use InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/HerramientasManejoInve
-ntarios-1.pdf  used on input line 818.
+ntarios-1.pdf  used on input line 823.
 (pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-<InformeFinal_files/figure-latex/HerramientasManejoInventarios1-1.pdf, id=672, 
-505.89pt x 361.35pt>
-File: InformeFinal_files/figure-latex/HerramientasManejoInventarios1-1.pdf Grap
-hic file (type pdf)
-<use InformeFinal_files/figure-latex/HerramientasManejoInventarios1-1.pdf>
-Package pdftex.def Info: InformeFinal_files/figure-latex/HerramientasManejoInve
-ntarios1-1.pdf  used on input line 824.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-<InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf, id=67
-3, 433.62pt x 289.08pt>
-File: InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf G
-raphic file (type pdf)
-<use InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf>
-Package pdftex.def Info: InformeFinal_files/figure-latex/PropHerramientasManejo
-Inventarios-1.pdf  used on input line 828.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf, id=674, 867.24
+[47]
+<InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf, id=693, 867.24
 pt x 505.89pt>
 File: InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/EtapasProcesoAdquisici
-on-1.pdf  used on input line 832.
+on-1.pdf  used on input line 860.
 (pdftex.def)             Requested size: 439.60027pt x 256.43347pt.
-<InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf, id=675,
+LaTeX Info: Redefining \. on input line 864.
+LaTeX Info: Redefining \% on input line 864.
+[48 <./InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf>]
+<InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf, id=716,
  578.16pt x 433.62pt>
 File: InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf Gra
 phic file (type pdf)
 <use InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/EtapasProcesoAdquisici
-onDetalle-1.pdf  used on input line 836.
+onDetalle-1.pdf  used on input line 866.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposTranslados-1.pdf, id=676, 433.62pt x 28
-9.08pt>
+LaTeX Info: Redefining \. on input line 876.
+LaTeX Info: Redefining \% on input line 876.
+[49 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf>]
+LaTeX Info: Redefining \. on input line 876.
+LaTeX Info: Redefining \% on input line 876.
+[50 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf>]
+<InformeFinal_files/figure-latex/TiemposTranslados-1.pdf, id=740, 794.97pt x 32
+5.215pt>
 File: InformeFinal_files/figure-latex/TiemposTranslados-1.pdf Graphic file (typ
 e pdf)
 <use InformeFinal_files/figure-latex/TiemposTranslados-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposTranslados-1.pd
-f  used on input line 840.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/TiemposTransladosMapa-1.pdf, id=677, 578.16pt 
-x 433.62pt>
-File: InformeFinal_files/figure-latex/TiemposTransladosMapa-1.pdf Graphic file 
-(type pdf)
-<use InformeFinal_files/figure-latex/TiemposTransladosMapa-1.pdf>
-Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposTransladosMapa-
-1.pdf  used on input line 844.
-(pdftex.def)             Requested size: 395.6314pt x 296.72356pt.
-<InformeFinal_files/figure-latex/ColombiaCompra-1.pdf, id=678, 578.16pt x 433.6
+f  used on input line 883.
+(pdftex.def)             Requested size: 439.60025pt x 179.83646pt.
+LaTeX Info: Redefining \. on input line 892.
+LaTeX Info: Redefining \% on input line 892.
+[51 <./InformeFinal_files/figure-latex/TiemposTranslados-1.pdf>]
+<InformeFinal_files/figure-latex/ColombiaCompra-1.pdf, id=757, 578.16pt x 433.6
 2pt>
 File: InformeFinal_files/figure-latex/ColombiaCompra-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/ColombiaCompra-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ColombiaCompra-1.pdf  
-used on input line 848.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf, id=679, 433.62pt x 289.0
+used on input line 900.
+(pdftex.def)             Requested size: 439.59143pt x 329.69357pt.
+LaTeX Info: Redefining \. on input line 915.
+LaTeX Info: Redefining \% on input line 915.
+[52]
+LaTeX Info: Redefining \. on input line 915.
+LaTeX Info: Redefining \% on input line 915.
+[53 <./InformeFinal_files/figure-latex/ColombiaCompra-1.pdf>]
+<InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf, id=779, 433.62pt x 289.0
 8pt>
 File: InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf  
-used on input line 852.
+used on input line 917.
 (pdftex.def)             Requested size: 395.65346pt x 263.76897pt.
-<InformeFinal_files/figure-latex/FrecComprasFNRb-1.pdf, id=680, 505.89pt x 289.
-08pt>
-File: InformeFinal_files/figure-latex/FrecComprasFNRb-1.pdf Graphic file (type 
-pdf)
-<use InformeFinal_files/figure-latex/FrecComprasFNRb-1.pdf>
-Package pdftex.def Info: InformeFinal_files/figure-latex/FrecComprasFNRb-1.pdf 
- used on input line 856.
-(pdftex.def)             Requested size: 395.64241pt x 226.08138pt.
-<InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf, id=681, 433.62pt
+<InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf, id=780, 433.62pt
  x 289.08pt>
 File: InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecVentaInstituciones
--1.pdf  used on input line 860.
+-1.pdf  used on input line 923.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamiento-1.pdf, id=682, 
+<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamiento-1.pdf, id=781, 
 578.16pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamiento-1.pdf Grap
 hic file (type pdf)
 <use InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamiento-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposRecepcionAlmace
-namiento-1.pdf  used on input line 869.
+namiento-1.pdf  used on input line 934.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf, id=683,
+<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf, id=782,
  578.16pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf Gra
 phic file (type pdf)
 <use InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposRecepcionAlmace
-namientob-1.pdf  used on input line 873.
+namientob-1.pdf  used on input line 938.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientoMapa-1.pdf, id=6
-84, 578.16pt x 433.62pt>
+<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientoMapa-1.pdf, id=7
+83, 578.16pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientoMapa-1.pdf 
 Graphic file (type pdf)
 <use InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientoMapa-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposRecepcionAlmace
-namientoMapa-1.pdf  used on input line 877.
+namientoMapa-1.pdf  used on input line 942.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf, id=685, 433.62pt x 
+<InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf, id=784, 433.62pt x 
 289.08pt>
 File: InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.
-pdf  used on input line 881.
+pdf  used on input line 946.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[47 <./InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf>]
-LaTeX Info: Redefining \. on input line 893.
-LaTeX Info: Redefining \% on input line 893.
-[48 <./InformeFinal_files/figure-latex/HerramientasManejoInventarios1-1.pdf> <.
-/InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf>]
-<InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf, id=72
-1, 578.16pt x 433.62pt>
+LaTeX Info: Redefining \. on input line 958.
+LaTeX Info: Redefining \% on input line 958.
+[54 <./InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf>]
+LaTeX Info: Redefining \. on input line 958.
+LaTeX Info: Redefining \% on input line 958.
+[55 <./InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf> <./Informe
+Final_files/figure-latex/TiemposRecepcionAlmacenamiento-1.pdf>]
+LaTeX Info: Redefining \. on input line 958.
+LaTeX Info: Redefining \% on input line 958.
+[56 <./InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf>]
+LaTeX Info: Redefining \. on input line 958.
+LaTeX Info: Redefining \% on input line 958.
+[57 <./InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientoMapa-1.pdf
+> <./InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf>]
+<InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf, id=84
+6, 578.16pt x 433.62pt>
 File: InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf G
 raphic file (type pdf)
 <use InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MedidasSeguridadAlmace
-namientoMME-1.pdf  used on input line 895.
+namientoMME-1.pdf  used on input line 960.
 (pdftex.def)             Requested size: 395.6314pt x 296.72356pt.
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[49 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[50 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf> <
-./InformeFinal_files/figure-latex/TiemposTranslados-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[51 <./InformeFinal_files/figure-latex/TiemposTransladosMapa-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[52 <./InformeFinal_files/figure-latex/ColombiaCompra-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[53 <./InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf> <./InformeFinal_fi
-les/figure-latex/FrecComprasFNRb-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[54 <./InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf> <./Informe
-Final_files/figure-latex/TiemposRecepcionAlmacenamiento-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[55 <./InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[56 <./InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientoMapa-1.pdf
-> <./InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf>]
-LaTeX Info: Redefining \. on input line 906.
-LaTeX Info: Redefining \% on input line 906.
-[57 <./InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf>
+LaTeX Info: Redefining \. on input line 966.
+LaTeX Info: Redefining \% on input line 966.
+[58 <./InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf>
 ]
-<InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf, id=859, 433.62pt x 2
+<InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf, id=863, 433.62pt x 2
 89.08pt>
 File: InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecRevCondiciones-1.p
-df  used on input line 908.
+df  used on input line 973.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
 <InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf, id=8
-62, 722.7pt x 289.08pt>
+66, 722.7pt x 289.08pt>
 File: InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf 
 Graphic file (type pdf)
 <use InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MetodosSeguimientoCont
-rolAmbiental-1.pdf  used on input line 914.
+rolAmbiental-1.pdf  used on input line 979.
 (pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
-<InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf, id=865, 578.16pt 
+
+Underfull \vbox (badness 7221) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 988.
+LaTeX Info: Redefining \% on input line 988.
+[59 <./InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf>]
+<InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf, id=885, 578.16pt 
 x 433.62pt>
 File: InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ProductosCompartidos1-
-1.pdf  used on input line 925.
+1.pdf  used on input line 990.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-LaTeX Info: Redefining \. on input line 926.
-LaTeX Info: Redefining \% on input line 926.
-[58 <./InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf>]
-<InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf, id=883, 433.62pt x
+<InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf, id=887, 433.62pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf Graphic file (
 type pdf)
 <use InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/PropOcupacionAlmacen-1
-.pdf  used on input line 931.
+.pdf  used on input line 996.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf, id=886, 722.7pt 
+<InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf, id=890, 722.7pt 
 x 289.08pt>
 File: InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecControlExistencias
--1.pdf  used on input line 938.
+-1.pdf  used on input line 1003.
 (pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
-LaTeX Info: Redefining \. on input line 957.
-LaTeX Info: Redefining \% on input line 957.
-[59 <./InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf
+LaTeX Info: Redefining \. on input line 1014.
+LaTeX Info: Redefining \% on input line 1014.
+[60 <./InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf
 >]
-LaTeX Info: Redefining \. on input line 957.
-LaTeX Info: Redefining \% on input line 957.
-[60 <./InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf> <./InformeF
+LaTeX Info: Redefining \. on input line 1014.
+LaTeX Info: Redefining \% on input line 1014.
+[61 <./InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf> <./InformeF
 inal_files/figure-latex/PropOcupacionAlmacen-1.pdf>]
-<InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf, id=928, 433.62pt x 28
+<InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf, id=934, 433.62pt x 28
 9.08pt>
 File: InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf Graphic file (typ
 e pdf)
 <use InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/CasosVencimiento1-1.pd
-f  used on input line 965.
+f  used on input line 1032.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/CasosVencimiento2-1.pdf, id=929, 433.62pt x 28
+LaTeX Info: Redefining \. on input line 1046.
+LaTeX Info: Redefining \% on input line 1046.
+[62 <./InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf>]
+<InformeFinal_files/figure-latex/CasosVencimiento2-1.pdf, id=951, 433.62pt x 28
 9.08pt>
 File: InformeFinal_files/figure-latex/CasosVencimiento2-1.pdf Graphic file (typ
 e pdf)
 <use InformeFinal_files/figure-latex/CasosVencimiento2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/CasosVencimiento2-1.pd
-f  used on input line 969.
+f  used on input line 1048.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/TransporteProductos-1.pdf, id=931, 433.62pt x 
+<InformeFinal_files/figure-latex/TransporteProductos-1.pdf, id=953, 433.62pt x 
 289.08pt>
 File: InformeFinal_files/figure-latex/TransporteProductos-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/TransporteProductos-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TransporteProductos-1.
-pdf  used on input line 980.
+pdf  used on input line 1059.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 992.
-LaTeX Info: Redefining \% on input line 992.
-[61 <./InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf>]
-LaTeX Info: Redefining \. on input line 992.
-LaTeX Info: Redefining \% on input line 992.
-[62 <./InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf> <./InformeFinal
-_files/figure-latex/CasosVencimiento2-1.pdf>]
-<InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf, id=967, 1445.
+LaTeX Info: Redefining \. on input line 1071.
+LaTeX Info: Redefining \% on input line 1071.
+[63 <./InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf>]
+LaTeX Info: Redefining \. on input line 1071.
+LaTeX Info: Redefining \% on input line 1071.
+[64 <./InformeFinal_files/figure-latex/CasosVencimiento2-1.pdf> <./InformeFinal
+_files/figure-latex/TransporteProductos-1.pdf>]
+<InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf, id=986, 1445.
 4pt x 1084.05pt>
 File: InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf Graphic f
 ile (type pdf)
 <use InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/precioVentasDepartamen
-tos-1.pdf  used on input line 1009.
+tos-1.pdf  used on input line 1088.
 (pdftex.def)             Requested size: 439.60025pt x 329.7002pt.
-LaTeX Info: Redefining \. on input line 1010.
-LaTeX Info: Redefining \% on input line 1010.
-[63 <./InformeFinal_files/figure-latex/TransporteProductos-1.pdf>]
-LaTeX Info: Redefining \. on input line 1019.
-LaTeX Info: Redefining \% on input line 1019.
-[64 <./InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf>]
-<InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf, id=1017, 867.24p
-t x 361.35pt>
+<InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf, id=988, 867.24pt
+ x 361.35pt>
 File: InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/boxplotComparativoPVTA
--1.pdf  used on input line 1021.
+-1.pdf  used on input line 1100.
 (pdftex.def)             Requested size: 439.60027pt x 183.16676pt.
-<InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf, id=1020, 722.7pt 
+LaTeX Info: Redefining \. on input line 1105.
+LaTeX Info: Redefining \% on input line 1105.
+[65]
+<InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf, id=1000, 722.7pt 
 x 397.485pt>
 File: InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/relacionMargenesCosto-
-1.pdf  used on input line 1034.
+1.pdf  used on input line 1113.
 (pdftex.def)             Requested size: 417.6114pt x 229.68626pt.
-LaTeX Info: Redefining \. on input line 1052.
-LaTeX Info: Redefining \% on input line 1052.
-[65 <./InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf>]
-LaTeX Info: Redefining \. on input line 1052.
-LaTeX Info: Redefining \% on input line 1052.
-[66 <./InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf>]
+
+Underfull \vbox (badness 5417) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1127.
+LaTeX Info: Redefining \% on input line 1127.
+[66 <./InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf>]
+LaTeX Info: Redefining \. on input line 1131.
+LaTeX Info: Redefining \% on input line 1131.
+[67 <./InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf>]
+LaTeX Info: Redefining \. on input line 1131.
+LaTeX Info: Redefining \% on input line 1131.
+[68 <./InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf>]
 Cap\'{\i }tulo 7.
-<InformeFinal_files/figure-latex/MediosComunicacion-1.pdf, id=1049, 505.89pt x 
+<InformeFinal_files/figure-latex/MediosComunicacion-1.pdf, id=1061, 505.89pt x 
 361.35pt>
 File: InformeFinal_files/figure-latex/MediosComunicacion-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/MediosComunicacion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MediosComunicacion-1.p
-df  used on input line 1059.
+df  used on input line 1138.
 (pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-[67
+[69
 
  <./InformeFinal_files/figure-latex/MediosComunicacion-1.pdf>]
-<InformeFinal_files/figure-latex/ConexionInternet-1.pdf, id=1065, 505.89pt x 36
+<InformeFinal_files/figure-latex/ConexionInternet-1.pdf, id=1076, 505.89pt x 36
 1.35pt>
 File: InformeFinal_files/figure-latex/ConexionInternet-1.pdf Graphic file (type
  pdf)
 <use InformeFinal_files/figure-latex/ConexionInternet-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ConexionInternet-1.pdf
-  used on input line 1065.
+  used on input line 1144.
 (pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-<InformeFinal_files/figure-latex/EquiposComputo-1.pdf, id=1067, 433.62pt x 289.
+<InformeFinal_files/figure-latex/EquiposComputo-1.pdf, id=1078, 433.62pt x 289.
 08pt>
 File: InformeFinal_files/figure-latex/EquiposComputo-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/EquiposComputo-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/EquiposComputo-1.pdf  
-used on input line 1071.
+used on input line 1150.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf, id=1068, 433.62
+<InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf, id=1079, 433.62
 pt x 289.08pt>
 File: InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf Graphic fil
 e (type pdf)
 <use InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/RelacionEquiposPersona
-l-1.pdf  used on input line 1077.
+l-1.pdf  used on input line 1156.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1081.
-LaTeX Info: Redefining \% on input line 1081.
-[68 <./InformeFinal_files/figure-latex/ConexionInternet-1.pdf>] [69 <./InformeF
+LaTeX Info: Redefining \. on input line 1160.
+LaTeX Info: Redefining \% on input line 1160.
+[70 <./InformeFinal_files/figure-latex/ConexionInternet-1.pdf>] [71 <./InformeF
 inal_files/figure-latex/EquiposComputo-1.pdf> <./InformeFinal_files/figure-late
 x/RelacionEquiposPersonal-1.pdf>]
-<InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf, id=1103, 433.62pt
+<InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf, id=1114, 433.62pt
  x 289.08pt>
 File: InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/OpinionEquiposComputo-
-1.pdf  used on input line 1083.
+1.pdf  used on input line 1162.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1089.
-LaTeX Info: Redefining \% on input line 1089.
-[70 <./InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf>]
+LaTeX Info: Redefining \. on input line 1168.
+LaTeX Info: Redefining \% on input line 1168.
+[72 <./InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf>]
 Cap\'{\i }tulo 8.
-[71
+[73
 
 ]
-<InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf, id=1125, 505.89pt x
+<InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf, id=1137, 505.89pt x
  361.35pt>
 File: InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/HerramientasDiligA1-1.
-pdf  used on input line 1121.
+pdf  used on input line 1200.
 (pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-<InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf, id=1127, 578.16pt x 
+<InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf, id=1139, 578.16pt x 
 433.62pt>
 File: InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ControlesVentasFRE-1.p
-df  used on input line 1127.
+df  used on input line 1206.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf, id=1128, 578.16p
+<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf, id=1140, 578.16p
 t x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposConsolidacionA1
--1.pdf  used on input line 1133.
+-1.pdf  used on input line 1212.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf, id=1129, 578.1
+<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf, id=1141, 578.1
 6pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposConsolidacionA1
--1-1.pdf  used on input line 1137.
+-1-1.pdf  used on input line 1216.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf, id=1130, 722.7pt
+<InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf, id=1142, 722.7pt
  x 361.35pt>
 File: InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposConsolidacionA2
--1.pdf  used on input line 1141.
+-1.pdf  used on input line 1220.
 (pdftex.def)             Requested size: 439.60025pt x 219.80013pt.
-<InformeFinal_files/figure-latex/RecepcionA13-1.pdf, id=1131, 578.16pt x 433.62
+<InformeFinal_files/figure-latex/RecepcionA13-1.pdf, id=1143, 578.16pt x 433.62
 pt>
 File: InformeFinal_files/figure-latex/RecepcionA13-1.pdf Graphic file (type pdf
 )
 <use InformeFinal_files/figure-latex/RecepcionA13-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/RecepcionA13-1.pdf  us
-ed on input line 1145.
+ed on input line 1224.
 (pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf, id=1132, 433.62pt x 
+<InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf, id=1144, 433.62pt x 
 289.08pt>
 File: InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ArchivoInformesFRE-1.p
-df  used on input line 1148.
+df  used on input line 1227.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf, id=1133, 433.6
+<InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf, id=1145, 433.6
 2pt x 289.08pt>
 File: InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/SeguimientoEnvioInform
-es-1.pdf  used on input line 1151.
+es-1.pdf  used on input line 1230.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf, id=1134, 43
+<InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf, id=1146, 43
 3.62pt x 289.08pt>
 File: InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf Graphic
  file (type pdf)
 <use InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/IncumplimientoEnvioInf
-ormes-1.pdf  used on input line 1154.
+ormes-1.pdf  used on input line 1233.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1158.
-LaTeX Info: Redefining \% on input line 1158.
-[72 <./InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf>] [73 <./Infor
+LaTeX Info: Redefining \. on input line 1237.
+LaTeX Info: Redefining \% on input line 1237.
+[74 <./InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf>] [75 <./Infor
 meFinal_files/figure-latex/ControlesVentasFRE-1.pdf>]
-LaTeX Info: Redefining \. on input line 1158.
-LaTeX Info: Redefining \% on input line 1158.
-[74 <./InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf>] [75 <./In
+LaTeX Info: Redefining \. on input line 1237.
+LaTeX Info: Redefining \% on input line 1237.
+[76 <./InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf>] [77 <./In
 formeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf> <./InformeFinal_f
 iles/figure-latex/TiemposConsolidacionA2-1.pdf>]
-LaTeX Info: Redefining \. on input line 1158.
-LaTeX Info: Redefining \% on input line 1158.
-[76 <./InformeFinal_files/figure-latex/RecepcionA13-1.pdf> <./InformeFinal_file
-s/figure-latex/ArchivoInformesFRE-1.pdf>] [77 <./InformeFinal_files/figure-late
+LaTeX Info: Redefining \. on input line 1237.
+LaTeX Info: Redefining \% on input line 1237.
+[78 <./InformeFinal_files/figure-latex/RecepcionA13-1.pdf> <./InformeFinal_file
+s/figure-latex/ArchivoInformesFRE-1.pdf>] [79 <./InformeFinal_files/figure-late
 x/SeguimientoEnvioInformes-1.pdf> <./InformeFinal_files/figure-latex/Incumplimi
 entoEnvioInformes-1.pdf>]
-<InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf, id=1238, 433.62pt x
+<InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf, id=1250, 433.62pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/GarantiaInformacion-1.
-pdf  used on input line 1165.
+pdf  used on input line 1244.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/InformInscritos-1.pdf, id=1239, 433.62pt x 289
+<InformeFinal_files/figure-latex/InformInscritos-1.pdf, id=1251, 433.62pt x 289
 .08pt>
 File: InformeFinal_files/figure-latex/InformInscritos-1.pdf Graphic file (type 
 pdf)
 <use InformeFinal_files/figure-latex/InformInscritos-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/InformInscritos-1.pdf 
- used on input line 1168.
+ used on input line 1247.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/InformPacientes-1.pdf, id=1240, 433.62pt x 289
+<InformeFinal_files/figure-latex/InformPacientes-1.pdf, id=1252, 433.62pt x 289
 .08pt>
 File: InformeFinal_files/figure-latex/InformPacientes-1.pdf Graphic file (type 
 pdf)
 <use InformeFinal_files/figure-latex/InformPacientes-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/InformPacientes-1.pdf 
- used on input line 1171.
+ used on input line 1250.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf, id=1241, 433.6
+<InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf, id=1253, 433.6
 2pt x 289.08pt>
 File: InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/InstitucionesAdicional
-es-1.pdf  used on input line 1175.
+es-1.pdf  used on input line 1254.
 (pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1179.
-LaTeX Info: Redefining \% on input line 1179.
-[78 <./InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf>]
-LaTeX Info: Redefining \. on input line 1179.
-LaTeX Info: Redefining \% on input line 1179.
-[79 <./InformeFinal_files/figure-latex/InformInscritos-1.pdf> <./InformeFinal_f
+LaTeX Info: Redefining \. on input line 1258.
+LaTeX Info: Redefining \% on input line 1258.
+[80 <./InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf>]
+LaTeX Info: Redefining \. on input line 1258.
+LaTeX Info: Redefining \% on input line 1258.
+[81 <./InformeFinal_files/figure-latex/InformInscritos-1.pdf> <./InformeFinal_f
 iles/figure-latex/InformPacientes-1.pdf>]
-LaTeX Info: Redefining \. on input line 1179.
-LaTeX Info: Redefining \% on input line 1179.
-[80 <./InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf>]
+LaTeX Info: Redefining \. on input line 1258.
+LaTeX Info: Redefining \% on input line 1258.
+[82 <./InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf>]
 Cap\'{\i }tulo 9.
-<figures/Imagen1.jpg, id=1284, 258.21469pt x 211.54031pt>
+<figures/Imagen1.jpg, id=1295, 258.21469pt x 211.54031pt>
 File: figures/Imagen1.jpg Graphic file (type jpg)
 <use figures/Imagen1.jpg>
-Package pdftex.def Info: figures/Imagen1.jpg  used on input line 1208.
+Package pdftex.def Info: figures/Imagen1.jpg  used on input line 1287.
 (pdftex.def)             Requested size: 258.22192pt x 211.54623pt.
-[81
+[83
 
 ]
-<figures/Imagen2.png, id=1292, 331.99031pt x 225.09094pt>
+<figures/Imagen2.png, id=1303, 331.99031pt x 225.09094pt>
 File: figures/Imagen2.png Graphic file (type png)
 <use figures/Imagen2.png>
-Package pdftex.def Info: figures/Imagen2.png  used on input line 1214.
+Package pdftex.def Info: figures/Imagen2.png  used on input line 1293.
 (pdftex.def)             Requested size: 332.00467pt x 225.10068pt.
-<figures/Imagen3.png, id=1296, 283.81032pt x 297.36093pt>
+<figures/Imagen3.png, id=1307, 283.81032pt x 297.36093pt>
 File: figures/Imagen3.png Graphic file (type png)
 <use figures/Imagen3.png>
-Package pdftex.def Info: figures/Imagen3.png  used on input line 1220.
+Package pdftex.def Info: figures/Imagen3.png  used on input line 1299.
 (pdftex.def)             Requested size: 283.8226pt x 297.37381pt.
-<figures/Imagen4.png, id=1298, 395.22656pt x 256.70906pt>
+<figures/Imagen4.png, id=1309, 395.22656pt x 256.70906pt>
 File: figures/Imagen4.png Graphic file (type png)
 <use figures/Imagen4.png>
-Package pdftex.def Info: figures/Imagen4.png  used on input line 1226.
+Package pdftex.def Info: figures/Imagen4.png  used on input line 1305.
 (pdftex.def)             Requested size: 373.65993pt x 242.701pt.
-LaTeX Info: Redefining \. on input line 1233.
-LaTeX Info: Redefining \% on input line 1233.
-[82 <./figures/Imagen1.jpg>]
-LaTeX Info: Redefining \. on input line 1233.
-LaTeX Info: Redefining \% on input line 1233.
-[83 <./figures/Imagen2.png> <./figures/Imagen3.png>]
+LaTeX Info: Redefining \. on input line 1312.
+LaTeX Info: Redefining \% on input line 1312.
+[84 <./figures/Imagen1.jpg>]
+LaTeX Info: Redefining \. on input line 1312.
+LaTeX Info: Redefining \% on input line 1312.
+[85 <./figures/Imagen2.png> <./figures/Imagen3.png>]
 Underfull \vbox (badness 4686) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1245.
-LaTeX Info: Redefining \% on input line 1245.
-[84 <./figures/Imagen4.png>]
-<figures/Imagen5.png, id=1323, 305.64188pt x 235.63031pt>
+LaTeX Info: Redefining \. on input line 1324.
+LaTeX Info: Redefining \% on input line 1324.
+[86 <./figures/Imagen4.png>]
+<figures/Imagen5.png, id=1335, 305.64188pt x 235.63031pt>
 File: figures/Imagen5.png Graphic file (type png)
 <use figures/Imagen5.png>
-Package pdftex.def Info: figures/Imagen5.png  used on input line 1247.
+Package pdftex.def Info: figures/Imagen5.png  used on input line 1326.
 (pdftex.def)             Requested size: 305.64577pt x 235.63332pt.
-<figures/Imagen6.png, id=1324, 306.39468pt x 236.38312pt>
+<figures/Imagen6.png, id=1336, 306.39468pt x 236.38312pt>
 File: figures/Imagen6.png Graphic file (type png)
 <use figures/Imagen6.png>
-Package pdftex.def Info: figures/Imagen6.png  used on input line 1251.
+Package pdftex.def Info: figures/Imagen6.png  used on input line 1330.
 (pdftex.def)             Requested size: 306.40327pt x 236.38974pt.
-LaTeX Info: Redefining \. on input line 1270.
-LaTeX Info: Redefining \% on input line 1270.
-[85 <./figures/Imagen5.png>]
-<figures/Imagen7.png, id=1335, 306.39468pt x 236.38312pt>
+LaTeX Info: Redefining \. on input line 1349.
+LaTeX Info: Redefining \% on input line 1349.
+[87 <./figures/Imagen5.png>]
+<figures/Imagen7.png, id=1346, 306.39468pt x 236.38312pt>
 File: figures/Imagen7.png Graphic file (type png)
 <use figures/Imagen7.png>
-Package pdftex.def Info: figures/Imagen7.png  used on input line 1281.
+Package pdftex.def Info: figures/Imagen7.png  used on input line 1360.
 (pdftex.def)             Requested size: 306.40327pt x 236.38974pt.
 
-Overfull \hbox (4599.54984pt too wide) in alignment at lines 1286--1291
+Overfull \hbox (4599.54984pt too wide) in alignment at lines 1365--1370
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4599.54984pt too wide) in alignment at lines 1291--1296
+Overfull \hbox (4599.54984pt too wide) in alignment at lines 1370--1375
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4599.54984pt too wide) in alignment at lines 1296--1298
+Overfull \hbox (4599.54984pt too wide) in alignment at lines 1375--1377
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4599.54984pt too wide) in alignment at lines 1298--1300
+Overfull \hbox (4599.54984pt too wide) in alignment at lines 1377--1379
  [] [] [] [] [] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1327.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1406.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1327.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1406.
 
-Overfull \hbox (4599.54984pt too wide) in alignment at lines 1300--1413
+Overfull \hbox (4599.54984pt too wide) in alignment at lines 1379--1492
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (9831.61157pt too wide) in alignment at lines 1418--1423
+Overfull \hbox (9831.61157pt too wide) in alignment at lines 1497--1502
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (9831.61157pt too wide) in alignment at lines 1423--1428
+Overfull \hbox (9831.61157pt too wide) in alignment at lines 1502--1507
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (9831.61157pt too wide) in alignment at lines 1428--1430
+Overfull \hbox (9831.61157pt too wide) in alignment at lines 1507--1509
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (9831.61157pt too wide) in alignment at lines 1430--1432
+Overfull \hbox (9831.61157pt too wide) in alignment at lines 1509--1511
  [] [] [] [] [] 
  []
 
 
-Overfull \hbox (9831.61157pt too wide) in alignment at lines 1432--1625
+Overfull \hbox (9831.61157pt too wide) in alignment at lines 1511--1704
  [] [] [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 1625.
-LaTeX Info: Redefining \% on input line 1625.
-[86 <./figures/Imagen6.png>]
-<figures/Imagen10.jpg, id=1347, 220.57407pt x 272.51813pt>
+LaTeX Info: Redefining \. on input line 1704.
+LaTeX Info: Redefining \% on input line 1704.
+[88 <./figures/Imagen6.png>]
+<figures/Imagen10.jpg, id=1358, 220.57407pt x 272.51813pt>
 File: figures/Imagen10.jpg Graphic file (type jpg)
 <use figures/Imagen10.jpg>
-Package pdftex.def Info: figures/Imagen10.jpg  used on input line 1637.
+Package pdftex.def Info: figures/Imagen10.jpg  used on input line 1716.
 (pdftex.def)             Requested size: 219.80614pt x 271.56937pt.
-<figures/Imagen11.png, id=1349, 340.27126pt x 245.41687pt>
+<figures/Imagen11.png, id=1360, 340.27126pt x 245.41687pt>
 File: figures/Imagen11.png Graphic file (type png)
 <use figures/Imagen11.png>
-Package pdftex.def Info: figures/Imagen11.png  used on input line 1643.
+Package pdftex.def Info: figures/Imagen11.png  used on input line 1722.
 (pdftex.def)             Requested size: 219.79778pt x 158.5267pt.
-<figures/Imagen12.png, id=1351, 375.65344pt x 258.9675pt>
+<figures/Imagen12.png, id=1362, 375.65344pt x 258.9675pt>
 File: figures/Imagen12.png Graphic file (type png)
 <use figures/Imagen12.png>
-Package pdftex.def Info: figures/Imagen12.png  used on input line 1650.
+Package pdftex.def Info: figures/Imagen12.png  used on input line 1729.
 (pdftex.def)             Requested size: 219.79936pt x 151.525pt.
 
 Overfull \vbox (271.23117pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1658.
-LaTeX Info: Redefining \% on input line 1658.
-[87 <./figures/Imagen7.png>]
-LaTeX Info: Redefining \. on input line 1658.
-LaTeX Info: Redefining \% on input line 1658.
-[88 <./figures/Imagen10.jpg> <./figures/Imagen11.png>]
-<figures/Imagen13.png, id=1369, 232.61906pt x 410.2828pt>
+LaTeX Info: Redefining \. on input line 1737.
+LaTeX Info: Redefining \% on input line 1737.
+[89 <./figures/Imagen7.png>]
+LaTeX Info: Redefining \. on input line 1737.
+LaTeX Info: Redefining \% on input line 1737.
+[90 <./figures/Imagen10.jpg> <./figures/Imagen11.png>]
+<figures/Imagen13.png, id=1380, 232.61906pt x 410.2828pt>
 File: figures/Imagen13.png Graphic file (type png)
 <use figures/Imagen13.png>
-Package pdftex.def Info: figures/Imagen13.png  used on input line 1661.
+Package pdftex.def Info: figures/Imagen13.png  used on input line 1740.
 (pdftex.def)             Requested size: 219.80487pt x 387.68173pt.
-<figures/Imagen14.png, id=1370, 306.39468pt x 236.38312pt>
+<figures/Imagen14.png, id=1381, 306.39468pt x 236.38312pt>
 File: figures/Imagen14.png Graphic file (type png)
 <use figures/Imagen14.png>
-Package pdftex.def Info: figures/Imagen14.png  used on input line 1670.
+Package pdftex.def Info: figures/Imagen14.png  used on input line 1749.
 (pdftex.def)             Requested size: 219.79987pt x 169.57532pt.
 
 Underfull \vbox (badness 7047) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1690.
-LaTeX Info: Redefining \% on input line 1690.
-[89 <./figures/Imagen12.png>]
-LaTeX Info: Redefining \. on input line 1690.
-LaTeX Info: Redefining \% on input line 1690.
-[90 <./figures/Imagen13.png>]
-LaTeX Info: Redefining \. on input line 1712.
-LaTeX Info: Redefining \% on input line 1712.
-[91 <./figures/Imagen14.png>]
-<figures/Imagen20.png, id=1396, 306.39468pt x 236.38312pt>
+LaTeX Info: Redefining \. on input line 1769.
+LaTeX Info: Redefining \% on input line 1769.
+[91 <./figures/Imagen12.png>]
+LaTeX Info: Redefining \. on input line 1769.
+LaTeX Info: Redefining \% on input line 1769.
+[92 <./figures/Imagen13.png>]
+LaTeX Info: Redefining \. on input line 1791.
+LaTeX Info: Redefining \% on input line 1791.
+[93 <./figures/Imagen14.png>]
+<figures/Imagen20.png, id=1407, 306.39468pt x 236.38312pt>
 File: figures/Imagen20.png Graphic file (type png)
 <use figures/Imagen20.png>
-Package pdftex.def Info: figures/Imagen20.png  used on input line 1715.
+Package pdftex.def Info: figures/Imagen20.png  used on input line 1794.
 (pdftex.def)             Requested size: 219.79987pt x 169.57532pt.
-<figures/Imagen21.png, id=1398, 306.39468pt x 236.38312pt>
+<figures/Imagen21.png, id=1409, 306.39468pt x 236.38312pt>
 File: figures/Imagen21.png Graphic file (type png)
 <use figures/Imagen21.png>
-Package pdftex.def Info: figures/Imagen21.png  used on input line 1730.
+Package pdftex.def Info: figures/Imagen21.png  used on input line 1809.
 (pdftex.def)             Requested size: 219.79987pt x 169.57532pt.
 
 Underfull \vbox (badness 6110) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1743.
-LaTeX Info: Redefining \% on input line 1743.
-[92 <./figures/Imagen20.png>]
-<figures/Imagen22.png, id=1409, 354.57469pt x 136.25906pt>
+LaTeX Info: Redefining \. on input line 1822.
+LaTeX Info: Redefining \% on input line 1822.
+[94 <./figures/Imagen20.png>]
+<figures/Imagen22.png, id=1420, 354.57469pt x 136.25906pt>
 File: figures/Imagen22.png Graphic file (type png)
 <use figures/Imagen22.png>
-Package pdftex.def Info: figures/Imagen22.png  used on input line 1746.
+Package pdftex.def Info: figures/Imagen22.png  used on input line 1825.
 (pdftex.def)             Requested size: 351.68468pt x 135.14844pt.
-<figures/Imagen23.png, id=1410, 606.01407pt x 124.21407pt>
+<figures/Imagen23.png, id=1421, 606.01407pt x 124.21407pt>
 File: figures/Imagen23.png Graphic file (type png)
 <use figures/Imagen23.png>
-Package pdftex.def Info: figures/Imagen23.png  used on input line 1760.
+Package pdftex.def Info: figures/Imagen23.png  used on input line 1839.
 (pdftex.def)             Requested size: 439.60324pt x 90.105pt.
 
 Underfull \vbox (badness 2626) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1765.
-LaTeX Info: Redefining \% on input line 1765.
-[93 <./figures/Imagen21.png> <./figures/Imagen22.png>]
-LaTeX Info: Redefining \. on input line 1779.
-LaTeX Info: Redefining \% on input line 1779.
-[94 <./figures/Imagen23.png>]
-<figures/Imagen24.png, id=1425, 372.64218pt x 258.9675pt>
+LaTeX Info: Redefining \. on input line 1844.
+LaTeX Info: Redefining \% on input line 1844.
+[95 <./figures/Imagen21.png> <./figures/Imagen22.png>]
+LaTeX Info: Redefining \. on input line 1858.
+LaTeX Info: Redefining \% on input line 1858.
+[96 <./figures/Imagen23.png>]
+<figures/Imagen24.png, id=1436, 372.64218pt x 258.9675pt>
 File: figures/Imagen24.png Graphic file (type png)
 <use figures/Imagen24.png>
-Package pdftex.def Info: figures/Imagen24.png  used on input line 1793.
+Package pdftex.def Info: figures/Imagen24.png  used on input line 1872.
 (pdftex.def)             Requested size: 219.79443pt x 152.74602pt.
-<figures/Imagen25.png, id=1426, 383.18156pt x 276.28218pt>
+<figures/Imagen25.png, id=1437, 383.18156pt x 276.28218pt>
 File: figures/Imagen25.png Graphic file (type png)
 <use figures/Imagen25.png>
-Package pdftex.def Info: figures/Imagen25.png  used on input line 1802.
+Package pdftex.def Info: figures/Imagen25.png  used on input line 1881.
 (pdftex.def)             Requested size: 219.80145pt x 158.4816pt.
-<figures/Imagen30.png, id=1427, 372.64218pt x 258.9675pt>
+<figures/Imagen30.png, id=1438, 372.64218pt x 258.9675pt>
 File: figures/Imagen30.png Graphic file (type png)
 <use figures/Imagen30.png>
-Package pdftex.def Info: figures/Imagen30.png  used on input line 1834.
+Package pdftex.def Info: figures/Imagen30.png  used on input line 1913.
 (pdftex.def)             Requested size: 219.79443pt x 152.74602pt.
-LaTeX Info: Redefining \. on input line 1839.
-LaTeX Info: Redefining \% on input line 1839.
-[95 <./figures/Imagen24.png>]
-<figures/Imagen31.png, id=1437, 383.18156pt x 276.28218pt>
+LaTeX Info: Redefining \. on input line 1918.
+LaTeX Info: Redefining \% on input line 1918.
+[97 <./figures/Imagen24.png>]
+<figures/Imagen31.png, id=1449, 383.18156pt x 276.28218pt>
 File: figures/Imagen31.png Graphic file (type png)
 <use figures/Imagen31.png>
-Package pdftex.def Info: figures/Imagen31.png  used on input line 1843.
+Package pdftex.def Info: figures/Imagen31.png  used on input line 1922.
 (pdftex.def)             Requested size: 219.80145pt x 158.4816pt.
-<figures/Imagen40.png, id=1438, 374.90062pt x 258.9675pt>
+<figures/Imagen40.png, id=1450, 374.90062pt x 258.9675pt>
 File: figures/Imagen40.png Graphic file (type png)
 <use figures/Imagen40.png>
-Package pdftex.def Info: figures/Imagen40.png  used on input line 1867.
+Package pdftex.def Info: figures/Imagen40.png  used on input line 1946.
 (pdftex.def)             Requested size: 219.79936pt x 151.82925pt.
-<figures/Imagen41.png, id=1439, 386.19281pt x 276.28218pt>
+<figures/Imagen41.png, id=1451, 386.19281pt x 276.28218pt>
 File: figures/Imagen41.png Graphic file (type png)
 <use figures/Imagen41.png>
-Package pdftex.def Info: figures/Imagen41.png  used on input line 1876.
+Package pdftex.def Info: figures/Imagen41.png  used on input line 1955.
 (pdftex.def)             Requested size: 219.79628pt x 157.24217pt.
-LaTeX Info: Redefining \. on input line 1896.
-LaTeX Info: Redefining \% on input line 1896.
-[96 <./figures/Imagen25.png> <./figures/Imagen30.png>]
-LaTeX Info: Redefining \. on input line 1896.
-LaTeX Info: Redefining \% on input line 1896.
-[97 <./figures/Imagen31.png> <./figures/Imagen40.png> <./figures/Imagen41.png>]
-LaTeX Info: Redefining \. on input line 1896.
-LaTeX Info: Redefining \% on input line 1896.
-[98
+LaTeX Info: Redefining \. on input line 1975.
+LaTeX Info: Redefining \% on input line 1975.
+[98 <./figures/Imagen25.png> <./figures/Imagen30.png>]
+LaTeX Info: Redefining \. on input line 1975.
+LaTeX Info: Redefining \% on input line 1975.
+[99 <./figures/Imagen31.png> <./figures/Imagen40.png> <./figures/Imagen41.png>]
+LaTeX Info: Redefining \. on input line 1975.
+LaTeX Info: Redefining \% on input line 1975.
+[100
 
 ]
 Cap\'{\i }tulo 10.
-[99]
-LaTeX Info: Redefining \. on input line 1899.
-LaTeX Info: Redefining \% on input line 1899.
-[100
+[101]
+LaTeX Info: Redefining \. on input line 1978.
+LaTeX Info: Redefining \% on input line 1978.
+[102
 
-] [101]
-LaTeX Info: Redefining \. on input line 1944.
-LaTeX Info: Redefining \% on input line 1944.
-[102] [103
-
-]
-LaTeX Info: Redefining \. on input line 1972.
-LaTeX Info: Redefining \% on input line 1972.
-[104
+] [103]
+LaTeX Info: Redefining \. on input line 2023.
+LaTeX Info: Redefining \% on input line 2023.
+[104] [105
 
 ]
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 1977--1980
+LaTeX Info: Redefining \. on input line 2051.
+LaTeX Info: Redefining \% on input line 2051.
+[106
+
+]
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2056--2059
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1977--1980
+Underfull \hbox (badness 10000) in paragraph at lines 2056--2059
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 1981--1984
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2060--2063
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1981--1984
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2063
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 1985--1988
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2064--2067
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1985--1988
+Underfull \hbox (badness 10000) in paragraph at lines 2064--2067
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 1989--1992
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2068--2071
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1992
+Underfull \hbox (badness 10000) in paragraph at lines 2068--2071
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 1993--1996
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2072--2075
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1993--1996
+Underfull \hbox (badness 10000) in paragraph at lines 2072--2075
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 1997--2000
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2076--2079
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1997--2000
+Underfull \hbox (badness 10000) in paragraph at lines 2076--2079
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2001--2004
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2080--2083
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2001--2004
+Underfull \hbox (badness 10000) in paragraph at lines 2080--2083
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2005--2008
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2084--2087
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2005--2008
+Underfull \hbox (badness 10000) in paragraph at lines 2084--2087
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2009--2012
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2088--2091
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2009--2012
+Underfull \hbox (badness 10000) in paragraph at lines 2088--2091
 
  []
 
-[105] (InformeFinal.aux
+
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2092--2095
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2092--2095
+
+ []
+
+
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2096--2099
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2096--2099
+
+ []
+
+
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2100--2103
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2100--2103
+
+ []
+
+[107] (InformeFinal.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
@@ -2442,11 +2449,11 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 31834 strings out of 478863
- 616601 string characters out of 2855994
+ 31826 strings out of 478863
+ 614676 string characters out of 2855994
  1013738 words of memory out of 3000000
- 48515 multiletter control sequences out of 15000+600000
- 485272 words of font info for 249 fonts, out of 8000000 for 9000
+ 48489 multiletter control sequences out of 15000+600000
+ 485722 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  257i,12n,255p,1577b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/Mi
@@ -2459,9 +2466,9 @@ a.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.
 pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pf
 b><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on InformeFinal.pdf (105 pages, 8606829 bytes).
+Output written on InformeFinal.pdf (107 pages, 8604272 bytes).
 PDF statistics:
- 1777 PDF objects out of 2073 (max. 8388607)
- 335 named destinations out of 1000 (max. 500000)
- 29618 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1806 PDF objects out of 2073 (max. 8388607)
+ 351 named destinations out of 1000 (max. 500000)
+ 29638 words of extra memory for PDF output out of 29859 (max. 10000000)
 

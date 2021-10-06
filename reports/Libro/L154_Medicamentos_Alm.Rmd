@@ -100,10 +100,18 @@ La adopción de esta práctica sólo se ha realizado en 40\% de los FRE. Esta pr
 Los umbrales adoptados por la mayoría de las entidades ha sido `6|12` que indica colocar una etiqueta roja sí el medicamento se encuentra a 6 meses de vencerse, y una etiqueta amarilla sí el medicamento se encuentra a 12 meses de vencerse. Algunos FRE también tienen umbrales de `3|6` meses para el proceso de semaforización.
 
 
+En la Figura \@ref(fig:CasosVencimiento1) se observa que el 71% de los FRE han presentado casos de medicamentos vencidos lo que constituye a 22 de 31 FRE existentes en el país, y esto indica que los vencimientos son una situación frecuente para los FRE.
+
 ```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Presentación de casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + labs(title = NULL)
 ```
+
+En la Figura \@ref(fig:CasosVencimiento2) se muestran los medicamentos más involucrados en casos de vencimientos. En primer lugar, se tiene al Metilfenidato Tableta x 10 mg ya que 13 de los 31 FRE han presentado vencimientos relacionados a este producto. La razón para estos vencimientos podría deberse a varios factores como: 
+
+- El producto cuenta con una vida útil de 18 meses.
+- Este medicamento es importado y en ocasiones la casa matriz entrega el producto con una vida útil efectiva menor a los 18 meses mencionados.-  Debido a la emergencia sanitaria producida por el coronavirus se ha presentado una contracción importante de la demanda que se encuentra posiblemente relacionada a los cambios en la movilidad de los ciudadanos y las restricciones de presencialidad en instituciones escolares. 
+
+El segundo medicamento más involucrado en casos de vencimiento es Primidona Tableta x 250 mg debido a que 4 de los 31 FRE reportan casos de vencimientos, seguido de los vencimientos de Meperidina de 100mg/2mL, Fenobarbital Solución inyectable x 40 mg/mL y Fenobarbital Solución inyectable x 200 mg/mL que fueron reportados por 3 de 31 FREs a nivel nacional que se puede explicar debido a que son productos de baja rotación, y es posible que los FRE no hayan recibido una adecuada asistencia por parte del FNE para el manejo de ítems de este tipo.
 
 ```{r CasosVencimiento2, echo=FALSE, warning=FALSE, fig.cap='Medicamentos implicados en casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + 

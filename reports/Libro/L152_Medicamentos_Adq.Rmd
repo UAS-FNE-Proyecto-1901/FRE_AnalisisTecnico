@@ -20,21 +20,41 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
+### Control de inventarios
+
+El manejo de inventarios es de gran relevancia para las organizaciones que tienen bienes tangibles dispuestos a la venta y cuyo volumen recibido supera el volumen distribuido, como es el caso de los FRE, es por ello por lo que se indago sobre las herramientas que tienen a disposición para el control de inventarios de MME. La mayoría de los FRE realizan el seguimiento de inventarios mediante un paquete ofimático con una proporción de 45.2\% (ver Figura \@ref(fig:HerramientasManejoInventarios)), siendo la herramienta principal Excel, con uso especial de hojas estandarizadas, como en el caso de los FRE Boyacá, Cauca, Sucre, entre otros. 
+
 ```{r HerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "071_Herramienta.rds")) + 
   labs(title = NULL)
 ```
-Eliminar o cambiar reformar !!
+Algunos FRE se apoyan en otras herramientas además del paquete ofimático para llevar a cabo la tarea del control de inventarios. En la segunda posición de la Figura \@ref(fig:HerramientasManejoInventarios) se observa el uso de software en una proporción del 38.7\%. La elección del software se hace según los criterios de cada entidad territorial en la mayoría de los casos se utiliza un software interno de la gobernación del territorio para el desarrollo de estas actividades como es el caso de los FRE Atlántico, Cesar, Santander, entre otros. 
 
-```{r HerramientasManejoInventarios1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios (detallado)', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "072_Herramienta.rds")) + 
-  labs(title = NULL)
-```
+El alcance del software es distinto, por ejemplo, el caso del FRE Risaralda que hace uso del software SIMEC para soportar tanto el manejo de inventarios, como los procesos relacionados con el sistema de IVC en todo lo relacionado con MME. Este software funciona además como medio de comunicación entre el FRE y todos sus inscritos, mostrándose como una plataforma muy completa y eficiente, sin embargo, existe poca disponibilidad de equipos de cómputo en el FRE que impide que más personal pueda acceder al software y a sus herramientas por lo cual puede ser un recurso subutilizado. 
 
-```{r PropHerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de Herramientas en el manejo de inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "079_HerramientasCompras.rds")) + 
-  labs(title = NULL)
-```
+Se evidencia que algunos FRE poseen herramientas completas para el manejo de sus procesos, mientras que otros realizan el manejo de inventarios apoyándose en el uso de herramientas manuales (32.3\%), como se indica en la Figura \@ref(fig:HerramientasManejoInventarios) En muchos FRE el control de inventarios de forma manual se realiza con apoyo de herramientas ofimáticas como Excel. 
+
+Sólo en tres casos se encontró que el control de inventarios dependía exclusivamente de herramientas manuales como la revisión de libros contables. Pese a que no es el ideal algunos territorios, especialmente los menos centralizados (p.ej. Amazonas y La Guajira), se ven en la necesidad de llevar sus procesos de esta forma debido a la no disponibilidad de equipos de cómputo o que sí bien los hay, esto se encuentran obsoletos y no soportan el uso de tecnologías más recientes y apropiadas.
+
+Finalmente, el manejo de inventarios por parte de los FRE deja en evidencia las brechas tecnológicas importantes entre los territorios. Los FRE menos centralizados presentan menor acceso a tecnologías actualizadas y en estos fue común encontrar la necesidad de acceso a más equipos de cómputo que le permita al personal desarrollar las actividades para el funcionamiento del FRE.
+
+<!-- ```{r PropHerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de Herramientas en el manejo de inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"} -->
+<!-- readRDS(file.path(fig_path, "079_HerramientasCompras.rds")) +  -->
+<!--   labs(title = NULL) -->
+<!-- ``` -->
+
+### Tiempos de demora en el proceso de adquisición
+
+La adquisición de MME se realiza a través de un proceso que conlleva diferentes etapas, de forma general se consideraron cinco etapas del proceso: 
+
+1. Estimación de necesidades
+2. Precontractual
+3. Contractual
+4. Solicitud en la plataforma tecnológica
+5. Despacho
+
+En este caso la plataforma tecnológica es la tienda virtual del Estado Colombia Compra Eficiente. El proceso puede cambiar de acuerdo con las particularidades de cada territorio, y en particular pueden tenerse diversos tiempos para llevar a cabo estos procesos.
+La diferencia en los tiempos para llevar a cabo los procesos de adquisición de MME (mostrados en la Figura \@ref(fig:EtapasProcesoAdquisicion)) se puede explicar teniendo en cuenta factores como: (a) volumen de medicamentos requeridos en cada departamento, (b) herramientas usadas para el cálculo de la estimación de la necesidad, (c) procesos contractuales de cada entidad y (d) distancia física entre el FNE y la oficina del FRE. Este último factor puede afectar el tiempo de despacho de los MME de forma especial en las zonas más alejadas de la capital del país.
 
 ```{r EtapasProcesoAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento', fig.width=12, fig.height=7, fig.topcaption=TRUE, out.width="100%"}
 if (knitr::is_html_output()) {
@@ -44,38 +64,79 @@ if (knitr::is_html_output()) {
     labs(title = NULL)
 }
 ```
+Como se identifica en la Figura \@ref(fig:EtapasProcesoAdquisicionDetalle), la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales y contractuales, esto debido a los requisitos que establece la contratación pública [@CongresodelaRepublicadeColombia1993;@CongresodelaRepublicadeColombia2007]. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir (referencia).
+
 
 ```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento (detallado)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "082_ProcesosAdquisición.rds")) + 
   labs(title = NULL)
 ```
 
-```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.cap='Caracterización en demoras de traslados interdepartamentales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + 
-  labs(title = NULL)
+Por lo general, la documentación pertinente de la fase precontractual es revisada y corregida en varias ocasiones por diferentes áreas en una misma entidad, lo que conlleva a largos tiempos de espera en la fase precontractual. Estas demoras se dan especialmente cuando el área encargada de aprobar la documentación o de llevar a cabo el proceso contractual no pertenece a la secretaría de salud, como es el caso de Atlántico, pues los funcionarios de otras áreas de las gobernaciones no están inmersos en el contexto de las necesidades de salud pública y específicamente en la importancia que tiene el abastecimiento de MME para la población, por lo que muchas veces el proceso de adquisición de medicamentos queda a merced de la voluntad de otras áreas, propiciando incluso el desabastecimiento en los departamentos.
+
+Por otro lado, el proceso de estimación de compra de MME es uno de los más cortos y por lo general se hace teniendo en cuenta el consumo histórico en el territorio. El consumo histórico de medicamentos no es el único factor para tener en cuenta, es así como en el departamento de Casanare, el FRE además de revisar sus consumos históricos, consulta a sus inscritos la proyección de consumo de cada inscrito, adicionalmente agrega un 20\% a su proyección final para tener un inventario de seguridad que le permita evitar el desabastecimiento. 
+
+Por otra parte hay territorios como Guaviare en el que la estimación de compra sólo se hace teniendo en cuenta el consumo histórico y cuidando de no sobrepasar el presupuesto que la gobernación ha asignado para esta tarea. El FRE de Guaviare en comparación con otros territorios es pequeño, evidenciando que las necesidades y capacidades de los FRE son diferentes de acuerdo con el territorio.
+
+Existen casos a exaltar como el FRE de Sucre que, a pesar de tener un tamaño relativamente pequeño a otros en la región, tiene un proceso de estimación de necesidades de MME está altamente estandarizado a través de una herramienta que facilita la toma de decisiones de compra de MME. El FRE afirma que el uso de este manual reduce el tiempo de estimación de compra a una semana, y esto indica que es un proceso eficiente en este departamento.
+
+### Traslados interdepartamentales
+
+En el traslado interdepartamental de medicamentos se observa que los territorios más descentralizados son los que presentan mayor demora para recibir el traslado de MME, siendo los casos más demorados San Andrés y Amazonas. Como se observa en la Figura \@ref(fig:TiemposTranslados) las regiones más afectadas son Amazonía, Orinoquía, Pacífico a excepción del Valle del Cauca y algunos departamentos del Caribe. Sin embargo, el departamento que más demora presenta  es San Andrés, pues al estar alejado de la zona continental del país, tiene un tiempo de traslado de medicamentos más largo.  
+
+```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.width=11, fig.height=4.5, fig.topcaption=TRUE, out.width="100%", fig.cap="Caracterización en demoras de traslados interdepartamentales. Panel A. Gráfico de tiempos de traslados interdepartamentales reportados para los departamentos. Panel B. Mapa de tiempos de traslados interdepartamentales."}
+
+g1 <- readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + labs(title = NULL)
+
+g2 <- readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + labs(title = NULL)
+
+wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A') + plot_layout(widths = c(0.5, 0.5))
 ```
 
-```{r TiemposTransladosMapa, echo=FALSE, warning=FALSE, fig.cap='Mapa con demoras de traslados interdepartamentales', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + 
-  labs(title = NULL)
-```
+### Plataforma de compra estatal
 
-```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+La plataforma Colombia Compra es el ente rector en materia de contratación pública y desde 2013 se puso en marcha la tienda virtual del Estado colombiano como herramienta en línea del sistema de compra pública. Esta plataforma permite hacer compras a través de acuerdos marco, instrumentos de agregación de demanda y catálogo de bienes de las grandes superficies. En concordancia con lo anterior, Colombia Compra Eficiente dispuso un documento en su plataforma denominado *"Estudios y Documentos Previos de la contratación con el Fondo Nacional de Estupefacientes para la adquisición de Medicamentos de Control Especial de Monopolio del Estado"* donde afirma que se promueve un Instrumento de Agregación de Demanda de Precios para la adquisición de MME mediante contratación directa con el FNE, con el objetivo de aumentar la eficiencia en los procesos de cada FRE y aprovechar las economías a escala. Pese a su implementación y sus objetivos algunos FRE no perciben su uso como una ventaja.
+
+De esta manera los FRE adquieren los MME a través de esta herramienta, por tal motivo se indagó sobre el uso de la plataforma y la opinión que tenían los FRE sobre la misma. Se encuentra que en términos generales (ver la Figura \@ref(fig:EtapasProcesoAdquisicionDetalle)), que los FRE consideran que el tiempo invertido en el uso y trámite que se realiza a través de la plataforma, no es tan dispendioso como las etapas precontractuales y contractuales del proceso.
+
+La mayoría de los departamentos hace uso de esta plataforma, encontrándose diferentes percepciones sobre ella. Por ejemplo, el FRE del Cauca indica alta satisfacción con el uso de la plataforma al considerar que es muy organizada, por otra parte el FRE del Valle del Cauca que indica inconformidad en el uso porque consideran que el mismo implica un extenso proceso precontractual y esto puede ser ineficiente y poco intuitivo. El FRE Meta afirma que en la plataforma existen factores que tardan en actualizarse como por ejemplo firmas de la secretaría de salud o incongruencias en el despacho de medicamentos comprados, y el FRE de Santander menciona que los precios en la plataforma suelen encontrarse desactualizados respecto a los del FNE.
+
+Si bien el uso del Instrumento de Agregación de Demanda de precios dispuesto por Colombia Compra Eficiente para la adquisición de MME por parte de los FRE es de obligatoriedad, según la Circular Externa 005 de 2019 emitida por el FNE [@FNE005-2019], no todos llevan a cabo este proceso. Un caso podría ser el FRE Guainía que no ha utilizado la plataforma por falta de conocimiento sobre la misma y tiempo para capacitar a su personal respecto a ello, o el FRE Meta que expresa varias inconformidades sobre el uso de esta.  
+
+De otra parte, es necesario mencionar que, si bien casi todos los departamentos hacen uso de la plataforma, este proceso no siempre está a cargo del FRE, como en el caso del departamento del Atlántico, donde el proceso se lleva a través de Secretaría General y por ello su percepción sobre la misma es *"ni conforme ni inconforme"*. Es así como en la Figura \@ref(fig:ColombiaCompra) se identifica como la segunda respuesta más frecuente *"Ni conforme ni inconforme"* con el uso de esta plataforma. De otra parte, el FRE Putumayo comenta que el uso de la plataforma depende en gran medida de otras áreas de la gobernación, evidenciando varias dificultades en su uso y aumentando el tiempo en los procesos de contratación.
+
+```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="100%"}
 readRDS(file.path(fig_path, "085_ConformidadColombiaCompra.rds")) + 
   labs(title = NULL)
 ```
+
+En algunos casos, los FRE manifestaron la necesidad de recibir capacitación sobre el uso de esta herramienta, pues el desconocimiento sobre la misma por parte del personal puede ocasionar demoras en el proceso de compra de MME, como ocurre en el caso del FRE Sucre que si bien tienen un método eficiente para realizar la estimación de compra, se ve retrasado en la etapa que implica el uso de esta plataforma.
+
+### Comportamiento de compra de FRE
+
+La frecuencia de las compras de MME al FNE en el año también depende de varios factores como: (a) cantidad requerida de estos bienes por cada departamento, (b) presupuesto asignado por las gobernaciones a los FRE y (c) capacidad de satisfacer la demanda de los medicamentos por parte del FNE (ver Figura \@ref(fig:FrecComprasFNR)).
+
+Los FRE con demandas pequeñas de medicamentos, como es el caso de Choco, Guainía y Amazonas, la compra se hace una vez al año, a menos que enfrenten casos de desabastecimiento por causas fortuitas como lo fue la situación de Emergencia Sanitaria por la pandemia de coronavirus. Los departamentos con mayor población y necesidad de medicamentos se ven en la obligación de realizar varias compras en el año como es el caso del departamento de Antioquia cuya intención es realizar compras proyectando un abastecimiento de tres meses, sin embargo, manifiesta que el proceso se ve entorpecido por el bajo nivel de servicio relacionado a la disponibilidad de medicamentos en el FNE que le permitan satisfacer su demanda. Se presenta un caso similar para el FRE Santander, donde también afirman que la disponibilidad de medicamentos por parte del FNE es muy poca para cubrir la demanda de su departamento, por lo que obligatoriamente deben autorizar a las IPS y demás a hacer compras directas al FNE.
+
+Por otra parte, hay departamentos donde la frecuencia de las compras y las cantidades de esta depende del presupuesto asignado por la gobernación, como es el caso de Guainía y Putumayo, este último indica que la demanda de MME en su territorio es más alta de la que se puede cubrir por limitaciones presupuestales.
+
+Por su parte, otros territorios no pueden realizar las compras con las frecuencias que requieren por problemas administrativos o económicos de alguna índole que corresponden a la gobernación, como han manifestado los FRE de San Andrés, Atlántico y Huila.
 
 ```{r FrecComprasFNR, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de compras de medicamentos por año al FNE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
 readRDS(file.path(fig_path, "130_FrecComprasFNR.rds")) + 
   labs(title = NULL)
 ```
 
-```{r FrecComprasFNRb, echo=FALSE, warning=FALSE, fig.cap='N.° de pedidos de medicamentos por año al FNE', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) + 
-  labs(title = NULL)
-```
+La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de cada departamento, p.ej. en el departamento de Vaupés cuyo abastecimiento se enfoca en satisfacer la demanda del Hospital, no se realiza venta a otras IPS y por lo tanto ni si quiera tienen necesidad de almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al Hospital. Se presenta un caso diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, sin embargo, se ha establecido a las IPS que deben proyectar sus necesidades mensualmente. 
+
+<!-- ```{r FrecComprasFNRb, echo=FALSE, warning=FALSE, fig.cap='N.° de pedidos de medicamentos por año al FNE', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="90%"} -->
+<!-- readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) +  -->
+<!--   labs(title = NULL) -->
+<!-- ``` -->
 
 ```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + 
   labs(title = NULL)
 ```
+
+En el departamento del Atlántico antes de la pandemia la venta de medicamentos se hacía diariamente, sin embargo, por la contingencia en salud se decidió que solo se despachan medicamentos dos días a la semana. Otro departamento que hace venta diaria de MME es Choco y afirma que las necesidades de MME pueden variar en el departamento gracias al traslado no esperado de pacientes de zonas muy distantes a las capitales de los departamentos de Antioquia y Valle del Cauca.

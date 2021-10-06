@@ -29,15 +29,11 @@ fig:TiempoArchivoRecetariosOficiales
 fig:FREImplementacionROE
 fig:TiempoVentaInstituciones
 fig:HerramientasManejoInventarios
-fig:HerramientasManejoInventarios1
-fig:PropHerramientasManejoInventarios
 fig:EtapasProcesoAdquisicion
 fig:EtapasProcesoAdquisicionDetalle
 fig:TiemposTranslados
-fig:TiemposTransladosMapa
 fig:ColombiaCompra
 fig:FrecComprasFNR
-fig:FrecComprasFNRb
 fig:FrecVentaInstituciones
 fig:TiemposRecepcionAlmacenamiento
 fig:TiemposRecepcionAlmacenamientob
@@ -114,6 +110,11 @@ características-de-los-recetarios
 recetario-oficial-electrónico
 manejo-de-medicamentos
 adquisición-de-mme-por-parte-del-fre
+control-de-inventarios
+tiempos-de-demora-en-el-proceso-de-adquisición
+traslados-interdepartamentales
+plataforma-de-compra-estatal
+comportamiento-de-compra-de-fre
 recepción-de-medicamentos
 almacenamiento
 medidas-de-seguridad-para-el-almacenamiento
