@@ -25,8 +25,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 El manejo de inventarios es de gran relevancia para las organizaciones que tienen bienes tangibles dispuestos a la venta y cuyo volumen recibido supera el volumen distribuido, como es el caso de los FRE, es por ello por lo que se indago sobre las herramientas que tienen a disposición para el control de inventarios de MME. La mayoría de los FRE realizan el seguimiento de inventarios mediante un paquete ofimático con una proporción de 45.2\% (ver Figura \@ref(fig:HerramientasManejoInventarios)), siendo la herramienta principal Excel, con uso especial de hojas estandarizadas, como en el caso de los FRE Boyacá, Cauca, Sucre, entre otros. 
 
 ```{r HerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "071_Herramienta.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "071_Herramienta.rds")) + labs(title = NULL)
 ```
 Algunos FRE se apoyan en otras herramientas además del paquete ofimático para llevar a cabo la tarea del control de inventarios. En la segunda posición de la Figura \@ref(fig:HerramientasManejoInventarios) se observa el uso de software en una proporción del 38.7\%. La elección del software se hace según los criterios de cada entidad territorial en la mayoría de los casos se utiliza un software interno de la gobernación del territorio para el desarrollo de estas actividades como es el caso de los FRE Atlántico, Cesar, Santander, entre otros. 
 
@@ -37,11 +36,6 @@ Se evidencia que algunos FRE poseen herramientas completas para el manejo de sus
 Sólo en tres casos se encontró que el control de inventarios dependía exclusivamente de herramientas manuales como la revisión de libros contables. Pese a que no es el ideal algunos territorios, especialmente los menos centralizados (p.ej. Amazonas y La Guajira), se ven en la necesidad de llevar sus procesos de esta forma debido a la no disponibilidad de equipos de cómputo o que sí bien los hay, esto se encuentran obsoletos y no soportan el uso de tecnologías más recientes y apropiadas.
 
 Finalmente, el manejo de inventarios por parte de los FRE deja en evidencia las brechas tecnológicas importantes entre los territorios. Los FRE menos centralizados presentan menor acceso a tecnologías actualizadas y en estos fue común encontrar la necesidad de acceso a más equipos de cómputo que le permita al personal desarrollar las actividades para el funcionamiento del FRE.
-
-<!-- ```{r PropHerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Proporción de Herramientas en el manejo de inventarios', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"} -->
-<!-- readRDS(file.path(fig_path, "079_HerramientasCompras.rds")) +  -->
-<!--   labs(title = NULL) -->
-<!-- ``` -->
 
 ### Tiempos de demora en el proceso de adquisición
 

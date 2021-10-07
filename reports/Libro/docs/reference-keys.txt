@@ -53,6 +53,7 @@ fig:TransporteProductos
 fig:precioVentasDepartamentos
 fig:boxplotComparativoPVTA
 fig:relacionMargenesCosto
+fig:PropHerramientasManejoInventarios
 fig:MediosComunicacion
 fig:ConexionInternet
 fig:EquiposComputo
@@ -143,7 +144,10 @@ transporte
 precio-de-medicamentos
 recomendaciones-finales
 ruta-tecnológica
+canales-de-comunicación
+equipos-de-cómputo
 reporte-de-informes
+diligenciamiento-de-anexos
 seguridad-de-la-información
 análisis-a-nivel-regional
 región-andina-norte

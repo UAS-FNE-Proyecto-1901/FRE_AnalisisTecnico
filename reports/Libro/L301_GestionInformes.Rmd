@@ -41,6 +41,7 @@ La Resolución 1479 de 2006 del Ministerio de Salud y la Protección Social [@MS
 
 - Consolidado semestral del registro de Farmacodependientes de productos sometidos a fiscalización.
 
+## Diligenciamiento de anexos
 
 En la Figura \@ref(fig:HerramientasDiligA1) se tiene una descripción de la herramientas utilizadas el diligenciamiento del Anexo 1 de la Resolución 1479 de 2006 de MSPS. La mayoría de los FRE utilizan hojas de cálculo para el diligenciamiento del Anexo 1 (23 de 30 departamentos). Por lo menos tres departamentos utilizan modalidades de diligenciamiento manual y hojas de cálculo para el Anexo 1, mientras que sólo dos FRE sustentan la actividad mediante procedimientos manuales.
 

@@ -109,7 +109,10 @@ readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + labs(title = NULL)
 En la Figura \@ref(fig:CasosVencimiento2) se muestran los medicamentos más involucrados en casos de vencimientos. En primer lugar, se tiene al Metilfenidato Tableta x 10 mg ya que 13 de los 31 FRE han presentado vencimientos relacionados a este producto. La razón para estos vencimientos podría deberse a varios factores como: 
 
 - El producto cuenta con una vida útil de 18 meses.
-- Este medicamento es importado y en ocasiones la casa matriz entrega el producto con una vida útil efectiva menor a los 18 meses mencionados.-  Debido a la emergencia sanitaria producida por el coronavirus se ha presentado una contracción importante de la demanda que se encuentra posiblemente relacionada a los cambios en la movilidad de los ciudadanos y las restricciones de presencialidad en instituciones escolares. 
+
+- Este medicamento es importado y en ocasiones la casa matriz entrega el producto con una vida útil efectiva menor a los 18 meses mencionados.
+
+-  Debido a la emergencia sanitaria producida por el coronavirus se ha presentado una contracción importante de la demanda que se encuentra posiblemente relacionada a los cambios en la movilidad de los ciudadanos y las restricciones de presencialidad en instituciones escolares. 
 
 El segundo medicamento más involucrado en casos de vencimiento es Primidona Tableta x 250 mg debido a que 4 de los 31 FRE reportan casos de vencimientos, seguido de los vencimientos de Meperidina de 100mg/2mL, Fenobarbital Solución inyectable x 40 mg/mL y Fenobarbital Solución inyectable x 200 mg/mL que fueron reportados por 3 de 31 FREs a nivel nacional que se puede explicar debido a que son productos de baja rotación, y es posible que los FRE no hayan recibido una adecuada asistencia por parte del FNE para el manejo de ítems de este tipo.
 
