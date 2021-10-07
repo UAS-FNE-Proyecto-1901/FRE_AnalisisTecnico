@@ -20,22 +20,23 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
-Dentro del estudio de costos realizado se realizó el comparativo entre el costo de compra del recetario contra su precio de venta. Así pues, se determinó que dentro del territorio el costo de los recetarios ronda entre los 10.000 COP y los 20.000 COP, con territorios como Valle del Cauca y Casanare, en donde dicho costo se aproxima a 30.000 COP. Algunos departamentos quedan fuera de la escala de medición (Figura \@ref(fig:costoRecetario)), dada sus particularidades en la contratación, puesto que se encargan del proceso de licitación y contratación de recetarios, únicamente realizan estudios de necesidad que son enviados al ente encargado de concretar la contratación, en mucho casos, la gobernación departamental.
+### Comparación de costos y precios de ventas de recetarios
 
-```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+Dentro del estudio de costos realizado se comparó el costo de compra del recetario contra su precio de venta. Así pues, se determinó que dentro del territorio el costo de los recetarios ronda entre los 10.000 COP y los 20.000 COP, con territorios como Valle del Cauca y Casanare, en donde dicho costo se aproxima a 30.000 COP. En algunos departamentos no se conocen los costos de adquisición de recetarios (Figura \@ref(fig:costoRecetario)A), dada sus particularidades en la contratación, puesto que se encargan del proceso de licitación y contratación de recetarios, únicamente realizan estudios de necesidad que son enviados al ente encargado de concretar la contratación, en muchos casos, la gobernación departamental. 
+
+```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento. Panel A. Costos de adquisición de recetarios por departamento. Panel B. Precios de recetarios por departamento.', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 readRDS(file.path(fig_path, '031_costoRecetario.rds'))
 ```
 
-Por otro lado el precio de venta de los recetarios tiende a rondar los 30.000 COP, ya que en algunos FRE por acto administrativo se ha establecido la tarifa del recetario con base en el salario mínimo diario legal vigente. Así mismo, se observa correlación entre los departamentos con costo de recetario más alto y precio de venta mayor, como se da en Valle del Cauca, Bolívar y Casanare. 
+Por otro lado, el precio de venta de los recetarios tiende a rondar los 30.000 COP, ya que en algunos FRE por acto administrativo se ha establecido la tarifa del recetario con base en el salario mínimo diario legal vigente (Figura \@ref(fig:costoRecetario)B) que se ajusta cada año. Así mismo, se observa correlación entre los departamentos con costo de recetario más alto y precio de venta mayor, como se da en Valle del Cauca, Bolívar y Casanare.
 
-Ahora bien, el margen de ganancias que deja la venta de recetarios, se observa en la Figura \@ref(fig:comparativoDepartamentos0), en donde se puede establecer que con mayor frecuencia los entes territoriales obtienen entre 100 y 200% de ganancia. Por otro lado los FRE de La Guajira y Nariño, poseen ganancias entre 800 y 900% en la venta de sus recetarios oficiales.
-
+Ahora bien, el margen de ganancias que deja la venta de recetarios se observa en la Figura \@ref(fig:comparativoDepartamentos0), en donde se puede establecer que con mayor frecuencia los entes territoriales obtienen entre 100 y 200\% de ganancia sobre el costo del recetario. No obstante, los FRE de La Guajira y Nariño, poseen ganancias entre 800 y 900\% en la venta de sus recetarios oficiales. En los FRE de Córdoba, Vichada y Guainía no se registran márgenes de ganancia para la venta de recetarios oficiales dado que no se tiene conocimiento en dichos territorios del costo de adquisición de recetarios puesto que son los entes gubernamentales del departamento los encargados de la contratación, proceso en el que el ente territorial no interviene.
 
 <!-- ```{r comparativoDepartamentos, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"} -->
 <!-- readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + labs(title = NULL) -->
 <!-- ``` -->
 
-```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario', fig.width=12, fig.height=6, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
+```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario. Panel A. Frecuencia de departamentos por márgen de ganancia. Panel B. Márgen de ganancia de recetarios por departamento.', fig.width=12, fig.height=6, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '032b_comparativoDepartamentos.rds')) + labs(title = 'A')
 
 g2 <- readRDS(file.path(fig_path, '032c_comparativoDepartamentos.rds'))
@@ -48,26 +49,75 @@ wrap_plots(g1, g2) + plot_layout(ncol = 2, nrow=1, widths = c(0.4,0.6), tag_leve
 
 <!-- ``` -->
 
-Los amplios márgenes de ganancia y las proporciones distintas entre unos FRE y otros, se podrían relacionar con la cantidad de medidas de seguridad del recetario, la facilidad de acceso del departamento, el número de prescripciones, el tipo de licitación o la cantidad de empresas oferentes en los concursos de licitación de recetarios. En la Figura \@ref(fig:DependParcial1) se ilustra algunas de las variantes mencionadas en donde se logran establecer tendencias como que el número de prescripciones en general, elevan el costo de los recetarios. Pese a ello y contrario a lo que se podría suponer, la disposición estadística indica que a mayor número de medidas de seguridad en el recetario, es menor su precio. Esto podría deberse a la forma en que se adjudican los contratos y a la facilidad de elaboración en departamentos con capacidad tecnológica adecuada y diferentes oferentes en el concurso de contratación.
+Los amplios márgenes de ganancia y las proporciones distintas entre unos FRE y otros, se podrían relacionar con: (a) cantidad de medidas de seguridad del recetario, (b) facilidad de acceso del departamento, (c) número de prescripciones, (d) tipo de licitación o (e) cantidad de empresas oferentes en los concursos de licitación de recetarios. 
 
-```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de Costos', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
-readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds')) + plot_annotation(title = NULL)
+### Factores que afectan el costo de adquisición de recetarios
+
+Dentro de los procesos que se utilizan para la licitación y contratación de recetarios oficiales en el país, se consideran 4 modalidades de selección principalmente:
+
+- Licitación pública, el cual es un proceso de selección utilizado por las entidades estatales mediante el cual escoge a sus contratistas a través de una invitación de carácter público que se dirige a todas las personas potencialmente interesadas en ejecutar un contrato, para que en igualdad de condiciones y bajo criterios objetivos garantizados por el pliego de condiciones, presenten ofertas entre las que se escogerá la más favorable [@MinisteriodeRelacionesExteriores2014].
+
+- Selección abreviada, modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual [@MinisteriodeRelacionesExteriores2014].
+
+- Contratación directa, que es de carácter excepcional, por lo que su aplicación es de carácter restrictivo. En efecto, la ley de Contratación Pública en Colombia, prevé los siguientes eventos en los cuales es procedente esta modalidad de contratación: casos de urgencia manifiesta, contratación de empréstitos, cuando no exista pluralidad de oferentes en el mercado, para los contratos de desarrollo de actividades científicas y tecnológicas, entre otros [@MinisteriodeRelacionesExteriores2014].
+
+- Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás [@ColombiaCompraEficiente2019].
+
+Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios, y se tuvieron en cuenta regresores como: 
+
+- número de prescripciones en el recetario (variable continua).
+
+- número de medidas de seguridad implementadas en el recetario (variable continua). 
+
+- modalidad de selección de oferentes en la contratación (variable categórica con cuatro niveles mencionadas previamente)
+
+```{r resumenModeloRegresionLineal, echo=FALSE, warning=FALSE}
+modelo_lineal <- tibble::tribble(
+                         ~Parámetro, ~Estimado, ~`Error Estándar`, ~`Valor t`, ~`Pr(>|t|)`,
+                       "Intercepto",   12181.9,         12799.4,    0.952,       0.352,
+            "N.° de prescripciones",     228.1,           177.8,    1.283,       0.213,
+                   "N.° de medidas",     -1712,          1578.6,   -1.085,        0.29,
+   "Modalidad - Licitación pública",   -4760.7,         12064.4,   -0.395,       0.697,
+       "Modalidad - Mínima Cuantía",   -3656.2,          8269.9,   -0.442,       0.663,
+  "Modalidad - Selección abreviada",     -1414,         14418.9,   -0.098,       0.923
+  )
+
+if (knitr::is_latex_output()) {
+  knitr::kable(modelo_lineal, align = c('l', rep('c', 4)), caption = 'Resumen de modelo de regresión lineal múltiple para el costo del recetario.', format = 'latex', booktabs=TRUE) %>% kableExtra::kable_styling(bootstrap_options = "striped")
+} else {
+  knitr::kable(modelo_lineal, align = c('l', rep('c', 4)), caption = 'Resumen de modelo de regresión lineal múltiple para el costo del recetario.', format = 'html')
+}
 ```
 
-De igual forma, el tipo de contratación que se concreta con las empresas fabricante de los recetarios es una variable que influye en el costo de los recetarios, así pues, las modalidades de contratacion por licitacion publica, minima cuantia y selección abreviada tienden a disminuir el costo del recetario, sin embargo, los FRE que concretaron órdenes de compra de recetarios por mínima cuantía, tienden a presentar precios mayores de adquisición, con costo alrededor de los 10.000 COP y 15.000 COP. Por otro lado, se evidencia que los entes territoriales que optaron por la modalidad de contratación directa, tienden a ser los recetarios más costosos en relación con las demás, con costos superiores a los 15.000 COP por recetario en promedio, factor esperado ya que al no haber competencia entre empresas oferentes, quien posee el monopolio de fabricación es libre de disponer los precios de venta a las entidades territoriales. 
+El modelo generado (ver Tabla \@ref(tab:resumenModeloRegresionLineal)) presenta una bondad de ajuste muy baja ($R^{2} = -0.064$), y no se logra demostrar un efecto significativo de los factores explorados, pese a esto se presentan tendencias en estos factores. 
 
-Finalmente se pude concluir el precio por prescripción de los recetarios oficiales circulantes a nivel nacional como variante ponderadora el precio de venta y la cantidad de prescripciones por recetario, en donde se puede evidenciar la tendencia de los FRE hacia 250 COP a 500 COP por prescripción (Figura \@ref(fig:PVTA-Recetarios)).
+En la Figura \@ref(fig:DependParcial1) se muestran gráficos de dependencia parcial de los factores explorados, se observan tendencias como que el N.° de prescripciones elevan el costo de los recetarios. Pese a que se podría suponer que al aumentar el número de características de seguridad en el recetario se aumentaría el costo de este, se encuentra una relación inversa entre el número de medidas y el costo de adquisición. Esto podría deberse a la facilidad de elaboración en departamentos con la capacidad tecnológica adecuada, la forma en que se adjudican los contratos y los diferentes oferentes en el concurso de contratación. 
 
-```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%"}
+```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de Costos.', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+g1 <- readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds'))
+g1
+```
+
+De esta forma, el tipo de contratación que se concreta con las empresas fabricante de los recetarios es una variable que influye en el costo de los recetarios, así pues, las modalidades de contratación por licitación pública, mínima cuantía y selección abreviada tienden a disminuir el costo del recetario en comparación con la modalidad de contratación directa, factor esperado ya que al no haber competencia entre empresas oferentes, quien posee el monopolio de fabricación es libre de disponer los precios de venta a las entidades territoriales.
+
+Por otra parte, los FRE que concretaron órdenes de compra de recetarios por mínima cuantía y selección abreviada, tienden a presentar precios mayores de adquisición, con costo alrededor de los 10.000 COP y 15.000 COP, mientras que, los entes territoriales que optaron por la modalidad de licitación pública tienden a ser los recetarios más económicos en relación con las demás, con costos inferiores a los 10.000 COP por recetario en promedio.
+
+### Precio de venta de recetario por prescripción
+
+Finalmente, se concluye que el precio por prescripción de los recetarios oficiales circulantes a nivel nacional como variante ponderadora el precio de venta y la cantidad de prescripciones por recetario, en donde se puede evidenciar la tendencia de los FRE hacia 250 COP a 500 COP por prescripción (Figura \@ref(fig:PVTA-Recetarios)). 
+
+```{r PVTA-Recetarios, echo=FALSE, warning=FALSE, fig.cap='Precio de venta de recetario por prescripción.', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '034_PVTA_recetarios_prescripcion.rds'))
 
 g1[[1]] <- g1[[1]] + labs(title = NULL)
 g1
 ```
 
-El valor por prescripción más alto a nivel nacional se presenta en el departamento de Casanare; pese a que el recetario cuenta con 50 prescripciones como la mayoría de los FRE, su precio de venta es de 76.500 COP, el más alto del país, y del que no se tiene un acto administrativo donde se establezca su valor. Además de ello, cuenta con 3 medidas de seguridad, lo que consolida la hipótesis que se observa a nivel nacional que indica que a menor número de medidas de seguridad, mayor es el costo del recetario.
+El valor por prescripción más alto a nivel nacional se presenta en el departamento de Casanare, pese a que este recetario cuenta con 50 prescripciones como la mayoría de los FRE, su precio de venta es de 76.500 COP, el más alto del país, y del que no se tiene un acto administrativo donde se establezca su valor. Además de ello, cuenta con 3 medidas de seguridad, lo que consolida la hipótesis que se observa a nivel nacional que indica que, a menor número de medidas de seguridad, mayor es el costo del recetario.
 
 <!-- ```{r comparativoDepartamentos2, echo=FALSE, warning=FALSE, fig.cap='Comparativo de costo vs precio y márgen de beneficio (2)', fig.width=8, fig.height=4, fig.topcaption=TRUE} -->
 <!-- readRDS(file.path(fig_path, '033_comparativoDepartamentos1.rds')) +  -->
 <!--   labs(title = NULL) -->
 <!-- ``` -->
+
+El precio de venta por prescripción podría incrementar los costos a los que se venden los MME a los pacientes en los puntos de dispensación. 

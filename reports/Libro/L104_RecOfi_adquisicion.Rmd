@@ -1,4 +1,4 @@
-## Tiempos de adquisición de recetarios
+## Adquisición de recetarios
 
 ```{r configuracion4-L104, include=FALSE}
 require(tidyverse); theme_set(theme_bw())
@@ -20,27 +20,36 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
+### Proceso de adquisición de recetario
+
 La adquisición de recetarios oficiales por parte de los FRE es un proceso que se lleva a cabe mediante contratación pública. En la Figura \@ref(fig:modalidadAdquisicion), se muestra un resumen de las modalidades de selección en el último proceso de adquisición de recetarios por parte de los FRE. Se evidencia que la modalidad más utilizada en este último periodo de reabastecimiento de recetario fue mínima cuantía.
 
-De acuerdo con los entes territoriales, esta modalidad de selección presenta favorabilidad desde el punto de vista financiero respecto a la inversión y recaudo posterior tras la venta de los recetarios oficiales. El ingreso por venta de recetarios es una de las principales fuentes de financiación de varios FRE (ver Figura \@ref(fig:IngresosFRE1)).
-
-```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
 readRDS(file.path(fig_path, '035_modalidadAdquisicion.rds')) + 
   labs(title = NULL)
 ```
+
+De acuerdo con los entes territoriales, esta modalidad de selección presenta favorabilidad desde el punto de vista financiero respecto a la inversión y recaudo posterior tras la venta de los recetarios oficiales. El ingreso por venta de recetarios es una de las principales fuentes de financiación de varios FRE (ver Figura \@ref(fig:IngresosFRE1)).
 
 La selección por mínima cuantía tiene como desventaja que algunos requerimientos funcionales del objeto a contratar pueden ser pasados por alto, y esto puede poner en riesgo el cumplimiento de las especificaciones del usuario en cuanto a los recetarios recibidos. De hecho, se observaron ejemplos donde debido a la falta de: (i) verificación de la experiencia del proponente, (ii) seguimiento y/o (iii) auditoria del avance de entrega, se recibieron recetarios no conformes, con prescripciones sin codificación o tintas desgastadas. 
 
 La segunda modalidad de selección más frecuente fue licitación pública, en la cual se exige demostrar tiempo de experiencia relacionada a la elaboración de este tipo de insumos. Por ejemplo, sí el recetario cuenta con medidas de seguridad específica (ver Figura \@ref(fig:MedidasSeguridad-Almacenamiento)) se espera que el proponente logre demostrar la capacidad de cumplir con la entrega del producto especificado.
 
-Los departamentos con mayor número de características de seguridad en el recetario oficial suelen realizar la contratación mediante licitación pública. Esta modalidad de selección podría favorecer la calidad del producto recibido y esto podría evitar problemas por falsificación del recetario. Sin embargo, en varios departamentos se podrían tener problemas para implementar esta modalidad debido a la falta de oferentes.  
+Los departamentos con mayor número de características de seguridad en el recetario oficial suelen realizar la contratación mediante licitación pública. Esta modalidad de selección podría favorecer la calidad del producto recibido y esto podría evitar problemas por falsificación del recetario. Sin embargo, en varios departamentos se podrían tener problemas para implementar esta modalidad debido a la falta de oferentes.
 
 Entre las medidas de seguridad más observadas en los recetarios por licitación pública se encuentran el uso de tintas invisibles o fluorescentes en secciones específicas del recetario que brillan bajo la luz UV, bandas y/o filamentos de seguridad, versus las medidas de seguridad de recetarios realizados por mínima cuantía como seriales con codificaciones alfanuméricas, escudo de la gobernación respectiva y/o marcas de agua.
 
 Pese a que la modalidad de selección en los contratos de adquisición de recetarios es un factor que afecta de forma importante el costo, se debe tener en cuenta que en algunos departamentos existe un rubro dentro de la gobernación para papelería y de este mismo se compran los recetarios, sin tener conocimiento del valor destinado para estos insumos por parte del FRE.
 
+En el marco de las actividades de las Jornadas de inmersión territorial, se logró observar un patrón en el proceso de licitación y contratación de recetarios oficiales por los FRE alrededor del país. Como se evidencia en la Figura \@ref(fig:procesoContractual), en la mayoría de los casos, los funcionarios de los FRE se encargan exclusivamente de la realización de los estudios previos, en donde se solicita la necesidad en cantidad y forma de recetarios. Posterior a ello, es la dirección territorial en salud, que en algunos casos es la secretaria de salud departamental, la gobernación u otra dependencia con interés en la salud pública del territorio, la encargada de desarrollar la etapa contractual del proceso, mediante una de las modalidades de selección de oferentes que más convenga, se elige la empresa proveedora y se establece el contrato de elaboración de recetarios oficiales. 
 
-```{r tiempoDemoraAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora para adquisición de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
+```{r procesoContractual, echo=FALSE, warning=FALSE, fig.cap="Proceso de contratación/licitación de los recetarios oficiales.", fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="80%",fig.align='center'}
+knitr::include_graphics(path = file.path('figures', 'procesoContractual.jpg'))
+```
+
+### Tiempos de adquisición 
+
+```{r tiempoDemoraAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora para adquisición de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '036_demoraRecetario.rds'))
 g1[[1]] <- g1[[1]] + labs(title = NULL)
 g1
@@ -60,40 +69,3 @@ Existen casos atípicos como el FRE del departamento de Putumayo, el cual lleva 
 
 En algunos departamentos se utiliza la plataforma Colombia Compra Eficiente para la adquisición de recetarios. Se encuentran algunos departamentos que han experimentado dificultades con esta plataforma y esto ha resultado en demoras en el proceso de adquisición de recetarios.
 
-La figura \@ref(fig:BD-diligBDRecet) muestra los campos de información recolectada en bases de datos por los FRE al momento de realizar la venta de un recetario oficial, la información recolectada permite conocer entre otras cosas:
-
--	Datos básicos de las entidades y prescriptores inscritos en el FRE. 
-
--	Unidades consumidas y su respectivo valor.
-
--	Datos de identificación de los recetarios.
-
--	Número de talonarios que se distribuyen en los respectivos departamentos. 
-
-```{r BD-diligBDRecet, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que diligencian campos en BD de venta de recetarios', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "041_BD_diligBDRecet.rds")) + 
-  labs(title = NULL)
-```
-
-Durante la jornada de inmersión territorial, se puedo observar que los FRE utilizan dichas bases con dos propósitos principales: 
-
--	Realizar estimaciones de necesidad de recetarios, control de inventarios y control en las cantidades que los compradores adquieren. Esto permite llevar un seguimiento del consumo promedio de las entidades. Este control permitió a los FRE realizar un seguimiento a posibles desvíos o anormalidades en los consumos. Por ejemplo, con el inicio de la pandemia el consumo de ROs y MME aumentó en la mayoría de los departamentos, por lo que los FRE tuvieron que fortalecer el trabajo en equipo con las entidades para mitigar desabastecimientos. 
-
--	Evitar fraudes o falsificaciones al realizar un control en el manejo de talonarios, y contrastando la información de las bases con la entregada o solicitada durante visitas.
-
-Se observó que la mayoría de FRE (proporción mayor a 50% en la Figura \@ref(fig:BD-diligBDRecet)) llevaban un control de información con el fin de identificar a los compradores (Nombre del comprador persona o institución) y las cantidades adquiridas – Unidades compradas. Se almacenan datos de contacto, como dirección o teléfono en tan solo 25% de los FRE. Por otro lado, se evidenció que la mayoría de departamentos (83%) optan por realizar seguimiento a los recetarios con el código de serial, debido a que estos son únicos en cada recetario.
-
-Así mismo, se observaron otros tipos de campos almacenados por los FRE (opción Otros) en la venta de recetarios. Entre estos otros se encuentra: (a) consecutivos de las facturas emitidas en cada compra, (b) registro REPS, (c) saldo de recetarios oficiales tras la compra, o (d) códigos de recetarios oficiales prescritos allegados para su revisión. Algunos FRE cierran el ciclo de control del RO, en la misma base de datos, al relacionar los RO prescritos que son devueltos para su revisión.
-
-Los FRE realizan una serie de actividades para el seguimiento de uso de los recetarios. En la Figura \@ref(fig:SeguimientoUsoRecetarios) se muestra las distintas acciones realizadas por parte de los FRE para el seguimiento al manejo de los RO. La actividad de control más realizada, alrededor de un 70%, es la visita a las instituciones y médicos independientes inscritos en el FRE. La dinámica principal de la visita consiste en actividades propias de IVC, y a su vez en la revisión del anexo 13 junto con otros informes particulares vs las copias de las prescripciones de los RO que las entidades tengan disponibles. 
-
-Las visitas a instituciones han permitido evidenciar en algunos departamentos, falencias en el uso adecuado de los RO, como por ejemplo prescripciones en las cuales se formulan antibióticos u otros medicamentos en conjunto con MME o solos, así mismo se tienen casos donde se encuentran recetarios en blanco, pero con firma y sello del médico prescriptor, generando un alto riesgo de desvío en las instituciones. 
-
-Otras actividades de seguimiento activo al manejo de RO son el seguimiento a las denuncias, las cuales tienen una proporción menor al 5%. 
-
-Por tanto, se puede determinar que la mayoría de los FRE realizan actividades de seguimiento pasivas (juntas alcanzan una proporción de 50%), como la revisión de anormalidades en las bases de ventas, como se mencionó previamente, la verificación física de los ROs, la verificación de los informes digitales, anexos allegados, puntos que serán ampliados más adelante, o la verificación de recambios con un 25% de proporción, la cual consiste en autorizar la venta a las entidades, solo cuando se alleguen talonarios prescritos, es decir, si la entidad o medico prescriptor allega 2 talonarios previamente vendidos y que ya hayan sido prescritos, se pueden vender 2 talonarios nuevos; esta tendencia se puede deber a la reducida capacidad de recurso humano con el que cuentan los FRE, respecto al número de entidades y médicos prescriptores en cada departamento. De hecho, el acompañamiento permitió evidenciar que el 15% de los FRE no realizan ningún tipo de actividad de seguimiento al uso de los ROs, tan solo cumpliendo con la presentación de informes exigidos por la normativa vigente.  
-
-```{r SeguimientoUsoRecetarios, echo=FALSE, warning=FALSE, fig.cap='Actividades realizadas por el FRE para el seguimiento del uso de recetarios', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "043_SeguimientoUsoRecetarios.rds")) + 
-  labs(title = NULL)
-```

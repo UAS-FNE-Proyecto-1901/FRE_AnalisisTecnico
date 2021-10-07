@@ -145,9 +145,10 @@ ggdepend4 <- funcionBoxplots(parContrataDir[[2]], Modalidades_Mínima.Cuantía) 
 ggdepend5 <- funcionBoxplots(parContrataDir[[3]], Modalidades_Selección.abreviada) + 
   xlab('Modalidad: \n Selección abreviada')
 
-ggdependT <- ggdepend1 + ggdepend2 + ggdepend3 + ggdepend4 + 
-  ggdepend5 + 
-  plot_annotation(title = 'Gráficos de dependencia parcial')
+ggdependT <-
+  wrap_plots(ggdepend1, ggdepend2, ggdepend3, ggdepend4, ggdepend5)
 
-ggdependT
-guardarGGplot(ggdependT, '046c_GraficasDependenParcial', 10, 6)
+ggdependT + plot_annotation(title = 'Gráficos de dependencia parcial')
+
+guardarGGplot(ggdependT, 
+              '046c_GraficasDependenParcial', 10, 6)
