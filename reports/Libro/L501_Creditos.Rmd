@@ -57,9 +57,9 @@ tag1 <- htmltools::tags
 
 box1 <- tag1$div(
   bloqueContactos('Diego Alejandro Socha Cuitiva', 'Dirección de proyecto',
-                  './credit_figures/diego.jpg'),
+                  './credit_figures/diego.jpeg'),
   bloqueContactos('Hillary Andrea Gómez Guerra', 'Coordinación de proyecto',
-                  './credit_figures/hillary.jfif'),
+                  './credit_figures/hillary.jpeg'),
   style = paste('width: 100%',
                 'display: flex',
                 'align-items: flex-start',
@@ -85,9 +85,9 @@ if(knitr::is_html_output()){
 ```{r, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
   bloqueContactos('Carlos Andres Acosta Pinto', 'Profesional de Apoyo Operativo',
-                  './credit_figures/carlos.jfif'),
+                  './credit_figures/carlos.jpeg'),
   bloqueContactos('Daniela del Pilar Carvajal Latorre', 'Profesional de Apoyo Operativo',
-                  './credit_figures/daniela.jfif'),
+                  './credit_figures/daniela.jpeg'),
   style = paste('width: 100%',
                 'display: flex',
                 'align-items: flex-start',
@@ -113,13 +113,13 @@ if(knitr::is_html_output()){
 ```{r, Realización de encuestas, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
   bloqueContactos('Carlos Guillermo Leal Jimenez', 'Profesional de equipo técnico territorial',
-                  './credit_figures/guillermo.jfif', altura = 15),
+                  './credit_figures/guillermo.jpeg', altura = 15),
   bloqueContactos('Jhonathan Felipe Venegas Parra', 'Profesional de equipo técnico territorial',
-                  './credit_figures/jonathan.jfif', altura = 15),
+                  './credit_figures/jonathan.jpeg', altura = 15),
   bloqueContactos('Nicolás Alexander Cadena Ayala', 'Profesional de equipo técnico territorial',
-                  './credit_figures/nicolas.jfif', altura = 15),
+                  './credit_figures/nicolas.jpeg', altura = 15),
   bloqueContactos('Wilder Estiben Meneses Garavito', 'Profesional de equipo técnico territorial',
-                  './credit_figures/estiben.jfif', altura = 15),
+                  './credit_figures/estiben.jpeg', altura = 15),
   style = paste('width: 100%',
                 'height: 35 rem',
                 'display: flex',
@@ -158,7 +158,7 @@ if(knitr::is_html_output()){
 ```{r, Estadistica, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
   bloqueContactos('Daniel Sebastián Parra González', 'Estadístico', 
-                  './credit_figures/daniel.png'),
+                  './credit_figures/daniel.jpeg'),
   style = paste('width: 100%',
                 'display: flex',
                 'align-items: flex-start',
