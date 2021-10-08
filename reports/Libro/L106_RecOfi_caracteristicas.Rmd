@@ -85,17 +85,3 @@ Por otro lado, 29\% de los FRE del país tienen una percepción no favorable ace
 Como ejemplo de opinión negativa se tiene:
 
 > *"La razón principal es el factor financiero. El FRE necesita los ingresos generados por los recetarios oficiales propios, para su sostenimiento. Igualmente, es difícil continuar con las actividades de seguimiento y control para los recetarios oficiales. Así mismo, podría prestarse para un manejo inadecuado de los MME, contemplando fraude y desvíos en los recetarios oficiales electrónicos."*
-
-### Lineamientos para el buen manejo de recetarios
-
-Tras la recolección de información en el territorio nacional, se encontró que hay fortalezas y debilidades en los departamentos respecto al manejo de los recetarios. Por ende, se hace necesario realizar unos lineamientos técnicos para tener en cuenta y ser adoptados dentro de los entes territoriales, de los cuales se resaltan:
-
--	Tener una espacio exclusivo y seguro para el almacenamiento de los recetarios, en el cual sólo se tenga acceso cierto personal del FRE.
-
--	Realizar un seguimiento de los recetarios por medio de la codificación al momento de venderse, puesto que al no llevar registro de los mismos hay una posibilidad de falsificación y/o desvío.
-
--	Tratar de implementar medidas de seguridad más altas, elevando el nivel de confianza del recetario. En los departamentos donde sólo hay 1 o 2 litografías, se aconseja hablar con dichos proveedores para llegar a un acuerdo de que medidas pueden adicionarse en el recetario. Por ejemplo, adicionar microtextos en cada copia del recetario.
-
--	Seguir las circulares emitidas por el FNE relacionado con el almacenamiento de los recetarios diligenciados, liberándose de espacio en los entes territoriales y teniendo un lugar de trabajo más óptimo.
-
--	Tener niveles de seguridad para realizar la compra de nuevos recetarios, evitando desabastecimientos y llegando a planes de contingencia que pueden llegar a ser reprocesos en los entes territoriales.

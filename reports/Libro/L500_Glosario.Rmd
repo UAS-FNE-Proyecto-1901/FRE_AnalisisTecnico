@@ -1,3 +1,31 @@
+# Lineamientos y Recomendaciones
+
+### Estructura de los FRE
+
+### Recetarios Oficiales
+
+Tras la recolección de información en el territorio nacional, se encontró que hay fortalezas y debilidades en los departamentos respecto al manejo de los recetarios. Por ende, se hace necesario realizar unos lineamientos técnicos para tener en cuenta y ser adoptados dentro de los entes territoriales, de los cuales se resaltan:
+
+-	Tener una espacio exclusivo y seguro para el almacenamiento de los recetarios, en el cual sólo se tenga acceso cierto personal del FRE.
+
+-	Realizar un seguimiento de los recetarios por medio de la codificación al momento de venderse, puesto que al no llevar registro de los mismos hay una posibilidad de falsificación y/o desvío.
+
+-	Tratar de implementar medidas de seguridad más altas, elevando el nivel de confianza del recetario. En los departamentos donde sólo hay 1 o 2 litografías, se aconseja hablar con dichos proveedores para llegar a un acuerdo de que medidas pueden adicionarse en el recetario. Por ejemplo, adicionar microtextos en cada copia del recetario.
+
+-	Seguir las circulares emitidas por el FNE relacionado con el almacenamiento de los recetarios diligenciados, liberándose de espacio en los entes territoriales y teniendo un lugar de trabajo más óptimo.
+
+-	Tener niveles de seguridad para realizar la compra de nuevos recetarios, evitando desabastecimientos y llegando a planes de contingencia que pueden llegar a ser reprocesos en los entes territoriales.
+
+### Medicamentos
+
+- Se recomienda realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa. 
+
+- Se deben establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
+
+
+### Informes
+
+
 # Glosario {-}
 
 - **Alerta Sanitaria**: Toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces.

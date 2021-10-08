@@ -72,9 +72,5 @@ gg <- g1 + (g2 / g3) + plot_annotation(tag_levels = 'A')
 gg
 ```
 
-### Recomendaciones finales
 
-- Se recomienda realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa. 
-
-- Se deben establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
 
