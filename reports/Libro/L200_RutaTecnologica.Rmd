@@ -76,3 +76,37 @@ readRDS(file.path(fig_path, "078_OpinionEquipos.rds")) +
 ```
 
 Si los inconvenientes relacionados a la infraestructura tecnológica, se presentan actualmente en las zonas más alejadas del país, el escenario para la implementación del ROE no podría aspirar a grandes cambios en cada territorio. Lo anterior, podría originar una barrera al acceso de medicamentos desde cada Secretaria de Salud o Dirección departamental de salud. A continuación, se presentan tres observaciones obtenidas durante las visitas técnicas en los FRE *WWW y WWW.*
+
+
+## Control de la información 
+
+### Seguridad de la información
+
+La seguridad de la información que manejan los FRE a nivel nacional, es un tema de alta importancia a nivel interno, ya que comprende las medidas preventivas de la institución u organización, que permiten resguardar y proteger la información por medio de sistemas tecnológicos, buscando mantener la confidencialidad, disponibilidad e integridad de los datos. Adicionalmente, se debe contemplar que todos los FRE deben ser capaces de resguardar y proteger la información proveniente de todo el departamento, lo cual dispone un reto mayor referente a la seguridad de la información.
+
+La Figura \@ref(fig:GarantiaInformacion) muestra la manera como se garantiza la seguridad de la información en los FRE departamentales. A partir de los datos de la figura, se puede evidenciar que medios emplea el personal del FRE para resguardar y proteger la información por medio de sistemas tecnológicos.  La restricción de acceso es el principal recurso que tienen los FRE para mantener la confidencialidad, disponibilidad e integridad de los datos.
+
+```{r GarantiaInformacion, echo=FALSE, warning=FALSE, fig.cap='Medidas para garantizar la seguridad de la información', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "127_GarantiaInformacion.rds")) + labs(title = NULL)
+```
+
+Cabe resaltar que en la Figura \@ref(fig:GarantiaInformacion) cuándo se habla de restricción de acceso, se refiere al restringido acceso que se tiene a estos informes, aunque particularmente algunos FRE cómo La Guajira, si tienen una restricción de acceso a los informes presentados, por medio de contraseñas y bloqueo de columnas. En general una gran parte de los FRE maneja bases de datos combinadas (Bitácoras manuales y hojas de cálculo) para el manejo de Recetarios Oficiales y MME. Esto causa una trazabilidad fragmentada en la información del FRE, además de un re-proceso que tiene que asumir el personal del FRE, relacionado con la transcripción a medios digitales, contemplando los errores humanos de digitación.
+
+### Bases de datos
+
+En la Figura \@ref(fig:InformInscritos) se muestra la proporción de FRE que cuentan con bases de datos de información de inscritos y pacientes a los cuales se les dispensa MME.
+
+```{r InformInscritos, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con: (A) bases de datos con información de inscritos, o (B) bases de datos con información de pacientes a los que se les dispensa MME.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
+g1 <- readRDS(file.path(fig_path, "128_InformInscritos.rds")) + 
+  labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, "129_InformPacientes.rds")) + 
+  labs(title = NULL)
+wrap_plots(g1, g2) + patchwork::plot_layout(ncol = 2) + plot_annotation(tag_level = 'A')
+```
+
+<!-- ```{r InformPacientes, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con una ', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"} -->
+<!-- ``` -->
+
+<!-- La pregunta a la cual se refiere la Figura \@ref(fig:InstitucionesAdicionales) se trata de las instituciones que realizan ventas de MME a pacientes, no la entiendo muy bien!!!!. -->
+
+<!-- Analizando algunas otras circunstancias por las cuáles los FRE no realizan los informes a tiempo, podría también estar relacionada con un retraso en la entrega de los informes por parte de las instituciones al FRE, en la gráfica AB, es claro que 23 de los 30 FRE solo se quedan en un llamado de atención en caso de incuplimiento en las fechas de entrega de informes de consumo, esto ya está mucho más relacionado con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos, pues si el seguimiento que se hace por parte del FRE es débil, esto puede repercutir en el comportamiento de las instituciones hacía el FRE, pero este es un asunto gobernanza e institucionalidad que es potestad de cada ente territorial tratar. -->

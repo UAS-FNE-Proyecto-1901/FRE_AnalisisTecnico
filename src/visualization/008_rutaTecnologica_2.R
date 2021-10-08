@@ -107,7 +107,7 @@ nivelesConsolidacion <- c("Menos de una hora",
 
 col1 <- "4.73. ¿Qué tiempo toma la consolidación del Anexo 1 de la R. 1479/2006? (en días)"
 
-ggConsolidacionA1 <- select(df, col1 = col1) %>% 
+ggConsolidacionA1 <- select(df, all_of(c(col1 = col1))) %>% 
   drop_na() %>% 
   mutate(col1 = factor(col1, rev(nivelesConsolidacion))) %>% 
   ggplot(aes(y = col1)) +
@@ -134,10 +134,12 @@ ggConsolidacionA1_2 <-
     col2 = ifelse(str_detect(!!ensym(col2), '\\D'), NA_real_, as.numeric(!!ensym(col2)))
     ) %>% 
   ggplot(aes(x = col2, y = col1)) +
-  geom_boxplot() + 
+  geom_violin(fill = 'blue4', alpha = 0.2) + 
+  geom_point(shape = 1) + 
+  # geom_dotplot(binaxis='y', stackdir='center', dotsize=1) + 
   xlab('N.° de instituciones que han \n realizado compras el último año') + 
   ylab('Tiempo de diligenciamiento de Anexo 1') +
-  theme(axis.title.y = element_blank(), panel.grid = element_blank())
+  theme(panel.grid = element_blank())
 
 #+ ggConsolidacionA2, fig.width = 8, fig.height = 6, out.width = "60%"
 ggConsolidacionA1_2
@@ -218,22 +220,9 @@ guardarGGplot(ggArchivoInformes, '123_ArchivoInformesFRE', 6, 4)
 #'-------------------------------------------------------------------------------
 # 4.92. Tiempos de diligenciamiento del Anexo 2 de la resolución------------------
 #'-------------------------------------------------------------------------------
-
-ggAnexo2dilig_1 <- df %>% 
-  mutate(Variable = str_extract(`4.92_1`, '(.)(?=\\|)')) %>% 
-  ggplot(aes(x = Variable)) + 
-  geom_bar(color = 'blue', fill = 'blue', alpha = 0.4) + 
-  geom_text(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
-  scale_y_continuous(expand = c(0.1,0,0.1,0)) + 
-  xlab('Número de días') + 
-  ylab('Conteo') 
-
-#+ ggAnexo2dilig_1, fig.width = 8, fig.height = 6, out.width = "60%"
-ggAnexo2dilig_1
-guardarGGplot(ggAnexo2dilig_1, '137_evaluacionAnexo1', 6, 4)
+# La columna 4.92_1 está en horas
 
 col1 <- '4.53. Brinde una estimación del número de entidades que han realizado compras al FRE en el último año.'
-
 
 df2 <- df %>%
   mutate(
@@ -242,17 +231,40 @@ df2 <- df %>%
     col2 = ifelse(str_detect(!!ensym(col1), '\\D'), NA_real_, as.numeric(!!ensym(col1)))
   )
 
-depto1 <- c('PUTUMAYO', 'CASANARE', 'QUINDÍO', 'META', 'CAQUETÁ', 
-            'BOLÍVAR', 'VALLE DEL CAUCA', 'ANTIOQUIA')
+ggAnexo2dilig_1 <- df %>% 
+  mutate(Variable = str_extract(`4.92_1`, '(.)(?=\\|)')) %>% 
+  ggplot(aes(x = Variable)) + 
+  geom_bar(color = 'blue', fill = 'blue', alpha = 0.4) + 
+  geom_text(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
+  scale_y_continuous(expand = c(0.1,0,0.1,0)) + 
+  xlab('N.° de personas involucradas') + 
+  ylab('Conteo') 
+
+#+ ggAnexo2dilig_1, fig.width = 8, fig.height = 6, out.width = "60%"
+ggAnexo2dilig_1
+guardarGGplot(ggAnexo2dilig_1, '137_evaluacionAnexo1', 6, 4)
+
+
+
+
+
+lm1 <- lm(col0/8 ~ log(col2), df2)
+
+breaks     <- 10^(0:3)
+min_breaks <- rep(1:9, 3)*(10^rep(0:3, each=9))
+
 
 ggAnexo2dilig_2 <- df2 %>%
   ggplot(aes(x = col2, y = col0/8)) +
   geom_point() + 
-  stat_smooth(method = 'lm', formula = 'y ~ x') + 
-  geom_text_repel(data = filter(df2, Departamento_1 %in% depto1), 
+  stat_smooth(method = 'lm', formula = 'y ~ log(x)') + 
+  scale_x_continuous(trans = 'pseudo_log', 
+                     breaks = breaks, minor_breaks = min_breaks) + 
+  geom_text_repel(
+    data = df2[!is.na(df2$col0), ][cooks.distance(lm1) > 0.015, ], 
             aes(label = str_to_title(Departamento_1))) +
   xlab('N.° de instituciones que han \n realizado compras el último año') + 
-  ylab('N.° de días para \n diligenciamiento de Anexo 2') 
+  ylab('Tiempo de diligenciamiento \nde Anexo 2 (días laborales)') 
 
 
 #+ ggAnexo2dilig_2, fig.width = 8, fig.height = 6, out.width = "60%"

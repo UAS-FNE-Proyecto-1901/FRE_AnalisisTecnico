@@ -383,6 +383,36 @@ guardarPlotly(plotlyProcesosAdquisicion, '081_ProcesosAdquisición', 12, 7,
               libdir = 'plotly')
 
 
+
+graficoBarrasTiempos <- function(tiempo, 
+                                 titulo,
+                                 data = df_total,
+                                 breaks = 1:15, fill = 'blue1') {
+  data %>%
+    filter(name == tiempo) %>%
+    ggplot(aes(x = value)) +
+    geom_histogram(bins = 18, 
+                   fill='white', alpha=1, 
+                   color='gray2') +
+    geom_density(stat = 'count', color = fill) + 
+    xlab('Tiempo (días)') +
+    ylab('Frecuencia') +
+    labs(title = titulo) + 
+    theme(panel.grid = element_blank())  
+}
+
+dfTiempos1 <- paste0('T', 1:5)
+
+ggProcesoAdqu <- 
+  wrap_plots(pmap(list(dfTiempos1, nombresCorrectos),
+                                 graficoBarrasTiempos))
+
+#+ ggProcesoAdqu, fig.width = 10, fig.height = 6, out.width = "60%"
+ggProcesoAdqu
+
+guardarGGplot(ggProcesoAdqu, '082b_ProcesosAdquisición', 10, 6)
+
+
 ggProcesosAdquisicion1 <- df_total %>%
   # mutate(map(name, function(x) x))
   ggplot(aes(x = value, y = fct_reorder(Departamento_1, T_total), group = name)) +

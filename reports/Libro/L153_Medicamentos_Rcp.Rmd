@@ -1,4 +1,4 @@
-## Recepción de medicamentos
+## Procesos relacionados a medicamentos
 
 ```{r configuracion1-L153, include=FALSE}
 require(tidyverse); theme_set(theme_bw())
@@ -20,6 +20,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
+### Recepción de medicamentos
 
 ```{r TiemposRecepcionAlmacenamiento, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
 readRDS(file.path(fig_path, "086_RecepcionMedicamento.rds")) + 
@@ -41,3 +42,18 @@ readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) +
   labs(title = NULL)
 ```
 
+### Controles en Venta Directa a Paciente
+
+En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.
+
+```{r ControlesVentasFRE, echo=FALSE, warning=FALSE, fig.cap='Controles en las ventas directas a pacientes', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+readRDS(file.path(fig_path, "120_ControlesVentasFRE.rds")) + labs(title = NULL)
+```
+
+
+```{r InstitucionesAdicionales, echo=FALSE, warning=FALSE, fig.cap='Existencia de otras instituciones que realizan ventas a instituciones a MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+# (C) Proporción de FRE donde hay  otras instituciones que realizan ventas a instituciones a MME.
+g3 <- readRDS(file.path(fig_path, "131_InstitucionesAdicionales.rds")) + 
+  labs(title = NULL)
+g3
+```

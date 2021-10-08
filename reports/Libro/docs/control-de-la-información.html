@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>7.1 Canales de comunicacións | Informe Final de Visitas Técnicas Territoriales</title>
+  <title>7.3 Control de la información | Informe Final de Visitas Técnicas Territoriales</title>
   <meta name="description" content="Este es el informe final de visitas de asistencias técnicas realizadas por los FRE" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="7.1 Canales de comunicacións | Informe Final de Visitas Técnicas Territoriales" />
+  <meta property="og:title" content="7.3 Control de la información | Informe Final de Visitas Técnicas Territoriales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="7.1 Canales de comunicacións | Informe Final de Visitas Técnicas Territoriales" />
+  <meta name="twitter:title" content="7.3 Control de la información | Informe Final de Visitas Técnicas Territoriales" />
   
   <meta name="twitter:description" content="Este es el informe final de visitas de asistencias técnicas realizadas por los FRE" />
   
@@ -30,10 +30,10 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="ruta-tecnológica.html"/>
-<link rel="next" href="equipos-de-cómputo.html"/>
+<link rel="prev" href="equipos-de-cómputo.html"/>
+<link rel="next" href="reporte-de-informes.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -52,6 +52,15 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -152,7 +161,11 @@ div.csl-indent {
 <li class="chapter" data-level="6.1.4" data-path="adquisición-de-mme-por-parte-del-fre.html"><a href="adquisición-de-mme-por-parte-del-fre.html#plataforma-de-compra-estatal"><i class="fa fa-check"></i><b>6.1.4</b> Plataforma de compra estatal</a></li>
 <li class="chapter" data-level="6.1.5" data-path="adquisición-de-mme-por-parte-del-fre.html"><a href="adquisición-de-mme-por-parte-del-fre.html#comportamiento-de-compra-de-fre"><i class="fa fa-check"></i><b>6.1.5</b> Comportamiento de compra de FRE</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="recepción-de-medicamentos.html"><a href="recepción-de-medicamentos.html"><i class="fa fa-check"></i><b>6.2</b> Recepción de medicamentos</a></li>
+<li class="chapter" data-level="6.2" data-path="procesos-relacionados-a-medicamentos.html"><a href="procesos-relacionados-a-medicamentos.html"><i class="fa fa-check"></i><b>6.2</b> Procesos relacionados a medicamentos</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="procesos-relacionados-a-medicamentos.html"><a href="procesos-relacionados-a-medicamentos.html#recepción-de-medicamentos"><i class="fa fa-check"></i><b>6.2.1</b> Recepción de medicamentos</a></li>
+<li class="chapter" data-level="6.2.2" data-path="procesos-relacionados-a-medicamentos.html"><a href="procesos-relacionados-a-medicamentos.html#controles-en-venta-directa-a-paciente"><i class="fa fa-check"></i><b>6.2.2</b> Controles en Venta Directa a Paciente</a></li>
+</ul></li>
 <li class="chapter" data-level="6.3" data-path="almacenamiento.html"><a href="almacenamiento.html"><i class="fa fa-check"></i><b>6.3</b> Almacenamiento</a>
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="almacenamiento.html"><a href="almacenamiento.html#medidas-de-seguridad-para-el-almacenamiento"><i class="fa fa-check"></i><b>6.3.1</b> Medidas de seguridad para el almacenamiento</a></li>
@@ -168,13 +181,24 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="7" data-path="ruta-tecnológica.html"><a href="ruta-tecnológica.html"><i class="fa fa-check"></i><b>7</b> Ruta Tecnológica</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="canales-de-comunicacións.html"><a href="canales-de-comunicacións.html"><i class="fa fa-check"></i><b>7.1</b> Canales de comunicacións</a></li>
+<li class="chapter" data-level="7.1" data-path="canales-de-comunicación.html"><a href="canales-de-comunicación.html"><i class="fa fa-check"></i><b>7.1</b> Canales de comunicación</a></li>
 <li class="chapter" data-level="7.2" data-path="equipos-de-cómputo.html"><a href="equipos-de-cómputo.html"><i class="fa fa-check"></i><b>7.2</b> Equipos de cómputo</a></li>
+<li class="chapter" data-level="7.3" data-path="control-de-la-información.html"><a href="control-de-la-información.html"><i class="fa fa-check"></i><b>7.3</b> Control de la información</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="control-de-la-información.html"><a href="control-de-la-información.html#seguridad-de-la-información"><i class="fa fa-check"></i><b>7.3.1</b> Seguridad de la información</a></li>
+<li class="chapter" data-level="7.3.2" data-path="control-de-la-información.html"><a href="control-de-la-información.html#bases-de-datos"><i class="fa fa-check"></i><b>7.3.2</b> Bases de datos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="reporte-de-informes.html"><a href="reporte-de-informes.html"><i class="fa fa-check"></i><b>8</b> Reporte de informes</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="diligenciamiento-de-anexos.html"><a href="diligenciamiento-de-anexos.html"><i class="fa fa-check"></i><b>8.1</b> Diligenciamiento de anexos</a></li>
-<li class="chapter" data-level="8.2" data-path="seguridad-de-la-información.html"><a href="seguridad-de-la-información.html"><i class="fa fa-check"></i><b>8.2</b> Seguridad de la información</a></li>
+<li class="chapter" data-level="8.1" data-path="diligenciamiento-de-anexos.html"><a href="diligenciamiento-de-anexos.html"><i class="fa fa-check"></i><b>8.1</b> Diligenciamiento de anexos</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="diligenciamiento-de-anexos.html"><a href="diligenciamiento-de-anexos.html#diligenciamiento-de-anexo-1"><i class="fa fa-check"></i><b>8.1.1</b> Diligenciamiento de Anexo 1</a></li>
+<li class="chapter" data-level="8.1.2" data-path="diligenciamiento-de-anexos.html"><a href="diligenciamiento-de-anexos.html#diligenciamiento-de-anexo-2"><i class="fa fa-check"></i><b>8.1.2</b> Diligenciamiento de Anexo 2</a></li>
+<li class="chapter" data-level="8.1.3" data-path="diligenciamiento-de-anexos.html"><a href="diligenciamiento-de-anexos.html#archivo-del-anexo-13-de-la-resolución-1478-de-2006"><i class="fa fa-check"></i><b>8.1.3</b> Archivo del Anexo 13 de la Resolución 1478 de 2006</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="seguimiento-de-envío-de-informes.html"><a href="seguimiento-de-envío-de-informes.html"><i class="fa fa-check"></i><b>8.2</b> Seguimiento de envío de informes</a></li>
+<li class="chapter" data-level="8.3" data-path="manejo-de-incumplimientos.html"><a href="manejo-de-incumplimientos.html"><i class="fa fa-check"></i><b>8.3</b> Manejo de incumplimientos</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="análisis-a-nivel-regional.html"><a href="análisis-a-nivel-regional.html"><i class="fa fa-check"></i><b>9</b> Análisis a Nivel Regional</a>
 <ul>
@@ -204,6 +228,7 @@ div.csl-indent {
 <li class="chapter" data-level="9.4" data-path="región-orinoquía.html"><a href="región-orinoquía.html"><i class="fa fa-check"></i><b>9.4</b> Región Orinoquía</a></li>
 <li class="chapter" data-level="9.5" data-path="región-pacífica.html"><a href="región-pacífica.html"><i class="fa fa-check"></i><b>9.5</b> Región Pacífica</a></li>
 </ul></li>
+<li class="chapter" data-level="10" data-path="lineamientos-y-recomendaciones-generales.html"><a href="lineamientos-y-recomendaciones-generales.html"><i class="fa fa-check"></i><b>10</b> Lineamientos y Recomendaciones Generales</a></li>
 <li class="chapter" data-level="" data-path="glosario.html"><a href="glosario.html"><i class="fa fa-check"></i>Glosario</a></li>
 <li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html"><i class="fa fa-check"></i>Créditos</a>
 <ul>
@@ -227,31 +252,44 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="canales-de-comunicacións" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Canales de comunicacións</h2>
-<p>De acuerdo con la Figura <a href="canales-de-comunicacións.html#fig:MediosComunicacion">7.2</a>, se evidencia que los canales más frecuentes que manejan los FRE para comunicarse con los usuarios corresponden al teléfono y el correo electrónico. Incluso estos medios de comunicación toman mayor relevancia en estos tiempos actuales de distanciamiento social, a causa de la reciente pandemia referente a la COVID-19. En ese orden de ideas, cada vez son menos los FRE que mantienen la atención presencial en sus instalaciones, al igual que la correspondencia. Estos canales de comunicación fueron reemplazados por el mundo moderno y la digitalización, en función del uso correcto del correo electrónico. Este análisis permite demostrar cierta aceptabilidad por los medios digitales que han surgido en la actualidad, por parte del personal del FRE y los usuarios inscritos en el territorio.</p>
-<div class="figure"><span id="fig:MediosComunicacion"></span>
+<div id="control-de-la-información" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Control de la información</h2>
+<div id="seguridad-de-la-información" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Seguridad de la información</h3>
+<p>La seguridad de la información que manejan los FRE a nivel nacional, es un tema de alta importancia a nivel interno, ya que comprende las medidas preventivas de la institución u organización, que permiten resguardar y proteger la información por medio de sistemas tecnológicos, buscando mantener la confidencialidad, disponibilidad e integridad de los datos. Adicionalmente, se debe contemplar que todos los FRE deben ser capaces de resguardar y proteger la información proveniente de todo el departamento, lo cual dispone un reto mayor referente a la seguridad de la información.</p>
+<p>La Figura <a href="control-de-la-información.html#fig:GarantiaInformacion">7.7</a> muestra la manera como se garantiza la seguridad de la información en los FRE departamentales. A partir de los datos de la figura, se puede evidenciar que medios emplea el personal del FRE para resguardar y proteger la información por medio de sistemas tecnológicos. La restricción de acceso es el principal recurso que tienen los FRE para mantener la confidencialidad, disponibilidad e integridad de los datos.</p>
+<div class="figure"><span id="fig:GarantiaInformacion"></span>
 <p class="caption">
-Figura 7.2: Canales de comunicación FRE con clientes
+Figura 7.7: Medidas para garantizar la seguridad de la información
 </p>
-<img src="InformeFinal_files/figure-html/MediosComunicacion-1.png" alt="Canales de comunicación FRE con clientes" width="85%" />
+<img src="InformeFinal_files/figure-html/GarantiaInformacion-1.png" alt="Medidas para garantizar la seguridad de la información" width="85%" />
 </div>
-<p>Por otro lado, la Figura <a href="canales-de-comunicacións.html#fig:ConexionInternet">7.3</a> exhibe la velocidad de conexión a internet en cada zona del país, donde se encuentran ubicados los FRE de cada departamento. Cerca de la mitad de los FRE cuentan con una concepción “Buena o excelente” del internet en su territorio. No obstante, la otra porción equivalente a la mitad de los FRE, afirma una “Aceptable, mala o muy mala” señal del internet en su sitio de trabajo. Esto podría representar varios inconvenientes en la conectividad a la red y el desarrollo adecuado de los procesos digitales en muchos FRE departamentales.</p>
-<p>La apuesta a futuro de la modernización en los procesos de manejo de recetarios oficiales y MME, por ejemplo, la implementación del ROE, mostraría cierta deficiencia en el acceso a internet para un sector grande en la población colombiana. Esta transformación digital debe considerar principalmente, aquellos territorios que mantienen falencias en la conectividad a internet, con el fin de evitar barreras al acceso de medicamentos en estas zonas del país.</p>
-<div class="figure"><span id="fig:ConexionInternet"></span>
+<p>Cabe resaltar que en la Figura <a href="control-de-la-información.html#fig:GarantiaInformacion">7.7</a> cuándo se habla de restricción de acceso, se refiere al restringido acceso que se tiene a estos informes, aunque particularmente algunos FRE cómo La Guajira, si tienen una restricción de acceso a los informes presentados, por medio de contraseñas y bloqueo de columnas. En general una gran parte de los FRE maneja bases de datos combinadas (Bitácoras manuales y hojas de cálculo) para el manejo de Recetarios Oficiales y MME. Esto causa una trazabilidad fragmentada en la información del FRE, además de un re-proceso que tiene que asumir el personal del FRE, relacionado con la transcripción a medios digitales, contemplando los errores humanos de digitación.</p>
+</div>
+<div id="bases-de-datos" class="section level3" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Bases de datos</h3>
+<p>En la Figura <a href="control-de-la-información.html#fig:InformInscritos">7.8</a> se muestra la proporción de FRE que cuentan con bases de datos de información de inscritos y pacientes a los cuales se les dispensa MME.</p>
+<div class="figure" style="text-align: center"><span id="fig:InformInscritos"></span>
 <p class="caption">
-Figura 7.3: Velocidad de conexión de internet
+Figura 7.8: Proporción de FRE que cuenta con: (A) bases de datos con información de inscritos, o (B) bases de datos con información de pacientes a los que se les dispensa MME.
 </p>
-<img src="InformeFinal_files/figure-html/ConexionInternet-1.png" alt="Velocidad de conexión de internet" width="85%" />
+<img src="InformeFinal_files/figure-html/InformInscritos-1.png" alt="Proporción de FRE que cuenta con: (A) bases de datos con información de inscritos, o (B) bases de datos con información de pacientes a los que se les dispensa MME." width="100%" />
+</div>
+<!-- ```{r InformPacientes, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con una ', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"} -->
+<!-- ``` -->
+<!-- La pregunta a la cual se refiere la Figura \@ref(fig:InstitucionesAdicionales) se trata de las instituciones que realizan ventas de MME a pacientes, no la entiendo muy bien!!!!. -->
+<!-- Analizando algunas otras circunstancias por las cuáles los FRE no realizan los informes a tiempo, podría también estar relacionada con un retraso en la entrega de los informes por parte de las instituciones al FRE, en la gráfica AB, es claro que 23 de los 30 FRE solo se quedan en un llamado de atención en caso de incuplimiento en las fechas de entrega de informes de consumo, esto ya está mucho más relacionado con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos, pues si el seguimiento que se hace por parte del FRE es débil, esto puede repercutir en el comportamiento de las instituciones hacía el FRE, pero este es un asunto gobernanza e institucionalidad que es potestad de cada ente territorial tratar. -->
+
 </div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="ruta-tecnológica.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="equipos-de-cómputo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="equipos-de-cómputo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="reporte-de-informes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -294,7 +332,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["InformeFinal.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
@@ -302,6 +340,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

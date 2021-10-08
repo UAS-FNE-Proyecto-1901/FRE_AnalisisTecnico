@@ -41,79 +41,120 @@ La Resolución 1479 de 2006 del Ministerio de Salud y la Protección Social [@MS
 
 - Consolidado semestral del registro de Farmacodependientes de productos sometidos a fiscalización.
 
+Es preciso resaltar que en este capítulo se presentará un análisis del informe mensual sobre la distribución de MME, correspondiente al Anexo 1 de la Resolución 1479 de 2006 [@MSPS1479-2006], informe mensual sobre consumo de MME, referente al Anexo 2 de la Resolución 1479 de 2006, y finalmente el informe de consumo de MCE de los establecimientos minoristas, relacionado con el Anexo 13 de la Resolución 1478 de 2006 [@MSPS1478-2006].
+
 ## Diligenciamiento de anexos
 
-En la Figura \@ref(fig:HerramientasDiligA1) se tiene una descripción de la herramientas utilizadas el diligenciamiento del Anexo 1 de la Resolución 1479 de 2006 de MSPS. La mayoría de los FRE utilizan hojas de cálculo para el diligenciamiento del Anexo 1 (23 de 30 departamentos). Por lo menos tres departamentos utilizan modalidades de diligenciamiento manual y hojas de cálculo para el Anexo 1, mientras que sólo dos FRE sustentan la actividad mediante procedimientos manuales.
+Para el correcto diligenciamiento de estos anexos o informes que deben presentarse ante el FNE, los FRE departamentales suelen determinar esta consolidación de información como un proceso interno en la entidad territorial, cuya prioridad se concede de acuerdo con la disponibilidad de personal de apoyo que tiene el FRE. Frecuentemente, la misma persona que diligencia el Anexo 1 *"informe mensual sobre la distribución de medicamentos monopolio del Estado"*, también diligencia el Anexo 2 *"informe mensual sobre consumo de medicamentos monopolio del Estado"*. No obstante, en algunos territorios, estos anexos son consolidados por dos personas diferentes, debido a la cantidad de instituciones inscritas en el departamento.
 
-Algunos FRE como Antioquia, Bolívar, Córdoba, Cesar, Quindío y Valle del Cauca tienen plataformas desarrolladas dentro de la gobernación que son utilizadas para el diligenciamiento del Anexo 1.
+Incluso en algunos FRE departamentales, este proceso de diligenciamiento del Anexo 1 y Anexo 2 se encuentra desatendido, debido al limitado recurso humano que tiene vinculado el FRE. En otros casos, el personal del FRE se olvida de consolidar y enviar el Anexo 2 y solo se preocupan por enviar al FNE el Anexo 1 “informe mensual sobre la distribución de medicamentos monopolio del Estado”, confiriendo mayor relevancia a este informe. De cualquier manera, los inconvenientes en el cumplimiento del envío de estos Anexos, radica en el limitado número de personas vinculadas al FRE.
 
-```{r HerramientasDiligA1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el diligenciamiento del Anexo 1 de la Resolución 1479 de 2006', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "073_HerramientaConsol.rds")) + 
-  labs(title = NULL)
+Por otra parte, las herramientas tecnológicas son un elemento primordial para recibir, consolidar y almacenar los Anexos de la Resolución 1479 de 2006. En la Figura \@ref(fig:HerramientasDiligA1) se tiene una descripción de las herramientas utilizadas para el diligenciamiento de los Anexos 1 y 2 de la Resolución 1479 de 2006, respectivamente [@MSPS1479-2006]. La mayoría de los FRE utilizan hojas de cálculo para el diligenciamiento de estos informes, teniendo en cuenta que la información puede provenir de documentos físicos.
+
+```{r HerramientasDiligA1, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el diligenciamiento del Anexo 1 de la Resolución 1479 de 2006', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+readRDS(file.path(fig_path, "073_HerramientaConsol.rds")) + labs(title = NULL)
 ```
 
-En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.
+Sobre la consolidación de estos informes que aparecen en la Resolución 1479 de 2006 [@MSPS1479-2006], el Grupo de Regionalización que hace parte del Grupo Interno de Trabajo de Medicamentos Monopolio del Estado (GIT-ME) del FNE, se encarga de la recepción, consolidación y verificación de estos informes. Por lo tanto, se ha definido una hoja estandarizada de Excel, cuyo formato fue compartido a todos los FRE departamentales para la consolidación del consumo y distribución de los MME. Por esta misma razón, hay uniformidad a nivel nacional, en la forma como se diligencian y presentan estos anexos de la Resolución 1479 de 2006. Adicionalmente, el Grupo de Regionalización lleva el control sobre las cantidades de consumo y distribución que presentan todos los departamentos.
 
-```{r ControlesVentasFRE, echo=FALSE, warning=FALSE, fig.cap='Controles en las ventas directas a pacientes', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "120_ControlesVentasFRE.rds")) + labs(title = NULL)
+### Diligenciamiento de Anexo 1
+
+Para la consolidación de la información del informe mensual sobre la distribución de medicamentos monopolio del Estado, concerniente al Anexo 1 de la Resolución 1479 de 2006 [@MSPS1479-2006], se observa una tendencia en este proceso a nivel nacional, por parte de los FRE departamentales. Generalmente, esta información de distribución es obtenida a partir de la base de datos o herramienta que emplea el personal del FRE para hacer el control de salida de los MME. Así se lleve esta base de datos en medios físicos y/o medios digitales, el personal del FRE se apoya en este recurso para la consolidación de la información del Anexo 1 de la Resolución 1479 de 2006 [@MSPS1479-2006].
+
+Algunos FRE departamentales aún mantienen este control por medio de libro físico y otros FRE lo realizan en una hoja de cálculo Excel. No obstante, sea cual sea esta herramienta en el territorio, el personal del FRE presta mucha atención en el diligenciamiento de este formato, con el fin de llevar el control adecuado referente a la distribución de MME. En este orden de ideas, el personal del FRE, finalizando cada mes, consolida esta información de distribución de MME en el territorio, a partir de la base de datos referente al control de salida de MME.
+
+La información es dispuesta en la hoja estandarizada de Excel del Anexo 1 de la Resolución 1479 de 2006, discriminada por medicamento y unidad comercial de cada MME.  Después, los primeros 10 días del mes es enviada al FNE. Posteriormente, estos datos de distribución de Medicamentos Monopolio del Estado a nivel nacional, son analizados en el FNE, con el fin de proyectar la distribución de MME el siguiente año. Este análisis nacional es tenido en cuenta para la importación de materia prima y fabricación de estos medicamentos.
+
+Por esta razón, debe resaltarse la gran importancia y calidad de la información contenida en los Anexos 1 de la Resolución 1479 de 2006 en cada departamento del país. La Figura \@ref(fig:procesoA1-1479) muestra el proceso de consolidación del Anexo 1 de la Resolución 1479 de 2006.
+
+```{r procesoA1-1479, echo=FALSE, warning=FALSE, fig.cap="Proceso de consolidación de Anexo 1 de la Resolución 1479 de 2006", fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="80%",fig.align='center'}
+knitr::include_graphics(path = file.path('figures', 'Consolidacion_A1_Res_1479_2006.png'))
 ```
 
-Sobre la consolidación de informes las tendencias ya son mucho más uniformes debido  que el grupo Interno de regionalización se encarga de la consolidación y verificación de estos informes, por esta misma razón hay una uniformidad en cuanto a la forma de diligenciar los anexos, cómo al control sobre las cantidades de consumo y distribución que presentan los departamentos, esta es la razón por la cuál se observa en las gráficas X y Z que la consolidación de los informes se entrega de manera electrónica al FNE, pero también hay un leve contraste sobre la forma en la que algunos FRE reciben estos anexos por parte de los inscritos, dado que si estos son allegados de forma presencial, se necesita una transcripción, que podría traducirse en un proceso engorroso que toma mucho más tiempo y puede ser causa del retraso en el envío de informes hacia el FNE. Este comportamiento es posible observar en la figura W dónde se resalta que la confección de estos informes puede demorarse más de una semana. Esto puede ser mucho más problemático para regiones con una elevada cantidad de inscritos en relación a la cantidad de  personal encargado específicamente en esta tarea.
+Por otro lado, en la Figura \@ref(fig:HerramientasDiligA1) se tiene una descripción de las herramientas utilizadas particularmente para el diligenciamiento del Anexo 1 de la Resolución 1479 de 2006. A partir de la figura se observa que la mayoría de los FRE departamentales se apoyan en hojas de cálculo de Excel para consolidar la información, brindando más precisión en los datos de distribución de MME en su territorio. Por otro lado, se observan tres FRE departamentales que utilizan herramientas digitales y manuales para el diligenciamiento de este informe. Mientras que sólo dos FRE en todo el país, sustentan esta actividad mediante procedimientos manuales (como lo son Guainía y La Guajira).
 
-```{r TiemposConsolidacionA1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "121_TiemposConsolidacionA1.rds")) + 
-  labs(title = NULL)
+
+Algunos FRE como Antioquia, Bolívar, Córdoba, Cesar, Quindío y Valle del Cauca tienen plataformas desarrolladas dentro de la gobernación que son utilizadas para el diligenciamiento del Anexo 1, cuya condición favorece en la efectividad del proceso y la continuidad que recibe esta actividad al interior del FRE. Adicionalmente, esta ventaja informática brinda mayor precisión en el manejo de datos de la distribución de MME en estos departamentos.
+
+El tiempo de consolidación del informe mensual sobre la distribución de MME, referente al Anexo 1 de la Resolución 1479 de 2006 es una variable importante para determinar la capacidad operativa en este proceso interno del FRE. A partir de la Figura \@ref(fig:TiemposConsolidacionA1), se observa una tendencia en el tiempo de consolidación de la información de distribución de medicamentos.
+
+Como se discutió anteriormente, el grupo de Regionalización, encargado de la consolidación y verificación de estos informes, definió una hoja estandarizada de Excel para la presentación del Anexo 1. Por esta razón, la Figura \@ref(fig:TiemposConsolidacionA1) resalta una tendencia en el tiempo de preparación del informe mensual sobre la distribución de MME (Anexo 1), a nivel nacional.
+
+```{r TiemposConsolidacionA1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+readRDS(file.path(fig_path, "121_TiemposConsolidacionA1.rds")) + labs(title = NULL)
 ```
 
-```{r TiemposConsolidacionA1-1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006 vs N° de instituciones que realizan compra en un año', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "121_TiemposConsolidacionA1_2.rds")) + labs(title = NULL)
+La gran mayoría de FRE departamentales manifestaron un tiempo mayor en la consolidación de la información del Anexo 1, respecto al tiempo de consolidación del Anexo 2, considerando la Figura \@ref(fig:TiemposConsolidacionA1) y Figura 8.5. No obstante, esta percepción del tiempo que tarda el personal del FRE para la consolidación del Anexo 1, incluye igualmente la consolidación del Anexo 2. Así las cosas, la Figura \@ref(fig:TiemposConsolidacionA1) muestra un tiempo extremadamente largo para la consolidación de ambos informes, cuya extensa duración puede atribuirse a la forma como reciben los informes de las instituciones inscritas, indispensable para el primer paso del diligenciamiento del Anexo 2. 
+
+Algunas instituciones entregan este informe de manera electrónica al FRE, mientras otros aportan este informe en medio físico. Esta particularidad influye en el tiempo de consolidación, dado que, si estos son allegados de forma presencial o física, se necesita una transcripción, que podría traducirse en un proceso engorroso que toma mucho más tiempo. Esta razón puede ser causa del retraso en el envío de los informes mensuales, referente al Anexo 2 de la Resolución 1479 de 2006. Esta problemática puede evidenciarse mucho más, en las regiones con elevada cantidad de instituciones inscritas, considerando la cantidad de personal vinculado al FRE, encargado de este proceso. 
+
+En la Figura \@ref(fig:TiemposConsolidacionA1-1) se muestra una comparación entre los tiempos de diligenciamiento del Anexo 1 y el número de instituciones en el departamento. De acuerdo a esta comparación no se tiene una relación clara entre el tiempo que toma cumplir con este requerimiento y el número de instituciones que realizan compras en el departamentos.
+
+```{r TiemposConsolidacionA1-1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006 vs N° de instituciones que realizan compra en un año', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+readRDS(file.path(fig_path, "121_TiemposConsolidacionA1_2.rds")) + labs(title = NULL) + ylab('Tiempo de consolidación de Anexo 1')
 ```
 
-```{r TiemposConsolidacionA2, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 2 de la Resolución 1479 de 2006', fig.width=10, fig.height=5, fig.topcaption=TRUE, out.width="100%"}
-g1 <- readRDS(file.path(fig_path, "137_evaluacionAnexo1.rds")) + labs(title = NULL)
-g2 <- readRDS(file.path(fig_path, "137_evaluacionAnexo2.rds")) + labs(title = NULL)
-g1 + g2
+### Diligenciamiento de Anexo 2
+
+Para la consolidación de la información del informe mensual sobre consumo de medicamentos monopolio del Estado, referente al Anexo 2 de la Resolución 1479 de 2006, se observa una uniformidad en este proceso a nivel nacional por parte de los FRE departamentales. Inicialmente, las instituciones inscritas en cada territorio, envían el *"informe de consumo de medicamento de control especial de los establecimientos minoristas"* presente en el Anexo 13 de la Resolución 1478 de 2006, cuya información involucra el consumo de MCE, resaltando principalmente el consumo de MME. Posteriormente, el establecimiento autorizado debe consolidar y enviar este formato estándar al FRE respectivo en cada territorio.
+
+Luego, el ente territorial recibe todos los informes y procede a revisar cada uno de estos, en función de forma y validación de la información contenida. Si algún informe no es conforme, el personal del FRE devuelve dicho informe para su posterior subsanación por parte de la institución. Una vez sean conformes todos los informes para el FRE departamental, el personal consolida la información aportada por todo el departamento, referente al consumo de MME, en el formato estándar del Anexo 2 de la Resolución 1479 de 2006. Por último, este formato Anexo 2 es enviado al Grupo de Regionalización del FNE, donde se archivan todos los Informes mensuales departamentales.
+
+La Figura \@ref(fig:procesoA2-1479) muestra el proceso de consolidación del Anexo 2 de la Resolución 1479 de 2006.
+
+```{r procesoA2-1479, echo=FALSE, warning=FALSE, fig.cap="Proceso de consolidación de Anexo 2 de la Resolución 1479 de 2006", fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="80%",fig.align='center',fig.align='center'}
+knitr::include_graphics(path = file.path('figures', 'Consolidacion_A2_Res_1479_2006.png'))
 ```
 
-```{r RecepcionA13, echo=FALSE, warning=FALSE, fig.cap='Medio para consolidación de Anexo 13 de la Resolución 1478 de 2006', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+En contraste a la manera cómo los FRE realizan la consolidación del Anexo 1, hay una diferencia en la consolidación del Anexo 2, sobre la forma en la que algunos FRE reciben los Anexos 13 que es entregado al FRE por parte de los inscritos (Anexo de consumo por institución inscrita), con los cuales se alimenta el Anexo 2 de consumo departamental. La Figura \@ref(fig:TiemposConsolidacionA1) permite ver un tiempo relativamente corto en la consolidación de la información del Anexo 1, respecto al tiempo de consolidación del Anexo 2. La recepción de los informes de consumo de medicamento de control especial de cada establecimiento autorizado (Anexo 13 de la Resolución 1478 de 2006), es el insumo primordial para diligenciar los datos del Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006].
+
+Algunas instituciones entregan este informe al FRE, de manera electrónica, mientras otros aportan este informe en medios físicos. Esta particularidad influye en el tiempo de consolidación, dado que, si estos son allegados de forma presencial o física, se necesita una transcripción, que podría traducirse en un proceso engorroso que toma mucho más tiempo. Esta razón puede ser causa del retraso en el envío de los informes mensuales, referente al Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006]. Esta problemática puede evidenciarse mucho más, en las regiones con elevada cantidad de instituciones inscritas, considerando la cantidad de personal vinculado al FRE, encargado de este proceso interno.
+
+La Figura \@ref(fig:RecepcionA13) muestra los diferentes tipos de documentos que reciben los FRE, por parte de las instituciones autorizadas en el territorio, referente al Anexo 13 de la Resolución 1478 de 2006 [@MSPS1478-2006]. Esto muestra diversas formas en que el FRE recibe este informe y la condición de transcribir toda esta información departamental para que quede ajustada en la hoja estandarizada de Excel.
+
+```{r RecepcionA13, echo=FALSE, warning=FALSE, fig.cap='Medio para consolidación de Anexo 13 de la Resolución 1478 de 2006', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
 readRDS(file.path(fig_path, "122_RecepcionA13.rds")) + labs(title = NULL)
 ```
-```{r ArchivoInformesFRE, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de Anexo 13 de la Resolución 1478 de 2006', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "123_ArchivoInformesFRE.rds")) + 
-  labs(title = NULL)
-```
-```{r SeguimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Mecanismo de seguimiento de instituciones de envío de informes', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "125_SeguimientoEnvioInformes.rds")) + 
-  labs(title = NULL)
-```
-```{r IncumplimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Medidas por incumplimiento de envío de informes', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "126_IncumplimientoEnvioInformes.rds")) + 
-  labs(title = NULL)
+
+La Figura \@ref(fig:TiemposConsolidacionA2) muestra los recursos utilizados por los FRE para el diligenciamiento del Anexo 2 en los departamentos. El diligenciamiento del Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006] suele ser llevado a cabo por una persona en la mayoría de FRE (n = 26), pero en algunos FRE reportan que pueden llegar a necesitar 2 personas (p.ej. Tolima, Boyacá, y Guaviare), sólo el FRE de Cauca reporta que se requiere a todo el equipo para el diligenciamiento del informe. 
+
+```{r TiemposConsolidacionA2, echo=FALSE, warning=FALSE, fig.cap='Recursos en la consolidación del Anexo 2 de la Resolución 1479 de 2006. (A) N.° de personas involucradas, (B) Comparación de tiempo de diligenciamiento frente a N.° de instituciones', fig.width=10, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
+g1 <- readRDS(file.path(fig_path, "137_evaluacionAnexo1.rds")) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, "137_evaluacionAnexo2.rds")) + labs(title = NULL)
+
+wrap_plots(g1, g2) + plot_layout(ncol = 2, widths = c(0.5, 0.5)) + plot_annotation(tag_levels = 'A')
 ```
 
-Analizando algunas otras circunstancias por las cuáles los FRE no realizan los informes a tiempo, podría también estar relacionada con un retraso en la entrega de los informes por parte de las instituciones al FRE, en la gráfica AB, es claro que 23 de los 30 FRE solo se quedan en un llamado de atención en caso de incuplimiento en las fechas de entrega de informes de consumo, esto ya está mucho más relacionado con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos, pues si el seguimiento que se hace por parte del FRE es débil, esto puede repercutir en el comportamiento de las instituciones hacía el FRE, pero este es un asunto gobernanza e institucionalidad que es potestad de cada ente territorial tratar.
+En el panel B de la Figura \@ref(fig:TiemposConsolidacionA2) se muestra una comparación entre el tiempo de diligenciamiento del Anexo 2 y el número de inscritos en el departamento. Se tienen casos como Putumayo y Casanare que tienen tiempos de diligenciamiento mayores a lo esperado de acuerdo al número de instituciones. Así como el caso de Antioquia que reporta un tiempo muy rápido de diligenciamiento pese a que cuenta con muchos inscritos: 
 
-## Seguridad de la información
+> *Un regente realiza el proceso en aproximadamente 30 minutos*
 
-Cabe resaltar que en la Figura \@ref(fig:GarantiaInformacion) cuándo se habla de restricción de acceso, se refiere al restringido acceso que se tiene a estos informes, aunque particularmente algunos FRE cómo Guajira, si tienen una restricción de acceso a los informes presentados, por medio de contraseñas y bloqueo de columnas. En general una gran parte de los FRE maneja bases de datos combinadas (Bitácoras manuales y hojas de cálculo) para el manejo de Recetarios Oficiales y MME, esto permite una trazabilidad fragmentada en la información completa de un FRE y cómo se ha mencionado anteriormente, la transcripción es más presta a que se cometan errores humanos en la digitación.
+Adicionalmente, la base de datos entregada por el grupo de Regionalización, referente a los informes enviados por todos los FRE, muestra que al menos 10 departamentos no han entregado un solo informe de consumo para lo corrido del año 2021. Además, se evidencia un rezago de aproximadamente dos meses, en la entrega de este informe, incluso para los FRE que tienen mayor cantidad de informes entregados.
 
-```{r GarantiaInformacion, echo=FALSE, warning=FALSE, fig.cap='Medidas para garantizar la seguridad de la información', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "127_GarantiaInformacion.rds")) + 
-  labs(title = NULL)
-```
-```{r InformInscritos, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con base de dato con información de inscritos', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "128_InformInscritos.rds")) + 
-  labs(title = NULL)
-```
-```{r InformPacientes, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con una base de datos con información de pacientes a los que se les dispensa MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "129_InformPacientes.rds")) + 
-  labs(title = NULL)
+### Archivo del Anexo 13 de la Resolución 1478 de 2006
+
+En la Figura \@ref(fig:ArchivoInformesFRE) se muestra que la práctica más común es realizar el archivo de los Anexo 13 de la Resolución 1479 de 2006 por al menos 5 años, aunque 6 FRE realizan este archivo de informes en períodos de tiempo entre 2 a 5 años.
+
+```{r ArchivoInformesFRE, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de Anexo 13 de la Resolución 1478 de 2006', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+readRDS(file.path(fig_path, "123_ArchivoInformesFRE.rds")) + labs(title = NULL)
 ```
 
-<!-- La pregunta a la cual se refiere la Figura \@ref(fig:InstitucionesAdicionales) se trata de las instituciones que realizan ventas de MME a pacientes, no la entiendo muy bien!!!!. -->
+## Seguimiento de envío de informes
 
+En la Figura \@ref(fig:SeguimientoEnvioInformes) se muestran los mecanismos de seguimiento del FRE frente a las instituciones para el envío de los informes requeridos por la normativa. Se muestra que una proporción importante de los FRE (14/31) realiza el seguimiento de envío de reportes mediante visitas personales a las instituciones. Sólo los FRE de Magdalena, Tolima, Boyacá y Guainía realizan este seguimiento mediante visitas personales. 
 
-```{r InstitucionesAdicionales, echo=FALSE, warning=FALSE, fig.cap='Existencia de otras instituciones que realizan ventas a instituciones a MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "131_InstitucionesAdicionales.rds")) + 
-  labs(title = NULL)
+```{r SeguimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Mecanismo de seguimiento de instituciones de envío de informes', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+readRDS(file.path(fig_path, "125_SeguimientoEnvioInformes.rds")) + labs(title = NULL)
 ```
+
+Los FRE también reportan la utilización de recursos como llamadas (41.9\%) o correos (41.9\%) para la realización de esta actividad. Los FRE de Putumayo, Sucre, Caquetá, San Andrés, Meta, Caldas y Vichada utilizan llamadas telefónicas de forma exclusiva para la realización del seguimiento. Mientras que los FRE de Huila, Nariño, Chocó, La Guajira, Amazonas y Santander utilizan el correo electrónico de forma exclusiva para realizar el seguimiento. Sólo 3 FRE reportan no realizar un seguimiento de envío de informes como lo son Córdoba, Norte de Santander y Risaralda.
+
+## Manejo de incumplimientos
+
+La Figura \@ref(fig:IncumplimientoEnvioInformes), muestra la manera como el FRE recuerda o hace seguimiento al envío de los informes de consumo a las instituciones autorizadas para el manejo de MME. Aquí se evidencia que el llamado de atención es el principal recurso que emplea el personal del FRE para recordarle a las instituciones el envío de los informes, referente al Anexo 13 de la Resolución 1478 de 2006 [@MSPS1478-2006]. Por otro lado, las multas y amonestaciones son muy poco frecuentes en los FRE. Esta medida correctiva no es adoptada por todos los FRE. 
+
+```{r IncumplimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Medidas por incumplimiento de envío de informes', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+readRDS(file.path(fig_path, "126_IncumplimientoEnvioInformes.rds")) + labs(title = NULL)
+```
+
+Lo anterior es otro motivo para explicar las circunstancias por las cuáles los FRE no presentan estos informes a tiempo.  En la Figura \@ref(fig:IncumplimientoEnvioInformes), se muestra que 23 de los 31 FRE solo se quedan en un llamado de atención en caso de incumplimiento en las fechas de entrega de informes de consumo. Este comportamiento se relaciona con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos.

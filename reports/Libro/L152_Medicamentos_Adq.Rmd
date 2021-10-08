@@ -61,9 +61,8 @@ if (knitr::is_html_output()) {
 Como se identifica en la Figura \@ref(fig:EtapasProcesoAdquisicionDetalle), la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales y contractuales, esto debido a los requisitos que establece la contratación pública [@CongresodelaRepublicadeColombia1993;@CongresodelaRepublicadeColombia2007]. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir (referencia).
 
 
-```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Demoras en el proceso de adquisición por departamento (detallado)', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "082_ProcesosAdquisición.rds")) + 
-  labs(title = NULL)
+```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Histogramas de tiempos en el proceso de adquisición por departamento', fig.width=9, fig.height=6, fig.topcaption=TRUE, out.width="95%"}
+readRDS(file.path(fig_path, "082b_ProcesosAdquisición.rds"))
 ```
 
 Por lo general, la documentación pertinente de la fase precontractual es revisada y corregida en varias ocasiones por diferentes áreas en una misma entidad, lo que conlleva a largos tiempos de espera en la fase precontractual. Estas demoras se dan especialmente cuando el área encargada de aprobar la documentación o de llevar a cabo el proceso contractual no pertenece a la secretaría de salud, como es el caso de Atlántico, pues los funcionarios de otras áreas de las gobernaciones no están inmersos en el contexto de las necesidades de salud pública y específicamente en la importancia que tiene el abastecimiento de MME para la población, por lo que muchas veces el proceso de adquisición de medicamentos queda a merced de la voluntad de otras áreas, propiciando incluso el desabastecimiento en los departamentos.
