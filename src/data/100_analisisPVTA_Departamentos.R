@@ -81,7 +81,7 @@ medic_vaupes <- data_1 %>%
   filter(MEDICAMENTO %in% medic_vaupes) %>% 
   mutate(
     VALOR = VALOR * 1.05,
-    DEPTO = 'VAUPES', 
+    DEPTO = 'VAUPÉS', 
     COD_DEPTO = 97)
 
 data_1 <- data_1 %>% 
@@ -304,6 +304,7 @@ dfData2b <- dfData2 %>%
 outliers <- c('Casanare', 'Huila', 'Sucre', 'Cesar', 'Valle Del Cauca', 
               'Amazonas', 'Cauca', 'Córdoba')
 
+lm1 <- lm(mediana ~ Distancia, dfData2b)
 
 gFigRelacion <- dfData2b %>%
   ggplot(aes(x = Distancia, y = mediana)) +
@@ -311,8 +312,9 @@ gFigRelacion <- dfData2b %>%
   geom_hline(yintercept = 100, lty = 'dashed') +
   geom_point() +
   geom_errorbar(aes(ymin = q1, ymax = q3)) +
-  geom_label_repel(data = filter(dfData2b, DEPTO %in% outliers),
-                   aes(label = DEPTO)) +
+  geom_label_repel(
+    dfData2b[cooks.distance(lm1) > 0.01, ],
+    mapping = aes(label = DEPTO)) +
   xlab('Distancia a Bogotá (en KM)') +
   ylab('Mediana de márgenes de \nprecio de venta de MME (%)') +
   theme_bw()
@@ -374,22 +376,42 @@ predictData2c <- predict(plotData2c)
 pdp::partial(plotData2c, pred.var = 'Distancia') %>% 
   autoplot(smooth = TRUE)
 
-gPDP_relacion_1 <- pdp::partial(plotData2c, pred.var = 'X1') %>% 
-  autoplot(smooth = TRUE) + 
-  geom_point(data = train, aes(x = X1, y = mediana)) + 
-  # geom_pointrange(data = train, aes(x = X2, ymin = q1, ymax = q3)) + 
+quantileVec <- function(x, probs) {
+  tibble(x = quantile(x, probs), probs = probs)
+}
+
+gPDP_relacion_1 <- pdp::partial(plotData2c, pred.var = 'X1', ice = T, center=F, plot=F) %>% 
+  group_by(X1) %>% 
+  summarise(quantileVec(yhat, c(0.025, 0.1, 0.50, 0.90, 0.975)), .groups = 'drop') %>% 
+  pivot_wider(names_from = probs, names_glue = "P{probs*100}", values_from = 'x') %>% 
+  ggplot(aes(x = X1)) +
+  geom_hline(yintercept = 100, lty = 'dashed') +
+  geom_ribbon(aes(ymin = P10, ymax = P90), alpha=0.1, fill='blue4') + 
+  geom_ribbon(aes(ymin = P2.5, ymax = P97.5), alpha=0.1, fill='blue4') + 
+  geom_line(aes(y = P50)) +
+  geom_point(data = train, aes(x = X1, y = mediana)) +
   theme_bw() + 
   xlab('Estimación de N.° de entidades \n que han realizado compras al FRE') +
   ylab('Mediana de márgenes de \nprecio de venta de MME (%)')
 
-gPDP_relacion_2 <- pdp::partial(plotData2c, pred.var = 'X2') %>% 
-  autoplot(smooth = TRUE) + 
-  geom_point(data = train, aes(x = X2, y = mediana)) + 
-  # geom_pointrange(data = train, aes(x = X2, ymin = q1, ymax = q3)) + 
+gPDP_relacion_1
+
+
+gPDP_relacion_2 <- pdp::partial(plotData2c, pred.var = 'X2', ice = T, center=F, plot=F) %>% 
+  group_by(X2) %>% 
+  summarise(quantileVec(yhat, c(0.025, 0.1, 0.50, 0.90, 0.975)), .groups = 'drop') %>% 
+  pivot_wider(names_from = probs, names_glue = "P{probs*100}", values_from = 'x') %>% 
+  ggplot(aes(x = X2)) +
+  geom_hline(yintercept = 100, lty = 'dashed') +
+  geom_ribbon(aes(ymin = P10, ymax = P90), alpha=0.1, fill='blue4') + 
+  geom_ribbon(aes(ymin = P2.5, ymax = P97.5), alpha=0.1, fill='blue4') + 
+  geom_line(aes(y = P50)) +
+  geom_point(data = train, aes(x = X2, y = mediana)) +
   theme_bw() + 
   xlab('Proporción de ingresos correspondientes \na ventas de medicamentos') +
   ylab('Mediana de márgenes de \nprecio de venta de MME (%)')
 
+gPDP_relacion_2
 
 
 guardarGGplot(gPDP_relacion_1, '095_relacionPVTA_multireg_1', 8, 6, './figures/010_precios')

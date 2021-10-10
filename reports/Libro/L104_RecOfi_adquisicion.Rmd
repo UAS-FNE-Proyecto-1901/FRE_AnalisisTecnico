@@ -24,7 +24,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 La adquisición de recetarios oficiales por parte de los FRE es un proceso que se lleva a cabe mediante contratación pública. En la Figura \@ref(fig:modalidadAdquisicion), se muestra un resumen de las modalidades de selección en el último proceso de adquisición de recetarios por parte de los FRE. Se evidencia que la modalidad más utilizada en este último periodo de reabastecimiento de recetario fue mínima cuantía.
 
-```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios.', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
 readRDS(file.path(fig_path, '035_modalidadAdquisicion.rds')) + 
   labs(title = NULL)
 ```
@@ -49,7 +49,7 @@ knitr::include_graphics(path = file.path('figures', 'procesoContractual.jpg'))
 
 ### Tiempos de adquisición 
 
-```{r tiempoDemoraAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora para adquisición de recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+```{r tiempoDemoraAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Tiempo de demora para adquisición de recetarios.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '036_demoraRecetario.rds'))
 g1[[1]] <- g1[[1]] + labs(title = NULL)
 g1

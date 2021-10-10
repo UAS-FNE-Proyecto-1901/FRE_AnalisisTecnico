@@ -26,7 +26,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
-La prescripción de un medicamento es el acto que realiza un médico para indicar el inicio de un tratamiento terapéutico. En Colomba, dicha prescripción debe hacerse por escrito, previa evaluación del paciente y registro de sus condiciones y diagnóstico en la historia clínica, utilizando para ello la Denominación Común Internacional (nombre genérico) y cumpliendo los requisitos descritos en el Decreto 2200 de 2005, Artículo 16 y Artículo 17 [@MSPS2200-2005].
+La prescripción de un medicamento es el acto que realiza un médico para indicar el inicio de un tratamiento terapéutico. En Colombia, dicha prescripción debe hacerse por escrito, previa evaluación del paciente y registro de sus condiciones y diagnóstico en la historia clínica, utilizando para ello la Denominación Común Internacional (nombre genérico) y cumpliendo los requisitos descritos en el Decreto 2200 de 2005, Artículo 16 y Artículo 17 [@MSPS2200-2005].
  
 Bajo los parámetros establecidos anteriormente, se crea el recetario oficial, que es un documento oficial avalado por la entidad competente, es de carácter personal e intransferible para uso de los prescriptores de salud en la formulación de los MCE y MME. La prescripción de medicamentos de control especial para uso humano o veterinario solo se podrá efectuar en los recetarios oficiales suministrados por los FRE, para médicos en ejercicio legal de su profesión y/o por el Consejo Profesional de Medicina Veterinaria y Zootecnia de Colombia (Comvezcol) para médicos veterinarios y médicos veterinarios zootecnistas. Los profesionales que laboren en las instituciones podrán hacer uso del Recetario Oficial adquirido por la entidad [@MSPS1478-2006].
 
@@ -38,7 +38,7 @@ Los FRE de las Secretarías, Instituciones o Direcciones Departamentales de Salu
 
 En el marco de las Jornadas de inmersión territoriales con los FRE del país se pudo determinar la cantidad de recetarios oficiales con los que cuentan entre los meses de junio a septiembre. Así pues, como se observa en la Figura \@ref(fig:existenciasRecetarios)A, se observa la tendencia de los departamentos más distantes de la capital de la nación, a presentar una menor cantidad de recetarios en existencia. 
 
-```{r existenciasRecetarios, echo=FALSE, fig.cap='Existencias en el FRE. Panel A. N.° de existencias de recetarios en el FRE. Panel B. Cobertura de existencias de recetarios en el FRE.', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
+```{r existenciasRecetarios, echo=FALSE, fig.cap='Existencia de recetarios en el FRE. (A) N.° de existencias de recetarios en el FRE y (B) Cobertura de existencias de recetarios en el FRE.', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '027_existenciaRecetarios_1.rds'))
 g1[[1]] <- g1[[1]] + labs(title = 'A')
 
@@ -58,7 +58,7 @@ Se tiene que Boyacá y Nariño son los departamentos que en la actualidad cuenta
 
 Así mismo, ligado a las existencias actuales de recetarios oficiales en la nación, como se observa en la Figura \@ref(fig:existenciasRecetarios2), los departamentos en donde se presenta menor circulación de recetarios precisamente son los departamentos distantes del interior. Este fenómeno puede ser ocasionado por la baja densidad poblacional de dichos territorios, es decir, la rotación de recetarios oficiales en Antioquia, que es un departamento que cuenta con más de 5 millones de habitantes es la más alta ya que su población actual supera a la de los demás departamentos que cuentan con recetarios oficiales [@DANE2021].  
 
-```{r existenciasRecetarios2, echo=FALSE, fig.cap='N.° de recetarios circulantes en el departamento', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
+```{r existenciasRecetarios2, echo=FALSE, fig.cap='N.° de recetarios circulantes en el departamento.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) + labs(title = NULL)
 g1[[1]] <- g1[[1]] + labs(title = NULL)
 g1

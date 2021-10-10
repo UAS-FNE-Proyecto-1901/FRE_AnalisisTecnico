@@ -34,9 +34,10 @@ Existen tres tipos de actos administrativos para la creación del FRE:
 
 A partir de lo anterior, la Figura \@ref(fig:serieTiempoCreacion) muestra en detalle, la creación de cada FRE departamental en una línea del tiempo. Inicialmente se logra evidenciar que los primeros FRE constituidos en el país, fueron creados luego de la ratificación en Colombia de la Convención Única de Estupefacientes mediante la Ley 13 de 1974 [@CongresodelaRepublica1974]. La creación de los primeros FRE departamentales permite evidenciar que ya algunos territorios a nivel nacional, tenían un panorama claro del impacto de la implementación de esta convención en el país.
 
-Posteriormente, con la entrada en rigor de la Ley 30 de 1986 que adopta el Estatuto Nacional de Estupefacientes y dicta otras disposiciones, se ordenó a los departamentos controlar y fiscalizar las sustancias incluidas en las listas de estupefacientes de la Convención Única de Estupefacientes. Para este periodo de tiempo, la Figura \@ref(fig:serieTiempoCreacion) permite ver varios FRE constituidos, cuyos gobernadores se alinearon y adoptaron la con la Ley 30 de 1986. Cabe resaltar que los entes territoriales creados hasta finales de los años 90, posiblemente contaron con suficientes capacidades internas para la pronta creación de sus respectivos FRE, diferente a los demás FRE creados posteriormente, cuyas capacidades son inferiores.
+Posteriormente, con la entrada en rigor de la Ley 30 de 1986 que adopta el Estatuto Nacional de Estupefacientes y dicta otras disposiciones, se ordenó a los departamentos controlar y fiscalizar las sustancias incluidas en las listas de estupefacientes de la Convención Única de Estupefacientes. Para este periodo de tiempo, la Figura \@ref(fig:serieTiempoCreacion) permite ver varios FRE constituidos, cuyos gobernadores se alinearon y adoptaron la con la Ley 30 de 1986 [**citar**]. Cabe resaltar que los entes territoriales creados hasta finales de los años 90, posiblemente contaron con suficientes capacidades internas para la pronta creación de sus respectivos FRE, diferente a los demás FRE creados posteriormente, cuyas capacidades son inferiores.
 
-```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE', fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%", fig.width=10, fig.height=8, out.width="100%", out.height="50%", fig.align='center'}
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE.', fig.topcaption=TRUE, message=FALSE, warning=FALSE, fig.width=10, out.width="100%", fig.asp=0.5, fig.align='center', fig.pos='h'}
+# fig.height=8,
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
     config(modeBarButtonsToRemove = barButtons)
@@ -64,9 +65,9 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
 
 -	De acuerdo con sí la persona era la encargada del FRE o un apoyo del(a) encargado(a).
 
--	De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50% de su tiempo en estas actividades FRE.
+-	De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 
-```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='t'}
 g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = 'A')
 g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds'))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
@@ -75,7 +76,7 @@ g2[[1]] <- g2[[1]] + labs(title = 'B')
 
 En la Figura \@ref(fig:perfilProfesional2) se observan los perfiles profesionales del personal de apoyo de los FRE a nivel nacional. Principalmente, se destaca una gran mayoría de Técnicos en Regencia en Farmacia (39) seguido de un grupo menor de profesionales Químicos Farmacéuticos (10), apoyando en las actividades de los FRE departamentales. Esto demuestra que gran parte de los entes territoriales están alineados con lo expuesto en el Artículo 3° de la Resolución 1479 del 2006 [@MSPS1479-2006], donde mencionan que el Químicos Farmacéuticos y Tecnólogos en Regencia en Farmacia son profesionales considerados como personal calificado para el cumplimiento de las funciones requeridas por el FRE.
 
-```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE.', fig.width=8, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%", fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + labs(title = NULL)
 ```
 Adicionalmente, la Figura \@ref(fig:perfilProfesional2) también muestra otro tipo de profesionales de apoyo al encargado del FRE, diferente al personal calificado mencionado anteriormente. Este factor podría brindar ventajas al equipo de trabajo del FRE particularmente, en función de la multidisciplinariedad. La participación de distintas disciplinas puede entregar más conocimientos y alternativas en el desarrollo laboral interno de cada FRE departamental. No obstante, es importante aclarar que ningún FRE debería dejar de contar con la participación del personal calificado, estipulado en el Artículo 3° de la Resolución 1479 del 2006 [@MSPS1479-2006].
@@ -83,8 +84,8 @@ Adicionalmente, la Figura \@ref(fig:perfilProfesional2) también muestra otro ti
 El número de personas que trabajan en cada FRE, es otro elemento crítico para la evaluación de condiciones y características actuales de cada ente territorial, en virtud de su capacidad para cumplir todas las funciones expuestas en el Artículo 2° de la Resolución 1479 del 2006 [@MSPS1479-2006]. La Figura \@ref(fig:perfilProfesional3) exhibe la frecuencia absoluta del número de personas que se encuentran vinculadas a los entes territoriales del país. Es decir, la cantidad de profesionales que conforman los equipos de trabajo de todos los FRE departamentales.
 
 
-```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
-g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = 'A')
+```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE. (A) Conteo de FRE por número de personas. (B) Mapa con número de personas por departamento.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='bh'}
+g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = 'A') + ylab('Frecuencia')
 g2 <- readRDS(file.path(fig_path, '024_mapaProfesional2.rds'))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
 
@@ -98,7 +99,7 @@ El tipo de contrato que los diferentes entes territoriales emplean para vincular
 
 A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una gran tendencia que tienen todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
 
-```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE', fig.width=8, fig.height=4.5, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE.', fig.width=8, fig.height=4.5, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='h'}
 
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '026_pieProfesional2b.rds'))
@@ -111,7 +112,7 @@ La anterior tendencia puede interferir y generar inconvenientes en la continuida
 
 Adicionalmente, en la Tabla \@ref(tab:CaracterizacionIngreso1) se observa la proporción del tipo de vinculación del personal del FRE, discriminado por cada región del país. A partir de esta información, se observa que en 5 regiones predomina la Contratación por Prestación de Servicios respecto al Nombramiento del personal del FRE. Además, se logra observar que en las regiones más alejadas de la capital Bogotá D.C., existe una prevalencia mucho más fuerte con esta CPS. Por consiguiente, los problemas mencionados anteriormente relacionados con la CPS, se pueden notar con mayor evidencia en estos territorios apartados del centro del país.
 
-```{r CaracterizacionIngreso1, echo=FALSE, warning=FALSE, tab.cap='Proporción de personas contratadas por región',fig.align='center',tab.align='center', out.width="90%"}
+```{r CaracterizacionIngreso1, echo=FALSE, warning=FALSE, tab.cap='Proporción de personas contratadas por región.',fig.align='center',tab.align='center', out.width="90%"}
 data.frame(
   stringsAsFactors = FALSE,
             Región = c("Amazonía","Caribe","Central",
@@ -131,7 +132,7 @@ dfSF %>%
 El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \@ref(fig:institucionesInscritas), donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, exceptuando Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el “Censo Nacional de Población y Vivienda 2018” [@DANE2021].
 
 
-```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%",fig.align='center'}
+```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento.', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%",fig.align='center'}
 readRDS(file.path(fig_path, "099_NEntidadesCompradoras.rds")) + labs(title = NULL)
 ```
 
@@ -145,11 +146,11 @@ Un claro ejemplo de estas capacidades reducidas se puede evidenciar en el desemp
 
 También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \@ref(fig:institucionesInscritasRelacion) también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas por parte de los coordinadores de los FRE en su territorio.
 
-```{r institucionesInscritasRelacion, echo=FALSE, fig.cap='Relación entre N° de instituciones inscritas y personal del FRE', fig.width=6, fig.height=4, out.width="85%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, fig.align='center'}
+```{r institucionesInscritasRelacion, echo=FALSE, fig.cap='Relación entre N.° de instituciones inscritas y personal del FRE.', fig.width=6, fig.height=4, out.width="85%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
 ```
 
-```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación entre N° de instituciones inscritas y tamaño poblacional del departamento y número de camas de acuerdo a REP', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center'}
+```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación entre N.° de instituciones inscritas en el FRE y: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center',fig.pos='b'}
 g1 <- readRDS(file.path(fig_path, "100a_RelacionRecursosFRE.rds")) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "100b_RelacionRecursosFRE.rds")) + labs(title = NULL)
 
@@ -174,7 +175,7 @@ De modo que la normativa interna de cada departamento podría entrar en conflict
 
 Hecho este primer paso sobre entender de manera sucinta la relación que tienen los FRE con sus respectivas entidades territoriales, se puede comenzar a hacer el análisis de las gráficas con los resultados del instrumento de encuesta realizado.
 
-```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE,fig.align='center'}
+```{r IngresosFRE1, echo=FALSE, warning=FALSE, fig.cap='Proporción de fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE,fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "135_IngresosFRE1.rds")) + labs(title = NULL)
 ```
 
@@ -190,11 +191,11 @@ La Figura \@ref(fig:IngresosFRE1), nos muestra la proporción de los ingresos de
 
 Aunque también los FRE pueden recibir recursos por parte de la gobernación o por parte del FNE.
 
-A partir de la Figura \@ref(fig:IngresosFRE1), se observa que la venta de MME tiene una tendencia a ser la proporción más grande sobre los ingresos que reciben los FRE departamentales. Esto se puede deber a que cada departamento maneja independencia en los precios de venta de estos medicamentos y desde ahí se podría obtener una rentabilidad mayor. En el desarrollo del apartado 6.4 Precio de medicamentos del presente informe, se desglosará un análisis más profundo sobre los precios de venta de los MME por departamento, pero grosso modo se puede notar que el margen es lo suficientemente alto para abarcar el porcentaje mayoritario de ingresos. 
+En la Figura \@ref(fig:IngresosFRE1) se observa que una tendencia a que la proporción de ingresos más grande es aquella que reciben los FRE departamentales por la venta de MME. Esto se puede deber a que cada departamento maneja independencia en los precios de venta de estos medicamentos y desde ahí se podría obtener una rentabilidad importante. En el desarrollo del apartado 6.4 Precio de medicamentos del presente informe, se desglosará un análisis más profundo sobre los precios de venta de los MME por departamento, pero a *grosso modo* se puede notar que el margen es lo suficientemente alto para abarcar el porcentaje mayoritario de ingresos. 
 
 Particularmente, en la Figura \@ref(fig:IngresosFRE2) se observa que en algunos departamentos cómo Magdalena, Atlántico o Tolima, la venta de recetarios oficiales es el ingreso más prominente del FRE. Así mismo, en todos los demás departamentos representa un ingreso importante para el ente territorial, aunque no sea la principal fuente de ingreso. A nivel nacional, esta fuente de ingreso carga con una parte muy importante del erario de cada FRE departamental. Con la desaparición de los recetarios oficiales físicos en el mediano plazo, es necesario generar alternativas económicas para subsanar este recurso que desaparecería y adecuar estrategias financieras para el auto sostenimiento de cada FRE.
 
-```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE, fig.align='center'}
+```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE, fig.align='center',fig.pos='b'}
 readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
 ```
 

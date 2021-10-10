@@ -26,12 +26,12 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (a) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (b) gabinetes con llaves simple (en 14 de 26 FRE), (c) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (d) inventarios físicos diarios, y (e) protección en gabinetes hechos de materiales resistentes. 
 
-```{r MedidasSeguridadAlmacenamientoMME, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en el almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="90%"}
+```{r MedidasSeguridadAlmacenamientoMME, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en el almacenamiento de MME.', fig.width=8, fig.height=6, fig.topcaption=TRUE,fig.align='center', out.width="90%"}
 readRDS(file.path(fig_path, "088_SeguridadMedicamentos.rds")) + 
   labs(title = NULL)
 ```
 
-El departamento que reporta la mayor cantidad de medidas de seguridad es César con 7 medidas como: (a) acceso de seguridad restringido a cierto personal, (b) procedimientos para el manejo de personal huésped, (c) visitantes, (d) mantenimiento o no empleados del FRE, (e) almacenamiento en oficina privada, (f) inventario físico diario, y (g) Disponibilidad local de protección policial. Entre los FRE con mayor número de medidas de seguridad reportadas se tiene Casanare (con 6 medidas reportadas), y Córdoba, Antioquia, Norte de Santander, Valle del Cauca, Guaviare y Risaralda con 5 medidas reportadas. Los FRE de Atlántico, Magdalena, Huila, Quindío, y Amazonas sólo reportan una medida de seguridad. 
+El departamento que reporta la mayor cantidad de medidas de seguridad es César con 7 medidas como: (i) acceso de seguridad restringido a cierto personal, (ii) procedimientos para el manejo de personal huésped, (iii) visitantes, (iv) mantenimiento o no empleados del FRE, (v) almacenamiento en oficina privada, (vi) inventario físico diario, y (vii) Disponibilidad local de protección policial. Entre los FRE con mayor número de medidas de seguridad reportadas se tiene Casanare (con 6 medidas reportadas), y Córdoba, Antioquia, Norte de Santander, Valle del Cauca, Guaviare y Risaralda con 5 medidas reportadas. Los FRE de Atlántico, Magdalena, Huila, Quindío, y Amazonas sólo reportan una medida de seguridad. 
 
 Sólo los FRE de Valle del Cauca y Córdoba reportan la existencia de un sistema de monitoreo por cámaras para los medicamentos. Sólo los FRE de Córdoba y Vichada reportan la presencia de seguridad privada como medida de seguridad para los FRE. Se recomienda la adopción de una o varias medidas de seguridad por parte de los FRE frente a posibles robos con intenciones de desvío o tráfico de medicamentos MME. 
 
@@ -39,14 +39,14 @@ Sólo los FRE de Valle del Cauca y Córdoba reportan la existencia de un sistema
 
 En la Figura \@ref(fig:FrecRevCondiciones) se muestra la frecuencia de revisión de condiciones ambientales en el almacenamiento de MME. Se tienen que la práctica más frecuente en los FRE es la realización de verificación de condiciones ambientales por lo menos dos veces al día. Sólo algunos FRE afirman que no hacen revisión de condiciones ambientales como Bolívar, Sucre, Chocó, Norte de Santander, Amazonas y Vichada.  
 
-```{r FrecRevCondiciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de revisión de condiciones ambientales', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+```{r FrecRevCondiciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de revisión de condiciones ambientales.', fig.width=6, fig.height=4, fig.topcaption=TRUE,fig.align='center', out.width="85%"}
 readRDS(file.path(fig_path, "089_FrecuenciaRevisionCondiciones.rds")) + 
   labs(title = NULL)
 ```
 
 En el panel izquierdo de la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se presentan los métodos o tecnologías utilizadas en la monitorización de los medicamentos. En la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se observa que al menos 25 de 30 fondos rotatorios cuentan con un termohigrómetro para la evaluación de condiciones ambientales. La práctica de diligenciar registros cuenta con una menor adopción por parte de los fondos rotatorios, se tiene que 7 y 4 de los fondos rotatorios realiza el diligenciamiento de estos formatos de manera manual y electrónica de manera respectiva. 
 
-```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='(A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%", fig.pos='t'}
+```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='(A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center', fig.pos='t'}
 g1 <- readRDS(file.path(fig_path, "090_MetodoSeguimControlAmb.rds")) + 
   labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "091_FrecSeguimientoCalibracion.rds")) + 
@@ -60,23 +60,24 @@ En sólo dos FRE (Chocó y Norte de Santander) se reporta el uso de aire acondic
 
 En la Figura \@ref(fig:ProductosCompartidos1) se muestra la frecuencia de varias categorías de productos con los cuales se comparten los MME en el almacén de los FRE. Se tiene que en casi la mitad de los FRE se comparten los MME con medicamentos de salud pública, en 7 de 30 casos se reporta la utilización del espacio en conjunto con papelería (7/30) o recetarios oficiales (3/30). Algunos FRE tienen otros items como vacunas, medicamentos de carros de paro y medicamentos incautados. En 9 de 30 casos se tiene que el FRE tiene un espacio dedicado únicamente a MME.
 
-```{r ProductosCompartidos1, echo=FALSE, warning=FALSE, fig.cap='Productos compartidos en el almacén de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"}
+```{r ProductosCompartidos1, echo=FALSE, warning=FALSE, fig.cap='Productos compartidos en el almacén de MME.', fig.width=8, fig.height=6, fig.topcaption=TRUE,fig.align='center', out.width="85%"}
 readRDS(file.path(fig_path, "092_ProductosCompartidos.rds")) + labs(title = NULL)
 ```
 En la Figura \@ref(fig:PropOcupacionAlmacen) se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se tiene que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se da en 12 FREs. 
 
-```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE.', fig.width=6, fig.asp=0.5, fig.topcaption=TRUE,fig.align='center', out.width="85%"}
 readRDS(file.path(fig_path, "134_PropOcupacionAlmacen.rds")) + labs(title = NULL)
 ```
 
 Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos [@Silver2017]. 
 En la Figura \@ref(fig:FrecControlExistencias) se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario. 
 
-```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%"}
-g1 <- readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + labs(title = NULL)
-g2 <- readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds")) + labs(title = NULL)
+```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME.', fig.width=10, fig.height=4, fig.topcaption=TRUE,fig.align='center', out.width="100%"}
+g1 <- readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + labs(title = 'A')
+g2 <- readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds"))
+g2[[1]] <- g2[[1]] + labs(title = 'B')
 
-(g1 + g2) + patchwork::plot_annotation(tag_levels = 'A')
+wrap_plots(g1,g2) + plot_layout(widths = c(0.5, 0.5), tag_level = 'new')
 ```
 
 Entre los FRE que afirman realizar el monitoreo de niveles de inventarios de forma diaria se encuentran Antioquia, Córdoba, Bolívar, San Andrés, Casanare, Meta y Caldas. El FRE de Cesar afirma realizar el control de existencias varias veces al día. Los FRE que realizan monitoreo cada mes parecen encontrarse en las regiones más periféricas del territorio, y esto se podría deber a la presencia de niveles de inventario promedio bajos. 
@@ -94,19 +95,15 @@ Entre estos recursos se encuentra la *semaforización*, que es una herramienta q
 La adopción de esta práctica sólo se ha realizado en 40\% de los FRE. Esta práctica se lleva a cabo teniendo en cuenta tres colores:
 
 - Rojo: medicamento que se encuentra próximo a vencer.
+
 - Amarillo: medicamento que se encuentra en riesgo moderado de vencimiento.
+
 - Verde: medicamento que no tiene riesgo de vencimiento. En ocasiones, no se genera ningún tipo de alerta cuando el producto está en esta condición.
 
 Los umbrales adoptados por la mayoría de las entidades ha sido `6|12` que indica colocar una etiqueta roja sí el medicamento se encuentra a 6 meses de vencerse, y una etiqueta amarilla sí el medicamento se encuentra a 12 meses de vencerse. Algunos FRE también tienen umbrales de `3|6` meses para el proceso de semaforización.
 
 
-En la Figura \@ref(fig:CasosVencimiento1) se observa que el 71% de los FRE han presentado casos de medicamentos vencidos lo que constituye a 22 de 31 FRE existentes en el país, y esto indica que los vencimientos son una situación frecuente para los FRE.
-
-```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Presentación de casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + labs(title = NULL)
-```
-
-En la Figura \@ref(fig:CasosVencimiento2) se muestran los medicamentos más involucrados en casos de vencimientos. En primer lugar, se tiene al Metilfenidato Tableta x 10 mg ya que 13 de los 31 FRE han presentado vencimientos relacionados a este producto. La razón para estos vencimientos podría deberse a varios factores como: 
+En la Figura \@ref(fig:CasosVencimiento1)A se observa que el 71% de los FRE han presentado casos de medicamentos vencidos lo que constituye a 22 de 31 FRE existentes en el país, y esto indica que los vencimientos son una situación frecuente para los FRE. En la Figura \@ref(fig:CasosVencimiento1)B se muestran los medicamentos más involucrados en casos de vencimientos. En primer lugar, se tiene al Metilfenidato Tableta x 10 mg ya que 13 de los 31 FRE han presentado vencimientos relacionados a este producto. La razón para estos vencimientos podría deberse a varios factores como: 
 
 - El producto cuenta con una vida útil de 18 meses.
 
@@ -116,19 +113,20 @@ En la Figura \@ref(fig:CasosVencimiento2) se muestran los medicamentos más invo
 
 El segundo medicamento más involucrado en casos de vencimiento es Primidona Tableta x 250 mg debido a que 4 de los 31 FRE reportan casos de vencimientos, seguido de los vencimientos de Meperidina de 100mg/2mL, Fenobarbital Solución inyectable x 40 mg/mL y Fenobarbital Solución inyectable x 200 mg/mL que fueron reportados por 3 de 31 FREs a nivel nacional que se puede explicar debido a que son productos de baja rotación, y es posible que los FRE no hayan recibido una adecuada asistencia por parte del FNE para el manejo de ítems de este tipo.
 
-```{r CasosVencimiento2, echo=FALSE, warning=FALSE, fig.cap='Medicamentos implicados en casos de vencimiento de MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
-readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + 
-  labs(title = NULL)
+```{r CasosVencimiento1, echo=FALSE, warning=FALSE, fig.cap='Vencimiento de medicamentos. (A) Presentación de casos de vencimiento de MME. (B) Medicamentos implicados en casos de vencimiento de MME.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center', fig.pos='t'}
+g1 <- readRDS(file.path(fig_path, "097_CasosVencimiento.rds")) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + labs(title = NULL)
+wrap_plots(g1, g2) + plot_layout(widths = c(.5, .5)) + plot_annotation(tag_levels = 'A')
 ```
 
 
 ### Transporte 
 
-El transporte de medicamentos por parte del FNE, es un proceso importante dentro de la cadena de suministro de MME. Los costos de transporte de medicamentos por parte del FNE están cubiertos dentro del precio de los MME. El FNE contrata a una empresa especializada en distribución logística de mercancías y bienes para la entrega del producto a nivel nacional.
+El transporte de medicamentos por parte del FNE, es un proceso importante dentro de la cadena de suministro de MME. Los costos de transporte de medicamentos por parte del FNE están cubiertos dentro del precio de los MME, para la distribución mediante el canal FRE. El FNE contrata a una empresa especializada en distribución logística de mercancías y bienes para la entrega del producto a nivel nacional.
 
 En la Figura \@ref(fig:TransporteProductos) se tiene una descripción de la opinión del servicio de distribución por parte del FNE. Se tiene que las opiniones se encuentran divididas con algunas respuestas positivas (66.6\%) y otras negativas (33.3\%).
 
-```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%"}
+```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME.', fig.width=6, fig.asp=0.8, fig.topcaption=TRUE, out.width="80%",fig.align='center'}
 readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 ```
 

@@ -19,3 +19,5 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 ```
 
 \maxdeadcycles=1000
+
+Los medicamentos monopolio del Estado (MME) 

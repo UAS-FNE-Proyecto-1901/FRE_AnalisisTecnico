@@ -24,7 +24,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 Respecto a las características de los recetarios oficiales que se manejan actualmente en el país, se evidencia la tendencia en los FRE del país es de 50 prescripciones por recetario en 22 FRE, tal cual se observó en las jornadas de acompañamiento técnico realizadas. Seguido de 4 FRE en donde se elaboran los recetarios con 25 prescripciones. También se evidenciaron 3 FRE en donde los recetarios se elaboran con 30, 80 y 100 prescripciones, como lo muestra la Figura \@ref(fig:existenciaRecetarios4). Cabe aclarar que según las normas de regulación de MME y recetarios oficiales, como los son las Resolución 1478 de 2006 [@MSPS1478-2006] y Resolución 1479 de 2006 [@MSPS1479-2006], no se tiene establecido un número de prescripciones por recetario, por lo que los FRE de cada departamento tienen disponibilidad de decidir dicha cuestión.
 
-```{r existenciaRecetarios4, echo=FALSE, fig.cap='N.° de prescripciones por recetario', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
+```{r existenciaRecetarios4, echo=FALSE, fig.cap='N.° de prescripciones por recetario.', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
 readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + labs(title = NULL)
 ```
 
@@ -34,7 +34,7 @@ readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + labs(title = NU
 Uno de los puntos de acompañamiento del proyecto Misión PRI 1901 era conocer tanto en las visitas presenciales como virtuales, los tipos de medidas de seguridad que se implementan en los recetarios. La Figura \@ref(fig:MedidasSeguridadRec) contempló lo mencionado anteriormente, en la cual se observa que existe una gran variedad de medidas consideradas de seguridad en los recetarios, y que existen y existirán tantas como proponentes se tengan. Así mismo, se catalogaron las medidas de seguridad en baja y alta complejidad, teniendo como base lo difícil que pueden llegar a ser falsificados. Se reconoce que todos los departamentos implementaron la codificación en los recetarios oficiales tal y como se menciona en la Resolución 1478 de 2008 [@MSPS1478-2006] en el Artículo 89 y dicha codificación desarrollada para cada talonario está pensada para ser una identificación única de los mismos. 
 Tanto como la codificación como las marcas de agua, sellos y escudos se catalogaron como medidas de seguridad de baja complejidad, teniendo en cuenta que hay un riesgo latente de falsificación debido a que las marcas de agua corresponden a figuras particulares o al escudo de la gobernación y/o secretaria de salud, al igual que los sellos y escudos. Sumado a lo anterior, los recetarios están elaborados en papel común y corriente, lo que podría aumentar la probabilidad de ser falsificados.
 
-```{r MedidasSeguridadRec, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en los recetarios', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r MedidasSeguridadRec, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en los recetarios.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) + 
   labs(title = NULL)
 ```
@@ -57,7 +57,7 @@ Menos del 40% de los FRE han implementado medidas de alta seguridad en sus recet
 
 Al inicio del proyecto de inversión, se estimaba que los recetarios oficiales con más características de seguridad (independiente de su nivel de complejidad) aumentarían de forma proporcional su costo de adquisición y del mismo modo su precio de venta, sin embargo, se evidenció una tendencia totalmente diferente que se puede observar en la Figura \@ref(fig:ComparativoCostosRec1) y Figura \@ref(fig:DependParcial1),  entre más características de seguridad implementadas en un recetario, éste tiende a ser más económico en su costo de adquisición. 
 
-```{r ComparativoCostosRec1, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="100%",fig.align='center'}
+```{r ComparativoCostosRec1, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios.', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="100%",fig.align='center'}
 readRDS(file.path(fig_path, "046b_ComparativoCostosRecetarios1.rds")) + labs(title = NULL)
 ```
 
@@ -67,11 +67,11 @@ Si bien las ganancias obtenidas por las ventas de recetarios son unas de las fue
 
 ## Recetario Oficial Electrónico
 
-El recetario oficial es ...
+El recetario oficial electrónico (ROE) es una herramienta que busca generar un mecanismo de prescripción estandarizado en el territorio nacional para los medicamentos de control especial (MCE) donde se reúna tanto las prescripciones de uso humano como veterinario. Se espera que constituya un mecanismo integrado a una plataforma como lo es MIPRES (ya implementada y con amplio acceso), permitiendo un mayor seguimiento y control sobre los regímenes actualmente cubiertos por el aplicativo, incluyendo los procesos de información sobre la dispensación de estos productos farmacéuticos y generando la información necesaria para tener un seguimiento y análisis de prescripciones y dispensaciones de MCE en el territorio nacional [@CuervoBustamante2021].
 
 ### Opiniones sobre el ROE
 
-```{r FREImplementacionROE, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la implementación del Recetario Oficial Electrónico (ROE)', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center', fig.pos='t'}
+```{r FREImplementacionROE, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la implementación del Recetario Oficial Electrónico (ROE).', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center', fig.pos='t'}
 readRDS(file.path(fig_path, "042_FRE_implementacionROE.rds")) + labs(title = NULL)
 ```
 

@@ -388,13 +388,18 @@ graficoBarrasTiempos <- function(tiempo,
                                  titulo,
                                  data = df_total,
                                  breaks = 1:15, fill = 'blue1') {
-  data %>%
-    filter(name == tiempo) %>%
+  filt_data <- data %>%
+    filter(name == tiempo)
+  
+  mn_val <- mean(filt_data$value, na.rm = T)
+  
+  filt_data %>%
     ggplot(aes(x = value)) +
     geom_histogram(bins = 18, 
-                   fill='white', alpha=1, 
+                   fill='blue1', alpha=.4, 
                    color='gray2') +
-    geom_density(stat = 'count', color = fill) + 
+    # geom_density(stat = 'count', color = fill) + 
+    geom_vline(xintercept = mn_val, lty = 'dashed') + 
     xlab('Tiempo (días)') +
     ylab('Frecuencia') +
     labs(title = titulo) + 
@@ -409,7 +414,6 @@ ggProcesoAdqu <-
 
 #+ ggProcesoAdqu, fig.width = 10, fig.height = 6, out.width = "60%"
 ggProcesoAdqu
-
 guardarGGplot(ggProcesoAdqu, '082b_ProcesosAdquisición', 10, 6)
 
 
@@ -432,6 +436,21 @@ ggProcesosAdquisicion1
 
 guardarGGplot(ggProcesosAdquisicion1, '082_ProcesosAdquisición', 8, 6)
 
+df_total %>%
+  group_by(name) %>%
+  summarise(
+    mn = mean(value, na.rm = T),
+    md = median(value, na.rm = T),
+    li = quantile(value, 0.05 / 2, T),
+    ls = quantile(value, 1 - (0.05 / 2), T)
+  ) %>% 
+  arrange(desc(name))
+
+
+df_total %>% 
+  select(Departamento_1, T_total) %>% 
+  dplyr::distinct() %>% 
+  arrange(desc(T_total)) %>% pull(T_total) %>% mean()
 
 #'-------------------------------------------------------------------------------
 # Proceso de translados interdepartamentales ------------------
@@ -573,12 +592,13 @@ ggRecepcionb
 guardarGGplot(ggRecepcionb, '086b_RecepcionMedicamento', 8, 6)
 
 
+
 ggTiempoRecepcionMedicamentos <- df %>% 
   right_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO')) %>% 
-  rename(tiempoRecepcion = col1) %>%
-  # drop_na(tiempoRecepcion) %>%
-  ggplot() +
-  geom_sf(aes(fill = tiempoRecepcion, geometry = geometry)) +
+  rename(tiempoRecepcion = col1) %>% 
+  creacionCloroPletCol(geometry, tiempoRecepcion)
+
+ggTiempoRecepcionMedicamentos[[1]] <- ggTiempoRecepcionMedicamentos[[1]] +
   scale_fill_viridis_c() + 
   # scale_fill_gradientn(colours = 'viridis') +
   theme(axis.title.y = element_blank(), 
@@ -587,6 +607,11 @@ ggTiempoRecepcionMedicamentos <- df %>%
   labs(title = 'Tiempo de recepción de medicamentos') +
   guides(
     fill = guide_colourbar(barwidth = 20, title.position = 'top', title = 'Demora (días)'))
+
+ggTiempoRecepcionMedicamentos[[2]] <- ggTiempoRecepcionMedicamentos[[2]] +
+  scale_fill_viridis_c()
+ggTiempoRecepcionMedicamentos[[3]] <- ggTiempoRecepcionMedicamentos[[3]] +
+  scale_fill_viridis_c()
 
 #+ ggTiempoRecepcionMedicamentos, fig.width = 8, fig.height = 6, out.width = "60%"
 ggTiempoRecepcionMedicamentos
@@ -828,7 +853,8 @@ frecRevisionMed <- c("Varias veces al día",
   "Cada mes")
 
 ggFrecControlExistencias <-
-  select(df, frec = col1) %>% 
+  drop_na(df, any_of(col1)) %>% 
+  select(frec = col1) %>% 
   mutate(frec = factor(frec, rev(frecRevisionMed))) %>% 
   ggplot(aes(y = frec)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
@@ -845,16 +871,24 @@ ggFrecControlExistencias
 guardarGGplot(ggFrecControlExistencias, '094_FrecControlExistencias', 6, 4)
 
 
+
+
 gmFrecControlExistencias <- df_total %>% 
   rename(frec = col1) %>%
   left_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO')) %>% 
-  ggplot(aes(fill = frec)) + 
-  geom_sf(aes(geometry = geometry)) + 
+  creacionCloroPletCol(geometry, frec)
+
+gmFrecControlExistencias[[1]] <- gmFrecControlExistencias[[1]] + 
   scale_fill_brewer(palette = 'Set1', name = NULL) +
   theme(axis.title.y = element_blank(), 
         legend.position = 'right',
         axis.text = element_blank()) + 
   labs(title = 'Frecuencia de control de existencias')
+
+gmFrecControlExistencias[[2]] <- gmFrecControlExistencias[[2]] + 
+  scale_fill_brewer(palette = 'Set1', name = NULL) 
+gmFrecControlExistencias[[3]] <- gmFrecControlExistencias[[3]] + 
+  scale_fill_brewer(palette = 'Set1', name = NULL) 
 
 #+ gmFrecControlExistencias, fig.width = 6, fig.height = 4, out.width = "60%"
 gmFrecControlExistencias

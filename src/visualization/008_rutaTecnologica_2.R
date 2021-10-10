@@ -490,10 +490,9 @@ ggFrecVentasFNE1 <- rename(df, col1 = col1) %>%
   drop_na(col1) %>% 
   mutate(
     Departamento_1 = str_to_title(Departamento_1),
-    Departamento_1 = fct_reorder(Departamento_1, col1),
-    No_pedidos = 12/col1
+    Departamento_1 = fct_reorder(Departamento_1, col1)
     ) %>% 
-  ggplot(aes(x = No_pedidos)) + 
+  ggplot(aes(x = col1)) + 
   geom_bar(fill = alpha('#1a41bd', 0.5), color = 'black') + 
   geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +
   xlab('N.° de pedidos por año') + 
@@ -503,6 +502,25 @@ ggFrecVentasFNE1 <- rename(df, col1 = col1) %>%
 
 ggFrecVentasFNE1
 guardarGGplot(ggFrecVentasFNE1, '130b_FrecComprasFNR', 6, 4)
+
+
+ggFrecVentasFNE2 <- rename(df, col1 = col1) %>%
+  drop_na(col1) %>% 
+  mutate(
+    Departamento_1 = str_to_title(Departamento_1),
+    Departamento_1 = fct_reorder(Departamento_1, col1),
+    T_EOQ = 12/col1
+  ) %>% 
+  ggplot(aes(x = T_EOQ)) + 
+  geom_bar(fill = alpha('#1a41bd', 0.5), color = 'black') + 
+  geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +
+  xlab('Tiempo entre pedidos') + 
+  ylab('Frecuencia') + 
+  scale_x_continuous(breaks = 1:12) + 
+  scale_y_continuous(expand = c(0,0,0.2,0)) 
+
+ggFrecVentasFNE2
+guardarGGplot(ggFrecVentasFNE2, '130c_FrecComprasFNR', 6, 4)
 
 #'-------------------------------------------------------------------------------
 # 4.66¿En el Departamento existe algún establecimiento - diferente------------------

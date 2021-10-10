@@ -24,7 +24,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 Dentro del estudio de costos realizado se comparó el costo de compra del recetario contra su precio de venta. Así pues, se determinó que dentro del territorio el costo de los recetarios ronda entre los 10.000 COP y los 20.000 COP, con territorios como Valle del Cauca y Casanare, en donde dicho costo se aproxima a 30.000 COP. En algunos departamentos no se conocen los costos de adquisición de recetarios (Figura \@ref(fig:costoRecetario)A), dada sus particularidades en la contratación, puesto que se encargan del proceso de licitación y contratación de recetarios, únicamente realizan estudios de necesidad que son enviados al ente encargado de concretar la contratación, en muchos casos, la gobernación departamental. 
 
-```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento. Panel A. Costos de adquisición de recetarios por departamento. Panel B. Precios de recetarios por departamento.', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento. (A) Costos de adquisición de recetarios por departamento. (B) Precios de recetarios por departamento.', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 readRDS(file.path(fig_path, '031_costoRecetario.rds'))
 ```
 
@@ -36,7 +36,7 @@ Ahora bien, el margen de ganancias que deja la venta de recetarios se observa en
 <!-- readRDS(file.path(fig_path, '032_comparativoDepartamentos.rds')) + labs(title = NULL) -->
 <!-- ``` -->
 
-```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario. Panel A. Frecuencia de departamentos por márgen de ganancia. Panel B. Márgen de ganancia de recetarios por departamento.', fig.width=12, fig.height=6, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
+```{r comparativoDepartamentos0, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia por recetario. (A) Frecuencia de departamentos por márgen de ganancia. (B) Márgen de ganancia de recetarios por departamento.', fig.width=12, fig.height=6, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '032b_comparativoDepartamentos.rds')) + labs(title = 'A')
 
 g2 <- readRDS(file.path(fig_path, '032c_comparativoDepartamentos.rds'))
@@ -93,7 +93,7 @@ El modelo generado (ver Tabla \@ref(tab:resumenModeloRegresionLineal)) presenta 
 
 En la Figura \@ref(fig:DependParcial1) se muestran gráficos de dependencia parcial de los factores explorados, se observan tendencias como que el N.° de prescripciones elevan el costo de los recetarios. Pese a que se podría suponer que al aumentar el número de características de seguridad en el recetario se aumentaría el costo de este, se encuentra una relación inversa entre el número de medidas y el costo de adquisición. Esto podría deberse a la facilidad de elaboración en departamentos con la capacidad tecnológica adecuada, la forma en que se adjudican los contratos y los diferentes oferentes en el concurso de contratación. 
 
-```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de Costos.', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de costos de recetarios.', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds'))
 g1
 ```

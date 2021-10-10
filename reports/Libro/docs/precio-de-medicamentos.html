@@ -205,6 +205,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html"><i class="fa fa-check"></i>Créditos</a>
 <ul>
 <li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html#grupo-desarrollador"><i class="fa fa-check"></i>Grupo Desarrollador</a></li>
+<li class="chapter" data-level="" data-path="créditos.html"><a href="créditos.html#agradecimientos"><i class="fa fa-check"></i>Agradecimientos</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 </ul>
@@ -226,36 +227,37 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="precio-de-medicamentos" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> Precio de medicamentos</h2>
+<p>En Colombia, el precio de los medicamentos se encuentra regulado por parte del estado, …</p>
 <p>En la gestión de operaciones de distribución de MME por parte del FNE, se consideran dos canales de distribución principales los cuales son: (i) canal de distribución a FRE y (ii) canal de distribución mediante compra directa. Se considera que el canal de compra directa constituye una excepción, en los casos en donde no existe un Fondo Rotatorio que realice la distribución en un departamento determinado. Debido a esto, se debe considerar un precio de venta mayor en la utilización del canal de compra directa, y en el caso de MME se realiza la estimación del precio de venta a FRE y se adiciona un margen del 12% para las operaciones en canal de compra directa.</p>
-<p>En la Figura <a href="precio-de-medicamentos.html#fig:precioVentasDepartamentos">6.21</a> se observa una comparación de los precios de ventas reportados como oficiales por los FRE en sus respectivos departamentos para la vigencia 2021. El precio se muestra para cada medicamento en una escala de color diferente en pesos colombianos. En la figura se puede observar que los medicamentos más costosos corresponden a Metilfenidato 36 mg (entre <span class="math inline">\(\$300.000\)</span> y <span class="math inline">\(\$900.000\)</span>) y Metilfenidato 36 mg (entre <span class="math inline">\(\$200.000\)</span> y <span class="math inline">\(\$600.000\)</span> pesos).</p>
+<p>En la Figura <a href="precio-de-medicamentos.html#fig:precioVentasDepartamentos">6.20</a> se observa una comparación de los precios de ventas reportados como oficiales por los FRE en sus respectivos departamentos para la vigencia 2021. El precio se muestra para cada medicamento en una escala de color diferente en pesos colombianos. En la figura se puede observar que los medicamentos más costosos corresponden a Metilfenidato 36 mg (entre <span class="math inline">\(\$300.000\)</span> y <span class="math inline">\(\$900.000\)</span>) y Metilfenidato 36 mg (entre <span class="math inline">\(\$200.000\)</span> y <span class="math inline">\(\$600.000\)</span> pesos).</p>
 <div class="figure"><span id="fig:precioVentasDepartamentos"></span>
 <p class="caption">
-Figura 6.21: Precio de venta de medicamentos en los FRE
+Figura 6.20: Precio de venta de medicamentos en los FRE.
 </p>
-<img src="InformeFinal_files/figure-html/precioVentasDepartamentos-1.png" alt="Precio de venta de medicamentos en los FRE" width="100%" />
+<img src="InformeFinal_files/figure-html/precioVentasDepartamentos-1.png" alt="Precio de venta de medicamentos en los FRE." width="100%" />
 </div>
 <p>En la línea de anticonvulsivantes se tiene que el medicamento más costoso es Fenobarbital 200 mg/mL con precios entre <span class="math inline">\(\$75,000\)</span> a <span class="math inline">\(\$150,000\)</span>, mientras que en la línea de narcóticos se tiene al producto importado de Metadona tabletas 40mg como el más costoso (con precios que rondan <span class="math inline">\(\$100,000\)</span> y <span class="math inline">\(\$200,000\)</span>). Se tiene algunos departamentos con un color gris, lo que indicaría que el medicamento no hace parte del portafolio de MME que es distribuido en el departamento. Por otra parte, se tienen departamentos con un color de relleno blanco lo que indicaría casos en los que no se presenta un reporte activo de los precios de ventas en esos departamentos, se tienen como casos a Bolívar, Risaralda, Meta, Vichada, y Guainía.</p>
 <!-- ```{r precioVentasDeptosVariacion, echo=FALSE, warning=FALSE, fig.cap='Márgen de ganancia de medicamentos en los FRE', fig.width=20, fig.height=15, fig.topcaption=TRUE, out.width="100%", fig.pos='t!'} -->
 <!-- readRDS(file.path(fig_path, '010_precios', "091_precioVentasDeptosVariacion.rds")) -->
 <!-- ``` -->
 <p>Se realizó una comparación de márgenes de precios de venta frente a los precio de compra de MME por parte de los FRE, se tiene como referencia a los precios indicados en la plataforma de compra eficiente.</p>
-<p><span class="math display">\[\mathrm{M\acute{a}rgen} = \frac{\text{Precio de venta}}{\text{Precio de compra}}\]</span></p>
-<p>En el panel A de la Figura <a href="precio-de-medicamentos.html#fig:boxplotComparativoPVTA">6.22</a> se tiene una comparación de los márgenes de precio de venta frente a precio de compra de los MME. En verde, se tienen los medicamentos con una mediana de precios de ventas en departamentos menor al margen de venta mediante el canal de compra directa correspondiente a (112%), en estos medicamentos se tiene a Morfina solución oral 3%, Morfina HCl 50mg/mL, Metilfenidato tableta x 36mg, y Meperidina 100mg/2mL (estos medicamentos no tendrían sobrecostos respecto al canal de compra directa).</p>
+<p><span class="math display">\[\mathrm{M\acute{a}rgen}~(\%) = \frac{\text{Precio de venta}}{\text{Precio de compra}} \cdot 100\%\]</span></p>
+<p>En el panel A de la Figura <a href="precio-de-medicamentos.html#fig:boxplotComparativoPVTA">6.21</a> se tiene una comparación de los márgenes de precio de venta frente a precio de compra de los MME. En verde, se tienen los medicamentos con una mediana de precios de ventas en departamentos menor al margen de venta mediante el canal de compra directa correspondiente a (112%), en estos medicamentos se tiene a Morfina solución oral 3%, Morfina HCl 50mg/mL, Metilfenidato tableta x 36mg, y Meperidina 100mg/2mL (estos medicamentos no tendrían sobrecostos respecto al canal de compra directa).</p>
 <div class="figure"><span id="fig:boxplotComparativoPVTA"></span>
 <p class="caption">
-Figura 6.22: Comparativo de márgenes de precio de venta en el departamento por medicamentos y departamentos
+Figura 6.21: Comparativo de márgenes de precio de venta para: (A) Medicamentos y (B) Departamentos.
 </p>
-<img src="InformeFinal_files/figure-html/boxplotComparativoPVTA-1.png" alt="Comparativo de márgenes de precio de venta en el departamento por medicamentos y departamentos" width="100%" />
+<img src="InformeFinal_files/figure-html/boxplotComparativoPVTA-1.png" alt="Comparativo de márgenes de precio de venta para: (A) Medicamentos y (B) Departamentos." width="100%" />
 </div>
 <p>En azul se tienen los departamentos con un margen de precios entre 112% y 120%, en este casos se constituirían sobrecostos respecto al canal de compra directa para 11 medicamentos. Por último, en rojo se tienen medicamentos con margenes de precios de ventas mayores al 20% del precio de compra, se tienen los casos de Morfina hcl 10mg/mL, Hidrato de cloral 10% solución oral y Fenobarbital tabletas x 50mg.</p>
-<p>En el panel B de la Figura <a href="precio-de-medicamentos.html#fig:boxplotComparativoPVTA">6.22</a> se tienen los márgenes de precio de venta sobre precio de compra de acuerdo a los departamentos, se tienen en verde departamentos con una mediana de márgenes de precio menores al 112%, en estos departamentos se tiene Atlántico, Córdoba, Boyacá, Tolima, Cauca, Valle del Cauca, Amazonas y Guaviare. En el otro extremo se tienen departamentos que tienen margenes de más del 20% sobre el precio de compra como Casanare, Sucre, Cesar, La Guajira, Putumayo, Norte de Santander, Chocó, Caquetá, y Arauca.</p>
-<p>Por último, se realizó una comparación entre los márgenes de precio de venta en los departamentos y sus distancia física relativa a Bogotá (ver Figura <a href="precio-de-medicamentos.html#fig:relacionMargenesCosto">6.23</a>) mediante regresión lineal. Parece existir una relación entre las dos variables, sin embargo la presencia de casos anómalos que se muestran como etiquetas en la figura evitan que haya la relación tenga significancia estadística (<span class="math inline">\(p = .513\)</span>).</p>
+<p>En el panel B de la Figura <a href="precio-de-medicamentos.html#fig:boxplotComparativoPVTA">6.21</a> se tienen los márgenes de precio de venta sobre precio de compra de acuerdo a los departamentos, se tienen en verde departamentos con una mediana de márgenes de precio menores al 112%, en estos departamentos se tiene Atlántico, Córdoba, Boyacá, Tolima, Cauca, Valle del Cauca, Amazonas y Guaviare. En el otro extremo se tienen departamentos que tienen margenes de más del 20% sobre el precio de compra como Casanare, Sucre, Cesar, La Guajira, Putumayo, Norte de Santander, Chocó, Caquetá, y Arauca.</p>
+<p>Por último, se realizó una comparación entre los márgenes de precio de venta en los departamentos y sus distancia física relativa a Bogotá (ver Figura <a href="precio-de-medicamentos.html#fig:relacionMargenesCosto">6.22</a>) mediante regresión lineal. Parece existir una relación entre las dos variables, sin embargo la presencia de casos anómalos que se muestran como etiquetas en la figura impiden que se puede estasblecer una relación con significancia estadística (<span class="math inline">\(p = .513\)</span>).</p>
 <p>También se evaluaron otros factores cómo el número de instituciones que realizaron compras en la vigencia anterior (<span class="math inline">\(p = .667\)</span>) y la proporción de ingresos constituida por venta de medicamentos (<span class="math inline">\(p = .429\)</span>) pero no se encontró una relación significativa entre las variables.</p>
 <div class="figure" style="text-align: center"><span id="fig:relacionMargenesCosto"></span>
 <p class="caption">
-Figura 6.23: Relación de márgen de ganancia y otras variables
+Figura 6.22: Relación de márgen de ganancia y otras variables. (A) Distancia física en Km, (B) N.° de entidades que realizado compras al FRE durante el último año, y (C) Proporción de ingreso correspondiente a ventas de medicamentos.
 </p>
-<img src="InformeFinal_files/figure-html/relacionMargenesCosto-1.png" alt="Relación de márgen de ganancia y otras variables" width="95%" />
+<img src="InformeFinal_files/figure-html/relacionMargenesCosto-1.png" alt="Relación de márgen de ganancia y otras variables. (A) Distancia física en Km, (B) N.° de entidades que realizado compras al FRE durante el último año, y (C) Proporción de ingreso correspondiente a ventas de medicamentos." width="95%" />
 </div>
 
 </div>
