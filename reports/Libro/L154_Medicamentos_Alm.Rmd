@@ -1,4 +1,4 @@
-## Almacenamiento
+## Almacenamiento y Transporte
 
 ### Medidas de seguridad para el almacenamiento
 
@@ -24,7 +24,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 
 
-En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (a) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (b) gabinetes con llaves simple (en 14 de 26 FRE), (c) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (d) inventarios físicos diarios, y (e) protección en gabinetes hechos de materiales resistentes. 
+En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes. 
 
 ```{r MedidasSeguridadAlmacenamientoMME, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en el almacenamiento de MME.', fig.width=8, fig.height=6, fig.topcaption=TRUE,fig.align='center', out.width="90%"}
 readRDS(file.path(fig_path, "088_SeguridadMedicamentos.rds")) + 
@@ -119,8 +119,7 @@ g2 <- readRDS(file.path(fig_path, "098_CasosVencimiento.rds")) + labs(title = NU
 wrap_plots(g1, g2) + plot_layout(widths = c(.5, .5)) + plot_annotation(tag_levels = 'A')
 ```
 
-
-### Transporte 
+## Transporte 
 
 El transporte de medicamentos por parte del FNE, es un proceso importante dentro de la cadena de suministro de MME. Los costos de transporte de medicamentos por parte del FNE están cubiertos dentro del precio de los MME, para la distribución mediante el canal FRE. El FNE contrata a una empresa especializada en distribución logística de mercancías y bienes para la entrega del producto a nivel nacional.
 

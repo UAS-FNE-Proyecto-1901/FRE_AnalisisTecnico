@@ -12,12 +12,71 @@ require(vistime)
 
 fig_path <- file.path('..', '..', 'figures')
 
-barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d", 
-                                    "select2d", "drawclosedpath", "autoScale2d", "zoom2", 
-                                    "toggleSpikelines", "hoverCompareCartesian", "hoverClosestCartesian", 
-                                    "resetScale2d")
 ```
 
 \maxdeadcycles=1000
 
-Los medicamentos monopolio del Estado (MME) 
+El artículo 6 de la Resolución 1478 de 2006 [@MSPS1478-2006] refiere las sustancias y los medicamentos fabricados con las mismas que pertenece al monopolio del Estado. Este listado de sustancias se ha modificado mediante la Resolución 262 de 2009 [@MSPS262-2009] y la Resolución 940 de 2007 [@MSPS940-2007], en el sentido de modificar las hojas de coca por cocaína con fines terapéuticos, e incluir a la primidona en todas sus presentaciones de manera respectiva. 
+
+Es así, que el FNE cuenta con el Grupo Interno de Trabajo de Medicamentos del Estado que tiene como objetivo Garantizar la disponibilidad de los medicamentos del Estado de manera oportuna y eficiente en todo el territorio Nacional. 
+
+Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \@ref(tab:portafolioMME) [@ColombiaCompraEficiente2021].
+
+```{r portafolioMME, echo=FALSE, warning=FALSE,fig.pos='h!',tab.pos='h!',fig.align='center',tab.align='center'}
+table1 <- tibble::tribble(
+                              ~Producto,        ~Presentación,                       ~Observaciones,
+           "Fenobarbital Sol Oral 0,4%",             "Frasco",                                   'Disponible',
+                   "Fenobarbital 10 mg",   "Caja 30 tabletas",                                   'Disponible',
+                   "Fenobarbital 50 mg",   "Caja 30 tabletas",                                   'Disponible',
+                  "Fenobarbital 100 mg",   "Caja 30 tabletas",                                   'Disponible',
+                   "Fenobarbital 40 mg",   "Caja 10 ampollas",                                   'Disponible',
+                  "Fenobarbital 200 mg",   "Caja 10 ampollas",                                   'Disponible',
+                "Hidromorfona HCL 2 mg",   "Caja 10 ampollas",                                   'Disponible',
+              "Hidromorfona HCL 2.5 mg",   "Caja 20 tabletas",                                   'Disponible',
+                "Meperidina HCL 100 mg",   "Caja 10 ampollas",                                   'Disponible',
+                    "Morfina HCL 10 mg",   "Caja 10 ampollas",                                   'Disponible',
+                "Morfina Solución Oral",             "Frasco",                                   'Disponible',
+                "Morfina Solución Vial",             "Frasco",                     "Sin unidades disponibles",
+                     "Primidona 250 mg",   "Caja 50 tabletas",                     "Sin unidades disponibles",
+            "Primidona 250 mg Tabletas", "Caja x 30 Tabletas",                                   'Disponible',
+                   "Metadona HCL 10 mg", "Frasco 20 tabletas",                                   'Disponible',
+                   "Metadona HCL 10 mg",   "Caja 30 tabletas",                                   'Disponible',
+                   "Metadona HCL 40 mg", "Frasco 20 tabletas",                                   'Disponible',
+                   "Metadona HCL 40 mg",      "Caja x 30 tab",                                   'Disponible',
+              "Metilfenidato HCL 10 mg",   "Caja 30 tabletas",                                   'Disponible',
+               "Metilfenidato LA 30 mg", "Frasco 30 capsulas",                                   'Disponible',
+                  "Metilfenidato 18 mg", "Frasco 30 tabletas",                                   'Disponible',
+                  "Metilfenidato 36 mg", "Frasco 30 tabletas",                                   'Disponible',
+  "Hidrato de Cloral 10% Solución oral",             "Frasco",                                   'Disponible',
+     "Morfina HCL 10 mg ampolla x 5 mL",    "Caja 5 ampollas",                                   'Disponible'
+  )
+
+if (knitr::is_latex_output()) {
+  knitr::kable(table1, align = c('l', 'c', 'c'), caption = 'Portafolio de Medicamentos Monopolio del Estado.', 
+               format = 'latex', booktabs=TRUE) %>% kableExtra::kable_styling(bootstrap_options = "striped")
+} else {
+  knitr::kable(table1, align = c('l', 'c','c'), 
+               caption = 'Portafolio de Medicamentos Monopolio del Estado.', format = 'html')
+}
+```
+
+
+Los medicamentos incluidos en el portafolio de medicamentos del Estado son importantes en el tratamiento de diversas enfermedades de alto impacto en la salud de la población colombiana. En el área de cuidados paliativos se tienen a los medicamentos con morfina, metadona, meperidina e hidromorfona como parte importante del tratamiento del dolor crónico. Algunas sociedades científicas relacionadas a esta área han encontrado barreras en la entrega efectiva de medicamentos opioides, así como una distribución inequitativa en el territorio nacional de los mismos [@LeonDelgado2018].
+
+Pese a todo esto, Colombia tiene una puntuación de 4 de 5 en la escala de colaboración entre prescriptores y reguladores de analgésicos opioides (para Latinoamérica), lo que resulta de la existencia de mecanismos de colaboración pese a que todavía se pueden realizar mejoras en los mismos [@Pastrana2020]. 
+
+Así mismo el fenobarbital se considera una alternativa terapéutica útil en el tratamiento de epilepsia refractaria [@WatsonLewis2014], o estatus convulsivo [@VergaraAguilar2019]. La primidona cuenta con un espacio limitado en la terapia moderna de la epilepsia [@Johannessen2020], y algunos pacientes todavía requieren un suministro ininterrupido de la misma. Por otra parte, el metilfenidato es un componente importante en el tratamiento farmacológico de los trastornos por deficit de atención, los cuales tienen una prevalencia en la población colombiana [@Pineda2001;@Llanos-Lizcanoa2019]. 
+
+Sí bien el establecimiento de un monopolio del Estado con estos medicamentos ha permitido el suministro de los mismos debido a que pueden ser poco atractivos por ser medicamentos menos rentables, la restricción de un mercado de libre competencia puede resultar en el surgimiento frecuente de eventos de desabastecimiento [@LopezLopez2021;@INVIMA2018-Desabast]. 
+
+Los desabastecimientos son situaciones en la cual se presenta una insuficiente oferta para satisfacer la demanda de un producto farmacéutico que ya ha sido aprobado por el INVIMA y comercializado en el país [@INVIMA2018-Desabast]. 
+
+Por lo general, los desabastecimientos se ven precedidos por disrupciones en la cadena de suministro [@FDA2014]. Las *disrupciones en la cadena de suministro* se definen como eventos aleatorios que causan que un fabricante u otro elemento de la cadena de suministro pare de funcionar de forma completa o parcial por una cantidad de tiempo (aleatoria) [@Barbosa-Povoa2019]. Las instituciones deben establecer programas de gestión del riesgo también aplicadas a la cadena de suministro, en estas se busca mitigar riesgo de suministro/demanda y disrupción. Por otra parte, la **resiliencia** se puede definir como la habilidad de sobrevivir, adaptarse y crecer tras un cambio turbulento. La implementación de programas de gestión de resiliencia en la cadena de suministro se centra en la habilidad de aprender y crecer tras las disrupciones de la cadena de suministro [@Barbosa-Povoa2019].
+
+La resiliencia de una cadena de suministro, como lo es la distribución de MME, se puede mejorar mediante la construcción de capacidades teniendo en cuenta vulnerabilidades [@Pettit2013]. Una de estas capacidades es la visibilidad referida al conocimiento del estado operativo de la cadena y su medio circundante [@Pettit2013]. El *intercambio de información* es una de las áreas en las que se pueden realizar mejoras para potenciar la coordinación en una cadena de suministro [@Silver2017]. 
+
+La falta de transparencia y visibilidad en una cadena de suministro puede causar el efecto látigo (en inglés, *Bullwhip effect*) que consiste en un aumento de la variabilidad en la demanda de un sitio corriente abajo de la cadena a un sitio corriente arriba de la misma [@Cachon2007]. Este efecto implica que se pueden generar condiciones de alta incertidumbre que llevan a una mala planeación y esto a desabastecimientos o pérdidas por vencimiento de MME tanto para el FNE como para los FRE. 
+
+Es por esto, que tanto el FNE como los FRE - en conjunto - deberían implementar, por ejemplo, un sistema de Planeamiento Participativo, Pronóstico y Reabastecimiento (CPFR, *Collaborative Planning Forecasting and Replenishment*) de manera que exista una colaboración más robusta y visible de la cadena de suministro de medicamentos Monopolio del Estado [@Hollmann2015]. 
+
+Debido a la necesidad de fortalecer la cadena de suministro de MME, en este capítulo se muestran los resultados relacionados a medicamentos obtenidos en la encuestas aplicadas, con el fin de evidenciar algunos aspectos operativos relacionados al manejo de medicamentos en los FRE.

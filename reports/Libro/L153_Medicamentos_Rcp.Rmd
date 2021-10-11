@@ -1,4 +1,4 @@
-## Procesos relacionados a medicamentos
+## Venta de MME
 
 ```{r configuracion1-L153, include=FALSE}
 require(tidyverse); theme_set(theme_bw())
@@ -20,72 +20,6 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
-### Recepción de medicamentos
-
-A nivel nacional se cuenta con el *"Manual de condiciones esenciales y procedimientos del Servicio Farmacéutico"* que está determinado por la Resolución 1403 del 2007 [@MinisteriodeSaludyProteccionSocial2007] emitida por el INVIMA, que en el título “Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos”, establece que la persona encargada de recibir los medicamentos en la institución debe realizar el siguiente procedimiento:
-
-1. estudiar la documentación propia de la institución que realiza la recepción, con el fin de establecer los productos a recibir y qué condiciones requieren los mismos para su recepción.
-
-2. verificar la documentación de quien hace la entrega, p.ej. guía de entrega. Las cantidades solicitadas deben corresponder con las aprobadas tras el pedido.
-
-3. realizar una inspección de los medicamentos para verificar las (i) unidades, (ii) número de lote, (iii) fechas de vencimiento, (iv) registro sanitario, (v) laboratorio fabricante, (vi) condiciones de almacenamiento durante el transporte, (vii) manipulación, (viii) embalaje, (ix) material de empaque / envase y (x) condiciones administrativas y técnicas establecidas en la negociación. 
-
-Después de la inspección, se realiza un muestreo para determinar si los productos recibidos cumplen con especificaciones de calidad. Existen planes de muestreo de aceptación por atributos en el que se suele utilizar la Tabla Militar Estándar MIL-STD-105E [@AmericanNationalStandardsInstitute2013;@GutierrezPulido2008], con el fin de seleccionar el tamaño de una muestra aleatoria de acuerdo al tamaño total del pedido, nivel de inspección requerido y otros factores. En casos con un tamaño total de lote pequeño y altos niveles de inspección se suele realiza una inspección completa de los productos recibidos.
-
-Al terminar la inspección se pasa a documentar la recepción y se procede a realizar un “acta de recepción” donde se detalla la información del procedimiento como: 
-
--	fecha y hora de entrega
-
--	cantidad de unidades
-
--	número de lote
-
--	registro sanitario
-
--	fechas de vencimiento
-
--	condiciones de trasporte, manipulación y embalaje
-
--	material de empaque y envase
-
--	condiciones administrativas y técnicas establecidas en la negociación así como la trazabilidad
-
-El acta es firmada por las persona que reciben y entregan para ser archivada. Como parte final se ingresan como parte del inventario a todos los productos pedidos que cumplan con las especificaciones de calidad.
-
-En el caso de los distintos FRE a nivel nacional (ver Figura \@ref(fig:TiemposRecepcionAlmacenamientob)), se observa que el FRE Antioquia es el que más días invierte en realizar el proceso de recepción, esto se debe a que sus pedidos son de gran tamaño para cubrir la demanda, lo que conlleva a que deba dispensarse 5 días en todo el proceso de recepción técnica, desde el momento de recepción del producto proveniente del FNE, hasta el ingreso de la misma al sistema, incluyendo la realización del acta.
-
-```{r TiemposRecepcionAlmacenamientob, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME. (A) Gráfico de barras con frecuencia. (B) Mapa con tiempos para la recepción técnica de MME.', fig.width=10, fig.height=4.5, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
-g1 <- readRDS(file.path(fig_path, "086b_RecepcionMedicamento.rds")) + labs(title = 'A')
-g2 <- readRDS(file.path(fig_path, "087_RecepcionMedicamento.rds"))
-g2[[1]] <- g2[[1]] + labs(title = 'B')
-
-wrap_plots(g1, g2) + plot_layout(ncol = 2, widths = c(0.5, 0.5))
-```
-
-En segundo lugar se encuentra el FRE Boyacá, el cual presenta un uso de 3 días en todo el proceso, se observa que el volumen de inscritos es alto y que en este caso lo llevan dos regentes de farmacia dando paso a la realización de acta con el transportador y luego una revisión completa de cada medicamentos y correcto almacenamiento con su acta correspondiente. 
-
-Como otro atributo que se puede resaltar en la Figura \@ref(fig:TiemposRecepcionAlmacenamientob), es que cinco territorios Atlántico, Quindío, Sucre, Tolima y Bolívar se demoran entre 2-2.5 días para la recepción técnica, debido a su tamaño y a la cantidad de personas disponibles para llevar a cabo este proceso y como ultima observación, se puede ver que 24 de los 31 FRE realizan la recepción técnica durante un día y por máximo un día y medio, debido a que los pedidos realizados no son muy grandes, o como en el caso del Valle del cauca, Cauca y Santander, que son territorios grandes con bastantes inscritos, se determina la prioridad de esta acción donde se establece las personas que llevan a cabo este procedimiento y se ha observado que no sobrepasa un día y medio en esta labor.  
-
-<!-- # ```{r TiemposRecepcionAlmacenamiento, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%"} -->
-<!-- # readRDS(file.path(fig_path, "086_RecepcionMedicamento.rds")) + -->
-<!-- # labs(title = NULL) -->
-<!-- # ``` -->
-
-Según la Resolución 1403 de 2007 [@MinisteriodeSaludyProteccionSocial2007], donde se menciona el control durante el proceso de almacenamiento se encuentra que: 
-
-> *“El … establecimiento farmacéutico contará con criterios, procedimientos y recursos que permitan calcular las existencias necesarias para un período determinado, fijando los niveles mínimo y máximo de existencias, punto de reposición o punto de pedido y presupuesto necesario para cumplir con la prestación oportuna del servicio. Se podrán utilizar aquellos indicadores que vayan surgiendo y que permitan realizar un exacto control de existencias”.* [@MinisteriodeSaludyProteccionSocial2007]
-
-Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos, por ende, se preguntó el uso de niveles de seguridad del inventario entendiendo el concepto como aquel nivel de existencias de productos que indica que ya es momento de pedir más productos y lo que se tiene es suficiente para cubrir la demanda sin caer en desabastecimientos, mientras se reestablece los niveles óptimos de inventario.
-
-```{r UsoNivelesSeguridad, echo=FALSE, warning=FALSE, fig.cap='Uso de niveles de seguridad del inventarios.', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="78%",fig.align='center'}
-readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) + 
- labs(title = NULL)
-```
-
-Según los resultados obtenidos el 51.6\% de los FREs si manejan niveles de seguridad en los inventarios, es decir que de los 31 FREs existentes solo 16 manejan esta práctica y los 15 restantes no la usan; entre las razones para el no uso de esta estrategia se encuentra que la cantidad de medicamentos que rotan en algunos territorios no es muy alto, por ende, con la experiencia adquirida se sabe en qué momento se debe empezar a realizar el proceso de pedido de medicamentos (como p.ej. Guainía o Guaviare). 
-
-En otros casos se ve que el personal del FRE considera que su contacto directo con diario con los medicamentos, les permite verificar el comportamiento y determinar el momento indicado para tomar alguna acción. Se concluye entonces que 16 FREs usan estrategias de manejo óptimos de inventario y los 15 restantes lo hacen de una manera tradicional y dada por la experiencia adquirida con los años que llevan manejando el FRE en su región.
-
 ### Controles en Venta Directa a Paciente
 
 En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.
@@ -94,6 +28,7 @@ En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como 
 readRDS(file.path(fig_path, "120_ControlesVentasFRE.rds")) + labs(title = NULL)
 ```
 
+En la Figura \@ref(fig:InstitucionesAdicionales) se muestra sí en el departamento existen otras instituciones que realicen ventas de MME a instituciones a parte del FRE. Se observa que len la mayoría de departamentos sólo el FRE vende MME, la venta por parte de otras instituciones ocurre en los departamentos de Antioquía, Atlántico, Santander, Caldas, Quindío, Nariño, y San Andrés, Providencia y Santa Catalina. La mayoría de los establecimientos autorizados son mayoristas, aunque en algunos casos estos establecimientos tienen autorización para cubrir horarios en que el FRE no se encuentra activo. 
 
 ```{r InstitucionesAdicionales, echo=FALSE, warning=FALSE, fig.cap='Existencia de otras instituciones que realizan ventas a instituciones a MME.', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
 # (C) Proporción de FRE donde hay otras instituciones que realizan ventas a instituciones a MME.
@@ -101,3 +36,4 @@ g3 <- readRDS(file.path(fig_path, "131_InstitucionesAdicionales.rds")) +
  labs(title = NULL)
 g3
 ```
+

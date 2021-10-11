@@ -207,7 +207,7 @@ if(knitr::is_html_output()){
 
 Agradecemos a la Dirección Nacional de Planeación por la inversión realizada a través de ...
 
-Agradecemos a Jonathan Peñaranda, Daniela Martínez Castillo y Ayda Cabezas del grupo de Regionalización del FNE por el acompañamiento y durante la realización de estas encuestas. Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas para la realización de esta encuesta.  
+Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento y durante la realización de estas encuestas. Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas para la realización de esta encuesta.  
 
 Agradecemos profundamente a los siguientes funcionarios por recibir y contestar de manera atenta las preguntas de la encuesta: 
 
