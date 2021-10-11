@@ -205,9 +205,13 @@ if(knitr::is_html_output()){
 
 ### Agradecimientos {-}
 
-Agradecemos a la Dirección Nacional de Planeación por la inversión realizada a través de ...
+Agradecemos profundamente al Departamento Nacional de Planeación (DNP) por la inversión realizada a través del Proyecto de Inversión BPIN 2020011000020.
 
-Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento y durante la realización de estas encuestas. Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas para la realización de esta encuesta.  
+Agradecemos a nuestra directora la Dra. Zoraya López Díaz por su compromiso con los proyectos de inversión y su entusiasmo por el trabajo territorial llevado a cabo por nuestro equipo.
+
+Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento y durante la realización de estas encuestas. Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas en la formulación del proyecto y realización de esta encuesta. 
+
+Agradecemos a los Grupos Interno de Trabajo del Fondo Nacional de Estupefacientes por brindarnos su apoyo en las diversas actividades relacionadas a acceso, contratación, viáticos, desplazamientos, y apoyo técnico en general.
 
 Agradecemos profundamente a los siguientes funcionarios por recibir y contestar de manera atenta las preguntas de la encuesta: 
 

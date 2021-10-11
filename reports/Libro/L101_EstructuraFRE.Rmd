@@ -150,12 +150,16 @@ También se puede observar que la distribución geográfica de las regiones no s
 readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
 ```
 
+En la Figura \@ref(fig:institucionesInscritasVARdemo) se puede determinar una relación directa entre la cantidad de instituciones inscritas y variables relacionadas a la demografía de cada departamento. Lo anterior se explica con la densidad demográfica del departamento y la necesidad de servicios de atención en salud cada vez más complejos. En teoría, los FRE con mayor número de inscritos de mayor complejidad, deberían estar mucho más desarrollados para atender la necesidad de MME de su territorio. Como es el caso del FRE Antioquia, cuyo departamento presenta un alto número de establecimientos inscritos y un nivel de complejidad alta en las instituciones, aumentando proporcionalmente el consumo de MME.
+
 ```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación entre N.° de instituciones inscritas en el FRE y: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center',fig.pos='b'}
 g1 <- readRDS(file.path(fig_path, "100a_RelacionRecursosFRE.rds")) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "100b_RelacionRecursosFRE.rds")) + labs(title = NULL)
 
 wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A')
 ```
+
+En la Figura \@ref(fig:institucionesInscritasVARdemo)B se encuentra la relación directa entre el N.° de inscritos en el departamento y el número de camas (adultos, intermedio adulto, intensivo adulto, agudo mental, intermedio mental, salud mental), servicios de farmacodependencia y ambulancias medicadas de acuerdo al REPS [@DireccionPrestaciondeServiciosyAtencionPrimaria2021] presentes en el departamento.
 
 ## Caracterización de las fuentes de ingresos de los FRE
 
@@ -199,5 +203,66 @@ Particularmente, en la Figura \@ref(fig:IngresosFRE2) se observa que en algunos 
 readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
 ```
 
-**En algunos casos no se logró obtener información de las fuentes de información...**
+## Clasificación de los FRE por nivel de complejidad
 
+A partir de las visitas técnicas desarrolladas en cada territorio, se lograron observar notorias diferencias entre los FRE departamentales. Esto se podría explicar por las diferencias administrativas y factores demográficos que tiene cada departamento. Esto permite que cada FRE se desenvuelva en determinada forma y esto resulta en el grado de eficiencia que presenta el ente territorial, para el manejo de MME en la región.
+
+Según lo anterior, se propone una clasificación de los FRE, de acuerdo a su nivel de complejidad, sin el ánimo de juzgar el trabajo desarrollado en cada territorio. Esta sección procura por reconocer y clasificar los FRE en grupos, conforme a sus capacidades actuales y similaridad entre departamentos. Lo anterior con el fin de generar un instrumento que sirva como insumo para la generación de políticas públicas y toma de decisiones relacionadas con el manejo de MME.
+
+A continuación, se presenta la descripción de las 5 variables definida para la clasificación de los FRE, cuya agrupación contempla el nivel de complejidad del ente territorial: 
+
+- Presupuesto departamento (general y sector salud).
+
+- Número de instituciones inscritas en el departamento.
+
+- Proporción de adquisición de MME (proporción de portafolio).
+
+- Número de compras directas de instituciones en el departamento al FNE (entendidas como una desviación de la cadena de suministro).
+
+- Proporción de meses con entrega del Anexo 1 de la Resolución 1479 de 2006 (cumplimiento).
+
+- Proporción de meses con entrega del Anexo 2 de la Resolución 1479 de 2006 (cumplimiento).
+
+Muchas variables fueron tomadas de forma externa a la encuestas teniendo en cuenta la información disponible en cada una de ellas, con el fin de visualizar el estado actual de cada FRE, considerando distintos factores internos y externos que tienen las entidades territoriales. Esto permite que la distribución y clasificación de los FRE sea más robusta, ya que está contemplando la mayor realidad posible en cada territorio, para el momento de este análisis.
+
+Es importante resaltar que la complejidad concluida estaría relacionada con la capacidad que tiene el FRE de cumplir con sus funciones y responsabilidades, considerando factores económicos propios del departamento. Un ejemplo ilustrativo corresponde al FRE Córdoba, donde el ente territorial es clasificado en la categoría *"FRE altamente consolidado"*. A pesar de esta clasificación, el rubro económico destinado para temas de salud en este departamento es relativamente bajo, sin embargo, el personal del FRE procura realizar una buena gestión estos recursos para el adecuado manejo de MME y recetarios oficiales.
+
+En primer lugar, la variable de presupuesto y número de inscritos, refleja la asignación de recurso económico en cada región para la partida presupuestal de los temas en salud de cada territorio. Esto entendiéndose como un condicionante de la capacidad que tienen los FRE para disponer de infraestructura tecnológica y recurso humano suficiente, para cumplir todas sus funciones como ente territorial. Adicionalmente, el número de inscritos en cada territorio muestra la complejidad de la oferta y demanda en cada región, la cual debe satisfacer la gestión del FRE.
+
+La variable referente a la proporción de adquisición de MME, indica la proporción de medicamentos ofertados por el FRE en su territorio, de acuerdo con el portafolio general de MME presentado por el FNE. A partir de esto, se determina de manera indirecta, la capacidad de manejo de portafolio que tiene un FRE. Esta capacidad de manejo está relacionada con las condiciones de almacenamiento, infraestructura física y recurso humano disponible en el ente territorial.
+
+Otra variable importante en este análisis es la variable referente a cantidad de compras directas al FNE. Esta información refleja el número de compras que realizaron las instituciones inscritas en cada territorio con el FNE, debido al desabastecimiento de MME en su respectivo departamento. Esto podría ser causa de una proyección de compra de MME inapropiada, por parte del FRE, cuyo proceso está directamente relacionado con los anexos técnicos de distribución y consumo que son presentados mensualmente. 
+
+Finalmente, las variables relacionadas con el cumplimiento de entrega del Anexo 1 y Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006], fueron incluidas en esta clasificación, ya que inciden en gran proporción en la proyección de adquisición de MME para satisfacer las necesidades del territorio. La consolidación de la información dispuesta en estos anexos se relaciona directamente con la cantidad de personas vinculadas al FRE, cuyo factor muestra la capacidad de recurso humano en cada FRE.
+
+Para ilustrar el comportamiento de los FRE respecto a las variables seleccionadas se realizó un análisis de componentes principales (PCA, *Principal Component Analysis*). La Figura \@ref(fig:PCA1) muestra el comportamiento de las 5 variables definidas para este análisis respecto a los componentes principales. En primer lugar, se puede determinar que las variables más próximas en el plano del componente 1 (PC1), presentan la mayor variabilidad entre los FRE, seguido por aquellas ubicadas cerca del plano del componente 2 (PC2). Las variables de monto presupuestal (general y salud), así como número de inscritos y en cierta medida la proporción del portafolio tienen un alta correlación entre sí por lo cual presentan una proyección cercana entre sí.
+
+```{r PCA1, echo=FALSE, warning=FALSE, fig.cap='Variables involucradas en la construcción de los componentes principales', fig.width=6, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+fig_path <- file.path('..', '..', 'figures')
+g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "002_fig_var.rds")) + labs(title = NULL)
+g1
+```
+
+Por el contrario, las variables más dispersas en el plano presentado en la Figura \@ref(fig:PCA1), no guardan relación entre sí, por lo tanto, estas variables tienen información importante para realizar la clasificación de los FRE. En este orden de ideas, la variable referente a la consolidación del anexo 2 en los FRE no mantiene una relación directa con el número de compras directas que haya hecho el departamento o con la variable del portafolio que ofrecen los FRE. 
+Se realizó un análisis de agrupación (*cluster*) jerárquico mediante el algoritmo de Ward en el software R. Se seleccionaron 5 grupos de acuerdo al análisis mediante un criterio de *codo*. A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
+
+```{r PCA1-2, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=8, fig.asp=0.75, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "013_cluz_group.rds")) + labs(title = NULL)
+g1
+```
+Luego de un análisis multivariado en el software R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
+
+- FRE suficientemente consolidado (Verde)
+
+- FRE medianamente consolidado (Azul)
+
+- FRE en proceso de consolidación (Rojo)
+
+Es preciso resaltar que los FRE Antioquia y Valle del Cauca fueron categorizados como dos categorías distintas, respectivamente. Lo anterior es suscitado por las grandes diferencias en la gestión de MME y la administración departamental, que tienen estos entes territoriales frente a los otros FRE. No obstante, el análisis descriptivo de la Figura \@ref(fig:PCA1-2), permite organizar estas agrupaciones en 3 categorías, dejando fuera a estos dos FRE, cuyas capacidades exceden la media de la gestión de los FRE a nivel nacional.
+
+La categoría *"FRE suficientemente consolidado"* exhibida en color verde en la Figura \@ref(fig:PCA1-2), habla de un FRE que tiene capacidades operativas y administrativas suficientes, teniendo en cuenta factores externos como el presupuesto y la complejidad de las instituciones inscritas en su territorio. Sin embargo, existen variables donde se requiere adelantar un trabajo profundo para llegar a tener una gestión ideal como el caso de Antioquia y Valle del cauca, recalcando que también son territorios de alta complejidad. Es necesario aclarar que esta denominación “altamente consolidado” está relacionada directamente con las capacidades del departamento, para gestionar sus recursos en salud.
+
+La categoría *"FRE medianamente consolidado"* se muestra de color azul en la Figura \@ref(fig:PCA1-2) Esta clasificación representa a los FRE que cumplen con las necesidades de manejo de MME en su territorio, no obstante, estos entes territoriales tienen suficiente presupuesto para adelantar una gestión aún mejor y más robusta. Por este motivo se recomienda a los FRE de este grupo, mejorar en los siguientes temas puntuales como: (i) contratación del personal del FRE, (ii) cumplimiento de los anexos de la Resolución 1479 de 2006 y (iii) proyección adecuada del consumo de MME en cada territorio.
+
+La categoría *"FRE en proceso de consolidación"* exhibida en color rojo en la Figura \@ref(fig:PCA1-2), contiene a los FRE que necesitan asistencia técnica inmediata por parte del FNE, de la mano de su respectiva Dirección Departamental de salud. Lo anterior se debe a que estos FRE no presentan una complejidad muy alta en función de las pocas instituciones inscritas, densidad demográfica y el limitado portafolio de MME que se distribuyen en estos territorios. 
+En adición, el seguimiento y manejo de los MME es débil en estos FRE y sus herramientas tecnológicas son limitadas. Por esta razón, la asistencia técnica por parte del FNE puede ser de gran ayuda, para entender cómo distribuir los recursos a disposición del FRE y mejorar en capacidades propias, con el fin de apoyar en el proceso de consolidación del FRE.s

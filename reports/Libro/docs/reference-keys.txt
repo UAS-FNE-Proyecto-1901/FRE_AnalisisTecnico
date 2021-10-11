@@ -9,6 +9,8 @@ fig:institucionesInscritasRelacion
 fig:institucionesInscritasVARdemo
 fig:IngresosFRE1
 fig:IngresosFRE2
+fig:PCA1
+fig:PCA1-2
 fig:existenciasRecetarios
 fig:existenciasRecetarios2
 fig:costoRecetario
@@ -38,8 +40,8 @@ fig:UsoNivelesSeguridad
 fig:EtapasProcesoAdquisicion
 fig:EtapasProcesoAdquisicionDetalle
 fig:ColombiaCompra
-fig:TiemposTranslados
 fig:TiemposRecepcionAlmacenamientob
+fig:TiemposTranslados
 fig:ControlesVentasFRE
 fig:InstitucionesAdicionales
 fig:MedidasSeguridadAlmacenamientoMME
@@ -79,6 +81,7 @@ fecha-de-constitución-de-fre
 estructura-organizacional
 instituciones-inscritas-en-el-fre
 caracterización-de-las-fuentes-de-ingresos-de-los-fre
+clasificación-de-los-fre-por-nivel-de-complejidad
 recetarios-oficiales
 existencia-de-recetarios
 existencias-en-el-fre
@@ -108,11 +111,11 @@ niveles-de-seguridad
 adquisición-de-mme
 tiempos-de-demora-en-el-proceso-de-adquisición
 plataforma-de-compra-estatal
-traslados-interdepartamentales
 recepción-de-medicamentos
+traslados-interdepartamentales
 venta-de-mme
 controles-en-venta-directa-a-paciente
-almacenamiento-y-transporte
+almacenamiento
 medidas-de-seguridad-para-el-almacenamiento
 revisión-de-condiciones-ambientales
 espacio-de-almacenamiento
@@ -137,3 +140,4 @@ estructura-de-los-fre
 recetarios-oficiales-1
 medicamentos
 informes
+ruta-tecnológica-y-control-de-la-información

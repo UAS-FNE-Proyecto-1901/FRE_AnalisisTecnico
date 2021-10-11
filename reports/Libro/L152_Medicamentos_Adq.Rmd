@@ -37,6 +37,7 @@ La implementación de un software de manejo de inventarios o en el mejor de los 
 ```{r HerramientasManejoInventarios, echo=FALSE, warning=FALSE, fig.cap='Herramientas en el manejo de inventarios.', fig.width=8, fig.asp=0.45, fig.topcaption=TRUE, out.width="95%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "071_Herramienta.rds")) + labs(title = NULL)
 ```
+
 Algunos FRE se apoyan en otras herramientas además del paquete ofimático para llevar a cabo la tarea del control de inventarios. En la segunda posición de la Figura \@ref(fig:HerramientasManejoInventarios) se observa el uso de software en una proporción del 38.7\%. La elección del software se hace según los criterios de cada entidad territorial en la mayoría de los casos se utiliza un software interno de la gobernación del territorio para el desarrollo de estas actividades como es el caso de los FRE Atlántico, Cesar, Santander, entre otros. 
 
 El alcance del software es distinto, por ejemplo, el caso del FRE Risaralda que hace uso del software SIMEC para soportar tanto el manejo de inventarios, como los procesos relacionados con el sistema de IVC en todo lo relacionado con MME. Este software funciona además como medio de comunicación entre el FRE y todos sus inscritos, mostrándose como una plataforma muy completa y eficiente, sin embargo, existe poca disponibilidad de equipos de cómputo en el FRE que impide que más personal pueda acceder al software y a sus herramientas por lo cual puede ser un recurso subutilizado. 
@@ -46,6 +47,8 @@ Se evidencia que algunos FRE poseen herramientas completas para el manejo de sus
 Sólo en tres casos se encontró que el control de inventarios dependía exclusivamente de herramientas manuales como la revisión de libros contables. Pese a que no es el ideal algunos territorios, especialmente los menos centralizados (p.ej. Amazonas y La Guajira), se ven en la necesidad de llevar sus procesos de esta forma debido a la no disponibilidad de equipos de cómputo o que sí bien los hay, esto se encuentran obsoletos y no soportan el uso de tecnologías más recientes y apropiadas.
 
 Finalmente, el manejo de inventarios por parte de los FRE deja en evidencia las brechas tecnológicas importantes entre los territorios. Los FRE menos centralizados presentan menor acceso a tecnologías actualizadas y en estos fue común encontrar la necesidad de acceso a más equipos de cómputo que le permita al personal desarrollar las actividades para el funcionamiento del FRE.
+
+Por todo esto se recomienda el uso de herramientas informáticas para la trazabilidad del inventario.
 
 ### Comportamiento de compra de FRE
 
@@ -83,7 +86,7 @@ Según la Resolución 1403 de 2007 [@MinisteriodeSaludyProteccionSocial2007], do
 
 > *“El … establecimiento farmacéutico contará con criterios, procedimientos y recursos que permitan calcular las existencias necesarias para un período determinado, fijando los niveles mínimo y máximo de existencias, punto de reposición o punto de pedido y presupuesto necesario para cumplir con la prestación oportuna del servicio. Se podrán utilizar aquellos indicadores que vayan surgiendo y que permitan realizar un exacto control de existencias”.* [@MinisteriodeSaludyProteccionSocial2007]
 
-Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos. Se evalúo el uso de niveles de seguridad del inventario en los FRE. Un **inventario de seguridad** es una cantidad (nivel) almacenada adicional de producto que protege frente a incertidumbres en la demanda ($\mathrm{D}$), tiempo de espera ($\mathrm{L}$) o cambios en el suministro [@Krajewski2016]. Los inventarios de seguridad se construyen basados en medidas de nivel de servicio que se encuentran relacionadas ya sea con costos de desabastecimiento o la probabilidad de desabastecerse [@Silver2017]. 
+Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos. Se evalúo el uso de niveles de seguridad del inventario en los FRE. Un **inventario de seguridad** es una cantidad (nivel) almacenada adicional de producto que protege frente a incertidumbres en la demanda ($D$), tiempo de espera ($L$) o cambios en el suministro [@Krajewski2016]. Los inventarios de seguridad se construyen basados en medidas de nivel de servicio que se encuentran relacionadas ya sea con costos de desabastecimiento o la probabilidad de desabastecerse [@Silver2017]. 
 
 ```{r UsoNivelesSeguridad, echo=FALSE, warning=FALSE, fig.cap='Uso de niveles de seguridad del inventarios.', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="78%",fig.align='center'}
 readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) + 
@@ -145,6 +148,10 @@ La etapa de solicitud en la plataforma tecnológica toma en promedio 6 días (me
 
 La etapa de despacho tomó en promedio 10.4 días (mediana de 7 días). Los departamentos de Valle del Cauca (60 días), Quindío (52 días), y San Andrés (30 días) presentaron la mayor demora en esta etapa, estos tiempos reportados no parecen tener una relación cercana con la distancia física entre la oficina del FRE y el centro de despacho desde el FNE. 
 
+Los procesos relacionados a medicamentos esenciales como los son muchos MME no deben tener barreras que aumenten el riesgo de desabastecimientos [@OMS2021], estas barreras pueden estar relacionadas con los tiempos de demora. De acuerdo con lo evaluado se tiene que las etapas precontractuales y contractuales son las que más toman tiempo.
+
+Los FRE deben propender por sensibilizar más a sus gobernaciones para que los procesos se realicen en tiempos más prudentes. Es deber de todos los actores relacionados a los procesos de medicamentos garantizar el acceso a los mismos por parte de la población, acorde a las políticas implementadas por el gobierno nacional [@PDSPMinSalud2019].
+
 ### Plataforma de compra estatal
 
 La plataforma Colombia Compra es el ente rector en materia de contratación pública y desde 2013 se puso en marcha la tienda virtual del Estado colombiano como herramienta en línea del sistema de compra pública. Esta plataforma permite hacer compras a través de acuerdos marco, instrumentos de agregación de demanda y catálogo de bienes de las grandes superficies. En concordancia con lo anterior, Colombia Compra Eficiente dispuso un documento en su plataforma denominado *"Estudios y Documentos Previos de la contratación con el Fondo Nacional de Estupefacientes para la adquisición de Medicamentos de Control Especial de Monopolio del Estado"* donde afirma que se promueve un Instrumento de Agregación de Demanda de Precios para la adquisición de MME mediante contratación directa con el FNE, con el objetivo de aumentar la eficiencia en los procesos de cada FRE y aprovechar las economías a escala. Pese a su implementación y sus objetivos algunos FRE no perciben su uso como una ventaja.
@@ -157,30 +164,14 @@ Si bien el uso del Instrumento de Agregación de Demanda de precios dispuesto po
 
 De otra parte, es necesario mencionar que, si bien casi todos los departamentos hacen uso de la plataforma, este proceso no siempre está a cargo del FRE, como en el caso del departamento del Atlántico, donde el proceso se lleva a través de Secretaría General y por ello su percepción sobre la misma es *"ni conforme ni inconforme"*. Es así como en la Figura \@ref(fig:ColombiaCompra) se identifica como la segunda respuesta más frecuente *"Ni conforme ni inconforme"* con el uso de esta plataforma. De otra parte, el FRE Putumayo comenta que el uso de la plataforma depende en gran medida de otras áreas de la gobernación, evidenciando varias dificultades en su uso y aumentando el tiempo en los procesos de contratación.
 
-```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente.', fig.width=8, fig.asp=0.4, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='t'}
+```{r ColombiaCompra, echo=FALSE, warning=FALSE, fig.cap='Opinión sobre la plataforma Colombia Compra Eficiente.', fig.width=8, fig.asp=0.48, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "085_ConformidadColombiaCompra.rds")) + 
   labs(title = NULL)
 ```
 
-En algunos casos, los FRE manifestaron la necesidad de recibir capacitación sobre el uso de esta herramienta, pues el desconocimiento sobre la misma por parte del personal puede ocasionar demoras en el proceso de compra de MME, como ocurre en el caso del FRE Sucre que si bien tienen un método eficiente para realizar la estimación de compra, se ve retrasado en la etapa que implica el uso de esta plataforma.
+En algunos casos, los FRE manifestaron la necesidad de recibir capacitación sobre el uso de esta herramienta, pues el desconocimiento sobre la misma por parte del personal puede ocasionar demoras en el proceso de compra de MME. Por ejemplo, como ocurre en el caso del FRE Sucre que si bien tienen un método eficiente para realizar la estimación de compra, se ve retrasado en la etapa que implica el uso de esta plataforma.
 
-
-### Traslados interdepartamentales
-
-La cadena de suministro de MME está planteada de manera que los FRE realizan compras de MME al FNE, y los establecimientos en los departamentos realizan compras al FRE, en ambos casos sin intermediaciones [@MSPS1478-2006]. Sin embargo, existe un mecanismo conocido como **traslado interdepartamental** mediante el cual un departamento puede realizar la compra de MME a otro departamento. En logística, se le conoce a este tipo de transacciones como **transbordos laterales** [@Silver2017]. 
-
-Los traslado interdepartamental/transbordos laterales en su modalidad reactiva se utilizan cuando existe un riesgo de desabastecimiento inminente y se hace un pedido de medicamentos al FRE de un departamento cercano [@Paterson2011], esto puede reducir los costos sí se utiliza en emergencias, o aumentarlos sí se utiliza de forma excesiva [@Silver2017]. Es importante mencionar que los traslados interdepartamentales sólo se pueden llevar a cabo previa autorización del FNE. 
-
-En el traslado interdepartamental de medicamentos se observa que los territorios más descentralizados son los que presentan mayor demora para recibir los traslados de MME, siendo los casos más demorados San Andrés y Amazonas. Como se observa en la Figura \@ref(fig:TiemposTranslados) las regiones más afectadas son Amazonía, Orinoquía, Pacífico a excepción del Valle del Cauca y algunos departamentos del Caribe. Sin embargo, el departamento que más demora presenta  es San Andrés, pues al estar alejado de la zona continental del país, tiene un tiempo de traslado de medicamentos más largo.  
-
-```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.width=11, fig.height=4.5, fig.topcaption=TRUE, out.width="100%", fig.cap="Caracterización en demoras de traslados interdepartamentales. (A) Gráfico de tiempos de traslados interdepartamentales reportados para los departamentos. (B) Mapa de tiempos de traslados interdepartamentales.",fig.align='center',fig.pos='t'}
-
-g1 <- readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + labs(title = NULL)
-
-g2 <- readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + labs(title = NULL)
-
-wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A') + plot_layout(widths = c(0.5, 0.5))
-```
+Si bien la plataforma Colombia Compra Eficiente buscan hacer más eficiente el proceso de adquisición de bienes y servicios para entidades estatales se observa que en algunos territorios no hay adherencia al uso de la plataforma por desconocimiento de esta. Se recomienda que los FRE fortalezcan el conocimiento de uso de la plataforma.
 
 ### Recepción de medicamentos
 
@@ -194,7 +185,7 @@ A nivel nacional se cuenta con el *"Manual de condiciones esenciales y procedimi
 
 Después de la inspección, se realiza un muestreo para determinar si los productos recibidos cumplen con especificaciones de calidad. Existen planes de muestreo de aceptación por atributos en el que se suele utilizar la Tabla Militar Estándar MIL-STD-105E [@AmericanNationalStandardsInstitute2013;@GutierrezPulido2008], con el fin de seleccionar el tamaño de una muestra aleatoria de acuerdo al tamaño total del pedido, nivel de inspección requerido y otros factores. En casos con un tamaño total de lote pequeño y altos niveles de inspección se suele realiza una inspección completa de los productos recibidos.
 
-Al terminar la inspección se pasa a documentar la recepción y se procede a realizar un “acta de recepción” donde se detalla la información del procedimiento como: 
+Al terminar la inspección se pasa a documentar la recepción y se procede a realizar un "acta de recepción" donde se detalla la información del procedimiento como: 
 
 -	fecha y hora de entrega
 
@@ -232,3 +223,20 @@ Como otro atributo que se puede resaltar en la Figura \@ref(fig:TiemposRecepcion
 <!-- # readRDS(file.path(fig_path, "086_RecepcionMedicamento.rds")) + -->
 <!-- # labs(title = NULL) -->
 <!-- # ``` -->
+
+### Traslados interdepartamentales
+
+La cadena de suministro de MME está planteada de manera que los FRE realizan compras de MME al FNE, y los establecimientos en los departamentos realizan compras al FRE, en ambos casos sin intermediaciones [@MSPS1478-2006]. Sin embargo, existe un mecanismo conocido como **traslado interdepartamental** mediante el cual un departamento puede realizar la compra de MME a otro departamento. En logística, se le conoce a este tipo de transacciones como **transbordos laterales** [@Silver2017]. 
+
+Los traslado interdepartamental/transbordos laterales en su modalidad reactiva se utilizan cuando existe un riesgo de desabastecimiento inminente y se hace un pedido de medicamentos al FRE de un departamento cercano [@Paterson2011], esto puede reducir los costos sí se utiliza en emergencias, o aumentarlos sí se utiliza de forma excesiva [@Silver2017]. Es importante mencionar que los traslados interdepartamentales sólo se pueden llevar a cabo previa autorización del FNE. 
+
+En el traslado interdepartamental de medicamentos se observa que los territorios más descentralizados son los que presentan mayor demora para recibir los traslados de MME, siendo los casos más demorados San Andrés y Amazonas. Como se observa en la Figura \@ref(fig:TiemposTranslados) las regiones más afectadas son Amazonía, Orinoquía, Pacífico a excepción del Valle del Cauca y algunos departamentos del Caribe. Sin embargo, el departamento que más demora presenta  es San Andrés, pues al estar alejado de la zona continental del país, tiene un tiempo de traslado de medicamentos más largo.  
+
+```{r TiemposTranslados, echo=FALSE, warning=FALSE, fig.width=11, fig.height=4.5, fig.topcaption=TRUE, out.width="100%", fig.cap="Caracterización en demoras de traslados interdepartamentales. (A) Gráfico de tiempos de traslados interdepartamentales reportados para los departamentos. (B) Mapa de tiempos de traslados interdepartamentales.",fig.align='center',fig.pos='t'}
+
+g1 <- readRDS(file.path(fig_path, "083_TiemposTranslados.rds")) + labs(title = NULL)
+
+g2 <- readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + labs(title = NULL)
+
+wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A') + plot_layout(widths = c(0.5, 0.5))
+```

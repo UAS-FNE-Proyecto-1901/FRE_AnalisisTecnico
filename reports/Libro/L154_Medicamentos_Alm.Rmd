@@ -1,4 +1,4 @@
-## Almacenamiento y Transporte
+## Almacenamiento
 
 ### Medidas de seguridad para el almacenamiento
 
@@ -125,7 +125,7 @@ El transporte de medicamentos por parte del FNE, es un proceso importante dentro
 
 En la Figura \@ref(fig:TransporteProductos) se tiene una descripción de la opinión del servicio de distribución por parte del FNE. Se tiene que las opiniones se encuentran divididas con algunas respuestas positivas (66.6\%) y otras negativas (33.3\%).
 
-```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME.', fig.width=6, fig.asp=0.8, fig.topcaption=TRUE, out.width="80%",fig.align='center'}
+```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME.', fig.width=8, fig.asp=0.48, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
 readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 ```
 

@@ -2,6 +2,20 @@
 
 ### Estructura de los FRE
 
+A partir de los datos recolectados a nivel nacional y según el análisis relacionado a la estructura de los FRE, se presentan algunos lineamientos técnicos para tener en cuenta y ser adoptados dentro de los entes territoriales. El recurso humano calificado es imprescindible para el buen funcionamiento del FRE, así como su continuidad a lo largo del año. Además, la infraestructura física es indispensable para un adecuado progreso en las actividades internas de los FRE.
+
+A continuación, se muestran algunas recomendaciones referente a estructura de los FRE:
+
+- Asegurar un manejo correcto de los MME y los recetarios oficiales en cada departamento, con un equipo de trabajo que debería estar constituido por personal idóneo en los temas administrativos, técnicos, operativos y jurídicos, referentes a los MME. Tanto el profesional encargado del FRE, como el personal de apoyo deberá corresponder a personal calificado. Además, en el equipo de trabajo del FRE se debe contar permanentemente con un (1) Químico Farmacéutico o en su defecto Tecnólogos en regencia en farmacia, con el fin de cumplir con las funciones de farmacovigilancia e IVC del FRE, cuyas competencias sólo corresponden a los profesionales mencionados.
+
+- Mantener vinculado continuamente al encargado del FRE, con el fin de conservar personal por todo el año. Lo ideal es que el encargado del FRE sea nombrado o en su defecto, sostener el contrato todo el año, garantizando la continuidad de los procesos internos que desarrolla el FRE.
+
+- Disponer continuamente de personal de apoyo en el FRE, con el fin de evitar el abandono de los procesos misionales que tiene el ente territorial y mantener una capacidad mínima de recurso humano en el FRE (mínimo vital de funcionamiento). Esto teniendo en cuenta las guías de contratación de Colombia Compra Eficiente, para una eventual re-evaluación de los manuales de contratación en cada territorio.
+
+- Disponer de al menos un (1) escritorio o los suficientes para que todo el personal vinculado al FRE trabaje en condiciones óptimas. El escritorio es un elemento indispensable para que los profesionales del FRE adelanten sus actividades de una manera cómoda y conveniente para el cumplimiento de las responsabilidades que tiene el FRE.
+
+- Conocer integralmente todas las fuentes de ingreso del FRE, tal como lo expresa la norma. Si esta cuenta bancaria no es administrada por el personal del FRE, el encargado debe tener conocimiento frecuente sobre los estados de cuenta y esta información debe ser facilitada por la Gobernación o la Dirección Departamental de Salud, en su defecto.
+
 ### Recetarios Oficiales
 
 Tras la recolección de información en el territorio nacional, se encontró que hay fortalezas y debilidades en los departamentos respecto al manejo de los recetarios. Por ende, se hace necesario realizar unos lineamientos técnicos para tener en cuenta y ser adoptados dentro de los entes territoriales, de los cuales se resaltan:
@@ -18,50 +32,82 @@ Tras la recolección de información en el territorio nacional, se encontró que
 
 ### Medicamentos
 
-- Se recomienda realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa. 
+Los procesos relacionados con medicamentos monopolio del Estado son una parte fundamental de las actividades de los FRE. A partir del diagnóstico de varios aspectos operativos de estos procesos se realizan las siguientes recomendaciones.
 
-- Se deben establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
+- Usar herramientas informáticas que permitan tener un mejor manejo de trazabilidad del inventario.
 
+- Revisar las cantidades de pedido de los productos teniendo en cuenta consideraciones de demanda, costos, y nivel de servicio, y en la medida de lo posible coordinar el manejo de inventario con el FNE. 
+
+- Actualizar los equipos de cómputo en el FRE que deben estar en cantidad suficiente de forma que permitan realizar un control del inventario. 
+
+- Mejorar la coordinación entre FRE y sus gobernaciones correspondientes para disminuir los tiempos relacionados al proceso de adquisición (p.ej. contratación de bienes y el uso de la plataforma Colombia Compra Eficiente). 
+
+- Implementar un adecuado proceso de recepción técnica con inspección a niveles de 100\% o utilización de planes de muestreo como el expuesto por la tabla militar estándar. 
+
+- Seguir con buenas prácticas de almacenamiento de los medicamentos evitando utilizar los lugares destinados para esto con otros fines. 
+
+- Comunicar de manera eficiente y oportuna sobre problemas relacionados con la distribución de MME por parte del FNE. 
+
+- Realizar ajustes en los esquemas de precios por parte del FNE para disminuir la utilización del canal de compra directa. 
+
+- Establecer mecanismos para la armonización de los precios de ventas de medicamentos de acuerdo a factores como distancia, costos de transporte o mantenimientos ya que los resultados no indican aumentos en los precios debido a este tipo de variables.
 
 ### Informes
 
+El diligenciamiento de los informes por parte de las instituciones inscritas en cada territorio y los FRE, es un elemento importante para conocer la distribución y consumo de MME en cada departamento. Por lo tanto, las recomendaciones enlistadas a continuación están enfocadas a optimizar este proceso interno en cada FRE, cuyo resultado es el insumo fundamental para el análisis de la proyección de consumo de MME a nivel nacional. 
+
+- Exigir a las instituciones inscritas un formato único estandarizado digital para enviar los informes mensuales, referentes al Anexo 13 de la Resolución 1478 de 2006. Preferiblemente se debe enviar el archivo en formato PDF y Excel para la WW de los datos, por parte del personal del FRE. Además, con este requisito se asegura la integridad de la información.
+
+- Designar la consolidación de los informes y el diligenciamiento de anexos como una responsabilidad exclusiva del FRE. Si esta actividad es asignada al personal nombrado del FRE, deben incluir la responsabilidad en su nombramiento. Por el contrario, si esta actividad es responsabilidad de algún contratista, se debe garantizar la suficiente vigencia del contrato y que la actividad y diligenciamiento de anexos, se contemple desde el objeto del mismo. Lo anterior, asegura un seguimiento y control adecuado en la consolidación de los informes.
+
+- Asegurar que el envío de informes mensuales, se haga en el tiempo estipulado según la Resolución 1479 de 2006. Esta actividad debe considerándose como un indicador de buena gestión al interior del ente territorial.
+
+### Ruta tecnológica y control de la información
+
+La infraestructura tecnológica es otro aspecto primordial para el desarrollo de las actividades internas de los FRE, cumpliendo con sus funciones misionales como ente territorial. Los recursos tecnológicos permiten que el personal del FRE se apoye en buenos sistemas de información, los cuales brindan mayor precisión y exactitud en las actividades internas del ente territorial. A continuación, se muestran los lineamientos y recomendaciones referente la infraestructura tecnológica de los FRE:
+
+- Adecuar un (1) computador en óptimas condiciones, para adelantar las principales tareas y cumplir las funciones estipuladas en la Resolución 1479 del 2006.
+
+- Garantizar la exclusividad que deben tener los equipos de cómputo del FRE. Este recurso no debe ser compartido con otras dependencias de la Dirección Departamental de Salud. Lo anterior, asegura la disponibilidad completa del equipo de cómputo para el personal del FRE, contemplando igualmente los requisitos mínimos referentes a la seguridad de la información.
+
+- Armonizar las bases de datos de los FRE para que, en la medida de la posibilidad, toda la información este en formato digital y exista un respaldo de la misma por medio de Backups en el FRE. Lo anterior, con el fin de evitar pérdida de la información o enmiendas en documentos físicos.
 
 # Glosario {-}
 
-- **Alerta Sanitaria**: Toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces.
+- **Alerta Sanitaria**: toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces [@INVIMA2021-ALERTAS].
 
-- **Compra Directa**: compra de medicamentos monopolio del Estado por parte de entidades administradoras de planes de beneficios, prestadores de servicios de salud o establecimientos farmacéuticos, cuando el respectivo Fondo Rotatorio de Estupefacientes no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.
+- **Compra Directa**: compra de medicamentos monopolio del Estado por parte de entidades administradoras de planes de beneficios, prestadores de servicios de salud o establecimientos farmacéuticos, cuando el respectivo FRE no cuenta con inventario suficiente de los MME que se necesitan.
 
-- **Desabastecimiento**: Se entiende como la nula disponibilidad de un medicamento en todo el territorio nacional. 
+- **Desabastecimiento**: situación en la cual se presenta una insuficiente oferta para satisfacer la demanda de un producto farmacéutico que ya ha sido aprobado por el INVIMA y comercializado en el país [@INVIMA2018-Desabast].
 
-- **Disponibilidad**: Condición en la cual se cuentan con existencias del medicamento en el territorio nacional.
+- **Disponibilidad**: condición en la cual se cuentan con existencias del medicamento en el territorio nacional.
 
-- **Farmacovigilancia**: Ciencia y actividades relacionadas con la detección, evaluación, comprensión y prevención de eventos adversos o de cualquier otro problema relacionado con medicamentos.
+- **Farmacovigilancia**: ciencia y actividades relacionadas con la detección, evaluación, comprensión y prevención de eventos adversos o de cualquier otro problema relacionado con medicamentos [@INVIMA2006-FV].
 
-- **Fondo Nacional de Estupefacientes**: Creado por la Ley 36 de 1939 con asignaciones dadas por el Decreto-Ley 257 de 1969, según el Decreto 205 de 2003 funciona como una Unidad Administrativa Especial adjunta de la Dirección de Medicamentos y Tecnologías en Salud. El FNE (Fondo Nacional de Estupefacientes) tiene como objetivo la vigilancia y control sobre la importación,  la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional.
+- **Fondo Nacional de Estupefacientes**: es una Unidad Administrativa Especial creada por la Ley 36 de 1939 con asignaciones dadas por el Decreto-Ley 257 de 1969, según el Decreto 205 de 2003 funciona como una UAE adjunta de la Dirección de Medicamentos y Tecnologías en Salud. El FNE (Fondo Nacional de Estupefacientes) tiene como objetivo la vigilancia y control sobre la importación,  la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional.
 
-- **Fondo Rotatorio de Estupefacientes (FRE)**: Es la oficina encargada dentro de la Secretaría, Instituto o Dirección de Salud a nivel departamental, que ejerce la vigilancia, seguimiento y control a las entidades públicas, privadas y personas naturales que procesen, manipulen, sinteticen, fabriquen, distribuyan, vendan, consuman, dispensen sustancias sometidas a fiscalización y medicamentos que las contengan; así como garantizar la disponibilidad de medicamentos monopolio del Estado a través de la dispensación y distribución en su jurisdicción y las demás funciones que le sean asignadas por el Ministerio de la Protección Social, o la institución competente.
+- **Fondo Rotatorio de Estupefacientes (FRE)**: es la oficina encargada dentro de la Secretaría, Instituto o Dirección de Salud a nivel departamental, que ejerce la vigilancia, seguimiento y control a las entidades públicas, privadas y personas naturales que procesen, manipulen, sinteticen, fabriquen, distribuyan, vendan, consuman, dispensen sustancias sometidas a fiscalización y medicamentos que las contengan; así como garantizar la disponibilidad de medicamentos monopolio del Estado a través de la dispensación y distribución en su jurisdicción y las demás funciones que le sean asignadas por el Ministerio de la Protección Social, o la institución competente [@MSPS1479-2006].
 
-- **Materia Prima de Control Especial o Sustancia Sometida a Fiscalización**: Es toda sustancia cualquiera que sea su origen, que produce efectos mediatos e inmediatos de dependencia psíquica o física en el ser humano; aquella que por su posibilidad de abuso, pueda tener algún grado de peligrosidad en su uso, o aquella que haya sido catalogada como tal, en los convenios internacionales, por el Ministerio de la Protección Social, o la Comisión Revisora del Invima. Dentro de estas se incluyen los estándares de referencia, patrones y reactivos.
+- **Materia Prima de Control Especial o Sustancia Sometida a Fiscalización**: es toda sustancia cualquiera que sea su origen, que produce efectos mediatos e inmediatos de dependencia psíquica o física en el ser humano; aquella que por su posibilidad de abuso, pueda tener algún grado de peligrosidad en su uso, o aquella que haya sido catalogada como tal, en los convenios internacionales, por el Ministerio de la Protección Social, o la Comisión Revisora del Invima. Dentro de estas se incluyen los estándares de referencia, patrones y reactivos [@MSPS1478-2006].
 
-- **Medicamento de Control Especial (MCE)**: Producto farmacéutico obtenido a partir de sustancias que tienen alto potencial de dependencia y abuso, que actúan sobre el sistema nervioso central produciendo efectos neuro-psicofisiológicos y aquellas consideradas por el gobierno nacional.
+- **Medicamento de Control Especial (MCE)**: producto farmacéutico obtenido a partir de sustancias que tienen alto potencial de dependencia y abuso, que actúan sobre el sistema nervioso central produciendo efectos neuro-psicofisiológicos y aquellas consideradas por el gobierno nacional [@MSPS1478-2006].
 
-- **Medicamento Monopolio del Estado**: Producto farmacéutico de adquisición, distribución y venta exclusiva del Fondo Nacional de Estupefacientes y los Fondos Rotatorios de Estupefacientes o los establecimientos facultados por el FNE para estas actividades.
+- **Medicamento Monopolio del Estado (MME)**: producto farmacéutico de adquisición, distribución y venta exclusiva del Fondo Nacional de Estupefacientes y los Fondos Rotatorios de Estupefacientes o los establecimientos facultados por el FNE para estas actividades.
 
-- **Medicamento Sometido a Fiscalización de Uso Humano o Veterinario**: Es el preparado farmacéutico obtenido a partir de uno o más principios activos de control especial, catalogados como tal en las convenciones de estupefacientes (1961), precursores (1988) y psicotrópicos (1971), o por el Gobierno Nacional, con o sin sustancias auxiliares presentado bajo forma farmacéutica definida, que se utiliza para la prevención, diagnóstico, tratamiento, curación o rehabilitación de las enfermedades de los seres vivos.
+- **Medicamento Sometido a Fiscalización de Uso Humano o Veterinario**: es el preparado farmacéutico obtenido a partir de uno o más principios activos de control especial, catalogados como tal en las convenciones de estupefacientes (1961), precursores (1988) y psicotrópicos (1971), o por el Gobierno Nacional, con o sin sustancias auxiliares presentado bajo forma farmacéutica definida, que se utiliza para la prevención, diagnóstico, tratamiento, curación o rehabilitación de las enfermedades de los seres vivos [@MSPS1478-2006].
 
-- **Monopolio del Estado**: Derecho poseído de exclusividad por el Estado. 
+- **Monopolio del Estado**: derecho poseído de exclusividad por el Estado [@MSPS1478-2006]. 
 
-- **Principio Activo**: Compuesto o mezcla de compuestos que tienen acción farmacológica.  
+- **Principio Activo**: compuesto o mezcla de compuestos que tienen acción farmacológica [@MSPS1478-2006].  
 
-- **Recetario Oficial (RO)**: Documento oficial autorizado por la entidad competente, de carácter personal e intransferible que utilizan los prescriptores de salud para la formulación de los medicamentos de control especial y de Monopolio del Estado.
+- **Recetario Oficial (RO)**: documento oficial autorizado por la entidad competente, de carácter personal e intransferible que utilizan los prescriptores de salud para la formulación de los medicamentos de control especial y de Monopolio del Estado [@MSPS1478-2006].
 
-- **Recetario Oficial Electrónico (ROE)**: Documento electrónico que se pretende parametrizar en todos los FRE, con el fin de fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional.
+- **Recetario Oficial Electrónico (ROE)**: documento electrónico que se pretende parametrizar en todos los FRE, con el fin de fortalecer el seguimiento a las prescripciones de MME, encaminados al uso racional de estos medicamentos en todo el territorio nacional [@CuervoBustamante2021].
 
-- **Servicio Farmacéutico**: Es el servicio de atención en salud responsable de las actividades, procedimientos e intervenciones de carácter técnico, científico y administrativo, relacionado con los medicamentos y los dispositivos médicos utilizados en la promoción de la salud y la prevención, diagnóstico, tratamiento y rehabilitación de la enfermedad, con el fin de contribuir en forma armónica e integral al mejoramiento de la calidad de vida individual y colectiva.
+- **Servicio Farmacéutico**: es el servicio de atención en salud responsable de las actividades, procedimientos e intervenciones de carácter técnico, científico y administrativo, relacionado con los medicamentos y los dispositivos médicos utilizados en la promoción de la salud y la prevención, diagnóstico, tratamiento y rehabilitación de la enfermedad, con el fin de contribuir en forma armónica e integral al mejoramiento de la calidad de vida individual y colectiva [@MSPS1478-2006].
 
-- **Sustancia Monopolio del Estado**: Sustancia química cuya adquisición, manejo y destrucción es exclusiva del Fondo Nacional de Estupefacientes y es destinada para la fabricación de medicamentos monopolio del Estado.
+- **Sustancia Monopolio del Estado**: sustancia química cuya adquisición, manejo y destrucción es exclusiva del Fondo Nacional de Estupefacientes y es destinada para la fabricación de medicamentos monopolio del Estado.
 
-- **Traslado Interdepartamental**: Es la actividad en la cual se autoriza por parte del FNE, de manera excepcional, el traslado interdepartamental de medicamentos monopolio del Estado por parte de diferentes filiales de la misma entidad, si el Fondo Rotatorio no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.
+- **Traslado Interdepartamental**: es la actividad en la cual se autoriza por parte del FNE, de manera excepcional, el traslado interdepartamental de medicamentos monopolio del Estado por parte de diferentes filiales de la misma entidad, si el Fondo Rotatorio no cuenta con inventario suficiente de los medicamentos monopolio del Estado que se necesitan.
 
-- **Préstamo entre los FRE**: Es la modalidad en la cual se autoriza a los FRE a prestarse entre ellos medicamentos monopolio del Estado sin la necesidad de la autorización del FNE, con el fin de suplir los riesgos de desabastecimiento que hubiere a lugar y dar rotación a medicamentos que estén próximos a vencerse.
+- **Préstamo entre los FRE**: es la modalidad en la cual se autoriza a los FRE a prestarse entre ellos medicamentos monopolio del Estado sin la necesidad de la autorización del FNE, con el fin de suplir los riesgos de desabastecimiento que hubiere a lugar y dar rotación a medicamentos que estén próximos a vencerse.
