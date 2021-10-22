@@ -38,7 +38,7 @@ Los FRE de las Secretarías, Instituciones o Direcciones Departamentales de Salu
 
 En el marco de las Jornadas de inmersión territoriales con los FRE del país se pudo determinar la cantidad de recetarios oficiales con los que cuentan entre los meses de junio a septiembre. Así pues, como se observa en la Figura \@ref(fig:existenciasRecetarios)A, se observa la tendencia de los departamentos más distantes de la capital de la nación, a presentar una menor cantidad de recetarios en existencia. 
 
-```{r existenciasRecetarios, echo=FALSE, fig.cap='Existencia de recetarios en el FRE. (A) N.° de existencias de recetarios en el FRE y (B) Cobertura de existencias de recetarios en el FRE.', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
+```{r existenciasRecetarios, echo=FALSE, fig.cap='Existencias de recetarios en el FRE. (A) N.° de existencias de recetarios en el FRE y (B) Cobertura de existencias de recetarios en el FRE.', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '027_existenciaRecetarios_1.rds'))
 g1[[1]] <- g1[[1]] + labs(title = 'A')
 

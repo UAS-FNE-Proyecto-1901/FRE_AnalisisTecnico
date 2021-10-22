@@ -147,7 +147,7 @@ gRecetarios3 <- df_total %>%
   creacionCloroPletCol(geometry, !!sym(col1))
 
 gRecetarios3[[1]] <- gRecetarios3[[1]] + 
-    scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (días)') + 
+    scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (semanas)') + 
   theme(legend.position = 'bottom',
         axis.text = element_blank()) + 
   labs(title = 'Duración de existencias de recetarios \n(semanas)') +
@@ -156,9 +156,9 @@ gRecetarios3[[1]] <- gRecetarios3[[1]] +
 
 
 gRecetarios3[[2]] <- gRecetarios3[[2]] + 
-  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (días)') 
+  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (semanas)') 
 gRecetarios3[[3]] <- gRecetarios3[[3]] + 
-  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (días)') 
+  scale_fill_continuous(type = 'viridis', name = 'Duración recetarios (semanas)') 
 
 gRecetarios3
 guardarGGplot(gRecetarios3, '029_existenciaRecetarios_3', 7, 5)

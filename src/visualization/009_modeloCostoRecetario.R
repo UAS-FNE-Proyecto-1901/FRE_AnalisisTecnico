@@ -68,16 +68,21 @@ df[, 'Nmedidas'] <- pull(df, col1) %>% str_detect('Otro') %>%
 col1 <- '3.06 Costo de adquisición del recetario (COP)'
 col2 <- '3.05 N.º de prescripciones por recetario'
 col3 <- '3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?'
+col4 <- 'Act_Impr'
+col5 <- 'Act_Impr_2'
 
 X_matriz <- df %>% 
   rename(
     Costo = .data[[col1]],
     NoPrescripciones = .data[[col2]],
-    Modalidades = .data[[col3]]
+    Modalidades = .data[[col3]],
+    Act_Impr_1 = .data[[col4]],
+    Act_Impr_2 = .data[[col5]]
   ) %>% 
-  select(all_of(c('Costo', 'NoPrescripciones', 'Nmedidas', 'Modalidades'))) 
+  select(all_of(c('Costo', 'NoPrescripciones', 'Nmedidas', 'Modalidades', 
+                  'Act_Impr_1', 'Act_Impr_2'))) 
 
-X_matriz
+X_matriz['Act_Impr'] <- X_matriz['Act_Impr_1'] + X_matriz['Act_Impr_2']
 
 X_matriz_1 <- recipe(Costo ~ NoPrescripciones + Modalidades + Nmedidas, data = X_matriz) %>% 
   step_dummy(Modalidades) %>% 
@@ -115,7 +120,9 @@ funcionBoxplots <- function(data, variable) {
   
   as_tibble(data) %>% 
     ggplot(aes(x = {{variable}}, y = yhat, group = {{variable}})) + 
-    geom_boxplot() + 
+    geom_boxplot(outlier.size = 0, outlier.alpha = 0) + 
+    geom_dotplot(binaxis='y', stackdir='center',
+                 shape = 16, color = 'blue1', fill = 'blue1') +
     scale_x_continuous(breaks = c(0, 1),
                      labels = c('No', 'Sí')) +
     scale_y_continuous(labels = scales::dollar_format()) + 
@@ -126,6 +133,8 @@ funcionBoxplots <- function(data, variable) {
 ggdepend1 <- pdp::partial(lm1, pred.var = 'NoPrescripciones', 
                           chull = TRUE, ice = TRUE) %>% 
   autoplot() + 
+  geom_point(data = X_matriz, aes(x=NoPrescripciones, y=Costo), 
+             shape = 16, color = 'blue1') +
   scale_y_continuous(labels = scales::dollar_format()) + 
   xlab('N.° de prescripciones') +
   ylab(bquote(hat(C)[recetario]))
@@ -133,9 +142,18 @@ ggdepend1 <- pdp::partial(lm1, pred.var = 'NoPrescripciones',
 ggdepend2 <- pdp::partial(lm1, pred.var = 'Nmedidas', 
                           chull = TRUE, ice = TRUE) %>% 
   autoplot() + 
+  geom_point(data = X_matriz, aes(x=Nmedidas, y=Costo), 
+             shape = 16, color = 'blue1') +
   scale_y_continuous(labels = scales::dollar_format()) + 
   xlab('N.° de medidas de seguridad') +
   ylab(bquote(hat(C)[recetario]))
+
+# ggdepend6 <- pdp::partial(lm1, pred.var = 'Act_Impr', 
+#              chull = TRUE, ice = TRUE) %>% 
+#   autoplot() + 
+#   scale_y_continuous(labels = scales::dollar_format()) + 
+#   xlab('N.° de oferentes en el departamento') +
+#   ylab(bquote(hat(C)[recetario]))
 
 
 ggdepend3 <- funcionBoxplots(parContrataDir[[1]], Modalidades_Licitación.pública) + 
@@ -152,3 +170,10 @@ ggdependT + plot_annotation(title = 'Gráficos de dependencia parcial')
 
 guardarGGplot(ggdependT, 
               '046c_GraficasDependenParcial', 10, 6)
+
+
+
+X_matriz %>% 
+  ggplot(aes(x = NoPrescripciones, y = Costo))+ 
+  geom_point() + 
+  stat_smooth(method = 'lm')

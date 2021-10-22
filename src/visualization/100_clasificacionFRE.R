@@ -55,13 +55,16 @@ hov_data <- data %>%
     PrecSalud2020 = round(Presupuesto_Salud_2020/1e9, 2),
     Hover = glue::glue(
       "<b>{Departamento...2}</b> <br>",
+      "<i>Complejidad</i> <br>",
       "Presupuesto (miles de millones): {Prec2020} <br>",
       "Presupuesto Salud (miles de millones): {PrecSalud2020} <br>",
-      "No. productos CD: {N_productosCD_2021} <br>",
-      "Cumplimiento A1: {round(`Cumplimiento_A1_2020-2021-06`,2)} <br>",
-      "Cumplimiento A2: {round(`Cumplimiento_A2_2020-2021-06`,2)} <br>",
+      "No. de inscritos: {No_Inscritos} <br>",
       "Prop. uso portafolio: {round(PropPortafolio,2)} <br>",
-      "No. de inscritos: {No_Inscritos}"
+      "<i>Eficiencia</i> <br>",
+      "Prop. ventas por FRE vs CD: {round(Prop_productosCD_2021,2)} <br>",
+      "Prop. cumplimiento A1: {round(`Cumplimiento_A1_2020-2021-06`,2)} <br>",
+      "Prop. cumplimiento A2: {round(`Cumplimiento_A2_2020-2021-06`,2)} <br>",
+      "Raz. tiempo de adq rec vs no. rec: {round(T_adq_Recet, 2)}"
     )
   ) %>% 
   select(Departamentos = Departamento...2, Hover)
@@ -202,9 +205,9 @@ guardarGGplot(gg1, '012_elbowlWard', 6, 4, fig_path)
 gg2 <- clean_data %>% 
   {fviz_cluster(list(data = ., cluster = funClusters_2(., 5)$tree))} +
   theme_bw() + labs(title = NULL) +
-  scale_color_discrete(name = 'Clúster') + 
-  scale_shape_discrete(name = 'Clúster') + 
-  scale_fill_discrete(name = 'Clúster') 
+  scale_color_brewer(palette = 'Dark2', name = 'Clúster') + 
+  scale_fill_brewer(palette = 'Dark2', name = 'Clúster') +  
+  scale_shape_discrete(name = 'Clúster') 
 
 #+ ggHclust3, fig.width=8, fig.asp=0.6, out.width="90%", fig.align='center',fig.pos="t",fig.cap="Clústers Jerárquicos visualizados en primeros dos componentes"
 gg2
@@ -220,8 +223,6 @@ funClusters_3 <- function(axes) {
     scale_shape_discrete(name = 'Clúster') + 
     scale_fill_discrete(name = 'Clúster') 
 }
-
-
 
 g2 <- funClusters_3(c(1,2))
 g3 <- funClusters_3(c(1,3))
@@ -287,6 +288,18 @@ trans_data1 <- data %>%
             by = c('Departamento...2' = 'Departamentos')) %>% 
   rename(Grupo_hclus = value, Departamentos = Departamento...2) %>% 
   mutate(Grupo_hclus = as.integer(Grupo_hclus))
+
+trans_data1 %>% 
+  group_by(Grupo_hclus) %>% 
+  summarise(across(!matches('Departamento'), mean))
+
+trans_data1 %>%
+  mutate(across(!matches('Departamento'), mean))
+
+# group_by(Grupo_hclus) %>%
+#   summarise(across(!matches('Departamento'), function(x) {
+#     sum(ifelse(x > mean(x), 1, 0)) / n()
+#   }))
 
 fig1 <- trans_data1 %>% 
   plot_ly(x = ~No_Inscritos, y = ~`Cumplimiento_A2_2020-2021-06`, 

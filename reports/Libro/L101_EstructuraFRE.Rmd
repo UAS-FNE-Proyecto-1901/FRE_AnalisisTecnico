@@ -246,7 +246,7 @@ g1
 Por el contrario, las variables más dispersas en el plano presentado en la Figura \@ref(fig:PCA1), no guardan relación entre sí, por lo tanto, estas variables tienen información importante para realizar la clasificación de los FRE. En este orden de ideas, la variable referente a la consolidación del anexo 2 en los FRE no mantiene una relación directa con el número de compras directas que haya hecho el departamento o con la variable del portafolio que ofrecen los FRE. 
 Se realizó un análisis de agrupación (*cluster*) jerárquico mediante el algoritmo de Ward en el software R. Se seleccionaron 5 grupos de acuerdo al análisis mediante un criterio de *codo*. A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
 
-```{r PCA1-2, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=7, fig.asp=0.75, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+```{r PCA1-2, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=8.5, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
 g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "013_cluz_group.rds")) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, '011_Clasificacion', "020_cluster_1.rds"))  %>% config(displaylogo = F)
 

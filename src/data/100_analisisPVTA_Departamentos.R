@@ -198,6 +198,8 @@ imputarTipo <- function(caracter) {
 # imputarTipo('HIDRATO DE CLORAL')
 # data1$MEDICAMENTO %>% unique() %>% imputarTipo()
 
+outColor <- c('(0,1.12]' = '#93F062', '(1.12,1.2]' = '#F0E500', '(1.2,5]' = '#F01B00')
+
 gFig1 <- data1 %>%
   mutate(
     tipo = imputarTipo(MEDICAMENTO),
@@ -206,18 +208,20 @@ gFig1 <- data1 %>%
   mutate(out = cut(median(variacion, na.rm = T), c(0, 1.12, 1.20, 5))) %>%
   ungroup() %>%
   ggplot(aes(y = class, x = variacion, color = out, 
-             fill = after_scale(alpha(color, 0.1)))) + 
+             fill = after_scale(alpha(color, 0.65)))) + 
   geom_vline(xintercept = 1, lty = 'dashed') + 
   geom_boxplot() + 
   geom_vline(xintercept = 1.12, lty = 'dashed', color = 'blue') + 
   theme_bw() + 
   xlab('Márgen de precio de venta \n sobre precio de compra') + 
   scale_x_continuous(labels = scales::percent_format()) + 
-  scale_color_brewer(palette = 'Set1', direction=-1, name = 'Márgen') +
-  scale_fill_brewer(palette = 'Set1', direction=-1, name = 'Márgen') +
+  scale_color_manual(values = outColor, name = 'Márgen') +
+  scale_fill_manual(values = outColor, name = 'Márgen') +
   theme(axis.text.y = element_text(size = 8, angle=0, vjust = 0.5), 
         axis.title.y = element_blank(), 
-        legend.position = c(0.6, .1), legend.direction = 'horizontal')
+        legend.position = c(0.85, .13), 
+        legend.box.just = 'left',
+        legend.direction = 'vertical')
 
 #+ fig.width = 8, fig.height = 6
 gFig1
@@ -227,6 +231,7 @@ guardarGGplot(gFig1,
               8,
               6,
               './figures/010_precios')
+
 
 dfData1 <- data1 %>% 
   mutate(
@@ -245,6 +250,7 @@ dfData1 <- data1 %>%
 
 dfData1 %>% knitr::kable()
 
+
 gFig2 <- data1 %>%
   mutate(
     class = fct_reorder(str_to_title(DEPTO), (variacion), .fun='median')) %>%
@@ -252,21 +258,27 @@ gFig2 <- data1 %>%
   mutate(out = cut(median(variacion, na.rm = T), c(0, 1.12, 1.20, 5))) %>%
   ungroup() %>%
   ggplot(aes(y = class, x = variacion, color = out, 
-             fill = after_scale(alpha(color, 0.1)))) + 
+             fill = after_scale(alpha(color, 0.65)))) + 
   geom_vline(xintercept = 1, lty = 'dashed') + 
   geom_boxplot() + 
   geom_vline(xintercept = 1.12, lty = 'dashed', color = 'blue') + 
   theme_bw() +
-  xlab('Márgen de precio de venta \n sobre precio de compra') + 
-  scale_color_brewer(palette = 'Set1', direction=-1, name = 'Márgen') +
-  scale_fill_brewer(palette = 'Set1', direction=-1, name = 'Márgen') +
-  scale_x_continuous(labels = scales::percent_format()) + 
+  xlab('Márgen de precio de venta \n sobre precio de compra') +
+  scale_color_manual(values = outColor, name = 'Márgen') +
+  scale_fill_manual(values = outColor, name = 'Márgen') +
+  scale_x_continuous(
+    labels = scales::percent_format(),
+    # trans = 'log10'
+    ) +
   theme(axis.text.y = element_text(size = 8, angle=0, vjust = 0.5), 
         axis.title.y = element_blank(),
-        legend.position = c(0.6, .1), legend.direction = 'horizontal')
+        legend.position = c(0.85, .13), 
+        legend.box.just = 'left', 
+        legend.box.background = element_rect(fill = NULL),
+        legend.direction = 'vertical')
 
 #+ fig.width = 8, fig.height = 6
-gFig2
+gFig2 + coord_cartesian(xlim = c(0.8, 1.75))
 
 guardarGGplot(gFig2,
               '093_boxplotDEPTO',

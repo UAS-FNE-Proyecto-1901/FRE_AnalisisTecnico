@@ -189,7 +189,7 @@ caption {
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .title{
     font-size: min(3vw, 28px) !important;
     line-height: 44px;
@@ -217,4 +217,4 @@ caption {
   p{
     font-size: 14px;
   }
-}
+} */

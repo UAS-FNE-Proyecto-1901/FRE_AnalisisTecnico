@@ -46,12 +46,12 @@ $$\mathrm{M}~(\%) = \frac{p}{v} \cdot 100\%$$
 
 Donde, $\mathrm{M}$ es el márgen de beneficio sobre el costo de adquisición $v$ por parte del FRE (precio de venta del FNE), y $p$ es el precio de venta desde el FRE. En el panel A de la Figura \@ref(fig:boxplotComparativoPVTA) se tiene una comparación de los márgenes de precio de venta frente a precio de compra de los MME. En verde, se tienen los medicamentos con una mediana de precios de ventas en departamentos menor al margen de venta mediante el canal de compra directa correspondiente a (112\%), en estos medicamentos se tiene a Morfina solución oral 3\%, Morfina HCl 50mg/mL, Metilfenidato tableta x 36mg, y Meperidina 100mg/2mL (estos medicamentos no tendrían sobrecostos respecto al canal de compra directa).
 
-```{r boxplotComparativoPVTA, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgenes de precio de venta para: (A) Medicamentos y (B) Departamentos.', fig.width=12, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.pos='t'}
+```{r boxplotComparativoPVTA, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgenes de precio de venta para: (A) Medicamentos y (B) Departamentos.', fig.width=12, fig.asp=0.45, fig.topcaption=TRUE, out.width="100%", fig.pos='t'}
 g1 <- readRDS(file.path(fig_path, '010_precios', "092_boxplotMEDICAMENTO.rds")) + 
-  labs(title = NULL)
+  labs(title = NULL) + coord_cartesian(xlim = c(0.85, 1.75))
 
 g2 <- readRDS(file.path(fig_path, '010_precios', "093_boxplotDEPTO.rds")) + 
-  labs(title = NULL)
+  labs(title = NULL) + coord_cartesian(xlim = c(0.85, 1.75))
 
 (g1 + g2) + plot_annotation(tag_levels = 'A') 
 ```
