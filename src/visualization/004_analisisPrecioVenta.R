@@ -391,7 +391,7 @@ guardarGGplot(gPVTARecetario7, '034_PVTA_recetarios_prescripcion', 7, 4)
 col1 <- '3.13. ¿Qué modalidades de selección se utilizan en la contratación para adquisición de recetarios oficiales en el Departamento?'
 
 tModalidadAdquisicion <- pull(df_total, col1) %>% 
-  separarDummies(descartar = T) %>% 
+  separarDummies(descartar = TRUE) %>% 
   apply(., 2, sum) %>% 
   data.frame(Tipo=names(.), Frec=., row.names=NULL)
 

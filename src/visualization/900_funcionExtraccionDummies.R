@@ -25,7 +25,7 @@ separarDummies <- function(vector, descartar = F, delimitador = '\\,') {
   
   # print(dimFactor)
   if (descartar) {
-    dimFactor <- discard(dimFactor, is.na)
+    dimFactor <- purrr::discard(dimFactor, is.na)
   }
   
   # Lista vacía

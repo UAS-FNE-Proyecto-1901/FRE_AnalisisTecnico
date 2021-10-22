@@ -1,7 +1,7 @@
 ---
-title: "Informe Final de Visitas Técnicas Territoriales"
+title: "Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes"
 author: "Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes"
-date: "24 de septiembre de 2021"
+date: "10 de octubre de 2021"
 site: bookdown::bookdown_site
 encoding: 'UTF-8'
 always_allow_html: true
@@ -10,9 +10,11 @@ toc-title: "Tabla de Contenidos"
 bibliography: referencias.bib
 csl: infectio.csl
 link-citations: yes
-css: "./www/style.css"
+css: "../www/style.css"
+favicon: "../www/icon1.png"
+cover-image: "../www/duckimage.jpg"
 institution: Fondo Nacional de Estupefacientes
-description: "Este es el informe final de visitas de asistencias técnicas realizadas por los FRE"
+description: "Este es el informe final de visitas de asistencias técnicas realizadas a los FRE por parte del Proyecto de Inversión Misión PRI 1901."
 ---
 
 ```{r setup, include=FALSE}

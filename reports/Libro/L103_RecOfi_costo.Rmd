@@ -63,7 +63,7 @@ Dentro de los procesos que se utilizan para la licitación y contratación de re
 
 - Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás [@ColombiaCompraEficiente2019].
 
-Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios, y se tuvieron en cuenta regresores como: 
+Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios como variable dependiente, y se tuvieron las siguientes variables como variable independientes (regresores): 
 
 - número de prescripciones en el recetario (variable continua).
 
@@ -89,7 +89,7 @@ if (knitr::is_latex_output()) {
 }
 ```
 
-El modelo generado (ver Tabla \@ref(tab:resumenModeloRegresionLineal)) presenta una bondad de ajuste muy baja ($R^{2} = -0.064$), y no se logra demostrar un efecto significativo de los factores explorados, pese a esto se presentan tendencias en estos factores. 
+En la Tabla \@ref(tab:resumenModeloRegresionLineal) se muestran los resultados de la regresión lineal múltiple, la modalidad de selección se incluyeron como variables comodín (*dummies*) teniendo en cuenta como referencia a la contratación directa.  El modelo generado presenta una bondad de ajuste baja ($R^{2} = -0.064$), y no se logra demostrar un efecto significativo de los factores explorados, pese a esto se presentan tendencias en estos factores. 
 
 En la Figura \@ref(fig:DependParcial1) se muestran gráficos de dependencia parcial de los factores explorados, se observan tendencias como que el N.° de prescripciones elevan el costo de los recetarios. Pese a que se podría suponer que al aumentar el número de características de seguridad en el recetario se aumentaría el costo de este, se encuentra una relación inversa entre el número de medidas y el costo de adquisición. Esto podría deberse a la facilidad de elaboración en departamentos con la capacidad tecnológica adecuada, la forma en que se adjudican los contratos y los diferentes oferentes en el concurso de contratación. 
 

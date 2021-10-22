@@ -36,7 +36,7 @@ A partir de lo anterior, la Figura \@ref(fig:serieTiempoCreacion) muestra en det
 
 Posteriormente, con la entrada en rigor de la Ley 30 de 1986 [@CongresodelaRepublicadeColombia1986] que adopta el Estatuto Nacional de Estupefacientes y dicta otras disposiciones, se ordenó a los departamentos controlar y fiscalizar las sustancias incluidas en las listas de estupefacientes de la Convención Única de Estupefacientes. Para este periodo de tiempo, la Figura \@ref(fig:serieTiempoCreacion) permite ver varios FRE constituidos, cuyos gobernadores se alinearon y adoptaron la con la Ley 30 de 1986 [@CongresodelaRepublicadeColombia1986]. Cabe resaltar que los entes territoriales creados hasta finales de los años 90, posiblemente contaron con suficientes capacidades internas para la pronta creación de sus respectivos FRE, diferente a los demás FRE creados posteriormente, cuyas capacidades son inferiores.
 
-```{r serieTiempoCreacion, echo=FALSE, fig.cap='Serie de tiempo de actas de creación de FRE.', fig.topcaption=TRUE, message=FALSE, warning=FALSE, fig.width=10, out.width="100%", fig.asp=0.5, fig.align='center', fig.pos='h'}
+```{r serieTiempoCreacion, echo=FALSE, fig.cap='Línea de tiempo de actas de creación de FRE.', fig.topcaption=TRUE, message=FALSE, warning=FALSE, fig.width=10, out.width="100%", fig.asp=0.5, fig.align='center', fig.pos='h'}
 # fig.height=8,
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '001_serieTiempoCreación.rds')) %>% 
@@ -67,7 +67,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
 
 -	De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 
-```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='t'}
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center', fig.pos='b'}
 g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = 'A')
 g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds'))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
@@ -132,7 +132,7 @@ dfSF %>%
 El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \@ref(fig:institucionesInscritas), donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, exceptuando Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el “Censo Nacional de Población y Vivienda 2018” [@DANE2021].
 
 
-```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento.', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%",fig.align='center'}
+```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento.', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "099_NEntidadesCompradoras.rds")) + labs(title = NULL)
 ```
 
@@ -246,11 +246,17 @@ g1
 Por el contrario, las variables más dispersas en el plano presentado en la Figura \@ref(fig:PCA1), no guardan relación entre sí, por lo tanto, estas variables tienen información importante para realizar la clasificación de los FRE. En este orden de ideas, la variable referente a la consolidación del anexo 2 en los FRE no mantiene una relación directa con el número de compras directas que haya hecho el departamento o con la variable del portafolio que ofrecen los FRE. 
 Se realizó un análisis de agrupación (*cluster*) jerárquico mediante el algoritmo de Ward en el software R. Se seleccionaron 5 grupos de acuerdo al análisis mediante un criterio de *codo*. A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
 
-```{r PCA1-2, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=8, fig.asp=0.75, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+```{r PCA1-2, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=7, fig.asp=0.75, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
 g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "013_cluz_group.rds")) + labs(title = NULL)
-g1
+g2 <- readRDS(file.path(fig_path, '011_Clasificacion', "020_cluster_1.rds"))  %>% config(displaylogo = F)
+
+if (knitr::is_html_output()) {
+  g2
+} else {
+  g1
+}
 ```
-Luego de un análisis multivariado en el software R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
+Luego de un análisis multivariado en el lenguaje de programación R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
 
 - FRE suficientemente consolidado (Verde)
 

@@ -2,8 +2,9 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align:center; padding:5%" width="90%" class="center">
-        <li><a href="#" target="_blank"><strong>Misión PRI 1901</strong></a></li>
+        <img src="www/logo-gobierno-Ministerio-de-Salud-y-Proteccion-Social-minsalud.png" style="align:center; padding:5%" width="75%" class="center">
+        <img src="www/FNE.png" style="align:center; padding:5%" width="75%" class="center">
+        <li><a href="index.html" target="_self"><strong>Misión PRI 1901</strong></a></li>
     sharing:
       whatsapp: false
       facebook: false
@@ -18,7 +19,7 @@ bookdown::gitbook:
       size: 2
   split_by: section
   delete_merged_file: true
-  favicon: "www/icon_1.png"
+  favicon: "./www/icon1.png"
   cover-image: "www/duckimage.jpg"
 bookdown::pdf_book:
   keep_tex: true

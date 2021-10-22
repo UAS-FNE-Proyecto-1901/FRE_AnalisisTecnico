@@ -1,6 +1,5 @@
 book_filename: "InformeFinal"
 output_dir: docs
-css: "./www/style.css"
 toc: yes
 fig_caption: true
 language:

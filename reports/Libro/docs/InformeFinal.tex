@@ -36,7 +36,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Informe Final de Visitas Técnicas Territoriales},
+  pdftitle={Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes},
   pdfauthor={Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -229,9 +229,9 @@ heightrounded, 			% to avoid spurious underfull messages
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Informe Final de Visitas Técnicas Territoriales}
+\title{Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes}
 \author{Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes}
-\date{24 de septiembre de 2021}
+\date{10 de octubre de 2021}
 
 \begin{document}
 \maketitle
@@ -437,7 +437,7 @@ Posteriormente, con la entrada en rigor de la Ley 30 de 1986\textsuperscript{\pr
 
 }
 
-\caption{Serie de tiempo de actas de creación de FRE.}\label{fig:serieTiempoCreacion}
+\caption{Línea de tiempo de actas de creación de FRE.}\label{fig:serieTiempoCreacion}
 \end{figure}
 
 Más adelante, la creación de la Federación Nacional de Departamentos (FND) permitió a los departamentos con niveles de gobernanza mucho más simples, la creación y constitución de los FRE dentro del organigrama de las respectivas entidades del nivel departamental con funciones en salud. La autonomía administrativa, financiera y presupuestal de las entidades territoriales, el respeto a la pluralidad ideológica, la promoción del desarrollo integral y el respeto a la Constitución Política y a las leyes, son los principios de la FND. Además, las asesorías en las áreas jurídica, económica, financiera y administrativa, a cargo de la FND, facultaron a los departamentos con capacidades inferiores para la constitución de sus FRE. En este periodo de tiempo se logran ver distintos FRE creados, a partir de la fecha de creación de la Federación Nacional de Departamentos (FND) en 1994\textsuperscript{\protect\hyperlink{ref-FederacionNacionaldeDepartamentos2021}{5}}.
@@ -464,7 +464,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
   De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 \end{itemize}
 
-\begin{figure}[t]
+\begin{figure}[b]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/perfilProfesionalEncargado-1} 
 
@@ -540,7 +540,7 @@ Pacífico & 19.23\% & 80.77\%\\
 
 El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \ref{fig:institucionesInscritas}, donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, exceptuando Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el ``Censo Nacional de Población y Vivienda 2018''\textsuperscript{\protect\hyperlink{ref-DANE2021}{6}}.
 
-\begin{figure}
+\begin{figure}[t]
 
 {\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/institucionesInscritas-1} 
 
@@ -698,7 +698,7 @@ Se realizó un análisis de agrupación (\emph{cluster}) jerárquico mediante el
 \caption{Clasificación de los FRE en grupos de acuerdo a análisis por clúster}\label{fig:PCA1-2}
 \end{figure}
 
-Luego de un análisis multivariado en el software R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
+Luego de un análisis multivariado en el lenguaje de programación R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
 
 \begin{itemize}
 \item
@@ -816,7 +816,7 @@ Dentro de los procesos que se utilizan para la licitación y contratación de re
   Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10\%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás\textsuperscript{\protect\hyperlink{ref-ColombiaCompraEficiente2019}{10}}.
 \end{itemize}
 
-Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios, y se tuvieron en cuenta regresores como:
+Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios como variable dependiente, y se tuvieron las siguientes variables como variable independientes (regresores):
 
 \begin{itemize}
 \item
@@ -846,7 +846,7 @@ Modalidad - Selección abreviada & -1414.0 & 14418.9 & -0.098 & 0.923\\
 \end{tabular}
 \end{table}
 
-El modelo generado (ver Tabla \ref{tab:resumenModeloRegresionLineal}) presenta una bondad de ajuste muy baja (\(R^{2} = -0.064\)), y no se logra demostrar un efecto significativo de los factores explorados, pese a esto se presentan tendencias en estos factores.
+En la Tabla \ref{tab:resumenModeloRegresionLineal} se muestran los resultados de la regresión lineal múltiple, la modalidad de selección se incluyeron como variables comodín (\emph{dummies}) teniendo en cuenta como referencia a la contratación directa. El modelo generado presenta una bondad de ajuste baja (\(R^{2} = -0.064\)), y no se logra demostrar un efecto significativo de los factores explorados, pese a esto se presentan tendencias en estos factores.
 
 En la Figura \ref{fig:DependParcial1} se muestran gráficos de dependencia parcial de los factores explorados, se observan tendencias como que el N.° de prescripciones elevan el costo de los recetarios. Pese a que se podría suponer que al aumentar el número de características de seguridad en el recetario se aumentaría el costo de este, se encuentra una relación inversa entre el número de medidas y el costo de adquisición. Esto podría deberse a la facilidad de elaboración en departamentos con la capacidad tecnológica adecuada, la forma en que se adjudican los contratos y los diferentes oferentes en el concurso de contratación.
 
@@ -1335,19 +1335,6 @@ Por su parte, otros territorios no pueden realizar las compras con las frecuenci
 \caption{Frecuencia de compras de medicamentos por año al FNE.}\label{fig:FrecComprasFNR}
 \end{figure}
 
-La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de cada departamento, p.ej. en el departamento de Vaupés cuyo abastecimiento se enfoca en satisfacer la demanda del Hospital, no se realiza venta a otras IPS y por lo tanto ni si quiera tienen necesidad de almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al Hospital. Se presenta un caso diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, sin embargo, se ha establecido a las IPS que deben proyectar sus necesidades mensualmente.
-
-\begin{figure}[t]
-
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecVentaInstituciones-1} 
-
-}
-
-\caption{Frecuencia de venta de MME a instituciones en el departamento.}\label{fig:FrecVentaInstituciones}
-\end{figure}
-
-En el departamento del Atlántico antes de la pandemia la venta de medicamentos se hacía diariamente, sin embargo, por la contingencia en salud se decidió que solo se despachan medicamentos dos días a la semana. Otro departamento que hace venta diaria de MME es Choco y afirma que las necesidades de MME pueden variar en el departamento gracias al traslado no esperado de pacientes de zonas muy distantes a las capitales de los departamentos de Antioquia y Valle del Cauca.
-
 \hypertarget{niveles-de-seguridad}{%
 \subsection{Niveles de seguridad}\label{niveles-de-seguridad}}
 
@@ -1417,7 +1404,7 @@ Por otra parte hay territorios como Guaviare en el que la estimación de compra 
 
 Existen casos a exaltar como el FRE de Sucre que, a pesar de tener un tamaño relativamente pequeño a otros en la región, tiene un proceso de estimación de necesidades de MME está altamente estandarizado a través de una herramienta que facilita la toma de decisiones de compra de MME. El FRE afirma que el uso de este manual reduce el tiempo de estimación de compra a una semana, y esto indica que es un proceso eficiente en este departamento.
 
-Como se identifica en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle}, la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales (en promedio 36.4 días) y contractuales (en promedio 46 días), esto debido a los requisitos que establece la contratación pública\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{35},\protect\hyperlink{ref-CongresodelaRepublicadeColombia2007}{36}}. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir (referencia).
+Como se identifica en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle}, la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales (en promedio 36.4 días) y contractuales (en promedio 46 días), esto debido a los requisitos que establece la contratación pública\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{35},\protect\hyperlink{ref-CongresodelaRepublicadeColombia2007}{36}}. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{35}}. Por último, en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle} se muestra la mediana y el rango intercuartílico de los tiempos de cada etapa del proceso.
 
 \begin{figure}[t]
 
@@ -1425,7 +1412,7 @@ Como se identifica en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle}, la gr
 
 }
 
-\caption{Histogramas de tiempos en el proceso de adquisición por departamento.}\label{fig:EtapasProcesoAdquisicionDetalle}
+\caption{Histogramas de tiempos en el proceso de adquisición por departamento. Línea negra segmentada mediana, líneas grises segmentadas primer y tercer cuartil.}\label{fig:EtapasProcesoAdquisicionDetalle}
 \end{figure}
 
 Por lo general, la documentación pertinente de la fase precontractual es revisada y corregida en varias ocasiones por diferentes áreas en una misma entidad, lo que conlleva a largos tiempos de espera en la fase precontractual. Estas demoras se dan especialmente cuando el área encargada de aprobar la documentación o de llevar a cabo el proceso contractual no pertenece a la secretaría de salud, como es el caso de Atlántico, pues los funcionarios de otras áreas de las gobernaciones no están inmersos en el contexto de las necesidades de salud pública y específicamente en la importancia que tiene el abastecimiento de MME para la población, por lo que muchas veces el proceso de adquisición de medicamentos queda a merced de la voluntad de otras áreas, propiciando incluso el desabastecimiento en los departamentos.
@@ -1542,12 +1529,25 @@ En el traslado interdepartamental de medicamentos se observa que los territorios
 
 \maxdeadcycles=1000
 
+La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de cada departamento, p.ej. en el departamento de Vaupés cuyo abastecimiento se enfoca en satisfacer la demanda del Hospital, no se realiza venta a otras IPS y por lo tanto ni si quiera tienen necesidad de almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al Hospital. Se presenta un caso diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, sin embargo, se ha establecido a las IPS que deben proyectar sus necesidades mensualmente.
+
+\begin{figure}[t]
+
+{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecVentaInstituciones-1} 
+
+}
+
+\caption{Frecuencia de venta de MME a instituciones en el departamento.}\label{fig:FrecVentaInstituciones}
+\end{figure}
+
+En el departamento del Atlántico antes de la pandemia la venta de medicamentos se hacía diariamente, sin embargo, por la contingencia en salud se decidió que solo se despachan medicamentos dos días a la semana. Otro departamento que hace venta diaria de MME es Choco y afirma que las necesidades de MME pueden variar en el departamento gracias al traslado no esperado de pacientes de zonas muy distantes a las capitales de los departamentos de Antioquia y Valle del Cauca.
+
 \hypertarget{controles-en-venta-directa-a-paciente}{%
 \subsection{Controles en Venta Directa a Paciente}\label{controles-en-venta-directa-a-paciente}}
 
 En la Figura \ref{fig:ControlesVentasFRE} se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.
 
-\begin{figure}
+\begin{figure}[t]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/ControlesVentasFRE-1} 
 
@@ -2184,7 +2184,7 @@ El diligenciamiento de los informes por parte de las instituciones inscritas en 
 
 \begin{itemize}
 \item
-  Exigir a las instituciones inscritas un formato único estandarizado digital para enviar los informes mensuales, referentes al Anexo 13 de la Resolución 1478 de 2006. Preferiblemente se debe enviar el archivo en formato PDF y Excel para la WW de los datos, por parte del personal del FRE. Además, con este requisito se asegura la integridad de la información.
+  Exigir a las instituciones inscritas un formato único estandarizado digital para enviar los informes mensuales, referentes al Anexo 13 de la Resolución 1478 de 2006. Preferiblemente, se debe enviar el archivo en formato PDF y Excel para la revisión de los datos, por parte del personal del FRE. Además, con este requisito se asegura la integridad de la información.
 \item
   Designar la consolidación de los informes y el diligenciamiento de anexos como una responsabilidad exclusiva del FRE. Si esta actividad es asignada al personal nombrado del FRE, deben incluir la responsabilidad en su nombramiento. Por el contrario, si esta actividad es responsabilidad de algún contratista, se debe garantizar la suficiente vigencia del contrato y que la actividad y diligenciamiento de anexos, se contemple desde el objeto del mismo. Lo anterior, asegura un seguimiento y control adecuado en la consolidación de los informes.
 \item
@@ -2272,11 +2272,11 @@ La infraestructura tecnológica es otro aspecto primordial para el desarrollo de
 
 \textbf{Estadística}
 
-\begin{itemize}\item  Daniel Sebastián Parra González (Estadístico)\end{itemize}
+\begin{itemize}\item  Daniel Sebastián Parra González (Contratista - Profesional universitario)\end{itemize}
 
-\textbf{Diagramación}
+\textbf{Comunicación}
 
-\begin{itemize}\item  Julieth Fernanda Contreras Garcia (Jefe de Equipo de Comunicación)\item  Fabian Oswaldo Millán Ibarra (Profesional de Equipo de Comunicación)\end{itemize}
+\begin{itemize}\item  Julieth Fernanda Contreras Garcia (Coordinadora de Equipo de Comunicación)\item  Fabian Oswaldo Millán Ibarra (Profesional de Equipo de Comunicación)\end{itemize}
 
 \hypertarget{agradecimientos}{%
 \subsection*{Agradecimientos}\label{agradecimientos}}
@@ -2286,7 +2286,9 @@ Agradecemos profundamente al Departamento Nacional de Planeación (DNP) por la i
 
 Agradecemos a nuestra directora la Dra. Zoraya López Díaz por su compromiso con los proyectos de inversión y su entusiasmo por el trabajo territorial llevado a cabo por nuestro equipo.
 
-Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento y durante la realización de estas encuestas. Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas en la formulación del proyecto y realización de esta encuesta.
+Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento durante la realización de estas encuestas.
+
+Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas en la formulación del proyecto y realización de esta encuesta.
 
 Agradecemos a los Grupos Interno de Trabajo del Fondo Nacional de Estupefacientes por brindarnos su apoyo en las diversas actividades relacionadas a acceso, contratación, viáticos, desplazamientos, y apoyo técnico en general.
 

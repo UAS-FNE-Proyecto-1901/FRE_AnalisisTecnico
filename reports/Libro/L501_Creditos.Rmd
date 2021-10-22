@@ -7,33 +7,21 @@ bloqueContactos <-
     function(Nombre = 'Nombre',
              Cargo = 'Cargo',
              ruta = "./credit_figures/person_icon.jpg",
-             altura = 15, # rem
-             ancho = '50%',
              img_alt = "person_icon_logo") {
       #
       tags <- htmltools::tags
-      principal <- glue::glue("width: {ancho}; 
-                              flex-direction: row; 
-                              display: flex; 
-                              height: {altura}rem;")
       
       tags$div(
-        tags$div(tags$img(src = ruta, alt = img_alt, 
-                          style = 'border-radius: 50%', height='80%'),
-                 style = "display: flex; width: 30%;"),
+        tags$div(tags$img(src = ruta, alt = img_alt, class="credImagenInside"),
+                 class = "credImagen"),
         tags$div(
           tags$div(tags$strong(Nombre, display='block'),
-                   style = "display:flex; justify-content:center; align-items:center; height: 45%; padding: 4rem;"),
+                   class = "credAutorTitulo"),
           tags$div(tags$i(Cargo, display='block'),
-                   style = "display:flex; justify-content:center; align-items:center; height: 45%; padding: 4rem;"),
-          style = paste('display: flex', 
-                        'flex-direction: column', 
-                        'justify-content: space-around',
-                        'align-content: space-around',
-                        ' width: 70%',
-                        sep = ';')
+                   class = "credAutorCargo"),
+          class = "credAutor"
         ),
-        style = principal
+        class = "credPrincipal"
       )
     }
 credits_fig <- file.path('.', 'credit_figures')
@@ -60,12 +48,7 @@ box1 <- tag1$div(
                   './credit_figures/diego.jpeg'),
   bloqueContactos('Hillary Andrea Gómez Guerra', 'Coordinación de proyecto',
                   './credit_figures/hillary.jpeg'),
-  style = paste('width: 100%',
-                'display: flex',
-                'align-items: flex-start',
-                'flex-wrap: wrap',
-                'justify-content: space-around',
-                sep = ';')
+  class = "credPrincipalSup"
 )
 # 
 box2 <- 
@@ -88,12 +71,7 @@ box1 <- tag1$div(
                   './credit_figures/carlos.jpeg'),
   bloqueContactos('Daniela del Pilar Carvajal Latorre', 'Profesional de Apoyo Operativo',
                   './credit_figures/daniela.jpeg'),
-  style = paste('width: 100%',
-                'display: flex',
-                'align-items: flex-start',
-                'flex-wrap: wrap',
-                'justify-content: space-around',
-                sep = ';')
+  class = "credPrincipalSup"
 )
 # 
 box2 <- 
@@ -113,21 +91,14 @@ if(knitr::is_html_output()){
 ```{r, Realización de encuestas, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
   bloqueContactos('Carlos Guillermo Leal Jimenez', 'Profesional de equipo técnico territorial',
-                  './credit_figures/guillermo.jpeg', altura = 15),
+                  './credit_figures/guillermo.jpeg'),
   bloqueContactos('Jhonathan Felipe Venegas Parra', 'Profesional de equipo técnico territorial',
-                  './credit_figures/jonathan.jpeg', altura = 15),
+                  './credit_figures/jonathan.jpeg'),
   bloqueContactos('Nicolás Alexander Cadena Ayala', 'Profesional de equipo técnico territorial',
-                  './credit_figures/nicolas.jpeg', altura = 15),
+                  './credit_figures/nicolas.jpeg'),
   bloqueContactos('Wilder Estiben Meneses Garavito', 'Profesional de equipo técnico territorial',
-                  './credit_figures/estiben.jpeg', altura = 15),
-  style = paste('width: 100%',
-                'height: 35 rem',
-                'display: flex',
-                'align-items: flex-start',
-                'flex-wrap: wrap',
-                'justify-content: space-around',
-                'align-content: space-around',
-                sep = ';')
+                  './credit_figures/estiben.jpeg'),
+  class = "credPrincipalSup"
 )
 # box2 <- tag1$ul(
 #   tag1$li('Jhonathan Felipe Venegas Parra (Profesional de equipo técnico territorial)'),
@@ -157,17 +128,12 @@ if(knitr::is_html_output()){
 <br>
 ```{r, Estadistica, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
-  bloqueContactos('Daniel Sebastián Parra González', 'Estadístico', 
+  bloqueContactos('Daniel Sebastián Parra González', 'Contratista - Profesional universitario', 
                   './credit_figures/daniel.jpeg'),
-  style = paste('width: 100%',
-                'display: flex',
-                'align-items: flex-start',
-                'flex-wrap: wrap',
-                'justify-content: space-around',
-                sep = ';')
+  class = "credPrincipalSup"
 )
 # 
-box2 <- crearListaLatex(c('Daniel Sebastián Parra González (Estadístico)'))
+box2 <- crearListaLatex(c('Daniel Sebastián Parra González (Contratista - Profesional universitario)'))
 
 if(knitr::is_html_output()){
   box1
@@ -177,22 +143,17 @@ if(knitr::is_html_output()){
 ```
 
 <hr>
-**Diagramación**
+**Comunicación**
 <br>
 ```{r, Diagramacion, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
   bloqueContactos('Julieth Fernanda Contreras Garcia', 'Jefe de Equipo de Comunicación'),
   bloqueContactos('Fabian Oswaldo Millán Ibarra', 'Profesional de Equipo de Comunicación'),
-  style = paste('width: 100%',
-                'display: flex',
-                'align-items: flex-start',
-                'flex-wrap: wrap',
-                'justify-content: space-around',
-                sep = ';')
+  class = "credPrincipalSup"
 )
 # 
 box2 <- crearListaLatex(c(
-  'Julieth Fernanda Contreras Garcia (Jefe de Equipo de Comunicación)',
+  'Julieth Fernanda Contreras Garcia (Coordinadora de Equipo de Comunicación)',
   'Fabian Oswaldo Millán Ibarra (Profesional de Equipo de Comunicación)'
 ))
 
@@ -209,7 +170,9 @@ Agradecemos profundamente al Departamento Nacional de Planeación (DNP) por la i
 
 Agradecemos a nuestra directora la Dra. Zoraya López Díaz por su compromiso con los proyectos de inversión y su entusiasmo por el trabajo territorial llevado a cabo por nuestro equipo.
 
-Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento y durante la realización de estas encuestas. Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas en la formulación del proyecto y realización de esta encuesta. 
+Agradecemos a Jonathan Alberto Peñaranda Téllez, Daniela Martínez Castillo y Aida Murma Cabezas Quintero del grupo de Regionalización del FNE por el acompañamiento durante la realización de estas encuestas. 
+
+Agradecemos a Cesar Chavarro del Grupo Interno de Medicamentos del Estado del FNE por las ideas aportadas en la formulación del proyecto y realización de esta encuesta. 
 
 Agradecemos a los Grupos Interno de Trabajo del Fondo Nacional de Estupefacientes por brindarnos su apoyo en las diversas actividades relacionadas a acceso, contratación, viáticos, desplazamientos, y apoyo técnico en general.
 

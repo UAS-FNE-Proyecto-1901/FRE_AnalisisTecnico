@@ -6,6 +6,7 @@ h1{
   font-size: 22px;
   font-weight: bold;
   color:rgb(66,87,158);
+  line-height: 51px;
 }
 
 
@@ -18,11 +19,12 @@ h3{
 }
 
 .title{
-  font-size: 45px !important;
+  font-size: 38px !important;
   color:rgb(241, 81, 113);
   font-weight: bold;
   text-align: center;
 }
+
 
 footer.container-fluid{
   width: 100%;
@@ -125,4 +127,94 @@ caption {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+}
+
+
+
+/* Clases de tarjetas de créditos */
+.credPrincipalSup{
+  /*width: 100%';*/
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+}
+.credPrincipal{
+  background-color: rgba(114, 255, 222, 0.014);
+  width: 45%;
+  border: black 5pt;
+
+  min-width: 300px;
+  min-height: 160px;
+  
+  margin-top: 2pt;
+  margin-bottom: 2pt;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+.credImagen{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-grow: 30;
+  order: 0;
+  width: 30%;
+}
+.credAutor{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-grow: 70;
+  order: 1;
+  width: 70%;
+}
+.credAutorTitulo, .credAutorCargo{
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 2rem;
+}
+.credImagenInside{
+  border-radius: 50%;
+  height: 80%; 
+  max-height: 100pt;
+}
+
+
+@media (max-width: 768px) {
+  .title{
+    font-size: min(3vw, 28px) !important;
+    line-height: 44px;
+  }
+  p, em, li, span, div.references{
+    font-size: min(2vw, 20px);
+  }
+  h1{
+    font-size: min(3vw, 28px) !important;
+  }
+  h2{
+    font-size: min(2.5vw, 25px) !important;
+  }
+  h3{
+    font-size: min(2.1vw, 21px) !important;
+  }
+}
+  
+@media (max-width: 400px) {
+  .title{
+    font-size: 30px !important;
+    line-height: 37px;
+  }
+
+  p{
+    font-size: 14px;
+  }
 }

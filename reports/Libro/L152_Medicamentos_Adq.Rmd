@@ -66,20 +66,6 @@ Por su parte, otros territorios no pueden realizar las compras con las frecuenci
 readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) + labs(title = NULL)
 ```
 
-La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de cada departamento, p.ej. en el departamento de Vaupés cuyo abastecimiento se enfoca en satisfacer la demanda del Hospital, no se realiza venta a otras IPS y por lo tanto ni si quiera tienen necesidad de almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al Hospital. Se presenta un caso diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, sin embargo, se ha establecido a las IPS que deben proyectar sus necesidades mensualmente. 
-
-<!-- ```{r FrecComprasFNRb, echo=FALSE, warning=FALSE, fig.cap='N.° de pedidos de medicamentos por año al FNE', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="90%"} -->
-<!-- readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) +  -->
-<!--   labs(title = NULL) -->
-<!-- ``` -->
-
-```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento.', fig.width=6, fig.asp=0.7, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
-readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + 
-  labs(title = NULL)
-```
-
-En el departamento del Atlántico antes de la pandemia la venta de medicamentos se hacía diariamente, sin embargo, por la contingencia en salud se decidió que solo se despachan medicamentos dos días a la semana. Otro departamento que hace venta diaria de MME es Choco y afirma que las necesidades de MME pueden variar en el departamento gracias al traslado no esperado de pacientes de zonas muy distantes a las capitales de los departamentos de Antioquia y Valle del Cauca.
-
 ### Niveles de seguridad
 
 Según la Resolución 1403 de 2007 [@MinisteriodeSaludyProteccionSocial2007], donde se menciona el control durante el proceso de almacenamiento se encuentra que: 
@@ -135,10 +121,9 @@ Por otra parte hay territorios como Guaviare en el que la estimación de compra 
 
 Existen casos a exaltar como el FRE de Sucre que, a pesar de tener un tamaño relativamente pequeño a otros en la región, tiene un proceso de estimación de necesidades de MME está altamente estandarizado a través de una herramienta que facilita la toma de decisiones de compra de MME. El FRE afirma que el uso de este manual reduce el tiempo de estimación de compra a una semana, y esto indica que es un proceso eficiente en este departamento.
 
-Como se identifica en la Figura \@ref(fig:EtapasProcesoAdquisicionDetalle), la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales (en promedio 36.4 días) y contractuales (en promedio 46 días), esto debido a los requisitos que establece la contratación pública [@CongresodelaRepublicadeColombia1993;@CongresodelaRepublicadeColombia2007]. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir (referencia).
+Como se identifica en la Figura \@ref(fig:EtapasProcesoAdquisicionDetalle), la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales (en promedio 36.4 días) y contractuales (en promedio 46 días), esto debido a los requisitos que establece la contratación pública [@CongresodelaRepublicadeColombia1993; @CongresodelaRepublicadeColombia2007]. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir [@CongresodelaRepublicadeColombia1993]. Por último, en la Figura \@ref(fig:EtapasProcesoAdquisicionDetalle) se muestra la mediana y el rango intercuartílico de los tiempos de cada etapa del proceso.
 
-
-```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Histogramas de tiempos en el proceso de adquisición por departamento.', fig.width=9, fig.height=6, fig.topcaption=TRUE, out.width="95%",fig.align='center',fig.pos='t'}
+```{r EtapasProcesoAdquisicionDetalle, echo=FALSE, warning=FALSE, fig.cap='Histogramas de tiempos en el proceso de adquisición por departamento. Línea negra segmentada mediana, líneas grises segmentadas primer y tercer cuartil.', fig.width=9, fig.height=6, fig.topcaption=TRUE, out.width="95%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "082b_ProcesosAdquisición.rds"))
 ```
 

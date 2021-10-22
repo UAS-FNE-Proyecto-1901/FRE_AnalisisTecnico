@@ -387,11 +387,20 @@ guardarPlotly(plotlyProcesosAdquisicion, '081_ProcesosAdquisición', 12, 7,
 graficoBarrasTiempos <- function(tiempo, 
                                  titulo,
                                  data = df_total,
+                                 xpos = 0.95,
                                  breaks = 1:15, fill = 'blue1') {
-  filt_data <- data %>%
-    filter(name == tiempo)
   
-  mn_val <- mean(filt_data$value, na.rm = T)
+  filt_data <- data %>% filter(name == tiempo)
+  
+  mn_val <- median(filt_data$value, na.rm = T)
+  q1_val <- round(quantile(filt_data$value, prob = 0.25, na.rm = T), 1)
+  q3_val <- round(quantile(filt_data$value, prob = 0.75, na.rm = T), 1)
+  
+  mi_val <- min(filt_data$value, na.rm = T)
+  ma_val <- max(filt_data$value, na.rm = T)
+  
+
+  NVal = (ma_val - mi_val) * xpos + mi_val
   
   filt_data %>%
     ggplot(aes(x = value)) +
@@ -400,6 +409,11 @@ graficoBarrasTiempos <- function(tiempo,
                    color='gray2') +
     # geom_density(stat = 'count', color = fill) + 
     geom_vline(xintercept = mn_val, lty = 'dashed') + 
+    geom_vline(xintercept = q1_val, lty = 'dashed', col = 'gray50') + 
+    geom_vline(xintercept = q3_val, lty = 'dashed', col = 'gray50') + 
+    annotate(geom = 'label', x = NVal, y = Inf, 
+             label = glue::glue("Med. (IQR): {mn_val} ({q3_val-q1_val})"), 
+             vjust = 1.2, size = 3.2, hjust = 1) + 
     xlab('Tiempo (días)') +
     ylab('Frecuencia') +
     labs(title = titulo) + 
@@ -415,7 +429,6 @@ ggProcesoAdqu <-
 #+ ggProcesoAdqu, fig.width = 10, fig.height = 6, out.width = "60%"
 ggProcesoAdqu
 guardarGGplot(ggProcesoAdqu, '082b_ProcesosAdquisición', 10, 6)
-
 
 ggProcesosAdquisicion1 <- df_total %>%
   # mutate(map(name, function(x) x))

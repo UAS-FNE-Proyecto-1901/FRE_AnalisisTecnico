@@ -20,11 +20,24 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 \maxdeadcycles=1000
 
+La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de cada departamento, p.ej. en el departamento de Vaupés cuyo abastecimiento se enfoca en satisfacer la demanda del Hospital, no se realiza venta a otras IPS y por lo tanto ni si quiera tienen necesidad de almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al Hospital. Se presenta un caso diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, sin embargo, se ha establecido a las IPS que deben proyectar sus necesidades mensualmente. 
+
+<!-- ```{r FrecComprasFNRb, echo=FALSE, warning=FALSE, fig.cap='N.° de pedidos de medicamentos por año al FNE', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="90%"} -->
+<!-- readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) +  -->
+<!--   labs(title = NULL) -->
+<!-- ``` -->
+
+```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento.', fig.width=6, fig.asp=0.7, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
+readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + labs(title = NULL)
+```
+
+En el departamento del Atlántico antes de la pandemia la venta de medicamentos se hacía diariamente, sin embargo, por la contingencia en salud se decidió que solo se despachan medicamentos dos días a la semana. Otro departamento que hace venta diaria de MME es Choco y afirma que las necesidades de MME pueden variar en el departamento gracias al traslado no esperado de pacientes de zonas muy distantes a las capitales de los departamentos de Antioquia y Valle del Cauca.
+
 ### Controles en Venta Directa a Paciente
 
 En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.
 
-```{r ControlesVentasFRE, echo=FALSE, warning=FALSE, fig.cap='Controles en las ventas directas a pacientes.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+```{r ControlesVentasFRE, echo=FALSE, warning=FALSE, fig.cap='Controles en las ventas directas a pacientes.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "120_ControlesVentasFRE.rds")) + labs(title = NULL)
 ```
 

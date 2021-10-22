@@ -49,6 +49,24 @@ if (knitr::is_html_output()) {
   skimr::skim(data)
 }
 
+hov_data <- data %>%
+  mutate(
+    Prec2020 = round(Presupuesto_2020/1e9, 2),
+    PrecSalud2020 = round(Presupuesto_Salud_2020/1e9, 2),
+    Hover = glue::glue(
+      "<b>{Departamento...2}</b> <br>",
+      "Presupuesto (miles de millones): {Prec2020} <br>",
+      "Presupuesto Salud (miles de millones): {PrecSalud2020} <br>",
+      "No. productos CD: {N_productosCD_2021} <br>",
+      "Cumplimiento A1: {round(`Cumplimiento_A1_2020-2021-06`,2)} <br>",
+      "Cumplimiento A2: {round(`Cumplimiento_A2_2020-2021-06`,2)} <br>",
+      "Prop. uso portafolio: {round(PropPortafolio,2)} <br>",
+      "No. de inscritos: {No_Inscritos}"
+    )
+  ) %>% 
+  select(Departamentos = Departamento...2, Hover)
+
+
 
 #' # 1. Análisis por PCA
 #' 
@@ -221,28 +239,47 @@ guardarGGplot(ggt, '014_cluz_group2', 12, 10, fig_path)
 #+ setup2, warning = FALSE, message=FALSE
 require(plotly)
 
+colors <-
+  c(
+    `1` = '#a705b3',
+    `2` = '#7081ff',
+    `3` = '#ff0000',
+    `4` = '#8cffb7',
+    `5` = '#00ff5e'
+  )
+
 trans_data <- as_tibble(pca1$x, rownames = 'Departamentos') %>% 
   left_join(funClusters_2(clean_data, 5)$tree %>% 
               as_tibble(rownames = 'Departamentos'), by = 'Departamentos') %>% 
   rename(Grupo_hclus = value) %>% 
-  mutate(Grupo_hclus = as.integer(Grupo_hclus))
-
-
-colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+  mutate(colores = colors[Grupo_hclus],
+         Grupo_hclus = factor(Grupo_hclus))
 
 
 fig <- trans_data %>% 
-  plot_ly(x = ~PC1, y = ~PC2, z = ~PC3, split = ~Grupo_hclus,
-          colors = colors, name = ~Grupo_hclus, text = ~Departamentos, 
-          hovertemplate = "%{text}<br>PC1: %{x}<br>PC2: %{y}<br>PC3: %{z}")
+  left_join(hov_data, by = 'Departamentos') %>% 
+  plot_ly(name = ~Grupo_hclus) %>% 
+  add_trace(x = ~PC1, y = ~PC2, z = ~PC3,
+            customdata = ~Hover, 
+            hovertemplate = "%{customdata}", 
+            mode = 'markers',
+            type = 'scatter3d',
+            color = ~Grupo_hclus,
+            colors = "Dark2"
+            # marker = list(color = ~colores, size=6)
+            ) %>% 
+  layout(scene = list( 
+    xaxis = list(title = 'PC1 (28.3%)', range = c(-7,+7)),
+    yaxis = list(title = 'PC2 (18.1%)', range = c(-2.5,+2.5)),
+    zaxis = list(title = 'PC3 (16.0%)', range = c(-3,+3))
+  )) 
 
 #+ PC3D-1, fig.width=12, fig.asp=0.7, out.width="100%", fig.align='center',fig.pos="t",fig.cap="PCA3d"
 if (knitr::is_html_output()) {
-  fig %>% 
-    add_markers()
+  fig
 }
 
-
+guardarPlotly(fig, '020_cluster_1', ruta = fig_path, libdir = 'plotly')
 
 trans_data1 <- data %>% 
   left_join(funClusters_2(clean_data, 5)$tree %>% 
@@ -260,6 +297,8 @@ fig1 <- trans_data1 %>%
 
 #+ PC3D-2, fig.width=12, fig.asp=0.7, out.width="100%", fig.align='center',fig.pos="t",fig.cap="PCA3d-1"
 if (knitr::is_html_output()) {
-  fig1 %>% 
-    add_markers()
+  fig1 %>% add_markers()
 }
+
+
+
