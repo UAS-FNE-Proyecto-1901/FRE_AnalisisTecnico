@@ -93,7 +93,7 @@ En la Tabla \@ref(tab:resumenModeloRegresionLineal) se muestran los resultados d
 
 En la Figura \@ref(fig:DependParcial1) se muestran gráficos de dependencia parcial de los factores explorados, se observan tendencias como que el N.° de prescripciones elevan el costo de los recetarios. Pese a que se podría suponer que al aumentar el número de características de seguridad en el recetario se aumentaría el costo de este, se encuentra una relación inversa entre el número de medidas y el costo de adquisición. Esto podría deberse a la facilidad de elaboración en departamentos con la capacidad tecnológica adecuada, la forma en que se adjudican los contratos y los diferentes oferentes en el concurso de contratación. 
 
-```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de costos de recetarios.', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r DependParcial1, echo=FALSE, warning=FALSE, fig.cap='Gráficos de dependencia parcial - Modelo de costos de recetarios.', fig.width=9, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center', message=FALSE,error=FALSE}
 g1 <- readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds'))
 g1
 ```

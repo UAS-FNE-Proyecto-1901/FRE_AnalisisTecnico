@@ -1,5 +1,6 @@
 ---
-title: "Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes"
+title: "Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado"
+subtitle: "Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes"
 author: "Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes"
 date: "10 de octubre de 2021"
 site: bookdown::bookdown_site
@@ -22,6 +23,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Prefacio {-}
+
+```{r portadaPrincipal, message=FALSE, warning=FALSE, echo=FALSE, out.width="70%",fig.align='center'}
+if (knitr::is_html_output()) {
+  knitr::include_graphics(file.path('www', 'portadaPrincipal.png'))
+}
+```
 
 El FNE (*Fondo Nacional de Estupefacientes*) tiene como objetivo la vigilancia y control sobre la importación, la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional. 
 

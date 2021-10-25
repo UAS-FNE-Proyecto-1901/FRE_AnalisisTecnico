@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.8.2)  22 OCT 2021 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.8.2)  25 OCT 2021 13:15
 entering extended mode
 **./InformeFinal.tex
 (InformeFinal.tex
@@ -374,19 +374,6 @@ Package: footnotehyper 2021/02/04 v1.1d hyperref aware footnote.sty (JFB)
 \FNH@notes=\box59
 \FNH@width=\dimen171
 \FNH@toks=\toks27
-) (C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
-Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
-(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 107.
-)
-\Gin@req@height=\dimen172
-\Gin@req@width=\dimen173
 )
 \cslhangindent=\skip63
 \csllabelwidth=\skip64
@@ -399,16 +386,30 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count295
 \Gm@cntv=\count296
 \c@Gm@tempcnt=\count297
-\Gm@bindingoffset=\dimen174
-\Gm@wd@mp=\dimen175
-\Gm@odd@mp=\dimen176
-\Gm@even@mp=\dimen177
-\Gm@layoutwidth=\dimen178
-\Gm@layoutheight=\dimen179
-\Gm@layouthoffset=\dimen180
-\Gm@layoutvoffset=\dimen181
+\Gm@bindingoffset=\dimen172
+\Gm@wd@mp=\dimen173
+\Gm@odd@mp=\dimen174
+\Gm@even@mp=\dimen175
+\Gm@layoutwidth=\dimen176
+\Gm@layoutheight=\dimen177
+\Gm@layouthoffset=\dimen178
+\Gm@layoutvoffset=\dimen179
 \Gm@dimlist=\toks28
-(C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg))
+(C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg)) (C:\Program File
+s\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+(C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+)
+\Gin@req@height=\dimen180
+\Gin@req@width=\dimen181
+)
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/frontendlayer\tikz.st
 y (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/basiclayer\pgf.sty 
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/pgf/utilities\pgfrcs.sty
@@ -946,6 +947,8 @@ rs
 \f@nch@O@erf=\skip77
 \f@nch@O@olf=\skip78
 \f@nch@O@orf=\skip79
+) (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/lastpage\lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 )
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/morefloats\morefloats.sty
 Package: morefloats 2015/07/22 v1.0h Raise limit of unprocessed floats (HMM)
@@ -953,6 +956,17 @@ Package morefloats Info: Maximum number of possible floats asked for: 256
 (morefloats)             (i.e. 238 more floats).
 (morefloats)             LaTeX might run out of memory before this
 (morefloats)             (in which case it will notify you).
+) (C:\Program Files\MiKTeX 2.9\tex/latex/sectsty\sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
 ) (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/wrapfig\wrapfig.sty
 \wrapoverhang=\dimen308
 \WF@size=\dimen309
@@ -1033,7 +1047,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \c@nlinenum=\count341
 \TeXr@lab=\toks52
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 23
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 26
 6.
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1044,35 +1058,35 @@ File: l3backend-pdftex.def 2021-05-07 L3 backend support: PDF output (pdfTeX)
 ) (InformeFinal.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
-)
+(titulos.aux))
 \openout1 = `InformeFinal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 236.
-LaTeX Font Info:    ... okay on input line 236.
-LaTeX Info: Redefining \microtypecontext on input line 236.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 266.
+LaTeX Font Info:    ... okay on input line 266.
+LaTeX Info: Redefining \microtypecontext on input line 266.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 236.
+LaTeX Info: Redefining \showhyphens on input line 266.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1098,7 +1112,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 236.
+Package hyperref Info: Link coloring OFF on input line 266.
 (C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/refcount\refcount.sty
@@ -1110,9 +1124,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count349
 )
-LaTeX Info: Redefining \ref on input line 236.
-LaTeX Info: Redefining \pageref on input line 236.
-LaTeX Info: Redefining \nameref on input line 236.
+LaTeX Info: Redefining \ref on input line 266.
+LaTeX Info: Redefining \pageref on input line 266.
+LaTeX Info: Redefining \nameref on input line 266.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1130,10 +1144,10 @@ LaTeX Info: Redefining \nameref on input line 236.
 * \oddsidemargin=30.1601pt
 * \evensidemargin=-0.00018pt
 * \topmargin=-0.00018pt
-* \headheight=19.5pt
+* \headheight=32.0pt
 * \headsep=18.06749pt
 * \topskip=10.0pt
-* \footskip=25.29494pt
+* \footskip=40.0pt
 * \marginparwidth=125.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
@@ -1147,29 +1161,44 @@ LaTeX Info: Redefining \nameref on input line 236.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 266.
+<www/Portada_1.pdf, id=6, 614.295pt x 794.97pt>
+File: www/Portada_1.pdf Graphic file (type pdf)
+<use www/Portada_1.pdf>
+Package pdftex.def Info: www/Portada_1.pdf  used on input line 284.
+(pdftex.def)             Requested size: 614.295pt x 795.01657pt.
+LaTeX Font Info:    Trying to load font information for T1+pag on input line 28
+5.
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1pag.fd
+File: t1pag.fd 2001/06/04 font definitions for T1/pag.
+)
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <24.88> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 285.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 238.
+ 286.
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 238.
+ 286.
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 238.
+ 286.
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 238.
+ 286.
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 ) (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-msa.cfg
@@ -1178,1504 +1207,2357 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-38.
+86.
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 286.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 286.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 286.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <17.28> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 287.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 238.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 238.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 238.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 287.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 287.
+<www/logos_MinSalud_FNE.png, id=7, 279.9258pt x 27.4626pt>
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 290.
+(pdftex.def)             Requested size: 368.58073pt x 36.1623pt.
 [1
 
 
-{C:/Users/Daniel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for T1+pag on input line 24
-2.
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\t1pag.fd
-File: t1pag.fd 2001/06/04 font definitions for T1/pag.
-)
+{C:/Users/Daniel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./www/Port
+ada_1.pdf> <./www/logos_MinSalud_FNE.png>] [2
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+03.
+(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [3]
+\openout2 = `titulos.aux'.
+
+(titulos.tex
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 13.
+(pdftex.def)             Requested size: 439.59511pt x 43.12975pt.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <20.74> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <12> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <14.4> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 21.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pag' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[2
+) [4
 
 ] (InformeFinal.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-[3])
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+[5
+
+
+
+]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 77.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[6])
 \tf@toc=\write5
 \openout5 = `InformeFinal.toc'.
 
-LaTeX Info: Redefining \. on input line 245.
-LaTeX Info: Redefining \% on input line 245.
-[4] [5
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 321.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
 
-]
-LaTeX Info: Redefining \. on input line 272.
-LaTeX Info: Redefining \% on input line 272.
-[6
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[7] [8
+
+] [1
+
+] [2
 
 ]
 Cap\'{\i }tulo 1.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
-74.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+52.
 (C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [7]
-LaTeX Info: Redefining \. on input line 285.
-LaTeX Info: Redefining \% on input line 285.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 285.
-[8
+) [3] [4
 
 ]
 Cap\'{\i }tulo 2.
-[9]
-LaTeX Info: Redefining \. on input line 311.
-LaTeX Info: Redefining \% on input line 311.
-[10
+[5] [6
 
 ]
 Cap\'{\i }tulo 3.
-[11]
-LaTeX Info: Redefining \. on input line 392.
-LaTeX Info: Redefining \% on input line 392.
-[12] [13]
-LaTeX Info: Redefining \. on input line 407.
-LaTeX Info: Redefining \% on input line 407.
-[14
+[7]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 472.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[8]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 487.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[9] [10
 
 ]
 Cap\'{\i }tulo 4.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
-16.
-(C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex/latex/psnfss\ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-<InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf, id=241, 722.7pt x 3
+<InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf, id=314, 722.7pt x 3
 61.35pt>
 File: InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/serieTiempoCreacion-1.
-pdf  used on input line 436.
-(pdftex.def)             Requested size: 439.60025pt x 219.80013pt.
+pdf  used on input line 516.
+(pdftex.def)             Requested size: 439.59511pt x 219.80013pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15]
-LaTeX Info: Redefining \. on input line 455.
-LaTeX Info: Redefining \% on input line 455.
-[16 <./InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf>]
-<InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf, id=271, 939.
+[11]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 535.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[12 <./InformeFinal_files/figure-latex/serieTiempoCreacion-1.pdf>]
+<InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf, id=345, 939.
 51pt x 361.35pt>
 File: InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf Graphic 
 file (type pdf)
 <use InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/perfilProfesionalEncar
-gado-1.pdf  used on input line 469.
-(pdftex.def)             Requested size: 439.59143pt x 169.07362pt.
-<InformeFinal_files/figure-latex/perfilProfesional2-1.pdf, id=274, 578.16pt x 2
+gado-1.pdf  used on input line 549.
+(pdftex.def)             Requested size: 439.59511pt x 169.07362pt.
+<InformeFinal_files/figure-latex/perfilProfesional2-1.pdf, id=348, 578.16pt x 2
 89.08pt>
 File: InformeFinal_files/figure-latex/perfilProfesional2-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/perfilProfesional2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/perfilProfesional2-1.p
-df  used on input line 480.
-(pdftex.def)             Requested size: 395.6314pt x 197.81569pt.
-<InformeFinal_files/figure-latex/perfilProfesional3-1.pdf, id=279, 939.51pt x 3
+df  used on input line 560.
+(pdftex.def)             Requested size: 395.6329pt x 197.81569pt.
+<InformeFinal_files/figure-latex/perfilProfesional3-1.pdf, id=353, 939.51pt x 3
 61.35pt>
 File: InformeFinal_files/figure-latex/perfilProfesional3-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/perfilProfesional3-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/perfilProfesional3-1.p
-df  used on input line 493.
-(pdftex.def)             Requested size: 439.59143pt x 169.07362pt.
-LaTeX Info: Redefining \. on input line 505.
-LaTeX Info: Redefining \% on input line 505.
-[17]
-<InformeFinal_files/figure-latex/pieProfesional2-1.pdf, id=289, 578.16pt x 325.
+df  used on input line 573.
+(pdftex.def)             Requested size: 439.59511pt x 169.07362pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 585.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[13]
+<InformeFinal_files/figure-latex/pieProfesional2-1.pdf, id=363, 578.16pt x 325.
 215pt>
 File: InformeFinal_files/figure-latex/pieProfesional2-1.pdf Graphic file (type 
 pdf)
 <use InformeFinal_files/figure-latex/pieProfesional2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/pieProfesional2-1.pdf 
- used on input line 508.
-(pdftex.def)             Requested size: 373.65579pt x 210.18138pt.
+ used on input line 588.
+(pdftex.def)             Requested size: 373.65852pt x 210.18138pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<InformeFinal_files/figure-latex/institucionesInscritas-1.pdf, id=293, 433.62pt
+<InformeFinal_files/figure-latex/institucionesInscritas-1.pdf, id=367, 433.62pt
  x 289.08pt>
 File: InformeFinal_files/figure-latex/institucionesInscritas-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/institucionesInscritas-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/institucionesInscritas
--1.pdf  used on input line 545.
-(pdftex.def)             Requested size: 395.65346pt x 263.76897pt.
-LaTeX Info: Redefining \. on input line 553.
-LaTeX Info: Redefining \% on input line 553.
-[18]
-<InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf, id=304, 
+-1.pdf  used on input line 625.
+(pdftex.def)             Requested size: 395.6329pt x 263.76897pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 633.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[14]
+<InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf, id=378, 
 433.62pt x 289.08pt>
 File: InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf Grap
 hic file (type pdf)
 <use InformeFinal_files/figure-latex/institucionesInscritasRelacion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/institucionesInscritas
-Relacion-1.pdf  used on input line 564.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf, id=306, 7
+Relacion-1.pdf  used on input line 644.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+<InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf, id=380, 7
 22.7pt x 289.08pt>
 File: InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf Graph
 ic file (type pdf)
 <use InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/institucionesInscritas
-VARdemo-1.pdf  used on input line 575.
-(pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
+VARdemo-1.pdf  used on input line 655.
+(pdftex.def)             Requested size: 439.59511pt x 175.84009pt.
 
-Underfull \vbox (badness 6396) has occurred while \output is active []
+Underfull \vbox (badness 1540) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 588.
-LaTeX Info: Redefining \% on input line 588.
-[19]
-<InformeFinal_files/figure-latex/IngresosFRE1-1.pdf, id=320, 578.16pt x 433.62p
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 668.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[15]
+<InformeFinal_files/figure-latex/IngresosFRE1-1.pdf, id=393, 578.16pt x 433.62p
 t>
 File: InformeFinal_files/figure-latex/IngresosFRE1-1.pdf Graphic file (type pdf
 )
 <use InformeFinal_files/figure-latex/IngresosFRE1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/IngresosFRE1-1.pdf  us
-ed on input line 607.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-LaTeX Info: Redefining \. on input line 632.
-LaTeX Info: Redefining \% on input line 632.
-[20]
-<InformeFinal_files/figure-latex/IngresosFRE2-1.pdf, id=332, 578.16pt x 433.62p
+ed on input line 687.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 712.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[16]
+<InformeFinal_files/figure-latex/IngresosFRE2-1.pdf, id=405, 578.16pt x 433.62p
 t>
 File: InformeFinal_files/figure-latex/IngresosFRE2-1.pdf Graphic file (type pdf
 )
 <use InformeFinal_files/figure-latex/IngresosFRE2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/IngresosFRE2-1.pdf  us
-ed on input line 635.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-LaTeX Info: Redefining \. on input line 673.
-LaTeX Info: Redefining \% on input line 673.
-[21]
-<InformeFinal_files/figure-latex/PCA1-1.pdf, id=340, 433.62pt x 216.81pt>
+ed on input line 715.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 753.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[17]
+<InformeFinal_files/figure-latex/PCA1-1.pdf, id=414, 433.62pt x 216.81pt>
 File: InformeFinal_files/figure-latex/PCA1-1.pdf Graphic file (type pdf)
 <use InformeFinal_files/figure-latex/PCA1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/PCA1-1.pdf  used on in
-put line 682.
-(pdftex.def)             Requested size: 395.65346pt x 197.82672pt.
-<InformeFinal_files/figure-latex/PCA1-2-1.pdf, id=343, 614.295pt x 398.48875pt>
+put line 762.
+(pdftex.def)             Requested size: 395.6329pt x 197.82672pt.
+<InformeFinal_files/figure-latex/PCA1-2-1.pdf, id=417, 614.295pt x 398.48875pt>
 
 File: InformeFinal_files/figure-latex/PCA1-2-1.pdf Graphic file (type pdf)
 <use InformeFinal_files/figure-latex/PCA1-2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/PCA1-2-1.pdf  used on 
-input line 694.
-(pdftex.def)             Requested size: 395.64076pt x 256.64932pt.
-LaTeX Info: Redefining \. on input line 716.
-LaTeX Info: Redefining \% on input line 716.
-[22]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[23]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[24 <./InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf> <./Inf
+input line 774.
+(pdftex.def)             Requested size: 395.6329pt x 256.64932pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 796.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[18]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[19]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[20 <./InformeFinal_files/figure-latex/perfilProfesionalEncargado-1.pdf> <./Inf
 ormeFinal_files/figure-latex/perfilProfesional2-1.pdf>]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[25 <./InformeFinal_files/figure-latex/perfilProfesional3-1.pdf> <./InformeFina
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[21 <./InformeFinal_files/figure-latex/perfilProfesional3-1.pdf> <./InformeFina
 l_files/figure-latex/pieProfesional2-1.pdf>]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[26 <./InformeFinal_files/figure-latex/institucionesInscritas-1.pdf> <./Informe
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[22 <./InformeFinal_files/figure-latex/institucionesInscritas-1.pdf> <./Informe
 Final_files/figure-latex/institucionesInscritasRelacion-1.pdf>]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[27 <./InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf> <./
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[23 <./InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1.pdf> <./
 InformeFinal_files/figure-latex/IngresosFRE1-1.pdf>]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[28 <./InformeFinal_files/figure-latex/IngresosFRE2-1.pdf> <./InformeFinal_file
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[24 <./InformeFinal_files/figure-latex/IngresosFRE2-1.pdf> <./InformeFinal_file
 s/figure-latex/PCA1-1.pdf>]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[29 <./InformeFinal_files/figure-latex/PCA1-2-1.pdf>]
-LaTeX Info: Redefining \. on input line 722.
-LaTeX Info: Redefining \% on input line 722.
-[30
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 802.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[25 <./InformeFinal_files/figure-latex/PCA1-2-1.pdf>] [26
 
 ]
 Cap\'{\i }tulo 5.
-<InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf, id=467, 867.24pt 
+<InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf, id=541, 867.24pt 
 x 361.35pt>
 File: InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/existenciasRecetarios-
-1.pdf  used on input line 742.
-(pdftex.def)             Requested size: 439.60027pt x 183.16676pt.
-[31]
-<InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf, id=481, 505.89pt
+1.pdf  used on input line 822.
+(pdftex.def)             Requested size: 439.59511pt x 183.16676pt.
+[27]
+<InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf, id=554, 505.89pt
  x 361.35pt>
 File: InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/existenciasRecetarios2
--1.pdf  used on input line 762.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-LaTeX Info: Redefining \. on input line 778.
-LaTeX Info: Redefining \% on input line 778.
-[32 <./InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf>]
-<InformeFinal_files/figure-latex/costoRecetario-1.pdf, id=497, 578.16pt x 361.3
+-1.pdf  used on input line 842.
+(pdftex.def)             Requested size: 373.65852pt x 266.90408pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 858.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[28 <./InformeFinal_files/figure-latex/existenciasRecetarios-1.pdf>]
+<InformeFinal_files/figure-latex/costoRecetario-1.pdf, id=570, 578.16pt x 361.3
 5pt>
 File: InformeFinal_files/figure-latex/costoRecetario-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/costoRecetario-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/costoRecetario-1.pdf  
-used on input line 781.
-(pdftex.def)             Requested size: 395.6314pt x 247.26962pt.
-<InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf, id=500, 867.2
+used on input line 861.
+(pdftex.def)             Requested size: 395.6329pt x 247.26962pt.
+<InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf, id=573, 867.2
 4pt x 433.62pt>
 File: InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf Graphic f
 ile (type pdf)
 <use InformeFinal_files/figure-latex/comparativoDepartamentos0-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/comparativoDepartament
-os0-1.pdf  used on input line 794.
-(pdftex.def)             Requested size: 439.60027pt x 219.80013pt.
+os0-1.pdf  used on input line 874.
+(pdftex.def)             Requested size: 439.59511pt x 219.80013pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 890.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
 
-Underfull \vbox (badness 1831) has occurred while \output is active []
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-LaTeX Info: Redefining \. on input line 810.
-LaTeX Info: Redefining \% on input line 810.
-[33 <./InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf>]
-LaTeX Info: Redefining \. on input line 810.
-LaTeX Info: Redefining \% on input line 810.
-[34 <./InformeFinal_files/figure-latex/costoRecetario-1.pdf> <./InformeFinal_fi
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[29 <./InformeFinal_files/figure-latex/existenciasRecetarios2-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 890.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[30 <./InformeFinal_files/figure-latex/costoRecetario-1.pdf> <./InformeFinal_fi
 les/figure-latex/comparativoDepartamentos0-1.pdf>]
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
-[35]
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-857.
-(C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmtt.fd
-File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Overfull \hbox (32.90352pt too wide) in paragraph at lines 857--857
-[]\T1/lmtt/m/n/10 ## Bin width defaults to 1/30 of the range of the data. Pick 
-better value with \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 binwidth\TS1/lmtt/m/n/10 `\
-T1/lmtt/m/n/10 .[] 
- []
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 932.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
 
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-Overfull \hbox (32.90352pt too wide) in paragraph at lines 857--857
-[]\T1/lmtt/m/n/10 ## Bin width defaults to 1/30 of the range of the data. Pick 
-better value with \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 binwidth\TS1/lmtt/m/n/10 `\
-T1/lmtt/m/n/10 .[] 
- []
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
 
-
-Overfull \hbox (32.90352pt too wide) in paragraph at lines 857--857
-[]\T1/lmtt/m/n/10 ## Bin width defaults to 1/30 of the range of the data. Pick 
-better value with \TS1/lmtt/m/n/10 `\T1/lmtt/m/n/10 binwidth\TS1/lmtt/m/n/10 `\
-T1/lmtt/m/n/10 .[] 
- []
-
-<InformeFinal_files/figure-latex/DependParcial1-1.pdf, id=550, 650.43pt x 361.3
+[31]
+<InformeFinal_files/figure-latex/DependParcial1-1.pdf, id=624, 650.43pt x 361.3
 5pt>
 File: InformeFinal_files/figure-latex/DependParcial1-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/DependParcial1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/DependParcial1-1.pdf  
-used on input line 861.
-(pdftex.def)             Requested size: 395.64021pt x 219.80013pt.
-<InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf, id=552, 650.43pt x 361.
+used on input line 935.
+(pdftex.def)             Requested size: 395.6329pt x 219.80013pt.
+<InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf, id=626, 650.43pt x 361.
 35pt>
 File: InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf Graphic file (type 
 pdf)
 <use InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf 
- used on input line 879.
-(pdftex.def)             Requested size: 395.64021pt x 219.80013pt.
-LaTeX Info: Redefining \. on input line 887.
-LaTeX Info: Redefining \% on input line 887.
-[36 <./InformeFinal_files/figure-latex/DependParcial1-1.pdf>]
-<InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf, id=566, 505.89pt x
+ used on input line 953.
+(pdftex.def)             Requested size: 395.6329pt x 219.80013pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 965.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[32 <./InformeFinal_files/figure-latex/DependParcial1-1.pdf>]
+<InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf, id=639, 505.89pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf Graphic file (
 type pdf)
 <use InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/modalidadAdquisicion-1
-.pdf  used on input line 902.
-(pdftex.def)             Requested size: 373.66571pt x 213.52325pt.
-LaTeX Info: Redefining \. on input line 915.
-LaTeX Info: Redefining \% on input line 915.
-[37 <./InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf>]
-<figures/procesoContractual.jpg, id=585, 301.125pt x 390.7398pt>
+.pdf  used on input line 976.
+(pdftex.def)             Requested size: 373.65852pt x 213.52325pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 990.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[33 <./InformeFinal_files/figure-latex/PVTA-Recetarios-1.pdf>]
+<figures/procesoContractual.jpg, id=657, 301.125pt x 390.7398pt>
 File: figures/procesoContractual.jpg Graphic file (type jpg)
 <use figures/procesoContractual.jpg>
-Package pdftex.def Info: figures/procesoContractual.jpg  used on input line 925
+Package pdftex.def Info: figures/procesoContractual.jpg  used on input line 999
 .
-(pdftex.def)             Requested size: 301.13803pt x 390.75673pt.
-<InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf, id=586, 505.89p
+(pdftex.def)             Requested size: 351.67741pt x 456.38268pt.
+<InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf, id=658, 505.89p
 t x 361.35pt>
 File: InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf Graphic fil
 e (type pdf)
 <use InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/tiempoDemoraAdquisicio
-n-1.pdf  used on input line 937.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
+n-1.pdf  used on input line 1011.
+(pdftex.def)             Requested size: 373.65852pt x 266.90408pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1021.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-LaTeX Info: Redefining \. on input line 945.
-LaTeX Info: Redefining \% on input line 945.
-[38 <./InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf>]
-LaTeX Info: Redefining \. on input line 945.
-LaTeX Info: Redefining \% on input line 945.
-[39 <./figures/procesoContractual.jpg>]
-LaTeX Info: Redefining \. on input line 957.
-LaTeX Info: Redefining \% on input line 957.
-[40 <./InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf>]
-<InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf, id=619, 7
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[34 <./InformeFinal_files/figure-latex/modalidadAdquisicion-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1021.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[35 <./figures/procesoContractual.jpg>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1038.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[36 <./InformeFinal_files/figure-latex/tiempoDemoraAdquisicion-1.pdf>]
+<InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf, id=693, 7
 22.7pt x 361.35pt>
 File: InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf Graph
 ic file (type pdf)
 <use InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ReciboRecetariosInstit
-uciones-1.pdf  used on input line 970.
-(pdftex.def)             Requested size: 439.60025pt x 219.80013pt.
-LaTeX Info: Redefining \. on input line 985.
-LaTeX Info: Redefining \% on input line 985.
-[41 <./InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf>]
-<figures/procesoVentaREC.png, id=637, 362.85562pt x 340.27126pt>
+uciones-1.pdf  used on input line 1044.
+(pdftex.def)             Requested size: 439.59511pt x 219.80013pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1059.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[37 <./InformeFinal_files/figure-latex/ReciboRecetariosInstituciones-1.pdf>]
+<figures/procesoVentaREC.png, id=711, 362.85562pt x 340.27126pt>
 File: figures/procesoVentaREC.png Graphic file (type png)
 <use figures/procesoVentaREC.png>
-Package pdftex.def Info: figures/procesoVentaREC.png  used on input line 988.
-(pdftex.def)             Requested size: 351.68715pt x 329.79791pt.
-LaTeX Info: Redefining \. on input line 998.
-LaTeX Info: Redefining \% on input line 998.
-[42 <./figures/procesoVentaREC.png>]
-<InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf, id=648, 578.16
+Package pdftex.def Info: figures/procesoVentaREC.png  used on input line 1062.
+(pdftex.def)             Requested size: 351.67741pt x 329.79791pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1072.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[38 <./figures/procesoVentaREC.png>]
+<InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf, id=720, 578.16
 pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiempoVentaInstitucion
-es-1.pdf  used on input line 1001.
-(pdftex.def)             Requested size: 395.6314pt x 296.72356pt.
-<InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf, id=650, 505.89pt x 289.
+es-1.pdf  used on input line 1075.
+(pdftex.def)             Requested size: 395.6329pt x 296.72356pt.
+<InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf, id=722, 505.89pt x 289.
 08pt>
 File: InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf Graphic file (type 
 pdf)
 <use InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf 
- used on input line 1026.
-(pdftex.def)             Requested size: 373.66571pt x 213.52325pt.
-LaTeX Info: Redefining \. on input line 1039.
-LaTeX Info: Redefining \% on input line 1039.
-[43 <./InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf>]
-LaTeX Info: Redefining \. on input line 1049.
-LaTeX Info: Redefining \% on input line 1049.
-[44 <./InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf>]
-<InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf, id=679, 578.16
+ used on input line 1100.
+(pdftex.def)             Requested size: 373.65852pt x 213.52325pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1113.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[39 <./InformeFinal_files/figure-latex/TiempoVentaInstituciones-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1127.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[40 <./InformeFinal_files/figure-latex/BD-diligBDRecet-1.pdf>]
+<InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf, id=750, 578.16
 pt x 361.35pt>
 File: InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/SeguimientoUsoRecetari
-os-1.pdf  used on input line 1058.
-(pdftex.def)             Requested size: 373.65579pt x 233.53488pt.
-LaTeX Info: Redefining \. on input line 1070.
-LaTeX Info: Redefining \% on input line 1070.
-[45 <./InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf>]
-<InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf, id=698
+os-1.pdf  used on input line 1132.
+(pdftex.def)             Requested size: 373.65852pt x 233.53488pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1145.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[41 <./InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1.pdf>]
+<InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf, id=771
 , 505.89pt x 361.35pt>
 File: InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf Gr
 aphic file (type pdf)
 <use InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiempoArchivoRecetario
-sOficiales-1.pdf  used on input line 1074.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-LaTeX Info: Redefining \. on input line 1091.
-LaTeX Info: Redefining \% on input line 1091.
-[46 <./InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf>]
-<InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf, id=716,
+sOficiales-1.pdf  used on input line 1148.
+(pdftex.def)             Requested size: 373.65852pt x 266.90408pt.
+<InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf, id=775,
  505.89pt x 361.35pt>
 File: InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf Gra
 phic file (type pdf)
 <use InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MedidasSeguridad-Almac
-enamiento-1.pdf  used on input line 1095.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-LaTeX Info: Redefining \. on input line 1109.
-LaTeX Info: Redefining \% on input line 1109.
-[47 <./InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf>]
-<InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf, id=732, 433.62pt 
+enamiento-1.pdf  used on input line 1169.
+(pdftex.def)             Requested size: 373.65852pt x 266.90408pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1174.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[42 <./InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1191.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[43 <./InformeFinal_files/figure-latex/MedidasSeguridad-Almacenamiento-1.pdf>]
+<InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf, id=806, 433.62pt 
 x 289.08pt>
 File: InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/existenciaRecetarios4-
-1.pdf  used on input line 1120.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1132.
-LaTeX Info: Redefining \% on input line 1132.
-[48 <./InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf>]
-<InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf, id=752, 505.89pt x 
+1.pdf  used on input line 1194.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+<InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf, id=809, 505.89pt x 
 361.35pt>
 File: InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MedidasSeguridadRec-1.
-pdf  used on input line 1135.
-(pdftex.def)             Requested size: 395.64241pt x 282.60173pt.
-LaTeX Info: Redefining \. on input line 1160.
-LaTeX Info: Redefining \% on input line 1160.
-[49 <./InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf>]
-<InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf, id=768, 722.7pt x
+pdf  used on input line 1209.
+(pdftex.def)             Requested size: 395.6329pt x 282.60173pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1214.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[44 <./InformeFinal_files/figure-latex/existenciaRecetarios4-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1236.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[45 <./InformeFinal_files/figure-latex/MedidasSeguridadRec-1.pdf>]
+<InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf, id=839, 722.7pt x
  361.35pt>
 File: InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ComparativoCostosRec1-
-1.pdf  used on input line 1165.
-(pdftex.def)             Requested size: 439.60025pt x 219.80013pt.
-<InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf, id=771, 433.62pt x
+1.pdf  used on input line 1239.
+(pdftex.def)             Requested size: 439.59511pt x 219.80013pt.
+<InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf, id=842, 433.62pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf Graphic file (
 type pdf)
 <use InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FREImplementacionROE-1
-.pdf  used on input line 1186.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1191.
-LaTeX Info: Redefining \% on input line 1191.
-[50 <./InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf>]
-LaTeX Info: Redefining \. on input line 1205.
-LaTeX Info: Redefining \% on input line 1205.
-[51 <./InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf>]
-LaTeX Info: Redefining \. on input line 1208.
-LaTeX Info: Redefining \% on input line 1208.
-[52]
-Cap\'{\i }tulo 6.
-[53
+.pdf  used on input line 1260.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1268.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[46 <./InformeFinal_files/figure-latex/ComparativoCostosRec1-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1282.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[47 <./InformeFinal_files/figure-latex/FREImplementacionROE-1.pdf>] [48
 
 ]
-LaTeX Info: Redefining \. on input line 1269.
-LaTeX Info: Redefining \% on input line 1269.
-[54]
-LaTeX Info: Redefining \. on input line 1300.
-LaTeX Info: Redefining \% on input line 1300.
-[55]
-<InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf, id=871, 5
+Cap\'{\i }tulo 6.
+[49]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1343.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[50]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1371.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[51]
+<InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf, id=942, 5
 78.16pt x 259.97125pt>
 File: InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf Graph
 ic file (type pdf)
 <use InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/HerramientasManejoInve
-ntarios-1.pdf  used on input line 1303.
-(pdftex.def)             Requested size: 417.607pt x 187.77814pt.
-LaTeX Info: Redefining \. on input line 1319.
-LaTeX Info: Redefining \% on input line 1319.
-[56 <./InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf>]
-<InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf, id=889, 433.62pt x 289.0
+ntarios-1.pdf  used on input line 1377.
+(pdftex.def)             Requested size: 417.614pt x 187.77814pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1393.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[52 <./InformeFinal_files/figure-latex/HerramientasManejoInventarios-1.pdf>]
+<InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf, id=960, 433.62pt x 289.0
 8pt>
 File: InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf  
-used on input line 1337.
-(pdftex.def)             Requested size: 395.65346pt x 263.76897pt.
-LaTeX Info: Redefining \. on input line 1354.
-LaTeX Info: Redefining \% on input line 1354.
-[57]
-<InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf, id=902, 433.62pt x 
+used on input line 1411.
+(pdftex.def)             Requested size: 395.6329pt x 263.76897pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1428.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[53]
+<InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf, id=974, 433.62pt x 
 289.08pt>
 File: InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.
-pdf  used on input line 1357.
-(pdftex.def)             Requested size: 342.9001pt x 228.60005pt.
-LaTeX Info: Redefining \. on input line 1377.
-LaTeX Info: Redefining \% on input line 1377.
-[58 <./InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf>]
-<InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf, id=919, 867.24
+pdf  used on input line 1431.
+(pdftex.def)             Requested size: 342.88364pt x 228.60005pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1451.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[54 <./InformeFinal_files/figure-latex/FrecComprasFNR-1.pdf>]
+<InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf, id=991, 867.24
 pt x 606.265pt>
 File: InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/EtapasProcesoAdquisici
-on-1.pdf  used on input line 1398.
-(pdftex.def)             Requested size: 439.60027pt x 307.31314pt.
-LaTeX Info: Redefining \. on input line 1408.
-LaTeX Info: Redefining \% on input line 1408.
-[59 <./InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf>]
-<InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf, id=942,
- 650.43pt x 433.62pt>
+on-1.pdf  used on input line 1472.
+(pdftex.def)             Requested size: 439.59511pt x 307.31314pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1482.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[55 <./InformeFinal_files/figure-latex/UsoNivelesSeguridad-1.pdf>]
+<InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf, id=1014
+, 650.43pt x 433.62pt>
 File: InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf Gra
 phic file (type pdf)
 <use InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/EtapasProcesoAdquisici
-onDetalle-1.pdf  used on input line 1417.
-(pdftex.def)             Requested size: 417.62354pt x 278.4157pt.
-LaTeX Info: Redefining \. on input line 1425.
-LaTeX Info: Redefining \% on input line 1425.
-[60 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf>]
-LaTeX Info: Redefining \. on input line 1432.
-LaTeX Info: Redefining \% on input line 1432.
-[61 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf>]
-<InformeFinal_files/figure-latex/ColombiaCompra-1.pdf, id=974, 578.16pt x 277.0
-35pt>
+onDetalle-1.pdf  used on input line 1491.
+(pdftex.def)             Requested size: 417.614pt x 278.4157pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1499.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[56 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicion-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1506.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[57 <./InformeFinal_files/figure-latex/EtapasProcesoAdquisicionDetalle-1.pdf>]
+<InformeFinal_files/figure-latex/ColombiaCompra-1.pdf, id=1045, 578.16pt x 277.
+035pt>
 File: InformeFinal_files/figure-latex/ColombiaCompra-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/ColombiaCompra-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ColombiaCompra-1.pdf  
-used on input line 1449.
-(pdftex.def)             Requested size: 439.59143pt x 210.63754pt.
-LaTeX Info: Redefining \. on input line 1459.
-LaTeX Info: Redefining \% on input line 1459.
-[62]
-Overfull \hbox (1.14105pt too wide) in paragraph at lines 1463--1464
+used on input line 1523.
+(pdftex.def)             Requested size: 439.59511pt x 210.63754pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1533.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[58]
+Overfull \hbox (1.14105pt too wide) in paragraph at lines 1537--1538
 []\T1/ptm/m/n/10 (-20) A nivel nacional se cuenta con el \T1/ptm/m/it/10 (-20) 
 ``Manual de condiciones esenciales y procedimientos del Servicio Farmacéutico''
 
  []
 
-LaTeX Info: Redefining \. on input line 1483.
-LaTeX Info: Redefining \% on input line 1483.
-[63 <./InformeFinal_files/figure-latex/ColombiaCompra-1.pdf>]
-<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf, id=1005
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1557.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[59 <./InformeFinal_files/figure-latex/ColombiaCompra-1.pdf>]
+<InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf, id=1077
 , 722.7pt x 325.215pt>
 File: InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf Gra
 phic file (type pdf)
 <use InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposRecepcionAlmace
-namientob-1.pdf  used on input line 1504.
-(pdftex.def)             Requested size: 439.60025pt x 197.8201pt.
-LaTeX Info: Redefining \. on input line 1519.
-LaTeX Info: Redefining \% on input line 1519.
-[64 <./InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf>]
-<InformeFinal_files/figure-latex/TiemposTranslados-1.pdf, id=1027, 794.97pt x 3
+namientob-1.pdf  used on input line 1578.
+(pdftex.def)             Requested size: 439.59511pt x 197.8201pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1590.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[60 <./InformeFinal_files/figure-latex/TiemposRecepcionAlmacenamientob-1.pdf>]
+<InformeFinal_files/figure-latex/TiemposTranslados-1.pdf, id=1099, 794.97pt x 3
 25.215pt>
 File: InformeFinal_files/figure-latex/TiemposTranslados-1.pdf Graphic file (typ
 e pdf)
 <use InformeFinal_files/figure-latex/TiemposTranslados-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposTranslados-1.pd
-f  used on input line 1526.
-(pdftex.def)             Requested size: 439.60025pt x 179.83646pt.
-<InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf, id=1028, 433.62p
+f  used on input line 1600.
+(pdftex.def)             Requested size: 439.59511pt x 179.83646pt.
+<InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf, id=1100, 433.62p
 t x 303.1325pt>
 File: InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecVentaInstituciones
--1.pdf  used on input line 1542.
-(pdftex.def)             Requested size: 373.68007pt x 261.23004pt.
-LaTeX Info: Redefining \. on input line 1550.
-LaTeX Info: Redefining \% on input line 1550.
-[65 <./InformeFinal_files/figure-latex/TiemposTranslados-1.pdf>]
-<InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf, id=1043, 578.16pt x 
+-1.pdf  used on input line 1616.
+(pdftex.def)             Requested size: 373.65852pt x 261.23004pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1624.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[61 <./InformeFinal_files/figure-latex/TiemposTranslados-1.pdf>]
+<InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf, id=1115, 578.16pt x 
 433.62pt>
 File: InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ControlesVentasFRE-1.p
-df  used on input line 1558.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf, id=1045, 433.6
+df  used on input line 1632.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+<InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf, id=1117, 433.6
 2pt x 289.08pt>
 File: InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/InstitucionesAdicional
-es-1.pdf  used on input line 1569.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
+es-1.pdf  used on input line 1643.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1654.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
 
-Underfull \vbox (badness 2469) has occurred while \output is active []
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-LaTeX Info: Redefining \. on input line 1585.
-LaTeX Info: Redefining \% on input line 1585.
-[66 <./InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf>]
-<InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf, id=10
-64, 578.16pt x 433.62pt>
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[62 <./InformeFinal_files/figure-latex/FrecVentaInstituciones-1.pdf>]
+<InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf, id=11
+36, 578.16pt x 433.62pt>
 File: InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf G
 raphic file (type pdf)
 <use InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MedidasSeguridadAlmace
-namientoMME-1.pdf  used on input line 1588.
-(pdftex.def)             Requested size: 395.6314pt x 296.72356pt.
-LaTeX Info: Redefining \. on input line 1603.
-LaTeX Info: Redefining \% on input line 1603.
-[67 <./InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf>]
-<InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf, id=1082, 433.62pt x 
+namientoMME-1.pdf  used on input line 1662.
+(pdftex.def)             Requested size: 395.6329pt x 296.72356pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1674.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[63 <./InformeFinal_files/figure-latex/ControlesVentasFRE-1.pdf>]
+<InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf, id=1153, 433.62pt x 
 289.08pt>
 File: InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecRevCondiciones-1.p
-df  used on input line 1606.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
+df  used on input line 1680.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
 <InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf, id=1
-085, 722.7pt x 289.08pt>
+156, 722.7pt x 289.08pt>
 File: InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf 
 Graphic file (type pdf)
 <use InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MetodosSeguimientoCont
-rolAmbiental-1.pdf  used on input line 1617.
-(pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
-<InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf, id=1088, 578.16pt
+rolAmbiental-1.pdf  used on input line 1691.
+(pdftex.def)             Requested size: 439.59511pt x 175.84009pt.
+<InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf, id=1159, 578.16pt
  x 433.62pt>
 File: InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ProductosCompartidos1-
-1.pdf  used on input line 1633.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-LaTeX Info: Redefining \. on input line 1638.
-LaTeX Info: Redefining \% on input line 1638.
-[68 <./InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf>]
-LaTeX Info: Redefining \. on input line 1638.
-LaTeX Info: Redefining \% on input line 1638.
-[69 <./InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf>
+1.pdf  used on input line 1707.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1712.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[64 <./InformeFinal_files/figure-latex/InstitucionesAdicionales-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1712.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[65 <./InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1.pdf>
 ]
-<InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf, id=1115, 433.62pt 
+<InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf, id=1187, 433.62pt 
 x 216.81pt>
 File: InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf Graphic file (
 type pdf)
 <use InformeFinal_files/figure-latex/PropOcupacionAlmacen-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/PropOcupacionAlmacen-1
-.pdf  used on input line 1644.
-(pdftex.def)             Requested size: 373.68007pt x 186.84003pt.
-<InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf, id=1118, 722.7pt
+.pdf  used on input line 1718.
+(pdftex.def)             Requested size: 373.65852pt x 186.84003pt.
+<InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf, id=1190, 722.7pt
  x 289.08pt>
 File: InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/FrecControlExistencias
--1.pdf  used on input line 1656.
-(pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
-LaTeX Info: Redefining \. on input line 1671.
-LaTeX Info: Redefining \% on input line 1671.
-[70 <./InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf>]
-LaTeX Info: Redefining \. on input line 1697.
-LaTeX Info: Redefining \% on input line 1697.
-[71 <./InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf
+-1.pdf  used on input line 1730.
+(pdftex.def)             Requested size: 439.59511pt x 175.84009pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1745.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[66 <./InformeFinal_files/figure-latex/FrecRevCondiciones-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1771.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[67 <./InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1.pdf
 >]
-LaTeX Info: Redefining \. on input line 1697.
-LaTeX Info: Redefining \% on input line 1697.
-[72 <./InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf> <./InformeF
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1771.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[68 <./InformeFinal_files/figure-latex/ProductosCompartidos1-1.pdf> <./InformeF
 inal_files/figure-latex/PropOcupacionAlmacen-1.pdf>]
-<InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf, id=1173, 722.7pt x 28
+<InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf, id=1245, 722.7pt x 28
 9.08pt>
 File: InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf Graphic file (typ
 e pdf)
 <use InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/CasosVencimiento1-1.pd
-f  used on input line 1700.
-(pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
-<InformeFinal_files/figure-latex/TransporteProductos-1.pdf, id=1175, 578.16pt x
+f  used on input line 1774.
+(pdftex.def)             Requested size: 439.59511pt x 175.84009pt.
+<InformeFinal_files/figure-latex/TransporteProductos-1.pdf, id=1247, 578.16pt x
  277.035pt>
 File: InformeFinal_files/figure-latex/TransporteProductos-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/TransporteProductos-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TransporteProductos-1.
-pdf  used on input line 1716.
-(pdftex.def)             Requested size: 439.59143pt x 210.63754pt.
-LaTeX Info: Redefining \. on input line 1738.
-LaTeX Info: Redefining \% on input line 1738.
-[73 <./InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf>]
-LaTeX Info: Redefining \. on input line 1753.
-LaTeX Info: Redefining \% on input line 1753.
-[74 <./InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf>]
-<InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf, id=1213, 1445
+pdf  used on input line 1790.
+(pdftex.def)             Requested size: 439.59511pt x 210.63754pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1812.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[69 <./InformeFinal_files/figure-latex/FrecControlExistencias-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1827.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[70 <./InformeFinal_files/figure-latex/CasosVencimiento1-1.pdf>]
+<InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf, id=1284, 1445
 .4pt x 1084.05pt>
 File: InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf Graphic f
 ile (type pdf)
 <use InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/precioVentasDepartamen
-tos-1.pdf  used on input line 1755.
-(pdftex.def)             Requested size: 439.60025pt x 329.7002pt.
-<InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf, id=1215, 867.24p
+tos-1.pdf  used on input line 1829.
+(pdftex.def)             Requested size: 439.59511pt x 329.7002pt.
+<InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf, id=1286, 867.24p
 t x 389.455pt>
 File: InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/boxplotComparativoPVTA
--1.pdf  used on input line 1767.
-(pdftex.def)             Requested size: 439.60027pt x 197.41307pt.
-LaTeX Info: Redefining \. on input line 1772.
-LaTeX Info: Redefining \% on input line 1772.
-[75 <./InformeFinal_files/figure-latex/TransporteProductos-1.pdf>]
-<InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf, id=1232, 722.7pt 
+-1.pdf  used on input line 1841.
+(pdftex.def)             Requested size: 439.59511pt x 197.41307pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1846.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[71 <./InformeFinal_files/figure-latex/TransporteProductos-1.pdf>]
+<InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf, id=1304, 722.7pt 
 x 397.485pt>
 File: InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/relacionMargenesCosto-
-1.pdf  used on input line 1780.
-(pdftex.def)             Requested size: 417.6114pt x 229.68626pt.
-LaTeX Info: Redefining \. on input line 1789.
-LaTeX Info: Redefining \% on input line 1789.
-[76 <./InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf>]
-LaTeX Info: Redefining \. on input line 1792.
-LaTeX Info: Redefining \% on input line 1792.
-[77 <./InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf>]
-LaTeX Info: Redefining \. on input line 1792.
-LaTeX Info: Redefining \% on input line 1792.
-[78 <./InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf>]
+1.pdf  used on input line 1854.
+(pdftex.def)             Requested size: 417.614pt x 229.68626pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1863.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[72 <./InformeFinal_files/figure-latex/precioVentasDepartamentos-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1866.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[73 <./InformeFinal_files/figure-latex/boxplotComparativoPVTA-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1866.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[74 <./InformeFinal_files/figure-latex/relacionMargenesCosto-1.pdf>]
 Cap\'{\i }tulo 7.
-<InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf, id=12
-94, 433.62pt x 289.08pt>
+<InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf, id=13
+66, 433.62pt x 289.08pt>
 File: InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf G
 raphic file (type pdf)
 <use InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/PropHerramientasManejo
-Inventarios-1.pdf  used on input line 1800.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-[79
-
- <./InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf>]
-<InformeFinal_files/figure-latex/MediosComunicacion-1.pdf, id=1309, 505.89pt x 
+Inventarios-1.pdf  used on input line 1874.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+<InformeFinal_files/figure-latex/MediosComunicacion-1.pdf, id=1370, 505.89pt x 
 429.605pt>
 File: InformeFinal_files/figure-latex/MediosComunicacion-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/MediosComunicacion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/MediosComunicacion-1.p
-df  used on input line 1820.
-(pdftex.def)             Requested size: 395.64241pt x 335.98206pt.
-<InformeFinal_files/figure-latex/ConexionInternet-1.pdf, id=1311, 505.89pt x 36
+df  used on input line 1894.
+(pdftex.def)             Requested size: 395.6329pt x 335.98206pt.
+[75
+
+]
+<InformeFinal_files/figure-latex/ConexionInternet-1.pdf, id=1379, 505.89pt x 36
 1.35pt>
 File: InformeFinal_files/figure-latex/ConexionInternet-1.pdf Graphic file (type
  pdf)
 <use InformeFinal_files/figure-latex/ConexionInternet-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ConexionInternet-1.pdf
-  used on input line 1833.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-LaTeX Info: Redefining \. on input line 1844.
-LaTeX Info: Redefining \% on input line 1844.
-[80]
-LaTeX Info: Redefining \. on input line 1844.
-LaTeX Info: Redefining \% on input line 1844.
-[81 <./InformeFinal_files/figure-latex/MediosComunicacion-1.pdf>]
-<InformeFinal_files/figure-latex/EquiposComputo-1.pdf, id=1335, 433.62pt x 289.
+  used on input line 1907.
+(pdftex.def)             Requested size: 373.65852pt x 266.90408pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1918.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[76 <./InformeFinal_files/figure-latex/PropHerramientasManejoInventarios-1.pdf>
+]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1918.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[77 <./InformeFinal_files/figure-latex/MediosComunicacion-1.pdf>]
+<InformeFinal_files/figure-latex/EquiposComputo-1.pdf, id=1407, 433.62pt x 289.
 08pt>
 File: InformeFinal_files/figure-latex/EquiposComputo-1.pdf Graphic file (type p
 df)
 <use InformeFinal_files/figure-latex/EquiposComputo-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/EquiposComputo-1.pdf  
-used on input line 1847.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf, id=1337, 433.62
+used on input line 1921.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+<InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf, id=1409, 433.62
 pt x 289.08pt>
 File: InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf Graphic fil
 e (type pdf)
 <use InformeFinal_files/figure-latex/RelacionEquiposPersonal-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/RelacionEquiposPersona
-l-1.pdf  used on input line 1860.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1868.
-LaTeX Info: Redefining \% on input line 1868.
-[82 <./InformeFinal_files/figure-latex/ConexionInternet-1.pdf>]
-LaTeX Info: Redefining \. on input line 1868.
-LaTeX Info: Redefining \% on input line 1868.
-[83 <./InformeFinal_files/figure-latex/EquiposComputo-1.pdf> <./InformeFinal_fi
+l-1.pdf  used on input line 1934.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1942.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[78 <./InformeFinal_files/figure-latex/ConexionInternet-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1942.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[79 <./InformeFinal_files/figure-latex/EquiposComputo-1.pdf> <./InformeFinal_fi
 les/figure-latex/RelacionEquiposPersonal-1.pdf>]
-<InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf, id=1370, 433.62pt
+<InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf, id=1442, 433.62pt
  x 289.08pt>
 File: InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf Graphic file 
 (type pdf)
 <use InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/OpinionEquiposComputo-
-1.pdf  used on input line 1871.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 1893.
-LaTeX Info: Redefining \% on input line 1893.
-[84 <./InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf>]
-<InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf, id=1387, 433.62pt x
+1.pdf  used on input line 1945.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1967.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[80 <./InformeFinal_files/figure-latex/OpinionEquiposComputo-1.pdf>]
+<InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf, id=1458, 433.62pt x
  289.08pt>
 File: InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/GarantiaInformacion-1.
-pdf  used on input line 1896.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/InformInscritos-1.pdf, id=1390, 722.7pt x 289.
+pdf  used on input line 1970.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+<InformeFinal_files/figure-latex/InformInscritos-1.pdf, id=1461, 722.7pt x 289.
 08pt>
 File: InformeFinal_files/figure-latex/InformInscritos-1.pdf Graphic file (type 
 pdf)
 <use InformeFinal_files/figure-latex/InformInscritos-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/InformInscritos-1.pdf 
- used on input line 1912.
-(pdftex.def)             Requested size: 439.60025pt x 175.84009pt.
-LaTeX Info: Redefining \. on input line 1920.
-LaTeX Info: Redefining \% on input line 1920.
-[85 <./InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf>]
-LaTeX Info: Redefining \. on input line 1920.
-LaTeX Info: Redefining \% on input line 1920.
-[86 <./InformeFinal_files/figure-latex/InformInscritos-1.pdf>]
+ used on input line 1986.
+(pdftex.def)             Requested size: 439.59511pt x 175.84009pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1994.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[81 <./InformeFinal_files/figure-latex/GarantiaInformacion-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 1994.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[82 <./InformeFinal_files/figure-latex/InformInscritos-1.pdf>]
 Cap\'{\i }tulo 8.
-[87
+[83
 
 ]
-<InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf, id=1427, 505.89pt x
+<InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf, id=1499, 505.89pt x
  361.35pt>
 File: InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf Graphic file (t
 ype pdf)
 <use InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/HerramientasDiligA1-1.
-pdf  used on input line 1960.
-(pdftex.def)             Requested size: 373.66571pt x 266.90408pt.
-LaTeX Info: Redefining \. on input line 1968.
-LaTeX Info: Redefining \% on input line 1968.
-[88 <./InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf>]
-<figures/Consolidacion_A1_Res_1479_2006.png, id=1446, 1365.1pt x 1907.125pt>
+pdf  used on input line 2034.
+(pdftex.def)             Requested size: 373.65852pt x 266.90408pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2042.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[84 <./InformeFinal_files/figure-latex/HerramientasDiligA1-1.pdf>]
+<figures/Consolidacion_A1_Res_1479_2006.png, id=1518, 1365.1pt x 1907.125pt>
 File: figures/Consolidacion_A1_Res_1479_2006.png Graphic file (type png)
 <use figures/Consolidacion_A1_Res_1479_2006.png>
 Package pdftex.def Info: figures/Consolidacion_A1_Res_1479_2006.png  used on in
-put line 1982.
-(pdftex.def)             Requested size: 351.6682pt x 491.30116pt.
-LaTeX Info: Redefining \. on input line 1996.
-LaTeX Info: Redefining \% on input line 1996.
-[89]
-LaTeX Info: Redefining \. on input line 1996.
-LaTeX Info: Redefining \% on input line 1996.
-[90 <./figures/Consolidacion_A1_Res_1479_2006.png>]
-<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf, id=1462, 578.16p
+put line 2056.
+(pdftex.def)             Requested size: 351.67741pt x 491.30116pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2070.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[85]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2070.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[86 <./figures/Consolidacion_A1_Res_1479_2006.png>]
+<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf, id=1534, 578.16p
 t x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposConsolidacionA1
--1.pdf  used on input line 1999.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf, id=1466, 578.1
+-1.pdf  used on input line 2073.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+<InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf, id=1538, 578.1
 6pt x 433.62pt>
 File: InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposConsolidacionA1
--1-1.pdf  used on input line 2014.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-LaTeX Info: Redefining \. on input line 2025.
-LaTeX Info: Redefining \% on input line 2025.
-[91 <./InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf>]
-LaTeX Info: Redefining \. on input line 2025.
-LaTeX Info: Redefining \% on input line 2025.
-[92 <./InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf>]
-<figures/Consolidacion_A2_Res_1479_2006.png, id=1496, 1219.55624pt x 1405.25pt>
+-1-1.pdf  used on input line 2088.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2096.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[87 <./InformeFinal_files/figure-latex/TiemposConsolidacionA1-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2096.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[88 <./InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1.pdf>]
+<figures/Consolidacion_A2_Res_1479_2006.png, id=1567, 1219.55624pt x 1405.25pt>
 
 File: figures/Consolidacion_A2_Res_1479_2006.png Graphic file (type png)
 <use figures/Consolidacion_A2_Res_1479_2006.png>
 Package pdftex.def Info: figures/Consolidacion_A2_Res_1479_2006.png  used on in
-put line 2032.
-(pdftex.def)             Requested size: 351.6711pt x 405.21773pt.
-<InformeFinal_files/figure-latex/RecepcionA13-1.pdf, id=1502, 578.16pt x 433.62
+put line 2106.
+(pdftex.def)             Requested size: 351.67741pt x 405.21773pt.
+<InformeFinal_files/figure-latex/RecepcionA13-1.pdf, id=1573, 578.16pt x 433.62
 pt>
 File: InformeFinal_files/figure-latex/RecepcionA13-1.pdf Graphic file (type pdf
 )
 <use InformeFinal_files/figure-latex/RecepcionA13-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/RecepcionA13-1.pdf  us
-ed on input line 2047.
-(pdftex.def)             Requested size: 373.65579pt x 280.24185pt.
-<InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf, id=1505, 722.7pt
+ed on input line 2121.
+(pdftex.def)             Requested size: 373.65852pt x 280.24185pt.
+<InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf, id=1576, 722.7pt
  x 361.35pt>
 File: InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf Graphic file
  (type pdf)
 <use InformeFinal_files/figure-latex/TiemposConsolidacionA2-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/TiemposConsolidacionA2
--1.pdf  used on input line 2058.
-(pdftex.def)             Requested size: 439.60025pt x 219.80013pt.
-LaTeX Info: Redefining \. on input line 2072.
-LaTeX Info: Redefining \% on input line 2072.
-[93]
-LaTeX Info: Redefining \. on input line 2072.
-LaTeX Info: Redefining \% on input line 2072.
-[94 <./figures/Consolidacion_A2_Res_1479_2006.png>]
-LaTeX Info: Redefining \. on input line 2072.
-LaTeX Info: Redefining \% on input line 2072.
-[95 <./InformeFinal_files/figure-latex/RecepcionA13-1.pdf> <./InformeFinal_file
+-1.pdf  used on input line 2132.
+(pdftex.def)             Requested size: 439.59511pt x 219.80013pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2146.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[89]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2146.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[90 <./figures/Consolidacion_A2_Res_1479_2006.png>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2146.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[91 <./InformeFinal_files/figure-latex/RecepcionA13-1.pdf> <./InformeFinal_file
 s/figure-latex/TiemposConsolidacionA2-1.pdf>]
-<InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf, id=1540, 433.62pt x 
+<InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf, id=1612, 433.62pt x 
 289.08pt>
 File: InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf Graphic file (ty
 pe pdf)
 <use InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/ArchivoInformesFRE-1.p
-df  used on input line 2080.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-<InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf, id=1542, 433.6
+df  used on input line 2154.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+<InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf, id=1614, 433.6
 2pt x 289.08pt>
 File: InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf Graphic fi
 le (type pdf)
 <use InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/SeguimientoEnvioInform
-es-1.pdf  used on input line 2094.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 2107.
-LaTeX Info: Redefining \% on input line 2107.
-[96 <./InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf>]
-<InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf, id=1562, 43
+es-1.pdf  used on input line 2168.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2178.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[92 <./InformeFinal_files/figure-latex/ArchivoInformesFRE-1.pdf>]
+<InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf, id=1634, 43
 3.62pt x 289.08pt>
 File: InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf Graphic
  file (type pdf)
 <use InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf>
 Package pdftex.def Info: InformeFinal_files/figure-latex/IncumplimientoEnvioInf
-ormes-1.pdf  used on input line 2110.
-(pdftex.def)             Requested size: 373.68007pt x 249.12003pt.
-LaTeX Info: Redefining \. on input line 2120.
-LaTeX Info: Redefining \% on input line 2120.
-[97 <./InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf>]
-LaTeX Info: Redefining \. on input line 2120.
-LaTeX Info: Redefining \% on input line 2120.
-[98 <./InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf>]
+ormes-1.pdf  used on input line 2184.
+(pdftex.def)             Requested size: 373.65852pt x 249.12003pt.
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2194.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[93 <./InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1.pdf>]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2194.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[94 <./InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1.pdf>]
 Cap\'{\i }tulo 9.
-[99
+[95
 
 ]
-LaTeX Info: Redefining \. on input line 2193.
-LaTeX Info: Redefining \% on input line 2193.
-[100] [101]
-LaTeX Info: Redefining \. on input line 2215.
-LaTeX Info: Redefining \% on input line 2215.
-[102
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2267.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
 
-] [103]
-LaTeX Info: Redefining \. on input line 2260.
-LaTeX Info: Redefining \% on input line 2260.
-[104] [105
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[96]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2289.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[97] [98
+
+] [99]
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2334.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[100] [101
 
 ]
-LaTeX Info: Redefining \. on input line 2369.
-LaTeX Info: Redefining \% on input line 2369.
-[106]
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2374--2377
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2443.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[102]
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2448--2451
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2374--2377
+Underfull \hbox (badness 10000) in paragraph at lines 2448--2451
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2378--2381
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2452--2455
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2378--2381
+Underfull \hbox (badness 10000) in paragraph at lines 2452--2455
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2382--2385
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2456--2459
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2382--2385
+Underfull \hbox (badness 10000) in paragraph at lines 2456--2459
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2386--2389
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2460--2463
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2386--2389
+Underfull \hbox (badness 10000) in paragraph at lines 2460--2463
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2390--2393
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2464--2467
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2390--2393
+Underfull \hbox (badness 10000) in paragraph at lines 2464--2467
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2394--2397
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2468--2471
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2394--2397
+Underfull \hbox (badness 10000) in paragraph at lines 2468--2471
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2398--2401
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2472--2475
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2398--2401
+Underfull \hbox (badness 10000) in paragraph at lines 2472--2475
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2402--2405
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2476--2479
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2402--2405
+Underfull \hbox (badness 10000) in paragraph at lines 2476--2479
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2406--2409
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2480--2483
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2406--2409
+Underfull \hbox (badness 10000) in paragraph at lines 2480--2483
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2410--2413
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2484--2487
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2410--2413
+Underfull \hbox (badness 10000) in paragraph at lines 2484--2487
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2414--2417
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2488--2491
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2414--2417
+Underfull \hbox (badness 10000) in paragraph at lines 2488--2491
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2418--2421
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2492--2495
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2418--2421
+Underfull \hbox (badness 10000) in paragraph at lines 2492--2495
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2422--2425
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2496--2499
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2422--2425
+Underfull \hbox (badness 10000) in paragraph at lines 2496--2499
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2426--2429
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2500--2503
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2426--2429
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2503
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2430--2433
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2504--2507
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2430--2433
+Underfull \hbox (badness 10000) in paragraph at lines 2504--2507
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2434--2437
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2508--2511
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2434--2437
+Underfull \hbox (badness 10000) in paragraph at lines 2508--2511
 
  []
 
 
 Underfull \vbox (badness 7631) has occurred while \output is active []
 
-[107
+[103
 
 ]
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2438--2441
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2512--2515
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2438--2441
+Underfull \hbox (badness 10000) in paragraph at lines 2512--2515
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2442--2445
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2516--2519
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2442--2445
+Underfull \hbox (badness 10000) in paragraph at lines 2516--2519
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2446--2449
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2520--2523
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2446--2449
+Underfull \hbox (badness 10000) in paragraph at lines 2520--2523
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2450--2453
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2524--2527
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2450--2453
+Underfull \hbox (badness 10000) in paragraph at lines 2524--2527
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2454--2457
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2528--2531
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2454--2457
+Underfull \hbox (badness 10000) in paragraph at lines 2528--2531
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2458--2461
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2532--2535
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2458--2461
+Underfull \hbox (badness 10000) in paragraph at lines 2532--2535
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2462--2465
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2536--2539
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2462--2465
+Underfull \hbox (badness 10000) in paragraph at lines 2536--2539
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2466--2469
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2540--2543
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2466--2469
+Underfull \hbox (badness 10000) in paragraph at lines 2540--2543
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2470--2473
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2544--2547
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2470--2473
+Underfull \hbox (badness 10000) in paragraph at lines 2544--2547
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2474--2477
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2548--2551
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2474--2477
+Underfull \hbox (badness 10000) in paragraph at lines 2548--2551
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2478--2481
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2552--2555
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2478--2481
+Underfull \hbox (badness 10000) in paragraph at lines 2552--2555
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2482--2485
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2556--2559
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2482--2485
+Underfull \hbox (badness 10000) in paragraph at lines 2556--2559
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2486--2489
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2560--2563
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2486--2489
+Underfull \hbox (badness 10000) in paragraph at lines 2560--2563
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2490--2493
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2564--2567
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2490--2493
+Underfull \hbox (badness 10000) in paragraph at lines 2564--2567
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2494--2497
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2568--2571
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2494--2497
+Underfull \hbox (badness 10000) in paragraph at lines 2568--2571
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2498--2501
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2572--2575
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2498--2501
+Underfull \hbox (badness 10000) in paragraph at lines 2572--2575
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2502--2505
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2576--2579
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2502--2505
+Underfull \hbox (badness 10000) in paragraph at lines 2576--2579
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2506--2509
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2580--2583
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2506--2509
+Underfull \hbox (badness 10000) in paragraph at lines 2580--2583
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2510--2513
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2584--2587
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2510--2513
+Underfull \hbox (badness 10000) in paragraph at lines 2584--2587
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2514--2517
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2588--2591
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2514--2517
+Underfull \hbox (badness 10000) in paragraph at lines 2588--2591
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 2517.
-LaTeX Info: Redefining \% on input line 2517.
-[108]
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2518--2521
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2591.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[104]
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2592--2595
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2518--2521
+Underfull \hbox (badness 10000) in paragraph at lines 2592--2595
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2522--2525
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2596--2599
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2522--2525
+Underfull \hbox (badness 10000) in paragraph at lines 2596--2599
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2526--2529
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2600--2603
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2526--2529
+Underfull \hbox (badness 10000) in paragraph at lines 2600--2603
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2530--2533
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2604--2607
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2530--2533
+Underfull \hbox (badness 10000) in paragraph at lines 2604--2607
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2534--2537
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2608--2611
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2534--2537
+Underfull \hbox (badness 10000) in paragraph at lines 2608--2611
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2538--2541
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2612--2615
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2538--2541
+Underfull \hbox (badness 10000) in paragraph at lines 2612--2615
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2542--2545
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2616--2619
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2542--2545
+Underfull \hbox (badness 10000) in paragraph at lines 2616--2619
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2546--2549
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2620--2623
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2546--2549
+Underfull \hbox (badness 10000) in paragraph at lines 2620--2623
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2550--2553
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2624--2627
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2550--2553
+Underfull \hbox (badness 10000) in paragraph at lines 2624--2627
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2554--2557
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2628--2631
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2554--2557
+Underfull \hbox (badness 10000) in paragraph at lines 2628--2631
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2558--2561
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2632--2635
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2558--2561
+Underfull \hbox (badness 10000) in paragraph at lines 2632--2635
 
  []
 
 
-Overfull \hbox (1.90002pt too wide) in paragraph at lines 2562--2565
+Overfull \hbox (1.90002pt too wide) in paragraph at lines 2636--2639
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2562--2565
+Underfull \hbox (badness 10000) in paragraph at lines 2636--2639
 
  []
 
-[109] (InformeFinal.aux
+
+AED: lastpage setting LastPage
+File: www/logos_MinSalud_FNE.png Graphic file (type png)
+<use www/logos_MinSalud_FNE.png>
+Package pdftex.def Info: www/logos_MinSalud_FNE.png  used on input line 2642.
+(pdftex.def)             Requested size: 307.14749pt x 30.13516pt.
+
+Package fancyhdr Warning: \headheight is too small (32.0pt): 
+(fancyhdr)                Make it at least 33.7352pt, for example:
+(fancyhdr)                \setlength{\headheight}{33.7352pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.7352pt}.
+
+[105] (InformeFinal.aux
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
-) ) 
+(titulos.aux)) ) 
 Here is how much of TeX's memory you used:
- 31670 strings out of 478863
- 609458 string characters out of 2855994
- 1006875 words of memory out of 3000000
- 48285 multiletter control sequences out of 15000+600000
- 478040 words of font info for 252 fonts, out of 8000000 for 9000
+ 31938 strings out of 478863
+ 615142 string characters out of 2855994
+ 1009487 words of memory out of 3000000
+ 48525 multiletter control sequences out of 15000+600000
+ 497505 words of font info for 268 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 257i,12n,255p,1293b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
-dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Daniel/AppDat
-a/Roaming/MiKTeX/2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/Daniel/AppDa
-ta/Roaming/MiKTeX/2.9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/Daniel/AppD
-ata/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Daniel/AppDat
-a/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Daniel/AppData/
-Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on InformeFinal.pdf (109 pages, 9282485 bytes).
+ 257i,16n,255p,1293b,1143s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/P
+rogram Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mtt10.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/avantgar/
+uagd8a.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/avantgar
+/uagk8a.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/u
+tmb8a.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utm
+r8a.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on InformeFinal.pdf (113 pages, 10576296 bytes).
 PDF statistics:
- 2019 PDF objects out of 2073 (max. 8388607)
- 396 named destinations out of 1000 (max. 500000)
- 23493 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 2099 PDF objects out of 2487 (max. 8388607)
+ 406 named destinations out of 1000 (max. 500000)
+ 23527 words of extra memory for PDF output out of 24883 (max. 10000000)
 

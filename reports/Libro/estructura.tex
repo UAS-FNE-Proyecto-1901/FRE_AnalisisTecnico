@@ -60,7 +60,8 @@ heightrounded, 			% to avoid spurious underfull messages
 
 % Colores de Portada
 \definecolor{bgBlue}{RGB}{42,43,53}
-\definecolor{txBlue}{RGB}{80,179,209} 
+\definecolor{txBlue}{RGB}{66,87,158} 
+\definecolor{moradoMinisterio}{RGB}{153,15,62}
 \usepackage{mathptmx} 
 
 %----------------------------------------------------------------------------------------
@@ -90,6 +91,7 @@ heightrounded, 			% to avoid spurious underfull messages
 %----------------------------------------------------------------------------------------
 % Requerido para la configuración de encabezado y pie de página
 \usepackage{fancyhdr} 
+\usepackage{lastpage}
 
 \pagestyle{fancy}
 % Configuración de fuente de texto de capítulo
@@ -97,13 +99,37 @@ heightrounded, 			% to avoid spurious underfull messages
 % Configuración de fuente de texto de sección
 \renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} 
 % Configuración de fuente para el número de página en el encabezado
-\fancyhf{} \fancyhead[LE,RO]{\sffamily\normalsize\thepage} 
-\fancyhead[LO]{\rightmark} % Imprima el nombre de la sección más cercana en el lado izquierdo de las páginas impares
-\fancyhead[RE]{\leftmark} % Imprima el nombre del capítulo actual en el lado derecho de las páginas pares
-\renewcommand{\headrulewidth}{0.5pt} % De ancho de la regla debajo del encabezado
-\addtolength{\headheight}{2.5pt} % Aumente ligeramente el espacio alrededor del encabezado
-\renewcommand{\footrulewidth}{0pt} % Elimina la regla en el pie de página
+\fancyhf{} 
+%\fancyhead[LE,RO]{\sffamily\normalsize\thepage} 
+%\fancyhead[LO]{\rightmark} % Imprima el nombre de la sección más cercana en el lado izquierdo de las páginas impares
+%\fancyhead[RE]{\leftmark} % Imprima el nombre del capítulo actual en el lado derecho de las páginas pares
+
+%%\fancyhead[LE,RO]{\leftmark} 
+\fancyhead[LE,RO]{} 
+\fancyhead[LO,RE]{\includegraphics[width=0.5\paperwidth]{www/logos_MinSalud_FNE.png}}
+
+\renewcommand{\headrulewidth}{0.01pt} % De ancho de la regla debajo del encabezado
+\addtolength{\headheight}{15pt} % Aumente ligeramente el espacio alrededor del encabezado
+\renewcommand{\footrulewidth}{0pt} % Elimina la línea en el pie de página
 \fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Estilo para cuando se especifica un estilo de página simple
+
+%%% Configurar pie de Página
+\setlength{\footskip}{40pt}
+\lfoot{\mdseries Proyecto de Inversión - Misión PRI 1901}
+\cfoot{}
+\rfoot{\mdseries Página~\thepage}
+
+
+% Elimina el encabezado de páginas vacías impares al final de los capítulos
+\makeatletter
+\renewcommand{\cleardoublepage}{
+	\clearpage\ifodd\c@page\else
+	\hbox{}
+	\vspace*{\fill}
+	\thispagestyle{empty}
+	\newpage
+	\fi}
+
 
 %% Elimina el encabezado de páginas vacías impares al final de los capítulos
 %\makeatletter
@@ -115,6 +141,16 @@ heightrounded, 			% to avoid spurious underfull messages
 %	\newpage
 %	\fi}
 
-
 %% Esto se usa para prevenir el error de flotas sobrepasados en ciclos
 \usepackage[maxfloats=256]{morefloats}
+\usepackage{tikz} 
+\usetikzlibrary{plotmarks} 
+\usetikzlibrary{shapes,arrows.meta} 
+
+%%%%%%%%%%%%%%
+
+\usepackage{sectsty}
+\chapterfont{\bf\color{moradoMinisterio}}
+\sectionfont{\bfseries \color{moradoMinisterio}}
+\subsectionfont{\color{moradoMinisterio}}
+\subsubsectionfont{\color{moradoMinisterio}}

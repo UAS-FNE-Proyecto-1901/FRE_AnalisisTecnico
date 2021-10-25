@@ -36,7 +36,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes},
+  pdftitle={Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado},
   pdfauthor={Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -51,19 +51,6 @@
 % Allow footnotes in longtable head/foot
 \IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
 \makesavenoteenv{longtable}
-\usepackage{graphicx}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -153,7 +140,8 @@ heightrounded, 			% to avoid spurious underfull messages
 
 % Colores de Portada
 \definecolor{bgBlue}{RGB}{42,43,53}
-\definecolor{txBlue}{RGB}{80,179,209} 
+\definecolor{txBlue}{RGB}{66,87,158} 
+\definecolor{moradoMinisterio}{RGB}{153,15,62}
 \usepackage{mathptmx} 
 
 %----------------------------------------------------------------------------------------
@@ -183,6 +171,7 @@ heightrounded, 			% to avoid spurious underfull messages
 %----------------------------------------------------------------------------------------
 % Requerido para la configuración de encabezado y pie de página
 \usepackage{fancyhdr} 
+\usepackage{lastpage}
 
 \pagestyle{fancy}
 % Configuración de fuente de texto de capítulo
@@ -190,13 +179,37 @@ heightrounded, 			% to avoid spurious underfull messages
 % Configuración de fuente de texto de sección
 \renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} 
 % Configuración de fuente para el número de página en el encabezado
-\fancyhf{} \fancyhead[LE,RO]{\sffamily\normalsize\thepage} 
-\fancyhead[LO]{\rightmark} % Imprima el nombre de la sección más cercana en el lado izquierdo de las páginas impares
-\fancyhead[RE]{\leftmark} % Imprima el nombre del capítulo actual en el lado derecho de las páginas pares
-\renewcommand{\headrulewidth}{0.5pt} % De ancho de la regla debajo del encabezado
-\addtolength{\headheight}{2.5pt} % Aumente ligeramente el espacio alrededor del encabezado
-\renewcommand{\footrulewidth}{0pt} % Elimina la regla en el pie de página
+\fancyhf{} 
+%\fancyhead[LE,RO]{\sffamily\normalsize\thepage} 
+%\fancyhead[LO]{\rightmark} % Imprima el nombre de la sección más cercana en el lado izquierdo de las páginas impares
+%\fancyhead[RE]{\leftmark} % Imprima el nombre del capítulo actual en el lado derecho de las páginas pares
+
+%%\fancyhead[LE,RO]{\leftmark} 
+\fancyhead[LE,RO]{} 
+\fancyhead[LO,RE]{\includegraphics[width=0.5\paperwidth]{www/logos_MinSalud_FNE.png}}
+
+\renewcommand{\headrulewidth}{0.01pt} % De ancho de la regla debajo del encabezado
+\addtolength{\headheight}{15pt} % Aumente ligeramente el espacio alrededor del encabezado
+\renewcommand{\footrulewidth}{0pt} % Elimina la línea en el pie de página
 \fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Estilo para cuando se especifica un estilo de página simple
+
+%%% Configurar pie de Página
+\setlength{\footskip}{40pt}
+\lfoot{\mdseries Proyecto de Inversión - Misión PRI 1901}
+\cfoot{}
+\rfoot{\mdseries Página~\thepage}
+
+
+% Elimina el encabezado de páginas vacías impares al final de los capítulos
+\makeatletter
+\renewcommand{\cleardoublepage}{
+	\clearpage\ifodd\c@page\else
+	\hbox{}
+	\vspace*{\fill}
+	\thispagestyle{empty}
+	\newpage
+	\fi}
+
 
 %% Elimina el encabezado de páginas vacías impares al final de los capítulos
 %\makeatletter
@@ -208,9 +221,19 @@ heightrounded, 			% to avoid spurious underfull messages
 %	\newpage
 %	\fi}
 
-
 %% Esto se usa para prevenir el error de flotas sobrepasados en ciclos
 \usepackage[maxfloats=256]{morefloats}
+\usepackage{tikz} 
+\usetikzlibrary{plotmarks} 
+\usetikzlibrary{shapes,arrows.meta} 
+
+%%%%%%%%%%%%%%
+
+\usepackage{sectsty}
+\chapterfont{\bf\color{moradoMinisterio}}
+\sectionfont{\bfseries \color{moradoMinisterio}}
+\subsectionfont{\color{moradoMinisterio}}
+\subsubsectionfont{\color{moradoMinisterio}}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -229,18 +252,73 @@ heightrounded, 			% to avoid spurious underfull messages
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes}
+\title{Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes}
 \author{Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes}
 \date{10 de octubre de 2021}
 
 \begin{document}
-\maketitle
 
+\frontmatter
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[overlay, remember picture] %-Cambio de fondo de página
+	% Crea una coordenada 12 cm por debajo del norte de la página
+	\coordinate [right=11cm, below=5.5cm] (highpoint) at (current page.north west);
+	\coordinate [right=11cm, below=16.5cm] (midpoint) at (current page.north west);
+	\coordinate [right=11cm, below=18.0cm] (lowpoint) at (current page.north west);
+	\coordinate [right=7.5cm, below=24.5cm] (finalLogo) at (current page.north west);
+	% Inicia una nueva figura al nor oeste
+	\node at (current page.north west)
+	{
+		\begin{tikzpicture}[overlay, remember picture]
+			%- 
+			% Imagen de Fondo
+			\node[anchor=north west, inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{www/Portada_1.pdf}};	
+			\draw[anchor=north] (highpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1.0, inner sep=1cm,  text=txBlue]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{16cm}
+				{\centering Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado}};  
+			\draw[anchor=north] (midpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1, inner sep=1cm, text=txBlue]{\LARGE\centering\bfseries\sffamily\parbox[c][][t]{16cm} {Proyecto de Inversión Misión PRI 1901}}; 
+			\draw[anchor=north] (lowpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1, inner sep=1cm, text=txBlue]{\LARGE\centering\bfseries\sffamily\parbox[c][][t]{16cm} {10 de octubre de 2021}};
+			
+			\draw[anchor=north west] (finalLogo) node[inner sep=0pt] {\includegraphics[width=0.6\paperwidth]{www/logos_MinSalud_FNE.png}};
+			%%\node[inner sep=0pt] (finalLogo) {\includegraphics[width=0.3\paperwidth]{logos MinSalud_FNE.png}};
+	\end{tikzpicture}};
+	
+\end{tikzpicture}
+\vfill
+\endgroup
+
+\cleardoublepage
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+\noindent Copyright \copyright\ 2021 Fondo Nacional de Estupefacientes \\ % Copyright notice
+\noindent \textsc{Publicado por el Fondo Nacional de Estupefacientes}\\ % Publisher
+%%\noindent \textsc{Dirección de Contacto: dsparrag@unal.edu.co}\\ % URL
+\noindent \textit{Primera Impresión, Agosto 2021} \\ % Printing/edition date
+\medskip
+\medskip
+\medskip
+
+\include{titulos}
+
+%%%%%%%%%\maketitle
+%%%%%%%%%
 \renewcommand*\contentsname{Tabla de Contenidos}
 {
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
+
+\mainmatter
 \hypertarget{prefacio}{%
 \chapter*{Prefacio}\label{prefacio}}
 \addcontentsline{toc}{chapter}{Prefacio}
@@ -284,11 +362,13 @@ Este proceso de inmersión territorial se desarrolló entre los meses de abril y
 \hypertarget{objetivos}{%
 \chapter{Objetivos}\label{objetivos}}
 
-\textbf{Objetivo general}
+\hypertarget{objetivo-general}{%
+\section{Objetivo general}\label{objetivo-general}}
 
 Identificar fuentes de información asociada a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial. Así mismo, con el fin de iniciar la primera fase de desarrollo del proyecto de inversión 1901. Así mismo, recopilar las características de las herramientas tecnológicas para la consolidación de la información y el seguimiento al consumo de estos medicamentos en el territorio.
 
-\textbf{Objetivos específicos}
+\hypertarget{objetivos-especuxedficos}{%
+\section{Objetivos específicos}\label{objetivos-especuxedficos}}
 
 \begin{itemize}
 \item
@@ -849,12 +929,6 @@ Modalidad - Selección abreviada & -1414.0 & 14418.9 & -0.098 & 0.923\\
 En la Tabla \ref{tab:resumenModeloRegresionLineal} se muestran los resultados de la regresión lineal múltiple, la modalidad de selección se incluyeron como variables comodín (\emph{dummies}) teniendo en cuenta como referencia a la contratación directa. El modelo generado presenta una bondad de ajuste baja (\(R^{2} = -0.064\)), y no se logra demostrar un efecto significativo de los factores explorados, pese a esto se presentan tendencias en estos factores.
 
 En la Figura \ref{fig:DependParcial1} se muestran gráficos de dependencia parcial de los factores explorados, se observan tendencias como que el N.° de prescripciones elevan el costo de los recetarios. Pese a que se podría suponer que al aumentar el número de características de seguridad en el recetario se aumentaría el costo de este, se encuentra una relación inversa entre el número de medidas y el costo de adquisición. Esto podría deberse a la facilidad de elaboración en departamentos con la capacidad tecnológica adecuada, la forma en que se adjudican los contratos y los diferentes oferentes en el concurso de contratación.
-
-\begin{verbatim}
-## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
-## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
-## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
-\end{verbatim}
 
 \begin{figure}
 
