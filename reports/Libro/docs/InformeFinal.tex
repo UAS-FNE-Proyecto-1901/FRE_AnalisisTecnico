@@ -195,10 +195,12 @@ heightrounded, 			% to avoid spurious underfull messages
 
 %%% Configurar pie de Página
 \setlength{\footskip}{40pt}
-\lfoot{\mdseries Proyecto de Inversión - Misión PRI 1901}
+%\lfoot{\mdseries Proyecto de Inversión - Misión PRI 1901}
 \cfoot{}
-\rfoot{\mdseries Página~\thepage}
+%\rfoot{\mdseries Página~\thepage}
 
+\fancyfoot[LO,RE]{\mdseries Proyecto de Inversión - Misión PRI 1901}
+\fancyfoot[LE,RO]{\mdseries Página~\thepage}
 
 % Elimina el encabezado de páginas vacías impares al final de los capítulos
 \makeatletter
@@ -271,10 +273,10 @@ heightrounded, 			% to avoid spurious underfull messages
 \thispagestyle{empty}
 \begin{tikzpicture}[overlay, remember picture] %-Cambio de fondo de página
 	% Crea una coordenada 12 cm por debajo del norte de la página
-	\coordinate [right=11cm, below=5.5cm] (highpoint) at (current page.north west);
-	\coordinate [right=11cm, below=16.5cm] (midpoint) at (current page.north west);
-	\coordinate [right=11cm, below=18.0cm] (lowpoint) at (current page.north west);
-	\coordinate [right=7.5cm, below=24.5cm] (finalLogo) at (current page.north west);
+	\coordinate [right=11cm, below=06.5cm] (highpoint) at (current page.north west);
+	\coordinate [right=11cm, below=17.5cm] (midpoint) at (current page.north west);
+	\coordinate [right=11cm, below=19.0cm] (lowpoint) at (current page.north west);
+	\coordinate [right=7.5cm, below=24.2cm] (finalLogo) at (current page.north west);
 	% Inicia una nueva figura al nor oeste
 	\node at (current page.north west)
 	{
@@ -282,7 +284,7 @@ heightrounded, 			% to avoid spurious underfull messages
 			%- 
 			% Imagen de Fondo
 			\node[anchor=north west, inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{www/Portada_1.pdf}};	
-			\draw[anchor=north] (highpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1.0, inner sep=1cm,  text=txBlue]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{16cm}
+			\draw[anchor=north] (highpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1.0, inner sep=1cm,  text=txBlue]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{20cm}
 				{\centering Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado}};  
 			\draw[anchor=north] (midpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1, inner sep=1cm, text=txBlue]{\LARGE\centering\bfseries\sffamily\parbox[c][][t]{16cm} {Proyecto de Inversión Misión PRI 1901}}; 
 			\draw[anchor=north] (lowpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1, inner sep=1cm, text=txBlue]{\LARGE\centering\bfseries\sffamily\parbox[c][][t]{16cm} {10 de octubre de 2021}};
@@ -296,6 +298,7 @@ heightrounded, 			% to avoid spurious underfull messages
 \endgroup
 
 \cleardoublepage
+\include{titulos}
 
 \newpage
 ~\vfill
@@ -308,16 +311,32 @@ heightrounded, 			% to avoid spurious underfull messages
 \medskip
 \medskip
 
-\include{titulos}
 
 %%%%%%%%%\maketitle
 %%%%%%%%%
+\cleardoublepage
+%%% \pagestyle{empty}
+\thispagestyle{empty}
+\hypertarget{tocpage}{}
 \renewcommand*\contentsname{Tabla de Contenidos}
 {
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
+\bookmark[dest=tocpage, level=0, named=tocpage, color=moradoMinisterio]{\contentsname} %\pdfbookmark[0]{\contentsname}{toc}
 
+\cleardoublepage\phantomsection
+\renewcommand{\listfigurename}{Lista de figuras}
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+%%% 
+\cleardoublepage\phantomsection
+\renewcommand{\listtablename}{Lista de tablas}
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+%%% 
 \mainmatter
 \hypertarget{prefacio}{%
 \chapter*{Prefacio}\label{prefacio}}
@@ -544,7 +563,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
   De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 \end{itemize}
 
-\begin{figure}[b]
+\begin{figure}[b!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/perfilProfesionalEncargado-1} 
 
@@ -555,7 +574,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
 
 En la Figura \ref{fig:perfilProfesional2} se observan los perfiles profesionales del personal de apoyo de los FRE a nivel nacional. Principalmente, se destaca una gran mayoría de Técnicos en Regencia en Farmacia (39) seguido de un grupo menor de profesionales Químicos Farmacéuticos (10), apoyando en las actividades de los FRE departamentales. Esto demuestra que gran parte de los entes territoriales están alineados con lo expuesto en el Artículo 3° de la Resolución 1479 del 2006\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}}, donde mencionan que el Químicos Farmacéuticos y Tecnólogos en Regencia en Farmacia son profesionales considerados como personal calificado para el cumplimiento de las funciones requeridas por el FRE.
 
-\begin{figure}[t]
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/perfilProfesional2-1} 
 
@@ -568,7 +587,7 @@ Adicionalmente, la Figura \ref{fig:perfilProfesional2} también muestra otro tip
 
 El número de personas que trabajan en cada FRE, es otro elemento crítico para la evaluación de condiciones y características actuales de cada ente territorial, en virtud de su capacidad para cumplir todas las funciones expuestas en el Artículo 2° de la Resolución 1479 del 2006\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}}. La Figura \ref{fig:perfilProfesional3} exhibe la frecuencia absoluta del número de personas que se encuentran vinculadas a los entes territoriales del país. Es decir, la cantidad de profesionales que conforman los equipos de trabajo de todos los FRE departamentales.
 
-\begin{figure}[bh]
+\begin{figure}[b!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/perfilProfesional3-1} 
 
@@ -583,7 +602,7 @@ El tipo de contrato que los diferentes entes territoriales emplean para vincular
 
 A partir de la Figura \ref{fig:pieProfesional2} se puede notar una gran tendencia que tienen todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
 
-\begin{figure}[h]
+\begin{figure}[t]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/pieProfesional2-1} 
 
@@ -650,13 +669,13 @@ También se puede observar que la distribución geográfica de las regiones no s
 
 En la Figura \ref{fig:institucionesInscritasVARdemo} se puede determinar una relación directa entre la cantidad de instituciones inscritas y variables relacionadas a la demografía de cada departamento. Lo anterior se explica con la densidad demográfica del departamento y la necesidad de servicios de atención en salud cada vez más complejos. En teoría, los FRE con mayor número de inscritos de mayor complejidad, deberían estar mucho más desarrollados para atender la necesidad de MME de su territorio. Como es el caso del FRE Antioquia, cuyo departamento presenta un alto número de establecimientos inscritos y un nivel de complejidad alta en las instituciones, aumentando proporcionalmente el consumo de MME.
 
-\begin{figure}[b]
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1} 
 
 }
 
-\caption{Relación entre N.° de instituciones inscritas en el FRE y: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.}\label{fig:institucionesInscritasVARdemo}
+\caption{Relación de N.° de instituciones inscritas en el FRE con: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.}\label{fig:institucionesInscritasVARdemo}
 \end{figure}
 
 En la Figura \ref{fig:institucionesInscritasVARdemo}B se encuentra la relación directa entre el N.° de inscritos en el departamento y el número de camas (adultos, intermedio adulto, intensivo adulto, agudo mental, intermedio mental, salud mental), servicios de farmacodependencia y ambulancias medicadas de acuerdo al REPS\textsuperscript{\protect\hyperlink{ref-DireccionPrestaciondeServiciosyAtencionPrimaria2021}{7}} presentes en el departamento.
@@ -710,7 +729,7 @@ En la Figura \ref{fig:IngresosFRE1} se observa que una tendencia a que la propor
 
 Particularmente, en la Figura \ref{fig:IngresosFRE2} se observa que en algunos departamentos cómo Magdalena, Atlántico o Tolima, la venta de recetarios oficiales es el ingreso más prominente del FRE. Así mismo, en todos los demás departamentos representa un ingreso importante para el ente territorial, aunque no sea la principal fuente de ingreso. A nivel nacional, esta fuente de ingreso carga con una parte muy importante del erario de cada FRE departamental. Con la desaparición de los recetarios oficiales físicos en el mediano plazo, es necesario generar alternativas económicas para subsanar este recurso que desaparecería y adecuar estrategias financieras para el auto sostenimiento de cada FRE.
 
-\begin{figure}[b]
+\begin{figure}[th!]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/IngresosFRE2-1} 
 
@@ -1289,11 +1308,11 @@ Es así, que el FNE cuenta con el Grupo Interno de Trabajo de Medicamentos del E
 
 Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \ref{tab:portafolioMME}\textsuperscript{\protect\hyperlink{ref-ColombiaCompraEficiente2021}{16}}.
 
-\begin{table}
+\begin{table}[!h]
 
 \caption{\label{tab:portafolioMME}Portafolio de Medicamentos Monopolio del Estado.}
 \centering
-\begin{tabular}[t]{lcc}
+\begin{tabular}[t!]{lcc}
 \toprule
 Producto & Presentación & Observaciones\\
 \midrule
@@ -1445,7 +1464,7 @@ En otros casos se ve que el personal del FRE considera que su contacto directo c
 \hypertarget{tiempos-de-demora-en-el-proceso-de-adquisiciuxf3n}{%
 \subsection{Tiempos de demora en el proceso de adquisición}\label{tiempos-de-demora-en-el-proceso-de-adquisiciuxf3n}}
 
-El tiempo de demora para reabastecimiento (\(L\)) es el tiempo que pasa desde el momento en el que se decide generar un pedido hasta que está físicamente listo en el almacén para satisfacer la demanda de los clientes\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}. Para un manejo adecuado del inventario, se debe tener en cuenta este tiempo para realizar los pedidos con anticipación de manera que no se produzcan desabastecimientos de forma frecuente.
+El tiempo de demora para reabastecimiento (\(L\), \emph{lead time}) es el tiempo que pasa desde el momento en el que se decide generar un pedido hasta que está físicamente listo en el almacén para satisfacer la demanda de los clientes\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}. Para un manejo adecuado del inventario, se debe tener en cuenta este tiempo para realizar los pedidos con anticipación de manera que no se produzcan desabastecimientos de forma frecuente.
 
 Los tiempos de demora suelen tener varios componentes, en el diseño de la encuesta se tuvo en cuenta un proceso de adquisición de MME mediante etapas, de forma general se consideraron cinco etapas del proceso:
 
@@ -1657,9 +1676,9 @@ En la Figura \ref{fig:InstitucionesAdicionales} se muestra sí en el departament
 
 En la Figura \ref{fig:MedidasSeguridadAlmacenamientoMME} se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes.
 
-\begin{figure}
+\begin{figure}[!t]
 
-{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1} 
+{\centering \includegraphics[width=0.95\linewidth]{InformeFinal_files/figure-latex/MedidasSeguridadAlmacenamientoMME-1} 
 
 }
 
@@ -1675,9 +1694,9 @@ Sólo los FRE de Valle del Cauca y Córdoba reportan la existencia de un sistema
 
 En la Figura \ref{fig:FrecRevCondiciones} se muestra la frecuencia de revisión de condiciones ambientales en el almacenamiento de MME. Se tienen que la práctica más frecuente en los FRE es la realización de verificación de condiciones ambientales por lo menos dos veces al día. Sólo algunos FRE afirman que no hacen revisión de condiciones ambientales como Bolívar, Sucre, Chocó, Norte de Santander, Amazonas y Vichada.
 
-\begin{figure}
+\begin{figure}[!b]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecRevCondiciones-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/FrecRevCondiciones-1} 
 
 }
 
@@ -1849,13 +1868,13 @@ Por último, se realizó una comparación entre los márgenes de precio de venta
 
 También se evaluaron otros factores cómo el número de instituciones que realizaron compras en la vigencia anterior (\(p = .667\)) y la proporción de ingresos constituida por venta de medicamentos (\(p = .429\)) pero no se encontró una relación significativa entre las variables (ver paneles B y C de la Figura \ref{fig:relacionMargenesCosto}.
 
-\begin{figure}
+\begin{figure}[b!]
 
 {\centering \includegraphics[width=0.95\linewidth]{InformeFinal_files/figure-latex/relacionMargenesCosto-1} 
 
 }
 
-\caption{Relación de márgen de ganancia y otras variables. (A) Distancia física en Km, (B) N.° de entidades que realizado compras al FRE durante el último año, y (C) Proporción de ingreso correspondiente a ventas de medicamentos.}\label{fig:relacionMargenesCosto}
+\caption{Relación de márgen de ganancia y otras variables. (A) Distancia física en kilómetros, (B) N.° de entidades que realizado compras al FRE durante el último año, y (C) Proporción de ingreso correspondiente a ventas de medicamentos.}\label{fig:relacionMargenesCosto}
 \end{figure}
 
 Se debe reconocer que un mal control de precios a nivel de laboratorio y distribuidores puede ocasionar distorsiones importantes en la cadena de suministro de manera que no se produce un beneficio óptimo al considerar toda la cadena. En este caso se podría esperar que precios de venta no competitivos a nivel de FRE generen un aumento en la proporción de compra directa por parte de instituciones en el territorio correspondiente.
@@ -1889,7 +1908,7 @@ Las condiciones en la infraestructura tecnológica de cada FRE, logran evidencia
 
 De acuerdo con la Figura \ref{fig:MediosComunicacion}, se evidencia que los canales más frecuentes que manejan los FRE para comunicarse con los usuarios corresponden al teléfono y el correo electrónico. Incluso estos medios de comunicación toman mayor relevancia en estos tiempos actuales de distanciamiento social, a causa de la reciente pandemia referente a la COVID-19. En ese orden de ideas, cada vez son menos los FRE que mantienen la atención presencial en sus instalaciones, al igual que la correspondencia. Estos canales de comunicación fueron reemplazados por el mundo moderno y la digitalización, en función del uso correcto del correo electrónico. Este análisis permite demostrar cierta aceptabilidad por los medios digitales que han surgido en la actualidad, por parte del personal del FRE y los usuarios inscritos en el territorio.
 
-\begin{figure}
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/MediosComunicacion-1} 
 
@@ -1902,7 +1921,7 @@ Por otro lado, la Figura \ref{fig:ConexionInternet} exhibe la velocidad de conex
 
 La apuesta a futuro de la modernización en los procesos de manejo de recetarios oficiales y MME, por ejemplo, la implementación del ROE, mostraría cierta deficiencia en el acceso a internet para un sector grande en la población colombiana. Esta transformación digital debe considerar principalmente, aquellos territorios que mantienen falencias en la conectividad a internet, con el fin de evitar barreras al acceso de medicamentos en estas zonas del país.
 
-\begin{figure}
+\begin{figure}[b!]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/ConexionInternet-1} 
 
@@ -1965,9 +1984,9 @@ La seguridad de la información que manejan los FRE a nivel nacional, es un tema
 
 La Figura \ref{fig:GarantiaInformacion} muestra la manera como se garantiza la seguridad de la información en los FRE departamentales. A partir de los datos de la figura, se puede evidenciar que medios emplea el personal del FRE para resguardar y proteger la información por medio de sistemas tecnológicos. La restricción de acceso es el principal recurso que tienen los FRE para mantener la confidencialidad, disponibilidad e integridad de los datos.
 
-\begin{figure}
+\begin{figure}[t!]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/GarantiaInformacion-1} 
+{\centering \includegraphics[width=0.95\linewidth]{InformeFinal_files/figure-latex/GarantiaInformacion-1} 
 
 }
 
@@ -1981,7 +2000,7 @@ Cabe resaltar que en la Figura \ref{fig:GarantiaInformacion} cuándo se habla de
 
 En la Figura \ref{fig:InformInscritos} se muestra la proporción de FRE que cuentan con bases de datos de información de inscritos y pacientes a los cuales se les dispensa MME.
 
-\begin{figure}
+\begin{figure}[b!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/InformInscritos-1} 
 
@@ -2029,9 +2048,9 @@ Incluso en algunos FRE departamentales, este proceso de diligenciamiento del Ane
 
 Por otra parte, las herramientas tecnológicas son un elemento primordial para recibir, consolidar y almacenar los Anexos de la Resolución 1479 de 2006. En la Figura \ref{fig:HerramientasDiligA1} se tiene una descripción de las herramientas utilizadas para el diligenciamiento de los Anexos 1 y 2 de la Resolución 1479 de 2006, respectivamente\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}}. La mayoría de los FRE utilizan hojas de cálculo para el diligenciamiento de estos informes, teniendo en cuenta que la información puede provenir de documentos físicos.
 
-\begin{figure}
+\begin{figure}[t!]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/HerramientasDiligA1-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/HerramientasDiligA1-1} 
 
 }
 
@@ -2068,7 +2087,7 @@ El tiempo de consolidación del informe mensual sobre la distribución de MME, r
 
 Como se discutió anteriormente, el grupo de Regionalización, encargado de la consolidación y verificación de estos informes, definió una hoja estandarizada de Excel para la presentación del Anexo 1. Por esta razón, la Figura \ref{fig:TiemposConsolidacionA1} resalta una tendencia en el tiempo de preparación del informe mensual sobre la distribución de MME (Anexo 1), a nivel nacional.
 
-\begin{figure}
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/TiemposConsolidacionA1-1} 
 
@@ -2083,9 +2102,9 @@ Algunas instituciones entregan este informe de manera electrónica al FRE, mient
 
 En la Figura \ref{fig:TiemposConsolidacionA1-1} se muestra una comparación entre los tiempos de diligenciamiento del Anexo 1 y el número de instituciones en el departamento. De acuerdo a esta comparación no se tiene una relación clara entre el tiempo que toma cumplir con este requerimiento y el número de instituciones que realizan compras en el departamentos.
 
-\begin{figure}
+\begin{figure}[t!]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/TiemposConsolidacionA1-1-1} 
 
 }
 
@@ -2151,7 +2170,7 @@ En la Figura \ref{fig:ArchivoInformesFRE} se muestra que la práctica más comú
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/ArchivoInformesFRE-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/ArchivoInformesFRE-1} 
 
 }
 
@@ -2163,9 +2182,9 @@ En la Figura \ref{fig:ArchivoInformesFRE} se muestra que la práctica más comú
 
 En la Figura \ref{fig:SeguimientoEnvioInformes} se muestran los mecanismos de seguimiento del FRE frente a las instituciones para el envío de los informes requeridos por la normativa. Se muestra que una proporción importante de los FRE (14/31) realiza el seguimiento de envío de reportes mediante visitas personales a las instituciones. Sólo los FRE de Magdalena, Tolima, Boyacá y Guainía realizan este seguimiento mediante visitas personales.
 
-\begin{figure}
+\begin{figure}[t!]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/SeguimientoEnvioInformes-1} 
 
 }
 
@@ -2179,9 +2198,9 @@ Los FRE también reportan la utilización de recursos como llamadas (41.9\%) o c
 
 La Figura \ref{fig:IncumplimientoEnvioInformes}, muestra la manera como el FRE recuerda o hace seguimiento al envío de los informes de consumo a las instituciones autorizadas para el manejo de MME. Aquí se evidencia que el llamado de atención es el principal recurso que emplea el personal del FRE para recordarle a las instituciones el envío de los informes, referente al Anexo 13 de la Resolución 1478 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}. Por otro lado, las multas y amonestaciones son muy poco frecuentes en los FRE. Esta medida correctiva no es adoptada por todos los FRE.
 
-\begin{figure}
+\begin{figure}[b!]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/IncumplimientoEnvioInformes-1} 
 
 }
 

@@ -67,7 +67,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
 
 -	De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 
-```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center', fig.pos='b'}
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center', fig.pos='b!'}
 g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = 'A')
 g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds'))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
@@ -76,7 +76,7 @@ g2[[1]] <- g2[[1]] + labs(title = 'B')
 
 En la Figura \@ref(fig:perfilProfesional2) se observan los perfiles profesionales del personal de apoyo de los FRE a nivel nacional. Principalmente, se destaca una gran mayoría de Técnicos en Regencia en Farmacia (39) seguido de un grupo menor de profesionales Químicos Farmacéuticos (10), apoyando en las actividades de los FRE departamentales. Esto demuestra que gran parte de los entes territoriales están alineados con lo expuesto en el Artículo 3° de la Resolución 1479 del 2006 [@MSPS1479-2006], donde mencionan que el Químicos Farmacéuticos y Tecnólogos en Regencia en Farmacia son profesionales considerados como personal calificado para el cumplimiento de las funciones requeridas por el FRE.
 
-```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE.', fig.width=8, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%", fig.align='center',fig.pos='t'}
+```{r perfilProfesional2, echo=FALSE, fig.cap='Perfil de profesional de personal de apoyo a los FRE.', fig.width=8, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%", fig.align='center',fig.pos='t!'}
 readRDS(file.path(fig_path, '022_perfilProfesional2.rds')) + labs(title = NULL)
 ```
 Adicionalmente, la Figura \@ref(fig:perfilProfesional2) también muestra otro tipo de profesionales de apoyo al encargado del FRE, diferente al personal calificado mencionado anteriormente. Este factor podría brindar ventajas al equipo de trabajo del FRE particularmente, en función de la multidisciplinariedad. La participación de distintas disciplinas puede entregar más conocimientos y alternativas en el desarrollo laboral interno de cada FRE departamental. No obstante, es importante aclarar que ningún FRE debería dejar de contar con la participación del personal calificado, estipulado en el Artículo 3° de la Resolución 1479 del 2006 [@MSPS1479-2006].
@@ -84,7 +84,7 @@ Adicionalmente, la Figura \@ref(fig:perfilProfesional2) también muestra otro ti
 El número de personas que trabajan en cada FRE, es otro elemento crítico para la evaluación de condiciones y características actuales de cada ente territorial, en virtud de su capacidad para cumplir todas las funciones expuestas en el Artículo 2° de la Resolución 1479 del 2006 [@MSPS1479-2006]. La Figura \@ref(fig:perfilProfesional3) exhibe la frecuencia absoluta del número de personas que se encuentran vinculadas a los entes territoriales del país. Es decir, la cantidad de profesionales que conforman los equipos de trabajo de todos los FRE departamentales.
 
 
-```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE. (A) Conteo de FRE por número de personas. (B) Mapa con número de personas por departamento.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='bh'}
+```{r perfilProfesional3, echo=FALSE, fig.cap='N.° de personas que trabajan en el FRE. (A) Conteo de FRE por número de personas. (B) Mapa con número de personas por departamento.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center',fig.pos='b!'}
 g1 <- readRDS(file.path(fig_path, '023_perfilProfesional3b.rds')) + labs(title = 'A') + ylab('Frecuencia')
 g2 <- readRDS(file.path(fig_path, '024_mapaProfesional2.rds'))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
@@ -99,7 +99,7 @@ El tipo de contrato que los diferentes entes territoriales emplean para vincular
 
 A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una gran tendencia que tienen todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
 
-```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE.', fig.width=8, fig.height=4.5, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='h'}
+```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE.', fig.width=8, fig.height=4.5, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
 
 if (knitr::is_html_output()) {
   readRDS(file.path(fig_path, '026_pieProfesional2b.rds'))
@@ -152,7 +152,7 @@ readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
 
 En la Figura \@ref(fig:institucionesInscritasVARdemo) se puede determinar una relación directa entre la cantidad de instituciones inscritas y variables relacionadas a la demografía de cada departamento. Lo anterior se explica con la densidad demográfica del departamento y la necesidad de servicios de atención en salud cada vez más complejos. En teoría, los FRE con mayor número de inscritos de mayor complejidad, deberían estar mucho más desarrollados para atender la necesidad de MME de su territorio. Como es el caso del FRE Antioquia, cuyo departamento presenta un alto número de establecimientos inscritos y un nivel de complejidad alta en las instituciones, aumentando proporcionalmente el consumo de MME.
 
-```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación entre N.° de instituciones inscritas en el FRE y: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center',fig.pos='b'}
+```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación de N.° de instituciones inscritas en el FRE con: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center',fig.pos='t!'}
 g1 <- readRDS(file.path(fig_path, "100a_RelacionRecursosFRE.rds")) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "100b_RelacionRecursosFRE.rds")) + labs(title = NULL)
 
@@ -199,7 +199,7 @@ En la Figura \@ref(fig:IngresosFRE1) se observa que una tendencia a que la propo
 
 Particularmente, en la Figura \@ref(fig:IngresosFRE2) se observa que en algunos departamentos cómo Magdalena, Atlántico o Tolima, la venta de recetarios oficiales es el ingreso más prominente del FRE. Así mismo, en todos los demás departamentos representa un ingreso importante para el ente territorial, aunque no sea la principal fuente de ingreso. A nivel nacional, esta fuente de ingreso carga con una parte muy importante del erario de cada FRE departamental. Con la desaparición de los recetarios oficiales físicos en el mediano plazo, es necesario generar alternativas económicas para subsanar este recurso que desaparecería y adecuar estrategias financieras para el auto sostenimiento de cada FRE.
 
-```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE, fig.align='center',fig.pos='b'}
+```{r IngresosFRE2, echo=FALSE, warning=FALSE, fig.cap='Mapa con fuentes de ingresos de los FRE.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%", message=FALSE, fig.align='center',fig.pos='th!'}
 readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
 ```
 

@@ -115,10 +115,12 @@ heightrounded, 			% to avoid spurious underfull messages
 
 %%% Configurar pie de Página
 \setlength{\footskip}{40pt}
-\lfoot{\mdseries Proyecto de Inversión - Misión PRI 1901}
+%\lfoot{\mdseries Proyecto de Inversión - Misión PRI 1901}
 \cfoot{}
-\rfoot{\mdseries Página~\thepage}
+%\rfoot{\mdseries Página~\thepage}
 
+\fancyfoot[LO,RE]{\mdseries Proyecto de Inversión - Misión PRI 1901}
+\fancyfoot[LE,RO]{\mdseries Página~\thepage}
 
 % Elimina el encabezado de páginas vacías impares al final de los capítulos
 \makeatletter

@@ -64,7 +64,7 @@ Por último, se realizó una comparación entre los márgenes de precio de venta
 
 También se evaluaron otros factores cómo el número de instituciones que realizaron compras en la vigencia anterior ($p = .667$) y la proporción de ingresos constituida por venta de medicamentos ($p = .429$) pero no se encontró una relación significativa entre las variables (ver paneles B y C de la Figura \@ref(fig:relacionMargenesCosto).
 
-```{r relacionMargenesCosto, echo=FALSE, warning=FALSE, message=FALSE, fig.cap='Relación de márgen de ganancia y otras variables. (A) Distancia física en Km, (B) N.° de entidades que realizado compras al FRE durante el último año, y (C) Proporción de ingreso correspondiente a ventas de medicamentos.', fig.width=10, fig.height=5.5, fig.topcaption=TRUE, out.width="95%", fig.align='center'}
+```{r relacionMargenesCosto, echo=FALSE, warning=FALSE, message=FALSE, fig.cap='Relación de márgen de ganancia y otras variables. (A) Distancia física en kilómetros, (B) N.° de entidades que realizado compras al FRE durante el último año, y (C) Proporción de ingreso correspondiente a ventas de medicamentos.', fig.width=10, fig.height=5.5, fig.topcaption=TRUE, out.width="95%", fig.align='center',fig.pos="b!"}
 
 g1 <- readRDS(file.path(fig_path, '010_precios', "094_relacionMargenesCosto.rds")) + 
   labs(title = NULL)

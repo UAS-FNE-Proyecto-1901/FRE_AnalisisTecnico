@@ -37,7 +37,7 @@ Las condiciones en la infraestructura tecnológica de cada FRE, logran evidencia
 
 De acuerdo con la Figura \@ref(fig:MediosComunicacion), se evidencia que los canales más frecuentes que manejan los FRE para comunicarse con los usuarios corresponden al teléfono y el correo electrónico. Incluso estos medios de comunicación toman mayor relevancia en estos tiempos actuales de distanciamiento social, a causa de la reciente pandemia referente a la COVID-19. En ese orden de ideas, cada vez son menos los FRE que mantienen la atención presencial en sus instalaciones, al igual que la correspondencia. Estos canales de comunicación fueron reemplazados por el mundo moderno y la digitalización, en función del uso correcto del correo electrónico. Este análisis permite demostrar cierta aceptabilidad por los medios digitales que han surgido en la actualidad, por parte del personal del FRE y los usuarios inscritos en el territorio.
 
-```{r MediosComunicacion, echo=FALSE, warning=FALSE, fig.cap='Canales de comunicación FRE con clientes.', fig.width=7, fig.asp=0.85, fig.topcaption=TRUE, out.width="90%", fig.align='center'}
+```{r MediosComunicacion, echo=FALSE, warning=FALSE, fig.cap='Canales de comunicación FRE con clientes.', fig.width=7, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", fig.align='center', fig.pos="t!"}
 readRDS(file.path(fig_path, "074_MediosComunicacion.rds")) + labs(title = NULL)
 ```
 
@@ -45,7 +45,7 @@ Por otro lado, la Figura \@ref(fig:ConexionInternet) exhibe la velocidad de cone
 
 La apuesta a futuro de la modernización en los procesos de manejo de recetarios oficiales y MME, por ejemplo, la implementación del ROE, mostraría cierta deficiencia en el acceso a internet para un sector grande en la población colombiana. Esta transformación digital debe considerar principalmente, aquellos territorios que mantienen falencias en la conectividad a internet, con el fin de evitar barreras al acceso de medicamentos en estas zonas del país.
 
-```{r ConexionInternet, echo=FALSE, warning=FALSE, fig.cap='Velocidad de conexión de internet.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
+```{r ConexionInternet, echo=FALSE, warning=FALSE, fig.cap='Velocidad de conexión de internet.', fig.width=7, fig.pos=0.6, fig.topcaption=TRUE, out.width="85%", fig.align='center', fig.pos="b!"}
 readRDS(file.path(fig_path, "075_ConexionInternet.rds")) + 
   labs(title = NULL)
 ```
@@ -85,7 +85,7 @@ La seguridad de la información que manejan los FRE a nivel nacional, es un tema
 
 La Figura \@ref(fig:GarantiaInformacion) muestra la manera como se garantiza la seguridad de la información en los FRE departamentales. A partir de los datos de la figura, se puede evidenciar que medios emplea el personal del FRE para resguardar y proteger la información por medio de sistemas tecnológicos.  La restricción de acceso es el principal recurso que tienen los FRE para mantener la confidencialidad, disponibilidad e integridad de los datos.
 
-```{r GarantiaInformacion, echo=FALSE, warning=FALSE, fig.cap='Medidas para garantizar la seguridad de la información.', fig.width=6, fig.height=4, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
+```{r GarantiaInformacion, echo=FALSE, warning=FALSE, fig.cap='Medidas para garantizar la seguridad de la información.', fig.width=6, fig.asp=0.55, fig.topcaption=TRUE, out.width="95%", fig.align='center', fig.pos="t!"}
 readRDS(file.path(fig_path, "127_GarantiaInformacion.rds")) + labs(title = NULL)
 ```
 
@@ -95,7 +95,7 @@ Cabe resaltar que en la Figura \@ref(fig:GarantiaInformacion) cuándo se habla d
 
 En la Figura \@ref(fig:InformInscritos) se muestra la proporción de FRE que cuentan con bases de datos de información de inscritos y pacientes a los cuales se les dispensa MME.
 
-```{r InformInscritos, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con: (A) bases de datos con información de inscritos, o (B) bases de datos con información de pacientes a los que se les dispensa MME.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
+```{r InformInscritos, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que cuenta con: (A) bases de datos con información de inscritos, o (B) bases de datos con información de pacientes a los que se les dispensa MME.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center', fig.pos="b!"}
 g1 <- readRDS(file.path(fig_path, "128_InformInscritos.rds")) + 
   labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "129_InformPacientes.rds")) + 

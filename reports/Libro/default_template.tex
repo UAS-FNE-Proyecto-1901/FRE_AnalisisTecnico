@@ -446,6 +446,7 @@ $include-before$
 $endfor$
 
 \cleardoublepage
+\include{titulos}
 
 \newpage
 ~\vfill
@@ -458,7 +459,6 @@ $endfor$
 \medskip
 \medskip
 
-\include{titulos}
 
 %%%$if(title)$
 %%%$if(beamer)$
@@ -473,6 +473,10 @@ $endfor$
 %%%$endif$
 %%%$endif$
 
+\cleardoublepage
+%%% \pagestyle{empty}
+\thispagestyle{empty}
+\hypertarget{tocpage}{}
 $if(toc)$
 $if(toc-title)$
 \renewcommand*\contentsname{$toc-title$}
@@ -494,12 +498,25 @@ $endif$
 }
 $endif$
 $endif$
-$if(lof)$
+\bookmark[dest=tocpage, level=0, named=tocpage, color=moradoMinisterio]{\contentsname} %\pdfbookmark[0]{\contentsname}{toc}
+
+\cleardoublepage\phantomsection
+\renewcommand{\listfigurename}{Lista de figuras}
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
-$endif$
-$if(lot)$
+
+%%% $if(lof)$
+%%% \listoffigures
+%%% $endif$
+
+\cleardoublepage\phantomsection
+\renewcommand{\listtablename}{Lista de tablas}
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
-$endif$
+
+%%% $if(lot)$
+%%% \listoftables
+%%% $endif$
 $if(linestretch)$
 \setstretch{$linestretch$}
 $endif$

@@ -87,7 +87,7 @@ En otros casos se ve que el personal del FRE considera que su contacto directo c
 
 ### Tiempos de demora en el proceso de adquisición
 
-El tiempo de demora para reabastecimiento ($L$) es el tiempo que pasa desde el momento en el que se decide generar un pedido hasta que está físicamente listo en el almacén para satisfacer la demanda de los clientes [@Silver2017]. Para un manejo adecuado del inventario, se debe tener en cuenta este tiempo para realizar los pedidos con anticipación de manera que no se produzcan desabastecimientos de forma frecuente.
+El tiempo de demora para reabastecimiento ($L$, *lead time*) es el tiempo que pasa desde el momento en el que se decide generar un pedido hasta que está físicamente listo en el almacén para satisfacer la demanda de los clientes [@Silver2017]. Para un manejo adecuado del inventario, se debe tener en cuenta este tiempo para realizar los pedidos con anticipación de manera que no se produzcan desabastecimientos de forma frecuente.
 
 Los tiempos de demora suelen tener varios componentes, en el diseño de la encuesta se tuvo en cuenta un proceso de adquisición de MME mediante etapas, de forma general se consideraron cinco etapas del proceso: 
 

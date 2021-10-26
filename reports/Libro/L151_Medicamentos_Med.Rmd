@@ -22,7 +22,7 @@ Es así, que el FNE cuenta con el Grupo Interno de Trabajo de Medicamentos del E
 
 Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \@ref(tab:portafolioMME) [@ColombiaCompraEficiente2021].
 
-```{r portafolioMME, echo=FALSE, warning=FALSE,fig.pos='h!',tab.pos='h!',fig.align='center',tab.align='center'}
+```{r portafolioMME, echo=FALSE, warning=FALSE, fig.pos="t!",tab.pos="t!",fig.align='center', tab.align='center'}
 table1 <- tibble::tribble(
                               ~Producto,        ~Presentación,                       ~Observaciones,
            "Fenobarbital Sol Oral 0,4%",             "Frasco",                                   'Disponible',
@@ -53,7 +53,8 @@ table1 <- tibble::tribble(
 
 if (knitr::is_latex_output()) {
   knitr::kable(table1, align = c('l', 'c', 'c'), caption = 'Portafolio de Medicamentos Monopolio del Estado.', 
-               format = 'latex', booktabs=TRUE) %>% kableExtra::kable_styling(bootstrap_options = "striped")
+               format = 'latex', booktabs=TRUE, valign = 't!') %>% 
+	kableExtra::kable_styling(bootstrap_options = "striped", latex_options = "hold_position")
 } else {
   knitr::kable(table1, align = c('l', 'c','c'), 
                caption = 'Portafolio de Medicamentos Monopolio del Estado.', format = 'html')

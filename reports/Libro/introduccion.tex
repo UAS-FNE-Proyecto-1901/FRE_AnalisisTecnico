@@ -2,10 +2,10 @@
 \thispagestyle{empty}
 \begin{tikzpicture}[overlay, remember picture] %-Cambio de fondo de página
 	% Crea una coordenada 12 cm por debajo del norte de la página
-	\coordinate [right=11cm, below=5.5cm] (highpoint) at (current page.north west);
-	\coordinate [right=11cm, below=16.5cm] (midpoint) at (current page.north west);
-	\coordinate [right=11cm, below=18.0cm] (lowpoint) at (current page.north west);
-	\coordinate [right=7.5cm, below=24.5cm] (finalLogo) at (current page.north west);
+	\coordinate [right=11cm, below=06.5cm] (highpoint) at (current page.north west);
+	\coordinate [right=11cm, below=17.5cm] (midpoint) at (current page.north west);
+	\coordinate [right=11cm, below=19.0cm] (lowpoint) at (current page.north west);
+	\coordinate [right=7.5cm, below=24.2cm] (finalLogo) at (current page.north west);
 	% Inicia una nueva figura al nor oeste
 	\node at (current page.north west)
 	{
@@ -13,7 +13,7 @@
 			%- 
 			% Imagen de Fondo
 			\node[anchor=north west, inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{www/Portada_1.pdf}};	
-			\draw[anchor=north] (highpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1.0, inner sep=1cm,  text=txBlue]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{16cm}
+			\draw[anchor=north] (highpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1.0, inner sep=1cm,  text=txBlue]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{20cm}
 				{\centering Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado}};  
 			\draw[anchor=north] (midpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1, inner sep=1cm, text=txBlue]{\LARGE\centering\bfseries\sffamily\parbox[c][][t]{16cm} {Proyecto de Inversión Misión PRI 1901}}; 
 			\draw[anchor=north] (lowpoint) node [fill=bgBlue, fill opacity=0.01, text opacity=1, inner sep=1cm, text=txBlue]{\LARGE\centering\bfseries\sffamily\parbox[c][][t]{16cm} {10 de octubre de 2021}};
