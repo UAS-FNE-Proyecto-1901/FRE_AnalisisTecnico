@@ -27,7 +27,7 @@ La venta de MME a instituciones en los departamentos se da según lo establecido
 <!--   labs(title = NULL) -->
 <!-- ``` -->
 
-```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento.', fig.width=6, fig.asp=0.7, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
+```{r FrecVentaInstituciones, echo=FALSE, warning=FALSE, fig.cap='Frecuencia de venta de MME a instituciones en el departamento.', fig.width=6, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "133_FrecVentaInstit.rds")) + labs(title = NULL)
 ```
 
@@ -37,7 +37,7 @@ En el departamento del Atlántico antes de la pandemia la venta de medicamentos 
 
 En la Figura \@ref(fig:ControlesVentasFRE) se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.
 
-```{r ControlesVentasFRE, echo=FALSE, warning=FALSE, fig.cap='Controles en las ventas directas a pacientes.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
+```{r ControlesVentasFRE, echo=FALSE, warning=FALSE, fig.cap='Controles en las ventas directas a pacientes.', fig.width=8, fig.asp=0.7, fig.topcaption=TRUE, out.width="87%",fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "120_ControlesVentasFRE.rds")) + labs(title = NULL)
 ```
 

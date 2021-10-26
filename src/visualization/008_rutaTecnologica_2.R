@@ -113,7 +113,7 @@ ggConsolidacionA1 <- select(df, all_of(c(col1 = col1))) %>%
   ggplot(aes(y = col1)) +
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   scale_x_continuous(expand = c(0,0,0.2,0)) +
   scale_y_discrete(drop = F) +
   labs(title = "Tiempo en consolidación de A1 de la R1479/2006") + 
@@ -206,7 +206,7 @@ ggArchivoInformes <- ttArchivoInformes %>%
   ggplot(aes(y = col1)) +
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   scale_y_discrete(drop = F) +
   labs(title = "Tiempo de archivo de informes A13 de R.1478/2006") + 
   coord_cartesian(xlim = c(0, NA)) + 
@@ -292,7 +292,7 @@ ggArchivoInformes1 <- select(df, col1 = col1) %>%
   ggplot(aes(y = col1)) +
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   labs(title = "Tiempo de archivo de informes A13 de R.1478/2006") + 
   scale_x_continuous(expand = c(0,0,0.2,0)) + 
   coord_cartesian(xlim = c(0, NA)) + 
@@ -496,7 +496,7 @@ ggFrecVentasFNE1 <- rename(df, col1 = col1) %>%
   geom_bar(fill = alpha('#1a41bd', 0.5), color = 'black') + 
   geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +
   xlab('N.° de pedidos por año') + 
-  ylab('Frecuencia') + 
+  ylab('N.° de FRE, frecuencia') + 
   scale_x_continuous(breaks = 1:12) + 
   scale_y_continuous(expand = c(0,0,0.2,0)) 
 
@@ -515,7 +515,7 @@ ggFrecVentasFNE2 <- rename(df, col1 = col1) %>%
   geom_bar(fill = alpha('#1a41bd', 0.5), color = 'black') + 
   geom_text(stat = 'count', aes(label = ..count..), vjust = -0.5) +
   xlab('Tiempo entre pedidos') + 
-  ylab('Frecuencia') + 
+  ylab('N.° de FRE, frecuencia') + 
   scale_x_continuous(breaks = 1:12) + 
   scale_y_continuous(expand = c(0,0,0.2,0)) 
 
@@ -556,14 +556,16 @@ ggTiempoVentaRec <- df %>%
   left_join(colombiaGeoDF, by = c('CodigoDepartamento' = 'DPTO')) %>% 
   mutate(
     Departamento_1 = str_to_title(Departamento_1),
-    label1 = ifelse(
-    !is.na(col1), paste0(Departamento_1, '\n', col1, ' días'), NA_character_
+    label1 = case_when(
+      col1 == 1 ~ paste0(Departamento_1, '\n', col1, ' día'),
+      col1 >= 1 ~ paste0(Departamento_1, '\n', col1, ' días'),
+      TRUE ~ NA_character_
   )) %>% 
   ggplot(aes(fill = col1)) + 
   geom_sf(aes(geometry = geometry))+ 
   geom_sf_label_repel(aes(label = label1), size = 2, fill='white') +
   labs(title = 'Tiempo para la venta de recetarios a clientes') +
-  scale_fill_gradientn(colours = colorspace::heat_hcl(7), name = 'Tiempo') +
+  scale_fill_viridis_c(name = 'Tiempo') +
   theme(
     axis.text = element_blank(),
     axis.title = element_blank(),
@@ -594,7 +596,7 @@ ggFrecVentaInstitu <- select(df, all_of(c(col1 = col1))) %>%
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   scale_x_continuous(expand = c(0,0,0.2,0)) + 
   scale_y_discrete(drop = F) +
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) +
   coord_cartesian(xlim = c(0, NA)) +
   labs(title = 'Frecuencia de ventas del FRE a instituciones') + 

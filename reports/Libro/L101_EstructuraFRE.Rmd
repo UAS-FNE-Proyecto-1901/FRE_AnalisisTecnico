@@ -67,7 +67,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
 
 -	De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 
-```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center', fig.pos='b!'}
+```{r perfilProfesionalEncargado, echo=FALSE, fig.cap='Perfil de profesional de encargados de los FRE.', fig.width=13, fig.height=5, fig.topcaption=TRUE, out.width="100%", fig.align='center', fig.pos='t!'}
 g1 <- readRDS(file.path(fig_path, '020_perfilProfesionalEncargado.rds')) + labs(title = 'A')
 g2 <- readRDS(file.path(fig_path, '021_mapaProfesional.rds'))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
@@ -152,7 +152,7 @@ readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
 
 En la Figura \@ref(fig:institucionesInscritasVARdemo) se puede determinar una relación directa entre la cantidad de instituciones inscritas y variables relacionadas a la demografía de cada departamento. Lo anterior se explica con la densidad demográfica del departamento y la necesidad de servicios de atención en salud cada vez más complejos. En teoría, los FRE con mayor número de inscritos de mayor complejidad, deberían estar mucho más desarrollados para atender la necesidad de MME de su territorio. Como es el caso del FRE Antioquia, cuyo departamento presenta un alto número de establecimientos inscritos y un nivel de complejidad alta en las instituciones, aumentando proporcionalmente el consumo de MME.
 
-```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación de N.° de instituciones inscritas en el FRE con: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center',fig.pos='t!'}
+```{r institucionesInscritasVARdemo, echo=FALSE, fig.cap='Relación de N.° de instituciones inscritas en el FRE con: (A) tamaño de la población en el departamento o (B) N.° de camas de acuerdo a REPS.', fig.width=10, fig.height=4, out.width="100%", fig.topcaption=TRUE, message=FALSE, warning=FALSE,fig.align='center',fig.pos='b!'}
 g1 <- readRDS(file.path(fig_path, "100a_RelacionRecursosFRE.rds")) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "100b_RelacionRecursosFRE.rds")) + labs(title = NULL)
 

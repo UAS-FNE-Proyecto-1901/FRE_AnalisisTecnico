@@ -45,7 +45,7 @@ readRDS(file.path(fig_path, "089_FrecuenciaRevisionCondiciones.rds")) + labs(tit
 
 En el panel izquierdo de la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se presentan los métodos o tecnologías utilizadas en la monitorización de los medicamentos. En la Figura \@ref(fig:MetodosSeguimientoControlAmbiental) se observa que al menos 25 de 30 fondos rotatorios cuentan con un termohigrómetro para la evaluación de condiciones ambientales. La práctica de diligenciar registros cuenta con una menor adopción por parte de los fondos rotatorios, se tiene que 7 y 4 de los fondos rotatorios realiza el diligenciamiento de estos formatos de manera manual y electrónica de manera respectiva. 
 
-```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='(A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center', fig.pos='t'}
+```{r MetodosSeguimientoControlAmbiental, echo=FALSE, warning=FALSE, fig.cap='(A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental.', fig.width=10, fig.height=4, fig.topcaption=TRUE, out.width="100%",fig.align='center', fig.pos='t!'}
 g1 <- readRDS(file.path(fig_path, "090_MetodoSeguimControlAmb.rds")) + 
   labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "091_FrecSeguimientoCalibracion.rds")) + 
@@ -59,19 +59,19 @@ En sólo dos FRE (Chocó y Norte de Santander) se reporta el uso de aire acondic
 
 En la Figura \@ref(fig:ProductosCompartidos1) se muestra la frecuencia de varias categorías de productos con los cuales se comparten los MME en el almacén de los FRE. Se tiene que en casi la mitad de los FRE se comparten los MME con medicamentos de salud pública, en 7 de 30 casos se reporta la utilización del espacio en conjunto con papelería (7/30) o recetarios oficiales (3/30). Algunos FRE tienen otros items como vacunas, medicamentos de carros de paro y medicamentos incautados. En 9 de 30 casos se tiene que el FRE tiene un espacio dedicado únicamente a MME.
 
-```{r ProductosCompartidos1, echo=FALSE, warning=FALSE, fig.cap='Productos compartidos en el almacén de MME.', fig.width=8, fig.height=6, fig.topcaption=TRUE,fig.align='center', out.width="85%"}
+```{r ProductosCompartidos1, echo=FALSE, warning=FALSE, fig.cap='Productos compartidos en el almacén de MME.', fig.width=8, fig.asp=0.65, fig.topcaption=TRUE,fig.align='center', out.width="90%", fig.pos="!b"}
 readRDS(file.path(fig_path, "092_ProductosCompartidos.rds")) + labs(title = NULL)
 ```
-En la Figura \@ref(fig:PropOcupacionAlmacen) se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se tiene que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se da en 12 FREs. 
+En la Figura \@ref(fig:PropOcupacionAlmacen) se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se evidencia que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se presenta en 12 FREs. 
 
-```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE.', fig.width=6, fig.asp=0.5, fig.topcaption=TRUE,fig.align='center', out.width="85%"}
+```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE.', fig.width=6, fig.asp=0.7, fig.topcaption=TRUE,fig.align='center', out.width="85%", fig.pos="!b"}
 readRDS(file.path(fig_path, "134_PropOcupacionAlmacen.rds")) + labs(title = NULL)
 ```
 
 Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos [@Silver2017]. 
 En la Figura \@ref(fig:FrecControlExistencias) se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario. 
 
-```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME.', fig.width=10, fig.height=4, fig.topcaption=TRUE,fig.align='center', out.width="100%"}
+```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME.', fig.width=11, fig.height=5, fig.topcaption=TRUE,fig.align='center', out.width="100%"}
 g1 <- readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + labs(title = 'A')
 g2 <- readRDS(file.path(fig_path, "094_FrecControlExistenciasMapa.rds"))
 g2[[1]] <- g2[[1]] + labs(title = 'B')
@@ -124,7 +124,7 @@ El transporte de medicamentos por parte del FNE, es un proceso importante dentro
 
 En la Figura \@ref(fig:TransporteProductos) se tiene una descripción de la opinión del servicio de distribución por parte del FNE. Se tiene que las opiniones se encuentran divididas con algunas respuestas positivas (66.6\%) y otras negativas (33.3\%).
 
-```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME.', fig.width=8, fig.asp=0.48, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
+```{r TransporteProductos, echo=FALSE, warning=FALSE, fig.cap='Opinión del servicio de la distribución de los medicamentos MME.', fig.width=8, fig.asp=0.55, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 readRDS(file.path(fig_path, "093_TransporteProductos.rds")) + labs(title = NULL)
 ```
 

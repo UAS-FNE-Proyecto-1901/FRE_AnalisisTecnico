@@ -58,7 +58,7 @@ gHerramientaInventario <- df$HerramientaInvetarios %>%
   ggplot(aes(y = fct_reorder(., n), x = n)) +
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = n), hjust = -0.3) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   labs(title = 'Herramientas de manejo inventarios') + 
   coord_cartesian(xlim = c(0, NA)) + 
   theme(
@@ -122,15 +122,16 @@ ttAcuerdoImplROE <- pull(df, col1) %>%
   {as_tibble(table(., dnn = 'Tipo'))}
 
 ggAcuerdoImplROE <- ttAcuerdoImplROE %>%
-  mutate(prop = round(n/sum(n), 2),
-         label = paste0(n, ' (', prop, ')')) %>% 
+  mutate(prop = round(n/sum(n), 3) * 100,
+         label = paste0(n, ' (', prop, '%)')) %>% 
   mutate(Tipo = str_wrap(Tipo, 20),
          Tipo = factor(Tipo, levels = escLikert)) %>% 
   ggplot(aes(y = Tipo, x = n)) + 
   geom_bar(stat = 'identity', fill = '#527ACC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = label), hjust = -0.3, size = 3.5) + 
-  coord_cartesian(xlim = c(0, max(ttAcuerdoImplROE$n)*1.25)) +
-  xlab("Frecuencia (%)") + 
+  scale_x_continuous(expand = c(0,0, 0.4,0)) + 
+  # coord_cartesian(xlim = c(0, max(ttAcuerdoImplROE$n)*1.25)) +
+  xlab("N.° de FRE (%)") + 
   labs(title = '¿Qué tan de acuerdo está con la implementación del ROE?') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
@@ -372,7 +373,7 @@ ggFrecRecetOficialesIPS <- tFrecRecetOficialesIPS %>%
   ggplot(aes(y = fct_reorder(F_recibo, n), x = n)) +
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
   geom_text(aes(label = label1), hjust = -0.8) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   coord_cartesian(xlim = c(0, max(tFrecRecetOficialesIPS$n)*1.2)) +
   labs(title = 'Tiempo de recepción recetarios oficiales desde IPS') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
@@ -400,7 +401,7 @@ ggDuracionFRE <- select(df, Duracion = col1) %>%
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   coord_cartesian(xlim = c(0, max(ttDuracionFRE$n)*1.2)) + 
-  xlab('Frecuencia') +
+  xlab('N.° de FRE, frecuencia') +
   labs(title = 'Tiempo de archivo de los recetarios oficiales en los FRE') +
   theme(axis.title.y = element_blank())
 

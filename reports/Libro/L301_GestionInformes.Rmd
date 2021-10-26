@@ -112,13 +112,13 @@ Algunas instituciones entregan este informe al FRE, de manera electrónica, mien
 
 La Figura \@ref(fig:RecepcionA13) muestra los diferentes tipos de documentos que reciben los FRE, por parte de las instituciones autorizadas en el territorio, referente al Anexo 13 de la Resolución 1478 de 2006 [@MSPS1478-2006]. Esto muestra diversas formas en que el FRE recibe este informe y la condición de transcribir toda esta información departamental para que quede ajustada en la hoja estandarizada de Excel.
 
-```{r RecepcionA13, echo=FALSE, warning=FALSE, fig.cap='Medio para consolidación de Anexo 13 de la Resolución 1478 de 2006.', fig.width=8, fig.height=6, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
+```{r RecepcionA13, echo=FALSE, warning=FALSE, fig.cap='Medio para consolidación de Anexo 13 de la Resolución 1478 de 2006.', fig.width=8, fig.asp=0.6, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t!'}
 readRDS(file.path(fig_path, "122_RecepcionA13.rds")) + labs(title = NULL)
 ```
 
 La Figura \@ref(fig:TiemposConsolidacionA2) muestra los recursos utilizados por los FRE para el diligenciamiento del Anexo 2 en los departamentos. El diligenciamiento del Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006] suele ser llevado a cabo por una persona en la mayoría de FRE (n = 26), pero en algunos FRE reportan que pueden llegar a necesitar 2 personas (p.ej. Tolima, Boyacá, y Guaviare), sólo el FRE de Cauca reporta que se requiere a todo el equipo para el diligenciamiento del informe. 
 
-```{r TiemposConsolidacionA2, echo=FALSE, warning=FALSE, fig.cap='Recursos en la consolidación del Anexo 2 de la Resolución 1479 de 2006. (A) N.° de personas involucradas, (B) Comparación de tiempo de diligenciamiento frente a N.° de instituciones.', fig.width=10, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
+```{r TiemposConsolidacionA2, echo=FALSE, warning=FALSE, fig.cap='Recursos en la consolidación del Anexo 2 de la Resolución 1479 de 2006. (A) N.° de personas involucradas, (B) Comparación de tiempo de diligenciamiento frente a N.° de instituciones.', fig.width=10, fig.height=5, fig.topcaption=TRUE, out.width="100%",fig.align='center', fig.pos="t!"}
 g1 <- readRDS(file.path(fig_path, "137_evaluacionAnexo1.rds")) + labs(title = NULL)
 g2 <- readRDS(file.path(fig_path, "137_evaluacionAnexo2.rds")) + labs(title = NULL)
 
@@ -135,7 +135,7 @@ Adicionalmente, la base de datos entregada por el grupo de Regionalización, ref
 
 En la Figura \@ref(fig:ArchivoInformesFRE) se muestra que la práctica más común es realizar el archivo de los Anexo 13 de la Resolución 1479 de 2006 por al menos 5 años, aunque 6 FRE realizan este archivo de informes en períodos de tiempo entre 2 a 5 años.
 
-```{r ArchivoInformesFRE, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de Anexo 13 de la Resolución 1478 de 2006.', fig.width=7, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r ArchivoInformesFRE, echo=FALSE, warning=FALSE, fig.cap='Tiempo de archivo de Anexo 13 de la Resolución 1478 de 2006.', fig.width=7, fig.asp=0.6, fig.topcaption=TRUE, out.width="95%",fig.align='center',fig.pos="b!"}
 readRDS(file.path(fig_path, "123_ArchivoInformesFRE.rds")) + labs(title = NULL)
 ```
 
@@ -143,8 +143,8 @@ readRDS(file.path(fig_path, "123_ArchivoInformesFRE.rds")) + labs(title = NULL)
 
 En la Figura \@ref(fig:SeguimientoEnvioInformes) se muestran los mecanismos de seguimiento del FRE frente a las instituciones para el envío de los informes requeridos por la normativa. Se muestra que una proporción importante de los FRE (14/31) realiza el seguimiento de envío de reportes mediante visitas personales a las instituciones. Sólo los FRE de Magdalena, Tolima, Boyacá y Guainía realizan este seguimiento mediante visitas personales. 
 
-```{r SeguimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Mecanismo de seguimiento de instituciones de envío de informes.', fig.width=7, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%",fig.align='center',fig.pos="t!"}
-readRDS(file.path(fig_path, "125_SeguimientoEnvioInformes.rds")) + labs(title = NULL)
+```{r SeguimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Mecanismo de seguimiento de instituciones de envío de informes.', fig.width=7, fig.asp=0.6, fig.topcaption=TRUE, out.width="90%",fig.align='center',fig.pos="t!"}
+readRDS(file.path(fig_path, "125_SeguimientoEnvioInformes.rds")) + labs(title = NULL) + xlab("Proporción de FRE")
 ```
 
 Los FRE también reportan la utilización de recursos como llamadas (41.9\%) o correos (41.9\%) para la realización de esta actividad. Los FRE de Putumayo, Sucre, Caquetá, San Andrés, Meta, Caldas y Vichada utilizan llamadas telefónicas de forma exclusiva para la realización del seguimiento. Mientras que los FRE de Huila, Nariño, Chocó, La Guajira, Amazonas y Santander utilizan el correo electrónico de forma exclusiva para realizar el seguimiento. Sólo 3 FRE reportan no realizar un seguimiento de envío de informes como lo son Córdoba, Norte de Santander y Risaralda.

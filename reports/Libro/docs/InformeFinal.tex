@@ -185,8 +185,8 @@ heightrounded, 			% to avoid spurious underfull messages
 %\fancyhead[RE]{\leftmark} % Imprima el nombre del capítulo actual en el lado derecho de las páginas pares
 
 %%\fancyhead[LE,RO]{\leftmark} 
-\fancyhead[LE,RO]{} 
-\fancyhead[LO,RE]{\includegraphics[width=0.5\paperwidth]{www/logos_MinSalud_FNE.png}}
+\fancyhead[LE,RO]{\includegraphics[width=0.5\paperwidth]{www/logos_MinSalud_FNE.png}} 
+\fancyhead[LO,RE]{}
 
 \renewcommand{\headrulewidth}{0.01pt} % De ancho de la regla debajo del encabezado
 \addtolength{\headheight}{15pt} % Aumente ligeramente el espacio alrededor del encabezado
@@ -210,8 +210,8 @@ heightrounded, 			% to avoid spurious underfull messages
 	\vspace*{\fill}
 	\thispagestyle{empty}
 	\newpage
-	\fi}
-
+	\fi
+}
 
 %% Elimina el encabezado de páginas vacías impares al final de los capítulos
 %\makeatletter
@@ -563,7 +563,7 @@ Para el análisis del recurso humano de los FRE se tuvieron en cuanto dos clasif
   De acuerdo con la carga laboral relacionada con actividades del FRE. Se consideró como personal directo a aquel que desempeña más de un 50\% de su tiempo en actividades relacionadas al FRE y personal vinculado como aquel que desempeña menos del 50\% de su tiempo en estas actividades FRE.
 \end{itemize}
 
-\begin{figure}[b!]
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/perfilProfesionalEncargado-1} 
 
@@ -669,7 +669,7 @@ También se puede observar que la distribución geográfica de las regiones no s
 
 En la Figura \ref{fig:institucionesInscritasVARdemo} se puede determinar una relación directa entre la cantidad de instituciones inscritas y variables relacionadas a la demografía de cada departamento. Lo anterior se explica con la densidad demográfica del departamento y la necesidad de servicios de atención en salud cada vez más complejos. En teoría, los FRE con mayor número de inscritos de mayor complejidad, deberían estar mucho más desarrollados para atender la necesidad de MME de su territorio. Como es el caso del FRE Antioquia, cuyo departamento presenta un alto número de establecimientos inscritos y un nivel de complejidad alta en las instituciones, aumentando proporcionalmente el consumo de MME.
 
-\begin{figure}[t!]
+\begin{figure}[b!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/institucionesInscritasVARdemo-1} 
 
@@ -1114,7 +1114,7 @@ La Figura \ref{fig:BD-diligBDRecet} muestra los campos de información recolecta
   Número de talonarios que se distribuyen en los respectivos departamentos.
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/BD-diligBDRecet-1} 
 
@@ -1146,7 +1146,7 @@ Las actividades anteriormente descritas se consideran actividades de seguimiento
 
 Otras actividades de seguimiento activo al manejo de RO son el seguimiento a las denuncias, las cuales tienen una proporción menor al 5\%. Finalmente, el acompañamiento permitió evidenciar que el 15\% de los FRE no realizan ningún tipo de actividad de seguimiento al uso de los ROs, tan solo cumpliendo con la presentación de informes exigidos por la normativa vigente.
 
-\begin{figure}
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/SeguimientoUsoRecetarios-1} 
 
@@ -1162,7 +1162,7 @@ Durante el acompañamiento se complementó como recomendación a los FRE, se con
 
 Complementando la información reportada en la Figura \ref{fig:ReciboRecetariosInstituciones} y en la Figura \ref{fig:TiempoArchivoRecetariosOficiales}, se relacionó el tiempo de archivo que los FRE que si reciben los recetarios oficiales los almacenan, obteniendo que 10 FRE los almacenan por un periodo mayor a 5 años. Durante las jornadas de inmersión territorial se pudo observar que este tiempo de almacenamiento, en la mayoría de los casos, es por desinformación en los FRE, puesto que no se tiene presente el tiempo que se deben guardar estas copias, y al considerarlas parte de la historia clínica de un paciente estiman guardarlas hasta por 10 años, superando en muchos casos la capacidad de archivo de los FRE.
 
-\begin{figure}
+\begin{figure}[t]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/TiempoArchivoRecetariosOficiales-1} 
 
@@ -1632,7 +1632,7 @@ La venta de MME a instituciones en los departamentos se da según lo establecido
 
 \begin{figure}[t]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/FrecVentaInstituciones-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/FrecVentaInstituciones-1} 
 
 }
 
@@ -1648,7 +1648,7 @@ En la Figura \ref{fig:ControlesVentasFRE} se tienen las medidas adoptadas como c
 
 \begin{figure}[t]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/ControlesVentasFRE-1} 
+{\centering \includegraphics[width=0.87\linewidth]{InformeFinal_files/figure-latex/ControlesVentasFRE-1} 
 
 }
 
@@ -1705,7 +1705,7 @@ En la Figura \ref{fig:FrecRevCondiciones} se muestra la frecuencia de revisión 
 
 En el panel izquierdo de la Figura \ref{fig:MetodosSeguimientoControlAmbiental} se presentan los métodos o tecnologías utilizadas en la monitorización de los medicamentos. En la Figura \ref{fig:MetodosSeguimientoControlAmbiental} se observa que al menos 25 de 30 fondos rotatorios cuentan con un termohigrómetro para la evaluación de condiciones ambientales. La práctica de diligenciar registros cuenta con una menor adopción por parte de los fondos rotatorios, se tiene que 7 y 4 de los fondos rotatorios realiza el diligenciamiento de estos formatos de manera manual y electrónica de manera respectiva.
 
-\begin{figure}[t]
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/MetodosSeguimientoControlAmbiental-1} 
 
@@ -1721,9 +1721,9 @@ En sólo dos FRE (Chocó y Norte de Santander) se reporta el uso de aire acondic
 
 En la Figura \ref{fig:ProductosCompartidos1} se muestra la frecuencia de varias categorías de productos con los cuales se comparten los MME en el almacén de los FRE. Se tiene que en casi la mitad de los FRE se comparten los MME con medicamentos de salud pública, en 7 de 30 casos se reporta la utilización del espacio en conjunto con papelería (7/30) o recetarios oficiales (3/30). Algunos FRE tienen otros items como vacunas, medicamentos de carros de paro y medicamentos incautados. En 9 de 30 casos se tiene que el FRE tiene un espacio dedicado únicamente a MME.
 
-\begin{figure}
+\begin{figure}[!b]
 
-{\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/ProductosCompartidos1-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/ProductosCompartidos1-1} 
 
 }
 
@@ -1732,7 +1732,7 @@ En la Figura \ref{fig:ProductosCompartidos1} se muestra la frecuencia de varias 
 
 En la Figura \ref{fig:PropOcupacionAlmacen} se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se tiene que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se da en 12 FREs.
 
-\begin{figure}
+\begin{figure}[!b]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/PropOcupacionAlmacen-1} 
 
@@ -1806,7 +1806,7 @@ En la Figura \ref{fig:TransporteProductos} se tiene una descripción de la opini
 
 \begin{figure}
 
-{\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/TransporteProductos-1} 
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/TransporteProductos-1} 
 
 }
 
@@ -2135,7 +2135,7 @@ Algunas instituciones entregan este informe al FRE, de manera electrónica, mien
 
 La Figura \ref{fig:RecepcionA13} muestra los diferentes tipos de documentos que reciben los FRE, por parte de las instituciones autorizadas en el territorio, referente al Anexo 13 de la Resolución 1478 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}. Esto muestra diversas formas en que el FRE recibe este informe y la condición de transcribir toda esta información departamental para que quede ajustada en la hoja estandarizada de Excel.
 
-\begin{figure}
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=0.85\linewidth]{InformeFinal_files/figure-latex/RecepcionA13-1} 
 
@@ -2146,7 +2146,7 @@ La Figura \ref{fig:RecepcionA13} muestra los diferentes tipos de documentos que 
 
 La Figura \ref{fig:TiemposConsolidacionA2} muestra los recursos utilizados por los FRE para el diligenciamiento del Anexo 2 en los departamentos. El diligenciamiento del Anexo 2 de la Resolución 1479 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}} suele ser llevado a cabo por una persona en la mayoría de FRE (n = 26), pero en algunos FRE reportan que pueden llegar a necesitar 2 personas (p.ej. Tolima, Boyacá, y Guaviare), sólo el FRE de Cauca reporta que se requiere a todo el equipo para el diligenciamiento del informe.
 
-\begin{figure}
+\begin{figure}[t!]
 
 {\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/TiemposConsolidacionA2-1} 
 
@@ -2168,9 +2168,9 @@ Adicionalmente, la base de datos entregada por el grupo de Regionalización, ref
 
 En la Figura \ref{fig:ArchivoInformesFRE} se muestra que la práctica más común es realizar el archivo de los Anexo 13 de la Resolución 1479 de 2006 por al menos 5 años, aunque 6 FRE realizan este archivo de informes en períodos de tiempo entre 2 a 5 años.
 
-\begin{figure}
+\begin{figure}[b!]
 
-{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/ArchivoInformesFRE-1} 
+{\centering \includegraphics[width=0.95\linewidth]{InformeFinal_files/figure-latex/ArchivoInformesFRE-1} 
 
 }
 

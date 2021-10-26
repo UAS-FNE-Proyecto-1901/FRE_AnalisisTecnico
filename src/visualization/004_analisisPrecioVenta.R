@@ -179,7 +179,7 @@ gRecetarios4 <- df_total %>%
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
   coord_cartesian(ylim = c(0, max(dftot1$n)*1.2)) +
-  ylab('Frecuencia') + xlab('N.° prescripciones por recetario') +
+  ylab('N.° de FRE, frecuencia') + xlab('N.° prescripciones por recetario') +
   labs(title = 'Número de prescripciones por recetario') + 
   theme(panel.grid = element_blank())
   
@@ -295,7 +295,7 @@ ggComparativo2 <- df_total %>%
   geom_label(stat = 'count', aes(label = ..count..), vjust=-0.4) +
   scale_y_continuous(expand = c(0, 0, 0.2, 0)) + 
   xlab('Márgen de ganancia para recetarios oficiales') + 
-  ylab('Frecuencia')
+  ylab('N.° de FRE, frecuencia')
 
 #+ comparativoMargen2, fig.width = 8, fig.height=6, out.width="90%"
 ggComparativo2
@@ -400,7 +400,7 @@ gModalidadAdquisicion <- tModalidadAdquisicion %>%
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = Frec), position = position_dodge(width = 1), 
             hjust = -1) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   scale_x_continuous(expand = c(0, 0, 0.2, 0)) + 
   coord_cartesian(xlim = c(0, NA)) +
   labs(title = 'Modalidad de Selección Contratación Recetarios') + 

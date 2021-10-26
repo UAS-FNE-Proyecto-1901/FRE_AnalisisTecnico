@@ -182,7 +182,7 @@ ggConexionInternet <- pull(df, col1) %>%
   geom_text(aes(label = n), hjust = -0.5, size = 4) + 
   coord_cartesian(xlim = c(0, NA)) +
   scale_x_continuous(expand = c(0,0,0,1.2)) +
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   labs(title = 'Velocidad de conexión de Internet') + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
@@ -197,10 +197,10 @@ ggEquiposComputo <- pull(df, col1) %>%
   mutate(Equipos = as.double(.)) %>% 
   ggplot(aes(x = Equipos, y = n)) +
   geom_segment(aes(xend = Equipos, y = 0, yend = n), color="grey30") + 
-  geom_point(size = 4, color="orange") + 
+  geom_point(size = 4, color = "#990f3f") + 
   geom_label(aes(label = n), vjust = -0.9, label.padding = unit(0.4, "lines")) +
   xlab('N.° de equipos') + 
-  ylab('Frecuencia') + 
+  ylab('N.° de FRE, frecuencia') + 
   coord_cartesian(ylim = c(0, NA)) +
   scale_x_continuous(breaks = 0:6) +
   scale_y_continuous(expand = c(0, 0.0, 0.50, 0)) + 
@@ -415,7 +415,7 @@ graficoBarrasTiempos <- function(tiempo,
              label = glue::glue("Med. (IQR): {mn_val} ({q3_val-q1_val})"), 
              vjust = 1.2, size = 3.2, hjust = 1) + 
     xlab('Tiempo (días)') +
-    ylab('Frecuencia') +
+    ylab('N.° de FRE, frecuencia') +
     labs(title = titulo) + 
     theme(panel.grid = element_blank())  
 }
@@ -534,7 +534,7 @@ ggCompraEficiente <- select(df, Escala = col1) %>%
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) + 
   scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
   coord_cartesian(xlim = c(0, NA)) +
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   theme(axis.title.y = element_blank(), 
         legend.position = 'bottom') + 
   labs(title = 'Conformidad con plataforma Colombia Compra Eficiente')
@@ -595,7 +595,7 @@ ggRecepcionb <- df %>%
   geom_bar(fill = alpha('blue4', 0.4), col ='black') + 
   geom_text(stat = 'count', aes(label = ..count..), vjust = -0.3) +
   xlab('Tiempo de recepción (días)') +
-  ylab('Frecuencia') +
+  ylab('N.° de FRE, frecuencia') +
   scale_y_continuous(expand = c(0,0,0.2,0)) +
   theme(panel.grid = element_blank(),
         legend.position = 'bottom') + 
@@ -710,7 +710,7 @@ ggFrecCondiciones <- pull(df, col1) %>%
   geom_text(aes(label = n), hjust = -0.6, size = 4) +
   scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
   coord_cartesian(xlim = c(0, NA)) + 
-  xlab("Frecuencia") +
+  xlab("N.° de FRE, frecuencia") +
   theme(axis.title.y = element_blank(), panel.grid = element_blank())
 
 #+ ggFrecCondiciones, fig.width = 6, fig.height = 4, out.width = "60%"
@@ -767,7 +767,7 @@ ggCalibMant <- select(df, col1 = col1) %>%
   ggplot(aes(y = col1)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat='count', hjust = -0.8, size = 4) + 
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   scale_y_discrete(drop = FALSE) +
   scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) + 
   coord_cartesian(xlim = c(0, NA)) +
@@ -829,7 +829,7 @@ ggTransporte <- select(df, likert = col1) %>%
   ggplot(aes(y = likert)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) +
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   coord_cartesian(xlim = c(0, NA)) + 
   scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
   labs(title = 'Conformidad con el servicio de transporte desde el FNE') + 
@@ -872,7 +872,7 @@ ggFrecControlExistencias <-
   ggplot(aes(y = frec)) + 
   geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) +
-  xlab('Frecuencia') + 
+  xlab('N.° de FRE, frecuencia') + 
   scale_y_discrete(drop = FALSE) +
   coord_cartesian(xlim = c(0, NA)) + 
   scale_x_continuous(expand = c(0.05, 0.05, 0.10, 0.05)) + 

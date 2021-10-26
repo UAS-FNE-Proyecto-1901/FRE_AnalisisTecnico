@@ -35,8 +35,8 @@ Uno de los puntos de acompañamiento del proyecto Misión PRI 1901 era conocer t
 Tanto como la codificación como las marcas de agua, sellos y escudos se catalogaron como medidas de seguridad de baja complejidad, teniendo en cuenta que hay un riesgo latente de falsificación debido a que las marcas de agua corresponden a figuras particulares o al escudo de la gobernación y/o secretaria de salud, al igual que los sellos y escudos. Sumado a lo anterior, los recetarios están elaborados en papel común y corriente, lo que podría aumentar la probabilidad de ser falsificados.
 
 ```{r MedidasSeguridadRec, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en los recetarios.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
-readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) + labs(title = NULL) + 
+  xlab("Proporción de FRE")
 ```
 
 Considerando lo anterior, los FRE han optado por implementar niveles de seguridad mayores y elevar la confianza en el manejo de los recetarios, entre estas medidas se observan las siguientes:

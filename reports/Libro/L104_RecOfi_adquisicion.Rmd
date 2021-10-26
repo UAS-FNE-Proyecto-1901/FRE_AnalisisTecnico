@@ -25,8 +25,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 La adquisición de recetarios oficiales por parte de los FRE es un proceso que se lleva a cabe mediante contratación pública. En la Figura \@ref(fig:modalidadAdquisicion), se muestra un resumen de las modalidades de selección en el último proceso de adquisición de recetarios por parte de los FRE. Se evidencia que la modalidad más utilizada en este último periodo de reabastecimiento de recetario fue mínima cuantía.
 
 ```{r modalidadAdquisicion, echo=FALSE, warning=FALSE, fig.cap='Modalidad de selección para contratos de adquisición de recetarios.', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="85%",fig.align='center'}
-readRDS(file.path(fig_path, '035_modalidadAdquisicion.rds')) + 
-  labs(title = NULL)
+readRDS(file.path(fig_path, '035_modalidadAdquisicion.rds')) + labs(title = NULL)
 ```
 
 De acuerdo con los entes territoriales, esta modalidad de selección presenta favorabilidad desde el punto de vista financiero respecto a la inversión y recaudo posterior tras la venta de los recetarios oficiales. El ingreso por venta de recetarios es una de las principales fuentes de financiación de varios FRE (ver Figura \@ref(fig:IngresosFRE1)).

@@ -72,7 +72,7 @@ perfilProfesional1 <- df$Profesion %>%
   rename(Profesion = '.') %>% 
   barrasGraficoRev(Profesion, n,
                 'Perfil profesional encargado del FRE', 
-                'Frecuencia') +
+                'N.° de FRE, frecuencia') +
   theme(panel.grid = element_blank())
 
 perfilProfesional1
@@ -119,7 +119,7 @@ perfilProfesional3 <- df_Total %>%
   ggplot(aes(x = ., y = n)) + 
   geom_text(aes(label = n, y = n + 1)) + 
   geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
-  ylab('Frecuencia') + xlab('No personas en el FRE') +
+  ylab('N.° de FRE, frecuencia') + xlab('No personas en el FRE') +
   theme_bw() +
   labs(title = 'Conteo de personas que trabajan por FRE')+
   theme(panel.grid = element_blank())
@@ -139,7 +139,7 @@ perfilProfesional3b <- df_Total %>%
              vjust = -0.5) + 
   scale_x_continuous(breaks = seq(1, 25, 2)) + 
   scale_y_continuous(expand = c(0.05, 0, 0.20, 0)) +
-  ylab('Frecuencia absoluta') + xlab('N.° personas en el FRE') +
+  ylab('N.° de FRE, frecuencia') + xlab('N.° personas en el FRE') +
   theme_bw() +
   labs(title = 'Conteo de personas que trabajan por FRE')+
   theme(panel.grid = element_blank())
