@@ -59,6 +59,7 @@
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/setprototypeof-0.1/setprototypeof.js"></script>
 
 
 
@@ -117,7 +118,11 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="estructura-organizacional.html"><a href="estructura-organizacional.html"><i class="fa fa-check"></i><b>4.2</b> Estructura organizacional</a></li>
 <li class="chapter" data-level="4.3" data-path="instituciones-inscritas-en-el-fre.html"><a href="instituciones-inscritas-en-el-fre.html"><i class="fa fa-check"></i><b>4.3</b> Instituciones inscritas en el FRE</a></li>
 <li class="chapter" data-level="4.4" data-path="caracterización-de-las-fuentes-de-ingresos-de-los-fre.html"><a href="caracterización-de-las-fuentes-de-ingresos-de-los-fre.html"><i class="fa fa-check"></i><b>4.4</b> Caracterización de las fuentes de ingresos de los FRE</a></li>
-<li class="chapter" data-level="4.5" data-path="clasificación-de-los-fre-por-nivel-de-complejidad.html"><a href="clasificación-de-los-fre-por-nivel-de-complejidad.html"><i class="fa fa-check"></i><b>4.5</b> Clasificación de los FRE por nivel de complejidad</a></li>
+<li class="chapter" data-level="4.5" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html"><i class="fa fa-check"></i><b>4.5</b> Propuesta de clasificación de los FRE</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html#variables"><i class="fa fa-check"></i><b>4.5.1</b> Variables</a></li>
+<li class="chapter" data-level="4.5.2" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html#análisis-mediante-clusterización"><i class="fa fa-check"></i><b>4.5.2</b> Análisis mediante clusterización</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="recetarios-oficiales.html"><a href="recetarios-oficiales.html"><i class="fa fa-check"></i><b>5</b> Recetarios oficiales</a>
 <ul>
@@ -266,10 +271,10 @@ Figura 5.4: Márgen de ganancia por recetario. (A) Frecuencia de departamentos p
 <h3><span class="header-section-number">5.2.2</span> Factores que afectan el costo de adquisición de recetarios</h3>
 <p>Dentro de los procesos que se utilizan para la licitación y contratación de recetarios oficiales en el país, se consideran 4 modalidades de selección principalmente:</p>
 <ul>
-<li><p>Licitación pública, el cual es un proceso de selección utilizado por las entidades estatales mediante el cual escoge a sus contratistas a través de una invitación de carácter público que se dirige a todas las personas potencialmente interesadas en ejecutar un contrato, para que en igualdad de condiciones y bajo criterios objetivos garantizados por el pliego de condiciones, presenten ofertas entre las que se escogerá la más favorable<span class="citation"><sup><a href="#ref-MinisteriodeRelacionesExteriores2014" role="doc-biblioref">9</a></sup></span>.</p></li>
-<li><p>Selección abreviada, modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual<span class="citation"><sup><a href="#ref-MinisteriodeRelacionesExteriores2014" role="doc-biblioref">9</a></sup></span>.</p></li>
-<li><p>Contratación directa, que es de carácter excepcional, por lo que su aplicación es de carácter restrictivo. En efecto, la ley de Contratación Pública en Colombia, prevé los siguientes eventos en los cuales es procedente esta modalidad de contratación: casos de urgencia manifiesta, contratación de empréstitos, cuando no exista pluralidad de oferentes en el mercado, para los contratos de desarrollo de actividades científicas y tecnológicas, entre otros<span class="citation"><sup><a href="#ref-MinisteriodeRelacionesExteriores2014" role="doc-biblioref">9</a></sup></span>.</p></li>
-<li><p>Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás<span class="citation"><sup><a href="#ref-ColombiaCompraEficiente2019" role="doc-biblioref">10</a></sup></span>.</p></li>
+<li><p>Licitación pública, el cual es un proceso de selección utilizado por las entidades estatales mediante el cual escoge a sus contratistas a través de una invitación de carácter público que se dirige a todas las personas potencialmente interesadas en ejecutar un contrato, para que en igualdad de condiciones y bajo criterios objetivos garantizados por el pliego de condiciones, presenten ofertas entre las que se escogerá la más favorable<span class="citation"><sup><a href="#ref-MinisteriodeRelacionesExteriores2014" role="doc-biblioref">14</a></sup></span>.</p></li>
+<li><p>Selección abreviada, modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual<span class="citation"><sup><a href="#ref-MinisteriodeRelacionesExteriores2014" role="doc-biblioref">14</a></sup></span>.</p></li>
+<li><p>Contratación directa, que es de carácter excepcional, por lo que su aplicación es de carácter restrictivo. En efecto, la ley de Contratación Pública en Colombia, prevé los siguientes eventos en los cuales es procedente esta modalidad de contratación: casos de urgencia manifiesta, contratación de empréstitos, cuando no exista pluralidad de oferentes en el mercado, para los contratos de desarrollo de actividades científicas y tecnológicas, entre otros<span class="citation"><sup><a href="#ref-MinisteriodeRelacionesExteriores2014" role="doc-biblioref">14</a></sup></span>.</p></li>
+<li><p>Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás<span class="citation"><sup><a href="#ref-ColombiaCompraEficiente2019" role="doc-biblioref">15</a></sup></span>.</p></li>
 </ul>
 <p>Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios como variable dependiente, y se tuvieron las siguientes variables como variable independientes (regresores):</p>
 <ul>
@@ -437,10 +442,10 @@ Figura 5.6: Precio de venta de recetario por prescripción.
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-MinisteriodeRelacionesExteriores2014" class="csl-entry">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">Ministerio de Relaciones Exteriores., Ministerio de Transporte. <span>R<span>é</span>gimen Contractual en Colombia</span>. 1.ª edición. Colombia; 2014.</div>
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Ministerio de Relaciones Exteriores., Ministerio de Transporte. <span>R<span>é</span>gimen Contractual en Colombia</span>. 1.ª edición. Colombia; 2014.</div>
 </div>
 <div id="ref-ColombiaCompraEficiente2019" class="csl-entry">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Colombia Compra Eficiente. <span>Manual de la Modalidad de Selecci<span>ó</span>n de M<span>í</span>nima Cuant<span>í</span>a</span>. 1.ª edición. Bogot<span>á</span>, Colombia; 2019.</div>
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Colombia Compra Eficiente. <span>Manual de la Modalidad de Selecci<span>ó</span>n de M<span>í</span>nima Cuant<span>í</span>a</span>. 1.ª edición. Bogot<span>á</span>, Colombia; 2019.</div>
 </div>
 </div>
             </section>

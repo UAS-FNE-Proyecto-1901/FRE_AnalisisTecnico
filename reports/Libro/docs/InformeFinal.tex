@@ -78,6 +78,10 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
 % Márgenes de páginas
 \usepackage[
 top=2.54cm, 			% Top margin
@@ -153,7 +157,7 @@ heightrounded, 			% to avoid spurious underfull messages
 %\defbibheading{bibempty}{}
 
 % Paquete de Referenciación Natbib
-\usepackage[numbers, round, sort, sectionbib]{natbib}
+\usepackage[square, sort, sectionbib]{natbib}
 \renewcommand{\bibsection}{} % Para quitar la palabra bibliografía como título de esta sección o colocar otra. 
 \setcitestyle{square}
 \bibliographystyle{vancouver}
@@ -250,9 +254,6 @@ heightrounded, 			% to avoid spurious underfull messages
 \usepackage[normalem]{ulem}
 \usepackage{makecell}
 \usepackage{xcolor}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 
 \title{Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado}
 \usepackage{etoolbox}
@@ -368,7 +369,7 @@ Agradecemos a cada referente de cada FRE y a cada funcionario de apoyo, por tan 
 \hypertarget{introducciuxf3n}{%
 \chapter{Introducción}\label{introducciuxf3n}}
 
-Con motivo de presentar la metodología del trabajo territorial que se adelanta en el marco del proyecto de inversión 1901 \texttt{Incremento\ de\ la\ disponibilidad\ de\ medicamentos\ Monopolio\ del\ Estado\ para\ los\ pacientes\ en\ Colombia\ Nacional\ Código\ BPIN\ 2020011000020} y puesto que uno de los ejes centrales para garantizar la disponibilidad de los medicamentos monopolio del estado (MME) en el territorio nacional, recae en el manejo que le den a los mismos cada una de las entidades encargada en su respectivo departamento, en este documento se plasmará el desarrollo de recolección de información concerniente a los Fondo Rotatorio de Estupefaciente (FRE) de todo el país.
+Con motivo de presentar la metodología del trabajo territorial que se adelanta en el marco del proyecto de inversión 1901 \texttt{Incremento\ de\ la\ disponibilidad\ de\ medicamentos\ Monopolio\ del\ Estado\ para\ los\ pacientes\ en\ Colombia\ Nacional\ Código\ BPIN\ 2020011000020} y puesto que uno de los ejes centrales para garantizar la disponibilidad de los medicamentos monopolio del estado (MME) en el territorio nacional, \emph{recae en el manejo que le den a los mismos cada una de las entidades encargada en su respectivo departamento}, en este documento se resumen los resultados de la recolección de información concerniente en los Fondos Rotatorios de Estupefacientes (FRE) de todo el país.
 
 Este proyecto se diseñó con la finalidad de cumplir con dos objetivos en específico, el primer objetivo es fortalecer el proceso de abastecimiento de medicamentos monopolio del Estado, identificando fuentes de información asociada a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial y generar informes de análisis de los datos reportados por el FRE para el manejo de medicamentos monopolio del Estado que permitan un seguimiento eficaz y oportuno.
 
@@ -384,7 +385,7 @@ Este proceso de inmersión territorial se desarrolló entre los meses de abril y
 \hypertarget{objetivo-general}{%
 \section{Objetivo general}\label{objetivo-general}}
 
-Identificar fuentes de información asociada a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial. Así mismo, con el fin de iniciar la primera fase de desarrollo del proyecto de inversión 1901. Así mismo, recopilar las características de las herramientas tecnológicas para la consolidación de la información y el seguimiento al consumo de estos medicamentos en el territorio.
+Identificar fuentes de información asociadas a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial. Con el fin de iniciar la primera fase de desarrollo del proyecto de inversión 1901 y recopilar las características de las herramientas tecnológicas para la consolidación de la información y el seguimiento al consumo de estos medicamentos en el territorio.
 
 \hypertarget{objetivos-especuxedficos}{%
 \section{Objetivos específicos}\label{objetivos-especuxedficos}}
@@ -596,11 +597,11 @@ El número de personas que trabajan en cada FRE, es otro elemento crítico para 
 \caption{N.° de personas que trabajan en el FRE. (A) Conteo de FRE por número de personas. (B) Mapa con número de personas por departamento.}\label{fig:perfilProfesional3}
 \end{figure}
 
-Según lo anterior, podemos evidenciar que no son muchas personas vinculadas a los FRE para conformar su equipo de trabajo. En su gran mayoría tienen únicamente hasta tres personas para el desempeño del FRE, contemplando que nueve FRE tienen solo 2 personas vinculadas. Son muy pocos entes territoriales que mantienen un grupo de trabajo grande con profesionales interdisciplinarios. La Figura \ref{fig:perfilProfesional3} exhibe de manera completa los datos que acompañan el análisis anterior.
+Según lo anterior, se evidencia que los FRE cuentan con pocas personas vinculadas en su equipo de trabajo. En la gran mayoría de FRE se tienen hasta tres personas para el desempeño del mismo, y que en nueve FRE sólo se tienen a 2 personas vinculadas. Se tienen pocos entes territoriales que mantienen un grupo de trabajo grande con profesionales interdisciplinarios. La Figura \ref{fig:perfilProfesional3} exhibe de manera completa los datos que acompañan el análisis anterior.
 
 El tipo de contrato que los diferentes entes territoriales emplean para vincular el personal es otro factor crítico en el cumplimiento de las funciones de los FRE. De acuerdo con lo anterior, la Figura \ref{fig:pieProfesional2} muestra la proporción del tipo de vinculación del personal del FRE a nivel nacional, diferenciándose entre personal directo y personal vinculado. Este último, tiene cierta exclusividad con el FRE al destinar más del 50\% en actividades de este, y de acuerdo a sus obligaciones contractuales, también adelanta otras actividades con otras dependencias de la dirección departamental de salud.
 
-A partir de la Figura \ref{fig:pieProfesional2} se puede notar una gran tendencia que tienen todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
+A partir de la Figura \ref{fig:pieProfesional2} se puede notar una tendencia importante en todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
 
 \begin{figure}[t]
 
@@ -611,7 +612,7 @@ A partir de la Figura \ref{fig:pieProfesional2} se puede notar una gran tendenci
 \caption{Tipo de vinculación al FRE.}\label{fig:pieProfesional2}
 \end{figure}
 
-La anterior tendencia puede interferir y generar inconvenientes en la continuidad del desarrollo adecuado del FRE, afectando la funcionalidad y abandonando algunas actividades críticas para el cumplimiento de sus objetivos de creación. En algunos casos, este tipo de personas vinculadas por CPS, dejan de laborar los primeros meses del año, ya que su contrato finalizó el año pasado, y debido a barreras administrativas, no son contratadas hasta el segundo bimestre del año. El personal nombrado en muchos casos es la persona encargada del FRE, cuyos temas operativos no están dentro de su cotidianidad y no son fáciles cumplirlos. Por tal motivo estas actividades operativas se dejan de hacer en el territorio hasta que sea contratado el personal de apoyo. Como es el caso de la consolidación de los informes que deben ser enviados mensualmente al FNE.
+La tendencia a vincular al personal mediante contratación por prestación de servicios puede interferir y generar inconvenientes en el desarrollo continuado de los FRE, lo que puede afectar la funcionalidad en algunas actividades críticas para el cumplimiento de sus objetivos de creación. En algunos casos, este tipo de personas vinculadas por CPS, dejan de laborar los primeros meses del año, ya que su contrato finalizó el año pasado, y debido a barreras administrativas, no son contratadas hasta el segundo bimestre del año. El personal nombrado en muchos casos es la persona encargada del FRE, cuyos temas operativos no están dentro de su cotidianidad y no son fáciles cumplirlos. Por tal motivo estas actividades operativas se dejan de hacer en el territorio hasta que sea contratado el personal de apoyo. Como es el caso de la consolidación de los informes que deben ser enviados mensualmente al FNE.
 
 Adicionalmente, en la Tabla \ref{tab:CaracterizacionIngreso1} se observa la proporción del tipo de vinculación del personal del FRE, discriminado por cada región del país. A partir de esta información, se observa que en 5 regiones predomina la Contratación por Prestación de Servicios respecto al Nombramiento del personal del FRE. Además, se logra observar que en las regiones más alejadas de la capital Bogotá D.C., existe una prevalencia mucho más fuerte con esta CPS. Por consiguiente, los problemas mencionados anteriormente relacionados con la CPS, se pueden notar con mayor evidencia en estos territorios apartados del centro del país.
 
@@ -637,7 +638,7 @@ Pacífico & 19.23\% & 80.77\%\\
 \hypertarget{instituciones-inscritas-en-el-fre}{%
 \section{Instituciones inscritas en el FRE}\label{instituciones-inscritas-en-el-fre}}
 
-El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \ref{fig:institucionesInscritas}, donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, exceptuando Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el ``Censo Nacional de Población y Vivienda 2018''\textsuperscript{\protect\hyperlink{ref-DANE2021}{6}}.
+El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \ref{fig:institucionesInscritas}, donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, con excepción de Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el ``Censo Nacional de Población y Vivienda 2018''\textsuperscript{\protect\hyperlink{ref-DANE2021}{6}}.
 
 \begin{figure}[t]
 
@@ -656,7 +657,7 @@ Existe una relación demográfica en los departamentos sobre la cantidad de inst
 
 Un claro ejemplo de estas capacidades reducidas se puede evidenciar en el desempeño de cada FRE, referente a la entrega de informes mensuales al FNE. Actualmente existen varios FRE que cuentan con un recurso humano muy amplio, pero se quedan cortos con la entrega de estos informes al FNE, como es el caso del FRE Caldas, que pese a tener una cantidad de colaboradores por encima de la media, tiene un rezago importante en la entrega de informes de consumo de medicamentos al FNE. Por consiguiente, se puede deducir que el número de personas vinculadas al FRE no comprende una garantía en el cumplimiento de todas las funciones del FRE.
 
-También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \ref{fig:institucionesInscritasRelacion} también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas por parte de los coordinadores de los FRE en su territorio.
+También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, p.ej. el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \ref{fig:institucionesInscritasRelacion} también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas por parte de los coordinadores de los FRE en su territorio.
 
 \begin{figure}[t]
 
@@ -683,7 +684,7 @@ En la Figura \ref{fig:institucionesInscritasVARdemo}B se encuentra la relación 
 \hypertarget{caracterizaciuxf3n-de-las-fuentes-de-ingresos-de-los-fre}{%
 \section{Caracterización de las fuentes de ingresos de los FRE}\label{caracterizaciuxf3n-de-las-fuentes-de-ingresos-de-los-fre}}
 
-Para analizar las fuentes de ingreso que poseen los diferentes FRE departamentales, se debe tener en cuenta la posición del FRE dentro del organigrama de cada dirección departamental en salud. El análisis de las fuentes de ingresos de los FRE, en este punto, se hará exclusivamente con la información recolectada a partir del instrumento de encuesta que se usó para la recolección de información pertinente en este informe.
+Para analizar las fuentes de ingreso que poseen los diferentes FRE departamentales, se debe tener en cuenta la posición del FRE dentro del organigrama de cada dirección departamental en salud. El análisis de las fuentes de ingresos de los FRE, en este caso, se hizo exclusivamente con la información recolectada a partir del instrumento de encuesta utilizado.
 
 Cómo antecedente en el análisis, se entiende según las definiciones de la Resolución 1478 del 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}, que un Fondo Rotatorio de Estupefacientes es:
 
@@ -725,7 +726,7 @@ La Figura \ref{fig:IngresosFRE1}, nos muestra la proporción de los ingresos del
 
 Aunque también los FRE pueden recibir recursos por parte de la gobernación o por parte del FNE.
 
-En la Figura \ref{fig:IngresosFRE1} se observa que una tendencia a que la proporción de ingresos más grande es aquella que reciben los FRE departamentales por la venta de MME. Esto se puede deber a que cada departamento maneja independencia en los precios de venta de estos medicamentos y desde ahí se podría obtener una rentabilidad importante. En el desarrollo del apartado \protect\hyperlink{precioMedicamentos}{6.4 Precio de medicamentos} del presente informe, se desglosará un análisis más profundo sobre los precios de venta de los MME por departamento, pero a \emph{grosso modo} se puede notar que el margen es lo suficientemente alto para abarcar el porcentaje mayoritario de ingresos.
+En la Figura \ref{fig:IngresosFRE1} se observa una tendencia a que la proporción de ingresos más grande es aquella que reciben los FRE departamentales por la venta de MME. Esto se puede deber a que cada departamento maneja independencia en los precios de venta de estos medicamentos y de este rubro se obtiene una rentabilidad importante. En el desarrollo del apartado \protect\hyperlink{precioMedicamentos}{6.4 Precio de medicamentos} del presente informe, se realiza un análisis más profundo sobre los precios de venta de los MME por departamento, pero a \emph{grosso modo} se evidencia que el margen es alto como para abarcar el porcentaje mayoritario de ingresos.
 
 Particularmente, en la Figura \ref{fig:IngresosFRE2} se observa que en algunos departamentos cómo Magdalena, Atlántico o Tolima, la venta de recetarios oficiales es el ingreso más prominente del FRE. Así mismo, en todos los demás departamentos representa un ingreso importante para el ente territorial, aunque no sea la principal fuente de ingreso. A nivel nacional, esta fuente de ingreso carga con una parte muy importante del erario de cada FRE departamental. Con la desaparición de los recetarios oficiales físicos en el mediano plazo, es necesario generar alternativas económicas para subsanar este recurso que desaparecería y adecuar estrategias financieras para el auto sostenimiento de cada FRE.
 
@@ -738,31 +739,168 @@ Particularmente, en la Figura \ref{fig:IngresosFRE2} se observa que en algunos d
 \caption{Mapa con fuentes de ingresos de los FRE.}\label{fig:IngresosFRE2}
 \end{figure}
 
-\hypertarget{clasificaciuxf3n-de-los-fre-por-nivel-de-complejidad}{%
-\section{Clasificación de los FRE por nivel de complejidad}\label{clasificaciuxf3n-de-los-fre-por-nivel-de-complejidad}}
+\hypertarget{propuesta-de-clasificaciuxf3n-de-los-fre}{%
+\section{Propuesta de clasificación de los FRE}\label{propuesta-de-clasificaciuxf3n-de-los-fre}}
 
-A partir de las visitas técnicas desarrolladas en cada territorio, se lograron observar notorias diferencias entre los FRE departamentales. Esto se podría explicar por las diferencias administrativas y factores demográficos que tiene cada departamento. Esto permite que cada FRE se desenvuelva en determinada forma y esto resulta en el grado de eficiencia que presenta el ente territorial, para el manejo de MME en la región.
+Durante el desarrollo de las visitas técnicas a los territorios, se observaron importantes diferencias entre los FRE departamentales. Estas diferencias se podrían explicar por factores administrativos, organizativos y socio-demográficos que se presentan en cada departamento. Debido a esto puede que los FRE tengan un desarrollo de sus actividades en determinada forma, lo cual resulta en un grado de eficiencia definido para cada ente territorial, en cuanto al manejo de MME, recetarios, o informes en la región.
 
-Según lo anterior, se propone una clasificación de los FRE, de acuerdo a su nivel de complejidad, sin el ánimo de juzgar el trabajo desarrollado en cada territorio. Esta sección procura por reconocer y clasificar los FRE en grupos, conforme a sus capacidades actuales y similaridad entre departamentos. Lo anterior con el fin de generar un instrumento que sirva como insumo para la generación de políticas públicas y toma de decisiones relacionadas con el manejo de MME.
+Por lo tanto, se propone una clasificación de los FRE - de acuerdo a su nivel de complejidad e indicadores de gestión - con el fin de mejorar el direccionamiento de acciones o asistencia a los FREs, sin el ánimo de generar acciones prohibitivas o represivas. El objetivo es generar grupos de FRE que permitan establecer las capacidades actuales así como las similaridades o diferencias entre los departamentos. Todo esto con el fin de generar un instrumento que sirva como insumo para la generación de políticas públicas y toma de decisiones relacionadas con el manejo de MME.
 
-A continuación, se presenta la descripción de las 5 variables definida para la clasificación de los FRE, cuya agrupación contempla el nivel de complejidad del ente territorial:
+\hypertarget{variables}{%
+\subsection{Variables}\label{variables}}
+
+A continuación, se listan las variables definidas para la clasificación de los FRE y se presenta una breve descripción de las mismas.
+
+\hypertarget{variables-relacionadas-con-la-complejidad}{%
+\subsubsection{Variables relacionadas con la complejidad}\label{variables-relacionadas-con-la-complejidad}}
+
+Con complejidad se hace referencia a la magnitud de las actividades que debe desarrollar un FRE en su departamento, lo cual se relaciona de manera directa con el tamaño que tiene cada uno de estos entes territoriales. A diferencia de la definición de nivel de complejidad utilizada en el Sistema General de Seguridad Social en Salud\textsuperscript{\protect\hyperlink{ref-MinisteriodeSalud1994}{8}}, esta definición no hace referencia a una clasificación funcional que tenga en cuenta capacidades construidas.
 
 \begin{itemize}
 \item
-  Presupuesto departamento (general y sector salud).
+  Regionalización del Presupuesto General de la Nación de 2020\textsuperscript{\protect\hyperlink{ref-DepartamentoNacionaldePlaneacion2019}{9}}.
 \item
-  Número de instituciones inscritas en el departamento.
+  Regionalización del Presupuesto General de la Nación de 2020 y su asignación al sector salud\textsuperscript{\protect\hyperlink{ref-DepartamentoNacionaldePlaneacion2019}{9}}.
 \item
-  Proporción de adquisición de MME (proporción de portafolio).
+  Número de inscritos (instituciones) en el departamento que realizaron compras de MME al FRE, esta información se obtuvo mediante la encuesta aplicada.
 \item
-  Número de compras directas de instituciones en el departamento al FNE (entendidas como una desviación de la cadena de suministro).
-\item
-  Proporción de meses con entrega del Anexo 1 de la Resolución 1479 de 2006 (cumplimiento).
-\item
-  Proporción de meses con entrega del Anexo 2 de la Resolución 1479 de 2006 (cumplimiento).
+  Proporción de portafolio de MME adquirido de forma continua por parte del FRE, esta información se obtuvo a partir de datos de ventas del FNE a los FRE. Esta variable se refiere al número de productos adquiridos por el FRE de manera continua sobre el número de productos totales en el portafolio.
 \end{itemize}
 
-Muchas variables fueron tomadas de forma externa a la encuestas teniendo en cuenta la información disponible en cada una de ellas, con el fin de visualizar el estado actual de cada FRE, considerando distintos factores internos y externos que tienen las entidades territoriales. Esto permite que la distribución y clasificación de los FRE sea más robusta, ya que está contemplando la mayor realidad posible en cada territorio, para el momento de este análisis.
+\hypertarget{indicadores-de-gestiuxf3n}{%
+\subsubsection{Indicadores de gestión}\label{indicadores-de-gestiuxf3n}}
+
+En este grupo se consideran indicadores de cumplimiento y de eficiencia en procesos relacionados con venta de medicamentos, envío de informes y adquisición de recetarios.
+
+\begin{itemize}
+\tightlist
+\item
+  Proporción de ventas realizadas por el FRE a instituciones en el departamento del FNE respecto a la suma de ventas de FRE y compras directas
+\end{itemize}
+
+\[P~\left(v_{\mathrm{FRE}}\right) = \frac{v_{\mathrm{FRE}} }{v_{\mathrm{FRE}} + v_{\mathrm{CD}}}\]
+
+En donde, \(P~\left(v_{\mathrm{FRE}}\right)\) es la proporción de ventas realizadas a través del canal FRE (se entiende a las compras directas como una desviación de la cadena de suministro), \(v_{\mathrm{FRE}}\) y \(v_{\mathrm{CD}}\) son las ventas hechas por el FNE directamente a los FRE o instituciones por compra directa en el año 2021 de manera respectiva, las ventas se ingresan cómo ventas en unidades monetarias. Un valor alto en esta proporción indicaría que los FRE pueden suplir la mayor parte de la demanda que surge de los inscritos en el departamento.
+
+\begin{itemize}
+\tightlist
+\item
+  Proporción de meses con entrega del Anexo 1 de la Resolución 1479 de 2006 (cumplimiento).
+\end{itemize}
+
+\[P~\left( \mathrm{Cumpl.~A1}\right) = \frac{\sum^{N_m}_{m = 1}{1_{\mathrm{Cumpl.~A1}}}}{N_m}\]
+
+Donde \(1_{\mathrm{Cumpl.~A1}}\) indica que se debe sumar 1 en los meses en los que se reporte un cumplimiento en la entrega del Anexo 1, \(N_m\) es el número de meses en el período a considerar, y \(m\) indica los meses. Esta información fue provista por el grupo de regionalización del FNE y el cumplimiento fue determinado para el período comprendido entre enero de 2020 y junio de 2021 (\(N_m = 18\)).
+
+\begin{itemize}
+\tightlist
+\item
+  Proporción de meses con entrega del Anexo 2 de la Resolución 1479 de 2006 (cumplimiento).
+  \[P~\left( \mathrm{Cumpl.~A2}\right) = \frac{\sum^{N_m}_{m = 1}{1_{\mathrm{Cumpl.~A2}}}}{N_m}\]
+\end{itemize}
+
+Donde \(1_{\mathrm{Cumpl.~A2}}\) indica que se debe sumar 1 en los meses en los que se reporte un cumplimiento en la entrega del Anexo 2, \(N_m\) es el número de meses en el período a considerar, y \(m\) indica los meses. Esta información fue provista por el grupo de regionalización del FNE y el cumplimiento fue determinado para el período comprendido entre enero de 2020 y junio de 2021 (\(N_m = 18\)).
+
+\begin{itemize}
+\tightlist
+\item
+  Razón entre tiempo de adquisición de recetarios sobre existencias estimadas de recetarios en circulación en el departamento.
+\end{itemize}
+
+\[R \left(\mathrm{T_{adq}}/\mathrm{N_{recetarios}}\right ) = \left\{\begin{matrix}
+\frac{\mathrm{T_{adq}}}{\mathrm{N_{recetarios}}}\quad\mathrm{Si}~\mathrm{N_{recetarios}}>0
+\\ 100\quad\quad\quad\mathrm{Si}~\mathrm{N_{recetarios}}=0
+\end{matrix}\right.
+\]
+
+Donde \(\mathrm{T_{adq}}\) es el tiempo que toma la adquisición de recetarios en días, y \(\mathrm{N_{recetarios}}\) es el número de recetarios que se tienen en circulación en el departamento de acuerdo a lo reportado por los FRE. A diferencia del resto de indicadores un valor bajo de esta razón indica que el proceso toma menos tiempo y por tal es más eficiente.
+
+\hypertarget{anuxe1lisis-mediante-clusterizaciuxf3n}{%
+\subsection{Análisis mediante clusterización}\label{anuxe1lisis-mediante-clusterizaciuxf3n}}
+
+Se realizó un análisis de agrupación de los FRE mediante técnicas de análisis de clúster (conglomerados). Los métodos de análisis de clúster buscan crear grupos (subconjuntos) del conjunto de datos originales basados en la minimización de una función de costo o mediante modelos probabilísticos\textsuperscript{\protect\hyperlink{ref-Hennig2016}{10}}. El análisis de clúster jerárquico fue realizado mediante el algoritmo de Ward (función \texttt{hclust}) en el software R\textsuperscript{\protect\hyperlink{ref-R_Stats}{11}}, este análisis fue comparado con el obtenido mediante un método de análisis por K-means (función \texttt{kmeans}). El set de datos fue preprocesado mediante estandarización (\emph{Z-score}) de cada una de las variables.
+
+El número de grupos (\(k\)) fue seleccionado mediante la comparación de varios índices de validez de clúster como: (i) Silhouette, (ii) índice de Dunn, (iii) conectividad, (iv) distancia promedio (AD), o (v) distancia promedio entre media (ADM)\textsuperscript{\protect\hyperlink{ref-R_clValid}{12}}. Se realizó la evaluación del número de grupos (\(k\)) de 2 a máximo 15 grupos, y se evalúo la presencia de incremento (o decrecimientos) súbitos a forma de \emph{criterio de codo} en cada indicador. Se utilizó análisis por componentes principales (PCA, \emph{Principal Component Analysis}) para la visualización de la separación lograda por el análisis de clúster y evidenciar la pertenencia de los departamentos a cada grupo.
+
+En la Figura \ref{fig:PCA1} se muestra el comportamiento de las variables definidas para el análisis mediante un círculo de correlación. En primer lugar se observa que los primeros dos componentes de PCA representan un 56.9\% de la variabilidad del conjunto de datos. Se observa que las variables relacionadas a la complejidad cuenta con una correlación alta entre sí, p.ej. los departamentos con mayores presupuestos asignados tienen una mayor proporción de uso del portafolio, así como una mayor proporción de inscritos activos.
+
+\begin{figure}[t]
+
+{\centering \includegraphics[width=0.92\linewidth]{InformeFinal_files/figure-latex/PCA1-1} 
+
+}
+
+\caption{Círculo de correlación de variables aplicadas en la definición de componentes principales}\label{fig:PCA1}
+\end{figure}
+
+Se observa que los indicadores de gestión no presentan una correlación importante con las variables de complejidad (se evidencia porque las variables se proyectan de forma perpendicular), las variables de cumplimiento de envío de informe parecen tener una correlación un poco más alta respecto al resto de indicadores. Las variables de proporción de ventas realizadas por el FRE y cumplimiento de envío de Anexo 1 cuentan una correlación negativa con el indicador de tiempo de adquisición de recetario (esto era esperado por la definición de la variable) así como con el cumplimiento de envío de Anexo 2.
+
+Los resultados del análisis mediante el algoritmo K-means y Ward fueron similares en cuanto al número de clústers óptimo y agrupación de individuos. Una gran parte de los índices de validez de clústers presentaron un aumento o disminución monotónica respecto al valor de \(k\), sin embargo la mayoría de los índices mostraron cambios abruptos con \(k=8\), por lo cual se asume que este es el valor óptimo de clústers. En el panel izquierdo de la Figura \ref{fig:PCA2} se observa el comportamiento del índice Silhouette con respecto al número de clústers en el análisis se tiene que a partir de \(k=8\) se presenta un decrecimiento en el valor del índice.
+
+En el panel derecho de la Figura \ref{fig:PCA2} se observa un dendrograma con la clasificación de los FRE de acuerdo a su similaridad en las características exploradas. Se tiene que el departamento de Antioquia es el que presenta la mayor diferencia con el resto de los departamentos, mientras que los departamentos de Valle del Cauca y Santander presentan unas condiciones similares.
+
+\begin{figure}[t]
+
+{\centering \includegraphics[width=1\linewidth]{InformeFinal_files/figure-latex/PCA2-1} 
+
+}
+
+\caption{Resultados de análisis por clúster jerárquico. (A) Índice Silhouette vs N.° de clústers. (B) Dendrograma de departamentos de acuerdo a análisis de similaridad, se muestran los grupos para k = 8.}\label{fig:PCA2}
+\end{figure}
+
+Por otra parte, en la Figura \ref{fig:PCA3} se muestra la clasificación de los FRE en los grupos así como la proyección de los departamentos en los primeros componentes principales.
+
+\begin{figure}[t]
+
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/PCA3-1} 
+
+}
+
+\caption{Clasificación de los FRE en grupos de acuerdo a análisis por clúster}\label{fig:PCA3}
+\end{figure}
+
+A continuación, se describen algunas características de los grupos encontrados:
+
+\begin{itemize}
+\item
+  Grupo 1: compuesto por Huila y Amazonas estos FRE cuentan con una complejidad mediana (promedio 91 inscritos), con una proporción de uso del portafolio de \textasciitilde88.7\% y un cumplimiento bajo en la entrega de anexos sobre todo en el Anexo 1 (75\%).
+\item
+  Grupo 2: sólo cuenta con el departamento de Antioquia que es el FRE con la complejidad más alta (p.ej. tiene 1054 inscritos a activos) y con valores óptimos en los indicadores de gestión.
+\item
+  Grupo 3: este grupo cuenta con 15 departamentos entre ellos se encuentra Atlántico, Nariño y Caquetá. Este grupo contiene a FREs de mediana a alta complejidad, con un promedio de 150 inscritos y una proporción de uso de portafolio del 92\%. Los indicadores de gestión parecen tener valores óptimos, sin embargo cuentan con un cumplimiento moderado en la entrega del Anexo 2 con un promedio de 0.55.
+\item
+  Grupo 4: este grupo consta de Córdoba y Bolívar que se comportan como FRE de complejidad mediana (promedio 91 inscritos), este grupo tiene una asignación presupuestal relativamente baja (con 16 mil millones), un promedio de 91 inscritos activos y una proporción de uso del portafolio de 0.94. Este grupo tiene un cumplimiento óptimo en la entrega del Anexo 1, con un cumplimiento moderado en el Anexo 2 (0.47), la proporción de utilización del canal FRE en las ventas es alta con 0.802. La característica más importante es que estos FRE tienen problemas por la inexistencia de recetarios en circulación a nivel departamental.
+\item
+  Grupo 5: este grupo cuenta con los departamentos de Meta, Casanare y Magdalena se trata de FRE con mediana complejidad con un promedio de 101 inscritos activos y una utilización del portafolio de 0.88. En cuanto a indicadores de gestión se tiene como característica principal que la proporción de ventas por el canal de FRE en comparación de compra directa es baja con un valor de 0.21, se tiene un cumplimiento moderado en la entrega de anexos.
+\item
+  Grupo 6: sólo cuenta con el departamento de Guainía que es un FRE de baja complejidad con un sólo inscrito activo, y una proporción baja de uso de portafolio. Se reporta un cumplimiento bajo en la proporción de ventas mediante canal FRE (0.0), una proporción de cumplimiento de Anexo 1/Anexo 2 moderada y una razón de tiempo de adquisición para recetarios alta.
+\item
+  Grupo 7: este grupo cuenta con FRE de baja complejidad con un promedio de 12.4 inscritos activos y una proporción de uso de portafolio baja del 0.49. Este grupo cuenta con indicadores de gestión altos con una proporción de ventas en FRE por 0.919, una proporción de cumplimiento de entrega de Anexo 1 alta, y Anexo 2 moderada, así como razones de tiempos de adquisición cortas (3.46).
+\item
+  Grupo 8: cuenta con Valle del Cauca y Santander que se consideran como FRE de alta complejidad en promedio 453 inscritos y un uso completo del portafolio. Estos FRE con una proporción de ventas a través de FRE de 0.871, y un cumplimiento muy bajo en la entrega del Anexo 2 (en promedio 0).
+\end{itemize}
+
+Se concluye que la agrupación de FRE se realiza por factores relacionados a la magnitud de las necesidades en cuanto a MME en el departamento (complejidad) pero también de acuerdo a factores relacionados a indicadores de gestión, a continuación se resumen las características principales de los grupos.
+
+\begin{itemize}
+\item
+  \textbf{FRE de alta complejidad} se tienen a los grupos 2 (Antioquia) y 8. Los FRE pertenecientes al grupo 8 (p.ej. Valle del Cauca) tienen algunos indicadores de gestión con un valor bajo, mientras que el Antioquia tiene todos los indicadores de gestión en valores óptimos.
+\item
+  \textbf{FRE de mediana complejidad} se tienen a los grupos 1, 3, 4, y 5. Los FRE en el grupo 3 (p.ej Atlántico) tienen indicadores de gestión en valores altos, mientras que el grupo 1 (p.ej Huila) cuenta con un cumplimiento bajo en la entrega del Anexo 1. El grupo 4 (p.ej Córdoba) se caracteriza por tener inexistencia de recetarios en circulación en el departamento, y el grupo 5 (p.ej Meta) tiene FRE que presentan una proporción alta de compras mediante el canal de compra directa.
+\item
+  \textbf{FRE de baja complejidad} se tienen a los grupos 6 (sólo Guainía) y 7 estos grupos tienen características de indicadores de gestión parecidas, sin embargo Guainía tiene una proporción de ventas reportadas por el FRE baja en comparación con compra directa debido a lo cual se separa en un grupo diferente.
+\end{itemize}
+
+\begin{figure}[t]
+
+{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/ExKM1-1} 
+
+}
+
+\caption{Clasificación de los FRE en grupos de acuerdo a análisis por clúster ExKMC}\label{fig:ExKM1}
+\end{figure}
+
+A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \ref{fig:PCA1-2}.
 
 Es importante resaltar que la complejidad concluida estaría relacionada con la capacidad que tiene el FRE de cumplir con sus funciones y responsabilidades, considerando factores económicos propios del departamento. Un ejemplo ilustrativo corresponde al FRE Córdoba, donde el ente territorial es clasificado en la categoría \emph{``FRE altamente consolidado''}. A pesar de esta clasificación, el rubro económico destinado para temas de salud en este departamento es relativamente bajo, sin embargo, el personal del FRE procura realizar una buena gestión estos recursos para el adecuado manejo de MME y recetarios oficiales.
 
@@ -774,28 +912,7 @@ Otra variable importante en este análisis es la variable referente a cantidad d
 
 Finalmente, las variables relacionadas con el cumplimiento de entrega del Anexo 1 y Anexo 2 de la Resolución 1479 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}}, fueron incluidas en esta clasificación, ya que inciden en gran proporción en la proyección de adquisición de MME para satisfacer las necesidades del territorio. La consolidación de la información dispuesta en estos anexos se relaciona directamente con la cantidad de personas vinculadas al FRE, cuyo factor muestra la capacidad de recurso humano en cada FRE.
 
-Para ilustrar el comportamiento de los FRE respecto a las variables seleccionadas se realizó un análisis de componentes principales (PCA, \emph{Principal Component Analysis}). La Figura \ref{fig:PCA1} muestra el comportamiento de las 5 variables definidas para este análisis respecto a los componentes principales. En primer lugar, se puede determinar que las variables más próximas en el plano del componente 1 (PC1), presentan la mayor variabilidad entre los FRE, seguido por aquellas ubicadas cerca del plano del componente 2 (PC2). Las variables de monto presupuestal (general y salud), así como número de inscritos y en cierta medida la proporción del portafolio tienen un alta correlación entre sí por lo cual presentan una proyección cercana entre sí.
-
-\begin{figure}[t]
-
-{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/PCA1-1} 
-
-}
-
-\caption{Variables involucradas en la construcción de los componentes principales}\label{fig:PCA1}
-\end{figure}
-
 Por el contrario, las variables más dispersas en el plano presentado en la Figura \ref{fig:PCA1}, no guardan relación entre sí, por lo tanto, estas variables tienen información importante para realizar la clasificación de los FRE. En este orden de ideas, la variable referente a la consolidación del anexo 2 en los FRE no mantiene una relación directa con el número de compras directas que haya hecho el departamento o con la variable del portafolio que ofrecen los FRE.
-Se realizó un análisis de agrupación (\emph{cluster}) jerárquico mediante el algoritmo de Ward en el software R. Se seleccionaron 5 grupos de acuerdo al análisis mediante un criterio de \emph{codo}. A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \ref{fig:PCA1-2}.
-
-\begin{figure}[t]
-
-{\centering \includegraphics[width=0.9\linewidth]{InformeFinal_files/figure-latex/PCA1-2-1} 
-
-}
-
-\caption{Clasificación de los FRE en grupos de acuerdo a análisis por clúster}\label{fig:PCA1-2}
-\end{figure}
 
 Luego de un análisis multivariado en el lenguaje de programación R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
 
@@ -822,7 +939,7 @@ En adición, el seguimiento y manejo de los MME es débil en estos FRE y sus her
 
 \maxdeadcycles=1000
 
-La prescripción de un medicamento es el acto que realiza un médico para indicar el inicio de un tratamiento terapéutico. En Colombia, dicha prescripción debe hacerse por escrito, previa evaluación del paciente y registro de sus condiciones y diagnóstico en la historia clínica, utilizando para ello la Denominación Común Internacional (nombre genérico) y cumpliendo los requisitos descritos en el Decreto 2200 de 2005, Artículo 16 y Artículo 17\textsuperscript{\protect\hyperlink{ref-MSPS2200-2005}{8}}.
+La prescripción de un medicamento es el acto que realiza un médico para indicar el inicio de un tratamiento terapéutico. En Colombia, dicha prescripción debe hacerse por escrito, previa evaluación del paciente y registro de sus condiciones y diagnóstico en la historia clínica, utilizando para ello la Denominación Común Internacional (nombre genérico) y cumpliendo los requisitos descritos en el Decreto 2200 de 2005, Artículo 16 y Artículo 17\textsuperscript{\protect\hyperlink{ref-MSPS2200-2005}{13}}.
 
 Bajo los parámetros establecidos anteriormente, se crea el recetario oficial, que es un documento oficial avalado por la entidad competente, es de carácter personal e intransferible para uso de los prescriptores de salud en la formulación de los MCE y MME. La prescripción de medicamentos de control especial para uso humano o veterinario solo se podrá efectuar en los recetarios oficiales suministrados por los FRE, para médicos en ejercicio legal de su profesión y/o por el Consejo Profesional de Medicina Veterinaria y Zootecnia de Colombia (Comvezcol) para médicos veterinarios y médicos veterinarios zootecnistas. Los profesionales que laboren en las instituciones podrán hacer uso del Recetario Oficial adquirido por la entidad\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}.
 
@@ -906,13 +1023,13 @@ Dentro de los procesos que se utilizan para la licitación y contratación de re
 
 \begin{itemize}
 \item
-  Licitación pública, el cual es un proceso de selección utilizado por las entidades estatales mediante el cual escoge a sus contratistas a través de una invitación de carácter público que se dirige a todas las personas potencialmente interesadas en ejecutar un contrato, para que en igualdad de condiciones y bajo criterios objetivos garantizados por el pliego de condiciones, presenten ofertas entre las que se escogerá la más favorable\textsuperscript{\protect\hyperlink{ref-MinisteriodeRelacionesExteriores2014}{9}}.
+  Licitación pública, el cual es un proceso de selección utilizado por las entidades estatales mediante el cual escoge a sus contratistas a través de una invitación de carácter público que se dirige a todas las personas potencialmente interesadas en ejecutar un contrato, para que en igualdad de condiciones y bajo criterios objetivos garantizados por el pliego de condiciones, presenten ofertas entre las que se escogerá la más favorable\textsuperscript{\protect\hyperlink{ref-MinisteriodeRelacionesExteriores2014}{14}}.
 \item
-  Selección abreviada, modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual\textsuperscript{\protect\hyperlink{ref-MinisteriodeRelacionesExteriores2014}{9}}.
+  Selección abreviada, modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual\textsuperscript{\protect\hyperlink{ref-MinisteriodeRelacionesExteriores2014}{14}}.
 \item
-  Contratación directa, que es de carácter excepcional, por lo que su aplicación es de carácter restrictivo. En efecto, la ley de Contratación Pública en Colombia, prevé los siguientes eventos en los cuales es procedente esta modalidad de contratación: casos de urgencia manifiesta, contratación de empréstitos, cuando no exista pluralidad de oferentes en el mercado, para los contratos de desarrollo de actividades científicas y tecnológicas, entre otros\textsuperscript{\protect\hyperlink{ref-MinisteriodeRelacionesExteriores2014}{9}}.
+  Contratación directa, que es de carácter excepcional, por lo que su aplicación es de carácter restrictivo. En efecto, la ley de Contratación Pública en Colombia, prevé los siguientes eventos en los cuales es procedente esta modalidad de contratación: casos de urgencia manifiesta, contratación de empréstitos, cuando no exista pluralidad de oferentes en el mercado, para los contratos de desarrollo de actividades científicas y tecnológicas, entre otros\textsuperscript{\protect\hyperlink{ref-MinisteriodeRelacionesExteriores2014}{14}}.
 \item
-  Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10\%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás\textsuperscript{\protect\hyperlink{ref-ColombiaCompraEficiente2019}{10}}.
+  Mínima cuantía, que es un procedimiento sencillo y rápido para escoger al contratista en la adquisición de los bienes, obras y servicios cuyo valor no exceda el diez por ciento (10\%) de la menor cuantía de las Entidades Estatales, modalidad de selección que tiene menos formalidades que las demás\textsuperscript{\protect\hyperlink{ref-ColombiaCompraEficiente2019}{15}}.
 \end{itemize}
 
 Se realizó una exploración de los factores que pueden afectar el costo de los recetarios mediante un análisis de regresión lineal múltiple, para lo cual se tomó el costo de los recetarios como variable dependiente, y se tuvieron las siguientes variables como variable independientes (regresores):
@@ -1158,7 +1275,7 @@ Otras actividades de seguimiento activo al manejo de RO son el seguimiento a las
 \hypertarget{archivo-de-recetarios}{%
 \subsection{Archivo de recetarios}\label{archivo-de-recetarios}}
 
-Durante el acompañamiento se complementó como recomendación a los FRE, se considerará alinearse a lo expresado en la Circular 009 de 2015 del FNE, donde se difunde la buena práctica de implementar bases de retención documental y gestión de archivo\textsuperscript{\protect\hyperlink{ref-FNE2015-9}{11}}. La frecuencia con la cual se reciben los recetarios oficiales a los FRE desde las entidades y médicos prescriptores inscritos se observa en la Figura \ref{fig:ReciboRecetariosInstituciones}B La frecuencia de recepción de recetarios guarda relación con la información analizada en el punto anterior. Se tiene que 13 FRE reciben los 10 primeros días del mes los recetarios oficiales prescritos conforme a lo solicitado a las instituciones de cada departamento, mientras que los otros 4 FRE no han estandarizado el tiempo de entrega y reciben los recetarios oficiales a lo largo del mes, asegurando su recepción mediante recordatorio por correo electrónico o comunicación telefónica, si llega a ser requerido. Se tiene que 17 de 31 FRE reciben los recetarios oficiales desde IPS.
+Durante el acompañamiento se complementó como recomendación a los FRE, se considerará alinearse a lo expresado en la Circular 009 de 2015 del FNE, donde se difunde la buena práctica de implementar bases de retención documental y gestión de archivo\textsuperscript{\protect\hyperlink{ref-FNE2015-9}{16}}. La frecuencia con la cual se reciben los recetarios oficiales a los FRE desde las entidades y médicos prescriptores inscritos se observa en la Figura \ref{fig:ReciboRecetariosInstituciones}B La frecuencia de recepción de recetarios guarda relación con la información analizada en el punto anterior. Se tiene que 13 FRE reciben los 10 primeros días del mes los recetarios oficiales prescritos conforme a lo solicitado a las instituciones de cada departamento, mientras que los otros 4 FRE no han estandarizado el tiempo de entrega y reciben los recetarios oficiales a lo largo del mes, asegurando su recepción mediante recordatorio por correo electrónico o comunicación telefónica, si llega a ser requerido. Se tiene que 17 de 31 FRE reciben los recetarios oficiales desde IPS.
 
 Complementando la información reportada en la Figura \ref{fig:ReciboRecetariosInstituciones} y en la Figura \ref{fig:TiempoArchivoRecetariosOficiales}, se relacionó el tiempo de archivo que los FRE que si reciben los recetarios oficiales los almacenan, obteniendo que 10 FRE los almacenan por un periodo mayor a 5 años. Durante las jornadas de inmersión territorial se pudo observar que este tiempo de almacenamiento, en la mayoría de los casos, es por desinformación en los FRE, puesto que no se tiene presente el tiempo que se deben guardar estas copias, y al considerarlas parte de la historia clínica de un paciente estiman guardarlas hasta por 10 años, superando en muchos casos la capacidad de archivo de los FRE.
 
@@ -1171,9 +1288,9 @@ Complementando la información reportada en la Figura \ref{fig:ReciboRecetariosI
 \caption{Tiempo de archivo de los recetarios oficiales en los FRE.}\label{fig:TiempoArchivoRecetariosOficiales}
 \end{figure}
 
-En otros casos, la intención de archivo se acoge a las medidas establecidas por las gobernaciones, en las cuales se pide un archivo de 20 años para documentación critica, según las tablas de retención documental gubernamental\textsuperscript{\protect\hyperlink{ref-PresidenciadelaRepublicadeColombia2012}{12}}. Otros FRE en cambio establecieron protocolo de archivo y una vez cumplido el periodo de almacenamiento, por supuesto, posterior revisión, los recetarios oficiales son destruidos.
+En otros casos, la intención de archivo se acoge a las medidas establecidas por las gobernaciones, en las cuales se pide un archivo de 20 años para documentación critica, según las tablas de retención documental gubernamental\textsuperscript{\protect\hyperlink{ref-PresidenciadelaRepublicadeColombia2012}{17}}. Otros FRE en cambio establecieron protocolo de archivo y una vez cumplido el periodo de almacenamiento, por supuesto, posterior revisión, los recetarios oficiales son destruidos.
 
-Como se mencionó previamente durante el acompañamiento se compartió la Circular 009 de 2015\textsuperscript{\protect\hyperlink{ref-FNE2015-9}{11}}, la cual en su Artículo Primero expresa:
+Como se mencionó previamente durante el acompañamiento se compartió la Circular 009 de 2015\textsuperscript{\protect\hyperlink{ref-FNE2015-9}{16}}, la cual en su Artículo Primero expresa:
 
 \begin{quote}
 \emph{``Que las autoridades administrativas, los fabricantes, los comerciantes, los hombres de ciencia, las Instituciones científicas y los hospitales lleven registros en que consten las cantidades de cada estupefaciente fabricado, y de cada adquisición y destino dado a los estupefacientes. Dichos registros serán conservados por un periodo de dos años por lo menos. Cuando se utilicen talonarios (artículo 30, inciso 2 b) de recetas oficiales, dichos talonarios se conservarán también durante un periodo de dos años por lo menos''.}
@@ -1269,7 +1386,7 @@ Si bien las ganancias obtenidas por las ventas de recetarios son unas de las fue
 \hypertarget{recetario-oficial-electruxf3nico}{%
 \section{Recetario Oficial Electrónico}\label{recetario-oficial-electruxf3nico}}
 
-El recetario oficial electrónico (ROE) es una herramienta que busca generar un mecanismo de prescripción estandarizado en el territorio nacional para los medicamentos de control especial (MCE) donde se reúna tanto las prescripciones de uso humano como veterinario. Se espera que constituya un mecanismo integrado a una plataforma como lo es MIPRES (ya implementada y con amplio acceso), permitiendo un mayor seguimiento y control sobre los regímenes actualmente cubiertos por el aplicativo, incluyendo los procesos de información sobre la dispensación de estos productos farmacéuticos y generando la información necesaria para tener un seguimiento y análisis de prescripciones y dispensaciones de MCE en el territorio nacional\textsuperscript{\protect\hyperlink{ref-CuervoBustamante2021}{13}}.
+El recetario oficial electrónico (ROE) es una herramienta que busca generar un mecanismo de prescripción estandarizado en el territorio nacional para los medicamentos de control especial (MCE) donde se reúna tanto las prescripciones de uso humano como veterinario. Se espera que constituya un mecanismo integrado a una plataforma como lo es MIPRES (ya implementada y con amplio acceso), permitiendo un mayor seguimiento y control sobre los regímenes actualmente cubiertos por el aplicativo, incluyendo los procesos de información sobre la dispensación de estos productos farmacéuticos y generando la información necesaria para tener un seguimiento y análisis de prescripciones y dispensaciones de MCE en el territorio nacional\textsuperscript{\protect\hyperlink{ref-CuervoBustamante2021}{18}}.
 
 \hypertarget{opiniones-sobre-el-roe}{%
 \subsection{Opiniones sobre el ROE}\label{opiniones-sobre-el-roe}}
@@ -1302,11 +1419,11 @@ Como ejemplo de opinión negativa se tiene:
 
 \maxdeadcycles=1000
 
-El artículo 6 de la Resolución 1478 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}} refiere las sustancias y los medicamentos fabricados con las mismas que pertenece al monopolio del Estado. Este listado de sustancias se ha modificado mediante la Resolución 262 de 2009\textsuperscript{\protect\hyperlink{ref-MSPS262-2009}{14}} y la Resolución 940 de 2007\textsuperscript{\protect\hyperlink{ref-MSPS940-2007}{15}}, en el sentido de modificar las hojas de coca por cocaína con fines terapéuticos, e incluir a la primidona en todas sus presentaciones de manera respectiva.
+El artículo 6 de la Resolución 1478 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}} refiere las sustancias y los medicamentos fabricados con las mismas que pertenece al monopolio del Estado. Este listado de sustancias se ha modificado mediante la Resolución 262 de 2009\textsuperscript{\protect\hyperlink{ref-MSPS262-2009}{19}} y la Resolución 940 de 2007\textsuperscript{\protect\hyperlink{ref-MSPS940-2007}{20}}, en el sentido de modificar las hojas de coca por cocaína con fines terapéuticos, e incluir a la primidona en todas sus presentaciones de manera respectiva.
 
 Es así, que el FNE cuenta con el Grupo Interno de Trabajo de Medicamentos del Estado que tiene como objetivo Garantizar la disponibilidad de los medicamentos del Estado de manera oportuna y eficiente en todo el territorio Nacional.
 
-Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \ref{tab:portafolioMME}\textsuperscript{\protect\hyperlink{ref-ColombiaCompraEficiente2021}{16}}.
+Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \ref{tab:portafolioMME}\textsuperscript{\protect\hyperlink{ref-ColombiaCompraEficiente2021}{21}}.
 
 \begin{table}[!h]
 
@@ -1348,23 +1465,23 @@ Morfina HCL 10 mg ampolla x 5 mL & Caja 5 ampollas & Disponible\\
 \end{tabular}
 \end{table}
 
-Los medicamentos incluidos en el portafolio de medicamentos del Estado son importantes en el tratamiento de diversas enfermedades de alto impacto en la salud de la población colombiana. En el área de cuidados paliativos se tienen a los medicamentos con morfina, metadona, meperidina e hidromorfona como parte importante del tratamiento del dolor crónico. Algunas sociedades científicas relacionadas a esta área han encontrado barreras en la entrega efectiva de medicamentos opioides, así como una distribución inequitativa en el territorio nacional de los mismos\textsuperscript{\protect\hyperlink{ref-LeonDelgado2018}{17}}.
+Los medicamentos incluidos en el portafolio de medicamentos del Estado son importantes en el tratamiento de diversas enfermedades de alto impacto en la salud de la población colombiana. En el área de cuidados paliativos se tienen a los medicamentos con morfina, metadona, meperidina e hidromorfona como parte importante del tratamiento del dolor crónico. Algunas sociedades científicas relacionadas a esta área han encontrado barreras en la entrega efectiva de medicamentos opioides, así como una distribución inequitativa en el territorio nacional de los mismos\textsuperscript{\protect\hyperlink{ref-LeonDelgado2018}{22}}.
 
-Pese a todo esto, Colombia tiene una puntuación de 4 de 5 en la escala de colaboración entre prescriptores y reguladores de analgésicos opioides (para Latinoamérica), lo que resulta de la existencia de mecanismos de colaboración pese a que todavía se pueden realizar mejoras en los mismos\textsuperscript{\protect\hyperlink{ref-Pastrana2020}{18}}.
+Pese a todo esto, Colombia tiene una puntuación de 4 de 5 en la escala de colaboración entre prescriptores y reguladores de analgésicos opioides (para Latinoamérica), lo que resulta de la existencia de mecanismos de colaboración pese a que todavía se pueden realizar mejoras en los mismos\textsuperscript{\protect\hyperlink{ref-Pastrana2020}{23}}.
 
-Así mismo el fenobarbital se considera una alternativa terapéutica útil en el tratamiento de epilepsia refractaria\textsuperscript{\protect\hyperlink{ref-WatsonLewis2014}{19}}, o estatus convulsivo\textsuperscript{\protect\hyperlink{ref-VergaraAguilar2019}{20}}. La primidona cuenta con un espacio limitado en la terapia moderna de la epilepsia\textsuperscript{\protect\hyperlink{ref-Johannessen2020}{21}}, y algunos pacientes todavía requieren un suministro ininterrupido de la misma. Por otra parte, el metilfenidato es un componente importante en el tratamiento farmacológico de los trastornos por deficit de atención, los cuales tienen una prevalencia en la población colombiana\textsuperscript{\protect\hyperlink{ref-Pineda2001}{22},\protect\hyperlink{ref-Llanos-Lizcanoa2019}{23}}.
+Así mismo el fenobarbital se considera una alternativa terapéutica útil en el tratamiento de epilepsia refractaria\textsuperscript{\protect\hyperlink{ref-WatsonLewis2014}{24}}, o estatus convulsivo\textsuperscript{\protect\hyperlink{ref-VergaraAguilar2019}{25}}. La primidona cuenta con un espacio limitado en la terapia moderna de la epilepsia\textsuperscript{\protect\hyperlink{ref-Johannessen2020}{26}}, y algunos pacientes todavía requieren un suministro ininterrupido de la misma. Por otra parte, el metilfenidato es un componente importante en el tratamiento farmacológico de los trastornos por deficit de atención, los cuales tienen una prevalencia en la población colombiana\textsuperscript{\protect\hyperlink{ref-Pineda2001}{27},\protect\hyperlink{ref-Llanos-Lizcanoa2019}{28}}.
 
-Sí bien el establecimiento de un monopolio del Estado con estos medicamentos ha permitido el suministro de los mismos debido a que pueden ser poco atractivos por ser medicamentos menos rentables, la restricción de un mercado de libre competencia puede resultar en el surgimiento frecuente de eventos de desabastecimiento\textsuperscript{\protect\hyperlink{ref-LopezLopez2021}{24},\protect\hyperlink{ref-INVIMA2018-Desabast}{25}}.
+Sí bien el establecimiento de un monopolio del Estado con estos medicamentos ha permitido el suministro de los mismos debido a que pueden ser poco atractivos por ser medicamentos menos rentables, la restricción de un mercado de libre competencia puede resultar en el surgimiento frecuente de eventos de desabastecimiento\textsuperscript{\protect\hyperlink{ref-LopezLopez2021}{29},\protect\hyperlink{ref-INVIMA2018-Desabast}{30}}.
 
-Los desabastecimientos son situaciones en la cual se presenta una insuficiente oferta para satisfacer la demanda de un producto farmacéutico que ya ha sido aprobado por el INVIMA y comercializado en el país\textsuperscript{\protect\hyperlink{ref-INVIMA2018-Desabast}{25}}.
+Los desabastecimientos son situaciones en la cual se presenta una insuficiente oferta para satisfacer la demanda de un producto farmacéutico que ya ha sido aprobado por el INVIMA y comercializado en el país\textsuperscript{\protect\hyperlink{ref-INVIMA2018-Desabast}{30}}.
 
-Por lo general, los desabastecimientos se ven precedidos por disrupciones en la cadena de suministro\textsuperscript{\protect\hyperlink{ref-FDA2014}{26}}. Las \emph{disrupciones en la cadena de suministro} se definen como eventos aleatorios que causan que un fabricante u otro elemento de la cadena de suministro pare de funcionar de forma completa o parcial por una cantidad de tiempo (aleatoria)\textsuperscript{\protect\hyperlink{ref-Barbosa-Povoa2019}{27}}. Las instituciones deben establecer programas de gestión del riesgo también aplicadas a la cadena de suministro, en estas se busca mitigar riesgo de suministro/demanda y disrupción. Por otra parte, la \textbf{resiliencia} se puede definir como la habilidad de sobrevivir, adaptarse y crecer tras un cambio turbulento. La implementación de programas de gestión de resiliencia en la cadena de suministro se centra en la habilidad de aprender y crecer tras las disrupciones de la cadena de suministro\textsuperscript{\protect\hyperlink{ref-Barbosa-Povoa2019}{27}}.
+Por lo general, los desabastecimientos se ven precedidos por disrupciones en la cadena de suministro\textsuperscript{\protect\hyperlink{ref-FDA2014}{31}}. Las \emph{disrupciones en la cadena de suministro} se definen como eventos aleatorios que causan que un fabricante u otro elemento de la cadena de suministro pare de funcionar de forma completa o parcial por una cantidad de tiempo (aleatoria)\textsuperscript{\protect\hyperlink{ref-Barbosa-Povoa2019}{32}}. Las instituciones deben establecer programas de gestión del riesgo también aplicadas a la cadena de suministro, en estas se busca mitigar riesgo de suministro/demanda y disrupción. Por otra parte, la \textbf{resiliencia} se puede definir como la habilidad de sobrevivir, adaptarse y crecer tras un cambio turbulento. La implementación de programas de gestión de resiliencia en la cadena de suministro se centra en la habilidad de aprender y crecer tras las disrupciones de la cadena de suministro\textsuperscript{\protect\hyperlink{ref-Barbosa-Povoa2019}{32}}.
 
-La resiliencia de una cadena de suministro, como lo es la distribución de MME, se puede mejorar mediante la construcción de capacidades teniendo en cuenta vulnerabilidades\textsuperscript{\protect\hyperlink{ref-Pettit2013}{28}}. Una de estas capacidades es la visibilidad referida al conocimiento del estado operativo de la cadena y su medio circundante\textsuperscript{\protect\hyperlink{ref-Pettit2013}{28}}. El \emph{intercambio de información} es una de las áreas en las que se pueden realizar mejoras para potenciar la coordinación en una cadena de suministro\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}.
+La resiliencia de una cadena de suministro, como lo es la distribución de MME, se puede mejorar mediante la construcción de capacidades teniendo en cuenta vulnerabilidades\textsuperscript{\protect\hyperlink{ref-Pettit2013}{33}}. Una de estas capacidades es la visibilidad referida al conocimiento del estado operativo de la cadena y su medio circundante\textsuperscript{\protect\hyperlink{ref-Pettit2013}{33}}. El \emph{intercambio de información} es una de las áreas en las que se pueden realizar mejoras para potenciar la coordinación en una cadena de suministro\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}.
 
-La falta de transparencia y visibilidad en una cadena de suministro puede causar el efecto látigo (en inglés, \emph{Bullwhip effect}) que consiste en un aumento de la variabilidad en la demanda de un sitio corriente abajo de la cadena a un sitio corriente arriba de la misma\textsuperscript{\protect\hyperlink{ref-Cachon2007}{30}}. Este efecto implica que se pueden generar condiciones de alta incertidumbre que llevan a una mala planeación y esto a desabastecimientos o pérdidas por vencimiento de MME tanto para el FNE como para los FRE.
+La falta de transparencia y visibilidad en una cadena de suministro puede causar el efecto látigo (en inglés, \emph{Bullwhip effect}) que consiste en un aumento de la variabilidad en la demanda de un sitio corriente abajo de la cadena a un sitio corriente arriba de la misma\textsuperscript{\protect\hyperlink{ref-Cachon2007}{35}}. Este efecto implica que se pueden generar condiciones de alta incertidumbre que llevan a una mala planeación y esto a desabastecimientos o pérdidas por vencimiento de MME tanto para el FNE como para los FRE.
 
-Es por esto, que tanto el FNE como los FRE - en conjunto - deberían implementar, por ejemplo, un sistema de Planeamiento Participativo, Pronóstico y Reabastecimiento (CPFR, \emph{Collaborative Planning Forecasting and Replenishment}) de manera que exista una colaboración más robusta y visible de la cadena de suministro de medicamentos Monopolio del Estado\textsuperscript{\protect\hyperlink{ref-Hollmann2015}{31}}.
+Es por esto, que tanto el FNE como los FRE - en conjunto - deberían implementar, por ejemplo, un sistema de Planeamiento Participativo, Pronóstico y Reabastecimiento (CPFR, \emph{Collaborative Planning Forecasting and Replenishment}) de manera que exista una colaboración más robusta y visible de la cadena de suministro de medicamentos Monopolio del Estado\textsuperscript{\protect\hyperlink{ref-Hollmann2015}{36}}.
 
 Debido a la necesidad de fortalecer la cadena de suministro de MME, en este capítulo se muestran los resultados relacionados a medicamentos obtenidos en la encuestas aplicadas, con el fin de evidenciar algunos aspectos operativos relacionados al manejo de medicamentos en los FRE.
 
@@ -1373,9 +1490,9 @@ Debido a la necesidad de fortalecer la cadena de suministro de MME, en este cap�
 
 \maxdeadcycles=1000
 
-El manejo de inventarios es de gran relevancia para las organizaciones que tienen bienes tangibles dispuestos a la venta como lo son los FRE. Los inventarios son necesarios debido a la presencia de incertidumbres relacionadas a la demanda de los productos, tiempos de demora en el reabastecimiento, suministro por parte de los proveedores (p.ej. FNE), precio de los medicamentos, cambios en el personal, tiempos de tránsito, entre otros factores\textsuperscript{\protect\hyperlink{ref-Nahmias2007}{32}}.
+El manejo de inventarios es de gran relevancia para las organizaciones que tienen bienes tangibles dispuestos a la venta como lo son los FRE. Los inventarios son necesarios debido a la presencia de incertidumbres relacionadas a la demanda de los productos, tiempos de demora en el reabastecimiento, suministro por parte de los proveedores (p.ej. FNE), precio de los medicamentos, cambios en el personal, tiempos de tránsito, entre otros factores\textsuperscript{\protect\hyperlink{ref-Nahmias2007}{37}}.
 
-En la selección del tamaño de inventario a mantener se contraponen varios tipos de costos\textsuperscript{\protect\hyperlink{ref-Krajewski2016}{33}}:
+En la selección del tamaño de inventario a mantener se contraponen varios tipos de costos\textsuperscript{\protect\hyperlink{ref-Krajewski2016}{38}}:
 
 \begin{itemize}
 \item
@@ -1383,13 +1500,13 @@ En la selección del tamaño de inventario a mantener se contraponen varios tipo
 \item
   Costo de pedido (lleva a aumentar el inventario): costos por ordenes de compra (relacionados a la cotización, preparación de órden de compra, tiempo de recepción técnica, pagos), y costos por personal relacionado a la compra.
 \item
-  Costos por desabastecimiento (lleva a aumentar el inventario): relacionado al \textbf{nivel de servicio}, entendido como la probabilidad deseada de no tener un desabastecimiento durante el reabastecimiento de los productos (de manera que se pueda cumplir con las demandas de los usuarios en todo momento)\textsuperscript{\protect\hyperlink{ref-Krajewski2016}{33}}.
+  Costos por desabastecimiento (lleva a aumentar el inventario): relacionado al \textbf{nivel de servicio}, entendido como la probabilidad deseada de no tener un desabastecimiento durante el reabastecimiento de los productos (de manera que se pueda cumplir con las demandas de los usuarios en todo momento)\textsuperscript{\protect\hyperlink{ref-Krajewski2016}{38}}.
 \end{itemize}
 
 \hypertarget{control-de-inventarios}{%
 \subsection{Control de inventarios}\label{control-de-inventarios}}
 
-La implementación de un software de manejo de inventarios o en el mejor de los casos de un ERP (\emph{Enterprise Resource Planning}) mejora la capacidad de manejar los inventarios, disminuye costos relacionados a inventario y brinda oportunidad para la coordinación\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}. Se indago a los FRE sobre las herramientas que tienen a disposición para el manejo de inventarios de MME. La mayoría de los FRE realizan el seguimiento de inventarios mediante un paquete ofimático con una proporción de 45.2\% (ver Figura \ref{fig:HerramientasManejoInventarios}), siendo la herramienta principal Excel, con uso especial de hojas estandarizadas, como en el caso de los FRE Boyacá, Cauca, Sucre, entre otros.
+La implementación de un software de manejo de inventarios o en el mejor de los casos de un ERP (\emph{Enterprise Resource Planning}) mejora la capacidad de manejar los inventarios, disminuye costos relacionados a inventario y brinda oportunidad para la coordinación\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}. Se indago a los FRE sobre las herramientas que tienen a disposición para el manejo de inventarios de MME. La mayoría de los FRE realizan el seguimiento de inventarios mediante un paquete ofimático con una proporción de 45.2\% (ver Figura \ref{fig:HerramientasManejoInventarios}), siendo la herramienta principal Excel, con uso especial de hojas estandarizadas, como en el caso de los FRE Boyacá, Cauca, Sucre, entre otros.
 
 \begin{figure}[t]
 
@@ -1415,7 +1532,7 @@ Por todo esto se recomienda el uso de herramientas informáticas para la trazabi
 \hypertarget{comportamiento-de-compra-de-fre}{%
 \subsection{Comportamiento de compra de FRE}\label{comportamiento-de-compra-de-fre}}
 
-De forma ideal se debería tener en cuenta el balance entre los costos de mantenimiento de inventario y los costos de realizar pedidos para encontrar una cantidad económica de pedido (\(\mathrm{EOQ}\), \emph{Economic Order Quantity}). Para realizar una programación de compras anuales se debería tener en cuenta la demanda anual del producto y dividirla entre \(\mathrm{EOQ}\), de esta manera se puede encontrar el número de pedidos óptimos\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}.
+De forma ideal se debería tener en cuenta el balance entre los costos de mantenimiento de inventario y los costos de realizar pedidos para encontrar una cantidad económica de pedido (\(\mathrm{EOQ}\), \emph{Economic Order Quantity}). Para realizar una programación de compras anuales se debería tener en cuenta la demanda anual del producto y dividirla entre \(\mathrm{EOQ}\), de esta manera se puede encontrar el número de pedidos óptimos\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}.
 
 El número de pedidos (compras) de MME al FNE en el año también depende de varios factores como: (a) cantidad requerida de estos bienes por cada departamento (demanda), (b) presupuesto asignado por las gobernaciones a los FRE y (c) capacidad de satisfacer la demanda de los medicamentos por parte del FNE (ver Figura \ref{fig:FrecComprasFNR}).
 
@@ -1437,13 +1554,13 @@ Por su parte, otros territorios no pueden realizar las compras con las frecuenci
 \hypertarget{niveles-de-seguridad}{%
 \subsection{Niveles de seguridad}\label{niveles-de-seguridad}}
 
-Según la Resolución 1403 de 2007\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{34}}, donde se menciona el control durante el proceso de almacenamiento se encuentra que:
+Según la Resolución 1403 de 2007\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{39}}, donde se menciona el control durante el proceso de almacenamiento se encuentra que:
 
 \begin{quote}
-\emph{``El \ldots{} establecimiento farmacéutico contará con criterios, procedimientos y recursos que permitan calcular las existencias necesarias para un período determinado, fijando los niveles mínimo y máximo de existencias, punto de reposición o punto de pedido y presupuesto necesario para cumplir con la prestación oportuna del servicio. Se podrán utilizar aquellos indicadores que vayan surgiendo y que permitan realizar un exacto control de existencias''.}\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{34}}
+\emph{``El \ldots{} establecimiento farmacéutico contará con criterios, procedimientos y recursos que permitan calcular las existencias necesarias para un período determinado, fijando los niveles mínimo y máximo de existencias, punto de reposición o punto de pedido y presupuesto necesario para cumplir con la prestación oportuna del servicio. Se podrán utilizar aquellos indicadores que vayan surgiendo y que permitan realizar un exacto control de existencias''.}\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{39}}
 \end{quote}
 
-Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos. Se evalúo el uso de niveles de seguridad del inventario en los FRE. Un \textbf{inventario de seguridad} es una cantidad (nivel) almacenada adicional de producto que protege frente a incertidumbres en la demanda (\(D\)), tiempo de espera (\(L\)) o cambios en el suministro\textsuperscript{\protect\hyperlink{ref-Krajewski2016}{33}}. Los inventarios de seguridad se construyen basados en medidas de nivel de servicio que se encuentran relacionadas ya sea con costos de desabastecimiento o la probabilidad de desabastecerse\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}.
+Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos. Se evalúo el uso de niveles de seguridad del inventario en los FRE. Un \textbf{inventario de seguridad} es una cantidad (nivel) almacenada adicional de producto que protege frente a incertidumbres en la demanda (\(D\)), tiempo de espera (\(L\)) o cambios en el suministro\textsuperscript{\protect\hyperlink{ref-Krajewski2016}{38}}. Los inventarios de seguridad se construyen basados en medidas de nivel de servicio que se encuentran relacionadas ya sea con costos de desabastecimiento o la probabilidad de desabastecerse\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}.
 
 \begin{figure}
 
@@ -1464,7 +1581,7 @@ En otros casos se ve que el personal del FRE considera que su contacto directo c
 \hypertarget{tiempos-de-demora-en-el-proceso-de-adquisiciuxf3n}{%
 \subsection{Tiempos de demora en el proceso de adquisición}\label{tiempos-de-demora-en-el-proceso-de-adquisiciuxf3n}}
 
-El tiempo de demora para reabastecimiento (\(L\), \emph{lead time}) es el tiempo que pasa desde el momento en el que se decide generar un pedido hasta que está físicamente listo en el almacén para satisfacer la demanda de los clientes\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}. Para un manejo adecuado del inventario, se debe tener en cuenta este tiempo para realizar los pedidos con anticipación de manera que no se produzcan desabastecimientos de forma frecuente.
+El tiempo de demora para reabastecimiento (\(L\), \emph{lead time}) es el tiempo que pasa desde el momento en el que se decide generar un pedido hasta que está físicamente listo en el almacén para satisfacer la demanda de los clientes\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}. Para un manejo adecuado del inventario, se debe tener en cuenta este tiempo para realizar los pedidos con anticipación de manera que no se produzcan desabastecimientos de forma frecuente.
 
 Los tiempos de demora suelen tener varios componentes, en el diseño de la encuesta se tuvo en cuenta un proceso de adquisición de MME mediante etapas, de forma general se consideraron cinco etapas del proceso:
 
@@ -1503,7 +1620,7 @@ Por otra parte hay territorios como Guaviare en el que la estimación de compra 
 
 Existen casos a exaltar como el FRE de Sucre que, a pesar de tener un tamaño relativamente pequeño a otros en la región, tiene un proceso de estimación de necesidades de MME está altamente estandarizado a través de una herramienta que facilita la toma de decisiones de compra de MME. El FRE afirma que el uso de este manual reduce el tiempo de estimación de compra a una semana, y esto indica que es un proceso eficiente en este departamento.
 
-Como se identifica en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle}, la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales (en promedio 36.4 días) y contractuales (en promedio 46 días), esto debido a los requisitos que establece la contratación pública\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{35},\protect\hyperlink{ref-CongresodelaRepublicadeColombia2007}{36}}. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{35}}. Por último, en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle} se muestra la mediana y el rango intercuartílico de los tiempos de cada etapa del proceso.
+Como se identifica en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle}, la gran mayoría de territorios manifiesta que las actividades que más tiempos requieren son las etapas precontractuales (en promedio 36.4 días) y contractuales (en promedio 46 días), esto debido a los requisitos que establece la contratación pública\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{40},\protect\hyperlink{ref-CongresodelaRepublicadeColombia2007}{41}}. Para que una institución estatal pueda realizar una compra debe tener en cuenta la modalidad de contratación y los documentos exigidos en la misma, p.ej. los estudios previos en los que la entidad debe tener claridad sobre las especificaciones técnicas mínimas del servicio o bien a adquirir\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1993}{40}}. Por último, en la Figura \ref{fig:EtapasProcesoAdquisicionDetalle} se muestra la mediana y el rango intercuartílico de los tiempos de cada etapa del proceso.
 
 \begin{figure}[t]
 
@@ -1520,9 +1637,9 @@ La etapa de solicitud en la plataforma tecnológica toma en promedio 6 días (me
 
 La etapa de despacho tomó en promedio 10.4 días (mediana de 7 días). Los departamentos de Valle del Cauca (60 días), Quindío (52 días), y San Andrés (30 días) presentaron la mayor demora en esta etapa, estos tiempos reportados no parecen tener una relación cercana con la distancia física entre la oficina del FRE y el centro de despacho desde el FNE.
 
-Los procesos relacionados a medicamentos esenciales como los son muchos MME no deben tener barreras que aumenten el riesgo de desabastecimientos\textsuperscript{\protect\hyperlink{ref-OMS2021}{37}}, estas barreras pueden estar relacionadas con los tiempos de demora. De acuerdo con lo evaluado se tiene que las etapas precontractuales y contractuales son las que más toman tiempo.
+Los procesos relacionados a medicamentos esenciales como los son muchos MME no deben tener barreras que aumenten el riesgo de desabastecimientos\textsuperscript{\protect\hyperlink{ref-OMS2021}{42}}, estas barreras pueden estar relacionadas con los tiempos de demora. De acuerdo con lo evaluado se tiene que las etapas precontractuales y contractuales son las que más toman tiempo.
 
-Los FRE deben propender por sensibilizar más a sus gobernaciones para que los procesos se realicen en tiempos más prudentes. Es deber de todos los actores relacionados a los procesos de medicamentos garantizar el acceso a los mismos por parte de la población, acorde a las políticas implementadas por el gobierno nacional\textsuperscript{\protect\hyperlink{ref-PDSPMinSalud2019}{38}}.
+Los FRE deben propender por sensibilizar más a sus gobernaciones para que los procesos se realicen en tiempos más prudentes. Es deber de todos los actores relacionados a los procesos de medicamentos garantizar el acceso a los mismos por parte de la población, acorde a las políticas implementadas por el gobierno nacional\textsuperscript{\protect\hyperlink{ref-PDSPMinSalud2019}{43}}.
 
 \hypertarget{plataforma-de-compra-estatal}{%
 \subsection{Plataforma de compra estatal}\label{plataforma-de-compra-estatal}}
@@ -1533,7 +1650,7 @@ De esta manera los FRE adquieren los MME a través de esta herramienta, por tal 
 
 La mayoría de los departamentos hace uso de esta plataforma, encontrándose diferentes percepciones sobre ella. Por ejemplo, el FRE del Cauca indica alta satisfacción con el uso de la plataforma al considerar que es muy organizada, por otra parte el FRE del Valle del Cauca que indica inconformidad en el uso porque consideran que el mismo implica un extenso proceso precontractual y esto puede ser ineficiente y poco intuitivo. El FRE Meta afirma que en la plataforma existen factores que tardan en actualizarse como por ejemplo firmas de la secretaría de salud o incongruencias en el despacho de medicamentos comprados, y el FRE de Santander menciona que los precios en la plataforma suelen encontrarse desactualizados respecto a los del FNE.
 
-Si bien el uso del Instrumento de Agregación de Demanda de precios dispuesto por Colombia Compra Eficiente para la adquisición de MME por parte de los FRE es de obligatoriedad, según la Circular Externa 005 de 2019 emitida por el FNE\textsuperscript{\protect\hyperlink{ref-FNE005-2019}{39}}, no todos llevan a cabo este proceso. Un caso podría ser el FRE Guainía que no ha utilizado la plataforma por falta de conocimiento sobre la misma y tiempo para capacitar a su personal respecto a ello, o el FRE Meta que expresa varias inconformidades sobre el uso de esta.
+Si bien el uso del Instrumento de Agregación de Demanda de precios dispuesto por Colombia Compra Eficiente para la adquisición de MME por parte de los FRE es de obligatoriedad, según la Circular Externa 005 de 2019 emitida por el FNE\textsuperscript{\protect\hyperlink{ref-FNE005-2019}{44}}, no todos llevan a cabo este proceso. Un caso podría ser el FRE Guainía que no ha utilizado la plataforma por falta de conocimiento sobre la misma y tiempo para capacitar a su personal respecto a ello, o el FRE Meta que expresa varias inconformidades sobre el uso de esta.
 
 De otra parte, es necesario mencionar que, si bien casi todos los departamentos hacen uso de la plataforma, este proceso no siempre está a cargo del FRE, como en el caso del departamento del Atlántico, donde el proceso se lleva a través de Secretaría General y por ello su percepción sobre la misma es \emph{``ni conforme ni inconforme''}. Es así como en la Figura \ref{fig:ColombiaCompra} se identifica como la segunda respuesta más frecuente \emph{``Ni conforme ni inconforme''} con el uso de esta plataforma. De otra parte, el FRE Putumayo comenta que el uso de la plataforma depende en gran medida de otras áreas de la gobernación, evidenciando varias dificultades en su uso y aumentando el tiempo en los procesos de contratación.
 
@@ -1553,7 +1670,7 @@ Si bien la plataforma Colombia Compra Eficiente buscan hacer más eficiente el p
 \hypertarget{recepciuxf3n-de-medicamentos}{%
 \subsection{Recepción de medicamentos}\label{recepciuxf3n-de-medicamentos}}
 
-A nivel nacional se cuenta con el \emph{``Manual de condiciones esenciales y procedimientos del Servicio Farmacéutico''} que está determinado por la Resolución 1403 del 2007\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{34}} emitida por el INVIMA, que en el título ``Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos'', establece que la persona encargada de recibir los medicamentos en la institución debe realizar el siguiente procedimiento:
+A nivel nacional se cuenta con el \emph{``Manual de condiciones esenciales y procedimientos del Servicio Farmacéutico''} que está determinado por la Resolución 1403 del 2007\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{39}} emitida por el INVIMA, que en el título ``Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos'', establece que la persona encargada de recibir los medicamentos en la institución debe realizar el siguiente procedimiento:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1565,7 +1682,7 @@ A nivel nacional se cuenta con el \emph{``Manual de condiciones esenciales y pro
   realizar una inspección de los medicamentos para verificar las (i) unidades, (ii) número de lote, (iii) fechas de vencimiento, (iv) registro sanitario, (v) laboratorio fabricante, (vi) condiciones de almacenamiento durante el transporte, (vii) manipulación, (viii) embalaje, (ix) material de empaque / envase y (x) condiciones administrativas y técnicas establecidas en la negociación.
 \end{enumerate}
 
-Después de la inspección, se realiza un muestreo para determinar si los productos recibidos cumplen con especificaciones de calidad. Existen planes de muestreo de aceptación por atributos en el que se suele utilizar la Tabla Militar Estándar MIL-STD-105E\textsuperscript{\protect\hyperlink{ref-AmericanNationalStandardsInstitute2013}{40},\protect\hyperlink{ref-GutierrezPulido2008}{41}}, con el fin de seleccionar el tamaño de una muestra aleatoria de acuerdo al tamaño total del pedido, nivel de inspección requerido y otros factores. En casos con un tamaño total de lote pequeño y altos niveles de inspección se suele realiza una inspección completa de los productos recibidos.
+Después de la inspección, se realiza un muestreo para determinar si los productos recibidos cumplen con especificaciones de calidad. Existen planes de muestreo de aceptación por atributos en el que se suele utilizar la Tabla Militar Estándar MIL-STD-105E\textsuperscript{\protect\hyperlink{ref-AmericanNationalStandardsInstitute2013}{45},\protect\hyperlink{ref-GutierrezPulido2008}{46}}, con el fin de seleccionar el tamaño de una muestra aleatoria de acuerdo al tamaño total del pedido, nivel de inspección requerido y otros factores. En casos con un tamaño total de lote pequeño y altos niveles de inspección se suele realiza una inspección completa de los productos recibidos.
 
 Al terminar la inspección se pasa a documentar la recepción y se procede a realizar un ``acta de recepción'' donde se detalla la información del procedimiento como:
 
@@ -1608,9 +1725,9 @@ Como otro atributo que se puede resaltar en la Figura \ref{fig:TiemposRecepcionA
 \hypertarget{traslados-interdepartamentales}{%
 \subsection{Traslados interdepartamentales}\label{traslados-interdepartamentales}}
 
-La cadena de suministro de MME está planteada de manera que los FRE realizan compras de MME al FNE, y los establecimientos en los departamentos realizan compras al FRE, en ambos casos sin intermediaciones\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}. Sin embargo, existe un mecanismo conocido como \textbf{traslado interdepartamental} mediante el cual un departamento puede realizar la compra de MME a otro departamento. En logística, se le conoce a este tipo de transacciones como \textbf{transbordos laterales}\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}.
+La cadena de suministro de MME está planteada de manera que los FRE realizan compras de MME al FNE, y los establecimientos en los departamentos realizan compras al FRE, en ambos casos sin intermediaciones\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}. Sin embargo, existe un mecanismo conocido como \textbf{traslado interdepartamental} mediante el cual un departamento puede realizar la compra de MME a otro departamento. En logística, se le conoce a este tipo de transacciones como \textbf{transbordos laterales}\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}.
 
-Los traslado interdepartamental/transbordos laterales en su modalidad reactiva se utilizan cuando existe un riesgo de desabastecimiento inminente y se hace un pedido de medicamentos al FRE de un departamento cercano\textsuperscript{\protect\hyperlink{ref-Paterson2011}{42}}, esto puede reducir los costos sí se utiliza en emergencias, o aumentarlos sí se utiliza de forma excesiva\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}. Es importante mencionar que los traslados interdepartamentales sólo se pueden llevar a cabo previa autorización del FNE.
+Los traslado interdepartamental/transbordos laterales en su modalidad reactiva se utilizan cuando existe un riesgo de desabastecimiento inminente y se hace un pedido de medicamentos al FRE de un departamento cercano\textsuperscript{\protect\hyperlink{ref-Paterson2011}{47}}, esto puede reducir los costos sí se utiliza en emergencias, o aumentarlos sí se utiliza de forma excesiva\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}. Es importante mencionar que los traslados interdepartamentales sólo se pueden llevar a cabo previa autorización del FNE.
 
 En el traslado interdepartamental de medicamentos se observa que los territorios más descentralizados son los que presentan mayor demora para recibir los traslados de MME, siendo los casos más demorados San Andrés y Amazonas. Como se observa en la Figura \ref{fig:TiemposTranslados} las regiones más afectadas son Amazonía, Orinoquía, Pacífico a excepción del Valle del Cauca y algunos departamentos del Caribe. Sin embargo, el departamento que más demora presenta es San Andrés, pues al estar alejado de la zona continental del país, tiene un tiempo de traslado de medicamentos más largo.
 
@@ -1730,7 +1847,7 @@ En la Figura \ref{fig:ProductosCompartidos1} se muestra la frecuencia de varias 
 \caption{Productos compartidos en el almacén de MME.}\label{fig:ProductosCompartidos1}
 \end{figure}
 
-En la Figura \ref{fig:PropOcupacionAlmacen} se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se tiene que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se da en 12 FREs.
+En la Figura \ref{fig:PropOcupacionAlmacen} se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se evidencia que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se presenta en 12 FREs.
 
 \begin{figure}[!b]
 
@@ -1741,7 +1858,7 @@ En la Figura \ref{fig:PropOcupacionAlmacen} se tiene una estimación del promedi
 \caption{Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE.}\label{fig:PropOcupacionAlmacen}
 \end{figure}
 
-Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}.
+Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}.
 En la Figura \ref{fig:FrecControlExistencias} se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario.
 
 \begin{figure}
@@ -1758,9 +1875,9 @@ Entre los FRE que afirman realizar el monitoreo de niveles de inventarios de for
 \hypertarget{control-de-fechas-de-vencimiento}{%
 \subsection{Control de fechas de vencimiento}\label{control-de-fechas-de-vencimiento}}
 
-De acuerdo a la Resolución 1403 de 2007 del MSPS\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{34}}, el control de fechas de vencimiento es un procedimiento importante enmarcado en el proceso de Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos dentro del Modelo de Gestión del Servicio Farmacéutico. Los servicios farmacéuticos deben contar con criterios procedimientos y recursos que le permitan verificar y recursos que permitan verificar continuamente la fecha de vencimiento de los medicamentos\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{34}}.
+De acuerdo a la Resolución 1403 de 2007 del MSPS\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{39}}, el control de fechas de vencimiento es un procedimiento importante enmarcado en el proceso de Recepción y Almacenamiento de Medicamentos y Dispositivos Médicos dentro del Modelo de Gestión del Servicio Farmacéutico. Los servicios farmacéuticos deben contar con criterios procedimientos y recursos que le permitan verificar y recursos que permitan verificar continuamente la fecha de vencimiento de los medicamentos\textsuperscript{\protect\hyperlink{ref-MinisteriodeSaludyProteccionSocial2007}{39}}.
 
-Entre estos recursos se encuentra la \emph{semaforización}, que es una herramienta que permite identificar y determinar en el momento oportuno que medicamentos están próximos a vencer. De forma común, esta herramienta se aplica mediante la rotulación de las unidades con colores de los medicamentos de acuerdo al tiempo esperado hasta la fecha de vencimiento\textsuperscript{\protect\hyperlink{ref-HernandezVera2017}{43}}. La semaforización también se podría aplicar mediante sistemas de alertas electrónica.
+Entre estos recursos se encuentra la \emph{semaforización}, que es una herramienta que permite identificar y determinar en el momento oportuno que medicamentos están próximos a vencer. De forma común, esta herramienta se aplica mediante la rotulación de las unidades con colores de los medicamentos de acuerdo al tiempo esperado hasta la fecha de vencimiento\textsuperscript{\protect\hyperlink{ref-HernandezVera2017}{48}}. La semaforización también se podría aplicar mediante sistemas de alertas electrónica.
 
 La adopción de esta práctica sólo se ha realizado en 40\% de los FRE. Esta práctica se lleva a cabo teniendo en cuenta tres colores:
 
@@ -1834,11 +1951,11 @@ Se tiene que pese a que más del 50\% de los respondientes de la encuesta tienen
 
 \maxdeadcycles=1000
 
-El gasto farmacéutico es una parte importante del gasto público en salud, y por esto se vuelve importante su control. Por otra parte, la definición de los precios de los medicamentos genera tensiones entre la libertad económica de los laboratorios, distribuidores y comercializadores de medicamentos frente al derecho a la salud de los pacientes que requieren de los beneficios de las tecnologías en salud\textsuperscript{\protect\hyperlink{ref-AvilaRoncancio2019}{44}}.
+El gasto farmacéutico es una parte importante del gasto público en salud, y por esto se vuelve importante su control. Por otra parte, la definición de los precios de los medicamentos genera tensiones entre la libertad económica de los laboratorios, distribuidores y comercializadores de medicamentos frente al derecho a la salud de los pacientes que requieren de los beneficios de las tecnologías en salud\textsuperscript{\protect\hyperlink{ref-AvilaRoncancio2019}{49}}.
 
-En Colombia se ha establecido un modelo de regulación de precios de medicamentos por lo cual existen tres regímenes de regulación: (i) Libertad regulada, (ii) Libertad vigilada y (iii) Control directo\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1988}{45}}. De estos se tiene que la Comisión Nacional de Precios de Medicamentos y Dispositivos Médicos (CNPMDM) sólo utiliza la Libertad Vigilada y el Control Directo\textsuperscript{\protect\hyperlink{ref-SecretariaTecnicaCNPDM-2019}{46}}.
+En Colombia se ha establecido un modelo de regulación de precios de medicamentos por lo cual existen tres regímenes de regulación: (i) Libertad regulada, (ii) Libertad vigilada y (iii) Control directo\textsuperscript{\protect\hyperlink{ref-CongresodelaRepublicadeColombia1988}{50}}. De estos se tiene que la Comisión Nacional de Precios de Medicamentos y Dispositivos Médicos (CNPMDM) sólo utiliza la Libertad Vigilada y el Control Directo\textsuperscript{\protect\hyperlink{ref-SecretariaTecnicaCNPDM-2019}{51}}.
 
-De acuerdo al ABC de la Regulación de Precios de Medicamentos, se ha observado un margen entre el precio ex-fábrica y el precio de distribuidor de aproximadamente el 7\% teniendo en cuenta los datos internacionales, y se sugiere este márgen para referencia en el mercado colombiano\textsuperscript{\protect\hyperlink{ref-SecretariaTecnicaCNPDM-2019}{46}}.
+De acuerdo al ABC de la Regulación de Precios de Medicamentos, se ha observado un margen entre el precio ex-fábrica y el precio de distribuidor de aproximadamente el 7\% teniendo en cuenta los datos internacionales, y se sugiere este márgen para referencia en el mercado colombiano\textsuperscript{\protect\hyperlink{ref-SecretariaTecnicaCNPDM-2019}{51}}.
 
 En la gestión de operaciones de distribución de MME por parte del FNE, se consideran dos canales de distribución principales los cuales son: (i) canal de distribución a FRE y (ii) canal de distribución mediante compra directa. Se considera que el canal de compra directa constituye una excepción, en los casos en donde no existe un Fondo Rotatorio que realice la distribución en un departamento determinado. Debido a esto, se debe considerar un precio de venta mayor en la utilización del canal de compra directa. En el caso de MME se realiza la estimación del precio de venta a FRE y se adiciona un margen del 12\% para las operaciones en canal de compra directa.
 
@@ -1879,7 +1996,7 @@ También se evaluaron otros factores cómo el número de instituciones que reali
 
 Se debe reconocer que un mal control de precios a nivel de laboratorio y distribuidores puede ocasionar distorsiones importantes en la cadena de suministro de manera que no se produce un beneficio óptimo al considerar toda la cadena. En este caso se podría esperar que precios de venta no competitivos a nivel de FRE generen un aumento en la proporción de compra directa por parte de instituciones en el territorio correspondiente.
 
-Se debe tener en cuenta que un precio de venta alto no siempre garantiza un beneficio neto ya que este depende de la demanda así como las cantidades adquiridas y el nivel de desabastecimiento esperado\textsuperscript{\protect\hyperlink{ref-Silver2017}{29}}. Se deben revisar a profundidad los precios de los medicamentos en el territorio de manera que se articule una política de precios de medicamentos monopolio del Estado.
+Se debe tener en cuenta que un precio de venta alto no siempre garantiza un beneficio neto ya que este depende de la demanda así como las cantidades adquiridas y el nivel de desabastecimiento esperado\textsuperscript{\protect\hyperlink{ref-Silver2017}{34}}. Se deben revisar a profundidad los precios de los medicamentos en el territorio de manera que se articule una política de precios de medicamentos monopolio del Estado.
 
 \hypertarget{ruta-tecnoluxf3gica}{%
 \chapter{Ruta Tecnológica}\label{ruta-tecnoluxf3gica}}
@@ -1933,7 +2050,7 @@ La apuesta a futuro de la modernización en los procesos de manejo de recetarios
 \hypertarget{equipos-de-cuxf3mputo}{%
 \section{Equipos de cómputo}\label{equipos-de-cuxf3mputo}}
 
-Según la Figura \ref{fig:EquiposComputo}, más de la mitad de los FRE poseen únicamente hasta dos (2) computadores para el desarrollo de sus funciones como ente territorial. En dos casos particulares, FRE Guaviare y FRE San Andrés, no cuentan con equipo de cómputo actualmente y esto influye desfavorablemente en el cumplimiento de sus obligaciones como FRE. En esa misma línea, podemos encontrar nueve FRE que poseen solo un (1) equipo de cómputo, perjudicando igualmente el avance de sus actividades laborales y funciones principales como ente territorial, responsable del control de MME en el departamento. Incluso, según las experiencias y observaciones del personal vinculado a los FRE, disponer de dos (2) computadores sigue siendo una limitante en las herramientas del trabajo, condicionado el adecuado desarrollo laboral. Sin contar que, en la mayoría de departamentos, los equipos de cómputo son insuficientes para el personal del FRE o deben ser cambiados por obsolescencia, según la Figura \ref{fig:OpinionEquiposComputo}.
+Según la Figura \ref{fig:EquiposComputo}, más de la mitad de los FRE poseen únicamente hasta dos (2) computadores para el desarrollo de sus funciones como ente territorial. En dos casos particulares, FRE Guaviare y FRE San Andrés, no cuentan con equipo de cómputo actualmente y esto influye desfavorablemente en el cumplimiento de sus obligaciones como FRE. En esa misma línea, se tienen nueve FRE que poseen solo un (1) equipo de cómputo, lo que puede perjudicar el desarrollo de sus actividades laborales y funciones principales como ente territorial, responsable del control de MME en el departamento. Incluso, según las experiencias y observaciones del personal vinculado a los FRE, disponer de dos (2) computadores sigue siendo una limitante en las herramientas del trabajo, condicionado el adecuado desarrollo laboral. Sin contar que, en la mayoría de departamentos, los equipos de cómputo son insuficientes para el personal del FRE o deben ser cambiados por obsolescencia, según la Figura \ref{fig:OpinionEquiposComputo}.
 
 \begin{figure}
 
@@ -2037,7 +2154,7 @@ La Resolución 1479 de 2006 del Ministerio de Salud y la Protección Social\text
   Consolidado semestral del registro de Farmacodependientes de productos sometidos a fiscalización.
 \end{itemize}
 
-Es preciso resaltar que en este capítulo se presentará un análisis del informe mensual sobre la distribución de MME, correspondiente al Anexo 1 de la Resolución 1479 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}}, informe mensual sobre consumo de MME, referente al Anexo 2 de la Resolución 1479 de 2006, y finalmente el informe de consumo de MCE de los establecimientos minoristas, relacionado con el Anexo 13 de la Resolución 1478 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}.
+Es preciso resaltar que en este capítulo se presenta un análisis del informe mensual sobre la distribución de MME, correspondiente al Anexo 1 de la Resolución 1479 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1479-2006}{2}}, informe mensual sobre consumo de MME referente al Anexo 2 de la Resolución 1479 de 2006, y finalmente el informe de consumo de MCE de los establecimientos minoristas, relacionado con el Anexo 13 de la Resolución 1478 de 2006\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}.
 
 \hypertarget{diligenciamiento-de-anexos}{%
 \section{Diligenciamiento de anexos}\label{diligenciamiento-de-anexos}}
@@ -2310,15 +2427,15 @@ La infraestructura tecnológica es otro aspecto primordial para el desarrollo de
 
 \begin{itemize}
 \item
-  \textbf{Alerta Sanitaria}: toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces\textsuperscript{\protect\hyperlink{ref-INVIMA2021-ALERTAS}{47}}.
+  \textbf{Alerta Sanitaria}: toda sospecha de una situación de riesgo potencial para la salud de la población y/o de trascendencia social, frente a la cual sea necesario el desarrollo de acciones de Salud Pública urgentes y eficaces\textsuperscript{\protect\hyperlink{ref-INVIMA2021-ALERTAS}{52}}.
 \item
   \textbf{Compra Directa}: compra de medicamentos monopolio del Estado por parte de entidades administradoras de planes de beneficios, prestadores de servicios de salud o establecimientos farmacéuticos, cuando el respectivo FRE no cuenta con inventario suficiente de los MME que se necesitan.
 \item
-  \textbf{Desabastecimiento}: situación en la cual se presenta una insuficiente oferta para satisfacer la demanda de un producto farmacéutico que ya ha sido aprobado por el INVIMA y comercializado en el país\textsuperscript{\protect\hyperlink{ref-INVIMA2018-Desabast}{25}}.
+  \textbf{Desabastecimiento}: situación en la cual se presenta una insuficiente oferta para satisfacer la demanda de un producto farmacéutico que ya ha sido aprobado por el INVIMA y comercializado en el país\textsuperscript{\protect\hyperlink{ref-INVIMA2018-Desabast}{30}}.
 \item
   \textbf{Disponibilidad}: condición en la cual se cuentan con existencias del medicamento en el territorio nacional.
 \item
-  \textbf{Farmacovigilancia}: ciencia y actividades relacionadas con la detección, evaluación, comprensión y prevención de eventos adversos o de cualquier otro problema relacionado con medicamentos\textsuperscript{\protect\hyperlink{ref-INVIMA2006-FV}{48}}.
+  \textbf{Farmacovigilancia}: ciencia y actividades relacionadas con la detección, evaluación, comprensión y prevención de eventos adversos o de cualquier otro problema relacionado con medicamentos\textsuperscript{\protect\hyperlink{ref-INVIMA2006-FV}{53}}.
 \item
   \textbf{Fondo Nacional de Estupefacientes}: es una Unidad Administrativa Especial creada por la Ley 36 de 1939 con asignaciones dadas por el Decreto-Ley 257 de 1969, según el Decreto 205 de 2003 funciona como una UAE adjunta de la Dirección de Medicamentos y Tecnologías en Salud. El FNE (Fondo Nacional de Estupefacientes) tiene como objetivo la vigilancia y control sobre la importación, la exportación, la distribución y venta de drogas, medicamentos, materias primas o precursores de control especial, a que se refiere la Ley 30 de 1986 y las demás disposiciones que expida el Ministerio de la Protección Social, así como apoyar a los programas contra la farmacodependencia que adelanta el Gobierno Nacional.
 \item
@@ -2338,7 +2455,7 @@ La infraestructura tecnológica es otro aspecto primordial para el desarrollo de
 \item
   \textbf{Recetario Oficial (RO)}: documento oficial autorizado por la entidad competente, de carácter personal e intransferible que utilizan los prescriptores de salud para la formulación de los medicamentos de control especial y de Monopolio del Estado\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}.
 \item
-  \textbf{Recetario Oficial Electrónico (ROE)}: documento electrónico que se pretende parametrizar en todos los FRE, con el fin de fortalecer el seguimiento a las prescripciones de MME, encaminados al uso racional de estos medicamentos en todo el territorio nacional\textsuperscript{\protect\hyperlink{ref-CuervoBustamante2021}{13}}.
+  \textbf{Recetario Oficial Electrónico (ROE)}: documento electrónico que se pretende parametrizar en todos los FRE, con el fin de fortalecer el seguimiento a las prescripciones de MME, encaminados al uso racional de estos medicamentos en todo el territorio nacional\textsuperscript{\protect\hyperlink{ref-CuervoBustamante2021}{18}}.
 \item
   \textbf{Servicio Farmacéutico}: es el servicio de atención en salud responsable de las actividades, procedimientos e intervenciones de carácter técnico, científico y administrativo, relacionado con los medicamentos y los dispositivos médicos utilizados en la promoción de la salud y la prevención, diagnóstico, tratamiento y rehabilitación de la enfermedad, con el fin de contribuir en forma armónica e integral al mejoramiento de la calidad de vida individual y colectiva\textsuperscript{\protect\hyperlink{ref-MSPS1478-2006}{1}}.
 \item
@@ -2492,168 +2609,188 @@ Agradecemos profundamente a los siguientes funcionarios por recibir y contestar 
 \CSLLeftMargin{7. }
 \CSLRightInline{Dirección Prestación de Servicios y Atención Primaria. {Registro Especial de Prestadores de Servicios de Salud - REPS.} 2021.}
 
-\leavevmode\vadjust pre{\hypertarget{ref-MSPS2200-2005}{}}%
+\leavevmode\vadjust pre{\hypertarget{ref-MinisteriodeSalud1994}{}}%
 \CSLLeftMargin{8. }
+\CSLRightInline{Ministerio de Salud. {Resoluci{ó}n 5261 de 1994. Por la cual se establece el Manual de Actividades, Intervenciones y Procedimientos del Plan Obligatorio de Salud en el Sistema General de Seguridad Social en Salud.} 1994.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-DepartamentoNacionaldePlaneacion2019}{}}%
+\CSLLeftMargin{9. }
+\CSLRightInline{Departamento Nacional de Planeación. {Regionalizaci{ó}n Presupuesto de Inversi{ó}n. Vigencia 2020. Regionalizaci{ó}n indicativa sobre el monto de inversi{ó}n para segundo debate al prpyecto de Ley del Presupuesto General de la Naci{ó}n 2020}. 1.ª edición. Bogot{á}: Departamento Nacional de Planeaci{ó}n; 2019.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-Hennig2016}{}}%
+\CSLLeftMargin{10. }
+\CSLRightInline{Hennig C., Meila M., Murtagh F., Rocci R. {Handbook of Cluster Analysis}. 1.ª edición. Boca Raton, FL, USA: Taylor \& Francis Group, LLC; 2016.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-R_Stats}{}}%
+\CSLLeftMargin{11. }
+\CSLRightInline{R Core Team. R: A Language and Environment for Statistical Computing. Vienna, Austria: R Foundation for Statistical Computing; 2021.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-R_clValid}{}}%
+\CSLLeftMargin{12. }
+\CSLRightInline{Brock G., Pihur V., Datta S., Datta S. {clValid}: An {R} Package for Cluster Validation. Journal of Statistical Software. 2008;25(4):1-22.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-MSPS2200-2005}{}}%
+\CSLLeftMargin{13. }
 \CSLRightInline{Ministerio de la Protección Social. {Decreto 2200 de 2005. Por el cual se reglamenta el servicio farmac{é}utico y se dictan otras disposiciones.} 2005.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-MinisteriodeRelacionesExteriores2014}{}}%
-\CSLLeftMargin{9. }
+\CSLLeftMargin{14. }
 \CSLRightInline{Ministerio de Relaciones Exteriores., Ministerio de Transporte. {R{é}gimen Contractual en Colombia}. 1.ª edición. Colombia; 2014.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-ColombiaCompraEficiente2019}{}}%
-\CSLLeftMargin{10. }
+\CSLLeftMargin{15. }
 \CSLRightInline{Colombia Compra Eficiente. {Manual de la Modalidad de Selecci{ó}n de M{í}nima Cuant{í}a}. 1.ª edición. Bogot{á}, Colombia; 2019.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-FNE2015-9}{}}%
-\CSLLeftMargin{11. }
+\CSLLeftMargin{16. }
 \CSLRightInline{Fondo Nacional de Estupefacientes. {Circular Externa 009 de 2015. Conservaci{ó}n de copias del recetario oficial.} 2015.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-PresidenciadelaRepublicadeColombia2012}{}}%
-\CSLLeftMargin{12. }
+\CSLLeftMargin{17. }
 \CSLRightInline{Presidencia de la República de Colombia. {Decreto 2578 de 2012. Por el cual se reglamenta el Sistema Nacional de Archivos, se establece la Red Nacional de Archivos, se deroga el Decreto n{ú}mero 4124 de 2004 y se dictan otras disposiciones relativas a la administraci{ó}n de los archivos del Estado.} 2012.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-CuervoBustamante2021}{}}%
-\CSLLeftMargin{13. }
+\CSLLeftMargin{18. }
 \CSLRightInline{Cuervo Bustamante J., Acosta Pinto CA. {Proyecto Recetario Oficial - MiPRES: Informe T{é}cnico de Requerimientos Funcionales}. 2021:1-0.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-MSPS262-2009}{}}%
-\CSLLeftMargin{14. }
+\CSLLeftMargin{19. }
 \CSLRightInline{Ministerio de la Protección Social. {Resoluci{ó}n 262 de 2009. Por la cual se adiciona el art{í}culo 6o de la Resoluci{ó}n 1478 de 2006, modificado por el art{í}culo 1o de la Resoluci{ó}n 940 de 2007.} 2009:1-2.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-MSPS940-2007}{}}%
-\CSLLeftMargin{15. }
+\CSLLeftMargin{20. }
 \CSLRightInline{Ministerio de la Protección Social. {Resoluci{ó}n 940 de 2007. Por la cual se modifican los art{í}culos 6° y 7° de la Resoluci{ó}n 001478 de 2006}. 2007.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-ColombiaCompraEficiente2021}{}}%
-\CSLLeftMargin{16. }
+\CSLLeftMargin{21. }
 \CSLRightInline{Colombia Compra Eficiente. {Adquisici{ó}n de Medicamentos de Control Especial de Monopolio del Estado II}. 2021.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-LeonDelgado2018}{}}%
-\CSLLeftMargin{17. }
+\CSLLeftMargin{22. }
 \CSLRightInline{León Delgado MX., Sánchez Cárdenas MA., Rodríguez Campos LF., Castañeda Álvarez E., Quintero Muñoz E. {Disponibilidad y accesibilidad a medicamentos opioides en Colombia}. 2018.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Pastrana2020}{}}%
-\CSLLeftMargin{18. }
+\CSLLeftMargin{23. }
 \CSLRightInline{Pastrana T., De Lima L., Pons JJ., Centeno C. {Atlas de Cuidados Paliativos en Latinoam{é}rica 2020 2a edicion}. 2020.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-WatsonLewis2014}{}}%
-\CSLLeftMargin{19. }
+\CSLLeftMargin{24. }
 \CSLRightInline{Watson Lewis G., Vásquez H., Gaviria A., Ruiz LF., Ospina M., Osorio E de J., et~al. {Gu{í}a de Practica cl{í}nica sobre diagnostico y tratamiento de epilepsia}. Minsalud. 2014:8-66.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-VergaraAguilar2019}{}}%
-\CSLLeftMargin{20. }
+\CSLLeftMargin{25. }
 \CSLRightInline{Vergara Aguilar JP., Ladino L., Castro CA., Gómez Arias B., Forero E., Vargas J., et~al. {Tratamiento del estado epil{é}ptico, consenso de expertos. Asociaci{ó}n Colombiana de Neurolog{í}a, Comit{é} de Epilepsia}. Acta Neurol{ó}gica Colombiana. 2019;35(2):74-88, doi: \href{https://doi.org/10.22379/24224022237}{10.22379/24224022237}.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Johannessen2020}{}}%
-\CSLLeftMargin{21. }
+\CSLLeftMargin{26. }
 \CSLRightInline{Johannessen SI., Johannessen Landmark C. {Anti-Convulsant Agents: Phenobarbital and Primidone}. NeuroPsychopharmacotherapy. 2020:1-0, doi: \href{https://doi.org/10.1007/978-3-319-56015-1_302-1}{10.1007/978-3-319-56015-1\_302-1}.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Pineda2001}{}}%
-\CSLLeftMargin{22. }
+\CSLLeftMargin{27. }
 \CSLRightInline{Pineda DA., Lopera F., Henao GC., Palacio JD., Castellanos FX. {Confirmation of the high prevalence of attention deficit disorder in a Colombian community}. Revista de Neurologia. 2001;32(3):217-22, doi: \href{https://doi.org/10.33588/rn.3203.2000499}{10.33588/rn.3203.2000499}.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Llanos-Lizcanoa2019}{}}%
-\CSLLeftMargin{23. }
+\CSLLeftMargin{28. }
 \CSLRightInline{Llanos-Lizcanoa LJ., García-Ruiza DJ., González-Torres HJ., Puentes-Rozo P., Llanos Lizcano LJ., García Ruiz DJ., et~al. {Trastorno por d{é}ficit de atenci{ó}n e hiperactividad (TDAH) en ni{ñ}os escolarizados de 6 a 17 a{ñ}os}. Revista Pediatria Atenci{ó}n Primaria. 2019;21(83):e101-8.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-LopezLopez2021}{}}%
-\CSLLeftMargin{24. }
+\CSLLeftMargin{29. }
 \CSLRightInline{López López JS. {An{á}lisis de factores asociados a las alertas de desabastecimiento de medicamentos presentadas en Colombia entre 2012 y 2018}. Tesis doctoral, Universidad Nacional de Colombia, 2021.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-INVIMA2018-Desabast}{}}%
-\CSLLeftMargin{25. }
+\CSLLeftMargin{30. }
 \CSLRightInline{INVIMA (Instituto de Vigilancia de Medicamentos y alimentos). {Informe de gesti{ó}n del desabastecimiento de medicamentos en Colombia 2013-2018}. 2018:1-4.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-FDA2014}{}}%
-\CSLLeftMargin{26. }
+\CSLLeftMargin{31. }
 \CSLRightInline{Food and Drug Administration (FDA). {CDER Manual of Policies and Procedures on Drug Shortage Management}. 2014.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Barbosa-Povoa2019}{}}%
-\CSLLeftMargin{27. }
+\CSLLeftMargin{32. }
 \CSLRightInline{Barbosa-Póvoa AP., Jenzer H., Miranda JL de. {Pharmaceutical Supply Chains - Medicines Shortages}. 2019.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Pettit2013}{}}%
-\CSLLeftMargin{28. }
+\CSLLeftMargin{33. }
 \CSLRightInline{Pettit TJ., Croxton KL., Fiksel J. {Ensuring supply chain resilience: Development and implementation of an assessment tool}. Journal of Business Logistics. 2013;34(1):46-76, doi: \href{https://doi.org/10.1111/jbl.12009}{10.1111/jbl.12009}.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Silver2017}{}}%
-\CSLLeftMargin{29. }
+\CSLLeftMargin{34. }
 \CSLRightInline{Silver EA., Pyke DF., Thomas DA. {Inventory and Production Management in Supply Chains}. 4ed edición. Boca Raton, FL, USA: CRC Press; 2017.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Cachon2007}{}}%
-\CSLLeftMargin{30. }
+\CSLLeftMargin{35. }
 \CSLRightInline{Cachon GP., Randall T., Schmidt GM. {In search of the bullwhip effect}. Manufacturing and Service Operations Management. 2007;9(4):457-79, doi: \href{https://doi.org/10.1287/msom.1060.0149}{10.1287/msom.1060.0149}.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Hollmann2015}{}}%
-\CSLLeftMargin{31. }
+\CSLLeftMargin{36. }
 \CSLRightInline{Hollmann RL., Scavarda LF., Tavares Thomé AM. {Collaborative planning, forecasting and replenishment: a literature review}. International Journal of Productivity and Performance Management. 2015;64(11):971-93.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Nahmias2007}{}}%
-\CSLLeftMargin{32. }
+\CSLLeftMargin{37. }
 \CSLRightInline{Nahmias S. {An{á}lisis de la Producci{ó}n y las Operaciones}. M{é}xico: McGraw Hill Interamericana; 2007.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Krajewski2016}{}}%
-\CSLLeftMargin{33. }
+\CSLLeftMargin{38. }
 \CSLRightInline{Krajewski LJ., Malhotra MK., Ritzman LP. {Operations Management Processes and Supply Chains}. 11.ª edición. Harlow, EN: Pearson Education Ltd; 2016.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-MinisteriodeSaludyProteccionSocial2007}{}}%
-\CSLLeftMargin{34. }
+\CSLLeftMargin{39. }
 \CSLRightInline{Ministerio de Salud y Protección Social. {Resoluci{ó}n 1403 de 2007. Por la cual se determina el Modelo de Gesti{ó}n del Servicio Farmac{é}utico, se adopta el Manual de Condiciones Esenciales y Procedimientos y se dictan otras disposiciones}. 2007.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-CongresodelaRepublicadeColombia1993}{}}%
-\CSLLeftMargin{35. }
+\CSLLeftMargin{40. }
 \CSLRightInline{Congreso de la República de Colombia. {Ley 80 de 1993: Por la cual se expide el Estatuto General de Contrataci{ó}n de la Administraci{ó}n P{ú}blica}. 1993.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-CongresodelaRepublicadeColombia2007}{}}%
-\CSLLeftMargin{36. }
+\CSLLeftMargin{41. }
 \CSLRightInline{Congreso de la República de Colombia. {Ley 1150 de 2007: Por medio de la cual se introducen medidas para la eficiencia y la transparencia en la Ley 80 de 1993 y se dictan otras disposiciones generales sobre la contrataci{ó}n con Recursos P{ú}blicos.} 2007.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-OMS2021}{}}%
-\CSLLeftMargin{37. }
+\CSLLeftMargin{42. }
 \CSLRightInline{Organización Mundial de la Salud (OMS). {Lista Modelo de Medicamentos esenciales de la OMS 2021}. 2021.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-PDSPMinSalud2019}{}}%
-\CSLLeftMargin{38. }
+\CSLLeftMargin{43. }
 \CSLRightInline{Ministerio de Salud. {Plan Decenal de Salud P{ú}blica - PDSP. Plan Decenal de Salud P{ú}blica 2012-2021}. Ministerio de Salud. 2019;(32):2012-21.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-FNE005-2019}{}}%
-\CSLLeftMargin{39. }
+\CSLLeftMargin{44. }
 \CSLRightInline{Fondo Nacional de Estupefacientes. {Circular Externa 009 del 2019. Compra de Medicamentos Monopolio del Estado a trav{é}s de la Tienda Virtual del Estado Colombiano con el Instrumento de Agregaci{ó}n de Demanda}. 2019.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-AmericanNationalStandardsInstitute2013}{}}%
-\CSLLeftMargin{40. }
+\CSLLeftMargin{45. }
 \CSLRightInline{American National Standards Institute., American Society for Quality. {Sampling Procedures and Tables for Inspection by Attributes ASQ/ANSI Z1.4-2003 (R2018)}. 2013;2003(October).}
 
 \leavevmode\vadjust pre{\hypertarget{ref-GutierrezPulido2008}{}}%
-\CSLLeftMargin{41. }
+\CSLLeftMargin{46. }
 \CSLRightInline{Gutierrez Pulido H., De la Vara Salazar R. {Control Estad{í}stico De la calidad y seis sigma}. 2.ª edición. Mc Graw Hill; 2008.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Paterson2011}{}}%
-\CSLLeftMargin{42. }
+\CSLLeftMargin{47. }
 \CSLRightInline{Paterson C., Kiesmüller G., Teunter R., Glazebrook K. {Inventory models with lateral transshipments: A review}. European Journal of Operational Research. 2011;210(2):125-36, doi: \href{https://doi.org/10.1016/j.ejor.2010.05.048}{10.1016/j.ejor.2010.05.048}.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-HernandezVera2017}{}}%
-\CSLLeftMargin{43. }
+\CSLLeftMargin{48. }
 \CSLRightInline{Hernandez Vera EF., Rosas Camargo LA. {Dise{ñ}o de los procesos administrativos del servicio farmac{é}utico del Hospital Regional de Sogamoso E.S.E.} Tesis doctoral, Universidad Pedag{ó}gica y Tecnol{ó}gica de Colombia (UPTC), 2017.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-AvilaRoncancio2019}{}}%
-\CSLLeftMargin{44. }
+\CSLLeftMargin{49. }
 \CSLRightInline{Ávila Roncancio DA. {La Fijaci{ó}n de los Precios de Medicamentos en Colombia con Base en su Aporte Terap{é}utico}. Tesis doctoral, Pontificia Universidad Javeriana, 2019.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-CongresodelaRepublicadeColombia1988}{}}%
-\CSLLeftMargin{45. }
+\CSLLeftMargin{50. }
 \CSLRightInline{Congreso de la República de Colombia. {Ley 81 de 1988. Por la cual se reestructura el Ministerio de Desarrollo Econ{ó}mico, se determinan las funciones de sus dependencias, se deroga el Decreto legislativo n{ú}mero 0177 de 1o. de febrero de 1956, se dictan normas relativas a los contratos de fabri}. 1988.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-SecretariaTecnicaCNPDM-2019}{}}%
-\CSLLeftMargin{46. }
+\CSLLeftMargin{51. }
 \CSLRightInline{Secretaría Técnica de la Comisión Nacional de Precios de Medicamentos y Dispositivos Médicos -- Dirección de Medicamentos y Tecnologías en Salud. {ABEC{É}: Regulaci{ó}n de Precios de Medicamentos}. 2019:4.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-INVIMA2021-ALERTAS}{}}%
-\CSLLeftMargin{47. }
+\CSLLeftMargin{52. }
 \CSLRightInline{Instituto Nacional de Vigilancia de Medicamentos y Alimentos (INVIMA). {Alertas Sanitarias e Informes de seguridad}. 2021.}
 
 \leavevmode\vadjust pre{\hypertarget{ref-INVIMA2006-FV}{}}%
-\CSLLeftMargin{48. }
+\CSLLeftMargin{53. }
 \CSLRightInline{Instituto Nacional de Vigilancia de Medicamentos y Alimentos (INVIMA). {Conceptos B{á}sicos de Farmacovigilancia}. Bolet{í}n de Farmacovigilancia. 2006;12(4).}
 
 \end{CSLReferences}

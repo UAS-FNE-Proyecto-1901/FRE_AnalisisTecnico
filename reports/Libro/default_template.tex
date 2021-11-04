@@ -376,9 +376,6 @@ $endfor$
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
 $endif$
-$for(header-includes)$
-$header-includes$
-$endfor$
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -407,6 +404,10 @@ $endif$
 $if(csquotes)$
 \usepackage{csquotes}
 $endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
 
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}

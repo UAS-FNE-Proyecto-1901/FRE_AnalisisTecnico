@@ -59,6 +59,7 @@
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/setprototypeof-0.1/setprototypeof.js"></script>
 
 
 
@@ -117,7 +118,11 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="estructura-organizacional.html"><a href="estructura-organizacional.html"><i class="fa fa-check"></i><b>4.2</b> Estructura organizacional</a></li>
 <li class="chapter" data-level="4.3" data-path="instituciones-inscritas-en-el-fre.html"><a href="instituciones-inscritas-en-el-fre.html"><i class="fa fa-check"></i><b>4.3</b> Instituciones inscritas en el FRE</a></li>
 <li class="chapter" data-level="4.4" data-path="caracterización-de-las-fuentes-de-ingresos-de-los-fre.html"><a href="caracterización-de-las-fuentes-de-ingresos-de-los-fre.html"><i class="fa fa-check"></i><b>4.4</b> Caracterización de las fuentes de ingresos de los FRE</a></li>
-<li class="chapter" data-level="4.5" data-path="clasificación-de-los-fre-por-nivel-de-complejidad.html"><a href="clasificación-de-los-fre-por-nivel-de-complejidad.html"><i class="fa fa-check"></i><b>4.5</b> Clasificación de los FRE por nivel de complejidad</a></li>
+<li class="chapter" data-level="4.5" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html"><i class="fa fa-check"></i><b>4.5</b> Propuesta de clasificación de los FRE</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html#variables"><i class="fa fa-check"></i><b>4.5.1</b> Variables</a></li>
+<li class="chapter" data-level="4.5.2" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html#análisis-mediante-clusterización"><i class="fa fa-check"></i><b>4.5.2</b> Análisis mediante clusterización</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="recetarios-oficiales.html"><a href="recetarios-oficiales.html"><i class="fa fa-check"></i><b>5</b> Recetarios oficiales</a>
 <ul>
@@ -238,16 +243,16 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="inventarios" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Inventarios</h2>
-<p>El manejo de inventarios es de gran relevancia para las organizaciones que tienen bienes tangibles dispuestos a la venta como lo son los FRE. Los inventarios son necesarios debido a la presencia de incertidumbres relacionadas a la demanda de los productos, tiempos de demora en el reabastecimiento, suministro por parte de los proveedores (p.ej. FNE), precio de los medicamentos, cambios en el personal, tiempos de tránsito, entre otros factores<span class="citation"><sup><a href="#ref-Nahmias2007" role="doc-biblioref">32</a></sup></span>.</p>
-<p>En la selección del tamaño de inventario a mantener se contraponen varios tipos de costos<span class="citation"><sup><a href="#ref-Krajewski2016" role="doc-biblioref">33</a></sup></span>:</p>
+<p>El manejo de inventarios es de gran relevancia para las organizaciones que tienen bienes tangibles dispuestos a la venta como lo son los FRE. Los inventarios son necesarios debido a la presencia de incertidumbres relacionadas a la demanda de los productos, tiempos de demora en el reabastecimiento, suministro por parte de los proveedores (p.ej. FNE), precio de los medicamentos, cambios en el personal, tiempos de tránsito, entre otros factores<span class="citation"><sup><a href="#ref-Nahmias2007" role="doc-biblioref">37</a></sup></span>.</p>
+<p>En la selección del tamaño de inventario a mantener se contraponen varios tipos de costos<span class="citation"><sup><a href="#ref-Krajewski2016" role="doc-biblioref">38</a></sup></span>:</p>
 <ul>
 <li><p>Costo de mantenimiento de inventario (lleva a reducir el inventario): compuesto por el costo de capital (relacionado a la pérdida de oportunidad de invertir dinero en inventario en vez de una alternativa con más rentabilidad), costos por almacenamiento (p.ej. arriendo, servicios públicos, o seguros), costos de empleados (p.ej. mantenimiento, administración, alistamiento o auditoría), costos por servicios (seguros, seguridad privada, software de administración de inventario), costos de riesgo de inventario (depreciación, vencimientos, contracción de la demanda).</p></li>
 <li><p>Costo de pedido (lleva a aumentar el inventario): costos por ordenes de compra (relacionados a la cotización, preparación de órden de compra, tiempo de recepción técnica, pagos), y costos por personal relacionado a la compra.</p></li>
-<li><p>Costos por desabastecimiento (lleva a aumentar el inventario): relacionado al <strong>nivel de servicio</strong>, entendido como la probabilidad deseada de no tener un desabastecimiento durante el reabastecimiento de los productos (de manera que se pueda cumplir con las demandas de los usuarios en todo momento)<span class="citation"><sup><a href="#ref-Krajewski2016" role="doc-biblioref">33</a></sup></span>.</p></li>
+<li><p>Costos por desabastecimiento (lleva a aumentar el inventario): relacionado al <strong>nivel de servicio</strong>, entendido como la probabilidad deseada de no tener un desabastecimiento durante el reabastecimiento de los productos (de manera que se pueda cumplir con las demandas de los usuarios en todo momento)<span class="citation"><sup><a href="#ref-Krajewski2016" role="doc-biblioref">38</a></sup></span>.</p></li>
 </ul>
 <div id="control-de-inventarios" class="section level3" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Control de inventarios</h3>
-<p>La implementación de un software de manejo de inventarios o en el mejor de los casos de un ERP (<em>Enterprise Resource Planning</em>) mejora la capacidad de manejar los inventarios, disminuye costos relacionados a inventario y brinda oportunidad para la coordinación<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">29</a></sup></span>. Se indago a los FRE sobre las herramientas que tienen a disposición para el manejo de inventarios de MME. La mayoría de los FRE realizan el seguimiento de inventarios mediante un paquete ofimático con una proporción de 45.2% (ver Figura <a href="inventarios.html#fig:HerramientasManejoInventarios">6.1</a>), siendo la herramienta principal Excel, con uso especial de hojas estandarizadas, como en el caso de los FRE Boyacá, Cauca, Sucre, entre otros.</p>
+<p>La implementación de un software de manejo de inventarios o en el mejor de los casos de un ERP (<em>Enterprise Resource Planning</em>) mejora la capacidad de manejar los inventarios, disminuye costos relacionados a inventario y brinda oportunidad para la coordinación<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">34</a></sup></span>. Se indago a los FRE sobre las herramientas que tienen a disposición para el manejo de inventarios de MME. La mayoría de los FRE realizan el seguimiento de inventarios mediante un paquete ofimático con una proporción de 45.2% (ver Figura <a href="inventarios.html#fig:HerramientasManejoInventarios">6.1</a>), siendo la herramienta principal Excel, con uso especial de hojas estandarizadas, como en el caso de los FRE Boyacá, Cauca, Sucre, entre otros.</p>
 <div class="figure" style="text-align: center"><span id="fig:HerramientasManejoInventarios"></span>
 <p class="caption">
 Figura 6.1: Herramientas en el manejo de inventarios.
@@ -263,7 +268,7 @@ Figura 6.1: Herramientas en el manejo de inventarios.
 </div>
 <div id="comportamiento-de-compra-de-fre" class="section level3" number="6.1.2">
 <h3><span class="header-section-number">6.1.2</span> Comportamiento de compra de FRE</h3>
-<p>De forma ideal se debería tener en cuenta el balance entre los costos de mantenimiento de inventario y los costos de realizar pedidos para encontrar una cantidad económica de pedido (<span class="math inline">\(\mathrm{EOQ}\)</span>, <em>Economic Order Quantity</em>). Para realizar una programación de compras anuales se debería tener en cuenta la demanda anual del producto y dividirla entre <span class="math inline">\(\mathrm{EOQ}\)</span>, de esta manera se puede encontrar el número de pedidos óptimos<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">29</a></sup></span>.</p>
+<p>De forma ideal se debería tener en cuenta el balance entre los costos de mantenimiento de inventario y los costos de realizar pedidos para encontrar una cantidad económica de pedido (<span class="math inline">\(\mathrm{EOQ}\)</span>, <em>Economic Order Quantity</em>). Para realizar una programación de compras anuales se debería tener en cuenta la demanda anual del producto y dividirla entre <span class="math inline">\(\mathrm{EOQ}\)</span>, de esta manera se puede encontrar el número de pedidos óptimos<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">34</a></sup></span>.</p>
 <p>El número de pedidos (compras) de MME al FNE en el año también depende de varios factores como: (a) cantidad requerida de estos bienes por cada departamento (demanda), (b) presupuesto asignado por las gobernaciones a los FRE y (c) capacidad de satisfacer la demanda de los medicamentos por parte del FNE (ver Figura <a href="inventarios.html#fig:FrecComprasFNR">6.2</a>).</p>
 <p>Los FRE con demandas pequeñas de medicamentos, como es el caso de Choco, Guainía y Amazonas, la compra se hace una vez al año, a menos que enfrenten casos de desabastecimiento por causas fortuitas como lo fue la situación de Emergencia Sanitaria por la pandemia de coronavirus. Los departamentos con mayor población y necesidad de medicamentos se ven en la obligación de realizar varias compras en el año como es el caso del departamento de Antioquia cuya intención es realizar compras proyectando un abastecimiento de tres meses, sin embargo, manifiesta que el proceso se ve entorpecido por el bajo nivel de servicio relacionado a la disponibilidad de medicamentos en el FNE que le permitan satisfacer su demanda. Se presenta un caso similar para el FRE Santander, donde también afirman que la disponibilidad de medicamentos por parte del FNE es muy poca para cubrir la demanda de su departamento, por lo que obligatoriamente deben autorizar a las IPS y demás a hacer compras directas al FNE.</p>
 <p>Por otra parte, hay departamentos donde la frecuencia de las compras y las cantidades de esta depende del presupuesto asignado por la gobernación, como es el caso de Guainía y Putumayo, este último indica que la demanda de MME en su territorio es más alta de la que se puede cubrir por limitaciones presupuestales.</p>
@@ -277,11 +282,11 @@ Figura 6.2: Frecuencia de compras de medicamentos por año al FNE.
 </div>
 <div id="niveles-de-seguridad" class="section level3" number="6.1.3">
 <h3><span class="header-section-number">6.1.3</span> Niveles de seguridad</h3>
-<p>Según la Resolución 1403 de 2007<span class="citation"><sup><a href="#ref-MinisteriodeSaludyProteccionSocial2007" role="doc-biblioref">34</a></sup></span>, donde se menciona el control durante el proceso de almacenamiento se encuentra que:</p>
+<p>Según la Resolución 1403 de 2007<span class="citation"><sup><a href="#ref-MinisteriodeSaludyProteccionSocial2007" role="doc-biblioref">39</a></sup></span>, donde se menciona el control durante el proceso de almacenamiento se encuentra que:</p>
 <blockquote>
-<p><em>“El … establecimiento farmacéutico contará con criterios, procedimientos y recursos que permitan calcular las existencias necesarias para un período determinado, fijando los niveles mínimo y máximo de existencias, punto de reposición o punto de pedido y presupuesto necesario para cumplir con la prestación oportuna del servicio. Se podrán utilizar aquellos indicadores que vayan surgiendo y que permitan realizar un exacto control de existencias”.</em><span class="citation"><sup><a href="#ref-MinisteriodeSaludyProteccionSocial2007" role="doc-biblioref">34</a></sup></span></p>
+<p><em>“El … establecimiento farmacéutico contará con criterios, procedimientos y recursos que permitan calcular las existencias necesarias para un período determinado, fijando los niveles mínimo y máximo de existencias, punto de reposición o punto de pedido y presupuesto necesario para cumplir con la prestación oportuna del servicio. Se podrán utilizar aquellos indicadores que vayan surgiendo y que permitan realizar un exacto control de existencias”.</em><span class="citation"><sup><a href="#ref-MinisteriodeSaludyProteccionSocial2007" role="doc-biblioref">39</a></sup></span></p>
 </blockquote>
-<p>Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos. Se evalúo el uso de niveles de seguridad del inventario en los FRE. Un <strong>inventario de seguridad</strong> es una cantidad (nivel) almacenada adicional de producto que protege frente a incertidumbres en la demanda (<span class="math inline">\(D\)</span>), tiempo de espera (<span class="math inline">\(L\)</span>) o cambios en el suministro<span class="citation"><sup><a href="#ref-Krajewski2016" role="doc-biblioref">33</a></sup></span>. Los inventarios de seguridad se construyen basados en medidas de nivel de servicio que se encuentran relacionadas ya sea con costos de desabastecimiento o la probabilidad de desabastecerse<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">29</a></sup></span>.</p>
+<p>Con esto cabe aclarar que el control de existencias depende del criterio de cada organización, según como estas manejen sus productos. Se evalúo el uso de niveles de seguridad del inventario en los FRE. Un <strong>inventario de seguridad</strong> es una cantidad (nivel) almacenada adicional de producto que protege frente a incertidumbres en la demanda (<span class="math inline">\(D\)</span>), tiempo de espera (<span class="math inline">\(L\)</span>) o cambios en el suministro<span class="citation"><sup><a href="#ref-Krajewski2016" role="doc-biblioref">38</a></sup></span>. Los inventarios de seguridad se construyen basados en medidas de nivel de servicio que se encuentran relacionadas ya sea con costos de desabastecimiento o la probabilidad de desabastecerse<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">34</a></sup></span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:UsoNivelesSeguridad"></span>
 <p class="caption">
 Figura 6.3: Uso de niveles de seguridad del inventarios.
@@ -295,16 +300,16 @@ Figura 6.3: Uso de niveles de seguridad del inventarios.
 <h3>Referencias</h3>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-Silver2017" class="csl-entry">
-<div class="csl-left-margin">29. </div><div class="csl-right-inline">Silver EA., Pyke DF., Thomas DA. <span>Inventory and Production Management in Supply Chains</span>. 4ed edición. Boca Raton, FL, USA: CRC Press; 2017.</div>
+<div class="csl-left-margin">34. </div><div class="csl-right-inline">Silver EA., Pyke DF., Thomas DA. <span>Inventory and Production Management in Supply Chains</span>. 4ed edición. Boca Raton, FL, USA: CRC Press; 2017.</div>
 </div>
 <div id="ref-Nahmias2007" class="csl-entry">
-<div class="csl-left-margin">32. </div><div class="csl-right-inline">Nahmias S. <span>An<span>á</span>lisis de la Producci<span>ó</span>n y las Operaciones</span>. M<span>é</span>xico: McGraw Hill Interamericana; 2007.</div>
+<div class="csl-left-margin">37. </div><div class="csl-right-inline">Nahmias S. <span>An<span>á</span>lisis de la Producci<span>ó</span>n y las Operaciones</span>. M<span>é</span>xico: McGraw Hill Interamericana; 2007.</div>
 </div>
 <div id="ref-Krajewski2016" class="csl-entry">
-<div class="csl-left-margin">33. </div><div class="csl-right-inline">Krajewski LJ., Malhotra MK., Ritzman LP. <span>Operations Management Processes and Supply Chains</span>. 11.ª edición. Harlow, EN: Pearson Education Ltd; 2016.</div>
+<div class="csl-left-margin">38. </div><div class="csl-right-inline">Krajewski LJ., Malhotra MK., Ritzman LP. <span>Operations Management Processes and Supply Chains</span>. 11.ª edición. Harlow, EN: Pearson Education Ltd; 2016.</div>
 </div>
 <div id="ref-MinisteriodeSaludyProteccionSocial2007" class="csl-entry">
-<div class="csl-left-margin">34. </div><div class="csl-right-inline">Ministerio de Salud y Protección Social. <span>Resoluci<span>ó</span>n 1403 de 2007. Por la cual se determina el Modelo de Gesti<span>ó</span>n del Servicio Farmac<span>é</span>utico, se adopta el Manual de Condiciones Esenciales y Procedimientos y se dictan otras disposiciones</span>. 2007.</div>
+<div class="csl-left-margin">39. </div><div class="csl-right-inline">Ministerio de Salud y Protección Social. <span>Resoluci<span>ó</span>n 1403 de 2007. Por la cual se determina el Modelo de Gesti<span>ó</span>n del Servicio Farmac<span>é</span>utico, se adopta el Manual de Condiciones Esenciales y Procedimientos y se dictan otras disposiciones</span>. 2007.</div>
 </div>
 </div>
             </section>

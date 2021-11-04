@@ -33,6 +33,7 @@ require(plotly)
 require(tidymodels)
 require(tidyverse); theme_set(theme_bw())
 source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encoding = 'UTF-8')
+source(file.path('src', 'models', '803_funcionesggDendro.R'), encoding = 'UTF-8')
 fig_path <- file.path('figures', '011_clasificacion')
 
 #+ lectura-datos
@@ -162,7 +163,7 @@ kmValidS %>%
   distinct(name, koptim) %>% 
   arrange(koptim)
 
-g1 <- kmeans(clean_data, 5) %>%
+g1 <- kmeans(clean_data, 8) %>%
   fviz_cluster(., data = clean_data, stand = T, 
                show.clust.cent = F, repel = T, max.overlaps=Inf) +
   scale_fill_brewer(palette = 'Dark2') + 
@@ -205,6 +206,7 @@ funClusters_2 <- function(data, k) {
 }
 
 
+# 3. Análisis de Clústers por Kmeans ---------------------------------------
 
 #+ ggHclust1, fig.width=12, fig.asp=0.8, out.width="100%", fig.align='center',fig.pos="t",fig.cap="Dendrograma de análisis por clústers"
 p1 <- plot(funClusters_2(clean_data, 3)$clust, cex = 0.6, hang = -1, ylab = 'Altura',
@@ -217,15 +219,31 @@ dev.off()
 
 saveRDS(p1, file.path(fig_path, '010_dendrograma.rds'))
 
+
+ddata <- funClusters_2(clean_data, 8)$clust %>% 
+  {dendro_data_k(., 8)}
+
+p1b <- plot_ggdendro(
+  ddata,
+  direction   = "lr",
+  expand.y    = 0.5,
+  scale.color = RColorBrewer::brewer.pal(8 + 1, "Paired")
+) +
+  theme(axis.title = element_blank(),
+        panel.grid = element_blank())
+
+guardarGGplot(p1b, '010b_dendrograma', 8, 6, fig_path)
+
 gg1 <- funClusters_2(clean_data, 3)$clust$height %>%
   as.tibble() %>%
   add_column(groups = length(funClusters_2(clean_data, 3)$clust$height):1) %>%
   rename(height = value) %>% 
   ggplot(aes(x=groups, y = height)) +
   geom_point() + geom_line() +
-  geom_vline(xintercept = 5, lty = 'dashed', col = 'blue3') +
+  # coord_cartesian(xlim=c(0, 15)) + 
+  geom_vline(xintercept = 8, lty = 'dashed', col = 'blue3') +
   ylab('Altura') + 
-  xlab('N.° de Clusters, k')
+  xlab('N.° de Clusters (k)')
 
 #+ ggHclust2, fig.width=8, fig.asp=0.6, out.width="80%", fig.align='center',fig.pos="t",fig.cap="Criterio de codo para clústers jerárquicos"
 gg1
@@ -268,9 +286,20 @@ gg1b <- ggplot(kmValidS, aes(x = k, y = value)) +
 gg1b
 guardarGGplot(gg1b, '003b_elbowlKmeans', 8, 6, fig_path)
 
+gg1c <- kmValidS %>% 
+  filter(name == 'Silhouette') %>% 
+  ggplot(aes(x = k, y = value)) + 
+  geom_line() +
+  geom_vline(aes(xintercept = koptim), col = 'blue4', lty = 'dashed') + 
+  ggrepel::geom_label_repel(data = subset(kmValidS, k == koptim & (name == 'Silhouette')),
+                            aes(label = koptim)) +
+  ylab('Valor') + xlab('N.° de clústers (k)')
+
+gg1c
+guardarGGplot(gg1c, '003c_elbowlWard', 8, 6, fig_path)
 
 gg2 <- clean_data %>% 
-  {fviz_cluster(list(data = ., cluster = funClusters_2(., 6)$tree), 
+  {fviz_cluster(list(data = ., cluster = funClusters_2(., 8)$tree), 
                 repel = T, max.overlaps = Inf)} +
   theme_bw() + labs(title = NULL) +
   scale_color_brewer(palette = 'Dark2', name = 'Clúster') + 
@@ -284,7 +313,7 @@ guardarGGplot(gg2, '013_cluz_group', 8, 5, fig_path)
 
 funClusters_3 <- function(axes) {
   clean_data %>% 
-    {fviz_cluster(list(data = ., cluster = funClusters_2(., 6)$tree), 
+    {fviz_cluster(list(data = ., cluster = funClusters_2(., 8)$tree), 
                   axes = axes, ellipse = T)} +
     theme_bw() + labs(title = NULL) +
     scale_color_discrete(name = 'Clúster') + 
@@ -321,7 +350,7 @@ hov_data <- data %>%
       "Presupuesto Salud (miles de millones): {PrecSalud2020} <br>",
       "No. de inscritos: {No_Inscritos} <br>",
       "Prop. uso portafolio: {round(PropPortafolio,2)} <br>",
-      "<i>Eficiencia</i> <br>",
+      "<i>Indicadores</i> <br>",
       "Prop. ventas por FRE vs CD: {round(Prop_productosCD_2021,2)} <br>",
       "Prop. cumplimiento A1: {round(`Cumplimiento_A1_2020-2021-06`,2)} <br>",
       "Prop. cumplimiento A2: {round(`Cumplimiento_A2_2020-2021-06`,2)} <br>",
@@ -333,7 +362,7 @@ hov_data <- data %>%
 
 
 trans_data <- as_tibble(pca1$x, rownames = 'Departamentos') %>% 
-  left_join(funClusters_2(clean_data, 6)$tree %>% 
+  left_join(funClusters_2(clean_data, 8)$tree %>% 
               as_tibble(rownames = 'Departamentos'), by = 'Departamentos') %>% 
   rename(Grupo_hclus = value) %>% 
   mutate(colores = colors[Grupo_hclus],
@@ -349,12 +378,12 @@ fig <- trans_data %>%
             mode = 'markers',
             type = 'scatter3d',
             color = ~Grupo_hclus,
-            colors = "Dark2"
+            colors = "Paired"
             # marker = list(color = ~colores, size=6)
             ) %>% 
   layout(scene = list( 
     xaxis = list(title = paste0('PC1 (', round(dimVar[1], 1), '%)'), range = c(-7,+7)),
-    yaxis = list(title = paste0('PC2 (', round(dimVar[2], 1), '%)'), range = c(-2.5,+2.5)),
+    yaxis = list(title = paste0('PC2 (', round(dimVar[2], 1), '%)'), range = c(-4,+4)),
     zaxis = list(title = paste0('PC3 (', round(dimVar[3], 1), '%)'), range = c(-3,+3))
   )) 
 
@@ -366,7 +395,7 @@ if (knitr::is_html_output()) {
 guardarPlotly(fig, '020_cluster_1', ruta = fig_path, libdir = 'plotly')
 
 trans_data1 <- data %>% 
-  left_join(funClusters_2(clean_data, 6)$tree %>% 
+  left_join(funClusters_2(clean_data, 8)$tree %>% 
               as_tibble(rownames = 'Departamentos'), 
             by = c('Departamento...2' = 'Departamentos')) %>% 
   rename(Grupo_hclus = value, Departamentos = Departamento...2) %>% 
@@ -418,13 +447,13 @@ trans_data1 %>%
                    function(x) paste0(unique(x), collapse = ','))) %>% 
   drop_na(Grupo_hclus) %>% 
   column_to_rownames('Grupo_hclus') %>% 
-  t() %>% View()
+  t()
 
 
 
 trans_data1 %>%
   mutate(across(!matches('Departamento'), ~mean(.x, na.rm = T), 
-                .names = "{.col}_mn")) %>% View()
+                .names = "{.col}_mn"))
 
 # group_by(Grupo_hclus) %>%
 #   summarise(across(!matches('Departamento'), function(x) {

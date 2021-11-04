@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="../www/icon1.png" type="image/x-icon" />
-<link rel="prev" href="clasificación-de-los-fre-por-nivel-de-complejidad.html"/>
+<link rel="prev" href="propuesta-de-clasificación-de-los-fre.html"/>
 <link rel="next" href="existencia-de-recetarios.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-3.5.1/jquery.min.js"></script>
@@ -59,6 +59,7 @@
 <script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 <link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
 <script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="libs/setprototypeof-0.1/setprototypeof.js"></script>
 
 
 
@@ -117,7 +118,11 @@ div.csl-indent {
 <li class="chapter" data-level="4.2" data-path="estructura-organizacional.html"><a href="estructura-organizacional.html"><i class="fa fa-check"></i><b>4.2</b> Estructura organizacional</a></li>
 <li class="chapter" data-level="4.3" data-path="instituciones-inscritas-en-el-fre.html"><a href="instituciones-inscritas-en-el-fre.html"><i class="fa fa-check"></i><b>4.3</b> Instituciones inscritas en el FRE</a></li>
 <li class="chapter" data-level="4.4" data-path="caracterización-de-las-fuentes-de-ingresos-de-los-fre.html"><a href="caracterización-de-las-fuentes-de-ingresos-de-los-fre.html"><i class="fa fa-check"></i><b>4.4</b> Caracterización de las fuentes de ingresos de los FRE</a></li>
-<li class="chapter" data-level="4.5" data-path="clasificación-de-los-fre-por-nivel-de-complejidad.html"><a href="clasificación-de-los-fre-por-nivel-de-complejidad.html"><i class="fa fa-check"></i><b>4.5</b> Clasificación de los FRE por nivel de complejidad</a></li>
+<li class="chapter" data-level="4.5" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html"><i class="fa fa-check"></i><b>4.5</b> Propuesta de clasificación de los FRE</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html#variables"><i class="fa fa-check"></i><b>4.5.1</b> Variables</a></li>
+<li class="chapter" data-level="4.5.2" data-path="propuesta-de-clasificación-de-los-fre.html"><a href="propuesta-de-clasificación-de-los-fre.html#análisis-mediante-clusterización"><i class="fa fa-check"></i><b>4.5.2</b> Análisis mediante clusterización</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="recetarios-oficiales.html"><a href="recetarios-oficiales.html"><i class="fa fa-check"></i><b>5</b> Recetarios oficiales</a>
 <ul>
@@ -238,7 +243,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="recetarios-oficiales" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Recetarios oficiales</h1>
-<p>La prescripción de un medicamento es el acto que realiza un médico para indicar el inicio de un tratamiento terapéutico. En Colombia, dicha prescripción debe hacerse por escrito, previa evaluación del paciente y registro de sus condiciones y diagnóstico en la historia clínica, utilizando para ello la Denominación Común Internacional (nombre genérico) y cumpliendo los requisitos descritos en el Decreto 2200 de 2005, Artículo 16 y Artículo 17<span class="citation"><sup><a href="#ref-MSPS2200-2005" role="doc-biblioref">8</a></sup></span>.</p>
+<p>La prescripción de un medicamento es el acto que realiza un médico para indicar el inicio de un tratamiento terapéutico. En Colombia, dicha prescripción debe hacerse por escrito, previa evaluación del paciente y registro de sus condiciones y diagnóstico en la historia clínica, utilizando para ello la Denominación Común Internacional (nombre genérico) y cumpliendo los requisitos descritos en el Decreto 2200 de 2005, Artículo 16 y Artículo 17<span class="citation"><sup><a href="#ref-MSPS2200-2005" role="doc-biblioref">13</a></sup></span>.</p>
 <p>Bajo los parámetros establecidos anteriormente, se crea el recetario oficial, que es un documento oficial avalado por la entidad competente, es de carácter personal e intransferible para uso de los prescriptores de salud en la formulación de los MCE y MME. La prescripción de medicamentos de control especial para uso humano o veterinario solo se podrá efectuar en los recetarios oficiales suministrados por los FRE, para médicos en ejercicio legal de su profesión y/o por el Consejo Profesional de Medicina Veterinaria y Zootecnia de Colombia (Comvezcol) para médicos veterinarios y médicos veterinarios zootecnistas. Los profesionales que laboren en las instituciones podrán hacer uso del Recetario Oficial adquirido por la entidad<span class="citation"><sup><a href="#ref-MSPS1478-2006" role="doc-biblioref">1</a></sup></span>.</p>
 <p>Los FRE de las Secretarías, Instituciones o Direcciones Departamentales de Salud, y/o Comvezcol para médicos veterinarios, son los únicos autorizados para emitir, distribuir y vender el Recetario Oficial para la prescripción<span class="citation"><sup><a href="#ref-MSPS1478-2006" role="doc-biblioref">1</a></sup></span>.</p>
 </div>
@@ -248,7 +253,7 @@ div.csl-indent {
 <div class="csl-left-margin">1. </div><div class="csl-right-inline">Ministerio de la Protección Social. <span>Resoluci<span>ó</span>n 1478 de 2006. Por la cual se expiden normas para el control, seguimiento y vigilancia de la importaci<span>ó</span>n, exportaci<span>ó</span>n, procesamiento, s<span>í</span>ntesis, fabricaci<span>ó</span>n, distribuci<span>ó</span>n, dispensaci<span>ó</span>n, compra, venta, destrucci<span>ó</span>n y uso de sustancias sometidas a f</span>. 2006.</div>
 </div>
 <div id="ref-MSPS2200-2005" class="csl-entry">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">Ministerio de la Protección Social. <span>Decreto 2200 de 2005. Por el cual se reglamenta el servicio farmac<span>é</span>utico y se dictan otras disposiciones.</span> 2005.</div>
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Ministerio de la Protección Social. <span>Decreto 2200 de 2005. Por el cual se reglamenta el servicio farmac<span>é</span>utico y se dictan otras disposiciones.</span> 2005.</div>
 </div>
 </div>
             </section>
@@ -256,7 +261,7 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="clasificación-de-los-fre-por-nivel-de-complejidad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="propuesta-de-clasificación-de-los-fre.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="existencia-de-recetarios.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

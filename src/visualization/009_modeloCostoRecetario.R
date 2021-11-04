@@ -2,10 +2,8 @@
 #' title: 'Evaluación de Sección de Ruta Tecnológica'
 #' subtitle: 'Misión PRI 1901' 
 #' date: '30-06-2021' 
-#' author: 
-#'        - name: Daniel S. Parra G. 
-#'          email: dsparrag@minsalud.gov.co 
-#'          institute: FNE 
+#' author: Daniel S. Parra G. 
+#' email: dsparrag@minsalud.gov.co 
 #' institute: 
 #'        - FNE: Misión PRI 1901 - Fondo Nacional de Estupefacientes 
 #' abstract: |
@@ -30,23 +28,31 @@ require(pdp)
 
 #+ source1, warning = FALSE, message=FALSE
 source(file.path('src', 'data', '901_funcionesMapa.R'), encoding = 'UTF-8')
-source(file.path('src', 'visualization', '900_funcionExtraccionDummies.R'), encoding = 'UTF-8')
-source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), encoding = 'UTF-8')
+source(file.path('src', 'visualization', '900_funcionExtraccionDummies.R'), 
+       encoding = 'UTF-8')
+source(file.path('src', 'models', '900_funcionesAlmacenamientoGrafico.R'), 
+       encoding = 'UTF-8')
 source(file.path('src', 'visualization', '901_funcionesBarras.R'), encoding = 'UTF-8')
 
 #'-------------------------------------------------------------------------------
 # 1. Que herramienta utiliza el FRE para el control de inventarios------------------
 #'-------------------------------------------------------------------------------
 df <- read_csv(file.path('data', 'processed', '001_Herramienta_Procesada.csv'), 
-               na = c('N/A', 'No aplica', 'NA')) %>% 
+               na = c('N/A', 'No aplica', 'NA'), show_col_types = FALSE) %>% 
   mutate(
     Departamento = str_replace(Departamento, '(?<=San Andrés).+', ''),
-    Departamento_1 = str_replace(Departamento_1, 'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 'SAN ANDRÉS'))
-
+    Departamento_1 = str_replace(
+      Departamento_1, 
+      'ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA', 
+      'SAN ANDRÉS')
+    )
 
 #'-------------------------------------------------------------------------------
-# 1. ------------------
+# 1. Lectura de datos------------------
 #'-------------------------------------------------------------------------------
+#'
+#' ## Lectura de datos
+#' 
 # Crear característica de N. de medidas
 col1 <- '3.36. ¿Con cuales medidas de seguridad internas/externas cuenta el recetario oficial?'
 col2 <- 'Si la respuesta anterior fue otro, indique cual...78'
@@ -62,8 +68,12 @@ df[, 'Nmedidas'] <- pull(df, col1) %>% str_detect('Otro') %>%
   pull(N_medidas)
 
 #'-------------------------------------------------------------------------------
-# Regresión ------------------
+# 2. Preparación de datos ------------------
 #'-------------------------------------------------------------------------------
+#'
+#' ## Preparación de datos
+#' 
+
 
 col1 <- '3.06 Costo de adquisición del recetario (COP)'
 col2 <- '3.05 N.º de prescripciones por recetario'
@@ -92,8 +102,15 @@ X_matriz_1 <- recipe(Costo ~ NoPrescripciones + Modalidades + Nmedidas, data = X
 # colnames(X_matriz) <- colnames(X_matriz) %>% 
 #   str_replace('\\s', '\\_')
 
+#'-------------------------------------------------------------------------------
+# 3. Modelo de regresión ------------------
+#'-------------------------------------------------------------------------------
+#'
+#'## Modelo de Regresión
+#'
 lm1 <- lm(Costo ~ NoPrescripciones + Nmedidas + 
-            Modalidades_Licitación.pública + Modalidades_Mínima.Cuantía + Modalidades_Selección.abreviada, 
+            Modalidades_Licitación.pública + Modalidades_Mínima.Cuantía + 
+            Modalidades_Selección.abreviada, 
           data = X_matriz_1)
 
 lm1 %>% summary()
@@ -106,13 +123,14 @@ vec_modalidad <- c(
 )
 
 parContrataDir <- vector('list', 3L)
-parContrataDir
 
 for (i in seq_along(vec_modalidad)) {
   parContrataDir[[i]] <-
     pdp::partial(lm1,  pred.var = vec_modalidad[[i]],
                  chull = TRUE, ice= TRUE)  
 }
+
+#' ## Gráficos de dependencia parcial
 
 funcionBoxplots <- function(data, variable) {
   xlab1 <- rlang::quo_name(rlang::enquo(variable)) %>% 
@@ -166,14 +184,15 @@ ggdepend5 <- funcionBoxplots(parContrataDir[[3]], Modalidades_Selección.abrevia
 ggdependT <-
   wrap_plots(ggdepend1, ggdepend2, ggdepend3, ggdepend4, ggdepend5)
 
+#+ ggdependT, warning=FALSE, message=FALSE, fig.cap="Gráficos de dependencia parcial", fig.align="center", fig.pos="t"
 ggdependT + plot_annotation(title = 'Gráficos de dependencia parcial')
 
-guardarGGplot(ggdependT, 
-              '046c_GraficasDependenParcial', 10, 6)
+guardarGGplot(ggdependT, '046c_GraficasDependenParcial', 10, 6)
 
 
-
+#+ X_matriz, warning=FALSE, message=FALSE, fig.cap="Costo vs No. de prescripciones", fig.align="center", fig.pos="t"
 X_matriz %>% 
+  drop_na(Costo) %>% 
   ggplot(aes(x = NoPrescripciones, y = Costo))+ 
   geom_point() + 
-  stat_smooth(method = 'lm')
+  stat_smooth(method = 'lm', formula = "y~x")

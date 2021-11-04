@@ -92,12 +92,11 @@ g2[[1]] <- g2[[1]] + labs(title = 'B')
 wrap_plots(g1, g2) + plot_layout(widths = c(0.5, 0.5))
 ```
 
-Según lo anterior, podemos evidenciar que no son muchas personas vinculadas a los FRE para conformar su equipo de trabajo. En su gran mayoría tienen únicamente hasta tres personas para el desempeño del FRE, contemplando que nueve FRE tienen solo 2 personas vinculadas. Son muy pocos entes territoriales que mantienen un grupo de trabajo grande con profesionales interdisciplinarios. La Figura \@ref(fig:perfilProfesional3) exhibe de manera completa los datos que acompañan el análisis anterior.
-
+Según lo anterior, se evidencia que los FRE cuentan con pocas personas vinculadas en su equipo de trabajo. En la gran mayoría de FRE se tienen hasta tres personas para el desempeño del mismo, y que en nueve FRE sólo se tienen a 2 personas vinculadas. Se tienen pocos entes territoriales que mantienen un grupo de trabajo grande con profesionales interdisciplinarios. La Figura \@ref(fig:perfilProfesional3) exhibe de manera completa los datos que acompañan el análisis anterior.
 
 El tipo de contrato que los diferentes entes territoriales emplean para vincular el personal es otro factor crítico en el cumplimiento de las funciones de los FRE. De acuerdo con lo anterior, la Figura \@ref(fig:pieProfesional2) muestra la proporción del tipo de vinculación del personal del FRE a nivel nacional, diferenciándose entre personal directo y personal vinculado. Este último, tiene cierta exclusividad con el FRE al destinar más del 50\% en actividades de este, y de acuerdo a sus obligaciones contractuales, también adelanta otras actividades con otras dependencias de la dirección departamental de salud.
 
-A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una gran tendencia que tienen todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
+A partir de la Figura \@ref(fig:pieProfesional2) se puede notar una tendencia importante en todos los FRE a nivel nacional, referente al tipo de vinculación por medio de Contrato Por Prestación De Servicios (CPS). La gran mayoría, precisamente, el 98\%, del personal de apoyo de los FRE está relacionado con contratos CPS. Estas personas son vinculadas al ente territorial para cumplir algunas actividades internas del FRE, pero también tienen otras actividades laborales, fuera del FRE, según sus obligaciones contractuales. Por el contrario, el personal directo al funcionamiento del FRE, cuya atención es completa en las labores internas del FRE, está relacionado en su mayoría, por nombramiento, es decir, como servidor público. En muchos departamentos, la persona encargada del FRE es el único profesional nombrado, mientras que el resto del equipo de trabajo del FRE, guardan una predisposición para ser relacionados como contratistas, por medio de CPS.
 
 ```{r pieProfesional2, echo=FALSE, fig.cap='Tipo de vinculación al FRE.', fig.width=8, fig.height=4.5, fig.topcaption=TRUE, out.width="85%",fig.align='center',fig.pos='t'}
 
@@ -108,7 +107,7 @@ if (knitr::is_html_output()) {
 }
 ```
 
-La anterior tendencia puede interferir y generar inconvenientes en la continuidad del desarrollo adecuado del FRE, afectando la funcionalidad y abandonando algunas actividades críticas para el cumplimiento de sus objetivos de creación. En algunos casos, este tipo de personas vinculadas por CPS, dejan de laborar los primeros meses del año, ya que su contrato finalizó el año pasado, y debido a barreras administrativas, no son contratadas hasta el segundo bimestre del año. El personal nombrado en muchos casos es la persona encargada del FRE, cuyos temas operativos no están dentro de su cotidianidad y no son fáciles cumplirlos. Por tal motivo estas actividades operativas se dejan de hacer en el territorio hasta que sea contratado el personal de apoyo. Como es el caso de la consolidación de los informes que deben ser enviados mensualmente al FNE.
+La tendencia a vincular al personal mediante contratación por prestación de servicios puede interferir y generar inconvenientes en el desarrollo continuado de los FRE, lo que puede afectar la funcionalidad en algunas actividades críticas para el cumplimiento de sus objetivos de creación. En algunos casos, este tipo de personas vinculadas por CPS, dejan de laborar los primeros meses del año, ya que su contrato finalizó el año pasado, y debido a barreras administrativas, no son contratadas hasta el segundo bimestre del año. El personal nombrado en muchos casos es la persona encargada del FRE, cuyos temas operativos no están dentro de su cotidianidad y no son fáciles cumplirlos. Por tal motivo estas actividades operativas se dejan de hacer en el territorio hasta que sea contratado el personal de apoyo. Como es el caso de la consolidación de los informes que deben ser enviados mensualmente al FNE.
 
 Adicionalmente, en la Tabla \@ref(tab:CaracterizacionIngreso1) se observa la proporción del tipo de vinculación del personal del FRE, discriminado por cada región del país. A partir de esta información, se observa que en 5 regiones predomina la Contratación por Prestación de Servicios respecto al Nombramiento del personal del FRE. Además, se logra observar que en las regiones más alejadas de la capital Bogotá D.C., existe una prevalencia mucho más fuerte con esta CPS. Por consiguiente, los problemas mencionados anteriormente relacionados con la CPS, se pueden notar con mayor evidencia en estos territorios apartados del centro del país.
 
@@ -129,7 +128,7 @@ dfSF %>%
 
 ## Instituciones inscritas en el FRE
 
-El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \@ref(fig:institucionesInscritas), donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, exceptuando Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el “Censo Nacional de Población y Vivienda 2018” [@DANE2021].
+El número de instituciones inscritas en los FRE de cada departamento, puede variar según las condiciones demográficas particulares en cada territorio. Lo anterior se puede ver plasmado en la siguiente Figura \@ref(fig:institucionesInscritas), donde se exhibe el número de inscritos en cada FRE departamental. A partir de esta información, se puede apreciar el ente territorial con mayor inscritos en su territorio, correspondiendo al FRE Antioquia con un total de 1054 inscritos. Luego se posiciona en segundo lugar el FRE Valle del Cauca con 570 inscritos. Particularmente, estos dos departamentos se mantienen en los primeros lugares de los departamentos más poblados en Colombia, con excepción de Bogotá D.C. y Cundinamarca, según los datos obtenidos por el DANE en el “Censo Nacional de Población y Vivienda 2018” [@DANE2021].
 
 
 ```{r institucionesInscritas, echo=FALSE, fig.cap='N° de instituciones inscritas en el departamento.', fig.width=6, fig.height=4, out.width="75%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, out.width="90%",fig.align='center',fig.pos='t'}
@@ -144,7 +143,7 @@ Existe una relación demográfica en los departamentos sobre la cantidad de inst
 
 Un claro ejemplo de estas capacidades reducidas se puede evidenciar en el desempeño de cada FRE, referente a la entrega de informes mensuales al FNE. Actualmente existen varios FRE que cuentan con un recurso humano muy amplio, pero se quedan cortos con la entrega de estos informes al FNE, como es el caso del FRE Caldas, que pese a tener una cantidad de colaboradores por encima de la media, tiene un rezago importante en la entrega de informes de consumo de medicamentos al FNE. Por consiguiente, se puede deducir que el número de personas vinculadas al FRE no comprende una garantía en el cumplimiento de todas las funciones del FRE.  
 
-También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, tomando por ejemplo el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \@ref(fig:institucionesInscritasRelacion) también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas por parte de los coordinadores de los FRE en su territorio.
+También se puede observar que la distribución geográfica de las regiones no se puede relacionar con la puntualidad en el envío de informes, p.ej. el caso de la región pacífico que está compuesta por Valle del Cauca, Cauca, Chocó y Nariño. Los departamentos de Valle del Cauca y Nariño tienen una alta densidad poblacional y en la Figura \@ref(fig:institucionesInscritasRelacion) también se puede observar que están respectivamente por encima y por debajo de la media en el recurso humano que tienen para su funcionamiento y son quienes envían informes de manera puntual al FNE, mientras que el departamento del Cauca supera en recurso humano a Nariño por más del doble de personal y existe un importante atraso en el envío de estos informes, posiblemente sean factores externos cómo los tipos de contratación u otras responsabilidades adquiridas por parte de los coordinadores de los FRE en su territorio.
 
 ```{r institucionesInscritasRelacion, echo=FALSE, fig.cap='Relación entre N.° de instituciones inscritas y personal del FRE.', fig.width=6, fig.height=4, out.width="85%", fig.topcaption=TRUE, message=FALSE, warning=FALSE, fig.align='center',fig.pos='t'}
 readRDS(file.path(fig_path, "100_RelacionRecursosFRE.rds")) + labs(title = NULL)
@@ -165,7 +164,7 @@ En la Figura \@ref(fig:institucionesInscritasVARdemo)B se encuentra la relación
 
 <!-- Para analizar las fuentes de ingreso que poseen los diferentes FRE departamentales, se debe tener en cuenta la posición del FRE dentro del organigrama de cada dirección departamental en salud. Por tal motivo, el proyecto de inversión 1903 de Misión PRI, profundizará más en este análisis de los ingresos económicos de los entes territoriales. El análisis de las fuentes de ingresos de los FRE, en este punto, se hará exclusivamente con la información recolectada a partir del instrumento de encuesta que se usó para la recolección de información pertinente en este informe. -->
 
-Para analizar las fuentes de ingreso que poseen los diferentes FRE departamentales, se debe tener en cuenta la posición del FRE dentro del organigrama de cada dirección departamental en salud. El análisis de las fuentes de ingresos de los FRE, en este punto, se hará exclusivamente con la información recolectada a partir del instrumento de encuesta que se usó para la recolección de información pertinente en este informe.
+Para analizar las fuentes de ingreso que poseen los diferentes FRE departamentales, se debe tener en cuenta la posición del FRE dentro del organigrama de cada dirección departamental en salud. El análisis de las fuentes de ingresos de los FRE, en este caso, se hizo exclusivamente con la información recolectada a partir del instrumento de encuesta utilizado.
 
 Cómo antecedente en el análisis, se entiende según las definiciones de la Resolución 1478 del 2006 [@MSPS1478-2006], que un Fondo Rotatorio de Estupefacientes es: 
 
@@ -195,7 +194,7 @@ La Figura \@ref(fig:IngresosFRE1), nos muestra la proporción de los ingresos de
 
 Aunque también los FRE pueden recibir recursos por parte de la gobernación o por parte del FNE.
 
-En la Figura \@ref(fig:IngresosFRE1) se observa que una tendencia a que la proporción de ingresos más grande es aquella que reciben los FRE departamentales por la venta de MME. Esto se puede deber a que cada departamento maneja independencia en los precios de venta de estos medicamentos y desde ahí se podría obtener una rentabilidad importante. En el desarrollo del apartado [6.4 Precio de medicamentos](#precioMedicamentos) del presente informe, se desglosará un análisis más profundo sobre los precios de venta de los MME por departamento, pero a *grosso modo* se puede notar que el margen es lo suficientemente alto para abarcar el porcentaje mayoritario de ingresos. 
+En la Figura \@ref(fig:IngresosFRE1) se observa una tendencia a que la proporción de ingresos más grande es aquella que reciben los FRE departamentales por la venta de MME. Esto se puede deber a que cada departamento maneja independencia en los precios de venta de estos medicamentos y de este rubro se obtiene una rentabilidad importante. En el desarrollo del apartado [6.4 Precio de medicamentos](#precioMedicamentos) del presente informe, se realiza un análisis más profundo sobre los precios de venta de los MME por departamento, pero a *grosso modo* se evidencia que el margen es alto como para abarcar el porcentaje mayoritario de ingresos. 
 
 Particularmente, en la Figura \@ref(fig:IngresosFRE2) se observa que en algunos departamentos cómo Magdalena, Atlántico o Tolima, la venta de recetarios oficiales es el ingreso más prominente del FRE. Así mismo, en todos los demás departamentos representa un ingreso importante para el ente territorial, aunque no sea la principal fuente de ingreso. A nivel nacional, esta fuente de ingreso carga con una parte muy importante del erario de cada FRE departamental. Con la desaparición de los recetarios oficiales físicos en el mediano plazo, es necesario generar alternativas económicas para subsanar este recurso que desaparecería y adecuar estrategias financieras para el auto sostenimiento de cada FRE.
 
@@ -203,27 +202,146 @@ Particularmente, en la Figura \@ref(fig:IngresosFRE2) se observa que en algunos 
 readRDS(file.path(fig_path, "136_IngresosFRE2.rds")) +labs(title = NULL)
 ```
 
-## Clasificación de los FRE por nivel de complejidad
+## Propuesta de clasificación de los FRE
 
-A partir de las visitas técnicas desarrolladas en cada territorio, se lograron observar notorias diferencias entre los FRE departamentales. Esto se podría explicar por las diferencias administrativas y factores demográficos que tiene cada departamento. Esto permite que cada FRE se desenvuelva en determinada forma y esto resulta en el grado de eficiencia que presenta el ente territorial, para el manejo de MME en la región.
+Durante el desarrollo de las visitas técnicas a los territorios, se observaron importantes diferencias entre los FRE departamentales. Estas diferencias se podrían explicar por factores administrativos, organizativos y socio-demográficos que se presentan en cada departamento. Debido a esto puede que los FRE tengan un desarrollo de sus actividades en determinada forma, lo cual resulta en un grado de eficiencia definido para cada ente territorial, en cuanto al manejo de MME, recetarios, o informes en la región.
 
-Según lo anterior, se propone una clasificación de los FRE, de acuerdo a su nivel de complejidad, sin el ánimo de juzgar el trabajo desarrollado en cada territorio. Esta sección procura por reconocer y clasificar los FRE en grupos, conforme a sus capacidades actuales y similaridad entre departamentos. Lo anterior con el fin de generar un instrumento que sirva como insumo para la generación de políticas públicas y toma de decisiones relacionadas con el manejo de MME.
+Por lo tanto, se propone una clasificación de los FRE - de acuerdo a su nivel de complejidad e indicadores de gestión - con el fin de mejorar el direccionamiento de acciones o asistencia a los FREs, sin el ánimo de generar acciones prohibitivas o represivas. El objetivo es generar grupos de FRE que permitan establecer las capacidades actuales así como las similaridades o diferencias entre los departamentos. Todo esto con el fin de generar un instrumento que sirva como insumo para la generación de políticas públicas y toma de decisiones relacionadas con el manejo de MME.
 
-A continuación, se presenta la descripción de las 5 variables definida para la clasificación de los FRE, cuya agrupación contempla el nivel de complejidad del ente territorial: 
+### Variables
 
-- Presupuesto departamento (general y sector salud).
+A continuación, se listan las variables definidas para la clasificación de los FRE y se presenta una breve descripción de las mismas. 
 
-- Número de instituciones inscritas en el departamento.
+#### Variables relacionadas con la complejidad
 
-- Proporción de adquisición de MME (proporción de portafolio).
+Con complejidad se hace referencia a la magnitud de las actividades que debe desarrollar un FRE en su departamento, lo cual se relaciona de manera directa con el tamaño que tiene cada uno de estos entes territoriales. A diferencia de la definición de nivel de complejidad utilizada en el Sistema General de Seguridad Social en Salud [@MinisteriodeSalud1994], esta definición no hace referencia a una clasificación funcional que tenga en cuenta capacidades construidas.
 
-- Número de compras directas de instituciones en el departamento al FNE (entendidas como una desviación de la cadena de suministro).
+- Regionalización del Presupuesto General de la Nación de 2020 [@DepartamentoNacionaldePlaneacion2019].
+  
+- Regionalización del Presupuesto General de la Nación de 2020 y su asignación al sector salud [@DepartamentoNacionaldePlaneacion2019].
+  
+- Número de inscritos (instituciones) en el departamento que realizaron compras de MME al FRE, esta información se obtuvo mediante la encuesta aplicada.
+  
+- Proporción de portafolio de MME adquirido de forma continua por parte del FRE, esta información se obtuvo a partir de datos de ventas del FNE a los FRE. Esta variable se refiere al número de productos adquiridos por el FRE de manera continua sobre el número de productos totales en el portafolio.
+  
+#### Indicadores de gestión
+
+En este grupo se consideran indicadores de cumplimiento y de eficiencia en procesos relacionados con venta de medicamentos, envío de informes y adquisición de recetarios.
+
+- Proporción de ventas realizadas por el FRE a instituciones en el departamento del FNE respecto a la suma de ventas de FRE y compras directas 
+
+$$P~\left(v_{\mathrm{FRE}}\right) = \frac{v_{\mathrm{FRE}} }{v_{\mathrm{FRE}} + v_{\mathrm{CD}}}$$
+
+En donde, $P~\left(v_{\mathrm{FRE}}\right)$ es la proporción de ventas realizadas a través del canal FRE (se entiende a las compras directas como una desviación de la cadena de suministro), $v_{\mathrm{FRE}}$ y $v_{\mathrm{CD}}$ son las ventas hechas por el FNE directamente a los FRE o instituciones por compra directa en el año 2021 de manera respectiva, las ventas se ingresan cómo ventas en unidades monetarias. Un valor alto en esta proporción indicaría que los FRE pueden suplir la mayor parte de la demanda que surge de los inscritos en el departamento. 
 
 - Proporción de meses con entrega del Anexo 1 de la Resolución 1479 de 2006 (cumplimiento).
 
-- Proporción de meses con entrega del Anexo 2 de la Resolución 1479 de 2006 (cumplimiento).
+$$P~\left( \mathrm{Cumpl.~A1}\right) = \frac{\sum^{N_m}_{m = 1}{1_{\mathrm{Cumpl.~A1}}}}{N_m}$$
 
-Muchas variables fueron tomadas de forma externa a la encuestas teniendo en cuenta la información disponible en cada una de ellas, con el fin de visualizar el estado actual de cada FRE, considerando distintos factores internos y externos que tienen las entidades territoriales. Esto permite que la distribución y clasificación de los FRE sea más robusta, ya que está contemplando la mayor realidad posible en cada territorio, para el momento de este análisis.
+Donde $1_{\mathrm{Cumpl.~A1}}$ indica que se debe sumar 1 en los meses en los que se reporte un cumplimiento en la entrega del Anexo 1, $N_m$ es el número de meses en el período a considerar, y $m$ indica los meses. Esta información fue provista por el grupo de regionalización del FNE y el cumplimiento fue determinado para el período comprendido entre enero de 2020 y junio de 2021 ($N_m = 18$). 
+
+- Proporción de meses con entrega del Anexo 2 de la Resolución 1479 de 2006 (cumplimiento).
+$$P~\left( \mathrm{Cumpl.~A2}\right) = \frac{\sum^{N_m}_{m = 1}{1_{\mathrm{Cumpl.~A2}}}}{N_m}$$
+
+Donde $1_{\mathrm{Cumpl.~A2}}$ indica que se debe sumar 1 en los meses en los que se reporte un cumplimiento en la entrega del Anexo 2, $N_m$ es el número de meses en el período a considerar, y $m$ indica los meses. Esta información fue provista por el grupo de regionalización del FNE y el cumplimiento fue determinado para el período comprendido entre enero de 2020 y junio de 2021 ($N_m = 18$).   
+
+- Razón entre tiempo de adquisición de recetarios sobre existencias estimadas de recetarios en circulación en el departamento.
+
+$$R \left(\mathrm{T_{adq}}/\mathrm{N_{recetarios}}\right ) = \left\{\begin{matrix}
+\frac{\mathrm{T_{adq}}}{\mathrm{N_{recetarios}}}\quad\mathrm{Si}~\mathrm{N_{recetarios}}>0
+\\ 100\quad\quad\quad\mathrm{Si}~\mathrm{N_{recetarios}}=0
+\end{matrix}\right.
+$$
+
+Donde $\mathrm{T_{adq}}$ es el tiempo que toma la adquisición de recetarios en días, y $\mathrm{N_{recetarios}}$ es el número de recetarios que se tienen en circulación en el departamento de acuerdo a lo reportado por los FRE. A diferencia del resto de indicadores un valor bajo de esta razón indica que el proceso toma menos tiempo y por tal es más eficiente. 
+
+### Análisis mediante clusterización
+
+Se realizó un análisis de agrupación de los FRE mediante técnicas de análisis de clúster (conglomerados). Los métodos de análisis de clúster buscan crear grupos (subconjuntos) del conjunto de datos originales basados en la minimización de una función de costo o mediante modelos probabilísticos [@Hennig2016]. El análisis de clúster jerárquico fue realizado mediante el algoritmo de Ward (función `hclust`) en el software R [@R_Stats], este análisis fue comparado con el obtenido mediante un método de análisis por K-means (función `kmeans`). El set de datos fue preprocesado mediante estandarización (*Z-score*) de cada una de las variables.
+
+El número de grupos ($k$) fue seleccionado mediante la comparación de varios índices de validez de clúster como: (i) Silhouette, (ii) índice de Dunn, (iii) conectividad, (iv) distancia promedio (AD), o (v) distancia promedio entre media (ADM) [@R_clValid]. Se realizó la evaluación del número de grupos ($k$) de 2 a máximo 15 grupos, y se evalúo la presencia de incremento (o decrecimientos) súbitos a forma de *criterio de codo* en cada indicador. Se utilizó análisis por componentes principales (PCA, *Principal Component Analysis*) para la visualización de la separación lograda por el análisis de clúster y evidenciar la pertenencia de los departamentos a cada grupo. 
+
+En la Figura \@ref(fig:PCA1) se muestra el comportamiento de las variables definidas para el análisis mediante un círculo de correlación. En primer lugar se observa que los primeros dos componentes de PCA representan un 56.9\% de la variabilidad del conjunto de datos. Se observa que las variables relacionadas a la complejidad cuenta con una correlación alta entre sí, p.ej. los departamentos con mayores presupuestos asignados tienen una mayor proporción de uso del portafolio, así como una mayor proporción de inscritos activos. 
+
+```{r PCA1, echo=FALSE, warning=FALSE, fig.cap='Círculo de correlación de variables aplicadas en la definición de componentes principales', fig.width=12, fig.asp=0.5, fig.topcaption=TRUE, out.width="92%", message=FALSE,fig.align='center',fig.pos='t'}
+fig_path <- file.path('..', '..', 'figures')
+g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "002_fig_var.rds")) + labs(title = NULL)
+g1
+```
+
+Se observa que los indicadores de gestión no presentan una correlación importante con las variables de complejidad (se evidencia porque las variables se proyectan de forma perpendicular), las variables de cumplimiento de envío de informe parecen tener una correlación un poco más alta respecto al resto de indicadores. Las variables de proporción de ventas realizadas por el FRE y cumplimiento de envío de Anexo 1 cuentan una correlación negativa con el indicador de tiempo de adquisición de recetario (esto era esperado por la definición de la variable) así como con el cumplimiento de envío de Anexo 2.  
+
+Los resultados del análisis mediante el algoritmo K-means y Ward fueron similares en cuanto al número de clústers óptimo y agrupación de individuos. Una gran parte de los índices de validez de clústers presentaron un aumento o disminución monotónica respecto al valor de $k$, sin embargo la mayoría de los índices mostraron cambios abruptos con $k=8$, por lo cual se asume que este es el valor óptimo de clústers. En el panel izquierdo de la Figura \@ref(fig:PCA2) se observa el comportamiento del índice Silhouette con respecto al número de clústers en el análisis se tiene que a partir de $k=8$ se presenta un decrecimiento en el valor del índice. 
+
+En el panel derecho de la Figura \@ref(fig:PCA2) se observa un dendrograma con la clasificación de los FRE de acuerdo a su similaridad en las características exploradas. Se tiene que el departamento de Antioquia es el que presenta la mayor diferencia con el resto de los departamentos, mientras que los departamentos de Valle del Cauca y Santander presentan unas condiciones similares.
+
+```{r PCA2, echo=FALSE, warning=FALSE, fig.cap='Resultados de análisis por clúster jerárquico. (A) Índice Silhouette vs N.° de clústers. (B) Dendrograma de departamentos de acuerdo a análisis de similaridad, se muestran los grupos para k = 8.', fig.width=12, fig.asp=0.4, fig.topcaption=TRUE, out.width="100%", message=FALSE,fig.align='center',fig.pos='t'}
+fig_path <- file.path('..', '..', 'figures')
+g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "010b_dendrograma.rds"))
+g2 <- readRDS(file.path(fig_path, '011_Clasificacion', "003c_elbowlWard.rds")) + labs(title = NULL) +
+  ylab('Índice Silhouette')
+
+wrap_plots(g2, g1) + plot_annotation(tag_levels = 'A') + plot_layout(widths = c(0.4,0.6))
+```
+
+Por otra parte, en la Figura \@ref(fig:PCA3) se muestra la clasificación de los FRE en los grupos así como la proyección de los departamentos en los primeros componentes principales.
+
+```{r PCA3, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=8.5, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "013_cluz_group.rds")) + labs(title = NULL)
+g2 <- readRDS(file.path(fig_path, '011_Clasificacion', "020_cluster_1.rds"))  %>% config(displaylogo = F)
+
+if (knitr::is_html_output()) {
+  g2
+} else {
+  g1
+}
+```
+
+A continuación, se describen algunas características de los grupos encontrados:
+
+- Grupo 1: compuesto por Huila y Amazonas estos FRE cuentan con una complejidad mediana (promedio 91 inscritos), con una proporción de uso del portafolio de ~88.7\% y un cumplimiento bajo en la entrega de anexos sobre todo en el Anexo 1 (75\%).
+
+- Grupo 2: sólo cuenta con el departamento de Antioquia que es el FRE con la complejidad más alta (p.ej. tiene 1054 inscritos a activos) y con valores óptimos en los indicadores de gestión. 
+
+- Grupo 3: este grupo cuenta con 15 departamentos entre ellos se encuentra Atlántico, Nariño y Caquetá. Este grupo contiene a FREs de mediana a alta complejidad, con un promedio de 150 inscritos y una proporción de uso de portafolio del 92\%. Los indicadores de gestión parecen tener valores óptimos, sin embargo cuentan con un cumplimiento moderado en la entrega del Anexo 2 con un promedio de 0.55.
+
+- Grupo 4: este grupo consta de Córdoba y Bolívar que se comportan como FRE de complejidad mediana (promedio 91 inscritos), este grupo tiene una asignación presupuestal relativamente baja (con 16 mil millones), un promedio de 91 inscritos activos y una proporción de uso del portafolio de 0.94. Este grupo tiene un cumplimiento óptimo en la entrega del Anexo 1, con un cumplimiento moderado en el Anexo 2 (0.47), la proporción de utilización del canal FRE en las ventas es alta con 0.802. La característica más importante es que estos FRE tienen problemas por la inexistencia de recetarios en circulación a nivel departamental.
+
+- Grupo 5: este grupo cuenta con los departamentos de Meta, Casanare y Magdalena se trata de FRE con mediana complejidad con un promedio de 101 inscritos activos y una utilización del portafolio de 0.88. En cuanto a indicadores de gestión se tiene como característica principal que la proporción de ventas por el canal de FRE en comparación de compra directa es baja con un valor de 0.21, se tiene un cumplimiento moderado en la entrega de anexos.
+
+- Grupo 6: sólo cuenta con el departamento de Guainía que es un FRE de baja complejidad con un sólo inscrito activo, y una proporción baja de uso de portafolio. Se reporta un cumplimiento bajo en la proporción de ventas mediante canal FRE (0.0), una proporción de cumplimiento de Anexo 1/Anexo 2 moderada y una razón de tiempo de adquisición para recetarios alta.
+
+- Grupo 7: este grupo cuenta con FRE de baja complejidad con un promedio de 12.4 inscritos activos y una proporción de uso de portafolio baja del 0.49. Este grupo cuenta con indicadores de gestión altos con una proporción de ventas en FRE por 0.919, una proporción de cumplimiento de entrega de Anexo 1 alta, y Anexo 2 moderada, así como razones de tiempos de adquisición cortas (3.46). 
+
+- Grupo 8: cuenta con Valle del Cauca y Santander que se consideran como FRE de alta complejidad en promedio 453 inscritos y un uso completo del portafolio. Estos FRE con una proporción de ventas a través de FRE de 0.871, y un cumplimiento muy bajo en la entrega del Anexo 2 (en promedio 0).
+
+Se concluye que la agrupación de FRE se realiza por factores relacionados a la magnitud de las necesidades en cuanto a MME en el departamento (complejidad) pero también de acuerdo a factores relacionados a indicadores de gestión, a continuación se resumen las características principales de los grupos. 
+
+- **FRE de alta complejidad** se tienen a los grupos 2 (Antioquia) y 8. Los FRE pertenecientes al grupo 8 (p.ej. Valle del Cauca) tienen algunos indicadores de gestión con un valor bajo, mientras que el Antioquia tiene todos los indicadores de gestión en valores óptimos.
+
+- **FRE de mediana complejidad** se tienen a los grupos 1, 3, 4, y 5. Los FRE en el grupo 3 (p.ej Atlántico) tienen indicadores de gestión en valores altos, mientras que el grupo 1 (p.ej Huila) cuenta con un cumplimiento bajo en la entrega del Anexo 1. El grupo 4 (p.ej Córdoba) se caracteriza por tener inexistencia de recetarios en circulación en el departamento, y el grupo 5  (p.ej Meta) tiene FRE que presentan una proporción alta de compras mediante el canal de compra directa.
+
+- **FRE de baja complejidad** se tienen a los grupos 6 (sólo Guainía) y 7 estos grupos tienen características de indicadores de gestión parecidas, sin embargo Guainía tiene una proporción de ventas reportadas por el FRE baja en comparación con compra directa debido a lo cual se separa en un grupo diferente. 
+
+
+```{r ExKM1, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster ExKMC', fig.width=8.5, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+dfExMN1 <- read_csv(file.path("..", "..", 'data', 'processed', '030_analisisCluster.csv'))
+
+dfExMN1 %>% 
+  ggplot(aes(x = PC1, y = PC2, color = factor(grupo))) + 
+  geom_point() + 
+  ggrepel::geom_text_repel(aes(label = Depto1), max.overlaps = Inf) +
+  guides(colour = guide_legend(title = 'Grupo', ncol = 2)) +
+  scale_color_brewer(palette = 'Paired') + 
+  theme(legend.position = c(1, 1), 
+        legend.justification = c(1,1), 
+        legend.background = element_rect(colour = NA, fill = NA))
+```
+
+A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
+
+
+<!-- Muchas variables fueron tomadas de forma externa a la encuestas teniendo en cuenta la información disponible en cada una de ellas, con el fin de visualizar el estado actual de cada FRE, considerando distintos factores internos y externos que tienen las entidades territoriales. Esto permite que la distribución y clasificación de los FRE sea más robusta, ya que está contemplando la mayor realidad posible en cada territorio, para el momento de este análisis. -->
 
 Es importante resaltar que la complejidad concluida estaría relacionada con la capacidad que tiene el FRE de cumplir con sus funciones y responsabilidades, considerando factores económicos propios del departamento. Un ejemplo ilustrativo corresponde al FRE Córdoba, donde el ente territorial es clasificado en la categoría *"FRE altamente consolidado"*. A pesar de esta clasificación, el rubro económico destinado para temas de salud en este departamento es relativamente bajo, sin embargo, el personal del FRE procura realizar una buena gestión estos recursos para el adecuado manejo de MME y recetarios oficiales.
 
@@ -235,27 +353,8 @@ Otra variable importante en este análisis es la variable referente a cantidad d
 
 Finalmente, las variables relacionadas con el cumplimiento de entrega del Anexo 1 y Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006], fueron incluidas en esta clasificación, ya que inciden en gran proporción en la proyección de adquisición de MME para satisfacer las necesidades del territorio. La consolidación de la información dispuesta en estos anexos se relaciona directamente con la cantidad de personas vinculadas al FRE, cuyo factor muestra la capacidad de recurso humano en cada FRE.
 
-Para ilustrar el comportamiento de los FRE respecto a las variables seleccionadas se realizó un análisis de componentes principales (PCA, *Principal Component Analysis*). La Figura \@ref(fig:PCA1) muestra el comportamiento de las 5 variables definidas para este análisis respecto a los componentes principales. En primer lugar, se puede determinar que las variables más próximas en el plano del componente 1 (PC1), presentan la mayor variabilidad entre los FRE, seguido por aquellas ubicadas cerca del plano del componente 2 (PC2). Las variables de monto presupuestal (general y salud), así como número de inscritos y en cierta medida la proporción del portafolio tienen un alta correlación entre sí por lo cual presentan una proyección cercana entre sí.
-
-```{r PCA1, echo=FALSE, warning=FALSE, fig.cap='Variables involucradas en la construcción de los componentes principales', fig.width=6, fig.asp=0.5, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
-fig_path <- file.path('..', '..', 'figures')
-g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "002_fig_var.rds")) + labs(title = NULL)
-g1
-```
-
 Por el contrario, las variables más dispersas en el plano presentado en la Figura \@ref(fig:PCA1), no guardan relación entre sí, por lo tanto, estas variables tienen información importante para realizar la clasificación de los FRE. En este orden de ideas, la variable referente a la consolidación del anexo 2 en los FRE no mantiene una relación directa con el número de compras directas que haya hecho el departamento o con la variable del portafolio que ofrecen los FRE. 
-Se realizó un análisis de agrupación (*cluster*) jerárquico mediante el algoritmo de Ward en el software R. Se seleccionaron 5 grupos de acuerdo al análisis mediante un criterio de *codo*. A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
 
-```{r PCA1-2, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster', fig.width=8.5, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
-g1 <- readRDS(file.path(fig_path, '011_Clasificacion', "013_cluz_group.rds")) + labs(title = NULL)
-g2 <- readRDS(file.path(fig_path, '011_Clasificacion', "020_cluster_1.rds"))  %>% config(displaylogo = F)
-
-if (knitr::is_html_output()) {
-  g2
-} else {
-  g1
-}
-```
 Luego de un análisis multivariado en el lenguaje de programación R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
 
 - FRE suficientemente consolidado (Verde)
