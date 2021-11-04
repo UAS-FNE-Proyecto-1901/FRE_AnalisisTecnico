@@ -315,7 +315,7 @@ A continuación, se describen algunas características de los grupos encontrados
 
 - Grupo 8: cuenta con Valle del Cauca y Santander que se consideran como FRE de alta complejidad en promedio 453 inscritos y un uso completo del portafolio. Estos FRE con una proporción de ventas a través de FRE de 0.871, y un cumplimiento muy bajo en la entrega del Anexo 2 (en promedio 0).
 
-Se concluye que la agrupación de FRE se realiza por factores relacionados a la magnitud de las necesidades en cuanto a MME en el departamento (complejidad) pero también de acuerdo a factores relacionados a indicadores de gestión, a continuación se resumen las características principales de los grupos. 
+Se concluye que la agrupación de los FRE se puede realizar por factores relacionados a la magnitud de las necesidades de los inscritos en el departamento (complejidad) pero también de acuerdo a factores relacionados a indicadores de gestión, a continuación se resumen las características principales de los grupos, de acuerdo a la complejidad: 
 
 - **FRE de alta complejidad** se tienen a los grupos 2 (Antioquia) y 8. Los FRE pertenecientes al grupo 8 (p.ej. Valle del Cauca) tienen algunos indicadores de gestión con un valor bajo, mientras que el Antioquia tiene todos los indicadores de gestión en valores óptimos.
 
@@ -323,51 +323,53 @@ Se concluye que la agrupación de FRE se realiza por factores relacionados a la 
 
 - **FRE de baja complejidad** se tienen a los grupos 6 (sólo Guainía) y 7 estos grupos tienen características de indicadores de gestión parecidas, sin embargo Guainía tiene una proporción de ventas reportadas por el FRE baja en comparación con compra directa debido a lo cual se separa en un grupo diferente. 
 
+  
+<!--  ```{r ExKM1, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster ExKMC', fig.width=8.5, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
+  dfExMN1 <- read_csv(file.path("..", "..", 'data', 'processed', '030_analisisCluster.csv'))
+  
+  dfExMN1 %>% 
+    ggplot(aes(x = PC1, y = PC2, color = factor(grupo))) + 
+    geom_point() + 
+    ggrepel::geom_text_repel(aes(label = Depto1), max.overlaps = Inf) +
+    guides(colour = guide_legend(title = 'Grupo', ncol = 2)) +
+    scale_color_brewer(palette = 'Paired') + 
+    theme(legend.position = c(1, 1), 
+          legend.justification = c(1,1), 
+          legend.background = element_rect(colour = NA, fill = NA))
+  ```
+-->
+<!-- A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
+Muchas variables fueron tomadas de forma externa a la encuestas teniendo en cuenta la información disponible en cada una de ellas, con el fin de visualizar el estado actual de cada FRE, considerando distintos factores internos y externos que tienen las entidades territoriales. Esto permite que la distribución y clasificación de los FRE sea más robusta, ya que está contemplando la mayor realidad posible en cada territorio, para el momento de este análisis. -->
 
-```{r ExKM1, echo=FALSE, warning=FALSE, fig.cap='Clasificación de los FRE en grupos de acuerdo a análisis por clúster ExKMC', fig.width=8.5, fig.asp=0.65, fig.topcaption=TRUE, out.width="90%", message=FALSE,fig.align='center',fig.pos='t'}
-dfExMN1 <- read_csv(file.path("..", "..", 'data', 'processed', '030_analisisCluster.csv'))
+<!-- Es importante resaltar que la complejidad concluida estaría relacionada con la capacidad que tiene el FRE de cumplir con sus funciones y responsabilidades, considerando factores económicos propios del departamento. Un ejemplo ilustrativo corresponde al FRE Córdoba, donde el ente territorial es clasificado en la categoría *"FRE altamente consolidado"*. A pesar de esta clasificación, el rubro económico destinado para temas de salud en este departamento es relativamente bajo, sin embargo, el personal del FRE procura realizar una buena gestión estos recursos para el adecuado manejo de MME y recetarios oficiales. -->
 
-dfExMN1 %>% 
-  ggplot(aes(x = PC1, y = PC2, color = factor(grupo))) + 
-  geom_point() + 
-  ggrepel::geom_text_repel(aes(label = Depto1), max.overlaps = Inf) +
-  guides(colour = guide_legend(title = 'Grupo', ncol = 2)) +
-  scale_color_brewer(palette = 'Paired') + 
-  theme(legend.position = c(1, 1), 
-        legend.justification = c(1,1), 
-        legend.background = element_rect(colour = NA, fill = NA))
-```
+Las variables de presupuesto y número de inscritos, reflejan la asignación de recurso económico en cada región para la partida presupuestal en temas de salud de cada territorio. Esta asignación es un condicionante de la capacidad que tienen los FRE para disponer de infraestructura tecnológica y recurso humano suficiente, para que el ente territorial pueda cumplir con todas sus funciones. El número de inscritos en cada territorio también refleja la interacción entre oferta y demanda de MME en cada región, la cual debe ser satisfecha por el FRE.
 
-A partir de la descripción anterior, la clasificación según la complejidad de los FRE, resultó como aparece en la Figura \@ref(fig:PCA1-2).
+La variable de proporción de adquisición de MME indica el número de MME distintos ofertados por el FRE en su territorio, relativo al tamaño de portafolio general de MME presentado por el FNE. A partir de esto, se determina de manera indirecta, la capacidad de manejo de portafolio que tiene un FRE. Esta capacidad de manejo está relacionada con las condiciones de almacenamiento, infraestructura física y recurso humano disponible en el ente territorial. Esta variable se relaciona también con la carga de enfermedad, especialistas disponibles, complejidad de las instituciones prestadoras de salud en el departamento. 
 
+Otra variable importante en este análisis es la variable referente a la proporción de compras del FNE relativo a las compras totales provenientes del departamento. Esta variable es un indicador de gestión importante para el FRE ya que este debería poder suplir la demanda de los inscritos en el departamento y sólo de manera excepcional estos inscritos deberían utilizar las compras directas al FNE. Un nivel bajo de este indicador podría estar causado por problemas en la proyección de compra por parte del FRE la cual podría generar un desabastecimiento de MME en el departamento.
 
-<!-- Muchas variables fueron tomadas de forma externa a la encuestas teniendo en cuenta la información disponible en cada una de ellas, con el fin de visualizar el estado actual de cada FRE, considerando distintos factores internos y externos que tienen las entidades territoriales. Esto permite que la distribución y clasificación de los FRE sea más robusta, ya que está contemplando la mayor realidad posible en cada territorio, para el momento de este análisis. -->
+Las variables relacionadas con el cumplimiento de entrega del Anexo 1 y Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006], fueron incluidas en esta clasificación, ya que inciden en gran proporción en la proyección de adquisición de MME para satisfacer las necesidades del territorio. La consolidación de la información dispuesta en estos anexos se relaciona directamente con la cantidad de personas vinculadas al FRE, cuyo factor muestra la capacidad de recurso humano en cada FRE.
 
-Es importante resaltar que la complejidad concluida estaría relacionada con la capacidad que tiene el FRE de cumplir con sus funciones y responsabilidades, considerando factores económicos propios del departamento. Un ejemplo ilustrativo corresponde al FRE Córdoba, donde el ente territorial es clasificado en la categoría *"FRE altamente consolidado"*. A pesar de esta clasificación, el rubro económico destinado para temas de salud en este departamento es relativamente bajo, sin embargo, el personal del FRE procura realizar una buena gestión estos recursos para el adecuado manejo de MME y recetarios oficiales.
+Por último, se utilizó la variable de razón de tiempo de adquisición de recetarios como una medida para evaluar la eficacia del proceso de adquisición de estos productos. Esta variable se ve afectada por la demora en los tiempos de procesos precontractuales, contractuales y los tiempos de fabricación dependientes del contratista. Este indicador tiene una formulación diferente al resto ya que si la razón de tiempo de adquisición es menor se tiene un proceso más eficaz. No se utilizaron variables de tiempos de adquisición de medicamentos MME debido a que no todos los departamentos brindaron información al respecto.  
 
-En primer lugar, la variable de presupuesto y número de inscritos, refleja la asignación de recurso económico en cada región para la partida presupuestal de los temas en salud de cada territorio. Esto entendiéndose como un condicionante de la capacidad que tienen los FRE para disponer de infraestructura tecnológica y recurso humano suficiente, para cumplir todas sus funciones como ente territorial. Adicionalmente, el número de inscritos en cada territorio muestra la complejidad de la oferta y demanda en cada región, la cual debe satisfacer la gestión del FRE.
+Como se observó en el círculo de correlación en la Figura \@ref(fig:PCA1) las variables relacionadas a la complejidad tenían una correlación alta por lo cual no se espera que brinden información diferente una de la otra para la clasificación. Se tiene que estas variables son las que tienen la mayor variabilidad y por ende son las más utilizadas por el método de clusterización. Las variables relacionadas a indicadores de gestión también fueron útiles para la separación de los departamentos en grupos y permitieron diagnosticar las capacidades de los FRE de acuerdo a factores de distribución medicamentos, entrega de informes y duración de procesos de adquisición. 
 
-La variable referente a la proporción de adquisición de MME, indica la proporción de medicamentos ofertados por el FRE en su territorio, de acuerdo con el portafolio general de MME presentado por el FNE. A partir de esto, se determina de manera indirecta, la capacidad de manejo de portafolio que tiene un FRE. Esta capacidad de manejo está relacionada con las condiciones de almacenamiento, infraestructura física y recurso humano disponible en el ente territorial.
+Por todo esto se demuestra que el método de clasificación mediante análisis por clúster permite encontrar ciertas características en los FRE que permiten direccionar intervenciones por parte del FNE para mejorar algunos indicadores de gestión. Si bien la clasificación omite algunos criterios de alta relevancia la metodología tiene utilidad para evidenciar el impacto que tiene el nivel de los indicadores en los FRE.
 
-Otra variable importante en este análisis es la variable referente a cantidad de compras directas al FNE. Esta información refleja el número de compras que realizaron las instituciones inscritas en cada territorio con el FNE, debido al desabastecimiento de MME en su respectivo departamento. Esto podría ser causa de una proyección de compra de MME inapropiada, por parte del FRE, cuyo proceso está directamente relacionado con los anexos técnicos de distribución y consumo que son presentados mensualmente. 
+<!-- Luego de un análisis multivariado en el lenguaje de programación R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación: -->
 
-Finalmente, las variables relacionadas con el cumplimiento de entrega del Anexo 1 y Anexo 2 de la Resolución 1479 de 2006 [@MSPS1479-2006], fueron incluidas en esta clasificación, ya que inciden en gran proporción en la proyección de adquisición de MME para satisfacer las necesidades del territorio. La consolidación de la información dispuesta en estos anexos se relaciona directamente con la cantidad de personas vinculadas al FRE, cuyo factor muestra la capacidad de recurso humano en cada FRE.
+<!-- - FRE suficientemente consolidado (Verde) -->
 
-Por el contrario, las variables más dispersas en el plano presentado en la Figura \@ref(fig:PCA1), no guardan relación entre sí, por lo tanto, estas variables tienen información importante para realizar la clasificación de los FRE. En este orden de ideas, la variable referente a la consolidación del anexo 2 en los FRE no mantiene una relación directa con el número de compras directas que haya hecho el departamento o con la variable del portafolio que ofrecen los FRE. 
+<!-- - FRE medianamente consolidado (Azul) -->
 
-Luego de un análisis multivariado en el lenguaje de programación R, se definieron varios parámetros a tomar en cuenta para esta clasificación. Según los datos obtenidos por las 5 variables en cada departamento, se lograron agrupar los FRE en 3 categorías, las cuales serán descritas a continuación:
+<!-- - FRE en proceso de consolidación (Rojo) -->
 
-- FRE suficientemente consolidado (Verde)
+<!-- Es preciso resaltar que los FRE Antioquia y Valle del Cauca fueron categorizados como dos categorías distintas, respectivamente. Lo anterior es suscitado por las grandes diferencias en la gestión de MME y la administración departamental, que tienen estos entes territoriales frente a los otros FRE. No obstante, el análisis descriptivo de la Figura \@ref(fig:PCA1-2), permite organizar estas agrupaciones en 3 categorías, dejando fuera a estos dos FRE, cuyas capacidades exceden la media de la gestión de los FRE a nivel nacional. -->
 
-- FRE medianamente consolidado (Azul)
+<!-- La categoría *"FRE suficientemente consolidado"* exhibida en color verde en la Figura \@ref(fig:PCA1-2), habla de un FRE que tiene capacidades operativas y administrativas suficientes, teniendo en cuenta factores externos como el presupuesto y la complejidad de las instituciones inscritas en su territorio. Sin embargo, existen variables donde se requiere adelantar un trabajo profundo para llegar a tener una gestión ideal como el caso de Antioquia y Valle del cauca, recalcando que también son territorios de alta complejidad. Es necesario aclarar que esta denominación “altamente consolidado” está relacionada directamente con las capacidades del departamento, para gestionar sus recursos en salud. -->
 
-- FRE en proceso de consolidación (Rojo)
+<!-- La categoría *"FRE medianamente consolidado"* se muestra de color azul en la Figura \@ref(fig:PCA1-2) Esta clasificación representa a los FRE que cumplen con las necesidades de manejo de MME en su territorio, no obstante, estos entes territoriales tienen suficiente presupuesto para adelantar una gestión aún mejor y más robusta. Por este motivo se recomienda a los FRE de este grupo, mejorar en los siguientes temas puntuales como: (i) contratación del personal del FRE, (ii) cumplimiento de los anexos de la Resolución 1479 de 2006 y (iii) proyección adecuada del consumo de MME en cada territorio. -->
 
-Es preciso resaltar que los FRE Antioquia y Valle del Cauca fueron categorizados como dos categorías distintas, respectivamente. Lo anterior es suscitado por las grandes diferencias en la gestión de MME y la administración departamental, que tienen estos entes territoriales frente a los otros FRE. No obstante, el análisis descriptivo de la Figura \@ref(fig:PCA1-2), permite organizar estas agrupaciones en 3 categorías, dejando fuera a estos dos FRE, cuyas capacidades exceden la media de la gestión de los FRE a nivel nacional.
-
-La categoría *"FRE suficientemente consolidado"* exhibida en color verde en la Figura \@ref(fig:PCA1-2), habla de un FRE que tiene capacidades operativas y administrativas suficientes, teniendo en cuenta factores externos como el presupuesto y la complejidad de las instituciones inscritas en su territorio. Sin embargo, existen variables donde se requiere adelantar un trabajo profundo para llegar a tener una gestión ideal como el caso de Antioquia y Valle del cauca, recalcando que también son territorios de alta complejidad. Es necesario aclarar que esta denominación “altamente consolidado” está relacionada directamente con las capacidades del departamento, para gestionar sus recursos en salud.
-
-La categoría *"FRE medianamente consolidado"* se muestra de color azul en la Figura \@ref(fig:PCA1-2) Esta clasificación representa a los FRE que cumplen con las necesidades de manejo de MME en su territorio, no obstante, estos entes territoriales tienen suficiente presupuesto para adelantar una gestión aún mejor y más robusta. Por este motivo se recomienda a los FRE de este grupo, mejorar en los siguientes temas puntuales como: (i) contratación del personal del FRE, (ii) cumplimiento de los anexos de la Resolución 1479 de 2006 y (iii) proyección adecuada del consumo de MME en cada territorio.
-
-La categoría *"FRE en proceso de consolidación"* exhibida en color rojo en la Figura \@ref(fig:PCA1-2), contiene a los FRE que necesitan asistencia técnica inmediata por parte del FNE, de la mano de su respectiva Dirección Departamental de salud. Lo anterior se debe a que estos FRE no presentan una complejidad muy alta en función de las pocas instituciones inscritas, densidad demográfica y el limitado portafolio de MME que se distribuyen en estos territorios. 
-En adición, el seguimiento y manejo de los MME es débil en estos FRE y sus herramientas tecnológicas son limitadas. Por esta razón, la asistencia técnica por parte del FNE puede ser de gran ayuda, para entender cómo distribuir los recursos a disposición del FRE y mejorar en capacidades propias, con el fin de apoyar en el proceso de consolidación del FRE.s
+<!-- La categoría *"FRE en proceso de consolidación"* exhibida en color rojo en la Figura \@ref(fig:PCA1-2), contiene a los FRE que necesitan asistencia técnica inmediata por parte del FNE, de la mano de su respectiva Dirección Departamental de salud. Lo anterior se debe a que estos FRE no presentan una complejidad muy alta en función de las pocas instituciones inscritas, densidad demográfica y el limitado portafolio de MME que se distribuyen en estos territorios.  -->
+<!-- En adición, el seguimiento y manejo de los MME es débil en estos FRE y sus herramientas tecnológicas son limitadas. Por esta razón, la asistencia técnica por parte del FNE puede ser de gran ayuda, para entender cómo distribuir los recursos a disposición del FRE y mejorar en capacidades propias, con el fin de apoyar en el proceso de consolidación del FRE. -->
