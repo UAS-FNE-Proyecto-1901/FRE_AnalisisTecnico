@@ -119,11 +119,6 @@ heightrounded, 			% to avoid spurious underfull messages
 \usepackage{tabularx}
 \usepackage{afterpage}
 
-% Tablas y Subtablas
-\usepackage[labelfont=bf]{caption}
-\usepackage[labelformat=simple, labelsep=period]{subcaption}
-\renewcommand{\thesubfigure}{\Alph{subfigure}}
-
 % Fuentes
 \usepackage{avant}
 
@@ -146,7 +141,34 @@ heightrounded, 			% to avoid spurious underfull messages
 \definecolor{bgBlue}{RGB}{42,43,53}
 \definecolor{txBlue}{RGB}{66,87,158} 
 \definecolor{moradoMinisterio}{RGB}{153,15,62}
+
+
+\definecolor{equidad1}{RGB}{247,103,141}
+\definecolor{equidad2}{RGB}{244,47,99}
+\definecolor{equidad3}{RGB}{222,43,90}
+\definecolor{equidad4}{RGB}{238,80,138}
+\definecolor{equidad5}{RGB}{234,36,107}
+\definecolor{equidad6}{RGB}{190,12,77}
+
+\definecolor{igualdad1}{RGB}{230,239,253}
+\definecolor{igualdad2}{RGB}{157,190,255}
+\definecolor{igualdad3}{RGB}{129,171,255}
+\definecolor{igualdad4}{RGB}{74,126,255}
+\definecolor{igualdad5}{RGB}{91,139,255}
+\definecolor{igualdad6}{RGB}{55,114,255}
+\definecolor{igualdad7}{RGB}{88,129,213}
+\definecolor{igualdad8}{RGB}{69,115,208}
+\definecolor{igualdad9}{RGB}{51,102,204}
+
 \usepackage{mathptmx} 
+
+%----------------------------------------------------------------------------------------
+%	Tablas y subtablas
+%----------------------------------------------------------------------------------------
+\usepackage[labelfont={bf, color=igualdad9}, font={bf, color=igualdad9}]{caption}
+\usepackage[labelformat=simple, labelsep=period]{subcaption}
+\renewcommand{\thesubfigure}{\Alph{subfigure}}
+
 
 %----------------------------------------------------------------------------------------
 %	Bibliografía e índices
@@ -236,10 +258,10 @@ heightrounded, 			% to avoid spurious underfull messages
 %%%%%%%%%%%%%%
 
 \usepackage{sectsty}
-\chapterfont{\bf\color{moradoMinisterio}}
-\sectionfont{\bfseries \color{moradoMinisterio}}
-\subsectionfont{\color{moradoMinisterio}}
-\subsubsectionfont{\color{moradoMinisterio}}
+\chapterfont{\bf\color{equidad6}}
+\sectionfont{\bfseries \color{equidad6}}
+\subsectionfont{\color{equidad6}}
+\subsubsectionfont{\color{equidad6}}
 
 %----------------------------------------------------------------------------------------
 % Fuente oficial del Ministerio de Salud y la Protección Social
