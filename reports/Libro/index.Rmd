@@ -38,13 +38,13 @@ En los últimos años, la planeación de las cantidades de medicamentos monopoli
 
 - La participación en las guías de tratamiento farmacológico de cada uno de estos medicamentos y que se ve afectada por las diferentes recomendaciones internacionales.
 
-- La calidad de la información de disponibilidad remitida por los FRE.
+- La calidad de la información de disponibilidad remitida por los Fondos Rotatorios de Estupefacientes (FRE).
 
 - Las diferentes barreras administrativas de índole territorial que impactan en el acceso de estos medicamentos por parte de los pacientes.
 
 Por consiguiente, el desarrollo de este proyecto se enmarca en una estrategia integral con el fin de contribuir a mejorar la calidad de la atención de los pacientes y a la salud pública del país, garantizando el acceso, disponibilidad y uso racional de los medicamentos de control especial y MME.
 
-El proyecto tiene como producto entregable una fuente de información caracterizada y consolidada para el desarrollo del Recetario Oficial Electrónico (ROE), de tal manera que se determine el rol del FNE, FRE y las IPS para fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional y una fuente de información caracterizada y consolidada para el desarrollo de una herramienta que permita estandarizar los procesos de proyección de compra y el seguimiento de inventarios de MME por parte de los entes territoriales, de tal manera que se mitigue el riesgo de desabastecimiento mediante la gestión de inventarios acorde a las necesidades de la población.
+El proyecto tiene como producto entregable una fuente de información caracterizada y consolidada para el desarrollo del Recetario Oficial Electrónico (ROE), de tal manera que se determine el rol del FNE, FRE y las Instituciones Prestadoras de Salud (IPS) para fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional y una fuente de información caracterizada y consolidada para el desarrollo de una herramienta que permita estandarizar los procesos de proyección de compra y el seguimiento de inventarios de MME por parte de los entes territoriales, de tal manera que se mitigue el riesgo de desabastecimiento mediante la gestión de inventarios acorde a las necesidades de la población.
 
 El trabajo territorial es una experiencia de aprendizaje recíproco y constante. Dentro de las Jornadas de inmersión territorial se observó, no solamente las condiciones actuales en la que se encuentran los FRE alrededor de la nación, sino el entusiasmo con la que los funcionarios se interesan por el bienestar y la salud pública de su región, aún cuando se presentan diferentes adversidades y vicisitudes en sus departamentos.
 

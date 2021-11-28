@@ -14,7 +14,7 @@ Identificar fuentes de información asociadas a la prescripción, dispensación 
 
 - Caracterizar las condiciones de recepción técnica, almacenamiento, distribución y consumo de los MME en todo el territorio nacional.
 
-- Recopilar la información asociada con la consolidación de la información y seguimiento al consumo de estos medicamentos en cada una de las IPS en el departamento.
+- Recopilar la información asociada con la consolidación de la información y seguimiento al consumo de estos medicamentos en cada una de las instituciones inscritas en el departamento.
 
 - Definir e identificar el proceso mediante el cual se hace el manejo de almacenamiento e inventarios de MME por parte de cada FRE.
 

@@ -44,16 +44,16 @@ crearListaLatex <- function(lista) {
 tag1 <- htmltools::tags
 
 box1 <- tag1$div(
-  bloqueContactos('Diego Alejandro Socha Cuitiva', 'Dirección de proyecto',
+  bloqueContactos('Diego Alejandro Socha Cuitiva', 'Gerencia de proyecto',
                   './credit_figures/diego.jpeg'),
-  bloqueContactos('Hillary Andrea Gómez Guerra', 'Coordinación de proyecto',
+  bloqueContactos('Hilary Andrea Gómez Guerra', 'Coordinación de proyecto',
                   './credit_figures/hillary.jpeg'),
   class = "credPrincipalSup"
 )
 # 
 box2 <- 
-crearListaLatex(c('Diego Alejandro Socha Cuitiva (Dirección de proyecto)', 
-                  'Hillary Andrea Gómez Guerra (Coordinación de proyecto)'))
+crearListaLatex(c('Diego Alejandro Socha Cuitiva (Gerencia de proyecto)', 
+                  'Hilary Andrea Gómez Guerra (Coordinación de proyecto)'))
 # 
 if(knitr::is_html_output()){
   box1
@@ -67,16 +67,16 @@ if(knitr::is_html_output()){
 <br>
 ```{r, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
-  bloqueContactos('Carlos Andres Acosta Pinto', 'Profesional de Apoyo Operativo',
+  bloqueContactos('Carlos Andres Acosta Pinto', 'Apoyo Técnico y Operativo del Proyecto',
                   './credit_figures/carlos.jpeg'),
-  bloqueContactos('Daniela del Pilar Carvajal Latorre', 'Profesional de Apoyo Operativo',
+  bloqueContactos('Daniela del Pilar Carvajal Latorre', 'Apoyo Técnico y Operativo del Proyecto',
                   './credit_figures/daniela.jpeg'),
   class = "credPrincipalSup"
 )
 # 
 box2 <- 
-crearListaLatex(c('Carlos Andres Acosta Pinto (Profesional de Apoyo Operativo)', 
-                  'Daniela del Pilar Carvajal Latorre (Profesional de Apoyo Operativo)'))
+crearListaLatex(c('Carlos Andres Acosta Pinto (Apoyo Técnico y Operativo del Proyecto)', 
+                  'Daniela del Pilar Carvajal Latorre (Apoyo Técnico y Operativo del Proyecto)'))
 # 
 if(knitr::is_html_output()){
   box1
@@ -128,12 +128,12 @@ if(knitr::is_html_output()){
 <br>
 ```{r, Estadistica, echo=FALSE, warning=FALSE, results="asis"}
 box1 <- tag1$div(
-  bloqueContactos('Daniel Sebastián Parra González', 'Contratista - Profesional universitario', 
+  bloqueContactos('Daniel Sebastián Parra González', 'Profesional universitario del equipo técnico del proyecto', 
                   './credit_figures/daniel.jpeg'),
   class = "credPrincipalSup"
 )
 # 
-box2 <- crearListaLatex(c('Daniel Sebastián Parra González (Contratista - Profesional universitario)'))
+box2 <- crearListaLatex(c('Daniel Sebastián Parra González (Profesional universitario del equipo técnico del proyecto)'))
 
 if(knitr::is_html_output()){
   box1

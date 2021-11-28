@@ -1025,7 +1025,7 @@ ggEntidadesCompradoras <- df %>% select(Departamento_1, col1 = col1) %>%
   geom_segment(aes(x = 0, xend = col1), col = "#1a41bd") +
   geom_point(aes(x = col1), col = '#3d1ab0') + 
   geom_text(aes(x = col1, label = col1), size = 3, hjust = -0.6) + 
-  scale_x_continuous(expand = c(0.05, 0.05, 0.10, 0.05)) + 
+  scale_x_continuous(expand = c(0.05, 0.05, 0.20, 0.05)) + 
   theme(axis.title.y = element_blank(), panel.grid = element_blank()) + 
   xlab('N.° de inscritos en el departamento')
 
