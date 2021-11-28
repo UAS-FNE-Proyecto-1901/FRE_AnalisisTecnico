@@ -62,6 +62,25 @@ heightrounded, 			% to avoid spurious underfull messages
 \definecolor{bgBlue}{RGB}{42,43,53}
 \definecolor{txBlue}{RGB}{66,87,158} 
 \definecolor{moradoMinisterio}{RGB}{153,15,62}
+
+
+\definecolor{equidad1}{RGB}{247,103,141}
+\definecolor{equidad2}{RGB}{244,47,99}
+\definecolor{equidad3}{RGB}{222,43,90}
+\definecolor{equidad4}{RGB}{238,80,138}
+\definecolor{equidad5}{RGB}{234,36,107}
+\definecolor{equidad6}{RGB}{190,12,77}
+
+\definecolor{igualdad1}{RGB}{230,239,253}
+\definecolor{igualdad2}{RGB}{157,190,255}
+\definecolor{igualdad3}{RGB}{129,171,255}
+\definecolor{igualdad4}{RGB}{74,126,255}
+\definecolor{igualdad5}{RGB}{91,139,255}
+\definecolor{igualdad6}{RGB}{55,114,255}
+\definecolor{igualdad7}{RGB}{88,129,213}
+\definecolor{igualdad8}{RGB}{69,115,208}
+\definecolor{igualdad9}{RGB}{51,102,204}
+
 \usepackage{mathptmx} 
 
 %----------------------------------------------------------------------------------------
@@ -111,7 +130,6 @@ heightrounded, 			% to avoid spurious underfull messages
 \renewcommand{\headrulewidth}{0.01pt} % De ancho de la regla debajo del encabezado
 \addtolength{\headheight}{15pt} % Aumente ligeramente el espacio alrededor del encabezado
 \renewcommand{\footrulewidth}{0pt} % Elimina la línea en el pie de página
-\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Estilo para cuando se especifica un estilo de página simple
 
 %%% Configurar pie de Página
 \setlength{\footskip}{40pt}
@@ -119,21 +137,21 @@ heightrounded, 			% to avoid spurious underfull messages
 \cfoot{}
 %\rfoot{\mdseries Página~\thepage}
 
-\fancyfoot[LO,RE]{\mdseries Proyecto de Inversión - Misión PRI 1901}
-\fancyfoot[LE,RO]{\mdseries Página~\thepage}
+\fancyfoot[LO,LE]{\mdseries Proyecto de Inversión - Misión PRI 1901}
+\fancyfoot[RE,RO]{\mdseries Página~\thepage}
+
+% Estilo para cuando se especifica un estilo de página simple (p.ej. inicio capítulo)
+\fancypagestyle{plain}{%
+	\fancyhead[LE,LO]{\includegraphics[width=0.5\paperwidth]{www/logos_MinSalud_FNE.png}}%
+	\renewcommand{\headrulewidth}{0.01pt}%
+	\addtolength{\headheight}{15pt}%
+	\renewcommand{\footrulewidth}{0pt}%
+	\setlength{\footskip}{40pt}%
+	\fancyfoot[LO,LE]{\mdseries Proyecto de Inversión - Misión PRI 1901}%
+	\fancyfoot[RE,RO]{\mdseries Página~\thepage}}
+%\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % Estilo para cuando se especifica un estilo de página simple
 
 % Elimina el encabezado de páginas vacías impares al final de los capítulos
-\makeatletter
-\renewcommand{\cleardoublepage}{
-	\clearpage\ifodd\c@page\else
-	\hbox{}
-	\vspace*{\fill}
-	\thispagestyle{empty}
-	\newpage
-	\fi
-}
-
-%% Elimina el encabezado de páginas vacías impares al final de los capítulos
 %\makeatletter
 %\renewcommand{\cleardoublepage}{
 %	\clearpage\ifodd\c@page\else
@@ -141,7 +159,8 @@ heightrounded, 			% to avoid spurious underfull messages
 %	\vspace*{\fill}
 %	\thispagestyle{empty}
 %	\newpage
-%	\fi}
+%	\fi
+%}
 
 %% Esto se usa para prevenir el error de flotas sobrepasados en ciclos
 \usepackage[maxfloats=256]{morefloats}
