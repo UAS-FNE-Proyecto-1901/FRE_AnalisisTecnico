@@ -164,7 +164,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.1" data-path="inventarios.html"><a href="inventarios.html"><i class="fa fa-check"></i><b>6.1</b> Inventarios</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="inventarios.html"><a href="inventarios.html#control-de-inventarios"><i class="fa fa-check"></i><b>6.1.1</b> Control de inventarios</a></li>
-<li class="chapter" data-level="6.1.2" data-path="inventarios.html"><a href="inventarios.html#comportamiento-de-compra-de-fre"><i class="fa fa-check"></i><b>6.1.2</b> Comportamiento de compra de FRE</a></li>
+<li class="chapter" data-level="6.1.2" data-path="inventarios.html"><a href="inventarios.html#comportamiento-de-compra-de-mme-por-parte-del-fre"><i class="fa fa-check"></i><b>6.1.2</b> Comportamiento de compra de MME por parte del FRE</a></li>
 <li class="chapter" data-level="6.1.3" data-path="inventarios.html"><a href="inventarios.html#niveles-de-seguridad"><i class="fa fa-check"></i><b>6.1.3</b> Niveles de seguridad</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="adquisición-de-mme.html"><a href="adquisición-de-mme.html"><i class="fa fa-check"></i><b>6.2</b> Adquisición de MME</a>
@@ -176,7 +176,7 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6.3" data-path="venta-de-mme.html"><a href="venta-de-mme.html"><i class="fa fa-check"></i><b>6.3</b> Venta de MME</a>
 <ul>
-<li class="chapter" data-level="6.3.1" data-path="venta-de-mme.html"><a href="venta-de-mme.html#controles-en-venta-directa-a-paciente"><i class="fa fa-check"></i><b>6.3.1</b> Controles en Venta Directa a Paciente</a></li>
+<li class="chapter" data-level="6.3.1" data-path="venta-de-mme.html"><a href="venta-de-mme.html#controles-en-venta-directa-a-particulares"><i class="fa fa-check"></i><b>6.3.1</b> Controles en venta directa a particulares</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="almacenamiento.html"><a href="almacenamiento.html"><i class="fa fa-check"></i><b>6.4</b> Almacenamiento</a>
 <ul>
@@ -243,7 +243,7 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="venta-de-mme" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Venta de MME</h2>
-<p>La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de cada departamento, p.ej. en el departamento de Vaupés cuyo abastecimiento se enfoca en satisfacer la demanda del Hospital, no se realiza venta a otras IPS y por lo tanto ni si quiera tienen necesidad de almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al Hospital. Se presenta un caso diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, sin embargo, se ha establecido a las IPS que deben proyectar sus necesidades mensualmente.</p>
+<p>La venta de MME a instituciones en los departamentos se da según lo establecido por cada FRE y las necesidades de los inscritos en el departamento. En Vaupés, por ejemplo, el abastecimiento se enfoca en satisfacer la demanda del hospital, no se realiza venta a otras IPS, por lo cual no se necesita almacenar los medicamentos en el FRE, las compras se destinan inmediatamente al hospital. El caso es diferente en departamentos con mayor población y necesidad de medicamentos como Risaralda donde la venta de MME es frecuente, y usualmente las IPS establecen sus necesidades de manera mensual.</p>
 <!-- ```{r FrecComprasFNRb, echo=FALSE, warning=FALSE, fig.cap='N.° de pedidos de medicamentos por año al FNE', fig.width=7, fig.height=4, fig.topcaption=TRUE, out.width="90%"} -->
 <!-- readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) +  -->
 <!--   labs(title = NULL) -->
@@ -254,22 +254,22 @@ Figura 6.9: Frecuencia de venta de MME a instituciones en el departamento.
 </p>
 <img src="InformeFinal_files/figure-html/FrecVentaInstituciones-1.png" alt="Frecuencia de venta de MME a instituciones en el departamento." width="90%" />
 </div>
-<p>En el departamento del Atlántico antes de la pandemia la venta de medicamentos se hacía diariamente, sin embargo, por la contingencia en salud se decidió que solo se despachan medicamentos dos días a la semana. Otro departamento que hace venta diaria de MME es Choco y afirma que las necesidades de MME pueden variar en el departamento gracias al traslado no esperado de pacientes de zonas muy distantes a las capitales de los departamentos de Antioquia y Valle del Cauca.</p>
-<div id="controles-en-venta-directa-a-paciente" class="section level3" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Controles en Venta Directa a Paciente</h3>
-<p>En la Figura <a href="venta-de-mme.html#fig:ControlesVentasFRE">6.10</a> se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.</p>
+<p>Cabe resaltar que en departamentos como Atlántico y Chocó las ventas de MME se realizaba de forma diaria, sin embargo, por la contingencia en salud se decidió que sólo se despachan medicamentos dos días a la semana. Por otra parte, las necesidades en algunos departamentos de MME pueden cambiar rápidamente, por ejemplo pueden darse casos de traslados desde otros departamentos que alteren de forma significativa la demanda, como es el caso de pacientes que llegan de ciudades como Antioquia y Valle del Cauca a departamentos vecinos.</p>
+<div id="controles-en-venta-directa-a-particulares" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Controles en venta directa a particulares</h3>
+<p>En la Figura <a href="venta-de-mme.html#fig:ControlesVentasFRE">6.10</a> se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 31 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 31 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o aplazamiento de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño, Risaralda y Vaupés.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ControlesVentasFRE"></span>
 <p class="caption">
 Figura 6.10: Controles en las ventas directas a pacientes.
 </p>
 <img src="InformeFinal_files/figure-html/ControlesVentasFRE-1.png" alt="Controles en las ventas directas a pacientes." width="87%" />
 </div>
-<p>En la Figura <a href="venta-de-mme.html#fig:InstitucionesAdicionales">6.11</a> se muestra sí en el departamento existen otras instituciones que realicen ventas de MME a instituciones a parte del FRE. Se observa que len la mayoría de departamentos sólo el FRE vende MME, la venta por parte de otras instituciones ocurre en los departamentos de Antioquía, Atlántico, Santander, Caldas, Quindío, Nariño, y San Andrés, Providencia y Santa Catalina. La mayoría de los establecimientos autorizados son mayoristas, aunque en algunos casos estos establecimientos tienen autorización para cubrir horarios en que el FRE no se encuentra activo.</p>
+<p>En la Figura <a href="venta-de-mme.html#fig:InstitucionesAdicionales">6.11</a> se muestra sí en el departamento existen otras instituciones que realicen ventas de MME a particulares por parte del FRE. Se observa que en la mayoría de departamentos el FRE no vende MME a particulares, la venta a particulares ocurre en los departamentos de Antioquía, Atlántico, Santander, Caldas, Quindío, Nariño, y San Andrés, Providencia y Santa Catalina. La mayoría de los establecimientos autorizados son mayoristas, aunque en algunos casos estos establecimientos tienen autorización para cubrir horarios en que el FRE no se encuentra activo.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:InstitucionesAdicionales"></span>
 <p class="caption">
-Figura 6.11: Existencia de otras instituciones que realizan ventas a instituciones a MME.
+Figura 6.11: Venta de MME a particulares por parte del instituciones distintas al FRE.
 </p>
-<img src="InformeFinal_files/figure-html/InstitucionesAdicionales-1.png" alt="Existencia de otras instituciones que realizan ventas a instituciones a MME." width="85%" />
+<img src="InformeFinal_files/figure-html/InstitucionesAdicionales-1.png" alt="Venta de MME a particulares por parte del instituciones distintas al FRE." width="85%" />
 </div>
 
 </div>

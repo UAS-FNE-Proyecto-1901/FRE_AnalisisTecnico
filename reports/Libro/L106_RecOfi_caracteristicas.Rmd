@@ -34,7 +34,7 @@ readRDS(file.path(fig_path, '030_existenciaRecetarios_4.rds')) + labs(title = NU
 Uno de los puntos de acompañamiento del proyecto Misión PRI 1901 era conocer tanto en las visitas presenciales como virtuales, los tipos de medidas de seguridad que se implementan en los recetarios. La Figura \@ref(fig:MedidasSeguridadRec) contempló lo mencionado anteriormente, en la cual se observa que existe una gran variedad de medidas consideradas de seguridad en los recetarios, y que existen y existirán tantas como proponentes se tengan. Así mismo, se catalogaron las medidas de seguridad en baja y alta complejidad, teniendo como base lo difícil que pueden llegar a ser falsificados. Se reconoce que todos los departamentos implementaron la codificación en los recetarios oficiales tal y como se menciona en la Resolución 1478 de 2008 [@MSPS1478-2006] en el Artículo 89 y dicha codificación desarrollada para cada talonario está pensada para ser una identificación única de los mismos. 
 Tanto como la codificación como las marcas de agua, sellos y escudos se catalogaron como medidas de seguridad de baja complejidad, teniendo en cuenta que hay un riesgo latente de falsificación debido a que las marcas de agua corresponden a figuras particulares o al escudo de la gobernación y/o secretaria de salud, al igual que los sellos y escudos. Sumado a lo anterior, los recetarios están elaborados en papel común y corriente, lo que podría aumentar la probabilidad de ser falsificados.
 
-```{r MedidasSeguridadRec, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en los recetarios.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
+```{r MedidasSeguridadRec, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en los recetarios reportadas por los FRE.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center', fig.pos="t!"}
 readRDS(file.path(fig_path, "045_MedidasSeguridadRec.rds")) + labs(title = NULL) + 
   xlab("Proporción de FRE")
 ```
@@ -58,7 +58,10 @@ Menos del 40% de los FRE han implementado medidas de alta seguridad en sus recet
 Al inicio del proyecto de inversión, se estimaba que los recetarios oficiales con más características de seguridad (independiente de su nivel de complejidad) aumentarían de forma proporcional su costo de adquisición y del mismo modo su precio de venta, sin embargo, se evidenció una tendencia totalmente diferente que se puede observar en la Figura \@ref(fig:ComparativoCostosRec1) y Figura \@ref(fig:DependParcial1),  entre más características de seguridad implementadas en un recetario, éste tiende a ser más económico en su costo de adquisición. 
 
 ```{r ComparativoCostosRec1, echo=FALSE, warning=FALSE, fig.cap='Comparativo de márgen de ganancia de recetarios.', fig.width=10, fig.height=5, fig.topcaption=TRUE, message=FALSE, out.width="100%",fig.align='center'}
-readRDS(file.path(fig_path, "046b_ComparativoCostosRecetarios1.rds")) + labs(title = NULL)
+g1 <- readRDS(file.path(fig_path, "046b_ComparativoCostosRecetarios1.rds")) + labs(title = NULL)
+
+g1[[1]] <- g1[[1]] + xlab('No de personas vinculadas al FRE')
+g1
 ```
 
 Por otro lado, se observa el margen de ganancia obtenido mediante la venta de recetarios en los fondos rotatorios, este ítem ya se analizó anteriormente con la Figura \@ref(fig:comparativoDepartamentos0). Sin embargo, no se encuentra una relación entre este margen de ganancia con el número de personas que trabajan dentro del FRE.

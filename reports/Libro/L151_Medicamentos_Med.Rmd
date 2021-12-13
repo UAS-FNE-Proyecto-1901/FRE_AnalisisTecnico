@@ -18,9 +18,7 @@ fig_path <- file.path('..', '..', 'figures')
 
 El artículo 6 de la Resolución 1478 de 2006 [@MSPS1478-2006] refiere las sustancias y los medicamentos fabricados con las mismas que pertenece al monopolio del Estado. Este listado de sustancias se ha modificado mediante la Resolución 262 de 2009 [@MSPS262-2009] y la Resolución 940 de 2007 [@MSPS940-2007], en el sentido de modificar las hojas de coca por cocaína con fines terapéuticos, e incluir a la primidona en todas sus presentaciones de manera respectiva. 
 
-Es así, que el FNE cuenta con el Grupo Interno de Trabajo de Medicamentos del Estado que tiene como objetivo Garantizar la disponibilidad de los medicamentos del Estado de manera oportuna y eficiente en todo el territorio Nacional. 
-
-Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \@ref(tab:portafolioMME) [@ColombiaCompraEficiente2021].
+Es así, que el FNE cuenta con el Grupo Interno de Trabajo de Medicamentos del Estado que tiene como objetivo Garantizar la disponibilidad de los medicamentos del Estado de manera oportuna y eficiente en todo el territorio Nacional. Actualmente, el FNE ofrece un portafolio de medicamentos monopolio del Estado (MME) como se muestra en la Tabla \@ref(tab:portafolioMME) [@ColombiaCompraEficiente2021; @MSPS2021b].
 
 ```{r portafolioMME, echo=FALSE, warning=FALSE, fig.pos="t!",tab.pos="t!",fig.align='center', tab.align='center'}
 table1 <- tibble::tribble(
@@ -36,8 +34,6 @@ table1 <- tibble::tribble(
                 "Meperidina HCL 100 mg",   "Caja 10 ampollas",                                   'Disponible',
                     "Morfina HCL 10 mg",   "Caja 10 ampollas",                                   'Disponible',
                 "Morfina Solución Oral",             "Frasco",                                   'Disponible',
-                "Morfina Solución Vial",             "Frasco",                     "Sin unidades disponibles",
-                     "Primidona 250 mg",   "Caja 50 tabletas",                     "Sin unidades disponibles",
             "Primidona 250 mg Tabletas", "Caja x 30 Tabletas",                                   'Disponible',
                    "Metadona HCL 10 mg", "Frasco 20 tabletas",                                   'Disponible',
                    "Metadona HCL 10 mg",   "Caja 30 tabletas",                                   'Disponible',
@@ -49,15 +45,18 @@ table1 <- tibble::tribble(
                   "Metilfenidato 36 mg", "Frasco 30 tabletas",                                   'Disponible',
   "Hidrato de Cloral 10% Solución oral",             "Frasco",                                   'Disponible',
      "Morfina HCL 10 mg ampolla x 5 mL",    "Caja 5 ampollas",                                   'Disponible'
-  )
+  ) %>% 
+  select(-Observaciones)
+
+cpt1 <- 'Listado del Portafolio Medicamentos Monopolio del Estado disponibles a 3 de diciembre de 2020.'
 
 if (knitr::is_latex_output()) {
-  knitr::kable(table1, align = c('l', 'c', 'c'), caption = 'Portafolio de Medicamentos Monopolio del Estado.', 
+  knitr::kable(table1, align = "lc", caption = cpt1, 
                format = 'latex', booktabs=TRUE, valign = 't!') %>% 
 	kableExtra::kable_styling(bootstrap_options = "striped", latex_options = "hold_position")
 } else {
-  knitr::kable(table1, align = c('l', 'c','c'), 
-               caption = 'Portafolio de Medicamentos Monopolio del Estado.', format = 'html')
+  knitr::kable(table1, align = "lc", 
+               caption = cpt1, format = 'html')
 }
 ```
 
@@ -66,7 +65,7 @@ Los medicamentos incluidos en el portafolio de medicamentos del Estado son impor
 
 Pese a todo esto, Colombia tiene una puntuación de 4 de 5 en la escala de colaboración entre prescriptores y reguladores de analgésicos opioides (para Latinoamérica), lo que resulta de la existencia de mecanismos de colaboración pese a que todavía se pueden realizar mejoras en los mismos [@Pastrana2020]. 
 
-Así mismo el fenobarbital se considera una alternativa terapéutica útil en el tratamiento de epilepsia refractaria [@WatsonLewis2014], o estatus convulsivo [@VergaraAguilar2019]. La primidona cuenta con un espacio limitado en la terapia moderna de la epilepsia [@Johannessen2020], y algunos pacientes todavía requieren un suministro ininterrupido de la misma. Por otra parte, el metilfenidato es un componente importante en el tratamiento farmacológico de los trastornos por deficit de atención, los cuales tienen una prevalencia en la población colombiana [@Pineda2001;@Llanos-Lizcanoa2019]. 
+Así mismo el fenobarbital se considera una alternativa terapéutica útil en el tratamiento de epilepsia refractaria [@WatsonLewis2014], o estatus convulsivo [@VergaraAguilar2019]. La primidona cuenta con un espacio limitado en la terapia moderna de la epilepsia [@Johannessen2020], y algunos pacientes todavía requieren un suministro ininterrumpido de la misma. Por otra parte, el metilfenidato es un componente importante en el tratamiento farmacológico de los trastornos por deficit de atención, los cuales tienen una prevalencia en la población colombiana [@Pineda2001;@Llanos-Lizcanoa2019]. 
 
 Sí bien el establecimiento de un monopolio del Estado con estos medicamentos ha permitido el suministro de los mismos debido a que pueden ser poco atractivos por ser medicamentos menos rentables, la restricción de un mercado de libre competencia puede resultar en el surgimiento frecuente de eventos de desabastecimiento [@LopezLopez2021;@INVIMA2018-Desabast]. 
 

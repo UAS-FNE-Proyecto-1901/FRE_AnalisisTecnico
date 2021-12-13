@@ -113,7 +113,7 @@ opiniones-sobre-el-roe
 manejo-de-medicamentos
 inventarios
 control-de-inventarios
-comportamiento-de-compra-de-fre
+comportamiento-de-compra-de-mme-por-parte-del-fre
 niveles-de-seguridad
 adquisición-de-mme
 tiempos-de-demora-en-el-proceso-de-adquisición
@@ -121,7 +121,7 @@ plataforma-de-compra-estatal
 recepción-de-medicamentos
 traslados-interdepartamentales
 venta-de-mme
-controles-en-venta-directa-a-paciente
+controles-en-venta-directa-a-particulares
 almacenamiento
 medidas-de-seguridad-para-el-almacenamiento
 revisión-de-condiciones-ambientales

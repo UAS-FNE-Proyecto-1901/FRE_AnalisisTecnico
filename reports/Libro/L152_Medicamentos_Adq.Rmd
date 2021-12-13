@@ -51,7 +51,7 @@ Finalmente, el manejo de inventarios por parte de los FRE deja en evidencia las 
 
 Por todo esto se recomienda el uso de herramientas informáticas para la trazabilidad del inventario.
 
-### Comportamiento de compra de FRE
+### Comportamiento de compra de MME por parte del FRE
 
 De forma ideal se debería tener en cuenta el balance entre los costos de mantenimiento de inventario y los costos de realizar pedidos para encontrar una cantidad económica de pedido ($\mathrm{EOQ}$, *Economic Order Quantity*). Para realizar una programación de compras anuales se debería tener en cuenta la demanda anual del producto y dividirla entre $\mathrm{EOQ}$, de esta manera se puede encontrar el número de pedidos óptimos [@Silver2017].
 
@@ -80,9 +80,9 @@ readRDS(file.path(fig_path, "096_UsoNivelSeguridad.rds")) +
  labs(title = NULL)
 ```
 
-Según los resultados obtenidos el 51.6\% de los FREs si manejan niveles de seguridad en los inventarios, es decir que de los 31 FREs existentes solo 16 manejan esta práctica y los 15 restantes no la usan; entre las razones para el no uso de esta estrategia se encuentra que la cantidad de medicamentos que rotan en algunos territorios no es muy alto, por ende, con la experiencia adquirida se sabe en qué momento se debe empezar a realizar el proceso de pedido de medicamentos (como p.ej. Guainía o Guaviare). 
+Según los resultados obtenidos el 51.6\% de los FRE si manejan niveles de seguridad en los inventarios, es decir que de los 31 FRE existentes solo 16 manejan esta práctica y los 15 restantes no la usan; entre las razones para el no uso de esta estrategia se encuentra que la cantidad de medicamentos que rotan en algunos territorios no es muy alto, por ende, con la experiencia adquirida se sabe en qué momento se debe empezar a realizar el proceso de pedido de medicamentos (como p.ej. Guainía o Guaviare). 
 
-En otros casos se ve que el personal del FRE considera que su contacto directo con diario con los medicamentos, les permite verificar el comportamiento y determinar el momento indicado para tomar alguna acción. Se concluye entonces que 16 FREs usan estrategias de manejo óptimos de inventario y los 15 restantes lo hacen de una manera tradicional y dada por la experiencia adquirida con los años que llevan manejando el FRE en su región.
+En otros casos se ve que el personal del FRE considera que su contacto diario con los medicamentos, les permite verificar el comportamiento y determinar el momento indicado para tomar alguna acción. Se concluye entonces que 16 FRE usan estrategias de manejo óptimos de inventario y los 15 restantes lo hacen de una manera tradicional y dada por la experiencia adquirida con los años que llevan manejando el FRE en su región.
 
 ## Adquisición de MME
 
@@ -102,7 +102,7 @@ Los tiempos de demora suelen tener varios componentes, en el diseño de la encue
 
 5. Despacho (tiempo de tránsito)
 
-En este caso la plataforma tecnológica es la tienda virtual del Estado Colombia Compra Eficiente. El proceso puede cambiar de acuerdo con las particularidades de cada territorio, y el tiempo de demora para llevar a cabo estos procesos puede ser fijo o aleatorio.
+En este caso la plataforma tecnológica es la tienda virtual del Estado: **Colombia Compra Eficiente**. El proceso puede cambiar de acuerdo con las particularidades de cada territorio, y el tiempo de demora para llevar a cabo estos procesos puede ser fijo o aleatorio.
 
 En la Figura \@ref(fig:EtapasProcesoAdquisicion) se muestran los departamentos en órden de acuerdo al tiempo total para la adquisición de MME. Se tiene que los departamentos de Putumayo (296 días), San Andrés (250 días), Caldas (238 días), Córdoba (181 días) y Boyacá (174 días) son los que más tiempo toman en los procesos de adquisición. Se tiene un promedio entre todos los departamentos de 90.9 días para el cumplimiento del proceso de adquisición.
 
@@ -189,9 +189,9 @@ Al terminar la inspección se pasa a documentar la recepción y se procede a rea
 
 -	condiciones administrativas y técnicas establecidas en la negociación así como la trazabilidad
 
-El acta es firmada por las persona que reciben y entregan para ser archivada. Como parte final se ingresan como parte del inventario a todos los productos pedidos que cumplan con las especificaciones de calidad.
+El acta es firmada por las persona que recibe y entrega para ser archivada. Como parte final se ingresan los productos al inventario, teniendo en cuenta sólo los productos pedidos que cumplan con las especificaciones de calidad.
 
-En el caso de los distintos FRE a nivel nacional (ver Figura \@ref(fig:TiemposRecepcionAlmacenamientob)), se observa que el FRE Antioquia es el que más días invierte en realizar el proceso de recepción, esto se debe a que sus pedidos son de gran tamaño para cubrir la demanda, lo que conlleva a que deba dispensarse 5 días en todo el proceso de recepción técnica, desde el momento de recepción del producto proveniente del FNE, hasta el ingreso de la misma al sistema, incluyendo la realización del acta.
+En el caso de los distintos FRE a nivel nacional (ver Figura \@ref(fig:TiemposRecepcionAlmacenamientob)), se observa que el FRE Antioquia es el que más días invierte en realizar el proceso de recepción, esto se debe a que sus pedidos son de gran tamaño para cubrir la demanda, lo que conlleva a que se deba esperar hasta 5 días en todo el proceso de recepción técnica, desde el momento de recepción del producto proveniente del FNE, hasta el ingreso de la misma al sistema, incluyendo la realización del acta.
 
 ```{r TiemposRecepcionAlmacenamientob, echo=FALSE, warning=FALSE, fig.cap='Tiempos en la recepción técnica y almacenamiento de MME. (A) Gráfico de barras con frecuencia. (B) Mapa con tiempos para la recepción técnica de MME.', fig.width=10, fig.height=4.5, fig.topcaption=TRUE, out.width="100%",fig.align='center'}
 g1 <- readRDS(file.path(fig_path, "086b_RecepcionMedicamento.rds")) + labs(title = 'A')
@@ -201,7 +201,7 @@ g2[[1]] <- g2[[1]] + labs(title = 'B')
 wrap_plots(g1, g2) + plot_layout(ncol = 2, widths = c(0.5, 0.5))
 ```
 
-En segundo lugar se encuentra el FRE Boyacá, el cual presenta un uso de 3 días en todo el proceso, se observa que el volumen de inscritos es alto y que en este caso lo llevan dos regentes de farmacia dando paso a la realización de acta con el transportador y luego una revisión completa de cada medicamentos y correcto almacenamiento con su acta correspondiente. 
+En segundo lugar se encuentra el FRE Boyacá, el cual puede tomar hasta 3 días en todo el proceso, se observa que el volúmen de inscritos es alto y que en este caso lo llevan dos regentes de farmacia dando paso a la realización de acta con el transportador y luego una revisión completa de cada medicamento y su correcto almacenamiento con el acta correspondiente. 
 
 Como otro atributo que se puede resaltar en la Figura \@ref(fig:TiemposRecepcionAlmacenamientob), es que cinco territorios Atlántico, Quindío, Sucre, Tolima y Bolívar se demoran entre 2-2.5 días para la recepción técnica, debido a su tamaño y a la cantidad de personas disponibles para llevar a cabo este proceso y como ultima observación, se puede ver que 24 de los 31 FRE realizan la recepción técnica durante un día y por máximo un día y medio, debido a que los pedidos realizados no son muy grandes, o como en el caso del Valle del cauca, Cauca y Santander, que son territorios grandes con bastantes inscritos, se determina la prioridad de esta acción donde se establece las personas que llevan a cabo este procedimiento y se ha observado que no sobrepasa un día y medio en esta labor.  
 
@@ -226,3 +226,5 @@ g2 <- readRDS(file.path(fig_path, "084_TiemposTranslados.rds")) + labs(title = N
 
 wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A') + plot_layout(widths = c(0.5, 0.5))
 ```
+
+Por otra parte, no se tiene información de los tiempos de demora en los traslados interdepartamentales para 12 departamentos. Es posible que algunos departamentos no requieran este tipo de solicitudes por un manejo muy estricto de los niveles de inventario p.ej. Antioquia o Santander. Así mismo, otros fondos rotatorios con un menor nivel de complejidad puede que no cuenten con mucha experiencia en la recepción o envío de traslados interdepartamentales. 

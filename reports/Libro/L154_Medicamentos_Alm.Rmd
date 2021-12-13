@@ -24,7 +24,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 
 
-En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes. 
+En la Figura \@ref(fig:MedidasSeguridadAlmacenamientoMME) se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 20 de 31 FRE), seguido de (ii) gabinetes con llaves simple (en 17 de 31 FRE), (iii) almacenamiento en oficina privada (18 de 31 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes. 
 
 ```{r MedidasSeguridadAlmacenamientoMME, echo=FALSE, warning=FALSE, fig.cap='Medidas de seguridad en el almacenamiento de MME.', fig.width=8, fig.asp=0.6, fig.topcaption=TRUE,fig.align='center', out.width="95%",fig.pos="!t"}
 readRDS(file.path(fig_path, "088_SeguridadMedicamentos.rds")) + 
@@ -64,12 +64,11 @@ readRDS(file.path(fig_path, "092_ProductosCompartidos.rds")) + labs(title = NULL
 ```
 En la Figura \@ref(fig:PropOcupacionAlmacen) se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se evidencia que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se presenta en 12 FREs. 
 
-```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE.', fig.width=6, fig.asp=0.7, fig.topcaption=TRUE,fig.align='center', out.width="85%", fig.pos="!b"}
+```{r PropOcupacionAlmacen, echo=FALSE, warning=FALSE, fig.cap='Ocupación promedio de MME frente a otros medicamentos o ítems almacenados en el almacén del FRE.', fig.width=6, fig.asp=0.7, fig.topcaption=TRUE,fig.align='center', out.width="85%", fig.pos="!b"}
 readRDS(file.path(fig_path, "134_PropOcupacionAlmacen.rds")) + labs(title = NULL)
 ```
 
-Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos [@Silver2017]. 
-En la Figura \@ref(fig:FrecControlExistencias) se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario. 
+Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos [@Silver2017]. En la Figura \@ref(fig:FrecControlExistencias) se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario. En algunos departamentos como Cundinamarca, Guainía o Vaupés no se realiza la actividad de seguimiento de existencias por lo cual no aplica esta pregunta en los mismos.
 
 ```{r FrecControlExistencias, echo=FALSE, warning=FALSE, fig.cap='Frecuencia del control de existencias de medicamentos MME.', fig.width=11, fig.height=5, fig.topcaption=TRUE,fig.align='center', out.width="100%"}
 g1 <- readRDS(file.path(fig_path, "094_FrecControlExistencias.rds")) + labs(title = 'A')
