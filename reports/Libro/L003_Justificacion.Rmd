@@ -2,7 +2,7 @@
 
 Uno de los ejes centrales para garantizar la disponibilidad de los MME en el territorio nacional, recae en el cálculo adecuado de la demanda por estos medicamentos, la cual es determinada por cada ente territorial con base en la demanda de las entidades que tienen inscritas.
 
-Para atender la necesidad de estos medicamentos el Grupo interno de trabajo de medicamentos del Estado, creado mediante la Resolución 735 de 2016 del FNE, tiene entre sus funciones:
+Para atender la necesidad de estos medicamentos el Grupo interno de trabajo de medicamentos del Estado, creado mediante la Resolución 723 de 2020 del FNE, tiene entre sus funciones:
 
 - Coordinar las acciones necesarias para garantizar la disponibilidad y accesibilidad a los medicamentos monopolio del Estado en el territorio colombiano juntamente con los Fondos Rotatorios de Estupefacientes (FRE).
 
@@ -22,7 +22,7 @@ Sin embargo, la planeación de las cantidades de medicamentos monopolio del Esta
 
 - Las diferentes barreras administrativas de índole territorial que impactan en el acceso de estos medicamentos por parte de los pacientes.
 
-Por lo cual, con el fin de fortalecer los procesos de operativos, administrativos y técnicos encaminados a garantizar la disponibilidad y a fortalecer el acceso a los medicamentos monopolio del Estado en todo el territorio, se formuló el proyecto de inversión *incremento de la disponibilidad de medicamentos monopolio del Estado para los pacientes en Colombia*.
+Por lo cual, con el fin de fortalecer los procesos de operativos, administrativos y técnicos encaminados a garantizar la disponibilidad y a fortalecer el acceso a los medicamentos monopolio del Estado en todo el territorio, se formuló el proyecto de inversión *incremento de la disponibilidad de medicamentos monopolio del Estado para los pacientes en Colombia Nacional*.
 
 Este proyecto se diseñó con la finalidad de cumplir con dos objetivos en específico, el primer objetivo busca establecer un mecanismo estandarizado y sistematizado para determinar la demanda de materias primas y MME a partir de información completa y suficiente, que además permita aumentar la efectividad en el seguimiento, evaluación, control y consolidación de la información de gestión presentada por los FRE. Para lo cual es necesario mejorar la articulación con las entidades territoriales y con los demás actores que intervienen en el proceso.
 

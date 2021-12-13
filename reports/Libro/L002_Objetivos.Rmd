@@ -2,7 +2,7 @@
 
 ## Objetivo general
 
-Identificar fuentes de información asociadas a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial. Con el fin de iniciar la primera fase de desarrollo del proyecto de inversión 1901 y recopilar las características de las herramientas tecnológicas para la consolidación de la información y el seguimiento al consumo de estos medicamentos en el territorio.
+Identificar fuentes de información asociadas a la prescripción, dispensación y uso de medicamentos monopolio del Estado, con énfasis en el recetario oficial, herramientas tecnológicas y/o sistemas de información, y seguimiento al consumo / distribución de estos medicamentos en el territorio nacional. 
 
 ## Objetivos específicos
 

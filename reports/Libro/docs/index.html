@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado</title>
   <meta name="description" content="Este es el informe final de visitas de asistencias técnicas realizadas a los FRE por parte del Proyecto de Inversión Misión PRI 1901." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,8 @@
 
 <link rel="next" href="introducción.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -245,7 +245,7 @@ div.csl-indent {
 <h1 class="title">Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado</h1>
 <h2 class="subtitle"><em>Informe Final de Visitas Técnicas a Fondos Rotatorios de Estupefacientes</em></h2>
 <p class="author"><em>Proyecto de Inversión Mision PRI - 1901 Fondo Nacional de Estupefacientes</em></p>
-<p class="date" style="margin-top: 1.5em;"><em>10 de octubre de 2021</em></p>
+<p class="date"><em>10 de octubre de 2021</em></p>
 </div>
 <div id="prefacio" class="section level1 unnumbered">
 <h1>Prefacio</h1>
@@ -255,11 +255,11 @@ div.csl-indent {
 <ul>
 <li><p>La variabilidad en el incremento o disminución de la distribución y necesidad de MME.</p></li>
 <li><p>La participación en las guías de tratamiento farmacológico de cada uno de estos medicamentos y que se ve afectada por las diferentes recomendaciones internacionales.</p></li>
-<li><p>La calidad de la información de disponibilidad remitida por los FRE.</p></li>
+<li><p>La calidad de la información de disponibilidad remitida por los Fondos Rotatorios de Estupefacientes (FRE).</p></li>
 <li><p>Las diferentes barreras administrativas de índole territorial que impactan en el acceso de estos medicamentos por parte de los pacientes.</p></li>
 </ul>
 <p>Por consiguiente, el desarrollo de este proyecto se enmarca en una estrategia integral con el fin de contribuir a mejorar la calidad de la atención de los pacientes y a la salud pública del país, garantizando el acceso, disponibilidad y uso racional de los medicamentos de control especial y MME.</p>
-<p>El proyecto tiene como producto entregable una fuente de información caracterizada y consolidada para el desarrollo del Recetario Oficial Electrónico (ROE), de tal manera que se determine el rol del FNE, FRE y las IPS para fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional y una fuente de información caracterizada y consolidada para el desarrollo de una herramienta que permita estandarizar los procesos de proyección de compra y el seguimiento de inventarios de MME por parte de los entes territoriales, de tal manera que se mitigue el riesgo de desabastecimiento mediante la gestión de inventarios acorde a las necesidades de la población.</p>
+<p>El proyecto tiene como producto entregable una fuente de información caracterizada y consolidada para el desarrollo del Recetario Oficial Electrónico (ROE), de tal manera que se determine el rol del FNE, FRE y las Instituciones Prestadoras de Salud (IPS) para fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional y una fuente de información caracterizada y consolidada para el desarrollo de una herramienta que permita estandarizar los procesos de proyección de compra y el seguimiento de inventarios de MME por parte de los entes territoriales, de tal manera que se mitigue el riesgo de desabastecimiento mediante la gestión de inventarios acorde a las necesidades de la población.</p>
 <p>El trabajo territorial es una experiencia de aprendizaje recíproco y constante. Dentro de las Jornadas de inmersión territorial se observó, no solamente las condiciones actuales en la que se encuentran los FRE alrededor de la nación, sino el entusiasmo con la que los funcionarios se interesan por el bienestar y la salud pública de su región, aún cuando se presentan diferentes adversidades y vicisitudes en sus departamentos.</p>
 <p>Agradecemos a cada referente de cada FRE y a cada funcionario de apoyo, por tan acogedor recibimiento del que hicieron partícipe al equipo territorial del Proyecto de Inversión 1901, reafirmando que parte de la belleza de Colombia es la calidez y amabilidad de sus habitantes. También queremos agradecer al FNE y a su íntegro equipo, coordinadores y apoyos territoriales, por brindarnos todos los recursos, herramientas y ser una guía para llevar a cabo el proceso de investigación.</p>
 
@@ -274,7 +274,6 @@ div.csl-indent {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -314,6 +313,10 @@ gitbook.start({
 "text": null
 },
 "download": ["InformeFinal.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

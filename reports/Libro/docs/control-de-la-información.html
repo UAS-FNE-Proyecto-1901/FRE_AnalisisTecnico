@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7.3 Control de la información | Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado</title>
   <meta name="description" content="Este es el informe final de visitas de asistencias técnicas realizadas a los FRE por parte del Proyecto de Inversión Misión PRI 1901." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7.3 Control de la información | Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,8 @@
 <link rel="prev" href="equipos-de-cómputo.html"/>
 <link rel="next" href="reporte-de-informes.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -247,7 +247,7 @@ div.csl-indent {
 <h3><span class="header-section-number">7.3.1</span> Seguridad de la información</h3>
 <p>La seguridad de la información que manejan los FRE a nivel nacional, es un tema de alta importancia a nivel interno, ya que comprende las medidas preventivas de la institución u organización, que permiten resguardar y proteger la información por medio de sistemas tecnológicos, buscando mantener la confidencialidad, disponibilidad e integridad de los datos. Adicionalmente, se debe contemplar que todos los FRE deben ser capaces de resguardar y proteger la información proveniente de todo el departamento, lo cual dispone un reto mayor referente a la seguridad de la información.</p>
 <p>La Figura <a href="control-de-la-información.html#fig:GarantiaInformacion">7.7</a> muestra la manera como se garantiza la seguridad de la información en los FRE departamentales. A partir de los datos de la figura, se puede evidenciar que medios emplea el personal del FRE para resguardar y proteger la información por medio de sistemas tecnológicos. La restricción de acceso es el principal recurso que tienen los FRE para mantener la confidencialidad, disponibilidad e integridad de los datos.</p>
-<div class="figure" style="text-align: center"><span id="fig:GarantiaInformacion"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:GarantiaInformacion"></span>
 <p class="caption">
 Figura 7.7: Medidas para garantizar la seguridad de la información.
 </p>
@@ -258,7 +258,7 @@ Figura 7.7: Medidas para garantizar la seguridad de la información.
 <div id="bases-de-datos" class="section level3" number="7.3.2">
 <h3><span class="header-section-number">7.3.2</span> Bases de datos</h3>
 <p>En la Figura <a href="control-de-la-información.html#fig:InformInscritos">7.8</a> se muestra la proporción de FRE que cuentan con bases de datos de información de inscritos y pacientes a los cuales se les dispensa MME.</p>
-<div class="figure" style="text-align: center"><span id="fig:InformInscritos"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:InformInscritos"></span>
 <p class="caption">
 Figura 7.8: Proporción de FRE que cuenta con: (A) bases de datos con información de inscritos, o (B) bases de datos con información de pacientes a los que se les dispensa MME.
 </p>
@@ -282,7 +282,6 @@ Figura 7.8: Proporción de FRE que cuenta con: (A) bases de datos con informaci�
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -322,6 +321,10 @@ gitbook.start({
 "text": null
 },
 "download": ["InformeFinal.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

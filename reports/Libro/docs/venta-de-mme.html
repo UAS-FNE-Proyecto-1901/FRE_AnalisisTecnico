@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.3 Venta de MME | Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado</title>
   <meta name="description" content="Este es el informe final de visitas de asistencias técnicas realizadas a los FRE por parte del Proyecto de Inversión Misión PRI 1901." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.3 Venta de MME | Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,8 @@
 <link rel="prev" href="adquisición-de-mme.html"/>
 <link rel="next" href="almacenamiento.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -248,7 +248,7 @@ div.csl-indent {
 <!-- readRDS(file.path(fig_path, "130b_FrecComprasFNR.rds")) +  -->
 <!--   labs(title = NULL) -->
 <!-- ``` -->
-<div class="figure" style="text-align: center"><span id="fig:FrecVentaInstituciones"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FrecVentaInstituciones"></span>
 <p class="caption">
 Figura 6.9: Frecuencia de venta de MME a instituciones en el departamento.
 </p>
@@ -258,14 +258,14 @@ Figura 6.9: Frecuencia de venta de MME a instituciones en el departamento.
 <div id="controles-en-venta-directa-a-paciente" class="section level3" number="6.3.1">
 <h3><span class="header-section-number">6.3.1</span> Controles en Venta Directa a Paciente</h3>
 <p>En la Figura <a href="venta-de-mme.html#fig:ControlesVentasFRE">6.10</a> se tienen las medidas adoptadas como controles en la venta directa de MME a pacientes. La más común es la revisión exhaustiva del recetario (realizada por 22 de 30 FRE), seguido de la solicitud de identificación a los pacientes (realizada por 21 de 30 FRE). Existen otras medidas aplicadas como revisión de registro del prescriptor, revisión de historias clínicas y llamada al médico prescriptor. Por último, existen medidas menos poco frecuentes como visitas domiciliarias, llamadas al servicio farmacéutico, llamada al paciente o posposición de la entrega. Se tienen algunos FRE que no realizan controles, debido a que no realizan dispensación a los pacientes como Quindío, Valle del Cauca, Putumayo, Nariño o Risaralda.</p>
-<div class="figure" style="text-align: center"><span id="fig:ControlesVentasFRE"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ControlesVentasFRE"></span>
 <p class="caption">
 Figura 6.10: Controles en las ventas directas a pacientes.
 </p>
 <img src="InformeFinal_files/figure-html/ControlesVentasFRE-1.png" alt="Controles en las ventas directas a pacientes." width="87%" />
 </div>
 <p>En la Figura <a href="venta-de-mme.html#fig:InstitucionesAdicionales">6.11</a> se muestra sí en el departamento existen otras instituciones que realicen ventas de MME a instituciones a parte del FRE. Se observa que len la mayoría de departamentos sólo el FRE vende MME, la venta por parte de otras instituciones ocurre en los departamentos de Antioquía, Atlántico, Santander, Caldas, Quindío, Nariño, y San Andrés, Providencia y Santa Catalina. La mayoría de los establecimientos autorizados son mayoristas, aunque en algunos casos estos establecimientos tienen autorización para cubrir horarios en que el FRE no se encuentra activo.</p>
-<div class="figure" style="text-align: center"><span id="fig:InstitucionesAdicionales"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:InstitucionesAdicionales"></span>
 <p class="caption">
 Figura 6.11: Existencia de otras instituciones que realizan ventas a instituciones a MME.
 </p>
@@ -284,7 +284,6 @@ Figura 6.11: Existencia de otras instituciones que realizan ventas a institucion
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -324,6 +323,10 @@ gitbook.start({
 "text": null
 },
 "download": ["InformeFinal.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

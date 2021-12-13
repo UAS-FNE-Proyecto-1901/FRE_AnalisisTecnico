@@ -18,14 +18,7 @@ bookdown::gitbook:
     fontsettings:
       size: 2
   split_by: section
-  delete_merged_file: true
+  delete_merged_file: false
   favicon: "./www/icon1.png"
   cover-image: "www/duckimage.jpg"
-bookdown::pdf_book:
-  keep_tex: true
-bookdown::word_document2:
-  keep_tex: true
-  number_sections: false
-  fig_caption: true
-  toc: yes
-  delete_merged_file: true
+  

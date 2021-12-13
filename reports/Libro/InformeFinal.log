@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.8.2)  28 NOV 2021 01:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.8.2)  28 NOV 2021 14:08
 entering extended mode
 **./InformeFinal.tex
 (InformeFinal.tex
@@ -3974,7 +3974,7 @@ LaTeX Info: Redefining \% on input line 27.
 Here is how much of TeX's memory you used:
  32025 strings out of 478863
  617300 string characters out of 2855994
- 1015920 words of memory out of 3000000
+ 1015921 words of memory out of 3000000
  48571 multiletter control sequences out of 15000+600000
  496344 words of font info for 276 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3991,7 +3991,7 @@ pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/helvetic/uhvro8
 a.pfb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/symbol/usyr.p
 fb><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmr8a.pfb
 ><C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on InformeFinal.pdf (112 pages, 10698330 bytes).
+Output written on InformeFinal.pdf (112 pages, 10698334 bytes).
 PDF statistics:
  2254 PDF objects out of 2487 (max. 8388607)
  424 named destinations out of 1000 (max. 500000)

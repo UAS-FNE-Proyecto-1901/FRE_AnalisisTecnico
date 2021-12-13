@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.4 Almacenamiento | Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado</title>
   <meta name="description" content="Este es el informe final de visitas de asistencias técnicas realizadas a los FRE por parte del Proyecto de Inversión Misión PRI 1901." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24.4 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.4 Almacenamiento | Diagnóstico nacional de manejo territorial de recetarios oficiales, informes y medicamentos monopolio del Estado" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,8 @@
 <link rel="prev" href="venta-de-mme.html"/>
 <link rel="next" href="transporte.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -246,7 +246,7 @@ div.csl-indent {
 <div id="medidas-de-seguridad-para-el-almacenamiento" class="section level3" number="6.4.1">
 <h3><span class="header-section-number">6.4.1</span> Medidas de seguridad para el almacenamiento</h3>
 <p>En la Figura <a href="almacenamiento.html#fig:MedidasSeguridadAlmacenamientoMME">6.12</a> se listan las medidas de seguridad adoptadas por los FRE para disminuir la posibilidad de robo con fines de desvío de los MME. Las medidas más adoptadas por parte de los FRE consisten en: (i) el acceso de seguridad restringido a cierto personal (con respuesta afirmativa por parte de 18 de 26 FRE), seguido de (ii) gabinetes con llaves simple (en 14 de 26 FRE), (iii) almacenamiento en oficina privada (14 de 26 FRE responden que lo aplican), (iv) inventarios físicos diarios, y (v) protección en gabinetes hechos de materiales resistentes.</p>
-<div class="figure" style="text-align: center"><span id="fig:MedidasSeguridadAlmacenamientoMME"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MedidasSeguridadAlmacenamientoMME"></span>
 <p class="caption">
 Figura 6.12: Medidas de seguridad en el almacenamiento de MME.
 </p>
@@ -258,14 +258,14 @@ Figura 6.12: Medidas de seguridad en el almacenamiento de MME.
 <div id="revisión-de-condiciones-ambientales" class="section level3" number="6.4.2">
 <h3><span class="header-section-number">6.4.2</span> Revisión de condiciones ambientales</h3>
 <p>En la Figura <a href="almacenamiento.html#fig:FrecRevCondiciones">6.13</a> se muestra la frecuencia de revisión de condiciones ambientales en el almacenamiento de MME. Se tienen que la práctica más frecuente en los FRE es la realización de verificación de condiciones ambientales por lo menos dos veces al día. Sólo algunos FRE afirman que no hacen revisión de condiciones ambientales como Bolívar, Sucre, Chocó, Norte de Santander, Amazonas y Vichada.</p>
-<div class="figure" style="text-align: center"><span id="fig:FrecRevCondiciones"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FrecRevCondiciones"></span>
 <p class="caption">
 Figura 6.13: Frecuencia de revisión de condiciones ambientales.
 </p>
 <img src="InformeFinal_files/figure-html/FrecRevCondiciones-1.png" alt="Frecuencia de revisión de condiciones ambientales." width="90%" />
 </div>
 <p>En el panel izquierdo de la Figura <a href="almacenamiento.html#fig:MetodosSeguimientoControlAmbiental">6.14</a> se presentan los métodos o tecnologías utilizadas en la monitorización de los medicamentos. En la Figura <a href="almacenamiento.html#fig:MetodosSeguimientoControlAmbiental">6.14</a> se observa que al menos 25 de 30 fondos rotatorios cuentan con un termohigrómetro para la evaluación de condiciones ambientales. La práctica de diligenciar registros cuenta con una menor adopción por parte de los fondos rotatorios, se tiene que 7 y 4 de los fondos rotatorios realiza el diligenciamiento de estos formatos de manera manual y electrónica de manera respectiva.</p>
-<div class="figure" style="text-align: center"><span id="fig:MetodosSeguimientoControlAmbiental"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:MetodosSeguimientoControlAmbiental"></span>
 <p class="caption">
 Figura 6.14: (A) Tecnologías de control y seguimiento de condiciones ambientales y (B) Frecuencia de calibración y mantenimiento de equipos de seguimiento ambiental.
 </p>
@@ -276,14 +276,14 @@ Figura 6.14: (A) Tecnologías de control y seguimiento de condiciones ambientale
 <div id="espacio-de-almacenamiento" class="section level3" number="6.4.3">
 <h3><span class="header-section-number">6.4.3</span> Espacio de almacenamiento</h3>
 <p>En la Figura <a href="almacenamiento.html#fig:ProductosCompartidos1">6.15</a> se muestra la frecuencia de varias categorías de productos con los cuales se comparten los MME en el almacén de los FRE. Se tiene que en casi la mitad de los FRE se comparten los MME con medicamentos de salud pública, en 7 de 30 casos se reporta la utilización del espacio en conjunto con papelería (7/30) o recetarios oficiales (3/30). Algunos FRE tienen otros items como vacunas, medicamentos de carros de paro y medicamentos incautados. En 9 de 30 casos se tiene que el FRE tiene un espacio dedicado únicamente a MME.</p>
-<div class="figure" style="text-align: center"><span id="fig:ProductosCompartidos1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ProductosCompartidos1"></span>
 <p class="caption">
 Figura 6.15: Productos compartidos en el almacén de MME.
 </p>
 <img src="InformeFinal_files/figure-html/ProductosCompartidos1-1.png" alt="Productos compartidos en el almacén de MME." width="90%" />
 </div>
 <p>En la Figura <a href="almacenamiento.html#fig:PropOcupacionAlmacen">6.16</a> se tiene una estimación del promedio de ocupación de medicamentos MME en los almacenes frente a otros productos. Se evidencia que la práctica más común es la utilización de un espacio destinado exclusivo para estos medicamentos y esto se presenta en 12 FREs.</p>
-<div class="figure" style="text-align: center"><span id="fig:PropOcupacionAlmacen"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:PropOcupacionAlmacen"></span>
 <p class="caption">
 Figura 6.16: Ocupación promedio del MME frente a otros medicamentos o ítems almacenados en el FRE.
 </p>
@@ -291,7 +291,7 @@ Figura 6.16: Ocupación promedio del MME frente a otros medicamentos o ítems al
 </div>
 <p>Se considera que existen dos tipos de métodos de control de inventario conocidos como sistemas perpetuos o periódicos<span class="citation"><sup><a href="#ref-Silver2017" role="doc-biblioref">34</a></sup></span>.
 En la Figura <a href="almacenamiento.html#fig:FrecControlExistencias">6.17</a> se tiene una caracterización de la frecuencia de control de existencias de los MME. En la mayoría de los FRE se realiza esta verificación de manera mensual, o de forma diaria. La frecuencia de monitoreo de existencias parece estar relacionada con el nivel medio de inventario.</p>
-<div class="figure" style="text-align: center"><span id="fig:FrecControlExistencias"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FrecControlExistencias"></span>
 <p class="caption">
 Figura 6.17: Frecuencia del control de existencias de medicamentos MME.
 </p>
@@ -320,7 +320,7 @@ Figura 6.17: Frecuencia del control de existencias de medicamentos MME.
 <li><p>Debido a la emergencia sanitaria producida por el coronavirus se ha presentado una contracción importante de la demanda que se encuentra posiblemente relacionada a los cambios en la movilidad de los ciudadanos y las restricciones de presencialidad en instituciones escolares.</p></li>
 </ul>
 <p>El segundo medicamento más involucrado en casos de vencimiento es Primidona Tableta x 250 mg debido a que 4 de los 31 FRE reportan casos de vencimientos, seguido de los vencimientos de Meperidina de 100mg/2mL, Fenobarbital Solución inyectable x 40 mg/mL y Fenobarbital Solución inyectable x 200 mg/mL que fueron reportados por 3 de 31 FREs a nivel nacional que se puede explicar debido a que son productos de baja rotación, y es posible que los FRE no hayan recibido una adecuada asistencia por parte del FNE para el manejo de ítems de este tipo.</p>
-<div class="figure" style="text-align: center"><span id="fig:CasosVencimiento1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:CasosVencimiento1"></span>
 <p class="caption">
 Figura 6.18: Vencimiento de medicamentos. (A) Presentación de casos de vencimiento de MME. (B) Medicamentos implicados en casos de vencimiento de MME.
 </p>
@@ -350,7 +350,6 @@ Figura 6.18: Vencimiento de medicamentos. (A) Presentación de casos de vencimie
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -390,6 +389,10 @@ gitbook.start({
 "text": null
 },
 "download": ["InformeFinal.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

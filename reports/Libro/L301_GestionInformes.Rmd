@@ -125,9 +125,7 @@ g2 <- readRDS(file.path(fig_path, "137_evaluacionAnexo2.rds")) + labs(title = NU
 wrap_plots(g1, g2) + plot_layout(ncol = 2, widths = c(0.5, 0.5)) + plot_annotation(tag_levels = 'A')
 ```
 
-En el panel B de la Figura \@ref(fig:TiemposConsolidacionA2) se muestra una comparación entre el tiempo de diligenciamiento del Anexo 2 y el número de inscritos en el departamento. Se tienen casos como Putumayo y Casanare que tienen tiempos de diligenciamiento mayores a lo esperado de acuerdo al número de instituciones. Así como el caso de Antioquia que reporta un tiempo muy rápido de diligenciamiento pese a que cuenta con muchos inscritos: 
-
-> *Un regente realiza el proceso en aproximadamente 30 minutos*
+En el panel B de la Figura \@ref(fig:TiemposConsolidacionA2) se muestra una comparación entre el tiempo de diligenciamiento del Anexo 2 y el número de inscritos en el departamento. Se tienen casos como Putumayo y Casanare que tienen tiempos de diligenciamiento mayores a lo esperado de acuerdo al número de instituciones. En el caso de Antioquia por su cantidad de inscritos, se tienen tiempos de diligenciamiento y consolidación de Anexos de hasta 3 semanas con apoyo de un técnico de IVC.
 
 Adicionalmente, la base de datos entregada por el grupo de Regionalización, referente a los informes enviados por todos los FRE, muestra que al menos 10 departamentos no han entregado un solo informe de consumo para lo corrido del año 2021. Además, se evidencia un rezago de aproximadamente dos meses, en la entrega de este informe, incluso para los FRE que tienen mayor cantidad de informes entregados.
 
@@ -141,7 +139,7 @@ readRDS(file.path(fig_path, "123_ArchivoInformesFRE.rds")) + labs(title = NULL)
 
 ## Seguimiento de envío de informes
 
-En la Figura \@ref(fig:SeguimientoEnvioInformes) se muestran los mecanismos de seguimiento del FRE frente a las instituciones para el envío de los informes requeridos por la normativa. Se muestra que una proporción importante de los FRE (14/31) realiza el seguimiento de envío de reportes mediante visitas personales a las instituciones. Sólo los FRE de Magdalena, Tolima, Boyacá y Guainía realizan este seguimiento mediante visitas personales. 
+En la Figura \@ref(fig:SeguimientoEnvioInformes) se muestran los mecanismos de seguimiento del FRE frente a las instituciones para el envío de los informes requeridos por la normativa. Se muestra que una proporción importante de los FRE (14/31) realiza el seguimiento de envío de reportes mediante visitas personales a las instituciones. Los FRE de Arauca, Magdalena, Tolima, Boyacá y Guainía realizan este seguimiento sólo mediante este mecanismo. 
 
 ```{r SeguimientoEnvioInformes, echo=FALSE, warning=FALSE, fig.cap='Mecanismo de seguimiento de instituciones de envío de informes.', fig.width=7, fig.asp=0.6, fig.topcaption=TRUE, out.width="90%",fig.align='center',fig.pos="t!"}
 readRDS(file.path(fig_path, "125_SeguimientoEnvioInformes.rds")) + labs(title = NULL) + xlab("Proporción de FRE")
@@ -157,4 +155,4 @@ La Figura \@ref(fig:IncumplimientoEnvioInformes), muestra la manera como el FRE 
 readRDS(file.path(fig_path, "126_IncumplimientoEnvioInformes.rds")) + labs(title = NULL)
 ```
 
-Lo anterior es otro motivo para explicar las circunstancias por las cuáles los FRE no presentan estos informes a tiempo. En la Figura \@ref(fig:IncumplimientoEnvioInformes), se muestra que 23 de los 31 FRE solo se quedan en un llamado de atención en caso de incumplimiento en las fechas de entrega de informes de consumo. Este comportamiento se relaciona con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos.
+Lo anterior es otro motivo para explicar las circunstancias por las cuáles los FRE no presentan estos informes a tiempo. En la Figura \@ref(fig:IncumplimientoEnvioInformes), se muestra que en 25 de los 31 FRE sólo aplican llamados de atención en caso de incumplimiento en las fechas de entrega de informes de consumo. Este comportamiento se relaciona con la forma en la que el área de IVC de cada departamento realiza procesos administrativos o medidas sancionatorias a las instituciones que no hacen entrega de estos documentos.

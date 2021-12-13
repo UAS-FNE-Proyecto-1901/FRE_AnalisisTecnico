@@ -358,7 +358,7 @@ incumplimientoEnvioInformes <- c("Llamado de atención",
 
 ggIncumplimientoEnvio <- pull(df, col1) %>% 
   separarDummies(descartar = T) %>%
-  select(-1) %>% 
+  # select(-1) %>% 
   pivot_longer(cols = everything()) %>% 
   mutate(
     name = str_wrap(name, 30),

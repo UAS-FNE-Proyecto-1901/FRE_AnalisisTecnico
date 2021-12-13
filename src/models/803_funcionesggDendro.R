@@ -1,6 +1,9 @@
 require(ggdendro)
 
+#'
 #'-------------------------------------------------------------------------------
+#'
+#'
 #' Selección de clústers desde objeto dendrogramas
 #'
 #' @param hc objeto hcclust

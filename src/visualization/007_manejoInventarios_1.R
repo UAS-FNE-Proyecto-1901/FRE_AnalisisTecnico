@@ -1046,6 +1046,9 @@ df_total1['camasREPS'] <- df_total1['camas_adultos'] +
   df_total1['camas_salud_mental'] + 
   df_total1['ambulancias_medicada']
 
+deptosMostrar <- c("Córdoba", "Antioquia", "Bolívar", 
+                   "Norte De Santander", "Valle Del Cauca", "Cesar", 
+                   'Boyacá', 'Meta', 'Atlántico')
 
 df_total_2 <- df_total1 %>%
   filter(str_detect(col1, '\\d')) %>%
@@ -1080,7 +1083,7 @@ ggRecursosFRE2a <- df_total_2 %>%
               fill = 'blue1', alpha = 0.1) +
   geom_point() + 
   geom_text_repel(
-    data = df_total_2[cooks.distance(lm1) > 0.05, ],
+    data = df_total_2[df_total_2$Departamento_1 %in% deptosMostrar,],
     mapping = aes(label = Departamento_1), size = 3) +
   ylab('N.° de instituciones inscritas en el departamento \n con compras el último año') +
   xlab('Población departamental') +
@@ -1099,7 +1102,7 @@ ggRecursosFRE2b <- df_total_2 %>%
               fill = 'blue1', alpha = 0.1) +
   geom_point() + 
   geom_text_repel(
-    data = df_total_2[cooks.distance(lm2) > 0.01, ], 
+    data = df_total_2[df_total_2$Departamento_1 %in% deptosMostrar,], 
     mapping = aes(label = Departamento_1), size = 3) +
   xlab('N.° de camas en REPS (tipos seleccionados)') +
   ylab('N.° de instituciones inscritas en \n el departamento con compras el último año') +

@@ -252,7 +252,7 @@ pieProfesional1b <- prop %>%
   pieChart(frec_rel, label1) +
   scale_fill_brewer(palette = "Set1") + 
   theme(legend.position = 'none') + 
-  labs(title = 'Personal vinculado')
+  labs(title = 'Personal asociado')
 
 
 pieProfesional1C <- (pieProfesional1a + pieProfesional1b) + 
