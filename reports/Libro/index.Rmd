@@ -36,7 +36,7 @@ En los últimos años, la planeación de las cantidades de medicamentos monopoli
 
 - La variabilidad en el incremento o disminución de la distribución y necesidad de MME.
 
-- La participación en las guías de tratamiento farmacológico de cada uno de estos medicamentos y que se ve afectada por las diferentes recomendaciones internacionales.
+- El desarrollo de guías de práctica clínica en condiciones relacionadas a los medicamentos que hacen parte del portafolio tanto a nivel nacional como internacional.
 
 - La calidad de la información de disponibilidad remitida por los Fondos Rotatorios de Estupefacientes (FRE).
 
@@ -44,10 +44,10 @@ En los últimos años, la planeación de las cantidades de medicamentos monopoli
 
 Por consiguiente, el desarrollo de este proyecto se enmarca en una estrategia integral con el fin de contribuir a mejorar la calidad de la atención de los pacientes y a la salud pública del país, garantizando el acceso, disponibilidad y uso racional de los medicamentos de control especial y MME.
 
-El proyecto tiene como producto entregable una fuente de información caracterizada y consolidada para el desarrollo del Recetario Oficial Electrónico (ROE), de tal manera que se determine el rol del FNE, FRE y las Instituciones Prestadoras de Salud (IPS) para fortalecer el seguimiento a las prescripciones de medicamentos monopolio del Estado, encaminados al uso racional de estos medicamentos en todo el territorio nacional y una fuente de información caracterizada y consolidada para el desarrollo de una herramienta que permita estandarizar los procesos de proyección de compra y el seguimiento de inventarios de MME por parte de los entes territoriales, de tal manera que se mitigue el riesgo de desabastecimiento mediante la gestión de inventarios acorde a las necesidades de la población.
+En la formulación del proyecto se planteó la entrega de productos relacionados con un análisis del rol del FNE, FRE e instituciones prestadoras de salud (IPS) en la cadena de suministro de medicamentos monopolio del Estado y su ciclo de uso, todo orientado a la utilización racional de estos medicamentos en todo el territorio nacional. Esto productos pueden constituir una fuente de información consolidada para el desarrollo del Recetario Oficial Electrónico (ROE), así como en el desarrollo de herramientas que permitan estandarizar los procesos de proyección de compra y el seguimiento de inventarios de MME por parte de los entes territoriales, de tal manera que se mitigue el riesgo de desabastecimiento mediante la gestión de inventarios acorde a las necesidades de la población.
 
-El trabajo territorial es una experiencia de aprendizaje recíproco y constante. Dentro de las Jornadas de inmersión territorial se observó, no solamente las condiciones actuales en la que se encuentran los FRE alrededor de la nación, sino el entusiasmo con la que los funcionarios se interesan por el bienestar y la salud pública de su región, aún cuando se presentan diferentes adversidades y vicisitudes en sus departamentos.
+El trabajo territorial es una experiencia de aprendizaje recíproco y constante. Dentro de las Jornadas de inmersión territorial se observó, no solamente las condiciones actuales en la que se encuentran los FRE alrededor de la Nación, sino el entusiasmo con la que los funcionarios se interesan por el bienestar y la salud pública de sus regiones, aún cuando se presentan diferentes adversidades y altibajos en el desarrollo de las procesos en sus departamentos.
 
-Agradecemos a cada referente de cada FRE y a cada funcionario de apoyo, por tan acogedor recibimiento del que hicieron partícipe al equipo territorial del Proyecto de Inversión 1901, reafirmando que parte de la belleza de Colombia es la calidez y amabilidad de sus habitantes. También queremos agradecer al FNE y a su íntegro equipo, coordinadores y apoyos territoriales, por brindarnos todos los recursos, herramientas y ser una guía para llevar a cabo el proceso de investigación. 
+Agradecemos a cada referente de cada FRE y a cada funcionario de apoyo, por tan acogedor recibimiento del que hicieron partícipe al equipo territorial del Proyecto de Inversión 1901, reafirmando que parte de la belleza de Colombia es la calidez y amabilidad de sus habitantes. También queremos agradecer al FNE y a su íntegro equipo, coordinadores y apoyos territoriales, por brindarnos todos los recursos, herramientas y ser una guía para llevar a cabo el proceso de esta investigación. 
 
 
