@@ -22,7 +22,7 @@ barButtons <- c("zoomIn2d", "zoomOut2d", "lasso2d", "pan2d",
 
 ### Comparación de costos y precios de ventas de recetarios
 
-Dentro del estudio de costos realizado se comparó el costo de compra del recetario contra su precio de venta. Así pues, se determinó que dentro del territorio el costo de los recetarios ronda entre los 10.000 COP y los 20.000 COP, con territorios como Valle del Cauca y Casanare, en donde dicho costo se aproxima a 30.000 COP. En algunos departamentos no se conocen los costos de adquisición de recetarios (Figura \@ref(fig:costoRecetario)A), dada sus particularidades en la contratación, puesto que se encargan del proceso de licitación y contratación de recetarios, únicamente realizan estudios de necesidad que son enviados al ente encargado de concretar la contratación, en muchos casos, la gobernación departamental. 
+Dentro del estudio de costos realizado se comparó el costo de compra del recetario contra su precio de venta. Así pues, se determinó que dentro del territorio el costo de adquisición de los recetarios ronda entre los 10,000 COP y los 20,000 COP, con territorios como Valle del Cauca y Casanare, en donde dicho costo se aproxima a 30,000 COP. En algunos departamentos no se conocen los costos de adquisición de recetarios (Figura \@ref(fig:costoRecetario)A), dada sus particularidades en la contratación, puesto que de todo el proceso de contratación de recetarios oficiales, únicamente se encargan de realizar la solicitud de necesidad que es enviada al ente encargado de concretar la contratación, en muchos casos, la gobernación departamental.
 
 ```{r costoRecetario, echo=FALSE, fig.cap='Comparativo de costo vs precio de recetarios por departamento. (A) Costos de adquisición de recetarios por departamento. (B) Precios de recetarios por departamento.', fig.width=8, fig.height=5, fig.topcaption=TRUE, out.width="90%",fig.align='center'}
 readRDS(file.path(fig_path, '031_costoRecetario.rds'))
@@ -49,15 +49,15 @@ wrap_plots(g1, g2) + plot_layout(ncol = 2, nrow=1, widths = c(0.4,0.6), tag_leve
 
 <!-- ``` -->
 
-Los amplios márgenes de ganancia y las proporciones distintas entre unos FRE y otros, se podrían relacionar con: (a) cantidad de medidas de seguridad del recetario, (b) facilidad de acceso del departamento, (c) número de prescripciones, (d) tipo de licitación o (e) cantidad de empresas oferentes en los concursos de licitación de recetarios. 
+Los amplios márgenes de ganancia y sus diferencias entre los distintos FRE, se podrían relacionar con: (a) cantidad de medidas de seguridad del recetario, (b) facilidad de acceso del departamento, (c) número de prescripciones, (d) tipo de licitación o (e) cantidad de empresas oferentes en los procesos de contratación de recetarios oficiales.
 
 ### Factores que afectan el costo de adquisición de recetarios
 
-Dentro de los procesos que se utilizan para la licitación y contratación de recetarios oficiales en el país, se consideran 4 modalidades de selección principalmente:
+Dentro de los procesos que se utilizan para la contratación de recetarios oficiales en el país, se consideran 4 modalidades de selección principalmente:
 
 - Licitación pública, el cual es un proceso de selección utilizado por las entidades estatales mediante el cual escoge a sus contratistas a través de una invitación de carácter público que se dirige a todas las personas potencialmente interesadas en ejecutar un contrato, para que en igualdad de condiciones y bajo criterios objetivos garantizados por el pliego de condiciones, presenten ofertas entre las que se escogerá la más favorable [@MinisteriodeRelacionesExteriores2014].
 
-- Selección abreviada, modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual [@MinisteriodeRelacionesExteriores2014].
+- Selección abreviada de subasta inversa, que es una modalidad de selección objetiva prevista en aquellos casos en que por las características del objeto a contratar, las circunstancias de la contratación o la cuantía o destinación del bien, obra o servicio, puedan adelantarse procesos simplificados (uso de subastas a la inversa, bolsas de productos o compras por catálogo) para garantizar la eficacia de la gestión contractual [@MinisteriodeRelacionesExteriores2014].
 
 - Contratación directa, que es de carácter excepcional, por lo que su aplicación es de carácter restrictivo. En efecto, la ley de Contratación Pública en Colombia, prevé los siguientes eventos en los cuales es procedente esta modalidad de contratación: casos de urgencia manifiesta, contratación de empréstitos, cuando no exista pluralidad de oferentes en el mercado, para los contratos de desarrollo de actividades científicas y tecnológicas, entre otros [@MinisteriodeRelacionesExteriores2014].
 
@@ -98,7 +98,7 @@ g1 <- readRDS(file.path(fig_path, '046c_GraficasDependenParcial.rds'))
 g1
 ```
 
-De esta forma, el tipo de contratación que se concreta con las empresas fabricante de los recetarios es una variable que influye en el costo de los recetarios, así pues, las modalidades de contratación por licitación pública, mínima cuantía y selección abreviada tienden a disminuir el costo del recetario en comparación con la modalidad de contratación directa, factor esperado ya que al no haber competencia entre empresas oferentes, quien posee el monopolio de fabricación es libre de disponer los precios de venta a las entidades territoriales.
+De esta forma, el tipo de contratación que se concreta con las empresas fabricantes de los recetarios es una variable que influye en el costo de los recetarios, así pues, las modalidades de contratación por licitación pública, mínima cuantía y selección abreviada de subasta inversa tienden a disminuir el costo del recetario en comparación con la modalidad de contratación directa, factor esperado ya que al no haber competencia entre empresas oferentes, quien posee el monopolio de fabricación es libre de disponer los precios de venta a las entidades territoriales.
 
 Por otra parte, los FRE que concretaron órdenes de compra de recetarios por mínima cuantía y selección abreviada, tienden a presentar precios mayores de adquisición, con costo alrededor de los 10.000 COP y 15.000 COP, mientras que, los entes territoriales que optaron por la modalidad de licitación pública tienden a ser los recetarios más económicos en relación con las demás, con costos inferiores a los 10.000 COP por recetario en promedio.
 

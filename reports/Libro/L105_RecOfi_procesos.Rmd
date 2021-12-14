@@ -34,7 +34,7 @@ wrap_plots(g1, g2) + plot_layout(widths = c(0.5, 0.5))
 
 <!-- ``` -->
 
-Los recetarios entregados deben revisarse exhaustivamente para evidenciar el buen uso de estos. Junto con los recetarios se trae el anexo 13 para corroborar que los medicamentos formulados coincidan con los valores prescritos en cada uno de los mismos. Esta tarea se realiza en 17 de los 31 departamentos visitados, sin embargo, es una actividad demorada debido a la: (a) falta de personal en los entes territoriales y (b) cantidad de instituciones inscritas y/o médicos prescriptores que hay en el departamento.
+Los recetarios entregados deben revisarse exhaustivamente para evidenciar el buen uso de estos. En conjunto con los recetarios se examina el anexo 13 de la Resolución 1478 de 2006 para evaluar sí los medicamentos formulados coinciden con los valores prescritos en cada uno de los mismos. Esta tarea se realiza en 17 de 31 departamentos visitados, sin embargo, es una actividad demorada debido a la: (a) falta de personal en los entes territoriales y (b) cantidad de instituciones inscritas y/o médicos prescriptores que hay en el departamento.
 
 El resto de los departamentos (57%) no reciben los recetarios prescritos en físico, entre las razones, la más frecuente está relacionada con la capacidad de almacenamiento del FRE de este tipo de documentación, que suele ser muy limitado o no se cuenta con el mismo. En dichos casos, los FRE han optado por emitir circulares, solicitando a las entidades y médicos prescriptores inscritos que mantengan la custodia de los talonarios diligenciados, como parte de la historia clínica de los pacientes, hasta que el FRE realice la visita de inspección, vigilancia y control. Una vez allí, se realiza un muestreo para verificar que las fórmulas prescritas en un determinado tiempo concuerden con las cantidades de medicamentos reportados en los informes mensuales.
 
@@ -66,9 +66,9 @@ La Figura \@ref(fig:BD-diligBDRecet) muestra los campos de información recolect
 
 -   Número de talonarios que se distribuyen en los respectivos departamentos.
 
-```{r BD-diligBDRecet, echo=FALSE, warning=FALSE, fig.cap='Proporción de FRE que diligencian campos en BD de venta de recetarios', fig.width=7, fig.asp=0.5, fig.topcaption=TRUE, out.width="85%", fig.align='center', fig.pos="t!"}
+```{r BD-diligBDRecet, echo=FALSE, warning=FALSE, fig.cap='Proporción (%) de FRE que diligencian campos en bases de datos de venta de recetarios', fig.width=7, fig.asp=0.5, fig.topcaption=TRUE, out.width="85%", fig.align='center', fig.pos="t!"}
 readRDS(file.path(fig_path, "041_BD_diligBDRecet.rds")) + labs(title = NULL) + 
-  xlab("Proporción de FRE")
+  xlab("Proporción de FRE (%)")
 ```
 
 Durante la jornada de inmersión territorial, se puedo observar que los FRE utilizan dichas bases con dos propósitos principales:
@@ -77,7 +77,7 @@ Durante la jornada de inmersión territorial, se puedo observar que los FRE util
 
 -   Evitar fraudes o falsificaciones al realizar un control en el manejo de talonarios, y contrastando la información de las bases con la entregada o solicitada durante visitas.
 
-Se observó que la mayoría de FRE (proporción mayor a 50% en la Figura \@ref(fig:BD-diligBDRecet)) llevaban un control de información con el fin de identificar a los compradores (Nombre del comprador persona o institución) y las cantidades adquiridas -- Unidades compradas. Se almacenan datos de contacto, como dirección o teléfono en tan solo 25% de los FRE. Por otro lado, se evidenció que la mayoría de departamentos (83%) optan por realizar seguimiento a los recetarios con el código de serial, debido a que estos son únicos en cada recetario.
+A partir de la Figura \@ref(fig:BD-diligBDRecet) se observó que la mayoría de FRE (más del 50%) llevaban un control de información con el fin de identificar a los compradores (`Nombre del comprador persona o institución`) y las cantidades adquiridas – `Unidades compradas`. Se almacenan datos de contacto, como dirección o teléfono en tan solo 25% de los FRE. Por otro lado, se evidenció que la mayoría de departamentos (83%) optan por realizar seguimiento a los recetarios con el código de serial, debido a que estos son únicos en cada recetario.
 
 Así mismo, se observaron otros tipos de campos almacenados por los FRE (opción Otros) en la venta de recetarios. Entre estos otros se encuentra: (a) consecutivos de las facturas emitidas en cada compra, (b) registro REPS, (c) saldo de recetarios oficiales tras la compra, o (d) códigos de recetarios oficiales prescritos allegados para su revisión. Algunos FRE cierran el ciclo de control del RO, en la misma base de datos, al relacionar los RO prescritos que son devueltos para su revisión.
 
@@ -93,7 +93,7 @@ Otras actividades de seguimiento activo al manejo de RO son el seguimiento a las
 
 ```{r SeguimientoUsoRecetarios, echo=FALSE, warning=FALSE, fig.cap='Actividades realizadas por el FRE para el seguimiento del uso de recetarios.', fig.width=8, fig.asp=0.55, fig.topcaption=TRUE, out.width="85%",fig.align='center', fig.pos="t!"}
 readRDS(file.path(fig_path, "043_SeguimientoUsoRecetarios.rds")) + labs(title = NULL) +
-  xlab("Proporción de FRE")
+  xlab("Proporción de FRE (%)")
 ```
 
 ### Archivo de recetarios
