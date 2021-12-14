@@ -81,7 +81,8 @@ El tiempo de consolidación del informe mensual sobre la distribución de MME, r
 Como se discutió anteriormente, el grupo de Regionalización, encargado de la consolidación y verificación de estos informes, definió una hoja estandarizada de Excel para la presentación del Anexo 1. Por esta razón, la Figura \@ref(fig:TiemposConsolidacionA1) resalta una tendencia en el tiempo de preparación del informe mensual sobre la distribución de MME (Anexo 1), a nivel nacional.
 
 ```{r TiemposConsolidacionA1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006.', fig.width=8, fig.asp=0.55, fig.topcaption=TRUE, out.width="85%",fig.align='center', fig.pos="t!"}
-readRDS(file.path(fig_path, "121_TiemposConsolidacionA1.rds")) + labs(title = NULL)
+readRDS(file.path(fig_path, "121_TiemposConsolidacionA1.rds")) + 
+  labs(title = NULL)
 ```
 
 La gran mayoría de FRE departamentales manifestaron un tiempo mayor en la consolidación de la información del Anexo 1, respecto al tiempo de consolidación del Anexo 2, considerando la Figura \@ref(fig:TiemposConsolidacionA1) y Figura 8.5. No obstante, esta percepción del tiempo que tarda el personal del FRE para la consolidación del Anexo 1, incluye igualmente la consolidación del Anexo 2. Así las cosas, la Figura \@ref(fig:TiemposConsolidacionA1) muestra un tiempo extremadamente largo para la consolidación de ambos informes, cuya extensa duración puede atribuirse a la forma como reciben los informes de las instituciones inscritas, indispensable para el primer paso del diligenciamiento del Anexo 2. 
@@ -90,8 +91,13 @@ Algunas instituciones entregan este informe de manera electrónica al FRE, mient
 
 En la Figura \@ref(fig:TiemposConsolidacionA1-1) se muestra una comparación entre los tiempos de diligenciamiento del Anexo 1 y el número de instituciones en el departamento. De acuerdo a esta comparación no se tiene una relación clara entre el tiempo que toma cumplir con este requerimiento y el número de instituciones que realizan compras en el departamentos.
 
-```{r TiemposConsolidacionA1-1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006 vs N° de instituciones que realizan compra en un año.', fig.width=8, fig.asp=0.6, fig.topcaption=TRUE, out.width="90%",fig.align='center', fig.pos="t!"}
-readRDS(file.path(fig_path, "121_TiemposConsolidacionA1_2.rds")) + labs(title = NULL) + ylab('Tiempo de consolidación de Anexo 1')
+```{r TiemposConsolidacionA1-1, echo=FALSE, warning=FALSE, fig.cap='Tiempo en la consolidación del Anexo 1 de la Resolución 1479 de 2006 frente al N.° de instituciones que realizan compra en un año.', fig.width=8, fig.asp=0.6, fig.topcaption=TRUE, out.width="90%",fig.align='center', fig.pos="t!"}
+readRDS(file.path(fig_path, "121_TiemposConsolidacionA1_2.rds")) + 
+  labs(title = NULL)
+
+# + 
+#   ylab('Tiempo de consolidación \nde Anexo 1') +
+#   theme(axis.title.y = element_text(angle = 0, hjust = 1, vjust=0.5))
 ```
 
 ### Diligenciamiento de Anexo 2

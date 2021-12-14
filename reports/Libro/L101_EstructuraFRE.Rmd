@@ -169,7 +169,7 @@ g2 <- readRDS(file.path(fig_path, "100b_RelacionRecursosFRE.rds")) + labs(title 
 wrap_plots(g1, g2) + plot_annotation(tag_levels = 'A')
 ```
 
-En la Figura \@ref(fig:institucionesInscritasVARdemo)B se encuentra la relación directa entre el N.° de inscritos en el departamento y el número de camas (adultos, intermedio adulto, intensivo adulto, agudo mental, intermedio mental, salud mental), servicios de farmacodependencia y ambulancias medicadas de acuerdo al REPS [@DireccionPrestaciondeServiciosyAtencionPrimaria2021] presentes en el departamento.
+En la Figura \@ref(fig:institucionesInscritasVARdemo)B se encuentra la relación directa entre el N.° de inscritos en el departamento y el número de camas (adultos, intermedio adulto, intensivo adulto, agudo mental, intermedio mental, salud mental), servicios de farmacodependencia y ambulancias medicadas de acuerdo al registro especial de prestadores de salud (REPS) [@DireccionPrestaciondeServiciosyAtencionPrimaria2021] presentes en el departamento.
 
 ## Caracterización de las fuentes de ingresos de los FRE
 

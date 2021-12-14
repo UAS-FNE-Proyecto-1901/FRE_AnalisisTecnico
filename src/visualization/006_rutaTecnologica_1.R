@@ -56,7 +56,7 @@ df$HerramientaInvetarios <-
 gHerramientaInventario <- df$HerramientaInvetarios %>% 
   table() %>% as_tibble() %>% 
   ggplot(aes(y = fct_reorder(., n), x = n)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = n), hjust = -0.3) + 
   xlab('N.° de FRE, frecuencia') + 
   labs(title = 'Herramientas de manejo inventarios') + 
@@ -82,7 +82,7 @@ gCDilBDRecet <- df$`3.25. ¿Qué información (campos) se consigna en el instrum
     label1 = paste(conteo, '/', dim(df)[1])
     ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -185,7 +185,7 @@ ggActividadesSeguimROE <- df$ActividadesFRE %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -216,7 +216,7 @@ ggFrecControlExistRecetario <- df %>%
     Frec = factor(Frec, rev(frecRevision)),
     ) %>% 
   ggplot(aes(y = Frec, x = n)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = n), hjust = -0.6) +
   coord_cartesian(xlim = c(0, NA)) +
   scale_x_continuous(expand = c(0,0,0.1,0)) +
@@ -251,7 +251,7 @@ ggMedidasSeguridadRec <- pull(df, col1) %>% str_detect('Otro') %>%
   mutate(name = str_wrap(name, 30)) %>%
   filter(name != 'Otro') %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(breaks = seq(0,1,0.2),
@@ -371,7 +371,7 @@ tFrecRecetOficialesIPS <- pull(df, col3) %>%
 ggFrecRecetOficialesIPS <- tFrecRecetOficialesIPS %>% 
   mutate(label1 = n) %>% 
   ggplot(aes(y = fct_reorder(F_recibo, n), x = n)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = label1), hjust = -0.8) + 
   xlab('N.° de FRE, frecuencia') + 
   coord_cartesian(xlim = c(0, max(tFrecRecetOficialesIPS$n)*1.2)) +
@@ -398,7 +398,7 @@ ggDuracionFRE <- select(df, Duracion = col1) %>%
   drop_na() %>%
   mutate(Duracion = factor(Duracion, rev(lvlDuracion))) %>%
   ggplot(aes(y = Duracion)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   coord_cartesian(xlim = c(0, max(ttDuracionFRE$n)*1.2)) + 
   xlab('N.° de FRE, frecuencia') +
@@ -432,7 +432,7 @@ ggMedidasSeguridadAlmac <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -463,7 +463,7 @@ ggInformacionHerramienta <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +

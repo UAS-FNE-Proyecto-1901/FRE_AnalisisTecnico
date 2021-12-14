@@ -79,7 +79,7 @@ ggControlesVentasFRE <- pull(df, col2) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -111,7 +111,7 @@ ggConsolidacionA1 <- select(df, all_of(c(col1 = col1))) %>%
   drop_na() %>% 
   mutate(col1 = factor(col1, rev(nivelesConsolidacion))) %>% 
   ggplot(aes(y = col1)) +
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   xlab('N.° de FRE, frecuencia') + 
   scale_x_continuous(expand = c(0,0,0.2,0)) +
@@ -165,7 +165,7 @@ ggRecepcionA13 <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -204,7 +204,7 @@ ttArchivoInformes_max <- ttArchivoInformes %>% table(dnn = 'Conteo') %>% as_tibb
 
 ggArchivoInformes <- ttArchivoInformes %>%
   ggplot(aes(y = col1)) +
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   xlab('N.° de FRE, frecuencia') + 
   scale_y_discrete(drop = F) +
@@ -290,7 +290,7 @@ ggArchivoInformes1 <- select(df, col1 = col1) %>%
     col1 = str_wrap(col1, 25),
     col1 = factor(col1, levels = rev(nivelesTiempo))) %>%
   ggplot(aes(y = col1)) +
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) + 
   xlab('N.° de FRE, frecuencia') + 
   labs(title = "Tiempo de archivo de informes A13 de R.1478/2006") + 
@@ -331,7 +331,7 @@ ggRecuerdoEnvioInforme <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -371,7 +371,7 @@ ggIncumplimientoEnvio <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -407,7 +407,7 @@ ggGarantiasSeguridadInformacion <- pull(df, col1) %>%
   ) %>% 
   filter(name != 'Otro') %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -593,7 +593,7 @@ ggFrecVentaInstitu <- select(df, all_of(c(col1 = col1))) %>%
   drop_na() %>% 
   mutate(col1 = factor(col1, rev(frec_vec))) %>% 
   ggplot(aes(y = col1)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   scale_x_continuous(expand = c(0,0,0.2,0)) + 
   scale_y_discrete(drop = F) +
   xlab('N.° de FRE, frecuencia') + 
@@ -617,7 +617,7 @@ ocupacion_vec <- c('0-20%', "20-40%", "40-60%", "60-80%", "80-100%", NA_characte
 ggPropMedicamento <- select(df, col1 = col1) %>% 
   mutate(col1 = factor(col1, rev(ocupacion_vec))) %>% 
   ggplot(aes(y = col1)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   xlab('Frecuencia') + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) +
   scale_y_discrete(drop = F) +

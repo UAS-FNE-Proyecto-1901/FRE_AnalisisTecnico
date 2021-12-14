@@ -14,10 +14,10 @@
 #' @examples
 #' 
 barrasGraficoRev <- function(data, fct1, fct1_rev, title = NULL, xlab=NULL, ylab=NULL, 
-                          col = '#6699ff') {
+                          col = '#3366CC') {
   data %>% 
     ggplot(aes(y = fct_reorder({{fct1}}, {{fct1_rev}}), x = {{fct1_rev}})) + 
-    geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+    geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
     geom_text(aes(label = {{fct1_rev}}, x = {{fct1_rev}} + 1)) + 
     xlab(xlab) + ylab(ylab) + 
     labs(title = title) + 

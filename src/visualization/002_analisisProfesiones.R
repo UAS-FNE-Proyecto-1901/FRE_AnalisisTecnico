@@ -118,7 +118,7 @@ perfilProfesional3 <- df_Total %>%
   select(NoPersonas) %>% table() %>% as_tibble() %>% 
   ggplot(aes(x = ., y = n)) + 
   geom_text(aes(label = n, y = n + 1)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   ylab('N.° de FRE, frecuencia') + xlab('No personas en el FRE') +
   theme_bw() +
   labs(title = 'Conteo de personas que trabajan por FRE')+
@@ -134,7 +134,7 @@ df_Total['NoPersonas1'] <- df_Total$No.PersonasVinculadasDirectamente +
 
 perfilProfesional3b <- df_Total %>% 
   ggplot(aes(x = NoPersonas1)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(stat = 'count', aes(y = ..count.., label = ..count..), 
              vjust = -0.5) + 
   scale_x_continuous(breaks = seq(1, 25, 2)) + 

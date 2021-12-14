@@ -56,7 +56,8 @@ Se tiene que Boyacá y Nariño son los departamentos que en la actualidad cuenta
 
 ### Circulación en el departamento
 
-Así mismo, ligado a las existencias actuales de recetarios oficiales en la nación, como se observa en la Figura \@ref(fig:existenciasRecetarios2), los departamentos en donde se presenta menor circulación de recetarios precisamente son los departamentos distantes del interior. Este fenómeno puede ser ocasionado por la baja densidad poblacional de dichos territorios, es decir, la rotación de recetarios oficiales en Antioquia, que es un departamento que cuenta con más de 5 millones de habitantes es la más alta ya que su población actual supera a la de los demás departamentos que cuentan con recetarios oficiales [@DANE2021].  
+Así mismo, ligado a las existencias actuales de recetarios oficiales en la nación, como se observa en la Figura \@ref(fig:existenciasRecetarios2), los departamentos en donde se presenta menor circulación de recetarios precisamente son los departamentos distantes del interior. Este fenómeno puede ser ocasionado por la baja densidad poblacional de dichos territorios, es decir, la rotación de recetarios oficiales en Antioquia es la más alta entre todos los departamentos debido a que su población actual (más de 5 millones de habitantes) supera a la de los demás departamentos [@DANE2021].
+
 
 ```{r existenciasRecetarios2, echo=FALSE, fig.cap='N.° de recetarios circulantes en el departamento.', fig.width=7, fig.height=5, fig.topcaption=TRUE, out.width="85%", fig.align='center'}
 g1 <- readRDS(file.path(fig_path, '028_existenciaRecetarios_2.rds')) + labs(title = NULL)

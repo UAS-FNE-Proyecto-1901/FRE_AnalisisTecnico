@@ -65,7 +65,7 @@ ggHerramientas1 <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = name, x = propor)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.8, size = 4) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -89,7 +89,7 @@ ggHerramientas2 <- pull(df, col2) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.8, size = 4) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -125,7 +125,7 @@ ggHerrConsolidacion <-
   ) %>% 
   mutate(name = str_wrap(name, 25)) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.8, size = 4) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -154,7 +154,7 @@ ggMediosComunicacion <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.2, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -178,7 +178,7 @@ ggConexionInternet <- pull(df, col1) %>%
   table() %>% as_tibble() %>%
   mutate(Fct = factor(., escala1)) %>% 
   ggplot(aes(y = Fct, x = n)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = n), hjust = -0.5, size = 4) + 
   coord_cartesian(xlim = c(0, NA)) +
   scale_x_continuous(expand = c(0,0,0,1.2)) +
@@ -269,7 +269,7 @@ ttOpinionEquipos <- pull(df, col1) %>%
 
 ggOpinionEquipos <- ttOpinionEquipos %>% 
   ggplot(aes(y = fct_reorder(name, conteo), x = conteo)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) +
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = label1), hjust = -0.4, size = 4) + 
   xlab('Proporción (%)') + 
   labs(title = 'Opinión sobre los equipos de cómputo') + 
@@ -295,7 +295,7 @@ ggHerramientasCompras <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   mutate(name = str_to_sentence(name) %>% str_wrap(20)) %>%
-  pieChart(conteo, name, T) +
+  pieChart(conteo, name, repel = TRUE) +
   scale_fill_brewer(palette = 'Set1') +
   theme(legend.position = 'none')
 
@@ -309,7 +309,7 @@ ggHerramientasCompras <- pull(df, col1) %>%
 #   theme(legend.position = 'none')
 
 ggHerramientasCompras
-guardarGGplot(ggHerramientasCompras, '079_HerramientasCompras', 6, 4)
+guardarGGplot(ggHerramientasCompras, '079_HerramientasCompras', 8, 6)
 
 #'-------------------------------------------------------------------------------
 # Evaluación de tiempos de etapas de compra ------------------
@@ -476,7 +476,7 @@ ggTiemposTraslados <- df %>%
   ggplot(aes(x = Tiempo, y = fct_reorder(Departamento_1, Tiempo))) + 
   geom_segment(
     aes(x = 0, xend = Tiempo, yend = fct_reorder(Departamento_1, Tiempo)),
-    color = '#6699ff') +
+    color = '#3366CC') +
   geom_point(aes(x = Tiempo), color = 'blue4') + 
   geom_text(aes(label = Tiempo), hjust = -0.5) + 
   coord_cartesian(xlim = c(0, NA)) +
@@ -530,7 +530,7 @@ escala1 <- c('Muy inconforme', 'Algo inconforme', 'Ni conforme ni inconforme',
 ggCompraEficiente <- select(df, Escala = col1) %>% 
   mutate(Escala = factor(Escala, level = escala1)) %>% 
   ggplot(aes(y = Escala)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.8) + 
   scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
   coord_cartesian(xlim = c(0, NA)) +
@@ -572,7 +572,7 @@ ggRecepcion <- df %>%
   geom_segment(aes(x = 0, 
                    xend = tiempoRecepcion, 
                    yend = fct_reorder(Departamento_1, tiempoRecepcion))) + 
-  # geom_bar(stat = 'identity',fill = '#6699ff', color = 'black', alpha = 0.6) +
+  # geom_bar(stat = 'identity',fill = '#3366CC', color = 'black', alpha = 0.6) +
   geom_text(aes(label = tiempoRecepcion), hjust = -0.8) +
   xlab('Tiempo de recepción (días)') + 
   coord_cartesian(xlim = c(0, NA)) +
@@ -662,7 +662,7 @@ ggSeguridadMedicamentos <- xDF %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -705,7 +705,7 @@ ggFrecCondiciones <- pull(df, col1) %>%
   mutate(Frec = str_wrap(Frec, 30),
          Frec = factor(Frec, levels = rev(etiquetasFrecuencia))) %>%
   ggplot(aes(y = Frec, x =  n)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   labs(title = 'Frec. de revisión de condiciones ambientales') + 
   geom_text(aes(label = n), hjust = -0.6, size = 4) +
   scale_x_continuous(expand = c(0.05, 0.05, 0.15, 0.05)) +
@@ -738,7 +738,7 @@ ggMetodosControlAmb <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -765,7 +765,7 @@ calibMant <- c("Entre 1 a 3 meses",
 ggCalibMant <- select(df, col1 = col1) %>%
   mutate(col1 = factor(col1, calibMant)) %>% 
   ggplot(aes(y = col1)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat='count', hjust = -0.8, size = 4) + 
   xlab('N.° de FRE, frecuencia') + 
   scale_y_discrete(drop = FALSE) +
@@ -800,7 +800,7 @@ ggOtrosProductos <- pull(df, col1) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +
@@ -827,7 +827,7 @@ escalaLikert <- c("Muy inconforme", "Algo inconforme",
 ggTransporte <- select(df, likert = col1) %>% 
   mutate(likert = factor(likert, levels = escalaLikert)) %>% 
   ggplot(aes(y = likert)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) +
   xlab('N.° de FRE, frecuencia') + 
   coord_cartesian(xlim = c(0, NA)) + 
@@ -870,7 +870,7 @@ ggFrecControlExistencias <-
   select(frec = col1) %>% 
   mutate(frec = factor(frec, rev(frecRevisionMed))) %>% 
   ggplot(aes(y = frec)) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', hjust = -0.5) +
   xlab('N.° de FRE, frecuencia') + 
   scale_y_discrete(drop = FALSE) +
@@ -997,7 +997,7 @@ ggMedicVencidos <- pull(df, col2) %>%
     label1 = paste(conteo, '/', dim(df)[1])
   ) %>% 
   ggplot(aes(y = fct_reorder(name, propor), x = propor)) +
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = label1), hjust = -0.3, size = 3) + 
   coord_cartesian(xlim = c(0, 1)) +
   scale_x_continuous(labels = scales::percent_format()) +

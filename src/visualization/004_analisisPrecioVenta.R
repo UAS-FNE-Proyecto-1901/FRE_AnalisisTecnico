@@ -176,7 +176,7 @@ gRecetarios4 <- df_total %>%
   ungroup() %>% 
   drop_na() %>% 
   ggplot(aes(x = factor(col1))) + 
-  geom_bar(stat = 'count', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'count', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = ..count..), stat = 'count', vjust = -0.5) + 
   coord_cartesian(ylim = c(0, max(dftot1$n)*1.2)) +
   ylab('N.° de FRE, frecuencia') + xlab('N.° prescripciones por recetario') +
@@ -291,7 +291,7 @@ ggComparativo2 <- df_total %>%
   drop_na(any_of(c('margen1'))) %>% 
   ggplot(aes(x = margen1)) + 
   geom_bar(stat = 'count', 
-           fill = '#6699ff', color = 'black', alpha = 0.6) +
+           fill = '#3366CC', color = 'black', alpha = 0.6) +
   geom_label(stat = 'count', aes(label = ..count..), vjust=-0.4) +
   scale_y_continuous(expand = c(0, 0, 0.2, 0)) + 
   xlab('Márgen de ganancia para recetarios oficiales') + 
@@ -349,7 +349,7 @@ gComparativo2 <- df_total %>%
 
 gComparativo3 <- df_total %>% 
   ggplot(aes(x = factor(NoPersonas), y = MargenGanancia)) +
-  geom_boxplot(fill = '#6699ff') + 
+  geom_boxplot(fill = '#3366CC') + 
   xlab('Numero de personas') + 
   ylab('Margen de ganancia \n por recetarios (%)')
 
@@ -397,7 +397,7 @@ tModalidadAdquisicion <- pull(df_total, col1) %>%
 
 gModalidadAdquisicion <- tModalidadAdquisicion %>% 
   ggplot(aes(y = Tipo, x = Frec)) + 
-  geom_bar(stat = 'identity', fill = '#6699ff', color = 'black', alpha = 0.6) + 
+  geom_bar(stat = 'identity', fill = '#3366CC', color = 'black', alpha = 0.6) + 
   geom_text(aes(label = Frec), position = position_dodge(width = 1), 
             hjust = -1) + 
   xlab('N.° de FRE, frecuencia') + 
